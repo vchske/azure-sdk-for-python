@@ -413,6 +413,8 @@ sending a request.</p>
 <li><p><strong>computer_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the host OS name of the HANA instance.</p></li>
 <li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – This property allows you to specify the type of the OS.</p></li>
 <li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies version of operating system.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.SftpAuthenticationType.ssh_public_key" title="azure.mgmt.datafactory.models.SftpAuthenticationType.ssh_public_key"><strong>ssh_public_key</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the SSH public key used to access the
+operating system.</p></li>
 </ul>
 </dd>
 </dl>
@@ -472,6 +474,12 @@ sending a request.</p>
 ‘starting’, ‘started’, ‘stopping’, ‘stopped’, ‘restarting’, ‘unknown’</p></li>
 <li><p><strong>proximity_placement_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource proximity placement group</p></li>
 <li><p><strong>hw_revision</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Hardware revision of a HANA instance</p></li>
+<li><p><strong>partner_node_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ARM ID of another HanaInstance that will share a
+network with this HanaInstance</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum" title="azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum"><em>HanaProvisioningStatesEnum</em></a>) – State of provisioning of the HanaInstance.
+Possible values include: ‘Accepted’, ‘Creating’, ‘Updating’, ‘Failed’,
+‘Succeeded’, ‘Deleting’, ‘Migrating’</p></li>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
@@ -791,6 +799,48 @@ monitoring</p></li>
 <dl class="attribute">
 <dt id="azure.mgmt.hanaonazure.models.HanaInstancePowerStateEnum.unknown">
 <code class="descname">unknown</code><em class="property"> = 'unknown'</em><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaInstancePowerStateEnum.unknown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hanaonazure.models.</code><code class="descname">HanaProvisioningStatesEnum</code><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/hana_management_client_enums.html#HanaProvisioningStatesEnum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.accepted">
+<code class="descname">accepted</code><em class="property"> = 'Accepted'</em><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.accepted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.creating">
+<code class="descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.creating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.deleting">
+<code class="descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.deleting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.failed">
+<code class="descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.migrating">
+<code class="descname">migrating</code><em class="property"> = 'Migrating'</em><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.migrating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.succeeded">
+<code class="descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.succeeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.updating">
+<code class="descname">updating</code><em class="property"> = 'Updating'</em><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum.updating" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
