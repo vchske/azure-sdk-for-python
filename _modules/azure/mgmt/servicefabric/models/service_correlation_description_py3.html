@@ -320,10 +320,14 @@
 
 <span class="sd">    All required parameters must be populated in order to send to Azure.</span>
 
-<span class="sd">    :param scheme: Required. Possible values include: &#39;Invalid&#39;, &#39;Affinity&#39;,</span>
+<span class="sd">    :param scheme: Required. The ServiceCorrelationScheme which describes the</span>
+<span class="sd">     relationship between this service and the service specified via</span>
+<span class="sd">     ServiceName. Possible values include: &#39;Invalid&#39;, &#39;Affinity&#39;,</span>
 <span class="sd">     &#39;AlignedAffinity&#39;, &#39;NonAlignedAffinity&#39;</span>
-<span class="sd">    :type scheme: str or ~azure.mgmt.servicefabric.models.enum</span>
-<span class="sd">    :param service_name: Required.</span>
+<span class="sd">    :type scheme: str or</span>
+<span class="sd">     ~azure.mgmt.servicefabric.models.ServiceCorrelationScheme</span>
+<span class="sd">    :param service_name: Required. The name of the service that the</span>
+<span class="sd">     correlation relationship is established with.</span>
 <span class="sd">    :type service_name: str</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -333,8 +337,8 @@
     <span class="p">}</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;scheme&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;Scheme&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;service_name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;ServiceName&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;scheme&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;scheme&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;service_name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;serviceName&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">scheme</span><span class="p">,</span> <span class="n">service_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>

@@ -312,10 +312,10 @@
 <span class="c1"># regenerated.</span>
 <span class="c1"># --------------------------------------------------------------------------</span>
 
-<span class="kn">from</span> <span class="nn">.service_update_properties_py3</span> <span class="k">import</span> <span class="n">ServiceUpdateProperties</span>
+<span class="kn">from</span> <span class="nn">.service_resource_update_properties_py3</span> <span class="k">import</span> <span class="n">ServiceResourceUpdateProperties</span>
 
 
-<div class="viewcode-block" id="StatelessServiceUpdateProperties"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.StatelessServiceUpdateProperties">[docs]</a><span class="k">class</span> <span class="nc">StatelessServiceUpdateProperties</span><span class="p">(</span><span class="n">ServiceUpdateProperties</span><span class="p">):</span>
+<div class="viewcode-block" id="StatelessServiceUpdateProperties"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.StatelessServiceUpdateProperties">[docs]</a><span class="k">class</span> <span class="nc">StatelessServiceUpdateProperties</span><span class="p">(</span><span class="n">ServiceResourceUpdateProperties</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The properties of a stateless service resource for patch operations.</span>
 
 <span class="sd">    All required parameters must be populated in order to send to Azure.</span>
@@ -326,18 +326,21 @@
 <span class="sd">     requirements. For example, to place a service on nodes where NodeType is</span>
 <span class="sd">     blue specify the following: &quot;NodeColor == blue)&quot;.</span>
 <span class="sd">    :type placement_constraints: str</span>
-<span class="sd">    :param correlation_scheme:</span>
+<span class="sd">    :param correlation_scheme: A list that describes the correlation of the</span>
+<span class="sd">     service with other services.</span>
 <span class="sd">    :type correlation_scheme:</span>
 <span class="sd">     list[~azure.mgmt.servicefabric.models.ServiceCorrelationDescription]</span>
-<span class="sd">    :param service_load_metrics:</span>
+<span class="sd">    :param service_load_metrics: The service load metrics is given as an array</span>
+<span class="sd">     of ServiceLoadMetricDescription objects.</span>
 <span class="sd">    :type service_load_metrics:</span>
 <span class="sd">     list[~azure.mgmt.servicefabric.models.ServiceLoadMetricDescription]</span>
-<span class="sd">    :param service_placement_policies:</span>
+<span class="sd">    :param service_placement_policies: A list that describes the correlation</span>
+<span class="sd">     of the service with other services.</span>
 <span class="sd">    :type service_placement_policies:</span>
 <span class="sd">     list[~azure.mgmt.servicefabric.models.ServicePlacementPolicyDescription]</span>
-<span class="sd">    :param default_move_cost: Possible values include: &#39;Zero&#39;, &#39;Low&#39;,</span>
-<span class="sd">     &#39;Medium&#39;, &#39;High&#39;</span>
-<span class="sd">    :type default_move_cost: str or ~azure.mgmt.servicefabric.models.enum</span>
+<span class="sd">    :param default_move_cost: Specifies the move cost for the service.</span>
+<span class="sd">     Possible values include: &#39;Zero&#39;, &#39;Low&#39;, &#39;Medium&#39;, &#39;High&#39;</span>
+<span class="sd">    :type default_move_cost: str or ~azure.mgmt.servicefabric.models.MoveCost</span>
 <span class="sd">    :param service_kind: Required. Constant filled by server.</span>
 <span class="sd">    :type service_kind: str</span>
 <span class="sd">    :param instance_count: The instance count.</span>

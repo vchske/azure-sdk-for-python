@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>azure.mgmt.servicefabric.models.cluster_health_policy_py3 &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  <title>azure.mgmt.servicefabric.models.service_resource_properties_py3 &mdash; Azure SDK for Python 2.0.0 documentation</title>
   
 
   
@@ -285,7 +285,7 @@
         
           <li><a href="../../../../index.html">Module code</a> &raquo;</li>
         
-      <li>azure.mgmt.servicefabric.models.cluster_health_policy_py3</li>
+      <li>azure.mgmt.servicefabric.models.service_resource_properties_py3</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -300,7 +300,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for azure.mgmt.servicefabric.models.cluster_health_policy_py3</h1><div class="highlight"><pre>
+  <h1>Source code for azure.mgmt.servicefabric.models.service_resource_properties_py3</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding=utf-8</span>
 <span class="c1"># --------------------------------------------------------------------------</span>
 <span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
@@ -312,67 +312,87 @@
 <span class="c1"># regenerated.</span>
 <span class="c1"># --------------------------------------------------------------------------</span>
 
-<span class="kn">from</span> <span class="nn">msrest.serialization</span> <span class="k">import</span> <span class="n">Model</span>
+<span class="kn">from</span> <span class="nn">.service_resource_properties_base_py3</span> <span class="k">import</span> <span class="n">ServiceResourcePropertiesBase</span>
 
 
-<div class="viewcode-block" id="ClusterHealthPolicy"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ClusterHealthPolicy">[docs]</a><span class="k">class</span> <span class="nc">ClusterHealthPolicy</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Defines a health policy used to evaluate the health of the cluster or of a</span>
-<span class="sd">    cluster node.</span>
-<span class="sd">    .</span>
+<div class="viewcode-block" id="ServiceResourceProperties"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ServiceResourceProperties">[docs]</a><span class="k">class</span> <span class="nc">ServiceResourceProperties</span><span class="p">(</span><span class="n">ServiceResourcePropertiesBase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The service resource properties.</span>
 
-<span class="sd">    :param max_percent_unhealthy_nodes: The maximum allowed percentage of</span>
-<span class="sd">     unhealthy nodes before reporting an error. For example, to allow 10% of</span>
-<span class="sd">     nodes to be unhealthy, this value would be 10.</span>
-<span class="sd">     The percentage represents the maximum tolerated percentage of nodes that</span>
-<span class="sd">     can be unhealthy before the cluster is considered in error.</span>
-<span class="sd">     If the percentage is respected but there is at least one unhealthy node,</span>
-<span class="sd">     the health is evaluated as Warning.</span>
-<span class="sd">     The percentage is calculated by dividing the number of unhealthy nodes</span>
-<span class="sd">     over the total number of nodes in the cluster.</span>
-<span class="sd">     The computation rounds up to tolerate one failure on small numbers of</span>
-<span class="sd">     nodes. Default percentage is zero.</span>
-<span class="sd">     In large clusters, some nodes will always be down or out for repairs, so</span>
-<span class="sd">     this percentage should be configured to tolerate that.</span>
-<span class="sd">     . Default value: 0 .</span>
-<span class="sd">    :type max_percent_unhealthy_nodes: int</span>
-<span class="sd">    :param max_percent_unhealthy_applications: The maximum allowed percentage</span>
-<span class="sd">     of unhealthy applications before reporting an error. For example, to allow</span>
-<span class="sd">     10% of applications to be unhealthy, this value would be 10.</span>
-<span class="sd">     The percentage represents the maximum tolerated percentage of applications</span>
-<span class="sd">     that can be unhealthy before the cluster is considered in error.</span>
-<span class="sd">     If the percentage is respected but there is at least one unhealthy</span>
-<span class="sd">     application, the health is evaluated as Warning.</span>
-<span class="sd">     This is calculated by dividing the number of unhealthy applications over</span>
-<span class="sd">     the total number of application instances in the cluster, excluding</span>
-<span class="sd">     applications of application types that are included in the</span>
-<span class="sd">     ApplicationTypeHealthPolicyMap.</span>
-<span class="sd">     The computation rounds up to tolerate one failure on small numbers of</span>
-<span class="sd">     applications. Default percentage is zero.</span>
-<span class="sd">     . Default value: 0 .</span>
-<span class="sd">    :type max_percent_unhealthy_applications: int</span>
-<span class="sd">    :param application_health_policies: Defines the application health policy</span>
-<span class="sd">     map used to evaluate the health of an application or one of its children</span>
-<span class="sd">     entities.</span>
-<span class="sd">    :type application_health_policies: dict[str,</span>
-<span class="sd">     ~azure.mgmt.servicefabric.models.ApplicationHealthPolicy]</span>
+<span class="sd">    You probably want to use the sub-classes and not this class directly. Known</span>
+<span class="sd">    sub-classes are: StatefulServiceProperties, StatelessServiceProperties</span>
+
+<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
+<span class="sd">    sending a request.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :param placement_constraints: The placement constraints as a string.</span>
+<span class="sd">     Placement constraints are boolean expressions on node properties and allow</span>
+<span class="sd">     for restricting a service to particular nodes based on the service</span>
+<span class="sd">     requirements. For example, to place a service on nodes where NodeType is</span>
+<span class="sd">     blue specify the following: &quot;NodeColor == blue)&quot;.</span>
+<span class="sd">    :type placement_constraints: str</span>
+<span class="sd">    :param correlation_scheme: A list that describes the correlation of the</span>
+<span class="sd">     service with other services.</span>
+<span class="sd">    :type correlation_scheme:</span>
+<span class="sd">     list[~azure.mgmt.servicefabric.models.ServiceCorrelationDescription]</span>
+<span class="sd">    :param service_load_metrics: The service load metrics is given as an array</span>
+<span class="sd">     of ServiceLoadMetricDescription objects.</span>
+<span class="sd">    :type service_load_metrics:</span>
+<span class="sd">     list[~azure.mgmt.servicefabric.models.ServiceLoadMetricDescription]</span>
+<span class="sd">    :param service_placement_policies: A list that describes the correlation</span>
+<span class="sd">     of the service with other services.</span>
+<span class="sd">    :type service_placement_policies:</span>
+<span class="sd">     list[~azure.mgmt.servicefabric.models.ServicePlacementPolicyDescription]</span>
+<span class="sd">    :param default_move_cost: Specifies the move cost for the service.</span>
+<span class="sd">     Possible values include: &#39;Zero&#39;, &#39;Low&#39;, &#39;Medium&#39;, &#39;High&#39;</span>
+<span class="sd">    :type default_move_cost: str or ~azure.mgmt.servicefabric.models.MoveCost</span>
+<span class="sd">    :ivar provisioning_state: The current deployment or provisioning state,</span>
+<span class="sd">     which only appears in the response</span>
+<span class="sd">    :vartype provisioning_state: str</span>
+<span class="sd">    :param service_type_name: The name of the service type</span>
+<span class="sd">    :type service_type_name: str</span>
+<span class="sd">    :param partition_description: Describes how the service is partitioned.</span>
+<span class="sd">    :type partition_description:</span>
+<span class="sd">     ~azure.mgmt.servicefabric.models.PartitionSchemeDescription</span>
+<span class="sd">    :param service_package_activation_mode: The activation Mode of the service</span>
+<span class="sd">     package. Possible values include: &#39;SharedProcess&#39;, &#39;ExclusiveProcess&#39;</span>
+<span class="sd">    :type service_package_activation_mode: str or</span>
+<span class="sd">     ~azure.mgmt.servicefabric.models.ArmServicePackageActivationMode</span>
+<span class="sd">    :param service_kind: Required. Constant filled by server.</span>
+<span class="sd">    :type service_kind: str</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;max_percent_unhealthy_nodes&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;maximum&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;minimum&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
-        <span class="s1">&#39;max_percent_unhealthy_applications&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;maximum&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;minimum&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;service_kind&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
     <span class="p">}</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;max_percent_unhealthy_nodes&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;maxPercentUnhealthyNodes&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;max_percent_unhealthy_applications&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;maxPercentUnhealthyApplications&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;application_health_policies&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;applicationHealthPolicies&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{ApplicationHealthPolicy}</span><span class="s1">&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;placement_constraints&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;placementConstraints&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;correlation_scheme&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;correlationScheme&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ServiceCorrelationDescription]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;service_load_metrics&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;serviceLoadMetrics&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ServiceLoadMetricDescription]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;service_placement_policies&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;servicePlacementPolicies&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ServicePlacementPolicyDescription]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;default_move_cost&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;defaultMoveCost&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;provisioningState&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;service_type_name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;serviceTypeName&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;partition_description&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;partitionDescription&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;PartitionSchemeDescription&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;service_package_activation_mode&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;servicePackageActivationMode&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;service_kind&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;serviceKind&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">max_percent_unhealthy_nodes</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_percent_unhealthy_applications</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">application_health_policies</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">ClusterHealthPolicy</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">max_percent_unhealthy_nodes</span> <span class="o">=</span> <span class="n">max_percent_unhealthy_nodes</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">max_percent_unhealthy_applications</span> <span class="o">=</span> <span class="n">max_percent_unhealthy_applications</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">application_health_policies</span> <span class="o">=</span> <span class="n">application_health_policies</span></div>
+    <span class="n">_subtype_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;service_kind&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Stateful&#39;</span><span class="p">:</span> <span class="s1">&#39;StatefulServiceProperties&#39;</span><span class="p">,</span> <span class="s1">&#39;Stateless&#39;</span><span class="p">:</span> <span class="s1">&#39;StatelessServiceProperties&#39;</span><span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">placement_constraints</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">correlation_scheme</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">service_load_metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">service_placement_policies</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">default_move_cost</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">service_type_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">partition_description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">service_package_activation_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ServiceResourceProperties</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">placement_constraints</span><span class="o">=</span><span class="n">placement_constraints</span><span class="p">,</span> <span class="n">correlation_scheme</span><span class="o">=</span><span class="n">correlation_scheme</span><span class="p">,</span> <span class="n">service_load_metrics</span><span class="o">=</span><span class="n">service_load_metrics</span><span class="p">,</span> <span class="n">service_placement_policies</span><span class="o">=</span><span class="n">service_placement_policies</span><span class="p">,</span> <span class="n">default_move_cost</span><span class="o">=</span><span class="n">default_move_cost</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">provisioning_state</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_type_name</span> <span class="o">=</span> <span class="n">service_type_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partition_description</span> <span class="o">=</span> <span class="n">partition_description</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_package_activation_mode</span> <span class="o">=</span> <span class="n">service_package_activation_mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_kind</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">service_kind</span> <span class="o">=</span> <span class="s1">&#39;ServiceResourceProperties&#39;</span></div>
 </pre></div>
 
            </div>

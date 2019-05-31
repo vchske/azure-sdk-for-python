@@ -316,11 +316,18 @@
 
 
 <div class="viewcode-block" id="ServiceTypeDeltaHealthPolicy"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ServiceTypeDeltaHealthPolicy">[docs]</a><span class="k">class</span> <span class="nc">ServiceTypeDeltaHealthPolicy</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Service health policy</span>
+    <span class="sd">&quot;&quot;&quot;Represents the delta health policy used to evaluate the health of services</span>
+<span class="sd">    belonging to a service type when upgrading the cluster.</span>
 <span class="sd">    .</span>
 
-<span class="sd">    :param max_percent_delta_unhealthy_services: Maximum percentage of</span>
-<span class="sd">     unhealthy services in cluster</span>
+<span class="sd">    :param max_percent_delta_unhealthy_services: The maximum allowed</span>
+<span class="sd">     percentage of services health degradation allowed during cluster upgrades.</span>
+<span class="sd">     The delta is measured between the state of the services at the beginning</span>
+<span class="sd">     of upgrade and the state of the services at the time of the health</span>
+<span class="sd">     evaluation.</span>
+<span class="sd">     The check is performed after every upgrade domain upgrade completion to</span>
+<span class="sd">     make sure the global state of the cluster is within tolerated limits.</span>
+<span class="sd">     . Default value: 0 .</span>
 <span class="sd">    :type max_percent_delta_unhealthy_services: int</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -332,7 +339,7 @@
         <span class="s1">&#39;max_percent_delta_unhealthy_services&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;maxPercentDeltaUnhealthyServices&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">max_percent_delta_unhealthy_services</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">max_percent_delta_unhealthy_services</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">ServiceTypeDeltaHealthPolicy</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_percent_delta_unhealthy_services</span> <span class="o">=</span> <span class="n">max_percent_delta_unhealthy_services</span></div>
 </pre></div>

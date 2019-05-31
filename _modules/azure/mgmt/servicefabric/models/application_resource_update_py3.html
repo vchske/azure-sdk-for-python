@@ -321,22 +321,26 @@
 <span class="sd">    Variables are only populated by the server, and will be ignored when</span>
 <span class="sd">    sending a request.</span>
 
-<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
-
-<span class="sd">    :ivar id: Azure resource ID.</span>
+<span class="sd">    :ivar id: Azure resource identifier.</span>
 <span class="sd">    :vartype id: str</span>
 <span class="sd">    :ivar name: Azure resource name.</span>
 <span class="sd">    :vartype name: str</span>
 <span class="sd">    :ivar type: Azure resource type.</span>
 <span class="sd">    :vartype type: str</span>
-<span class="sd">    :param location: Required. Resource location.</span>
+<span class="sd">    :param location: Azure resource location.</span>
 <span class="sd">    :type location: str</span>
-<span class="sd">    :param type_version:</span>
+<span class="sd">    :param tags: Azure resource tags.</span>
+<span class="sd">    :type tags: dict[str, str]</span>
+<span class="sd">    :ivar etag: Azure resource etag.</span>
+<span class="sd">    :vartype etag: str</span>
+<span class="sd">    :param type_version: The version of the application type as defined in the</span>
+<span class="sd">     application manifest.</span>
 <span class="sd">    :type type_version: str</span>
-<span class="sd">    :param parameters:</span>
-<span class="sd">    :type parameters:</span>
-<span class="sd">     list[~azure.mgmt.servicefabric.models.ApplicationParameter]</span>
-<span class="sd">    :param upgrade_policy:</span>
+<span class="sd">    :param parameters: List of application parameters with overridden values</span>
+<span class="sd">     from their default values specified in the application manifest.</span>
+<span class="sd">    :type parameters: dict[str, str]</span>
+<span class="sd">    :param upgrade_policy: Describes the policy for a monitored application</span>
+<span class="sd">     upgrade.</span>
 <span class="sd">    :type upgrade_policy:</span>
 <span class="sd">     ~azure.mgmt.servicefabric.models.ApplicationUpgradePolicy</span>
 <span class="sd">    :param minimum_nodes: The minimum number of nodes where Service Fabric</span>
@@ -352,9 +356,10 @@
 <span class="sd">     nodes. By default, the value of this property is zero and it means that</span>
 <span class="sd">     the services can be placed on any node. Default value: 0 .</span>
 <span class="sd">    :type maximum_nodes: long</span>
-<span class="sd">    :param remove_application_capacity: The version of the application type</span>
+<span class="sd">    :param remove_application_capacity: Remove the current application</span>
+<span class="sd">     capacity settings.</span>
 <span class="sd">    :type remove_application_capacity: bool</span>
-<span class="sd">    :param metrics:</span>
+<span class="sd">    :param metrics: List of application capacity metric description.</span>
 <span class="sd">    :type metrics:</span>
 <span class="sd">     list[~azure.mgmt.servicefabric.models.ApplicationMetricDescription]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -363,7 +368,7 @@
         <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-        <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;etag&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;minimum_nodes&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;minimum&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
         <span class="s1">&#39;maximum_nodes&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;minimum&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
     <span class="p">}</span>
@@ -373,8 +378,10 @@
         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{str}</span><span class="s1">&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;etag&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;etag&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;type_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.typeVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;parameters&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.parameters&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ApplicationParameter]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;parameters&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.parameters&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{str}</span><span class="s1">&#39;</span><span class="p">},</span>
         <span class="s1">&#39;upgrade_policy&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.upgradePolicy&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ApplicationUpgradePolicy&#39;</span><span class="p">},</span>
         <span class="s1">&#39;minimum_nodes&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.minimumNodes&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
         <span class="s1">&#39;maximum_nodes&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.maximumNodes&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
@@ -382,8 +389,8 @@
         <span class="s1">&#39;metrics&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.metrics&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ApplicationMetricDescription]&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">type_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">upgrade_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">minimum_nodes</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maximum_nodes</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">remove_application_capacity</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">ApplicationResourceUpdate</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">type_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">upgrade_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">minimum_nodes</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maximum_nodes</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">remove_application_capacity</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ApplicationResourceUpdate</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">type_version</span> <span class="o">=</span> <span class="n">type_version</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="n">parameters</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">upgrade_policy</span> <span class="o">=</span> <span class="n">upgrade_policy</span>

@@ -321,41 +321,46 @@
 <span class="sd">    Variables are only populated by the server, and will be ignored when</span>
 <span class="sd">    sending a request.</span>
 
-<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
-
-<span class="sd">    :ivar id: Azure resource ID.</span>
+<span class="sd">    :ivar id: Azure resource identifier.</span>
 <span class="sd">    :vartype id: str</span>
 <span class="sd">    :ivar name: Azure resource name.</span>
 <span class="sd">    :vartype name: str</span>
 <span class="sd">    :ivar type: Azure resource type.</span>
 <span class="sd">    :vartype type: str</span>
-<span class="sd">    :param location: Required. Resource location.</span>
+<span class="sd">    :param location: Azure resource location.</span>
 <span class="sd">    :type location: str</span>
+<span class="sd">    :param tags: Azure resource tags.</span>
+<span class="sd">    :type tags: dict[str, str]</span>
+<span class="sd">    :ivar etag: Azure resource etag.</span>
+<span class="sd">    :vartype etag: str</span>
 <span class="sd">    :param placement_constraints: The placement constraints as a string.</span>
 <span class="sd">     Placement constraints are boolean expressions on node properties and allow</span>
 <span class="sd">     for restricting a service to particular nodes based on the service</span>
 <span class="sd">     requirements. For example, to place a service on nodes where NodeType is</span>
 <span class="sd">     blue specify the following: &quot;NodeColor == blue)&quot;.</span>
 <span class="sd">    :type placement_constraints: str</span>
-<span class="sd">    :param correlation_scheme:</span>
+<span class="sd">    :param correlation_scheme: A list that describes the correlation of the</span>
+<span class="sd">     service with other services.</span>
 <span class="sd">    :type correlation_scheme:</span>
 <span class="sd">     list[~azure.mgmt.servicefabric.models.ServiceCorrelationDescription]</span>
-<span class="sd">    :param service_load_metrics:</span>
+<span class="sd">    :param service_load_metrics: The service load metrics is given as an array</span>
+<span class="sd">     of ServiceLoadMetricDescription objects.</span>
 <span class="sd">    :type service_load_metrics:</span>
 <span class="sd">     list[~azure.mgmt.servicefabric.models.ServiceLoadMetricDescription]</span>
-<span class="sd">    :param service_placement_policies:</span>
+<span class="sd">    :param service_placement_policies: A list that describes the correlation</span>
+<span class="sd">     of the service with other services.</span>
 <span class="sd">    :type service_placement_policies:</span>
 <span class="sd">     list[~azure.mgmt.servicefabric.models.ServicePlacementPolicyDescription]</span>
-<span class="sd">    :param default_move_cost: Possible values include: &#39;Zero&#39;, &#39;Low&#39;,</span>
-<span class="sd">     &#39;Medium&#39;, &#39;High&#39;</span>
-<span class="sd">    :type default_move_cost: str or ~azure.mgmt.servicefabric.models.enum</span>
+<span class="sd">    :param default_move_cost: Specifies the move cost for the service.</span>
+<span class="sd">     Possible values include: &#39;Zero&#39;, &#39;Low&#39;, &#39;Medium&#39;, &#39;High&#39;</span>
+<span class="sd">    :type default_move_cost: str or ~azure.mgmt.servicefabric.models.MoveCost</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-        <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;etag&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
     <span class="p">}</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
@@ -363,6 +368,8 @@
         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{str}</span><span class="s1">&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;etag&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;etag&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;placement_constraints&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.placementConstraints&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;correlation_scheme&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.correlationScheme&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ServiceCorrelationDescription]&#39;</span><span class="p">},</span>
         <span class="s1">&#39;service_load_metrics&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.serviceLoadMetrics&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ServiceLoadMetricDescription]&#39;</span><span class="p">},</span>
@@ -370,8 +377,8 @@
         <span class="s1">&#39;default_move_cost&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.defaultMoveCost&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">placement_constraints</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">correlation_scheme</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">service_load_metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">service_placement_policies</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">default_move_cost</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">ServiceResourceUpdate</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">placement_constraints</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">correlation_scheme</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">service_load_metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">service_placement_policies</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">default_move_cost</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ServiceResourceUpdate</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">placement_constraints</span> <span class="o">=</span> <span class="n">placement_constraints</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">correlation_scheme</span> <span class="o">=</span> <span class="n">correlation_scheme</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">service_load_metrics</span> <span class="o">=</span> <span class="n">service_load_metrics</span>

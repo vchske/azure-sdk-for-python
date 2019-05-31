@@ -319,10 +319,10 @@
 <span class="kn">from</span> <span class="nn">.operations.clusters_operations</span> <span class="k">import</span> <span class="n">ClustersOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.cluster_versions_operations</span> <span class="k">import</span> <span class="n">ClusterVersionsOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.operations</span> <span class="k">import</span> <span class="n">Operations</span>
-<span class="kn">from</span> <span class="nn">.operations.application_type_operations</span> <span class="k">import</span> <span class="n">ApplicationTypeOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.version_operations</span> <span class="k">import</span> <span class="n">VersionOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.application_operations</span> <span class="k">import</span> <span class="n">ApplicationOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.service_operations</span> <span class="k">import</span> <span class="n">ServiceOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.application_types_operations</span> <span class="k">import</span> <span class="n">ApplicationTypesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.application_type_versions_operations</span> <span class="k">import</span> <span class="n">ApplicationTypeVersionsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.applications_operations</span> <span class="k">import</span> <span class="n">ApplicationsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.services_operations</span> <span class="k">import</span> <span class="n">ServicesOperations</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">models</span>
 
 
@@ -334,7 +334,7 @@
 <span class="sd">    :param credentials: Credentials needed for the client to connect to Azure.</span>
 <span class="sd">    :type credentials: :mod:`A msrestazure Credentials</span>
 <span class="sd">     object&lt;msrestazure.azure_active_directory&gt;`</span>
-<span class="sd">    :param subscription_id: The customer subscription identifier</span>
+<span class="sd">    :param subscription_id: The customer subscription identifier.</span>
 <span class="sd">    :type subscription_id: str</span>
 <span class="sd">    :param str base_url: Service URL</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -370,19 +370,19 @@
 <span class="sd">    :vartype cluster_versions: azure.mgmt.servicefabric.operations.ClusterVersionsOperations</span>
 <span class="sd">    :ivar operations: Operations operations</span>
 <span class="sd">    :vartype operations: azure.mgmt.servicefabric.operations.Operations</span>
-<span class="sd">    :ivar application_type: ApplicationType operations</span>
-<span class="sd">    :vartype application_type: azure.mgmt.servicefabric.operations.ApplicationTypeOperations</span>
-<span class="sd">    :ivar version: Version operations</span>
-<span class="sd">    :vartype version: azure.mgmt.servicefabric.operations.VersionOperations</span>
-<span class="sd">    :ivar application: Application operations</span>
-<span class="sd">    :vartype application: azure.mgmt.servicefabric.operations.ApplicationOperations</span>
-<span class="sd">    :ivar service: Service operations</span>
-<span class="sd">    :vartype service: azure.mgmt.servicefabric.operations.ServiceOperations</span>
+<span class="sd">    :ivar application_types: ApplicationTypes operations</span>
+<span class="sd">    :vartype application_types: azure.mgmt.servicefabric.operations.ApplicationTypesOperations</span>
+<span class="sd">    :ivar application_type_versions: ApplicationTypeVersions operations</span>
+<span class="sd">    :vartype application_type_versions: azure.mgmt.servicefabric.operations.ApplicationTypeVersionsOperations</span>
+<span class="sd">    :ivar applications: Applications operations</span>
+<span class="sd">    :vartype applications: azure.mgmt.servicefabric.operations.ApplicationsOperations</span>
+<span class="sd">    :ivar services: Services operations</span>
+<span class="sd">    :vartype services: azure.mgmt.servicefabric.operations.ServicesOperations</span>
 
 <span class="sd">    :param credentials: Credentials needed for the client to connect to Azure.</span>
 <span class="sd">    :type credentials: :mod:`A msrestazure Credentials</span>
 <span class="sd">     object&lt;msrestazure.azure_active_directory&gt;`</span>
-<span class="sd">    :param subscription_id: The customer subscription identifier</span>
+<span class="sd">    :param subscription_id: The customer subscription identifier.</span>
 <span class="sd">    :type subscription_id: str</span>
 <span class="sd">    :param str base_url: Service URL</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -394,7 +394,7 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">ServiceFabricManagementClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
 
         <span class="n">client_models</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">type</span><span class="p">)}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s1">&#39;2017-07-01-preview&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s1">&#39;2019-03-01-preview&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span> <span class="o">=</span> <span class="n">Serializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span> <span class="o">=</span> <span class="n">Deserializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
 
@@ -404,13 +404,13 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">operations</span> <span class="o">=</span> <span class="n">Operations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">application_type</span> <span class="o">=</span> <span class="n">ApplicationTypeOperations</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">application_types</span> <span class="o">=</span> <span class="n">ApplicationTypesOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">VersionOperations</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">application_type_versions</span> <span class="o">=</span> <span class="n">ApplicationTypeVersionsOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">application</span> <span class="o">=</span> <span class="n">ApplicationOperations</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">applications</span> <span class="o">=</span> <span class="n">ApplicationsOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">service</span> <span class="o">=</span> <span class="n">ServiceOperations</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">services</span> <span class="o">=</span> <span class="n">ServicesOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span></div>
 </pre></div>
 

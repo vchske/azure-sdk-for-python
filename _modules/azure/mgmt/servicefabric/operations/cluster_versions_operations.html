@@ -326,7 +326,7 @@
 <span class="sd">    :param config: Configuration of service client.</span>
 <span class="sd">    :param serializer: An object model serializer.</span>
 <span class="sd">    :param deserializer: An object model deserializer.</span>
-<span class="sd">    :ivar api_version: The version of the API. Constant value: &quot;2017-07-01-preview&quot;.</span>
+<span class="sd">    :ivar api_version: The version of the Service Fabric resource provider API. This is a required parameter and it&#39;s value must be &quot;2019-03-01-preview&quot; for this specification. Constant value: &quot;2019-03-01-preview&quot;.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">models</span> <span class="o">=</span> <span class="n">models</span>
@@ -336,21 +336,22 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">client</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span> <span class="o">=</span> <span class="n">serializer</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span> <span class="o">=</span> <span class="n">deserializer</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s2">&quot;2017-07-01-preview&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s2">&quot;2019-03-01-preview&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span>
 
 <div class="viewcode-block" id="ClusterVersionsOperations.get"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.servicefabric.operations.html#azure.mgmt.servicefabric.operations.ClusterVersionsOperations.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">cluster_version</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Get cluster code versions.</span>
+        <span class="sd">&quot;&quot;&quot;Gets information about a Service Fabric cluster code version available</span>
+<span class="sd">        in the specified location.</span>
 
-<span class="sd">        Get cluster code versions by location</span>
-<span class="sd">        .</span>
+<span class="sd">        Gets information about an available Service Fabric cluster code</span>
+<span class="sd">        version.</span>
 
-<span class="sd">        :param location: The location for the cluster code versions, this is</span>
-<span class="sd">         different from cluster location</span>
+<span class="sd">        :param location: The location for the cluster code versions. This is</span>
+<span class="sd">         different from cluster location.</span>
 <span class="sd">        :type location: str</span>
-<span class="sd">        :param cluster_version: The cluster code version</span>
+<span class="sd">        :param cluster_version: The cluster code version.</span>
 <span class="sd">        :type cluster_version: str</span>
 <span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
 <span class="sd">        :param bool raw: returns the direct response alongside the</span>
@@ -409,18 +410,19 @@
 
 <div class="viewcode-block" id="ClusterVersionsOperations.get_by_environment"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.servicefabric.operations.html#azure.mgmt.servicefabric.operations.ClusterVersionsOperations.get_by_environment">[docs]</a>    <span class="k">def</span> <span class="nf">get_by_environment</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">environment</span><span class="p">,</span> <span class="n">cluster_version</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Get cluster code versions by environment.</span>
+        <span class="sd">&quot;&quot;&quot;Gets information about a Service Fabric cluster code version available</span>
+<span class="sd">        for the specified environment.</span>
 
-<span class="sd">        Get cluster code versions by environment</span>
-<span class="sd">        .</span>
+<span class="sd">        Gets information about an available Service Fabric cluster code version</span>
+<span class="sd">        by environment.</span>
 
-<span class="sd">        :param location: The location for the cluster code versions, this is</span>
-<span class="sd">         different from cluster location</span>
+<span class="sd">        :param location: The location for the cluster code versions. This is</span>
+<span class="sd">         different from cluster location.</span>
 <span class="sd">        :type location: str</span>
-<span class="sd">        :param environment: Cluster operating system, the default means all.</span>
-<span class="sd">         Possible values include: &#39;Windows&#39;, &#39;Linux&#39;</span>
+<span class="sd">        :param environment: The operating system of the cluster. The default</span>
+<span class="sd">         means all. Possible values include: &#39;Windows&#39;, &#39;Linux&#39;</span>
 <span class="sd">        :type environment: str</span>
-<span class="sd">        :param cluster_version: The cluster code version</span>
+<span class="sd">        :param cluster_version: The cluster code version.</span>
 <span class="sd">        :type cluster_version: str</span>
 <span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
 <span class="sd">        :param bool raw: returns the direct response alongside the</span>
@@ -480,13 +482,14 @@
 
 <div class="viewcode-block" id="ClusterVersionsOperations.list"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.servicefabric.operations.html#azure.mgmt.servicefabric.operations.ClusterVersionsOperations.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;List cluster code versions by location.</span>
+        <span class="sd">&quot;&quot;&quot;Gets the list of Service Fabric cluster code versions available for the</span>
+<span class="sd">        specified location.</span>
 
-<span class="sd">        List cluster code versions by location</span>
-<span class="sd">        .</span>
+<span class="sd">        Gets all available code versions for Service Fabric cluster resources</span>
+<span class="sd">        by location.</span>
 
-<span class="sd">        :param location: The location for the cluster code versions, this is</span>
-<span class="sd">         different from cluster location</span>
+<span class="sd">        :param location: The location for the cluster code versions. This is</span>
+<span class="sd">         different from cluster location.</span>
 <span class="sd">        :type location: str</span>
 <span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
 <span class="sd">        :param bool raw: returns the direct response alongside the</span>
@@ -544,16 +547,17 @@
 
 <div class="viewcode-block" id="ClusterVersionsOperations.list_by_environment"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.servicefabric.operations.html#azure.mgmt.servicefabric.operations.ClusterVersionsOperations.list_by_environment">[docs]</a>    <span class="k">def</span> <span class="nf">list_by_environment</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="p">,</span> <span class="n">environment</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;List cluster code versions by environment.</span>
+        <span class="sd">&quot;&quot;&quot;Gets the list of Service Fabric cluster code versions available for the</span>
+<span class="sd">        specified environment.</span>
 
-<span class="sd">        List cluster code versions by environment</span>
-<span class="sd">        .</span>
+<span class="sd">        Gets all available code versions for Service Fabric cluster resources</span>
+<span class="sd">        by environment.</span>
 
-<span class="sd">        :param location: The location for the cluster code versions, this is</span>
-<span class="sd">         different from cluster location</span>
+<span class="sd">        :param location: The location for the cluster code versions. This is</span>
+<span class="sd">         different from cluster location.</span>
 <span class="sd">        :type location: str</span>
-<span class="sd">        :param environment: Cluster operating system, the default means all.</span>
-<span class="sd">         Possible values include: &#39;Windows&#39;, &#39;Linux&#39;</span>
+<span class="sd">        :param environment: The operating system of the cluster. The default</span>
+<span class="sd">         means all. Possible values include: &#39;Windows&#39;, &#39;Linux&#39;</span>
 <span class="sd">        :type environment: str</span>
 <span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
 <span class="sd">        :param bool raw: returns the direct response alongside the</span>

@@ -324,91 +324,146 @@
 
 <span class="sd">    All required parameters must be populated in order to send to Azure.</span>
 
-<span class="sd">    :ivar id: Azure resource ID.</span>
+<span class="sd">    :ivar id: Azure resource identifier.</span>
 <span class="sd">    :vartype id: str</span>
 <span class="sd">    :ivar name: Azure resource name.</span>
 <span class="sd">    :vartype name: str</span>
 <span class="sd">    :ivar type: Azure resource type.</span>
 <span class="sd">    :vartype type: str</span>
-<span class="sd">    :param location: Required. Resource location.</span>
+<span class="sd">    :param location: Required. Azure resource location.</span>
 <span class="sd">    :type location: str</span>
-<span class="sd">    :param tags: Resource tags.</span>
+<span class="sd">    :param tags: Azure resource tags.</span>
 <span class="sd">    :type tags: dict[str, str]</span>
-<span class="sd">    :param available_cluster_versions: The Service Fabric runtime versions</span>
+<span class="sd">    :ivar etag: Azure resource etag.</span>
+<span class="sd">    :vartype etag: str</span>
+<span class="sd">    :param add_on_features: The list of add-on features to enable in the</span>
+<span class="sd">     cluster.</span>
+<span class="sd">    :type add_on_features: list[str]</span>
+<span class="sd">    :ivar available_cluster_versions: The Service Fabric runtime versions</span>
 <span class="sd">     available for this cluster.</span>
-<span class="sd">    :type available_cluster_versions:</span>
+<span class="sd">    :vartype available_cluster_versions:</span>
 <span class="sd">     list[~azure.mgmt.servicefabric.models.ClusterVersionDetails]</span>
-<span class="sd">    :ivar cluster_id: A service generated unique identifier for the cluster</span>
-<span class="sd">     resource.</span>
-<span class="sd">    :vartype cluster_id: str</span>
-<span class="sd">    :param cluster_state: Possible values include: &#39;WaitingForNodes&#39;,</span>
-<span class="sd">     &#39;Deploying&#39;, &#39;BaselineUpgrade&#39;, &#39;UpdatingUserConfiguration&#39;,</span>
-<span class="sd">     &#39;UpdatingUserCertificate&#39;, &#39;UpdatingInfrastructure&#39;,</span>
-<span class="sd">     &#39;EnforcingClusterVersion&#39;, &#39;UpgradeServiceUnreachable&#39;, &#39;AutoScale&#39;,</span>
-<span class="sd">     &#39;Ready&#39;</span>
-<span class="sd">    :type cluster_state: str or ~azure.mgmt.servicefabric.models.enum</span>
-<span class="sd">    :ivar cluster_endpoint: The Azure Resource Provider endpoint. A system</span>
-<span class="sd">     service in the cluster connects to this  endpoint.</span>
-<span class="sd">    :vartype cluster_endpoint: str</span>
+<span class="sd">    :param azure_active_directory: The AAD authentication settings of the</span>
+<span class="sd">     cluster.</span>
+<span class="sd">    :type azure_active_directory:</span>
+<span class="sd">     ~azure.mgmt.servicefabric.models.AzureActiveDirectory</span>
+<span class="sd">    :param certificate: The certificate to use for securing the cluster. The</span>
+<span class="sd">     certificate provided will be used for node to node security within the</span>
+<span class="sd">     cluster, SSL certificate for cluster management endpoint and default admin</span>
+<span class="sd">     client.</span>
+<span class="sd">    :type certificate: ~azure.mgmt.servicefabric.models.CertificateDescription</span>
+<span class="sd">    :param certificate_common_names: Describes a list of server certificates</span>
+<span class="sd">     referenced by common name that are used to secure the cluster.</span>
+<span class="sd">    :type certificate_common_names:</span>
+<span class="sd">     ~azure.mgmt.servicefabric.models.ServerCertificateCommonNames</span>
+<span class="sd">    :param client_certificate_common_names: The list of client certificates</span>
+<span class="sd">     referenced by common name that are allowed to manage the cluster.</span>
+<span class="sd">    :type client_certificate_common_names:</span>
+<span class="sd">     list[~azure.mgmt.servicefabric.models.ClientCertificateCommonName]</span>
+<span class="sd">    :param client_certificate_thumbprints: The list of client certificates</span>
+<span class="sd">     referenced by thumbprint that are allowed to manage the cluster.</span>
+<span class="sd">    :type client_certificate_thumbprints:</span>
+<span class="sd">     list[~azure.mgmt.servicefabric.models.ClientCertificateThumbprint]</span>
 <span class="sd">    :param cluster_code_version: The Service Fabric runtime version of the</span>
 <span class="sd">     cluster. This property can only by set the user when **upgradeMode** is</span>
 <span class="sd">     set to &#39;Manual&#39;. To get list of available Service Fabric versions for new</span>
 <span class="sd">     clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of</span>
 <span class="sd">     available version for existing clusters use **availableClusterVersions**.</span>
 <span class="sd">    :type cluster_code_version: str</span>
-<span class="sd">    :param certificate: The certificate to use for securing the cluster. The</span>
-<span class="sd">     certificate provided will be used for  node to node security within the</span>
-<span class="sd">     cluster, SSL certificate for cluster management endpoint and default</span>
-<span class="sd">     admin client.</span>
-<span class="sd">    :type certificate: ~azure.mgmt.servicefabric.models.CertificateDescription</span>
-<span class="sd">    :param reliability_level: Possible values include: &#39;None&#39;, &#39;Bronze&#39;,</span>
-<span class="sd">     &#39;Silver&#39;, &#39;Gold&#39;, &#39;Platinum&#39;</span>
-<span class="sd">    :type reliability_level: str or ~azure.mgmt.servicefabric.models.enum</span>
-<span class="sd">    :param upgrade_mode: Possible values include: &#39;Automatic&#39;, &#39;Manual&#39;</span>
-<span class="sd">    :type upgrade_mode: str or ~azure.mgmt.servicefabric.models.enum</span>
-<span class="sd">    :param client_certificate_thumbprints: The list of client certificates</span>
-<span class="sd">     referenced by thumbprint that are allowed to manage the cluster.</span>
-<span class="sd">    :type client_certificate_thumbprints:</span>
-<span class="sd">     list[~azure.mgmt.servicefabric.models.ClientCertificateThumbprint]</span>
-<span class="sd">    :param client_certificate_common_names: The list of client certificates</span>
-<span class="sd">     referenced by common name that are allowed to manage the cluster.</span>
-<span class="sd">    :type client_certificate_common_names:</span>
-<span class="sd">     list[~azure.mgmt.servicefabric.models.ClientCertificateCommonName]</span>
+<span class="sd">    :ivar cluster_endpoint: The Azure Resource Provider endpoint. A system</span>
+<span class="sd">     service in the cluster connects to this  endpoint.</span>
+<span class="sd">    :vartype cluster_endpoint: str</span>
+<span class="sd">    :ivar cluster_id: A service generated unique identifier for the cluster</span>
+<span class="sd">     resource.</span>
+<span class="sd">    :vartype cluster_id: str</span>
+<span class="sd">    :ivar cluster_state: The current state of the cluster.</span>
+<span class="sd">     - WaitingForNodes - Indicates that the cluster resource is created and the</span>
+<span class="sd">     resource provider is waiting for Service Fabric VM extension to boot up</span>
+<span class="sd">     and report to it.</span>
+<span class="sd">     - Deploying - Indicates that the Service Fabric runtime is being installed</span>
+<span class="sd">     on the VMs. Cluster resource will be in this state until the cluster boots</span>
+<span class="sd">     up and system services are up.</span>
+<span class="sd">     - BaselineUpgrade - Indicates that the cluster is upgrading to establishes</span>
+<span class="sd">     the cluster version. This upgrade is automatically initiated when the</span>
+<span class="sd">     cluster boots up for the first time.</span>
+<span class="sd">     - UpdatingUserConfiguration - Indicates that the cluster is being upgraded</span>
+<span class="sd">     with the user provided configuration.</span>
+<span class="sd">     - UpdatingUserCertificate - Indicates that the cluster is being upgraded</span>
+<span class="sd">     with the user provided certificate.</span>
+<span class="sd">     - UpdatingInfrastructure - Indicates that the cluster is being upgraded</span>
+<span class="sd">     with the latest Service Fabric runtime version. This happens only when the</span>
+<span class="sd">     **upgradeMode** is set to &#39;Automatic&#39;.</span>
+<span class="sd">     - EnforcingClusterVersion - Indicates that cluster is on a different</span>
+<span class="sd">     version than expected and the cluster is being upgraded to the expected</span>
+<span class="sd">     version.</span>
+<span class="sd">     - UpgradeServiceUnreachable - Indicates that the system service in the</span>
+<span class="sd">     cluster is no longer polling the Resource Provider. Clusters in this state</span>
+<span class="sd">     cannot be managed by the Resource Provider.</span>
+<span class="sd">     - AutoScale - Indicates that the ReliabilityLevel of the cluster is being</span>
+<span class="sd">     adjusted.</span>
+<span class="sd">     - Ready - Indicates that the cluster is in a stable state.</span>
+<span class="sd">     . Possible values include: &#39;WaitingForNodes&#39;, &#39;Deploying&#39;,</span>
+<span class="sd">     &#39;BaselineUpgrade&#39;, &#39;UpdatingUserConfiguration&#39;, &#39;UpdatingUserCertificate&#39;,</span>
+<span class="sd">     &#39;UpdatingInfrastructure&#39;, &#39;EnforcingClusterVersion&#39;,</span>
+<span class="sd">     &#39;UpgradeServiceUnreachable&#39;, &#39;AutoScale&#39;, &#39;Ready&#39;</span>
+<span class="sd">    :vartype cluster_state: str or ~azure.mgmt.servicefabric.models.enum</span>
+<span class="sd">    :param diagnostics_storage_account_config: The storage account information</span>
+<span class="sd">     for storing Service Fabric diagnostic logs.</span>
+<span class="sd">    :type diagnostics_storage_account_config:</span>
+<span class="sd">     ~azure.mgmt.servicefabric.models.DiagnosticsStorageAccountConfig</span>
+<span class="sd">    :param event_store_service_enabled: Indicates if the event store service</span>
+<span class="sd">     is enabled.</span>
+<span class="sd">    :type event_store_service_enabled: bool</span>
 <span class="sd">    :param fabric_settings: The list of custom fabric settings to configure</span>
 <span class="sd">     the cluster.</span>
 <span class="sd">    :type fabric_settings:</span>
 <span class="sd">     list[~azure.mgmt.servicefabric.models.SettingsSectionDescription]</span>
-<span class="sd">    :param reverse_proxy_certificate: The server certificate used by reverse</span>
-<span class="sd">     proxy.</span>
-<span class="sd">    :type reverse_proxy_certificate:</span>
-<span class="sd">     ~azure.mgmt.servicefabric.models.CertificateDescription</span>
 <span class="sd">    :param management_endpoint: Required. The http management endpoint of the</span>
 <span class="sd">     cluster.</span>
 <span class="sd">    :type management_endpoint: str</span>
 <span class="sd">    :param node_types: Required. The list of node types in the cluster.</span>
 <span class="sd">    :type node_types:</span>
 <span class="sd">     list[~azure.mgmt.servicefabric.models.NodeTypeDescription]</span>
-<span class="sd">    :param azure_active_directory: The AAD authentication settings of the</span>
-<span class="sd">     cluster.</span>
-<span class="sd">    :type azure_active_directory:</span>
-<span class="sd">     ~azure.mgmt.servicefabric.models.AzureActiveDirectory</span>
 <span class="sd">    :ivar provisioning_state: The provisioning state of the cluster resource.</span>
 <span class="sd">     Possible values include: &#39;Updating&#39;, &#39;Succeeded&#39;, &#39;Failed&#39;, &#39;Canceled&#39;</span>
 <span class="sd">    :vartype provisioning_state: str or</span>
 <span class="sd">     ~azure.mgmt.servicefabric.models.ProvisioningState</span>
-<span class="sd">    :param vm_image: The VM image VMSS has been configured with. Generic names</span>
-<span class="sd">     such as Windows or Linux can be used.</span>
-<span class="sd">    :type vm_image: str</span>
-<span class="sd">    :param diagnostics_storage_account_config: The storage account information</span>
-<span class="sd">     for storing Service Fabric diagnostic logs.</span>
-<span class="sd">    :type diagnostics_storage_account_config:</span>
-<span class="sd">     ~azure.mgmt.servicefabric.models.DiagnosticsStorageAccountConfig</span>
+<span class="sd">    :param reliability_level: The reliability level sets the replica set size</span>
+<span class="sd">     of system services. Learn about</span>
+<span class="sd">     [ReliabilityLevel](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-capacity).</span>
+<span class="sd">     - None - Run the System services with a target replica set count of 1.</span>
+<span class="sd">     This should only be used for test clusters.</span>
+<span class="sd">     - Bronze - Run the System services with a target replica set count of 3.</span>
+<span class="sd">     This should only be used for test clusters.</span>
+<span class="sd">     - Silver - Run the System services with a target replica set count of 5.</span>
+<span class="sd">     - Gold - Run the System services with a target replica set count of 7.</span>
+<span class="sd">     - Platinum - Run the System services with a target replica set count of 9.</span>
+<span class="sd">     . Possible values include: &#39;None&#39;, &#39;Bronze&#39;, &#39;Silver&#39;, &#39;Gold&#39;, &#39;Platinum&#39;</span>
+<span class="sd">    :type reliability_level: str or ~azure.mgmt.servicefabric.models.enum</span>
+<span class="sd">    :param reverse_proxy_certificate: The server certificate used by reverse</span>
+<span class="sd">     proxy.</span>
+<span class="sd">    :type reverse_proxy_certificate:</span>
+<span class="sd">     ~azure.mgmt.servicefabric.models.CertificateDescription</span>
+<span class="sd">    :param reverse_proxy_certificate_common_names: Describes a list of server</span>
+<span class="sd">     certificates referenced by common name that are used to secure the</span>
+<span class="sd">     cluster.</span>
+<span class="sd">    :type reverse_proxy_certificate_common_names:</span>
+<span class="sd">     ~azure.mgmt.servicefabric.models.ServerCertificateCommonNames</span>
 <span class="sd">    :param upgrade_description: The policy to use when upgrading the cluster.</span>
 <span class="sd">    :type upgrade_description:</span>
 <span class="sd">     ~azure.mgmt.servicefabric.models.ClusterUpgradePolicy</span>
-<span class="sd">    :param add_on_features: The list of add-on features to enable in the</span>
-<span class="sd">     cluster.</span>
-<span class="sd">    :type add_on_features: list[str]</span>
+<span class="sd">    :param upgrade_mode: The upgrade mode of the cluster when new Service</span>
+<span class="sd">     Fabric runtime version is available.</span>
+<span class="sd">     - Automatic - The cluster will be automatically upgraded to the latest</span>
+<span class="sd">     Service Fabric runtime version as soon as it is available.</span>
+<span class="sd">     - Manual - The cluster will not be automatically upgraded to the latest</span>
+<span class="sd">     Service Fabric runtime version. The cluster is upgraded by setting the</span>
+<span class="sd">     **clusterCodeVersion** property in the cluster resource.</span>
+<span class="sd">     . Possible values include: &#39;Automatic&#39;, &#39;Manual&#39;</span>
+<span class="sd">    :type upgrade_mode: str or ~azure.mgmt.servicefabric.models.enum</span>
+<span class="sd">    :param vm_image: The VM image VMSS has been configured with. Generic names</span>
+<span class="sd">     such as Windows or Linux can be used.</span>
+<span class="sd">    :type vm_image: str</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
@@ -416,8 +471,11 @@
         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-        <span class="s1">&#39;cluster_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;etag&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;available_cluster_versions&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;cluster_endpoint&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;cluster_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;cluster_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;management_endpoint&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;node_types&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
@@ -429,50 +487,57 @@
         <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{str}</span><span class="s1">&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;etag&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;etag&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;add_on_features&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.addOnFeatures&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[str]&#39;</span><span class="p">},</span>
         <span class="s1">&#39;available_cluster_versions&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.availableClusterVersions&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ClusterVersionDetails]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;azure_active_directory&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.azureActiveDirectory&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureActiveDirectory&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;certificate&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.certificate&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;CertificateDescription&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;certificate_common_names&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.certificateCommonNames&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ServerCertificateCommonNames&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;client_certificate_common_names&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.clientCertificateCommonNames&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ClientCertificateCommonName]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;client_certificate_thumbprints&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.clientCertificateThumbprints&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ClientCertificateThumbprint]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;cluster_code_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.clusterCodeVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;cluster_endpoint&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.clusterEndpoint&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;cluster_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.clusterId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;cluster_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.clusterState&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;cluster_endpoint&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.clusterEndpoint&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;cluster_code_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.clusterCodeVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;certificate&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.certificate&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;CertificateDescription&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;reliability_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.reliabilityLevel&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;upgrade_mode&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.upgradeMode&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;client_certificate_thumbprints&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.clientCertificateThumbprints&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ClientCertificateThumbprint]&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;client_certificate_common_names&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.clientCertificateCommonNames&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[ClientCertificateCommonName]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;diagnostics_storage_account_config&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.diagnosticsStorageAccountConfig&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;DiagnosticsStorageAccountConfig&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;event_store_service_enabled&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.eventStoreServiceEnabled&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
         <span class="s1">&#39;fabric_settings&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.fabricSettings&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[SettingsSectionDescription]&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;reverse_proxy_certificate&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.reverseProxyCertificate&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;CertificateDescription&#39;</span><span class="p">},</span>
         <span class="s1">&#39;management_endpoint&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.managementEndpoint&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;node_types&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.nodeTypes&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[NodeTypeDescription]&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;azure_active_directory&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.azureActiveDirectory&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureActiveDirectory&#39;</span><span class="p">},</span>
         <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.provisioningState&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;vm_image&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.vmImage&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;diagnostics_storage_account_config&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.diagnosticsStorageAccountConfig&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;DiagnosticsStorageAccountConfig&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;reliability_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.reliabilityLevel&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;reverse_proxy_certificate&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.reverseProxyCertificate&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;CertificateDescription&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;reverse_proxy_certificate_common_names&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.reverseProxyCertificateCommonNames&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ServerCertificateCommonNames&#39;</span><span class="p">},</span>
         <span class="s1">&#39;upgrade_description&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.upgradeDescription&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ClusterUpgradePolicy&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;add_on_features&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.addOnFeatures&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[str]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;upgrade_mode&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.upgradeMode&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;vm_image&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.vmImage&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">management_endpoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">node_types</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">available_cluster_versions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cluster_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cluster_code_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">certificate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reliability_level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">upgrade_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">client_certificate_thumbprints</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">client_certificate_common_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fabric_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reverse_proxy_certificate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">azure_active_directory</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vm_image</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">diagnostics_storage_account_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">upgrade_description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">add_on_features</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">management_endpoint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">node_types</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">add_on_features</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">azure_active_directory</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">certificate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">certificate_common_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">client_certificate_common_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">client_certificate_thumbprints</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cluster_code_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">diagnostics_storage_account_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">event_store_service_enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fabric_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reliability_level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reverse_proxy_certificate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reverse_proxy_certificate_common_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">upgrade_description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">upgrade_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vm_image</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Cluster</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">available_cluster_versions</span> <span class="o">=</span> <span class="n">available_cluster_versions</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cluster_id</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cluster_state</span> <span class="o">=</span> <span class="n">cluster_state</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cluster_endpoint</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cluster_code_version</span> <span class="o">=</span> <span class="n">cluster_code_version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_on_features</span> <span class="o">=</span> <span class="n">add_on_features</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">available_cluster_versions</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">azure_active_directory</span> <span class="o">=</span> <span class="n">azure_active_directory</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">certificate</span> <span class="o">=</span> <span class="n">certificate</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">reliability_level</span> <span class="o">=</span> <span class="n">reliability_level</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">upgrade_mode</span> <span class="o">=</span> <span class="n">upgrade_mode</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">client_certificate_thumbprints</span> <span class="o">=</span> <span class="n">client_certificate_thumbprints</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">certificate_common_names</span> <span class="o">=</span> <span class="n">certificate_common_names</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">client_certificate_common_names</span> <span class="o">=</span> <span class="n">client_certificate_common_names</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client_certificate_thumbprints</span> <span class="o">=</span> <span class="n">client_certificate_thumbprints</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cluster_code_version</span> <span class="o">=</span> <span class="n">cluster_code_version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cluster_endpoint</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cluster_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cluster_state</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">diagnostics_storage_account_config</span> <span class="o">=</span> <span class="n">diagnostics_storage_account_config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">event_store_service_enabled</span> <span class="o">=</span> <span class="n">event_store_service_enabled</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fabric_settings</span> <span class="o">=</span> <span class="n">fabric_settings</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">reverse_proxy_certificate</span> <span class="o">=</span> <span class="n">reverse_proxy_certificate</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">management_endpoint</span> <span class="o">=</span> <span class="n">management_endpoint</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">node_types</span> <span class="o">=</span> <span class="n">node_types</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">azure_active_directory</span> <span class="o">=</span> <span class="n">azure_active_directory</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">provisioning_state</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">vm_image</span> <span class="o">=</span> <span class="n">vm_image</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">diagnostics_storage_account_config</span> <span class="o">=</span> <span class="n">diagnostics_storage_account_config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reliability_level</span> <span class="o">=</span> <span class="n">reliability_level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reverse_proxy_certificate</span> <span class="o">=</span> <span class="n">reverse_proxy_certificate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reverse_proxy_certificate_common_names</span> <span class="o">=</span> <span class="n">reverse_proxy_certificate_common_names</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">upgrade_description</span> <span class="o">=</span> <span class="n">upgrade_description</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_on_features</span> <span class="o">=</span> <span class="n">add_on_features</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">upgrade_mode</span> <span class="o">=</span> <span class="n">upgrade_mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vm_image</span> <span class="o">=</span> <span class="n">vm_image</span></div>
 </pre></div>
 
            </div>

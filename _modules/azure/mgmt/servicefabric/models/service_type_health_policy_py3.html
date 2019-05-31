@@ -320,58 +320,22 @@
 <span class="sd">    belonging to a service type.</span>
 <span class="sd">    .</span>
 
-<span class="sd">    :param max_percent_unhealthy_partitions_per_service: The maximum allowed</span>
-<span class="sd">     percentage of unhealthy partitions per service. Allowed values are Byte</span>
-<span class="sd">     values from zero to 100</span>
-<span class="sd">     The percentage represents the maximum tolerated percentage of partitions</span>
-<span class="sd">     that can be unhealthy before the service is considered in error.</span>
-<span class="sd">     If the percentage is respected but there is at least one unhealthy</span>
-<span class="sd">     partition, the health is evaluated as Warning.</span>
-<span class="sd">     The percentage is calculated by dividing the number of unhealthy</span>
-<span class="sd">     partitions over the total number of partitions in the service.</span>
-<span class="sd">     The computation rounds up to tolerate one failure on small numbers of</span>
-<span class="sd">     partitions. Default percentage is zero.</span>
-<span class="sd">     . Default value: 0 .</span>
-<span class="sd">    :type max_percent_unhealthy_partitions_per_service: int</span>
-<span class="sd">    :param max_percent_unhealthy_replicas_per_partition: The maximum allowed</span>
-<span class="sd">     percentage of unhealthy replicas per partition. Allowed values are Byte</span>
-<span class="sd">     values from zero to 100.</span>
-<span class="sd">     The percentage represents the maximum tolerated percentage of replicas</span>
-<span class="sd">     that can be unhealthy before the partition is considered in error.</span>
-<span class="sd">     If the percentage is respected but there is at least one unhealthy</span>
-<span class="sd">     replica, the health is evaluated as Warning.</span>
-<span class="sd">     The percentage is calculated by dividing the number of unhealthy replicas</span>
-<span class="sd">     over the total number of replicas in the partition.</span>
-<span class="sd">     The computation rounds up to tolerate one failure on small numbers of</span>
-<span class="sd">     replicas. Default percentage is zero.</span>
-<span class="sd">     . Default value: 0 .</span>
-<span class="sd">    :type max_percent_unhealthy_replicas_per_partition: int</span>
-<span class="sd">    :param max_percent_unhealthy_services: The maximum maximum allowed</span>
-<span class="sd">     percentage of unhealthy services. Allowed values are Byte values from zero</span>
-<span class="sd">     to 100.</span>
-<span class="sd">     The percentage represents the maximum tolerated percentage of services</span>
-<span class="sd">     that can be unhealthy before the application is considered in error.</span>
-<span class="sd">     If the percentage is respected but there is at least one unhealthy</span>
-<span class="sd">     service, the health is evaluated as Warning.</span>
-<span class="sd">     This is calculated by dividing the number of unhealthy services of the</span>
-<span class="sd">     specific service type over the total number of services of the specific</span>
-<span class="sd">     service type.</span>
-<span class="sd">     The computation rounds up to tolerate one failure on small numbers of</span>
-<span class="sd">     services. Default percentage is zero.</span>
+<span class="sd">    :param max_percent_unhealthy_services: The maximum percentage of services</span>
+<span class="sd">     allowed to be unhealthy before your application is considered in error.</span>
 <span class="sd">     . Default value: 0 .</span>
 <span class="sd">    :type max_percent_unhealthy_services: int</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;max_percent_unhealthy_partitions_per_service&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;MaxPercentUnhealthyPartitionsPerService&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;max_percent_unhealthy_replicas_per_partition&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;MaxPercentUnhealthyReplicasPerPartition&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;max_percent_unhealthy_services&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;MaxPercentUnhealthyServices&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;max_percent_unhealthy_services&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;maximum&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;minimum&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">max_percent_unhealthy_partitions_per_service</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_percent_unhealthy_replicas_per_partition</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_percent_unhealthy_services</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;max_percent_unhealthy_services&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;maxPercentUnhealthyServices&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">max_percent_unhealthy_services</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">ServiceTypeHealthPolicy</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">max_percent_unhealthy_partitions_per_service</span> <span class="o">=</span> <span class="n">max_percent_unhealthy_partitions_per_service</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">max_percent_unhealthy_replicas_per_partition</span> <span class="o">=</span> <span class="n">max_percent_unhealthy_replicas_per_partition</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_percent_unhealthy_services</span> <span class="o">=</span> <span class="n">max_percent_unhealthy_services</span></div>
 </pre></div>
 

@@ -318,26 +318,35 @@
 <div class="viewcode-block" id="ApplicationUpgradePolicy"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.servicefabric.models.html#azure.mgmt.servicefabric.models.ApplicationUpgradePolicy">[docs]</a><span class="k">class</span> <span class="nc">ApplicationUpgradePolicy</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Describes the policy for a monitored application upgrade.</span>
 
-<span class="sd">    :param upgrade_replica_set_check_timeout:</span>
-<span class="sd">    :type upgrade_replica_set_check_timeout: long</span>
-<span class="sd">    :param force_restart:</span>
+<span class="sd">    :param upgrade_replica_set_check_timeout: The maximum amount of time to</span>
+<span class="sd">     block processing of an upgrade domain and prevent loss of availability</span>
+<span class="sd">     when there are unexpected issues. When this timeout expires, processing of</span>
+<span class="sd">     the upgrade domain will proceed regardless of availability loss issues.</span>
+<span class="sd">     The timeout is reset at the start of each upgrade domain. Valid values are</span>
+<span class="sd">     between 0 and 42949672925 inclusive. (unsigned 32-bit integer).</span>
+<span class="sd">    :type upgrade_replica_set_check_timeout: str</span>
+<span class="sd">    :param force_restart: If true, then processes are forcefully restarted</span>
+<span class="sd">     during upgrade even when the code version has not changed (the upgrade</span>
+<span class="sd">     only changes configuration or data).</span>
 <span class="sd">    :type force_restart: bool</span>
-<span class="sd">    :param rolling_upgrade_monitoring_policy:</span>
+<span class="sd">    :param rolling_upgrade_monitoring_policy: The policy used for monitoring</span>
+<span class="sd">     the application upgrade</span>
 <span class="sd">    :type rolling_upgrade_monitoring_policy:</span>
-<span class="sd">     ~azure.mgmt.servicefabric.models.RollingUpgradeMonitoringPolicy</span>
-<span class="sd">    :param application_health_policy:</span>
+<span class="sd">     ~azure.mgmt.servicefabric.models.ArmRollingUpgradeMonitoringPolicy</span>
+<span class="sd">    :param application_health_policy: Defines a health policy used to evaluate</span>
+<span class="sd">     the health of an application or one of its children entities.</span>
 <span class="sd">    :type application_health_policy:</span>
-<span class="sd">     ~azure.mgmt.servicefabric.models.ApplicationHealthPolicy</span>
+<span class="sd">     ~azure.mgmt.servicefabric.models.ArmApplicationHealthPolicy</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;upgrade_replica_set_check_timeout&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;upgradeReplicaSetCheckTimeout&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;upgrade_replica_set_check_timeout&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;upgradeReplicaSetCheckTimeout&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;force_restart&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;forceRestart&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;rolling_upgrade_monitoring_policy&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;rollingUpgradeMonitoringPolicy&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;RollingUpgradeMonitoringPolicy&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;application_health_policy&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;applicationHealthPolicy&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ApplicationHealthPolicy&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;rolling_upgrade_monitoring_policy&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;rollingUpgradeMonitoringPolicy&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ArmRollingUpgradeMonitoringPolicy&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;application_health_policy&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;applicationHealthPolicy&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ArmApplicationHealthPolicy&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">upgrade_replica_set_check_timeout</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force_restart</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rolling_upgrade_monitoring_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">application_health_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">upgrade_replica_set_check_timeout</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force_restart</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rolling_upgrade_monitoring_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">application_health_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">ApplicationUpgradePolicy</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">upgrade_replica_set_check_timeout</span> <span class="o">=</span> <span class="n">upgrade_replica_set_check_timeout</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">force_restart</span> <span class="o">=</span> <span class="n">force_restart</span>

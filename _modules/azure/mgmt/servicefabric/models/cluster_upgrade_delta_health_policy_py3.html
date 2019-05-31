@@ -329,22 +329,29 @@
 <span class="sd">    :type max_percent_delta_unhealthy_nodes: int</span>
 <span class="sd">    :param max_percent_upgrade_domain_delta_unhealthy_nodes: Required. The</span>
 <span class="sd">     maximum allowed percentage of upgrade domain nodes health degradation</span>
-<span class="sd">     allowed during cluster upgrades. The delta is measured between the state</span>
-<span class="sd">     of the upgrade domain nodes at the beginning of upgrade and the state of</span>
-<span class="sd">     the upgrade domain nodes at the time of the health evaluation. The check</span>
-<span class="sd">     is performed after every upgrade domain upgrade completion for all</span>
-<span class="sd">     completed upgrade domains to make sure the state of the upgrade domains is</span>
-<span class="sd">     within tolerated limits.</span>
+<span class="sd">     allowed during cluster upgrades.</span>
+<span class="sd">     The delta is measured between the state of the upgrade domain nodes at the</span>
+<span class="sd">     beginning of upgrade and the state of the upgrade domain nodes at the time</span>
+<span class="sd">     of the health evaluation.</span>
+<span class="sd">     The check is performed after every upgrade domain upgrade completion for</span>
+<span class="sd">     all completed upgrade domains to make sure the state of the upgrade</span>
+<span class="sd">     domains is within tolerated limits.</span>
 <span class="sd">    :type max_percent_upgrade_domain_delta_unhealthy_nodes: int</span>
 <span class="sd">    :param max_percent_delta_unhealthy_applications: Required. The maximum</span>
 <span class="sd">     allowed percentage of applications health degradation allowed during</span>
-<span class="sd">     cluster upgrades. The delta is measured between the state of the</span>
-<span class="sd">     applications at the beginning of upgrade and the state of the applications</span>
-<span class="sd">     at the time of the health evaluation. The check is performed after every</span>
-<span class="sd">     upgrade domain upgrade completion to make sure the global state of the</span>
-<span class="sd">     cluster is within tolerated limits. System services are not included in</span>
-<span class="sd">     this.</span>
+<span class="sd">     cluster upgrades.</span>
+<span class="sd">     The delta is measured between the state of the applications at the</span>
+<span class="sd">     beginning of upgrade and the state of the applications at the time of the</span>
+<span class="sd">     health evaluation.</span>
+<span class="sd">     The check is performed after every upgrade domain upgrade completion to</span>
+<span class="sd">     make sure the global state of the cluster is within tolerated limits.</span>
+<span class="sd">     System services are not included in this.</span>
 <span class="sd">    :type max_percent_delta_unhealthy_applications: int</span>
+<span class="sd">    :param application_delta_health_policies: Defines the application delta</span>
+<span class="sd">     health policy map used to evaluate the health of an application or one of</span>
+<span class="sd">     its child entities when upgrading the cluster.</span>
+<span class="sd">    :type application_delta_health_policies: dict[str,</span>
+<span class="sd">     ~azure.mgmt.servicefabric.models.ApplicationDeltaHealthPolicy]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
@@ -357,13 +364,15 @@
         <span class="s1">&#39;max_percent_delta_unhealthy_nodes&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;maxPercentDeltaUnhealthyNodes&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
         <span class="s1">&#39;max_percent_upgrade_domain_delta_unhealthy_nodes&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;maxPercentUpgradeDomainDeltaUnhealthyNodes&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
         <span class="s1">&#39;max_percent_delta_unhealthy_applications&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;maxPercentDeltaUnhealthyApplications&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;application_delta_health_policies&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;applicationDeltaHealthPolicies&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{ApplicationDeltaHealthPolicy}</span><span class="s1">&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">max_percent_delta_unhealthy_nodes</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">max_percent_upgrade_domain_delta_unhealthy_nodes</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">max_percent_delta_unhealthy_applications</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">max_percent_delta_unhealthy_nodes</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">max_percent_upgrade_domain_delta_unhealthy_nodes</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">max_percent_delta_unhealthy_applications</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">application_delta_health_policies</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">ClusterUpgradeDeltaHealthPolicy</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_percent_delta_unhealthy_nodes</span> <span class="o">=</span> <span class="n">max_percent_delta_unhealthy_nodes</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_percent_upgrade_domain_delta_unhealthy_nodes</span> <span class="o">=</span> <span class="n">max_percent_upgrade_domain_delta_unhealthy_nodes</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">max_percent_delta_unhealthy_applications</span> <span class="o">=</span> <span class="n">max_percent_delta_unhealthy_applications</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_percent_delta_unhealthy_applications</span> <span class="o">=</span> <span class="n">max_percent_delta_unhealthy_applications</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">application_delta_health_policies</span> <span class="o">=</span> <span class="n">application_delta_health_policies</span></div>
 </pre></div>
 
            </div>

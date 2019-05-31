@@ -325,7 +325,7 @@
 <span class="sd">     only changes configuration or data).</span>
 <span class="sd">    :type force_restart: bool</span>
 <span class="sd">    :param upgrade_replica_set_check_timeout: Required. The maximum amount of</span>
-<span class="sd">     time to block processing of an upgrade domain and revent loss of</span>
+<span class="sd">     time to block processing of an upgrade domain and prevent loss of</span>
 <span class="sd">     availability when there are unexpected issues. When this timeout expires,</span>
 <span class="sd">     processing of the upgrade domain will proceed regardless of availability</span>
 <span class="sd">     loss issues. The timeout is reset at the start of each upgrade domain. The</span>
@@ -356,8 +356,8 @@
 <span class="sd">    :param health_policy: Required. The cluster health policy used when</span>
 <span class="sd">     upgrading the cluster.</span>
 <span class="sd">    :type health_policy: ~azure.mgmt.servicefabric.models.ClusterHealthPolicy</span>
-<span class="sd">    :param delta_health_policy: The delta health policy used when upgrading</span>
-<span class="sd">     the cluster.</span>
+<span class="sd">    :param delta_health_policy: The cluster delta health policy used when</span>
+<span class="sd">     upgrading the cluster.</span>
 <span class="sd">    :type delta_health_policy:</span>
 <span class="sd">     ~azure.mgmt.servicefabric.models.ClusterUpgradeDeltaHealthPolicy</span>
 <span class="sd">    &quot;&quot;&quot;</span>
