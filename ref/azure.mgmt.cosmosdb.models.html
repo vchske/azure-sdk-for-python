@@ -359,7 +359,7 @@ when defaultConsistencyPolicy is set to ‘BoundedStaleness’.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.Location">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Location</code><span class="sig-paren">(</span><em>*</em>, <em>location_name: str = None</em>, <em>provisioning_state: str = None</em>, <em>failover_priority: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/location_py3.html#Location"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Location" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Location</code><span class="sig-paren">(</span><em>*</em>, <em>location_name: str = None</em>, <em>provisioning_state: str = None</em>, <em>failover_priority: int = None</em>, <em>is_zone_redundant: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/location_py3.html#Location"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A region in which the Azure Cosmos DB database account is deployed.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -382,6 +382,8 @@ Example:
 priority of 0 indicates a write region. The maximum value for a failover
 priority = (total number of regions - 1). Failover priority values must be
 unique for each of the regions in which the database account exists.</p></li>
+<li><p><strong>is_zone_redundant</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Flag to indicate whether or not this region is
+an AvailabilityZone region</p></li>
 </ul>
 </dd>
 </dl>
@@ -1647,8 +1649,8 @@ sending a request.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
 <li><p><strong>quota_period</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The quota period used to summarize the usage values.</p></li>
-<li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum value for this metric</p></li>
-<li><p><strong>current_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Current value for this metric</p></li>
+<li><p><strong>limit</strong> (<em>long</em>) – Maximum value for this metric</p></li>
+<li><p><strong>current_value</strong> (<em>long</em>) – Current value for this metric</p></li>
 </ul>
 </dd>
 </dl>
@@ -1671,8 +1673,8 @@ sending a request.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
 <li><p><strong>quota_period</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The quota period used to summarize the usage values.</p></li>
-<li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum value for this metric</p></li>
-<li><p><strong>current_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Current value for this metric</p></li>
+<li><p><strong>limit</strong> (<em>long</em>) – Maximum value for this metric</p></li>
+<li><p><strong>current_value</strong> (<em>long</em>) – Current value for this metric</p></li>
 <li><p><a class="reference internal" href="azure.servicebus.html#azure.servicebus.Message.partition_id" title="azure.servicebus.Message.partition_id"><strong>partition_id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition id (GUID identifier) of the usages.</p></li>
 <li><p><strong>partition_key_range_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition key range id (integer
 identifier) of the usages.</p></li>
