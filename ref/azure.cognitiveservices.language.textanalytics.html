@@ -327,7 +327,7 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.cognitiveservices.language.textanalytics" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.cognitiveservices.language.textanalytics.TextAnalyticsClient">
-<em class="property">class </em><code class="descclassname">azure.cognitiveservices.language.textanalytics.</code><code class="descname">TextAnalyticsClient</code><span class="sig-paren">(</span><em>endpoint</em>, <em>credentials</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/language/textanalytics/text_analytics_client.html#TextAnalyticsClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.language.textanalytics.TextAnalyticsClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.language.textanalytics.</code><code class="sig-name descname">TextAnalyticsClient</code><span class="sig-paren">(</span><em class="sig-param">endpoint</em>, <em class="sig-param">credentials</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/language/textanalytics/text_analytics_client.html#TextAnalyticsClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.language.textanalytics.TextAnalyticsClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>The Text Analytics API is a suite of text analytics web services built with best-in-class Microsoft machine learning algorithms. The API can be used to analyze unstructured text for tasks such as sentiment analysis, key phrase extraction and language detection. No training data is needed to use this API; just bring your text data. This API uses advanced natural language processing techniques to deliver best in class predictions. Further documentation can be found in <a class="reference external" href="https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview">https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview</a></p>
 <dl class="field-list simple">
@@ -345,7 +345,7 @@ client subscription.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.cognitiveservices.language.textanalytics.TextAnalyticsClient.detect_language">
-<code class="descname">detect_language</code><span class="sig-paren">(</span><em>show_stats=None</em>, <em>documents=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/language/textanalytics/text_analytics_client.html#TextAnalyticsClient.detect_language"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.language.textanalytics.TextAnalyticsClient.detect_language" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">detect_language</code><span class="sig-paren">(</span><em class="sig-param">show_stats=None</em>, <em class="sig-param">documents=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/language/textanalytics/text_analytics_client.html#TextAnalyticsClient.detect_language"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.language.textanalytics.TextAnalyticsClient.detect_language" title="Permalink to this definition">¶</a></dt>
 <dd><p>The API returns the detected language and a numeric score between 0 and
 1.</p>
 <p>Scores close to 1 indicate 100% certainty that the identified language
@@ -378,7 +378,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.language.textanalytics.TextAnalyticsClient.entities">
-<code class="descname">entities</code><span class="sig-paren">(</span><em>show_stats=None</em>, <em>documents=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/language/textanalytics/text_analytics_client.html#TextAnalyticsClient.entities"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.language.textanalytics.TextAnalyticsClient.entities" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">entities</code><span class="sig-paren">(</span><em class="sig-param">show_stats=None</em>, <em class="sig-param">documents=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/language/textanalytics/text_analytics_client.html#TextAnalyticsClient.entities"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.language.textanalytics.TextAnalyticsClient.entities" title="Permalink to this definition">¶</a></dt>
 <dd><p>The API returns a list of recognized entities in a given document.</p>
 <p>To get even more information on each recognized entity we recommend
 using the Bing Entity Search API by querying for the recognized
@@ -413,7 +413,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.language.textanalytics.TextAnalyticsClient.key_phrases">
-<code class="descname">key_phrases</code><span class="sig-paren">(</span><em>show_stats=None</em>, <em>documents=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/language/textanalytics/text_analytics_client.html#TextAnalyticsClient.key_phrases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.language.textanalytics.TextAnalyticsClient.key_phrases" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">key_phrases</code><span class="sig-paren">(</span><em class="sig-param">show_stats=None</em>, <em class="sig-param">documents=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/language/textanalytics/text_analytics_client.html#TextAnalyticsClient.key_phrases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.language.textanalytics.TextAnalyticsClient.key_phrases" title="Permalink to this definition">¶</a></dt>
 <dd><p>The API returns a list of strings denoting the key talking points in
 the input text.</p>
 <p>See the &lt;a
@@ -448,7 +448,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.language.textanalytics.TextAnalyticsClient.sentiment">
-<code class="descname">sentiment</code><span class="sig-paren">(</span><em>show_stats=None</em>, <em>documents=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/language/textanalytics/text_analytics_client.html#TextAnalyticsClient.sentiment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.language.textanalytics.TextAnalyticsClient.sentiment" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sentiment</code><span class="sig-paren">(</span><em class="sig-param">show_stats=None</em>, <em class="sig-param">documents=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/language/textanalytics/text_analytics_client.html#TextAnalyticsClient.sentiment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.language.textanalytics.TextAnalyticsClient.sentiment" title="Permalink to this definition">¶</a></dt>
 <dd><p>The API returns a numeric score between 0 and 1.</p>
 <p>Scores close to 1 indicate positive sentiment, while scores close to 0
 indicate negative sentiment. A score of 0.5 indicates the lack of

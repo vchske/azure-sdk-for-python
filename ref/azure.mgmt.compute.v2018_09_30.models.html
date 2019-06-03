@@ -334,7 +334,7 @@
 <span id="azure-mgmt-compute-v2018-09-30-models-module"></span><h1>azure.mgmt.compute.v2018_09_30.models module<a class="headerlink" href="#module-azure.mgmt.compute.v2018_09_30.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.Resource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.Resource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.Resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The Resource model definition.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -359,7 +359,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskSku">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">DiskSku</code><span class="sig-paren">(</span><em>*</em>, <em>name=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/disk_sku_py3.html#DiskSku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskSku" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">DiskSku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/disk_sku_py3.html#DiskSku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskSku" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, or
 UltraSSD_LRS.</p>
@@ -379,7 +379,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.ImageDiskReference">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">ImageDiskReference</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>lun: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/image_disk_reference_py3.html#ImageDiskReference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.ImageDiskReference" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">ImageDiskReference</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">lun: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/image_disk_reference_py3.html#ImageDiskReference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.ImageDiskReference" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The source image used for creating the disk.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -398,7 +398,7 @@ disks, this field is null.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.CreationData">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">CreationData</code><span class="sig-paren">(</span><em>*</em>, <em>create_option</em>, <em>storage_account_id: str = None</em>, <em>image_reference=None</em>, <em>source_uri: str = None</em>, <em>source_resource_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/creation_data_py3.html#CreationData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.CreationData" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">CreationData</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">create_option</em>, <em class="sig-param">storage_account_id: str = None</em>, <em class="sig-param">image_reference=None</em>, <em class="sig-param">source_uri: str = None</em>, <em class="sig-param">source_resource_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/creation_data_py3.html#CreationData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.CreationData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Data used when creating a disk.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -424,7 +424,7 @@ the source snapshot or disk.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.SourceVault">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">SourceVault</code><span class="sig-paren">(</span><em>*</em>, <em>id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/source_vault_py3.html#SourceVault"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SourceVault" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">SourceVault</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/source_vault_py3.html#SourceVault"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SourceVault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The vault id is an Azure Resource Manager Resource id in the form
 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}.</p>
@@ -437,7 +437,7 @@ the source snapshot or disk.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.KeyVaultAndSecretReference">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">KeyVaultAndSecretReference</code><span class="sig-paren">(</span><em>*</em>, <em>source_vault</em>, <em>secret_url: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/key_vault_and_secret_reference_py3.html#KeyVaultAndSecretReference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.KeyVaultAndSecretReference" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">KeyVaultAndSecretReference</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">source_vault</em>, <em class="sig-param">secret_url: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/key_vault_and_secret_reference_py3.html#KeyVaultAndSecretReference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.KeyVaultAndSecretReference" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Key Vault Secret Url and vault id of the encryption key .</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -454,7 +454,7 @@ key or secret</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.KeyVaultAndKeyReference">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">KeyVaultAndKeyReference</code><span class="sig-paren">(</span><em>*</em>, <em>source_vault</em>, <em>key_url: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/key_vault_and_key_reference_py3.html#KeyVaultAndKeyReference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.KeyVaultAndKeyReference" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">KeyVaultAndKeyReference</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">source_vault</em>, <em class="sig-param">key_url: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/key_vault_and_key_reference_py3.html#KeyVaultAndKeyReference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.KeyVaultAndKeyReference" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Key Vault Key Url and vault id of KeK, KeK is optional and when provided is
 used to unwrap the encryptionKey.</p>
@@ -472,7 +472,7 @@ key or secret</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsElement">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">EncryptionSettingsElement</code><span class="sig-paren">(</span><em>*</em>, <em>disk_encryption_key=None</em>, <em>key_encryption_key=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/encryption_settings_element_py3.html#EncryptionSettingsElement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsElement" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">EncryptionSettingsElement</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">disk_encryption_key=None</em>, <em class="sig-param">key_encryption_key=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/encryption_settings_element_py3.html#EncryptionSettingsElement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsElement" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Encryption settings for one disk volume.</p>
 <dl class="field-list simple">
@@ -490,7 +490,7 @@ unwrap the disk encryption key.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">EncryptionSettingsCollection</code><span class="sig-paren">(</span><em>*</em>, <em>enabled: bool</em>, <em>encryption_settings=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/encryption_settings_collection_py3.html#EncryptionSettingsCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">EncryptionSettingsCollection</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">enabled: bool</em>, <em class="sig-param">encryption_settings=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/encryption_settings_collection_py3.html#EncryptionSettingsCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.EncryptionSettingsCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Encryption settings for disk or snapshot.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -511,7 +511,7 @@ each disk volume.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.Disk">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">Disk</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>creation_data</em>, <em>tags=None</em>, <em>sku=None</em>, <em>zones=None</em>, <em>os_type=None</em>, <em>hyper_vgeneration=None</em>, <em>disk_size_gb: int = None</em>, <em>encryption_settings_collection=None</em>, <em>disk_iops_read_write: int = None</em>, <em>disk_mbps_read_write: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/disk_py3.html#Disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.Disk" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">Disk</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">creation_data</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">hyper_vgeneration=None</em>, <em class="sig-param">disk_size_gb: int = None</em>, <em class="sig-param">encryption_settings_collection=None</em>, <em class="sig-param">disk_iops_read_write: int = None</em>, <em class="sig-param">disk_mbps_read_write: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/disk_py3.html#Disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.Disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.compute.v2018_09_30.models.resource_py3.Resource</span></code></p>
 <p>Disk resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -568,7 +568,7 @@ here uses the ISO notation, of powers of 10.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskUpdate">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">DiskUpdate</code><span class="sig-paren">(</span><em>*</em>, <em>os_type=None</em>, <em>disk_size_gb: int = None</em>, <em>encryption_settings_collection=None</em>, <em>disk_iops_read_write: int = None</em>, <em>disk_mbps_read_write: int = None</em>, <em>tags=None</em>, <em>sku=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/disk_update_py3.html#DiskUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskUpdate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">DiskUpdate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">disk_size_gb: int = None</em>, <em class="sig-param">encryption_settings_collection=None</em>, <em class="sig-param">disk_iops_read_write: int = None</em>, <em class="sig-param">disk_mbps_read_write: int = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/disk_update_py3.html#DiskUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskUpdate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Disk update resource.</p>
 <dl class="field-list simple">
@@ -600,7 +600,7 @@ here uses the ISO notation, of powers of 10.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotSku">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">SnapshotSku</code><span class="sig-paren">(</span><em>*</em>, <em>name=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/snapshot_sku_py3.html#SnapshotSku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotSku" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">SnapshotSku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/snapshot_sku_py3.html#SnapshotSku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotSku" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -619,7 +619,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.GrantAccessData">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">GrantAccessData</code><span class="sig-paren">(</span><em>*</em>, <em>access</em>, <em>duration_in_seconds: int</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/grant_access_data_py3.html#GrantAccessData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.GrantAccessData" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">GrantAccessData</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">access</em>, <em class="sig-param">duration_in_seconds: int</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/grant_access_data_py3.html#GrantAccessData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.GrantAccessData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Data used for requesting a SAS.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -636,7 +636,7 @@ SAS access expires.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.AccessUri">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">AccessUri</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/access_uri_py3.html#AccessUri"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessUri" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">AccessUri</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/access_uri_py3.html#AccessUri"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessUri" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A disk access SAS uri.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -650,7 +650,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.Snapshot">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">Snapshot</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>creation_data</em>, <em>tags=None</em>, <em>sku=None</em>, <em>os_type=None</em>, <em>hyper_vgeneration=None</em>, <em>disk_size_gb: int = None</em>, <em>encryption_settings_collection=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/snapshot_py3.html#Snapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.Snapshot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">creation_data</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">hyper_vgeneration=None</em>, <em class="sig-param">disk_size_gb: int = None</em>, <em class="sig-param">encryption_settings_collection=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/snapshot_py3.html#Snapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.compute.v2018_09_30.models.resource_py3.Resource</span></code></p>
 <p>Snapshot resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -695,7 +695,7 @@ disk or snapshot.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotUpdate">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">SnapshotUpdate</code><span class="sig-paren">(</span><em>*</em>, <em>os_type=None</em>, <em>disk_size_gb: int = None</em>, <em>encryption_settings_collection=None</em>, <em>tags=None</em>, <em>sku=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/snapshot_update_py3.html#SnapshotUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotUpdate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">SnapshotUpdate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">disk_size_gb: int = None</em>, <em class="sig-param">encryption_settings_collection=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/snapshot_update_py3.html#SnapshotUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotUpdate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Snapshot update resource.</p>
 <dl class="field-list simple">
@@ -721,198 +721,198 @@ disk or snapshot.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">DiskPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/disk_paged.html#DiskPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">DiskPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/disk_paged.html#DiskPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.Disk" title="azure.mgmt.compute.v2018_09_30.models.Disk"><code class="xref py py-class docutils literal notranslate"><span class="pre">Disk</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">SnapshotPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/snapshot_paged.html#SnapshotPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">SnapshotPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/snapshot_paged.html#SnapshotPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.compute.v2018_09_30.models.Snapshot" title="azure.mgmt.compute.v2018_09_30.models.Snapshot"><code class="xref py py-class docutils literal notranslate"><span class="pre">Snapshot</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">DiskStorageAccountTypes</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#DiskStorageAccountTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">DiskStorageAccountTypes</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#DiskStorageAccountTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.premium_lrs">
-<code class="descname">premium_lrs</code><em class="property"> = 'Premium_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.premium_lrs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">premium_lrs</code><em class="property"> = 'Premium_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.premium_lrs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.standard_lrs">
-<code class="descname">standard_lrs</code><em class="property"> = 'Standard_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.standard_lrs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">standard_lrs</code><em class="property"> = 'Standard_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.standard_lrs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.standard_ssd_lrs">
-<code class="descname">standard_ssd_lrs</code><em class="property"> = 'StandardSSD_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.standard_ssd_lrs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">standard_ssd_lrs</code><em class="property"> = 'StandardSSD_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.standard_ssd_lrs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.ultra_ssd_lrs">
-<code class="descname">ultra_ssd_lrs</code><em class="property"> = 'UltraSSD_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.ultra_ssd_lrs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ultra_ssd_lrs</code><em class="property"> = 'UltraSSD_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskStorageAccountTypes.ultra_ssd_lrs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">OperatingSystemTypes</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#OperatingSystemTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">OperatingSystemTypes</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#OperatingSystemTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes.linux">
-<code class="descname">linux</code><em class="property"> = 'Linux'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes.linux" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">linux</code><em class="property"> = 'Linux'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes.linux" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes.windows">
-<code class="descname">windows</code><em class="property"> = 'Windows'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes.windows" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">windows</code><em class="property"> = 'Windows'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.OperatingSystemTypes.windows" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.HyperVGeneration">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">HyperVGeneration</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#HyperVGeneration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.HyperVGeneration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">HyperVGeneration</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#HyperVGeneration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.HyperVGeneration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.HyperVGeneration.v1">
-<code class="descname">v1</code><em class="property"> = 'V1'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.HyperVGeneration.v1" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">v1</code><em class="property"> = 'V1'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.HyperVGeneration.v1" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.HyperVGeneration.v2">
-<code class="descname">v2</code><em class="property"> = 'V2'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.HyperVGeneration.v2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">v2</code><em class="property"> = 'V2'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.HyperVGeneration.v2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">DiskCreateOption</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#DiskCreateOption"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">DiskCreateOption</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#DiskCreateOption"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.attach">
-<code class="descname">attach</code><em class="property"> = 'Attach'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.attach" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attach</code><em class="property"> = 'Attach'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.attach" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.copy">
-<code class="descname">copy</code><em class="property"> = 'Copy'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.copy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">copy</code><em class="property"> = 'Copy'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.copy" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.empty">
-<code class="descname">empty</code><em class="property"> = 'Empty'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.empty" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">empty</code><em class="property"> = 'Empty'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.empty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.from_image">
-<code class="descname">from_image</code><em class="property"> = 'FromImage'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.from_image" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">from_image</code><em class="property"> = 'FromImage'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.from_image" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.import_enum">
-<code class="descname">import_enum</code><em class="property"> = 'Import'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.import_enum" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">import_enum</code><em class="property"> = 'Import'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.import_enum" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.restore">
-<code class="descname">restore</code><em class="property"> = 'Restore'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.restore" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">restore</code><em class="property"> = 'Restore'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.restore" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.upload">
-<code class="descname">upload</code><em class="property"> = 'Upload'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.upload" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">upload</code><em class="property"> = 'Upload'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskCreateOption.upload" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskState">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">DiskState</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#DiskState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">DiskState</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#DiskState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskState.active_sas">
-<code class="descname">active_sas</code><em class="property"> = 'ActiveSAS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.active_sas" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">active_sas</code><em class="property"> = 'ActiveSAS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.active_sas" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskState.active_upload">
-<code class="descname">active_upload</code><em class="property"> = 'ActiveUpload'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.active_upload" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">active_upload</code><em class="property"> = 'ActiveUpload'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.active_upload" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskState.attached">
-<code class="descname">attached</code><em class="property"> = 'Attached'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.attached" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attached</code><em class="property"> = 'Attached'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.attached" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskState.ready_to_upload">
-<code class="descname">ready_to_upload</code><em class="property"> = 'ReadyToUpload'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.ready_to_upload" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ready_to_upload</code><em class="property"> = 'ReadyToUpload'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.ready_to_upload" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskState.reserved">
-<code class="descname">reserved</code><em class="property"> = 'Reserved'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.reserved" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reserved</code><em class="property"> = 'Reserved'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.reserved" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.DiskState.unattached">
-<code class="descname">unattached</code><em class="property"> = 'Unattached'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.unattached" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">unattached</code><em class="property"> = 'Unattached'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.DiskState.unattached" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">SnapshotStorageAccountTypes</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#SnapshotStorageAccountTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">SnapshotStorageAccountTypes</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#SnapshotStorageAccountTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.premium_lrs">
-<code class="descname">premium_lrs</code><em class="property"> = 'Premium_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.premium_lrs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">premium_lrs</code><em class="property"> = 'Premium_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.premium_lrs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.standard_lrs">
-<code class="descname">standard_lrs</code><em class="property"> = 'Standard_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.standard_lrs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">standard_lrs</code><em class="property"> = 'Standard_LRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.standard_lrs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.standard_zrs">
-<code class="descname">standard_zrs</code><em class="property"> = 'Standard_ZRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.standard_zrs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">standard_zrs</code><em class="property"> = 'Standard_ZRS'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.SnapshotStorageAccountTypes.standard_zrs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.compute.v2018_09_30.models.AccessLevel">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="descname">AccessLevel</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#AccessLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.v2018_09_30.models.</code><code class="sig-name descname">AccessLevel</code><a class="reference internal" href="../_modules/azure/mgmt/compute/v2018_09_30/models/compute_management_client_enums.html#AccessLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.AccessLevel.none">
-<code class="descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel.none" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel.none" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.AccessLevel.read">
-<code class="descname">read</code><em class="property"> = 'Read'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel.read" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">read</code><em class="property"> = 'Read'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel.read" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.v2018_09_30.models.AccessLevel.write">
-<code class="descname">write</code><em class="property"> = 'Write'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel.write" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">write</code><em class="property"> = 'Write'</em><a class="headerlink" href="#azure.mgmt.compute.v2018_09_30.models.AccessLevel.write" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

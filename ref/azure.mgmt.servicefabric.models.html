@@ -318,7 +318,7 @@
 <span id="azure-mgmt-servicefabric-models-module"></span><h1>azure.mgmt.servicefabric.models module<a class="headerlink" href="#module-azure.mgmt.servicefabric.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceTypeDeltaHealthPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceTypeDeltaHealthPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>max_percent_delta_unhealthy_services: int = 0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_type_delta_health_policy_py3.html#ServiceTypeDeltaHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceTypeDeltaHealthPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceTypeDeltaHealthPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">max_percent_delta_unhealthy_services: int = 0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_type_delta_health_policy_py3.html#ServiceTypeDeltaHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceTypeDeltaHealthPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Represents the delta health policy used to evaluate the health of services
 belonging to a service type when upgrading the cluster.
@@ -339,7 +339,7 @@ make sure the global state of the cluster is within tolerated limits.
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ApplicationDeltaHealthPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ApplicationDeltaHealthPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>default_service_type_delta_health_policy=None</em>, <em>service_type_delta_health_policies=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_delta_health_policy_py3.html#ApplicationDeltaHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationDeltaHealthPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ApplicationDeltaHealthPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">default_service_type_delta_health_policy=None</em>, <em class="sig-param">service_type_delta_health_policies=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_delta_health_policy_py3.html#ApplicationDeltaHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationDeltaHealthPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Defines a delta health policy used to evaluate the health of an application
 or one of its child entities when upgrading the cluster.
@@ -360,7 +360,7 @@ health policy per service type name. The map is empty by default.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceTypeHealthPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceTypeHealthPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>max_percent_unhealthy_services: int = 0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_type_health_policy_py3.html#ServiceTypeHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceTypeHealthPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceTypeHealthPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">max_percent_unhealthy_services: int = 0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_type_health_policy_py3.html#ServiceTypeHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceTypeHealthPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Represents the health policy used to evaluate the health of services
 belonging to a service type.
@@ -376,7 +376,7 @@ allowed to be unhealthy before your application is considered in error.
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ApplicationHealthPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ApplicationHealthPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>default_service_type_health_policy=None</em>, <em>service_type_health_policies=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_health_policy_py3.html#ApplicationHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationHealthPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ApplicationHealthPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">default_service_type_health_policy=None</em>, <em class="sig-param">service_type_health_policies=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_health_policy_py3.html#ApplicationHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationHealthPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Defines a health policy used to evaluate the health of an application or
 one of its children entities.
@@ -396,7 +396,7 @@ policy per service type name. The map is empty by default.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.AvailableOperationDisplay">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">AvailableOperationDisplay</code><span class="sig-paren">(</span><em>*</em>, <em>provider: str = None</em>, <em>resource: str = None</em>, <em>operation: str = None</em>, <em>description: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/available_operation_display_py3.html#AvailableOperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.AvailableOperationDisplay" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">AvailableOperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/available_operation_display_py3.html#AvailableOperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.AvailableOperationDisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Operation supported by the Service Fabric resource provider.</p>
 <dl class="field-list simple">
@@ -413,7 +413,7 @@ policy per service type name. The map is empty by default.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.AzureActiveDirectory">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">AzureActiveDirectory</code><span class="sig-paren">(</span><em>*</em>, <em>tenant_id: str = None</em>, <em>cluster_application: str = None</em>, <em>client_application: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/azure_active_directory_py3.html#AzureActiveDirectory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.AzureActiveDirectory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">AzureActiveDirectory</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tenant_id: str = None</em>, <em class="sig-param">cluster_application: str = None</em>, <em class="sig-param">client_application: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/azure_active_directory_py3.html#AzureActiveDirectory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.AzureActiveDirectory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The settings to enable AAD authentication on the cluster.</p>
 <dl class="field-list simple">
@@ -429,7 +429,7 @@ policy per service type name. The map is empty by default.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.CertificateDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">CertificateDescription</code><span class="sig-paren">(</span><em>*</em>, <em>thumbprint: str</em>, <em>thumbprint_secondary: str = None</em>, <em>x509_store_name=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/certificate_description_py3.html#CertificateDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.CertificateDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">CertificateDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">thumbprint: str</em>, <em class="sig-param">thumbprint_secondary: str = None</em>, <em class="sig-param">x509_store_name=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/certificate_description_py3.html#CertificateDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.CertificateDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes the certificate details.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -448,7 +448,7 @@ values include: ‘AddressBook’, ‘AuthRoot’, ‘CertificateAuthority’,
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ClientCertificateCommonName">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ClientCertificateCommonName</code><span class="sig-paren">(</span><em>*</em>, <em>is_admin: bool</em>, <em>certificate_common_name: str</em>, <em>certificate_issuer_thumbprint: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/client_certificate_common_name_py3.html#ClientCertificateCommonName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClientCertificateCommonName" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ClientCertificateCommonName</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">is_admin: bool</em>, <em class="sig-param">certificate_common_name: str</em>, <em class="sig-param">certificate_issuer_thumbprint: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/client_certificate_common_name_py3.html#ClientCertificateCommonName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClientCertificateCommonName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes the client certificate details using common name.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -469,7 +469,7 @@ the client certificate.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ClientCertificateThumbprint">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ClientCertificateThumbprint</code><span class="sig-paren">(</span><em>*</em>, <em>is_admin: bool</em>, <em>certificate_thumbprint: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/client_certificate_thumbprint_py3.html#ClientCertificateThumbprint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClientCertificateThumbprint" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ClientCertificateThumbprint</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">is_admin: bool</em>, <em class="sig-param">certificate_thumbprint: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/client_certificate_thumbprint_py3.html#ClientCertificateThumbprint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClientCertificateThumbprint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes the client certificate details using thumbprint.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -488,7 +488,7 @@ certificate.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ClusterVersionDetails">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ClusterVersionDetails</code><span class="sig-paren">(</span><em>*</em>, <em>code_version: str = None</em>, <em>support_expiry_utc: str = None</em>, <em>environment=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_version_details_py3.html#ClusterVersionDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterVersionDetails" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ClusterVersionDetails</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code_version: str = None</em>, <em class="sig-param">support_expiry_utc: str = None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_version_details_py3.html#ClusterVersionDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterVersionDetails" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The detail of the Service Fabric runtime version result.</p>
 <dl class="field-list simple">
@@ -505,7 +505,7 @@ operating system. Possible values include: ‘Windows’, ‘Linux’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServerCertificateCommonName">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServerCertificateCommonName</code><span class="sig-paren">(</span><em>*</em>, <em>certificate_common_name: str</em>, <em>certificate_issuer_thumbprint: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/server_certificate_common_name_py3.html#ServerCertificateCommonName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServerCertificateCommonName" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServerCertificateCommonName</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">certificate_common_name: str</em>, <em class="sig-param">certificate_issuer_thumbprint: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/server_certificate_common_name_py3.html#ServerCertificateCommonName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServerCertificateCommonName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes the server certificate details using common name.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -523,7 +523,7 @@ the server certificate.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServerCertificateCommonNames">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServerCertificateCommonNames</code><span class="sig-paren">(</span><em>*</em>, <em>common_names=None</em>, <em>x509_store_name=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/server_certificate_common_names_py3.html#ServerCertificateCommonNames"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServerCertificateCommonNames" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServerCertificateCommonNames</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">common_names=None</em>, <em class="sig-param">x509_store_name=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/server_certificate_common_names_py3.html#ServerCertificateCommonNames"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServerCertificateCommonNames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes a list of server certificates referenced by common name that are
 used to secure the cluster.</p>
@@ -542,7 +542,7 @@ values include: ‘AddressBook’, ‘AuthRoot’, ‘CertificateAuthority’,
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.DiagnosticsStorageAccountConfig">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">DiagnosticsStorageAccountConfig</code><span class="sig-paren">(</span><em>*</em>, <em>storage_account_name: str</em>, <em>protected_account_key_name: str</em>, <em>blob_endpoint: str</em>, <em>queue_endpoint: str</em>, <em>table_endpoint: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/diagnostics_storage_account_config_py3.html#DiagnosticsStorageAccountConfig"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.DiagnosticsStorageAccountConfig" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">DiagnosticsStorageAccountConfig</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">storage_account_name: str</em>, <em class="sig-param">protected_account_key_name: str</em>, <em class="sig-param">blob_endpoint: str</em>, <em class="sig-param">queue_endpoint: str</em>, <em class="sig-param">table_endpoint: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/diagnostics_storage_account_config_py3.html#DiagnosticsStorageAccountConfig"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.DiagnosticsStorageAccountConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The storage account information for storing Service Fabric diagnostic logs.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -565,7 +565,7 @@ account.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.SettingsParameterDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">SettingsParameterDescription</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>value: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/settings_parameter_description_py3.html#SettingsParameterDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.SettingsParameterDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">SettingsParameterDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">value: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/settings_parameter_description_py3.html#SettingsParameterDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.SettingsParameterDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes a parameter in fabric settings of the cluster.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -581,7 +581,7 @@ account.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.SettingsSectionDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">SettingsSectionDescription</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>parameters</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/settings_section_description_py3.html#SettingsSectionDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.SettingsSectionDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">SettingsSectionDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">parameters</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/settings_section_description_py3.html#SettingsSectionDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.SettingsSectionDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes a section in the fabric settings of the cluster.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -597,7 +597,7 @@ account.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.EndpointRangeDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">EndpointRangeDescription</code><span class="sig-paren">(</span><em>*</em>, <em>start_port: int</em>, <em>end_port: int</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/endpoint_range_description_py3.html#EndpointRangeDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.EndpointRangeDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">EndpointRangeDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">start_port: int</em>, <em class="sig-param">end_port: int</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/endpoint_range_description_py3.html#EndpointRangeDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.EndpointRangeDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Port range details.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -613,7 +613,7 @@ account.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.NodeTypeDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">NodeTypeDescription</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>client_connection_endpoint_port: int</em>, <em>http_gateway_endpoint_port: int</em>, <em>is_primary: bool</em>, <em>vm_instance_count: int</em>, <em>placement_properties=None</em>, <em>capacities=None</em>, <em>durability_level=None</em>, <em>application_ports=None</em>, <em>ephemeral_ports=None</em>, <em>reverse_proxy_endpoint_port: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/node_type_description_py3.html#NodeTypeDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.NodeTypeDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">NodeTypeDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">client_connection_endpoint_port: int</em>, <em class="sig-param">http_gateway_endpoint_port: int</em>, <em class="sig-param">is_primary: bool</em>, <em class="sig-param">vm_instance_count: int</em>, <em class="sig-param">placement_properties=None</em>, <em class="sig-param">capacities=None</em>, <em class="sig-param">durability_level=None</em>, <em class="sig-param">application_ports=None</em>, <em class="sig-param">ephemeral_ports=None</em>, <em class="sig-param">reverse_proxy_endpoint_port: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/node_type_description_py3.html#NodeTypeDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.NodeTypeDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes a node type in the cluster, each node type represents sub set of
 nodes in the cluster.</p>
@@ -660,7 +660,7 @@ VirtualMachineScaleSet resource.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ClusterHealthPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ClusterHealthPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>max_percent_unhealthy_nodes: int = 0</em>, <em>max_percent_unhealthy_applications: int = 0</em>, <em>application_health_policies=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_health_policy_py3.html#ClusterHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterHealthPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ClusterHealthPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">max_percent_unhealthy_nodes: int = 0</em>, <em class="sig-param">max_percent_unhealthy_applications: int = 0</em>, <em class="sig-param">application_health_policies=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_health_policy_py3.html#ClusterHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterHealthPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Defines a health policy used to evaluate the health of the cluster or of a
 cluster node.
@@ -707,7 +707,7 @@ entities.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ClusterUpgradeDeltaHealthPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ClusterUpgradeDeltaHealthPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>max_percent_delta_unhealthy_nodes: int</em>, <em>max_percent_upgrade_domain_delta_unhealthy_nodes: int</em>, <em>max_percent_delta_unhealthy_applications: int</em>, <em>application_delta_health_policies=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_upgrade_delta_health_policy_py3.html#ClusterUpgradeDeltaHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterUpgradeDeltaHealthPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ClusterUpgradeDeltaHealthPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">max_percent_delta_unhealthy_nodes: int</em>, <em class="sig-param">max_percent_upgrade_domain_delta_unhealthy_nodes: int</em>, <em class="sig-param">max_percent_delta_unhealthy_applications: int</em>, <em class="sig-param">application_delta_health_policies=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_upgrade_delta_health_policy_py3.html#ClusterUpgradeDeltaHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterUpgradeDeltaHealthPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes the delta health policies for the cluster upgrade.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -749,7 +749,7 @@ its child entities when upgrading the cluster.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ClusterUpgradePolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ClusterUpgradePolicy</code><span class="sig-paren">(</span><em>*</em>, <em>upgrade_replica_set_check_timeout: str</em>, <em>health_check_wait_duration: str</em>, <em>health_check_stable_duration: str</em>, <em>health_check_retry_timeout: str</em>, <em>upgrade_timeout: str</em>, <em>upgrade_domain_timeout: str</em>, <em>health_policy</em>, <em>force_restart: bool = None</em>, <em>delta_health_policy=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_upgrade_policy_py3.html#ClusterUpgradePolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterUpgradePolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ClusterUpgradePolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">upgrade_replica_set_check_timeout: str</em>, <em class="sig-param">health_check_wait_duration: str</em>, <em class="sig-param">health_check_stable_duration: str</em>, <em class="sig-param">health_check_retry_timeout: str</em>, <em class="sig-param">upgrade_timeout: str</em>, <em class="sig-param">upgrade_domain_timeout: str</em>, <em class="sig-param">health_policy</em>, <em class="sig-param">force_restart: bool = None</em>, <em class="sig-param">delta_health_policy=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_upgrade_policy_py3.html#ClusterUpgradePolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterUpgradePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes the policy used when upgrading the cluster.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -793,7 +793,7 @@ upgrading the cluster.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.Cluster">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>management_endpoint: str</em>, <em>node_types</em>, <em>tags=None</em>, <em>add_on_features=None</em>, <em>azure_active_directory=None</em>, <em>certificate=None</em>, <em>certificate_common_names=None</em>, <em>client_certificate_common_names=None</em>, <em>client_certificate_thumbprints=None</em>, <em>cluster_code_version: str = None</em>, <em>diagnostics_storage_account_config=None</em>, <em>event_store_service_enabled: bool = None</em>, <em>fabric_settings=None</em>, <em>reliability_level=None</em>, <em>reverse_proxy_certificate=None</em>, <em>reverse_proxy_certificate_common_names=None</em>, <em>upgrade_description=None</em>, <em>upgrade_mode=None</em>, <em>vm_image: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_py3.html#Cluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">management_endpoint: str</em>, <em class="sig-param">node_types</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">add_on_features=None</em>, <em class="sig-param">azure_active_directory=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_common_names=None</em>, <em class="sig-param">client_certificate_common_names=None</em>, <em class="sig-param">client_certificate_thumbprints=None</em>, <em class="sig-param">cluster_code_version: str = None</em>, <em class="sig-param">diagnostics_storage_account_config=None</em>, <em class="sig-param">event_store_service_enabled: bool = None</em>, <em class="sig-param">fabric_settings=None</em>, <em class="sig-param">reliability_level=None</em>, <em class="sig-param">reverse_proxy_certificate=None</em>, <em class="sig-param">reverse_proxy_certificate_common_names=None</em>, <em class="sig-param">upgrade_description=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">vm_image: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_py3.html#Cluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.resource_py3.Resource</span></code></p>
 <p>The cluster resource
 .</p>
@@ -914,7 +914,7 @@ such as Windows or Linux can be used.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ClusterCodeVersionsResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ClusterCodeVersionsResult</code><span class="sig-paren">(</span><em>*</em>, <em>id: str = None</em>, <em>name: str = None</em>, <em>type: str = None</em>, <em>code_version: str = None</em>, <em>support_expiry_utc: str = None</em>, <em>environment=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_code_versions_result_py3.html#ClusterCodeVersionsResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterCodeVersionsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ClusterCodeVersionsResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">type: str = None</em>, <em class="sig-param">code_version: str = None</em>, <em class="sig-param">support_expiry_utc: str = None</em>, <em class="sig-param">environment=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_code_versions_result_py3.html#ClusterCodeVersionsResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterCodeVersionsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The result of the Service Fabric runtime versions.</p>
 <dl class="field-list simple">
@@ -934,7 +934,7 @@ operating system. Possible values include: ‘Windows’, ‘Linux’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ClusterCodeVersionsListResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ClusterCodeVersionsListResult</code><span class="sig-paren">(</span><em>*</em>, <em>value=None</em>, <em>next_link: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_code_versions_list_result_py3.html#ClusterCodeVersionsListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterCodeVersionsListResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ClusterCodeVersionsListResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">next_link: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_code_versions_list_result_py3.html#ClusterCodeVersionsListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterCodeVersionsListResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The list results of the Service Fabric runtime versions.</p>
 <dl class="field-list simple">
@@ -949,7 +949,7 @@ operating system. Possible values include: ‘Windows’, ‘Linux’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ClusterListResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ClusterListResult</code><span class="sig-paren">(</span><em>*</em>, <em>value=None</em>, <em>next_link: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_list_result_py3.html#ClusterListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterListResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ClusterListResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">next_link: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_list_result_py3.html#ClusterListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterListResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cluster list results.</p>
 <dl class="field-list simple">
@@ -964,7 +964,7 @@ operating system. Possible values include: ‘Windows’, ‘Linux’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ClusterUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ClusterUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>add_on_features=None</em>, <em>certificate=None</em>, <em>certificate_common_names=None</em>, <em>client_certificate_common_names=None</em>, <em>client_certificate_thumbprints=None</em>, <em>cluster_code_version: str = None</em>, <em>event_store_service_enabled: bool = None</em>, <em>fabric_settings=None</em>, <em>node_types=None</em>, <em>reliability_level=None</em>, <em>reverse_proxy_certificate=None</em>, <em>upgrade_description=None</em>, <em>upgrade_mode=None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_update_parameters_py3.html#ClusterUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ClusterUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">add_on_features=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_common_names=None</em>, <em class="sig-param">client_certificate_common_names=None</em>, <em class="sig-param">client_certificate_thumbprints=None</em>, <em class="sig-param">cluster_code_version: str = None</em>, <em class="sig-param">event_store_service_enabled: bool = None</em>, <em class="sig-param">fabric_settings=None</em>, <em class="sig-param">node_types=None</em>, <em class="sig-param">reliability_level=None</em>, <em class="sig-param">reverse_proxy_certificate=None</em>, <em class="sig-param">upgrade_description=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/cluster_update_parameters_py3.html#ClusterUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ClusterUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cluster update request.</p>
 <dl class="field-list simple">
@@ -1025,7 +1025,7 @@ Service Fabric runtime version. The cluster is upgraded by setting the
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.OperationResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">OperationResult</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>display=None</em>, <em>origin: str = None</em>, <em>next_link: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/operation_result_py3.html#OperationResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.OperationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">OperationResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">origin: str = None</em>, <em class="sig-param">next_link: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/operation_result_py3.html#OperationResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.OperationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Available operation list result.</p>
 <dl class="field-list simple">
@@ -1042,7 +1042,7 @@ Service Fabric runtime version. The cluster is upgraded by setting the
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.Resource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.Resource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.Resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The resource model definition.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1068,7 +1068,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ErrorModelError">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ErrorModelError</code><span class="sig-paren">(</span><em>*</em>, <em>code: str = None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/error_model_error_py3.html#ErrorModelError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ErrorModelError" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ErrorModelError</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/error_model_error_py3.html#ErrorModelError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ErrorModelError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The error details.</p>
 <dl class="field-list simple">
@@ -1083,7 +1083,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ErrorModel">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ErrorModel</code><span class="sig-paren">(</span><em>*</em>, <em>error=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/error_model_py3.html#ErrorModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ErrorModel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ErrorModel</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">error=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/error_model_py3.html#ErrorModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ErrorModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The structure of the error.</p>
 <dl class="field-list simple">
@@ -1095,7 +1095,7 @@ sending a request.</p>
 
 <dl class="exception">
 <dt id="azure.mgmt.servicefabric.models.ErrorModelException">
-<em class="property">exception </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ErrorModelException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/error_model_py3.html#ErrorModelException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ErrorModelException" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ErrorModelException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/error_model_py3.html#ErrorModelException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ErrorModelException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
 <p>Server responsed with exception of type: ‘ErrorModel’.</p>
 <dl class="field-list simple">
@@ -1110,7 +1110,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ApplicationMetricDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ApplicationMetricDescription</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>maximum_capacity: int = None</em>, <em>reservation_capacity: int = None</em>, <em>total_application_capacity: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_metric_description_py3.html#ApplicationMetricDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationMetricDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ApplicationMetricDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">maximum_capacity: int = None</em>, <em class="sig-param">reservation_capacity: int = None</em>, <em class="sig-param">total_application_capacity: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_metric_description_py3.html#ApplicationMetricDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationMetricDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes capacity information for a custom resource balancing metric. This
 can be used to limit the total consumption of this metric by the services
@@ -1158,7 +1158,7 @@ equal to this value.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ApplicationResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ApplicationResource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>type_version: str = None</em>, <em>parameters=None</em>, <em>upgrade_policy=None</em>, <em>minimum_nodes: int = None</em>, <em>maximum_nodes: int = 0</em>, <em>remove_application_capacity: bool = None</em>, <em>metrics=None</em>, <em>type_name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_resource_py3.html#ApplicationResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ApplicationResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type_version: str = None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">upgrade_policy=None</em>, <em class="sig-param">minimum_nodes: int = None</em>, <em class="sig-param">maximum_nodes: int = 0</em>, <em class="sig-param">remove_application_capacity: bool = None</em>, <em class="sig-param">metrics=None</em>, <em class="sig-param">type_name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_resource_py3.html#ApplicationResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.proxy_resource_py3.ProxyResource</span></code></p>
 <p>The application resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1207,7 +1207,7 @@ manifest.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ApplicationResourceList">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ApplicationResourceList</code><span class="sig-paren">(</span><em>*</em>, <em>value=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_resource_list_py3.html#ApplicationResourceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationResourceList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ApplicationResourceList</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_resource_list_py3.html#ApplicationResourceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationResourceList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The list of application resources.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1225,7 +1225,7 @@ there are any.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ArmRollingUpgradeMonitoringPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ArmRollingUpgradeMonitoringPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>failure_action=None</em>, <em>health_check_wait_duration: str = None</em>, <em>health_check_stable_duration: str = None</em>, <em>health_check_retry_timeout: str = None</em>, <em>upgrade_timeout: str = None</em>, <em>upgrade_domain_timeout: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/arm_rolling_upgrade_monitoring_policy_py3.html#ArmRollingUpgradeMonitoringPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmRollingUpgradeMonitoringPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ArmRollingUpgradeMonitoringPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">failure_action=None</em>, <em class="sig-param">health_check_wait_duration: str = None</em>, <em class="sig-param">health_check_stable_duration: str = None</em>, <em class="sig-param">health_check_retry_timeout: str = None</em>, <em class="sig-param">upgrade_timeout: str = None</em>, <em class="sig-param">upgrade_domain_timeout: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/arm_rolling_upgrade_monitoring_policy_py3.html#ArmRollingUpgradeMonitoringPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmRollingUpgradeMonitoringPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The policy used for monitoring the application upgrade.</p>
 <dl class="field-list simple">
@@ -1264,7 +1264,7 @@ interpreted as a number representing the total number of milliseconds.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ArmServiceTypeHealthPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ArmServiceTypeHealthPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>max_percent_unhealthy_services: int = 0</em>, <em>max_percent_unhealthy_partitions_per_service: int = 0</em>, <em>max_percent_unhealthy_replicas_per_partition: int = 0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/arm_service_type_health_policy_py3.html#ArmServiceTypeHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmServiceTypeHealthPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ArmServiceTypeHealthPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">max_percent_unhealthy_services: int = 0</em>, <em class="sig-param">max_percent_unhealthy_partitions_per_service: int = 0</em>, <em class="sig-param">max_percent_unhealthy_replicas_per_partition: int = 0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/arm_service_type_health_policy_py3.html#ArmServiceTypeHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmServiceTypeHealthPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Represents the health policy used to evaluate the health of services
 belonging to a service type.
@@ -1290,7 +1290,7 @@ application is considered in error.
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ArmApplicationHealthPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ArmApplicationHealthPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>consider_warning_as_error: bool = False</em>, <em>max_percent_unhealthy_deployed_applications: int = 0</em>, <em>default_service_type_health_policy=None</em>, <em>service_type_health_policy_map=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/arm_application_health_policy_py3.html#ArmApplicationHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmApplicationHealthPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ArmApplicationHealthPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">consider_warning_as_error: bool = False</em>, <em class="sig-param">max_percent_unhealthy_deployed_applications: int = 0</em>, <em class="sig-param">default_service_type_health_policy=None</em>, <em class="sig-param">service_type_health_policy_map=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/arm_application_health_policy_py3.html#ArmApplicationHealthPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmApplicationHealthPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Defines a health policy used to evaluate the health of an application or
 one of its children entities.
@@ -1324,7 +1324,7 @@ policy per service type name. The map is empty by default.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ApplicationUpgradePolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ApplicationUpgradePolicy</code><span class="sig-paren">(</span><em>*</em>, <em>upgrade_replica_set_check_timeout: str = None</em>, <em>force_restart: bool = None</em>, <em>rolling_upgrade_monitoring_policy=None</em>, <em>application_health_policy=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_upgrade_policy_py3.html#ApplicationUpgradePolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationUpgradePolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ApplicationUpgradePolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">upgrade_replica_set_check_timeout: str = None</em>, <em class="sig-param">force_restart: bool = None</em>, <em class="sig-param">rolling_upgrade_monitoring_policy=None</em>, <em class="sig-param">application_health_policy=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_upgrade_policy_py3.html#ApplicationUpgradePolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationUpgradePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes the policy for a monitored application upgrade.</p>
 <dl class="field-list simple">
@@ -1350,7 +1350,7 @@ the health of an application or one of its children entities.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ApplicationResourceUpdate">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ApplicationResourceUpdate</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>type_version: str = None</em>, <em>parameters=None</em>, <em>upgrade_policy=None</em>, <em>minimum_nodes: int = None</em>, <em>maximum_nodes: int = 0</em>, <em>remove_application_capacity: bool = None</em>, <em>metrics=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_resource_update_py3.html#ApplicationResourceUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationResourceUpdate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ApplicationResourceUpdate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type_version: str = None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">upgrade_policy=None</em>, <em class="sig-param">minimum_nodes: int = None</em>, <em class="sig-param">maximum_nodes: int = 0</em>, <em class="sig-param">remove_application_capacity: bool = None</em>, <em class="sig-param">metrics=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_resource_update_py3.html#ApplicationResourceUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationResourceUpdate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.proxy_resource_py3.ProxyResource</span></code></p>
 <p>The application resource for patch operations.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1395,7 +1395,7 @@ capacity settings.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ApplicationTypeResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ApplicationTypeResource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_type_resource_py3.html#ApplicationTypeResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationTypeResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ApplicationTypeResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_type_resource_py3.html#ApplicationTypeResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationTypeResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.proxy_resource_py3.ProxyResource</span></code></p>
 <p>The application type name resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1422,7 +1422,7 @@ which only appears in the response.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ApplicationTypeResourceList">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ApplicationTypeResourceList</code><span class="sig-paren">(</span><em>*</em>, <em>value=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_type_resource_list_py3.html#ApplicationTypeResourceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationTypeResourceList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ApplicationTypeResourceList</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_type_resource_list_py3.html#ApplicationTypeResourceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationTypeResourceList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The list of application type names.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1440,7 +1440,7 @@ if there are any.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ApplicationTypeVersionResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ApplicationTypeVersionResource</code><span class="sig-paren">(</span><em>*</em>, <em>app_package_url: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_type_version_resource_py3.html#ApplicationTypeVersionResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationTypeVersionResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ApplicationTypeVersionResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">app_package_url: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_type_version_resource_py3.html#ApplicationTypeVersionResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationTypeVersionResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.proxy_resource_py3.ProxyResource</span></code></p>
 <p>An application type version resource for the specified application type
 name resource.</p>
@@ -1472,7 +1472,7 @@ be overridden when creating or updating the application.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ApplicationTypeVersionResourceList">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ApplicationTypeVersionResourceList</code><span class="sig-paren">(</span><em>*</em>, <em>value=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_type_version_resource_list_py3.html#ApplicationTypeVersionResourceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationTypeVersionResourceList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ApplicationTypeVersionResourceList</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/application_type_version_resource_list_py3.html#ApplicationTypeVersionResourceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ApplicationTypeVersionResourceList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The list of application type version resources for the specified
 application type name resource.</p>
@@ -1491,7 +1491,7 @@ results if there are any.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceCorrelationDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceCorrelationDescription</code><span class="sig-paren">(</span><em>*</em>, <em>scheme</em>, <em>service_name: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_correlation_description_py3.html#ServiceCorrelationDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceCorrelationDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceCorrelationDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">scheme</em>, <em class="sig-param">service_name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_correlation_description_py3.html#ServiceCorrelationDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceCorrelationDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Creates a particular correlation between services.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1512,7 +1512,7 @@ correlation relationship is established with.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.NamedPartitionSchemeDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">NamedPartitionSchemeDescription</code><span class="sig-paren">(</span><em>*</em>, <em>count: int</em>, <em>names</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/named_partition_scheme_description_py3.html#NamedPartitionSchemeDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.NamedPartitionSchemeDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">NamedPartitionSchemeDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">count: int</em>, <em class="sig-param">names</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/named_partition_scheme_description_py3.html#NamedPartitionSchemeDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.NamedPartitionSchemeDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.partition_scheme_description_py3.PartitionSchemeDescription</span></code></p>
 <p>Describes the named partition scheme of the service.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1530,7 +1530,7 @@ for the names of the partitions.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.PartitionSchemeDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">PartitionSchemeDescription</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/partition_scheme_description_py3.html#PartitionSchemeDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.PartitionSchemeDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">PartitionSchemeDescription</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/partition_scheme_description_py3.html#PartitionSchemeDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.PartitionSchemeDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes how the service is partitioned.</p>
 <p>You probably want to use the sub-classes and not this class directly. Known
@@ -1547,7 +1547,7 @@ UniformInt64RangePartitionSchemeDescription</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ProxyResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ProxyResource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/proxy_resource_py3.html#ProxyResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ProxyResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ProxyResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/proxy_resource_py3.html#ProxyResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ProxyResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The resource model definition for proxy-only resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1572,7 +1572,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceLoadMetricDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceLoadMetricDescription</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>weight=None</em>, <em>primary_default_load: int = None</em>, <em>secondary_default_load: int = None</em>, <em>default_load: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_load_metric_description_py3.html#ServiceLoadMetricDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceLoadMetricDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceLoadMetricDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">weight=None</em>, <em class="sig-param">primary_default_load: int = None</em>, <em class="sig-param">secondary_default_load: int = None</em>, <em class="sig-param">default_load: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_load_metric_description_py3.html#ServiceLoadMetricDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceLoadMetricDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Specifies a metric to load balance a service during runtime.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1602,7 +1602,7 @@ of load, as a number, that this service creates for this metric.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServicePlacementPolicyDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServicePlacementPolicyDescription</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_placement_policy_description_py3.html#ServicePlacementPolicyDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServicePlacementPolicyDescription</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_placement_policy_description_py3.html#ServicePlacementPolicyDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes the policy to be used for placement of a Service Fabric service.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1615,7 +1615,7 @@ of load, as a number, that this service creates for this metric.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceResourceProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceResourceProperties</code><span class="sig-paren">(</span><em>*</em>, <em>placement_constraints: str = None</em>, <em>correlation_scheme=None</em>, <em>service_load_metrics=None</em>, <em>service_placement_policies=None</em>, <em>default_move_cost=None</em>, <em>service_type_name: str = None</em>, <em>partition_description=None</em>, <em>service_package_activation_mode=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_resource_properties_py3.html#ServiceResourceProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceResourceProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceResourceProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">placement_constraints: str = None</em>, <em class="sig-param">correlation_scheme=None</em>, <em class="sig-param">service_load_metrics=None</em>, <em class="sig-param">service_placement_policies=None</em>, <em class="sig-param">default_move_cost=None</em>, <em class="sig-param">service_type_name: str = None</em>, <em class="sig-param">partition_description=None</em>, <em class="sig-param">service_package_activation_mode=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_resource_properties_py3.html#ServiceResourceProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceResourceProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.service_resource_properties_base_py3.ServiceResourcePropertiesBase</span></code></p>
 <p>The service resource properties.</p>
 <p>You probably want to use the sub-classes and not this class directly. Known
@@ -1656,7 +1656,7 @@ which only appears in the response</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceResource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>placement_constraints: str = None</em>, <em>correlation_scheme=None</em>, <em>service_load_metrics=None</em>, <em>service_placement_policies=None</em>, <em>default_move_cost=None</em>, <em>service_type_name: str = None</em>, <em>partition_description=None</em>, <em>service_package_activation_mode=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_resource_py3.html#ServiceResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">placement_constraints: str = None</em>, <em class="sig-param">correlation_scheme=None</em>, <em class="sig-param">service_load_metrics=None</em>, <em class="sig-param">service_placement_policies=None</em>, <em class="sig-param">default_move_cost=None</em>, <em class="sig-param">service_type_name: str = None</em>, <em class="sig-param">partition_description=None</em>, <em class="sig-param">service_package_activation_mode=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_resource_py3.html#ServiceResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.proxy_resource_py3.ProxyResource</span></code></p>
 <p>The service resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1701,7 +1701,7 @@ package. Possible values include: ‘SharedProcess’, ‘ExclusiveProcess’</p
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceResourceList">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceResourceList</code><span class="sig-paren">(</span><em>*</em>, <em>value=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_resource_list_py3.html#ServiceResourceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceResourceList" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceResourceList</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_resource_list_py3.html#ServiceResourceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceResourceList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The list of service resources.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1719,7 +1719,7 @@ are any.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceResourcePropertiesBase">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceResourcePropertiesBase</code><span class="sig-paren">(</span><em>*</em>, <em>placement_constraints: str = None</em>, <em>correlation_scheme=None</em>, <em>service_load_metrics=None</em>, <em>service_placement_policies=None</em>, <em>default_move_cost=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_resource_properties_base_py3.html#ServiceResourcePropertiesBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceResourcePropertiesBase" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceResourcePropertiesBase</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">placement_constraints: str = None</em>, <em class="sig-param">correlation_scheme=None</em>, <em class="sig-param">service_load_metrics=None</em>, <em class="sig-param">service_placement_policies=None</em>, <em class="sig-param">default_move_cost=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_resource_properties_base_py3.html#ServiceResourcePropertiesBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceResourcePropertiesBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The common service resource properties.</p>
 <dl class="field-list simple">
@@ -1745,7 +1745,7 @@ Possible values include: ‘Zero’, ‘Low’, ‘Medium’, ‘High’</p></li
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceResourceUpdateProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceResourceUpdateProperties</code><span class="sig-paren">(</span><em>*</em>, <em>placement_constraints: str = None</em>, <em>correlation_scheme=None</em>, <em>service_load_metrics=None</em>, <em>service_placement_policies=None</em>, <em>default_move_cost=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_resource_update_properties_py3.html#ServiceResourceUpdateProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceResourceUpdateProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceResourceUpdateProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">placement_constraints: str = None</em>, <em class="sig-param">correlation_scheme=None</em>, <em class="sig-param">service_load_metrics=None</em>, <em class="sig-param">service_placement_policies=None</em>, <em class="sig-param">default_move_cost=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_resource_update_properties_py3.html#ServiceResourceUpdateProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceResourceUpdateProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.service_resource_properties_base_py3.ServiceResourcePropertiesBase</span></code></p>
 <p>The service resource properties for patch operations.</p>
 <p>You probably want to use the sub-classes and not this class directly. Known
@@ -1776,7 +1776,7 @@ Possible values include: ‘Zero’, ‘Low’, ‘Medium’, ‘High’</p></li
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceResourceUpdate">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceResourceUpdate</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>placement_constraints: str = None</em>, <em>correlation_scheme=None</em>, <em>service_load_metrics=None</em>, <em>service_placement_policies=None</em>, <em>default_move_cost=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_resource_update_py3.html#ServiceResourceUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceResourceUpdate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceResourceUpdate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">placement_constraints: str = None</em>, <em class="sig-param">correlation_scheme=None</em>, <em class="sig-param">service_load_metrics=None</em>, <em class="sig-param">service_placement_policies=None</em>, <em class="sig-param">default_move_cost=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_resource_update_py3.html#ServiceResourceUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceResourceUpdate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.proxy_resource_py3.ProxyResource</span></code></p>
 <p>The service resource for patch operations.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1814,7 +1814,7 @@ Possible values include: ‘Zero’, ‘Low’, ‘Medium’, ‘High’</p></li
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.SingletonPartitionSchemeDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">SingletonPartitionSchemeDescription</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/singleton_partition_scheme_description_py3.html#SingletonPartitionSchemeDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.SingletonPartitionSchemeDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">SingletonPartitionSchemeDescription</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/singleton_partition_scheme_description_py3.html#SingletonPartitionSchemeDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.SingletonPartitionSchemeDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.partition_scheme_description_py3.PartitionSchemeDescription</span></code></p>
 <p>Describes the partition scheme of a singleton-partitioned, or
 non-partitioned service.</p>
@@ -1828,7 +1828,7 @@ non-partitioned service.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.StatefulServiceProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">StatefulServiceProperties</code><span class="sig-paren">(</span><em>*</em>, <em>placement_constraints: str = None</em>, <em>correlation_scheme=None</em>, <em>service_load_metrics=None</em>, <em>service_placement_policies=None</em>, <em>default_move_cost=None</em>, <em>service_type_name: str = None</em>, <em>partition_description=None</em>, <em>service_package_activation_mode=None</em>, <em>has_persisted_state: bool = None</em>, <em>target_replica_set_size: int = None</em>, <em>min_replica_set_size: int = None</em>, <em>replica_restart_wait_duration=None</em>, <em>quorum_loss_wait_duration=None</em>, <em>stand_by_replica_keep_duration=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/stateful_service_properties_py3.html#StatefulServiceProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.StatefulServiceProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">StatefulServiceProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">placement_constraints: str = None</em>, <em class="sig-param">correlation_scheme=None</em>, <em class="sig-param">service_load_metrics=None</em>, <em class="sig-param">service_placement_policies=None</em>, <em class="sig-param">default_move_cost=None</em>, <em class="sig-param">service_type_name: str = None</em>, <em class="sig-param">partition_description=None</em>, <em class="sig-param">service_package_activation_mode=None</em>, <em class="sig-param">has_persisted_state: bool = None</em>, <em class="sig-param">target_replica_set_size: int = None</em>, <em class="sig-param">min_replica_set_size: int = None</em>, <em class="sig-param">replica_restart_wait_duration=None</em>, <em class="sig-param">quorum_loss_wait_duration=None</em>, <em class="sig-param">stand_by_replica_keep_duration=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/stateful_service_properties_py3.html#StatefulServiceProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.StatefulServiceProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.service_resource_properties_py3.ServiceResourceProperties</span></code></p>
 <p>The properties of a stateful service resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1881,7 +1881,7 @@ which only appears in the response</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.StatefulServiceUpdateProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">StatefulServiceUpdateProperties</code><span class="sig-paren">(</span><em>*</em>, <em>placement_constraints: str = None</em>, <em>correlation_scheme=None</em>, <em>service_load_metrics=None</em>, <em>service_placement_policies=None</em>, <em>default_move_cost=None</em>, <em>target_replica_set_size: int = None</em>, <em>min_replica_set_size: int = None</em>, <em>replica_restart_wait_duration=None</em>, <em>quorum_loss_wait_duration=None</em>, <em>stand_by_replica_keep_duration=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/stateful_service_update_properties_py3.html#StatefulServiceUpdateProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.StatefulServiceUpdateProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">StatefulServiceUpdateProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">placement_constraints: str = None</em>, <em class="sig-param">correlation_scheme=None</em>, <em class="sig-param">service_load_metrics=None</em>, <em class="sig-param">service_placement_policies=None</em>, <em class="sig-param">default_move_cost=None</em>, <em class="sig-param">target_replica_set_size: int = None</em>, <em class="sig-param">min_replica_set_size: int = None</em>, <em class="sig-param">replica_restart_wait_duration=None</em>, <em class="sig-param">quorum_loss_wait_duration=None</em>, <em class="sig-param">stand_by_replica_keep_duration=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/stateful_service_update_properties_py3.html#StatefulServiceUpdateProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.StatefulServiceUpdateProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.service_resource_update_properties_py3.ServiceResourceUpdateProperties</span></code></p>
 <p>The properties of a stateful service resource for patch operations.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1920,7 +1920,7 @@ replicas should be maintained before being removed, represented in ISO
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.StatelessServiceProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">StatelessServiceProperties</code><span class="sig-paren">(</span><em>*</em>, <em>placement_constraints: str = None</em>, <em>correlation_scheme=None</em>, <em>service_load_metrics=None</em>, <em>service_placement_policies=None</em>, <em>default_move_cost=None</em>, <em>service_type_name: str = None</em>, <em>partition_description=None</em>, <em>service_package_activation_mode=None</em>, <em>instance_count: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/stateless_service_properties_py3.html#StatelessServiceProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.StatelessServiceProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">StatelessServiceProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">placement_constraints: str = None</em>, <em class="sig-param">correlation_scheme=None</em>, <em class="sig-param">service_load_metrics=None</em>, <em class="sig-param">service_placement_policies=None</em>, <em class="sig-param">default_move_cost=None</em>, <em class="sig-param">service_type_name: str = None</em>, <em class="sig-param">partition_description=None</em>, <em class="sig-param">service_package_activation_mode=None</em>, <em class="sig-param">instance_count: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/stateless_service_properties_py3.html#StatelessServiceProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.StatelessServiceProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.service_resource_properties_py3.ServiceResourceProperties</span></code></p>
 <p>The properties of a stateless service resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1960,7 +1960,7 @@ which only appears in the response</p>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.StatelessServiceUpdateProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">StatelessServiceUpdateProperties</code><span class="sig-paren">(</span><em>*</em>, <em>placement_constraints: str = None</em>, <em>correlation_scheme=None</em>, <em>service_load_metrics=None</em>, <em>service_placement_policies=None</em>, <em>default_move_cost=None</em>, <em>instance_count: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/stateless_service_update_properties_py3.html#StatelessServiceUpdateProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.StatelessServiceUpdateProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">StatelessServiceUpdateProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">placement_constraints: str = None</em>, <em class="sig-param">correlation_scheme=None</em>, <em class="sig-param">service_load_metrics=None</em>, <em class="sig-param">service_placement_policies=None</em>, <em class="sig-param">default_move_cost=None</em>, <em class="sig-param">instance_count: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/stateless_service_update_properties_py3.html#StatelessServiceUpdateProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.StatelessServiceUpdateProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.service_resource_update_properties_py3.ServiceResourceUpdateProperties</span></code></p>
 <p>The properties of a stateless service resource for patch operations.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1989,7 +1989,7 @@ Possible values include: ‘Zero’, ‘Low’, ‘Medium’, ‘High’</p></li
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.UniformInt64RangePartitionSchemeDescription">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">UniformInt64RangePartitionSchemeDescription</code><span class="sig-paren">(</span><em>*</em>, <em>count: int</em>, <em>low_key: str</em>, <em>high_key: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/uniform_int64_range_partition_scheme_description_py3.html#UniformInt64RangePartitionSchemeDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.UniformInt64RangePartitionSchemeDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">UniformInt64RangePartitionSchemeDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">count: int</em>, <em class="sig-param">low_key: str</em>, <em class="sig-param">high_key: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/uniform_int64_range_partition_scheme_description_py3.html#UniformInt64RangePartitionSchemeDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.UniformInt64RangePartitionSchemeDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.servicefabric.models.partition_scheme_description_py3.PartitionSchemeDescription</span></code></p>
 <p>Describes a partitioning scheme where an integer range is allocated evenly
 across a number of partitions.</p>
@@ -2012,52 +2012,52 @@ should be split between the partition ‘Count’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.OperationResultPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">OperationResultPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/operation_result_paged.html#OperationResultPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.OperationResultPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">OperationResultPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/operation_result_paged.html#OperationResultPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.OperationResultPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.servicefabric.models.OperationResult" title="azure.mgmt.servicefabric.models.OperationResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationResult</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ProvisioningState">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ProvisioningState" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ProvisioningState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ProvisioningState.canceled">
-<code class="descname">canceled</code><em class="property"> = 'Canceled'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ProvisioningState.canceled" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">canceled</code><em class="property"> = 'Canceled'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ProvisioningState.canceled" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ProvisioningState.failed">
-<code class="descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ProvisioningState.failed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ProvisioningState.failed" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ProvisioningState.succeeded">
-<code class="descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ProvisioningState.succeeded" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ProvisioningState.succeeded" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ProvisioningState.updating">
-<code class="descname">updating</code><em class="property"> = 'Updating'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ProvisioningState.updating" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">updating</code><em class="property"> = 'Updating'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ProvisioningState.updating" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ArmUpgradeFailureAction">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ArmUpgradeFailureAction</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ArmUpgradeFailureAction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmUpgradeFailureAction" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ArmUpgradeFailureAction</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ArmUpgradeFailureAction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmUpgradeFailureAction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ArmUpgradeFailureAction.manual">
-<code class="descname">manual</code><em class="property"> = 'Manual'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmUpgradeFailureAction.manual" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">manual</code><em class="property"> = 'Manual'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmUpgradeFailureAction.manual" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that a manual repair will need to be performed by the administrator if the upgrade fails. Service Fabric will not proceed to the next upgrade domain automatically.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ArmUpgradeFailureAction.rollback">
-<code class="descname">rollback</code><em class="property"> = 'Rollback'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmUpgradeFailureAction.rollback" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rollback</code><em class="property"> = 'Rollback'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmUpgradeFailureAction.rollback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that a rollback of the upgrade will be performed by Service Fabric if the upgrade fails.</p>
 </dd></dl>
 
@@ -2065,30 +2065,30 @@ should be split between the partition ‘Count’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceCorrelationScheme">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceCorrelationScheme</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ServiceCorrelationScheme"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceCorrelationScheme" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceCorrelationScheme</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ServiceCorrelationScheme"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceCorrelationScheme" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServiceCorrelationScheme.affinity">
-<code class="descname">affinity</code><em class="property"> = 'Affinity'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceCorrelationScheme.affinity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">affinity</code><em class="property"> = 'Affinity'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceCorrelationScheme.affinity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that this service has an affinity relationship with another service. Provided for backwards compatibility, consider preferring the Aligned or NonAlignedAffinity options. The value is 1.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServiceCorrelationScheme.aligned_affinity">
-<code class="descname">aligned_affinity</code><em class="property"> = 'AlignedAffinity'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceCorrelationScheme.aligned_affinity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">aligned_affinity</code><em class="property"> = 'AlignedAffinity'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceCorrelationScheme.aligned_affinity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Aligned affinity ensures that the primaries of the partitions of the affinitized services are collocated on the same nodes. This is the default and is the same as selecting the Affinity scheme. The value is 2.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServiceCorrelationScheme.invalid">
-<code class="descname">invalid</code><em class="property"> = 'Invalid'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceCorrelationScheme.invalid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">invalid</code><em class="property"> = 'Invalid'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceCorrelationScheme.invalid" title="Permalink to this definition">¶</a></dt>
 <dd><p>An invalid correlation scheme. Cannot be used. The value is zero.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServiceCorrelationScheme.non_aligned_affinity">
-<code class="descname">non_aligned_affinity</code><em class="property"> = 'NonAlignedAffinity'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceCorrelationScheme.non_aligned_affinity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">non_aligned_affinity</code><em class="property"> = 'NonAlignedAffinity'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceCorrelationScheme.non_aligned_affinity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Non-Aligned affinity guarantees that all replicas of each service will be placed on the same nodes. Unlike Aligned Affinity, this does not guarantee that replicas of particular role will be collocated. The value is 3.</p>
 </dd></dl>
 
@@ -2096,30 +2096,30 @@ should be split between the partition ‘Count’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.MoveCost">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">MoveCost</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#MoveCost"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.MoveCost" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">MoveCost</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#MoveCost"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.MoveCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.MoveCost.high">
-<code class="descname">high</code><em class="property"> = 'High'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.MoveCost.high" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">high</code><em class="property"> = 'High'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.MoveCost.high" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the move cost of the service as High. The value is 3.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.MoveCost.low">
-<code class="descname">low</code><em class="property"> = 'Low'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.MoveCost.low" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">low</code><em class="property"> = 'Low'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.MoveCost.low" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the move cost of the service as Low. The value is 1.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.MoveCost.medium">
-<code class="descname">medium</code><em class="property"> = 'Medium'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.MoveCost.medium" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">medium</code><em class="property"> = 'Medium'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.MoveCost.medium" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the move cost of the service as Medium. The value is 2.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.MoveCost.zero">
-<code class="descname">zero</code><em class="property"> = 'Zero'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.MoveCost.zero" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">zero</code><em class="property"> = 'Zero'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.MoveCost.zero" title="Permalink to this definition">¶</a></dt>
 <dd><p>Zero move cost. This value is zero.</p>
 </dd></dl>
 
@@ -2127,30 +2127,30 @@ should be split between the partition ‘Count’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.PartitionScheme">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">PartitionScheme</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#PartitionScheme"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.PartitionScheme" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">PartitionScheme</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#PartitionScheme"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.PartitionScheme" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.PartitionScheme.invalid">
-<code class="descname">invalid</code><em class="property"> = 'Invalid'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.PartitionScheme.invalid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">invalid</code><em class="property"> = 'Invalid'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.PartitionScheme.invalid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates the partition kind is invalid. All Service Fabric enumerations have the invalid type. The value is zero.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.PartitionScheme.named">
-<code class="descname">named</code><em class="property"> = 'Named'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.PartitionScheme.named" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">named</code><em class="property"> = 'Named'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.PartitionScheme.named" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that the partition is based on string names, and is a NamedPartitionSchemeDescription object. The value is 3</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.PartitionScheme.singleton">
-<code class="descname">singleton</code><em class="property"> = 'Singleton'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.PartitionScheme.singleton" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">singleton</code><em class="property"> = 'Singleton'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.PartitionScheme.singleton" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that the partition is based on string names, and is a SingletonPartitionSchemeDescription object, The value is 1.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.PartitionScheme.uniform_int64_range">
-<code class="descname">uniform_int64_range</code><em class="property"> = 'UniformInt64Range'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.PartitionScheme.uniform_int64_range" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">uniform_int64_range</code><em class="property"> = 'UniformInt64Range'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.PartitionScheme.uniform_int64_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that the partition is based on Int64 key ranges, and is a UniformInt64RangePartitionSchemeDescription object. The value is 2.</p>
 </dd></dl>
 
@@ -2158,24 +2158,24 @@ should be split between the partition ‘Count’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceKind">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceKind</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ServiceKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceKind" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceKind</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ServiceKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceKind" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServiceKind.invalid">
-<code class="descname">invalid</code><em class="property"> = 'Invalid'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceKind.invalid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">invalid</code><em class="property"> = 'Invalid'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceKind.invalid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates the service kind is invalid. All Service Fabric enumerations have the invalid type. The value is zero.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServiceKind.stateful">
-<code class="descname">stateful</code><em class="property"> = 'Stateful'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceKind.stateful" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stateful</code><em class="property"> = 'Stateful'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceKind.stateful" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uses Service Fabric to make its state or part of its state highly available and reliable. The value is 2.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServiceKind.stateless">
-<code class="descname">stateless</code><em class="property"> = 'Stateless'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceKind.stateless" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stateless</code><em class="property"> = 'Stateless'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceKind.stateless" title="Permalink to this definition">¶</a></dt>
 <dd><p>Does not use Service Fabric to make its state highly available or reliable. The value is 1.</p>
 </dd></dl>
 
@@ -2183,30 +2183,30 @@ should be split between the partition ‘Count’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServiceLoadMetricWeight">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServiceLoadMetricWeight</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ServiceLoadMetricWeight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceLoadMetricWeight" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServiceLoadMetricWeight</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ServiceLoadMetricWeight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceLoadMetricWeight" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServiceLoadMetricWeight.high">
-<code class="descname">high</code><em class="property"> = 'High'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceLoadMetricWeight.high" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">high</code><em class="property"> = 'High'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceLoadMetricWeight.high" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the metric weight of the service load as High. The value is 3.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServiceLoadMetricWeight.low">
-<code class="descname">low</code><em class="property"> = 'Low'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceLoadMetricWeight.low" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">low</code><em class="property"> = 'Low'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceLoadMetricWeight.low" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the metric weight of the service load as Low. The value is 1.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServiceLoadMetricWeight.medium">
-<code class="descname">medium</code><em class="property"> = 'Medium'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceLoadMetricWeight.medium" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">medium</code><em class="property"> = 'Medium'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceLoadMetricWeight.medium" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the metric weight of the service load as Medium. The value is 2.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServiceLoadMetricWeight.zero">
-<code class="descname">zero</code><em class="property"> = 'Zero'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceLoadMetricWeight.zero" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">zero</code><em class="property"> = 'Zero'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServiceLoadMetricWeight.zero" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disables resource balancing for this metric. This value is zero.</p>
 </dd></dl>
 
@@ -2214,42 +2214,42 @@ should be split between the partition ‘Count’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ServicePlacementPolicyType">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ServicePlacementPolicyType</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ServicePlacementPolicyType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ServicePlacementPolicyType</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ServicePlacementPolicyType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServicePlacementPolicyType.invalid">
-<code class="descname">invalid</code><em class="property"> = 'Invalid'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType.invalid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">invalid</code><em class="property"> = 'Invalid'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType.invalid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates the type of the placement policy is invalid. All Service Fabric enumerations have the invalid type. The value is zero.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServicePlacementPolicyType.invalid_domain">
-<code class="descname">invalid_domain</code><em class="property"> = 'InvalidDomain'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType.invalid_domain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">invalid_domain</code><em class="property"> = 'InvalidDomain'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType.invalid_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that the ServicePlacementPolicyDescription is of type ServicePlacementInvalidDomainPolicyDescription, which indicates that a particular fault or upgrade domain cannot be used for placement of this service. The value is 1.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServicePlacementPolicyType.non_partially_place_service">
-<code class="descname">non_partially_place_service</code><em class="property"> = 'NonPartiallyPlaceService'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType.non_partially_place_service" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">non_partially_place_service</code><em class="property"> = 'NonPartiallyPlaceService'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType.non_partially_place_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that the ServicePlacementPolicyDescription is of type ServicePlacementNonPartiallyPlaceServicePolicyDescription, which indicates that if possible all replicas of a particular partition of the service should be placed atomically. The value is 5.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServicePlacementPolicyType.preferred_primary_domain">
-<code class="descname">preferred_primary_domain</code><em class="property"> = 'PreferredPrimaryDomain'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType.preferred_primary_domain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">preferred_primary_domain</code><em class="property"> = 'PreferredPrimaryDomain'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType.preferred_primary_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that the ServicePlacementPolicyDescription is of type ServicePlacementPreferPrimaryDomainPolicyDescription, which indicates that if possible the Primary replica for the partitions of the service should be located in a particular domain as an optimization. The value is 3.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServicePlacementPolicyType.required_domain">
-<code class="descname">required_domain</code><em class="property"> = 'RequiredDomain'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType.required_domain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">required_domain</code><em class="property"> = 'RequiredDomain'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType.required_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that the ServicePlacementPolicyDescription is of type ServicePlacementRequireDomainDistributionPolicyDescription indicating that the replicas of the service must be placed in a specific domain. The value is 2.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ServicePlacementPolicyType.required_domain_distribution">
-<code class="descname">required_domain_distribution</code><em class="property"> = 'RequiredDomainDistribution'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType.required_domain_distribution" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">required_domain_distribution</code><em class="property"> = 'RequiredDomainDistribution'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ServicePlacementPolicyType.required_domain_distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates that the ServicePlacementPolicyDescription is of type ServicePlacementRequireDomainDistributionPolicyDescription, indicating that the system will disallow placement of any two replicas from the same partition in the same domain at any time. The value is 4.</p>
 </dd></dl>
 
@@ -2257,18 +2257,18 @@ should be split between the partition ‘Count’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.servicefabric.models.ArmServicePackageActivationMode">
-<em class="property">class </em><code class="descclassname">azure.mgmt.servicefabric.models.</code><code class="descname">ArmServicePackageActivationMode</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ArmServicePackageActivationMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmServicePackageActivationMode" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.servicefabric.models.</code><code class="sig-name descname">ArmServicePackageActivationMode</code><a class="reference internal" href="../_modules/azure/mgmt/servicefabric/models/service_fabric_management_client_enums.html#ArmServicePackageActivationMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmServicePackageActivationMode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ArmServicePackageActivationMode.exclusive_process">
-<code class="descname">exclusive_process</code><em class="property"> = 'ExclusiveProcess'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmServicePackageActivationMode.exclusive_process" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">exclusive_process</code><em class="property"> = 'ExclusiveProcess'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmServicePackageActivationMode.exclusive_process" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates the application package activation mode will use exclusive process.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.servicefabric.models.ArmServicePackageActivationMode.shared_process">
-<code class="descname">shared_process</code><em class="property"> = 'SharedProcess'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmServicePackageActivationMode.shared_process" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">shared_process</code><em class="property"> = 'SharedProcess'</em><a class="headerlink" href="#azure.mgmt.servicefabric.models.ArmServicePackageActivationMode.shared_process" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates the application package activation mode will use shared process.</p>
 </dd></dl>
 

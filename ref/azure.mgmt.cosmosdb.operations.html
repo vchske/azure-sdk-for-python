@@ -318,7 +318,7 @@
 <span id="azure-mgmt-cosmosdb-operations-module"></span><h1>azure.mgmt.cosmosdb.operations module<a class="headerlink" href="#module-azure.mgmt.cosmosdb.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">DatabaseAccountsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">DatabaseAccountsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>DatabaseAccountsOperations operations.</p>
 <dl class="field-list simple">
@@ -336,7 +336,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.check_name_exists">
-<code class="descname">check_name_exists</code><span class="sig-paren">(</span><em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.check_name_exists"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.check_name_exists" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_name_exists</code><span class="sig-paren">(</span><em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.check_name_exists"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.check_name_exists" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks that the Azure Cosmos DB account name already exists. A valid
 account name may contain only lowercase letters, numbers, and the ‘-‘
 character, and must be between 3 and 50 characters.</p>
@@ -365,7 +365,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_or_update">
-<code class="descname">create_or_update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>create_update_parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">create_update_parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates or updates an Azure Cosmos DB database account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -398,7 +398,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_cassandra_keyspace">
-<code class="descname">create_update_cassandra_keyspace</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_cassandra_keyspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_cassandra_keyspace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_update_cassandra_keyspace</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">keyspace_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_cassandra_keyspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_cassandra_keyspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update an Azure Cosmos DB Cassandra keyspace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -433,7 +433,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_cassandra_table">
-<code class="descname">create_update_cassandra_table</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>table_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_cassandra_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_cassandra_table" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_update_cassandra_table</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">keyspace_name</em>, <em class="sig-param">table_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_cassandra_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_cassandra_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update an Azure Cosmos DB Cassandra Table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -469,7 +469,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_gremlin_database">
-<code class="descname">create_update_gremlin_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_gremlin_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_gremlin_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_update_gremlin_database</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_gremlin_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_gremlin_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update an Azure Cosmos DB Gremlin database.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -504,7 +504,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_gremlin_graph">
-<code class="descname">create_update_gremlin_graph</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>graph_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_gremlin_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_gremlin_graph" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_update_gremlin_graph</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">graph_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_gremlin_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_gremlin_graph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update an Azure Cosmos DB Gremlin graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -540,7 +540,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_mongo_db_collection">
-<code class="descname">create_update_mongo_db_collection</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>collection_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_mongo_db_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_mongo_db_collection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_update_mongo_db_collection</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">collection_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_mongo_db_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_mongo_db_collection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update an Azure Cosmos DB MongoDB Collection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -576,7 +576,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_mongo_db_database">
-<code class="descname">create_update_mongo_db_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_mongo_db_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_mongo_db_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_update_mongo_db_database</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_mongo_db_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_mongo_db_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or updates Azure Cosmos DB MongoDB database.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -611,7 +611,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_sql_container">
-<code class="descname">create_update_sql_container</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>container_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_sql_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_sql_container" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_update_sql_container</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">container_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_sql_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_sql_container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update an Azure Cosmos DB SQL container.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -647,7 +647,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_sql_database">
-<code class="descname">create_update_sql_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_sql_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_sql_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_update_sql_database</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_sql_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_sql_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update an Azure Cosmos DB SQL database.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -682,7 +682,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_table">
-<code class="descname">create_update_table</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>table_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_table" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_update_table</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">table_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update an Azure Cosmos DB Table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -717,7 +717,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing Azure Cosmos DB database account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -747,7 +747,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_cassandra_keyspace">
-<code class="descname">delete_cassandra_keyspace</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_cassandra_keyspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_cassandra_keyspace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_cassandra_keyspace</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">keyspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_cassandra_keyspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_cassandra_keyspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing Azure Cosmos DB Cassandra keyspace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -778,7 +778,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_cassandra_table">
-<code class="descname">delete_cassandra_table</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>table_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_cassandra_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_cassandra_table" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_cassandra_table</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">keyspace_name</em>, <em class="sig-param">table_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_cassandra_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_cassandra_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing Azure Cosmos DB Cassandra table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -810,7 +810,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_gremlin_database">
-<code class="descname">delete_gremlin_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_gremlin_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_gremlin_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_gremlin_database</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_gremlin_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_gremlin_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing Azure Cosmos DB Gremlin database.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -841,7 +841,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_gremlin_graph">
-<code class="descname">delete_gremlin_graph</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>graph_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_gremlin_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_gremlin_graph" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_gremlin_graph</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">graph_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_gremlin_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_gremlin_graph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing Azure Cosmos DB Gremlin graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -873,7 +873,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_mongo_db_collection">
-<code class="descname">delete_mongo_db_collection</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>collection_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_mongo_db_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_mongo_db_collection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_mongo_db_collection</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">collection_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_mongo_db_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_mongo_db_collection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing Azure Cosmos DB MongoDB Collection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -905,7 +905,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_mongo_db_database">
-<code class="descname">delete_mongo_db_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_mongo_db_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_mongo_db_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_mongo_db_database</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_mongo_db_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_mongo_db_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing Azure Cosmos DB MongoDB database.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -936,7 +936,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_sql_container">
-<code class="descname">delete_sql_container</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>container_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_sql_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_sql_container" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_sql_container</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">container_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_sql_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_sql_container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing Azure Cosmos DB SQL container.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -968,7 +968,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_sql_database">
-<code class="descname">delete_sql_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_sql_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_sql_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_sql_database</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_sql_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_sql_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing Azure Cosmos DB SQL database.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -999,7 +999,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_table">
-<code class="descname">delete_table</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>table_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_table" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_table</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">table_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing Azure Cosmos DB Table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1030,7 +1030,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.failover_priority_change">
-<code class="descname">failover_priority_change</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>failover_policies</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.failover_priority_change"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.failover_priority_change" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">failover_priority_change</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">failover_policies</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.failover_priority_change"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.failover_priority_change" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changes the failover priority for the Azure Cosmos DB database account.
 A failover priority of 0 indicates a write region. The maximum value
 for a failover priority = (total number of regions - 1). Failover
@@ -1065,7 +1065,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the properties of an existing Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1095,7 +1095,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_keyspace">
-<code class="descname">get_cassandra_keyspace</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_cassandra_keyspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_keyspace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_cassandra_keyspace</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">keyspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_cassandra_keyspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_keyspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the Cassandra keyspaces under an existing Azure Cosmos DB database
 account with the provided name.</p>
 <dl class="field-list simple">
@@ -1126,7 +1126,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_table">
-<code class="descname">get_cassandra_table</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>table_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_cassandra_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_table" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_cassandra_table</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">keyspace_name</em>, <em class="sig-param">table_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_cassandra_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the Cassandra table under an existing Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1158,7 +1158,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_database">
-<code class="descname">get_gremlin_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_gremlin_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_gremlin_database</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_gremlin_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the Gremlin databases under an existing Azure Cosmos DB database
 account with the provided name.</p>
 <dl class="field-list simple">
@@ -1189,7 +1189,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_graph">
-<code class="descname">get_gremlin_graph</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>graph_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_gremlin_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_graph" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_gremlin_graph</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">graph_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_gremlin_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_graph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the Gremlin graph under an existing Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1221,7 +1221,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_collection">
-<code class="descname">get_mongo_db_collection</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>collection_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_mongo_db_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_collection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_mongo_db_collection</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">collection_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_mongo_db_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_collection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the MongoDB collection under an existing Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1253,7 +1253,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_database">
-<code class="descname">get_mongo_db_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_mongo_db_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_mongo_db_database</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_mongo_db_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the MongoDB databases under an existing Azure Cosmos DB database
 account with the provided name.</p>
 <dl class="field-list simple">
@@ -1284,7 +1284,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_read_only_keys">
-<code class="descname">get_read_only_keys</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_read_only_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_read_only_keys" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_read_only_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_read_only_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_read_only_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the read-only access keys for the specified Azure Cosmos DB
 database account.</p>
 <dl class="field-list simple">
@@ -1315,7 +1315,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_container">
-<code class="descname">get_sql_container</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>container_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_sql_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_container" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_sql_container</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">container_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_sql_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the SQL container under an existing Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1347,7 +1347,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_database">
-<code class="descname">get_sql_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_sql_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_sql_database</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_sql_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the SQL databases under an existing Azure Cosmos DB database
 account with the provided name.</p>
 <dl class="field-list simple">
@@ -1378,7 +1378,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_table">
-<code class="descname">get_table</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>table_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_table" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_table</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">table_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the Tables under an existing Azure Cosmos DB database account with
 the provided name.</p>
 <dl class="field-list simple">
@@ -1409,7 +1409,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the Azure Cosmos DB database accounts available under the
 subscription.</p>
 <dl class="field-list simple">
@@ -1436,7 +1436,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_by_resource_group">
-<code class="descname">list_by_resource_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the Azure Cosmos DB database accounts available under the
 given resource group.</p>
 <dl class="field-list simple">
@@ -1464,7 +1464,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_cassandra_keyspaces">
-<code class="descname">list_cassandra_keyspaces</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_cassandra_keyspaces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_cassandra_keyspaces" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_cassandra_keyspaces</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_cassandra_keyspaces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_cassandra_keyspaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the Cassandra keyspaces under an existing Azure Cosmos DB
 database account.</p>
 <dl class="field-list simple">
@@ -1493,7 +1493,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_cassandra_tables">
-<code class="descname">list_cassandra_tables</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_cassandra_tables"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_cassandra_tables" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_cassandra_tables</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">keyspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_cassandra_tables"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_cassandra_tables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the Cassandra table under an existing Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1523,7 +1523,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_connection_strings">
-<code class="descname">list_connection_strings</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_connection_strings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_connection_strings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_connection_strings</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_connection_strings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_connection_strings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the connection strings for the specified Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1554,7 +1554,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_gremlin_databases">
-<code class="descname">list_gremlin_databases</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_gremlin_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_gremlin_databases" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_gremlin_databases</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_gremlin_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_gremlin_databases" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the Gremlin databases under an existing Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1583,7 +1583,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_gremlin_graphs">
-<code class="descname">list_gremlin_graphs</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_gremlin_graphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_gremlin_graphs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_gremlin_graphs</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_gremlin_graphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_gremlin_graphs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the Gremlin graph under an existing Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1613,7 +1613,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_keys">
-<code class="descname">list_keys</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_keys" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the access keys for the specified Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1644,7 +1644,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_metric_definitions">
-<code class="descname">list_metric_definitions</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_metric_definitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_metric_definitions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metric_definitions</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_metric_definitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_metric_definitions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves metric definitions for the given database account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1672,7 +1672,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_metrics">
-<code class="descname">list_metrics</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>filter</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metrics</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">filter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the metrics determined by the given filter for the given
 database account.</p>
 <dl class="field-list simple">
@@ -1705,7 +1705,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_mongo_db_collections">
-<code class="descname">list_mongo_db_collections</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_mongo_db_collections"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_mongo_db_collections" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_mongo_db_collections</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_mongo_db_collections"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_mongo_db_collections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the MongoDB collection under an existing Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1735,7 +1735,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_mongo_db_databases">
-<code class="descname">list_mongo_db_databases</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_mongo_db_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_mongo_db_databases" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_mongo_db_databases</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_mongo_db_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_mongo_db_databases" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the MongoDB databases under an existing Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1764,7 +1764,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_read_only_keys">
-<code class="descname">list_read_only_keys</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_read_only_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_read_only_keys" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_read_only_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_read_only_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_read_only_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the read-only access keys for the specified Azure Cosmos DB
 database account.</p>
 <dl class="field-list simple">
@@ -1795,7 +1795,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_sql_containers">
-<code class="descname">list_sql_containers</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_sql_containers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_sql_containers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_sql_containers</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_sql_containers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_sql_containers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the SQL container under an existing Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1825,7 +1825,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_sql_databases">
-<code class="descname">list_sql_databases</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_sql_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_sql_databases" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_sql_databases</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_sql_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_sql_databases" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the SQL databases under an existing Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1854,7 +1854,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_tables">
-<code class="descname">list_tables</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_tables"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_tables" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_tables</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_tables"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_tables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the Tables under an existing Azure Cosmos DB database account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1882,7 +1882,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_usages">
-<code class="descname">list_usages</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_usages" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_usages</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_usages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the usages (most recent data) for the given database account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1913,12 +1913,12 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.offline_region">
-<code class="descname">offline_region</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>region</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.offline_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.offline_region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">offline_region</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">region</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.offline_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.offline_region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Offline the specified region for the specified Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1951,7 +1951,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.online_region">
-<code class="descname">online_region</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>region</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.online_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.online_region" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">online_region</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">region</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.online_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.online_region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Online the specified region for the specified Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -1984,7 +1984,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.patch">
-<code class="descname">patch</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>tags=None</em>, <em>capabilities=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.patch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.patch" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">patch</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.patch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.patch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Patches the properties of an existing Azure Cosmos DB database account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2017,7 +2017,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.regenerate_key">
-<code class="descname">regenerate_key</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>key_kind</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.regenerate_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.regenerate_key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">regenerate_key</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">key_kind</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.regenerate_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.regenerate_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Regenerates an access key for the specified Azure Cosmos DB database
 account.</p>
 <dl class="field-list simple">
@@ -2053,7 +2053,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.Operations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">Operations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.Operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Operations operations.</p>
 <dl class="field-list simple">
@@ -2071,7 +2071,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.Operations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the available Cosmos DB Resource Provider operations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2097,14 +2097,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.Operations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">DatabaseOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_operations.html#DatabaseOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">DatabaseOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_operations.html#DatabaseOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>DatabaseOperations operations.</p>
 <dl class="field-list simple">
@@ -2122,7 +2122,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseOperations.list_metric_definitions">
-<code class="descname">list_metric_definitions</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_rid</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_operations.html#DatabaseOperations.list_metric_definitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations.list_metric_definitions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metric_definitions</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_rid</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_operations.html#DatabaseOperations.list_metric_definitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations.list_metric_definitions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves metric definitions for the given database.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2151,7 +2151,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseOperations.list_metrics">
-<code class="descname">list_metrics</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_rid</em>, <em>filter</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_operations.html#DatabaseOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metrics</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_rid</em>, <em class="sig-param">filter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_operations.html#DatabaseOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the metrics determined by the given filter for the given
 database account and database.</p>
 <dl class="field-list simple">
@@ -2185,7 +2185,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseOperations.list_usages">
-<code class="descname">list_usages</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_rid</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_operations.html#DatabaseOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations.list_usages" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_usages</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_rid</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_operations.html#DatabaseOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations.list_usages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the usages (most recent data) for the given database.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2217,14 +2217,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">CollectionOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_operations.html#CollectionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">CollectionOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_operations.html#CollectionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>CollectionOperations operations.</p>
 <dl class="field-list simple">
@@ -2242,7 +2242,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionOperations.list_metric_definitions">
-<code class="descname">list_metric_definitions</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_rid</em>, <em>collection_rid</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_operations.html#CollectionOperations.list_metric_definitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations.list_metric_definitions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metric_definitions</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_rid</em>, <em class="sig-param">collection_rid</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_operations.html#CollectionOperations.list_metric_definitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations.list_metric_definitions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves metric definitions for the given collection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2272,7 +2272,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionOperations.list_metrics">
-<code class="descname">list_metrics</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_rid</em>, <em>collection_rid</em>, <em>filter</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_operations.html#CollectionOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metrics</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_rid</em>, <em class="sig-param">collection_rid</em>, <em class="sig-param">filter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_operations.html#CollectionOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the metrics determined by the given filter for the given
 database account and collection.</p>
 <dl class="field-list simple">
@@ -2307,7 +2307,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionOperations.list_usages">
-<code class="descname">list_usages</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_rid</em>, <em>collection_rid</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_operations.html#CollectionOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations.list_usages" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_usages</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_rid</em>, <em class="sig-param">collection_rid</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_operations.html#CollectionOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations.list_usages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the usages (most recent storage data) for the given
 collection.</p>
 <dl class="field-list simple">
@@ -2341,14 +2341,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionRegionOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">CollectionRegionOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_region_operations.html#CollectionRegionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionRegionOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">CollectionRegionOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_region_operations.html#CollectionRegionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionRegionOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>CollectionRegionOperations operations.</p>
 <dl class="field-list simple">
@@ -2366,7 +2366,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionRegionOperations.list_metrics">
-<code class="descname">list_metrics</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>region</em>, <em>database_rid</em>, <em>collection_rid</em>, <em>filter</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_region_operations.html#CollectionRegionOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionRegionOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metrics</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">region</em>, <em class="sig-param">database_rid</em>, <em class="sig-param">collection_rid</em>, <em class="sig-param">filter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_region_operations.html#CollectionRegionOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionRegionOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the metrics determined by the given filter for the given
 database account, collection and region.</p>
 <dl class="field-list simple">
@@ -2403,14 +2403,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionRegionOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionRegionOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionRegionOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountRegionOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">DatabaseAccountRegionOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_account_region_operations.html#DatabaseAccountRegionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountRegionOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">DatabaseAccountRegionOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_account_region_operations.html#DatabaseAccountRegionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountRegionOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>DatabaseAccountRegionOperations operations.</p>
 <dl class="field-list simple">
@@ -2428,7 +2428,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountRegionOperations.list_metrics">
-<code class="descname">list_metrics</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>region</em>, <em>filter</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_account_region_operations.html#DatabaseAccountRegionOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountRegionOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metrics</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">region</em>, <em class="sig-param">filter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_account_region_operations.html#DatabaseAccountRegionOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountRegionOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the metrics determined by the given filter for the given
 database account and region.</p>
 <dl class="field-list simple">
@@ -2463,14 +2463,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountRegionOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountRegionOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountRegionOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.PercentileSourceTargetOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">PercentileSourceTargetOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/percentile_source_target_operations.html#PercentileSourceTargetOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileSourceTargetOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">PercentileSourceTargetOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/percentile_source_target_operations.html#PercentileSourceTargetOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileSourceTargetOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>PercentileSourceTargetOperations operations.</p>
 <dl class="field-list simple">
@@ -2488,7 +2488,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.PercentileSourceTargetOperations.list_metrics">
-<code class="descname">list_metrics</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>source_region</em>, <em>target_region</em>, <em>filter</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/percentile_source_target_operations.html#PercentileSourceTargetOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileSourceTargetOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metrics</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">source_region</em>, <em class="sig-param">target_region</em>, <em class="sig-param">filter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/percentile_source_target_operations.html#PercentileSourceTargetOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileSourceTargetOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the metrics determined by the given filter for the given
 account, source and target region. This url is only for PBS and
 Replication Latency data.</p>
@@ -2526,14 +2526,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.PercentileSourceTargetOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileSourceTargetOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileSourceTargetOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.PercentileTargetOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">PercentileTargetOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/percentile_target_operations.html#PercentileTargetOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileTargetOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">PercentileTargetOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/percentile_target_operations.html#PercentileTargetOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileTargetOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>PercentileTargetOperations operations.</p>
 <dl class="field-list simple">
@@ -2551,7 +2551,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.PercentileTargetOperations.list_metrics">
-<code class="descname">list_metrics</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>target_region</em>, <em>filter</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/percentile_target_operations.html#PercentileTargetOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileTargetOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metrics</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">target_region</em>, <em class="sig-param">filter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/percentile_target_operations.html#PercentileTargetOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileTargetOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the metrics determined by the given filter for the given
 account target region. This url is only for PBS and Replication Latency
 data.</p>
@@ -2587,14 +2587,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.PercentileTargetOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileTargetOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileTargetOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.PercentileOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">PercentileOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/percentile_operations.html#PercentileOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">PercentileOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/percentile_operations.html#PercentileOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>PercentileOperations operations.</p>
 <dl class="field-list simple">
@@ -2612,7 +2612,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.PercentileOperations.list_metrics">
-<code class="descname">list_metrics</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>filter</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/percentile_operations.html#PercentileOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metrics</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">filter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/percentile_operations.html#PercentileOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the metrics determined by the given filter for the given
 database account. This url is only for PBS and Replication Latency
 data.</p>
@@ -2646,14 +2646,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.PercentileOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionPartitionRegionOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">CollectionPartitionRegionOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_partition_region_operations.html#CollectionPartitionRegionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionRegionOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">CollectionPartitionRegionOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_partition_region_operations.html#CollectionPartitionRegionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionRegionOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>CollectionPartitionRegionOperations operations.</p>
 <dl class="field-list simple">
@@ -2671,7 +2671,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionPartitionRegionOperations.list_metrics">
-<code class="descname">list_metrics</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>region</em>, <em>database_rid</em>, <em>collection_rid</em>, <em>filter</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_partition_region_operations.html#CollectionPartitionRegionOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionRegionOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metrics</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">region</em>, <em class="sig-param">database_rid</em>, <em class="sig-param">collection_rid</em>, <em class="sig-param">filter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_partition_region_operations.html#CollectionPartitionRegionOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionRegionOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the metrics determined by the given filter for the given
 collection and region, split by partition.</p>
 <dl class="field-list simple">
@@ -2708,14 +2708,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionPartitionRegionOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionRegionOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionRegionOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionPartitionOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">CollectionPartitionOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_partition_operations.html#CollectionPartitionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">CollectionPartitionOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_partition_operations.html#CollectionPartitionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>CollectionPartitionOperations operations.</p>
 <dl class="field-list simple">
@@ -2733,7 +2733,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionPartitionOperations.list_metrics">
-<code class="descname">list_metrics</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_rid</em>, <em>collection_rid</em>, <em>filter</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_partition_operations.html#CollectionPartitionOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metrics</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_rid</em>, <em class="sig-param">collection_rid</em>, <em class="sig-param">filter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_partition_operations.html#CollectionPartitionOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the metrics determined by the given filter for the given
 collection, split by partition.</p>
 <dl class="field-list simple">
@@ -2768,7 +2768,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionPartitionOperations.list_usages">
-<code class="descname">list_usages</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_rid</em>, <em>collection_rid</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_partition_operations.html#CollectionPartitionOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionOperations.list_usages" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_usages</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_rid</em>, <em class="sig-param">collection_rid</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_partition_operations.html#CollectionPartitionOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionOperations.list_usages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the usages (most recent storage data) for the given
 collection, split by partition.</p>
 <dl class="field-list simple">
@@ -2802,14 +2802,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionPartitionOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">PartitionKeyRangeIdOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/partition_key_range_id_operations.html#PartitionKeyRangeIdOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">PartitionKeyRangeIdOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/partition_key_range_id_operations.html#PartitionKeyRangeIdOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>PartitionKeyRangeIdOperations operations.</p>
 <dl class="field-list simple">
@@ -2827,7 +2827,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdOperations.list_metrics">
-<code class="descname">list_metrics</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_rid</em>, <em>collection_rid</em>, <em>partition_key_range_id</em>, <em>filter</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/partition_key_range_id_operations.html#PartitionKeyRangeIdOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metrics</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_rid</em>, <em class="sig-param">collection_rid</em>, <em class="sig-param">partition_key_range_id</em>, <em class="sig-param">filter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/partition_key_range_id_operations.html#PartitionKeyRangeIdOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the metrics determined by the given filter for the given
 partition key range id.</p>
 <dl class="field-list simple">
@@ -2864,14 +2864,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdRegionOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.operations.</code><code class="descname">PartitionKeyRangeIdRegionOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/partition_key_range_id_region_operations.html#PartitionKeyRangeIdRegionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdRegionOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.operations.</code><code class="sig-name descname">PartitionKeyRangeIdRegionOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/partition_key_range_id_region_operations.html#PartitionKeyRangeIdRegionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdRegionOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>PartitionKeyRangeIdRegionOperations operations.</p>
 <dl class="field-list simple">
@@ -2889,7 +2889,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdRegionOperations.list_metrics">
-<code class="descname">list_metrics</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>region</em>, <em>database_rid</em>, <em>collection_rid</em>, <em>partition_key_range_id</em>, <em>filter</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/partition_key_range_id_region_operations.html#PartitionKeyRangeIdRegionOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdRegionOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_metrics</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">region</em>, <em class="sig-param">database_rid</em>, <em class="sig-param">collection_rid</em>, <em class="sig-param">partition_key_range_id</em>, <em class="sig-param">filter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/partition_key_range_id_region_operations.html#PartitionKeyRangeIdRegionOperations.list_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdRegionOperations.list_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the metrics determined by the given filter for the given
 partition key range id and region.</p>
 <dl class="field-list simple">
@@ -2928,7 +2928,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdRegionOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdRegionOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\sdk\\cosmos\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdRegionOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

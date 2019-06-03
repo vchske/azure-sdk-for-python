@@ -327,7 +327,7 @@
 <span id="azure-mgmt-containerregistry-v2018-02-01-preview-operations-module"></span><h1>azure.mgmt.containerregistry.v2018_02_01_preview.operations module<a class="headerlink" href="#module-azure.mgmt.containerregistry.v2018_02_01_preview.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="descname">RegistriesOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="sig-name descname">RegistriesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>RegistriesOperations operations.</p>
 <dl class="field-list simple">
@@ -342,7 +342,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.check_name_availability">
-<code class="descname">check_name_availability</code><span class="sig-paren">(</span><em>name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.check_name_availability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_name_availability</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.check_name_availability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks whether the container registry name is available for use. The
 name must contain only alphanumeric characters, be globally unique, and
 between 5 and 50 characters in length.</p>
@@ -372,7 +372,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>registry</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">registry</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a container registry with the specified parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -405,7 +405,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a container registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -436,7 +436,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the properties of the specified container registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -466,7 +466,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.get_build_source_upload_url">
-<code class="descname">get_build_source_upload_url</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.get_build_source_upload_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.get_build_source_upload_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_build_source_upload_url</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.get_build_source_upload_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.get_build_source_upload_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the upload location for the user to be able to upload the source.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -496,7 +496,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.import_image">
-<code class="descname">import_image</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.import_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.import_image" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">import_image</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.import_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.import_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies an image to this container registry from the specified container
 registry.</p>
 <dl class="field-list simple">
@@ -530,7 +530,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the container registries under the specified subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -556,7 +556,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list_by_resource_group">
-<code class="descname">list_by_resource_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the container registries under the specified resource group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -584,7 +584,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list_credentials">
-<code class="descname">list_credentials</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.list_credentials"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list_credentials" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_credentials</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.list_credentials"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list_credentials" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the login credentials for the specified container registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -615,7 +615,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list_policies">
-<code class="descname">list_policies</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.list_policies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list_policies" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_policies</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.list_policies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the policies for the specified container registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -645,7 +645,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list_usages">
-<code class="descname">list_usages</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list_usages" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_usages</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.list_usages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the quota usages for the specified container registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -675,12 +675,12 @@ or ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.queue_build">
-<code class="descname">queue_build</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_request</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.queue_build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.queue_build" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">queue_build</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_request</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.queue_build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.queue_build" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new build based on the request parameters and add it to the
 build queue.</p>
 <dl class="field-list simple">
@@ -714,7 +714,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.regenerate_credential">
-<code class="descname">regenerate_credential</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.regenerate_credential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.regenerate_credential" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">regenerate_credential</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.regenerate_credential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.regenerate_credential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Regenerates one of the login credentials for the specified container
 registry.</p>
 <dl class="field-list simple">
@@ -750,7 +750,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>registry_update_parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">registry_update_parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates a container registry with the specified parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -784,7 +784,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.update_policies">
-<code class="descname">update_policies</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>quarantine_policy=None</em>, <em>trust_policy=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.update_policies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.update_policies" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_policies</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">quarantine_policy=None</em>, <em class="sig-param">trust_policy=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/registries_operations.html#RegistriesOperations.update_policies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.RegistriesOperations.update_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates the policies for the specified container registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -822,7 +822,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.Operations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="descname">Operations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.Operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Operations operations.</p>
 <dl class="field-list simple">
@@ -840,7 +840,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.Operations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the available Azure Container Registry REST API
 operations.</p>
 <dl class="field-list simple">
@@ -867,14 +867,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.Operations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="descname">ReplicationsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/replications_operations.html#ReplicationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="sig-name descname">ReplicationsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/replications_operations.html#ReplicationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ReplicationsOperations operations.</p>
 <dl class="field-list simple">
@@ -892,7 +892,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>replication_name</em>, <em>location</em>, <em>tags=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/replications_operations.html#ReplicationsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">replication_name</em>, <em class="sig-param">location</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/replications_operations.html#ReplicationsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a replication for a container registry with the specified
 parameters.</p>
 <dl class="field-list simple">
@@ -929,7 +929,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>replication_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/replications_operations.html#ReplicationsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">replication_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/replications_operations.html#ReplicationsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a replication from a container registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -961,7 +961,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>replication_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/replications_operations.html#ReplicationsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">replication_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/replications_operations.html#ReplicationsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the properties of the specified replication.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -992,7 +992,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/replications_operations.html#ReplicationsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/replications_operations.html#ReplicationsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the replications for the specified container registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1021,12 +1021,12 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>replication_name</em>, <em>tags=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/replications_operations.html#ReplicationsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">replication_name</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/replications_operations.html#ReplicationsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.ReplicationsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates a replication for a container registry with the specified
 parameters.</p>
 <dl class="field-list simple">
@@ -1063,7 +1063,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="descname">WebhooksOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="sig-name descname">WebhooksOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>WebhooksOperations operations.</p>
 <dl class="field-list simple">
@@ -1081,7 +1081,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>webhook_name</em>, <em>webhook_create_parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">webhook_name</em>, <em class="sig-param">webhook_create_parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a webhook for a container registry with the specified
 parameters.</p>
 <dl class="field-list simple">
@@ -1117,7 +1117,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>webhook_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">webhook_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a webhook from a container registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1149,7 +1149,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>webhook_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">webhook_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the properties of the specified webhook.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1180,7 +1180,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.get_callback_config">
-<code class="descname">get_callback_config</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>webhook_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.get_callback_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.get_callback_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_callback_config</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">webhook_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.get_callback_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.get_callback_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the configuration of service URI and custom headers for the
 webhook.</p>
 <dl class="field-list simple">
@@ -1212,7 +1212,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the webhooks for the specified container registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1241,7 +1241,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.list_events">
-<code class="descname">list_events</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>webhook_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.list_events"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.list_events" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_events</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">webhook_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.list_events"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.list_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists recent events for the specified webhook.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1271,12 +1271,12 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.ping">
-<code class="descname">ping</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>webhook_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.ping"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.ping" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ping</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">webhook_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.ping"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.ping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Triggers a ping event to be sent to the webhook.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1307,7 +1307,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>webhook_name</em>, <em>webhook_update_parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">webhook_name</em>, <em class="sig-param">webhook_update_parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/webhooks_operations.html#WebhooksOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.WebhooksOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates a webhook with the specified parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1344,7 +1344,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="descname">BuildsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/builds_operations.html#BuildsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="sig-name descname">BuildsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/builds_operations.html#BuildsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>BuildsOperations operations.</p>
 <dl class="field-list simple">
@@ -1362,7 +1362,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.cancel">
-<code class="descname">cancel</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/builds_operations.html#BuildsOperations.cancel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.cancel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cancel</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/builds_operations.html#BuildsOperations.cancel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.cancel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cancel an existing build.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1394,7 +1394,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/builds_operations.html#BuildsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/builds_operations.html#BuildsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the detailed information for a given build.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1425,7 +1425,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.get_log_link">
-<code class="descname">get_log_link</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/builds_operations.html#BuildsOperations.get_log_link"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.get_log_link" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_log_link</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/builds_operations.html#BuildsOperations.get_log_link"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.get_log_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a link to download the build logs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1456,7 +1456,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>filter=None</em>, <em>top=None</em>, <em>skip_token=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/builds_operations.html#BuildsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">skip_token=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/builds_operations.html#BuildsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets all the builds for a registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1490,12 +1490,12 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_id</em>, <em>is_archive_enabled=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/builds_operations.html#BuildsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_id</em>, <em class="sig-param">is_archive_enabled=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/builds_operations.html#BuildsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Patch the build properties.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1532,7 +1532,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="descname">BuildStepsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="sig-name descname">BuildStepsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>BuildStepsOperations operations.</p>
 <dl class="field-list simple">
@@ -1550,7 +1550,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_task_name</em>, <em>step_name</em>, <em>properties=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_task_name</em>, <em class="sig-param">step_name</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a build step for a build task.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1586,7 +1586,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_task_name</em>, <em>step_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_task_name</em>, <em class="sig-param">step_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a build step from the build task.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1620,7 +1620,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_task_name</em>, <em>step_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_task_name</em>, <em class="sig-param">step_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the build step for a build task.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1653,7 +1653,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_task_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_task_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all the build steps for a given build task.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1683,7 +1683,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.list_build_arguments">
-<code class="descname">list_build_arguments</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_task_name</em>, <em>step_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations.list_build_arguments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.list_build_arguments" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_build_arguments</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_task_name</em>, <em class="sig-param">step_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations.list_build_arguments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.list_build_arguments" title="Permalink to this definition">¶</a></dt>
 <dd><p>List the build arguments for a step including the secret arguments.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1715,12 +1715,12 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_task_name</em>, <em>step_name</em>, <em>properties=None</em>, <em>tags=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_task_name</em>, <em class="sig-param">step_name</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_steps_operations.html#BuildStepsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildStepsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates a build step in a build task.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1759,7 +1759,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="descname">BuildTasksOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2018_02_01_preview.operations.</code><code class="sig-name descname">BuildTasksOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>BuildTasksOperations operations.</p>
 <dl class="field-list simple">
@@ -1777,7 +1777,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_task_name</em>, <em>build_task_create_parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_task_name</em>, <em class="sig-param">build_task_create_parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a build task for a container registry with the specified
 parameters.</p>
 <dl class="field-list simple">
@@ -1813,7 +1813,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_task_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_task_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a specified build task.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1845,7 +1845,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_task_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_task_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the properties of a specified build task.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1876,7 +1876,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>filter=None</em>, <em>skip_token=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">skip_token=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the build tasks for a specified container registry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1908,7 +1908,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.list_source_repository_properties">
-<code class="descname">list_source_repository_properties</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_task_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations.list_source_repository_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.list_source_repository_properties" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_source_repository_properties</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_task_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations.list_source_repository_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.list_source_repository_properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the source control properties for a build task.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1939,12 +1939,12 @@ or ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerregistry.v2018_02_01_preview.models' from 'd:\\a\\1\\s\\sdk\\containerregistry\\azure-mgmt-containerregistry\\azure\\mgmt\\containerregistry\\v2018_02_01_preview\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>registry_name</em>, <em>build_task_name</em>, <em>build_task_update_parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">registry_name</em>, <em class="sig-param">build_task_name</em>, <em class="sig-param">build_task_update_parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2018_02_01_preview/operations/build_tasks_operations.html#BuildTasksOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2018_02_01_preview.operations.BuildTasksOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates a build task with the specified parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

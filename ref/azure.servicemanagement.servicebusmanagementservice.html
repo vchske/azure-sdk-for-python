@@ -325,7 +325,7 @@
 <span id="azure-servicemanagement-servicebusmanagementservice-module"></span><h1>azure.servicemanagement.servicebusmanagementservice module<a class="headerlink" href="#module-azure.servicemanagement.servicebusmanagementservice" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService">
-<em class="property">class </em><code class="descclassname">azure.servicemanagement.servicebusmanagementservice.</code><code class="descname">ServiceBusManagementService</code><span class="sig-paren">(</span><em>subscription_id=None</em>, <em>cert_file=None</em>, <em>host='management.core.windows.net'</em>, <em>request_session=None</em>, <em>timeout=65</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicemanagement.servicebusmanagementservice.</code><code class="sig-name descname">ServiceBusManagementService</code><span class="sig-paren">(</span><em class="sig-param">subscription_id=None</em>, <em class="sig-param">cert_file=None</em>, <em class="sig-param">host='management.core.windows.net'</em>, <em class="sig-param">request_session=None</em>, <em class="sig-param">timeout=65</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicemanagement.servicemanagementclient._ServiceManagementClient</span></code></p>
 <p>Initializes the service bus management service.</p>
 <dl class="simple">
@@ -353,7 +353,7 @@ attribute.</p>
 </dl>
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.check_namespace_availability">
-<code class="descname">check_namespace_availability</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.check_namespace_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.check_namespace_availability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_namespace_availability</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.check_namespace_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.check_namespace_availability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks to see if the specified service bus namespace is available, or
 if it has already been taken.</p>
 <dl class="simple">
@@ -364,7 +364,7 @@ if it has already been taken.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.create_namespace">
-<code class="descname">create_namespace</code><span class="sig-paren">(</span><em>name</em>, <em>region</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.create_namespace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.create_namespace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_namespace</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">region</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.create_namespace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.create_namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new service bus namespace.</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace to create.</p>
@@ -376,7 +376,7 @@ if it has already been taken.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.delete_namespace">
-<code class="descname">delete_namespace</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.delete_namespace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.delete_namespace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_namespace</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.delete_namespace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.delete_namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete a service bus namespace.</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace to delete.</p>
@@ -386,7 +386,7 @@ if it has already been taken.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_data_notification_hub">
-<code class="descname">get_metrics_data_notification_hub</code><span class="sig-paren">(</span><em>name</em>, <em>hub_name</em>, <em>metric</em>, <em>rollup</em>, <em>filter_expresssion</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_data_notification_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_data_notification_hub" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_metrics_data_notification_hub</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">hub_name</em>, <em class="sig-param">metric</em>, <em class="sig-param">rollup</em>, <em class="sig-param">filter_expresssion</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_data_notification_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_data_notification_hub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the list of supported metrics for this namespace and topic</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -404,7 +404,7 @@ if it has already been taken.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_data_queue">
-<code class="descname">get_metrics_data_queue</code><span class="sig-paren">(</span><em>name</em>, <em>queue_name</em>, <em>metric</em>, <em>rollup</em>, <em>filter_expresssion</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_data_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_data_queue" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_metrics_data_queue</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">queue_name</em>, <em class="sig-param">metric</em>, <em class="sig-param">rollup</em>, <em class="sig-param">filter_expresssion</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_data_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_data_queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the list of supported metrics for this namespace and queue</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -422,7 +422,7 @@ if it has already been taken.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_data_relay">
-<code class="descname">get_metrics_data_relay</code><span class="sig-paren">(</span><em>name</em>, <em>relay_name</em>, <em>metric</em>, <em>rollup</em>, <em>filter_expresssion</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_data_relay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_data_relay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_metrics_data_relay</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">relay_name</em>, <em class="sig-param">metric</em>, <em class="sig-param">rollup</em>, <em class="sig-param">filter_expresssion</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_data_relay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_data_relay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the list of supported metrics for this namespace and relay</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -440,7 +440,7 @@ if it has already been taken.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_data_topic">
-<code class="descname">get_metrics_data_topic</code><span class="sig-paren">(</span><em>name</em>, <em>topic_name</em>, <em>metric</em>, <em>rollup</em>, <em>filter_expresssion</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_data_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_data_topic" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_metrics_data_topic</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">topic_name</em>, <em class="sig-param">metric</em>, <em class="sig-param">rollup</em>, <em class="sig-param">filter_expresssion</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_data_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_data_topic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the list of supported metrics for this namespace and topic</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -458,7 +458,7 @@ if it has already been taken.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_rollups_notification_hub">
-<code class="descname">get_metrics_rollups_notification_hub</code><span class="sig-paren">(</span><em>name</em>, <em>hub_name</em>, <em>metric</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_rollups_notification_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_rollups_notification_hub" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_metrics_rollups_notification_hub</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">hub_name</em>, <em class="sig-param">metric</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_rollups_notification_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_rollups_notification_hub" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation gets rollup data for Service Bus metrics notification hub.
 Rollup data includes the time granularity for the telemetry aggregation as well as
 the retention settings for each time granularity.</p>
@@ -474,7 +474,7 @@ the retention settings for each time granularity.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_rollups_queue">
-<code class="descname">get_metrics_rollups_queue</code><span class="sig-paren">(</span><em>name</em>, <em>queue_name</em>, <em>metric</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_rollups_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_rollups_queue" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_metrics_rollups_queue</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">queue_name</em>, <em class="sig-param">metric</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_rollups_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_rollups_queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation gets rollup data for Service Bus metrics queue.
 Rollup data includes the time granularity for the telemetry aggregation as well as
 the retention settings for each time granularity.</p>
@@ -490,7 +490,7 @@ the retention settings for each time granularity.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_rollups_relay">
-<code class="descname">get_metrics_rollups_relay</code><span class="sig-paren">(</span><em>name</em>, <em>relay_name</em>, <em>metric</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_rollups_relay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_rollups_relay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_metrics_rollups_relay</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">relay_name</em>, <em class="sig-param">metric</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_rollups_relay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_rollups_relay" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation gets rollup data for Service Bus metrics relay.
 Rollup data includes the time granularity for the telemetry aggregation as well as
 the retention settings for each time granularity.</p>
@@ -506,7 +506,7 @@ the retention settings for each time granularity.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_rollups_topic">
-<code class="descname">get_metrics_rollups_topic</code><span class="sig-paren">(</span><em>name</em>, <em>topic_name</em>, <em>metric</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_rollups_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_rollups_topic" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_metrics_rollups_topic</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">topic_name</em>, <em class="sig-param">metric</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_metrics_rollups_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_metrics_rollups_topic" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation gets rollup data for Service Bus metrics topic.
 Rollup data includes the time granularity for the telemetry aggregation as well as
 the retention settings for each time granularity.</p>
@@ -522,7 +522,7 @@ the retention settings for each time granularity.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_namespace">
-<code class="descname">get_namespace</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_namespace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_namespace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_namespace</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_namespace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get details about a specific namespace.</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -532,13 +532,13 @@ the retention settings for each time granularity.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_regions">
-<code class="descname">get_regions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_regions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_regions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_regions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_regions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_regions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get list of available service bus regions.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_supported_metrics_notification_hub">
-<code class="descname">get_supported_metrics_notification_hub</code><span class="sig-paren">(</span><em>name</em>, <em>hub_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_supported_metrics_notification_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_supported_metrics_notification_hub" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_supported_metrics_notification_hub</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">hub_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_supported_metrics_notification_hub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_supported_metrics_notification_hub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the list of supported metrics for this namespace and topic</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -550,7 +550,7 @@ the retention settings for each time granularity.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_supported_metrics_queue">
-<code class="descname">get_supported_metrics_queue</code><span class="sig-paren">(</span><em>name</em>, <em>queue_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_supported_metrics_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_supported_metrics_queue" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_supported_metrics_queue</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">queue_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_supported_metrics_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_supported_metrics_queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the list of supported metrics for this namespace and queue</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -562,7 +562,7 @@ the retention settings for each time granularity.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_supported_metrics_relay">
-<code class="descname">get_supported_metrics_relay</code><span class="sig-paren">(</span><em>name</em>, <em>relay_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_supported_metrics_relay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_supported_metrics_relay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_supported_metrics_relay</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">relay_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_supported_metrics_relay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_supported_metrics_relay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the list of supported metrics for this namespace and relay</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -574,7 +574,7 @@ the retention settings for each time granularity.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_supported_metrics_topic">
-<code class="descname">get_supported_metrics_topic</code><span class="sig-paren">(</span><em>name</em>, <em>topic_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_supported_metrics_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_supported_metrics_topic" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_supported_metrics_topic</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">topic_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.get_supported_metrics_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.get_supported_metrics_topic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the list of supported metrics for this namespace and topic</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -586,13 +586,13 @@ the retention settings for each time granularity.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_namespaces">
-<code class="descname">list_namespaces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.list_namespaces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_namespaces" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_namespaces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.list_namespaces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_namespaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>List the service bus namespaces defined on the account.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_notification_hubs">
-<code class="descname">list_notification_hubs</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.list_notification_hubs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_notification_hubs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_notification_hubs</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.list_notification_hubs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_notification_hubs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the notification hubs in the service namespace.</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -602,7 +602,7 @@ the retention settings for each time granularity.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_queues">
-<code class="descname">list_queues</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.list_queues"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_queues" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_queues</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.list_queues"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_queues" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enumerates the queues in the service namespace.</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -612,7 +612,7 @@ the retention settings for each time granularity.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_relays">
-<code class="descname">list_relays</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.list_relays"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_relays" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_relays</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.list_relays"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_relays" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the relays in the service namespace.</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -622,7 +622,7 @@ the retention settings for each time granularity.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_topics">
-<code class="descname">list_topics</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.list_topics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_topics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_topics</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/servicebusmanagementservice.html#ServiceBusManagementService.list_topics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.ServiceBusManagementService.list_topics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the topics in the service namespace.</p>
 <dl class="simple">
 <dt>name:</dt><dd><p>Name of the service bus namespace.</p>
@@ -631,6 +631,11 @@ the retention settings for each time granularity.</p>
 </dd></dl>
 
 </dd></dl>
+
+<dl class="data">
+<dt id="azure.servicemanagement.servicebusmanagementservice.X_MS_VERSION">
+<code class="sig-prename descclassname">azure.servicemanagement.servicebusmanagementservice.</code><code class="sig-name descname">X_MS_VERSION</code><em class="property"> = '2012-03-01'</em><a class="headerlink" href="#azure.servicemanagement.servicebusmanagementservice.X_MS_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </div>
 

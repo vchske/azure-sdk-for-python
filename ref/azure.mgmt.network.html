@@ -335,7 +335,7 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.network" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.network.NetworkManagementClient">
-<em class="property">class </em><code class="descclassname">azure.mgmt.network.</code><code class="descname">NetworkManagementClient</code><span class="sig-paren">(</span><em>credentials</em>, <em>subscription_id</em>, <em>api_version=None</em>, <em>base_url=None</em>, <em>profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/network/network_management_client.html#NetworkManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.network.</code><code class="sig-name descname">NetworkManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/network/network_management_client.html#NetworkManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.profiles.multiapiclient.MultiApiClientMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>Network Client</p>
 <p>This ready contains multiple API versions, to help you deal with all Azure clouds
@@ -365,17 +365,17 @@ missing in profile.</p></li>
 </dl>
 <dl class="attribute">
 <dt id="azure.mgmt.network.NetworkManagementClient.DEFAULT_API_VERSION">
-<code class="descname">DEFAULT_API_VERSION</code><em class="property"> = '2019-04-01'</em><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.DEFAULT_API_VERSION" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">DEFAULT_API_VERSION</code><em class="property"> = '2019-04-01'</em><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.DEFAULT_API_VERSION" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.network.NetworkManagementClient.LATEST_PROFILE">
-<code class="descname">LATEST_PROFILE</code><em class="property"> = azure.mgmt.network.NetworkManagementClient latest</em><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.LATEST_PROFILE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">LATEST_PROFILE</code><em class="property"> = azure.mgmt.network.NetworkManagementClient latest</em><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.LATEST_PROFILE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.application_gateways">
-<code class="descname">application_gateways</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.application_gateways" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">application_gateways</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.application_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations" title="azure.mgmt.network.v2015_06_15.operations.ApplicationGatewaysOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApplicationGatewaysOperations</span></code></a></p></li>
@@ -401,9 +401,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.application_security_groups">
-<code class="descname">application_security_groups</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.application_security_groups" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">application_security_groups</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.application_security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-09-01: <a class="reference internal" href="azure.mgmt.network.v2017_09_01.operations.html#azure.mgmt.network.v2017_09_01.operations.ApplicationSecurityGroupsOperations" title="azure.mgmt.network.v2017_09_01.operations.ApplicationSecurityGroupsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApplicationSecurityGroupsOperations</span></code></a></p></li>
@@ -423,9 +423,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.available_delegations">
-<code class="descname">available_delegations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.available_delegations" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">available_delegations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.available_delegations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.AvailableDelegationsOperations" title="azure.mgmt.network.v2018_08_01.operations.AvailableDelegationsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">AvailableDelegationsOperations</span></code></a></p></li>
@@ -437,9 +437,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.available_endpoint_services">
-<code class="descname">available_endpoint_services</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.available_endpoint_services" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">available_endpoint_services</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.available_endpoint_services" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-06-01: <a class="reference internal" href="azure.mgmt.network.v2017_06_01.operations.html#azure.mgmt.network.v2017_06_01.operations.AvailableEndpointServicesOperations" title="azure.mgmt.network.v2017_06_01.operations.AvailableEndpointServicesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">AvailableEndpointServicesOperations</span></code></a></p></li>
@@ -461,18 +461,18 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.available_private_endpoint_types">
-<code class="descname">available_private_endpoint_types</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.available_private_endpoint_types" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">available_private_endpoint_types</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.available_private_endpoint_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2019-04-01: <code class="xref py py-class docutils literal notranslate"><span class="pre">AvailablePrivateEndpointTypesOperations</span></code></p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.available_resource_group_delegations">
-<code class="descname">available_resource_group_delegations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.available_resource_group_delegations" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">available_resource_group_delegations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.available_resource_group_delegations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.AvailableResourceGroupDelegationsOperations" title="azure.mgmt.network.v2018_08_01.operations.AvailableResourceGroupDelegationsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">AvailableResourceGroupDelegationsOperations</span></code></a></p></li>
@@ -484,18 +484,18 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.available_resource_group_private_endpoint_types">
-<code class="descname">available_resource_group_private_endpoint_types</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.available_resource_group_private_endpoint_types" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">available_resource_group_private_endpoint_types</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.available_resource_group_private_endpoint_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2019-04-01: <code class="xref py py-class docutils literal notranslate"><span class="pre">AvailableResourceGroupPrivateEndpointTypesOperations</span></code></p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.azure_firewall_fqdn_tags">
-<code class="descname">azure_firewall_fqdn_tags</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.azure_firewall_fqdn_tags" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">azure_firewall_fqdn_tags</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.azure_firewall_fqdn_tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.AzureFirewallFqdnTagsOperations" title="azure.mgmt.network.v2018_08_01.operations.AzureFirewallFqdnTagsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">AzureFirewallFqdnTagsOperations</span></code></a></p></li>
@@ -507,9 +507,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.azure_firewalls">
-<code class="descname">azure_firewalls</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.azure_firewalls" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">azure_firewalls</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.azure_firewalls" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-04-01: <a class="reference internal" href="azure.mgmt.network.v2018_04_01.operations.html#azure.mgmt.network.v2018_04_01.operations.AzureFirewallsOperations" title="azure.mgmt.network.v2018_04_01.operations.AzureFirewallsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">AzureFirewallsOperations</span></code></a></p></li>
@@ -524,18 +524,18 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.bastion_hosts">
-<code class="descname">bastion_hosts</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.bastion_hosts" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">bastion_hosts</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.bastion_hosts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2019-04-01: <code class="xref py py-class docutils literal notranslate"><span class="pre">BastionHostsOperations</span></code></p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.bgp_service_communities">
-<code class="descname">bgp_service_communities</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.bgp_service_communities" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">bgp_service_communities</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.bgp_service_communities" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-12-01: <a class="reference internal" href="azure.mgmt.network.v2016_12_01.operations.html#azure.mgmt.network.v2016_12_01.operations.BgpServiceCommunitiesOperations" title="azure.mgmt.network.v2016_12_01.operations.BgpServiceCommunitiesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">BgpServiceCommunitiesOperations</span></code></a></p></li>
@@ -561,7 +561,7 @@ missing in profile.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.check_dns_name_availability">
-<code class="descname">check_dns_name_availability</code><span class="sig-paren">(</span><em>location</em>, <em>domain_name_label</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/network/network_management_client.html#NetworkManagementClient.check_dns_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.check_dns_name_availability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_dns_name_availability</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">domain_name_label</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/network/network_management_client.html#NetworkManagementClient.check_dns_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.check_dns_name_availability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks whether a domain name in the cloudapp.azure.com zone is
 available for use.</p>
 <dl class="field-list simple">
@@ -593,9 +593,9 @@ raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.connection_monitors">
-<code class="descname">connection_monitors</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.connection_monitors" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">connection_monitors</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.connection_monitors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-10-01: <a class="reference internal" href="azure.mgmt.network.v2017_10_01.operations.html#azure.mgmt.network.v2017_10_01.operations.ConnectionMonitorsOperations" title="azure.mgmt.network.v2017_10_01.operations.ConnectionMonitorsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConnectionMonitorsOperations</span></code></a></p></li>
@@ -614,9 +614,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.ddos_custom_policies">
-<code class="descname">ddos_custom_policies</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.ddos_custom_policies" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">ddos_custom_policies</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.ddos_custom_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-11-01: <a class="reference internal" href="azure.mgmt.network.v2018_11_01.operations.html#azure.mgmt.network.v2018_11_01.operations.DdosCustomPoliciesOperations" title="azure.mgmt.network.v2018_11_01.operations.DdosCustomPoliciesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">DdosCustomPoliciesOperations</span></code></a></p></li>
@@ -626,9 +626,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.ddos_protection_plans">
-<code class="descname">ddos_protection_plans</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.ddos_protection_plans" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">ddos_protection_plans</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.ddos_protection_plans" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-02-01: <a class="reference internal" href="azure.mgmt.network.v2018_02_01.operations.html#azure.mgmt.network.v2018_02_01.operations.DdosProtectionPlansOperations" title="azure.mgmt.network.v2018_02_01.operations.DdosProtectionPlansOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">DdosProtectionPlansOperations</span></code></a></p></li>
@@ -644,9 +644,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.default_security_rules">
-<code class="descname">default_security_rules</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.default_security_rules" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">default_security_rules</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.default_security_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-06-01: <a class="reference internal" href="azure.mgmt.network.v2017_06_01.operations.html#azure.mgmt.network.v2017_06_01.operations.DefaultSecurityRulesOperations" title="azure.mgmt.network.v2017_06_01.operations.DefaultSecurityRulesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">DefaultSecurityRulesOperations</span></code></a></p></li>
@@ -668,9 +668,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.express_route_circuit_authorizations">
-<code class="descname">express_route_circuit_authorizations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_circuit_authorizations" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">express_route_circuit_authorizations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_circuit_authorizations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitAuthorizationsOperations" title="azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitAuthorizationsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExpressRouteCircuitAuthorizationsOperations</span></code></a></p></li>
@@ -696,9 +696,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.express_route_circuit_connections">
-<code class="descname">express_route_circuit_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_circuit_connections" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">express_route_circuit_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_circuit_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-02-01: <a class="reference internal" href="azure.mgmt.network.v2018_02_01.operations.html#azure.mgmt.network.v2018_02_01.operations.ExpressRouteCircuitConnectionsOperations" title="azure.mgmt.network.v2018_02_01.operations.ExpressRouteCircuitConnectionsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExpressRouteCircuitConnectionsOperations</span></code></a></p></li>
@@ -714,9 +714,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.express_route_circuit_peerings">
-<code class="descname">express_route_circuit_peerings</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_circuit_peerings" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">express_route_circuit_peerings</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_circuit_peerings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitPeeringsOperations" title="azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitPeeringsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExpressRouteCircuitPeeringsOperations</span></code></a></p></li>
@@ -742,9 +742,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.express_route_circuits">
-<code class="descname">express_route_circuits</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_circuits" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">express_route_circuits</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_circuits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations" title="azure.mgmt.network.v2015_06_15.operations.ExpressRouteCircuitsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExpressRouteCircuitsOperations</span></code></a></p></li>
@@ -770,9 +770,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.express_route_connections">
-<code class="descname">express_route_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_connections" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">express_route_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.ExpressRouteConnectionsOperations" title="azure.mgmt.network.v2018_08_01.operations.ExpressRouteConnectionsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExpressRouteConnectionsOperations</span></code></a></p></li>
@@ -784,9 +784,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.express_route_cross_connection_peerings">
-<code class="descname">express_route_cross_connection_peerings</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_cross_connection_peerings" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">express_route_cross_connection_peerings</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_cross_connection_peerings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-02-01: <a class="reference internal" href="azure.mgmt.network.v2018_02_01.operations.html#azure.mgmt.network.v2018_02_01.operations.ExpressRouteCrossConnectionPeeringsOperations" title="azure.mgmt.network.v2018_02_01.operations.ExpressRouteCrossConnectionPeeringsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExpressRouteCrossConnectionPeeringsOperations</span></code></a></p></li>
@@ -802,9 +802,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.express_route_cross_connections">
-<code class="descname">express_route_cross_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_cross_connections" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">express_route_cross_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_cross_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-02-01: <a class="reference internal" href="azure.mgmt.network.v2018_02_01.operations.html#azure.mgmt.network.v2018_02_01.operations.ExpressRouteCrossConnectionsOperations" title="azure.mgmt.network.v2018_02_01.operations.ExpressRouteCrossConnectionsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExpressRouteCrossConnectionsOperations</span></code></a></p></li>
@@ -820,9 +820,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.express_route_gateways">
-<code class="descname">express_route_gateways</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_gateways" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">express_route_gateways</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.ExpressRouteGatewaysOperations" title="azure.mgmt.network.v2018_08_01.operations.ExpressRouteGatewaysOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExpressRouteGatewaysOperations</span></code></a></p></li>
@@ -834,9 +834,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.express_route_links">
-<code class="descname">express_route_links</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_links" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">express_route_links</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_links" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.ExpressRouteLinksOperations" title="azure.mgmt.network.v2018_08_01.operations.ExpressRouteLinksOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExpressRouteLinksOperations</span></code></a></p></li>
@@ -848,9 +848,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.express_route_ports">
-<code class="descname">express_route_ports</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_ports" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">express_route_ports</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_ports" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.ExpressRoutePortsOperations" title="azure.mgmt.network.v2018_08_01.operations.ExpressRoutePortsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExpressRoutePortsOperations</span></code></a></p></li>
@@ -862,9 +862,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.express_route_ports_locations">
-<code class="descname">express_route_ports_locations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_ports_locations" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">express_route_ports_locations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_ports_locations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.ExpressRoutePortsLocationsOperations" title="azure.mgmt.network.v2018_08_01.operations.ExpressRoutePortsLocationsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExpressRoutePortsLocationsOperations</span></code></a></p></li>
@@ -876,9 +876,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.express_route_service_providers">
-<code class="descname">express_route_service_providers</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_service_providers" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">express_route_service_providers</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.express_route_service_providers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.ExpressRouteServiceProvidersOperations" title="azure.mgmt.network.v2015_06_15.operations.ExpressRouteServiceProvidersOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExpressRouteServiceProvidersOperations</span></code></a></p></li>
@@ -904,9 +904,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.hub_virtual_network_connections">
-<code class="descname">hub_virtual_network_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.hub_virtual_network_connections" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">hub_virtual_network_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.hub_virtual_network_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-04-01: <a class="reference internal" href="azure.mgmt.network.v2018_04_01.operations.html#azure.mgmt.network.v2018_04_01.operations.HubVirtualNetworkConnectionsOperations" title="azure.mgmt.network.v2018_04_01.operations.HubVirtualNetworkConnectionsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">HubVirtualNetworkConnectionsOperations</span></code></a></p></li>
@@ -921,9 +921,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.inbound_nat_rules">
-<code class="descname">inbound_nat_rules</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.inbound_nat_rules" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">inbound_nat_rules</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.inbound_nat_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-06-01: <a class="reference internal" href="azure.mgmt.network.v2017_06_01.operations.html#azure.mgmt.network.v2017_06_01.operations.InboundNatRulesOperations" title="azure.mgmt.network.v2017_06_01.operations.InboundNatRulesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">InboundNatRulesOperations</span></code></a></p></li>
@@ -945,9 +945,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.interface_endpoints">
-<code class="descname">interface_endpoints</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.interface_endpoints" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">interface_endpoints</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.interface_endpoints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.InterfaceEndpointsOperations" title="azure.mgmt.network.v2018_08_01.operations.InterfaceEndpointsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">InterfaceEndpointsOperations</span></code></a></p></li>
@@ -958,9 +958,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.load_balancer_backend_address_pools">
-<code class="descname">load_balancer_backend_address_pools</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancer_backend_address_pools" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">load_balancer_backend_address_pools</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancer_backend_address_pools" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-06-01: <a class="reference internal" href="azure.mgmt.network.v2017_06_01.operations.html#azure.mgmt.network.v2017_06_01.operations.LoadBalancerBackendAddressPoolsOperations" title="azure.mgmt.network.v2017_06_01.operations.LoadBalancerBackendAddressPoolsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">LoadBalancerBackendAddressPoolsOperations</span></code></a></p></li>
@@ -982,9 +982,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.load_balancer_frontend_ip_configurations">
-<code class="descname">load_balancer_frontend_ip_configurations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancer_frontend_ip_configurations" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">load_balancer_frontend_ip_configurations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancer_frontend_ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-06-01: <a class="reference internal" href="azure.mgmt.network.v2017_06_01.operations.html#azure.mgmt.network.v2017_06_01.operations.LoadBalancerFrontendIPConfigurationsOperations" title="azure.mgmt.network.v2017_06_01.operations.LoadBalancerFrontendIPConfigurationsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">LoadBalancerFrontendIPConfigurationsOperations</span></code></a></p></li>
@@ -1006,9 +1006,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.load_balancer_load_balancing_rules">
-<code class="descname">load_balancer_load_balancing_rules</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancer_load_balancing_rules" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">load_balancer_load_balancing_rules</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancer_load_balancing_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-06-01: <a class="reference internal" href="azure.mgmt.network.v2017_06_01.operations.html#azure.mgmt.network.v2017_06_01.operations.LoadBalancerLoadBalancingRulesOperations" title="azure.mgmt.network.v2017_06_01.operations.LoadBalancerLoadBalancingRulesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">LoadBalancerLoadBalancingRulesOperations</span></code></a></p></li>
@@ -1030,9 +1030,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.load_balancer_network_interfaces">
-<code class="descname">load_balancer_network_interfaces</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancer_network_interfaces" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">load_balancer_network_interfaces</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancer_network_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-06-01: <a class="reference internal" href="azure.mgmt.network.v2017_06_01.operations.html#azure.mgmt.network.v2017_06_01.operations.LoadBalancerNetworkInterfacesOperations" title="azure.mgmt.network.v2017_06_01.operations.LoadBalancerNetworkInterfacesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">LoadBalancerNetworkInterfacesOperations</span></code></a></p></li>
@@ -1054,9 +1054,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.load_balancer_outbound_rules">
-<code class="descname">load_balancer_outbound_rules</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancer_outbound_rules" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">load_balancer_outbound_rules</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancer_outbound_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.LoadBalancerOutboundRulesOperations" title="azure.mgmt.network.v2018_08_01.operations.LoadBalancerOutboundRulesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">LoadBalancerOutboundRulesOperations</span></code></a></p></li>
@@ -1068,9 +1068,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.load_balancer_probes">
-<code class="descname">load_balancer_probes</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancer_probes" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">load_balancer_probes</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancer_probes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-06-01: <a class="reference internal" href="azure.mgmt.network.v2017_06_01.operations.html#azure.mgmt.network.v2017_06_01.operations.LoadBalancerProbesOperations" title="azure.mgmt.network.v2017_06_01.operations.LoadBalancerProbesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">LoadBalancerProbesOperations</span></code></a></p></li>
@@ -1092,9 +1092,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.load_balancers">
-<code class="descname">load_balancers</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancers" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">load_balancers</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.load_balancers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.LoadBalancersOperations" title="azure.mgmt.network.v2015_06_15.operations.LoadBalancersOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">LoadBalancersOperations</span></code></a></p></li>
@@ -1120,9 +1120,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.local_network_gateways">
-<code class="descname">local_network_gateways</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.local_network_gateways" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">local_network_gateways</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.local_network_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.LocalNetworkGatewaysOperations" title="azure.mgmt.network.v2015_06_15.operations.LocalNetworkGatewaysOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">LocalNetworkGatewaysOperations</span></code></a></p></li>
@@ -1148,9 +1148,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="classmethod">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.models">
-<em class="property">classmethod </em><code class="descname">models</code><span class="sig-paren">(</span><em>api_version='2019-04-01'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/network/network_management_client.html#NetworkManagementClient.models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.models" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">models</code><span class="sig-paren">(</span><em class="sig-param">api_version='2019-04-01'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/network/network_management_client.html#NetworkManagementClient.models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.models" title="Permalink to this definition">¶</a></dt>
 <dd><p>Module depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.models.html#module-azure.mgmt.network.v2015_06_15.models" title="azure.mgmt.network.v2015_06_15.models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">v2015_06_15.models</span></code></a></p></li>
@@ -1176,9 +1176,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.nat_gateways">
-<code class="descname">nat_gateways</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.nat_gateways" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">nat_gateways</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.nat_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2019-02-01: <a class="reference internal" href="azure.mgmt.network.v2019_02_01.operations.html#azure.mgmt.network.v2019_02_01.operations.NatGatewaysOperations" title="azure.mgmt.network.v2019_02_01.operations.NatGatewaysOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">NatGatewaysOperations</span></code></a></p></li>
@@ -1186,9 +1186,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.network_interface_ip_configurations">
-<code class="descname">network_interface_ip_configurations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_interface_ip_configurations" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">network_interface_ip_configurations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_interface_ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-06-01: <a class="reference internal" href="azure.mgmt.network.v2017_06_01.operations.html#azure.mgmt.network.v2017_06_01.operations.NetworkInterfaceIPConfigurationsOperations" title="azure.mgmt.network.v2017_06_01.operations.NetworkInterfaceIPConfigurationsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">NetworkInterfaceIPConfigurationsOperations</span></code></a></p></li>
@@ -1210,9 +1210,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.network_interface_load_balancers">
-<code class="descname">network_interface_load_balancers</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_interface_load_balancers" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">network_interface_load_balancers</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_interface_load_balancers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-06-01: <a class="reference internal" href="azure.mgmt.network.v2017_06_01.operations.html#azure.mgmt.network.v2017_06_01.operations.NetworkInterfaceLoadBalancersOperations" title="azure.mgmt.network.v2017_06_01.operations.NetworkInterfaceLoadBalancersOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">NetworkInterfaceLoadBalancersOperations</span></code></a></p></li>
@@ -1234,9 +1234,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.network_interface_tap_configurations">
-<code class="descname">network_interface_tap_configurations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_interface_tap_configurations" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">network_interface_tap_configurations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_interface_tap_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.NetworkInterfaceTapConfigurationsOperations" title="azure.mgmt.network.v2018_08_01.operations.NetworkInterfaceTapConfigurationsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">NetworkInterfaceTapConfigurationsOperations</span></code></a></p></li>
@@ -1248,9 +1248,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.network_interfaces">
-<code class="descname">network_interfaces</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_interfaces" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">network_interfaces</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.NetworkInterfacesOperations" title="azure.mgmt.network.v2015_06_15.operations.NetworkInterfacesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">NetworkInterfacesOperations</span></code></a></p></li>
@@ -1276,9 +1276,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.network_profiles">
-<code class="descname">network_profiles</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_profiles" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">network_profiles</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_profiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.NetworkProfilesOperations" title="azure.mgmt.network.v2018_08_01.operations.NetworkProfilesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">NetworkProfilesOperations</span></code></a></p></li>
@@ -1290,9 +1290,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.network_security_groups">
-<code class="descname">network_security_groups</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_security_groups" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">network_security_groups</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.NetworkSecurityGroupsOperations" title="azure.mgmt.network.v2015_06_15.operations.NetworkSecurityGroupsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">NetworkSecurityGroupsOperations</span></code></a></p></li>
@@ -1318,9 +1318,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.network_watchers">
-<code class="descname">network_watchers</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_watchers" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">network_watchers</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.network_watchers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-09-01: <a class="reference internal" href="azure.mgmt.network.v2016_09_01.operations.html#azure.mgmt.network.v2016_09_01.operations.NetworkWatchersOperations" title="azure.mgmt.network.v2016_09_01.operations.NetworkWatchersOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">NetworkWatchersOperations</span></code></a></p></li>
@@ -1345,9 +1345,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.operations">
-<code class="descname">operations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.operations" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">operations</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-09-01: <a class="reference internal" href="azure.mgmt.network.v2017_09_01.operations.html#azure.mgmt.network.v2017_09_01.operations.Operations" title="azure.mgmt.network.v2017_09_01.operations.Operations"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operations</span></code></a></p></li>
@@ -1367,9 +1367,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.packet_captures">
-<code class="descname">packet_captures</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.packet_captures" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">packet_captures</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.packet_captures" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-09-01: <a class="reference internal" href="azure.mgmt.network.v2016_09_01.operations.html#azure.mgmt.network.v2016_09_01.operations.PacketCapturesOperations" title="azure.mgmt.network.v2016_09_01.operations.PacketCapturesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">PacketCapturesOperations</span></code></a></p></li>
@@ -1394,9 +1394,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.peer_express_route_circuit_connections">
-<code class="descname">peer_express_route_circuit_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.peer_express_route_circuit_connections" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">peer_express_route_circuit_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.peer_express_route_circuit_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-12-01: <a class="reference internal" href="azure.mgmt.network.v2018_12_01.operations.html#azure.mgmt.network.v2018_12_01.operations.PeerExpressRouteCircuitConnectionsOperations" title="azure.mgmt.network.v2018_12_01.operations.PeerExpressRouteCircuitConnectionsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">PeerExpressRouteCircuitConnectionsOperations</span></code></a></p></li>
@@ -1405,27 +1405,27 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.private_endpoints">
-<code class="descname">private_endpoints</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.private_endpoints" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">private_endpoints</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.private_endpoints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2019-04-01: <code class="xref py py-class docutils literal notranslate"><span class="pre">PrivateEndpointsOperations</span></code></p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.private_link_services">
-<code class="descname">private_link_services</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.private_link_services" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">private_link_services</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.private_link_services" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2019-04-01: <code class="xref py py-class docutils literal notranslate"><span class="pre">PrivateLinkServicesOperations</span></code></p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.public_ip_addresses">
-<code class="descname">public_ip_addresses</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.public_ip_addresses" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">public_ip_addresses</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.public_ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.PublicIPAddressesOperations" title="azure.mgmt.network.v2015_06_15.operations.PublicIPAddressesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublicIPAddressesOperations</span></code></a></p></li>
@@ -1451,9 +1451,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.public_ip_prefixes">
-<code class="descname">public_ip_prefixes</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.public_ip_prefixes" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">public_ip_prefixes</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.public_ip_prefixes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-07-01: <a class="reference internal" href="azure.mgmt.network.v2018_07_01.operations.html#azure.mgmt.network.v2018_07_01.operations.PublicIPPrefixesOperations" title="azure.mgmt.network.v2018_07_01.operations.PublicIPPrefixesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublicIPPrefixesOperations</span></code></a></p></li>
@@ -1466,9 +1466,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.resource_navigation_links">
-<code class="descname">resource_navigation_links</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.resource_navigation_links" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">resource_navigation_links</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.resource_navigation_links" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2019-02-01: <a class="reference internal" href="azure.mgmt.network.v2019_02_01.operations.html#azure.mgmt.network.v2019_02_01.operations.ResourceNavigationLinksOperations" title="azure.mgmt.network.v2019_02_01.operations.ResourceNavigationLinksOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceNavigationLinksOperations</span></code></a></p></li>
@@ -1476,9 +1476,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.route_filter_rules">
-<code class="descname">route_filter_rules</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.route_filter_rules" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">route_filter_rules</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.route_filter_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-12-01: <a class="reference internal" href="azure.mgmt.network.v2016_12_01.operations.html#azure.mgmt.network.v2016_12_01.operations.RouteFilterRulesOperations" title="azure.mgmt.network.v2016_12_01.operations.RouteFilterRulesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">RouteFilterRulesOperations</span></code></a></p></li>
@@ -1502,9 +1502,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.route_filters">
-<code class="descname">route_filters</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.route_filters" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">route_filters</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.route_filters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-12-01: <a class="reference internal" href="azure.mgmt.network.v2016_12_01.operations.html#azure.mgmt.network.v2016_12_01.operations.RouteFiltersOperations" title="azure.mgmt.network.v2016_12_01.operations.RouteFiltersOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">RouteFiltersOperations</span></code></a></p></li>
@@ -1528,9 +1528,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.route_tables">
-<code class="descname">route_tables</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.route_tables" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">route_tables</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.route_tables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.RouteTablesOperations" title="azure.mgmt.network.v2015_06_15.operations.RouteTablesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">RouteTablesOperations</span></code></a></p></li>
@@ -1556,9 +1556,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.routes">
-<code class="descname">routes</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.routes" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">routes</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.routes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.RoutesOperations" title="azure.mgmt.network.v2015_06_15.operations.RoutesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">RoutesOperations</span></code></a></p></li>
@@ -1584,9 +1584,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.security_rules">
-<code class="descname">security_rules</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.security_rules" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">security_rules</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.security_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations" title="azure.mgmt.network.v2015_06_15.operations.SecurityRulesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">SecurityRulesOperations</span></code></a></p></li>
@@ -1612,9 +1612,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.service_association_links">
-<code class="descname">service_association_links</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.service_association_links" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">service_association_links</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.service_association_links" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2019-02-01: <a class="reference internal" href="azure.mgmt.network.v2019_02_01.operations.html#azure.mgmt.network.v2019_02_01.operations.ServiceAssociationLinksOperations" title="azure.mgmt.network.v2019_02_01.operations.ServiceAssociationLinksOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ServiceAssociationLinksOperations</span></code></a></p></li>
@@ -1622,9 +1622,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.service_endpoint_policies">
-<code class="descname">service_endpoint_policies</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.service_endpoint_policies" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">service_endpoint_policies</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.service_endpoint_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-07-01: <a class="reference internal" href="azure.mgmt.network.v2018_07_01.operations.html#azure.mgmt.network.v2018_07_01.operations.ServiceEndpointPoliciesOperations" title="azure.mgmt.network.v2018_07_01.operations.ServiceEndpointPoliciesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ServiceEndpointPoliciesOperations</span></code></a></p></li>
@@ -1637,9 +1637,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.service_endpoint_policy_definitions">
-<code class="descname">service_endpoint_policy_definitions</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.service_endpoint_policy_definitions" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">service_endpoint_policy_definitions</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.service_endpoint_policy_definitions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-07-01: <a class="reference internal" href="azure.mgmt.network.v2018_07_01.operations.html#azure.mgmt.network.v2018_07_01.operations.ServiceEndpointPolicyDefinitionsOperations" title="azure.mgmt.network.v2018_07_01.operations.ServiceEndpointPolicyDefinitionsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ServiceEndpointPolicyDefinitionsOperations</span></code></a></p></li>
@@ -1652,18 +1652,18 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.service_tags">
-<code class="descname">service_tags</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.service_tags" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">service_tags</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.service_tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2019-04-01: <code class="xref py py-class docutils literal notranslate"><span class="pre">ServiceTagsOperations</span></code></p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.subnets">
-<code class="descname">subnets</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.subnets" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">subnets</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.subnets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.SubnetsOperations" title="azure.mgmt.network.v2015_06_15.operations.SubnetsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">SubnetsOperations</span></code></a></p></li>
@@ -1689,9 +1689,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.usages">
-<code class="descname">usages</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.usages" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">usages</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.usages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.UsagesOperations" title="azure.mgmt.network.v2015_06_15.operations.UsagesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">UsagesOperations</span></code></a></p></li>
@@ -1717,9 +1717,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.virtual_hubs">
-<code class="descname">virtual_hubs</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_hubs" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_hubs</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_hubs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-04-01: <a class="reference internal" href="azure.mgmt.network.v2018_04_01.operations.html#azure.mgmt.network.v2018_04_01.operations.VirtualHubsOperations" title="azure.mgmt.network.v2018_04_01.operations.VirtualHubsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualHubsOperations</span></code></a></p></li>
@@ -1734,9 +1734,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.virtual_network_gateway_connections">
-<code class="descname">virtual_network_gateway_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_network_gateway_connections" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_network_gateway_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_network_gateway_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.VirtualNetworkGatewayConnectionsOperations" title="azure.mgmt.network.v2015_06_15.operations.VirtualNetworkGatewayConnectionsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualNetworkGatewayConnectionsOperations</span></code></a></p></li>
@@ -1762,9 +1762,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.virtual_network_gateways">
-<code class="descname">virtual_network_gateways</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_network_gateways" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_network_gateways</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_network_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.VirtualNetworkGatewaysOperations" title="azure.mgmt.network.v2015_06_15.operations.VirtualNetworkGatewaysOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualNetworkGatewaysOperations</span></code></a></p></li>
@@ -1790,9 +1790,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.virtual_network_peerings">
-<code class="descname">virtual_network_peerings</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_network_peerings" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_network_peerings</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_network_peerings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-09-01: <a class="reference internal" href="azure.mgmt.network.v2016_09_01.operations.html#azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations" title="azure.mgmt.network.v2016_09_01.operations.VirtualNetworkPeeringsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualNetworkPeeringsOperations</span></code></a></p></li>
@@ -1817,9 +1817,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.virtual_network_taps">
-<code class="descname">virtual_network_taps</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_network_taps" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_network_taps</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_network_taps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.VirtualNetworkTapsOperations" title="azure.mgmt.network.v2018_08_01.operations.VirtualNetworkTapsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualNetworkTapsOperations</span></code></a></p></li>
@@ -1831,9 +1831,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.virtual_networks">
-<code class="descname">virtual_networks</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_networks" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_networks</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_networks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.operations.html#azure.mgmt.network.v2015_06_15.operations.VirtualNetworksOperations" title="azure.mgmt.network.v2015_06_15.operations.VirtualNetworksOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualNetworksOperations</span></code></a></p></li>
@@ -1859,9 +1859,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.virtual_wa_ns">
-<code class="descname">virtual_wa_ns</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_wa_ns" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_wa_ns</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_wa_ns" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-04-01: <a class="reference internal" href="azure.mgmt.network.v2018_04_01.operations.html#azure.mgmt.network.v2018_04_01.operations.VirtualWANsOperations" title="azure.mgmt.network.v2018_04_01.operations.VirtualWANsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualWANsOperations</span></code></a></p></li>
@@ -1870,9 +1870,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.virtual_wans">
-<code class="descname">virtual_wans</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_wans" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_wans</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.virtual_wans" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-08-01: <a class="reference internal" href="azure.mgmt.network.v2018_08_01.operations.html#azure.mgmt.network.v2018_08_01.operations.VirtualWansOperations" title="azure.mgmt.network.v2018_08_01.operations.VirtualWansOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualWansOperations</span></code></a></p></li>
@@ -1884,9 +1884,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.vpn_connections">
-<code class="descname">vpn_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.vpn_connections" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">vpn_connections</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.vpn_connections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-04-01: <a class="reference internal" href="azure.mgmt.network.v2018_04_01.operations.html#azure.mgmt.network.v2018_04_01.operations.VpnConnectionsOperations" title="azure.mgmt.network.v2018_04_01.operations.VpnConnectionsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VpnConnectionsOperations</span></code></a></p></li>
@@ -1901,9 +1901,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.vpn_gateways">
-<code class="descname">vpn_gateways</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.vpn_gateways" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">vpn_gateways</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.vpn_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-04-01: <a class="reference internal" href="azure.mgmt.network.v2018_04_01.operations.html#azure.mgmt.network.v2018_04_01.operations.VpnGatewaysOperations" title="azure.mgmt.network.v2018_04_01.operations.VpnGatewaysOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VpnGatewaysOperations</span></code></a></p></li>
@@ -1918,9 +1918,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.vpn_sites">
-<code class="descname">vpn_sites</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.vpn_sites" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">vpn_sites</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.vpn_sites" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-04-01: <a class="reference internal" href="azure.mgmt.network.v2018_04_01.operations.html#azure.mgmt.network.v2018_04_01.operations.VpnSitesOperations" title="azure.mgmt.network.v2018_04_01.operations.VpnSitesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VpnSitesOperations</span></code></a></p></li>
@@ -1935,9 +1935,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.vpn_sites_configuration">
-<code class="descname">vpn_sites_configuration</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.vpn_sites_configuration" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">vpn_sites_configuration</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.vpn_sites_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-04-01: <a class="reference internal" href="azure.mgmt.network.v2018_04_01.operations.html#azure.mgmt.network.v2018_04_01.operations.VpnSitesConfigurationOperations" title="azure.mgmt.network.v2018_04_01.operations.VpnSitesConfigurationOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VpnSitesConfigurationOperations</span></code></a></p></li>
@@ -1952,9 +1952,9 @@ raw=true</p>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.web_application_firewall_policies">
-<code class="descname">web_application_firewall_policies</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.web_application_firewall_policies" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">web_application_firewall_policies</code><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.web_application_firewall_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-12-01: <a class="reference internal" href="azure.mgmt.network.v2018_12_01.operations.html#azure.mgmt.network.v2018_12_01.operations.WebApplicationFirewallPoliciesOperations" title="azure.mgmt.network.v2018_12_01.operations.WebApplicationFirewallPoliciesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebApplicationFirewallPoliciesOperations</span></code></a></p></li>

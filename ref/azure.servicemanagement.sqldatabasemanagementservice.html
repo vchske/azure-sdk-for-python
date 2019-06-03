@@ -325,7 +325,7 @@
 <span id="azure-servicemanagement-sqldatabasemanagementservice-module"></span><h1>azure.servicemanagement.sqldatabasemanagementservice module<a class="headerlink" href="#module-azure.servicemanagement.sqldatabasemanagementservice" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService">
-<em class="property">class </em><code class="descclassname">azure.servicemanagement.sqldatabasemanagementservice.</code><code class="descname">SqlDatabaseManagementService</code><span class="sig-paren">(</span><em>subscription_id=None</em>, <em>cert_file=None</em>, <em>host='management.core.windows.net'</em>, <em>request_session=None</em>, <em>timeout=65</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicemanagement.sqldatabasemanagementservice.</code><code class="sig-name descname">SqlDatabaseManagementService</code><span class="sig-paren">(</span><em class="sig-param">subscription_id=None</em>, <em class="sig-param">cert_file=None</em>, <em class="sig-param">host='management.core.windows.net'</em>, <em class="sig-param">request_session=None</em>, <em class="sig-param">timeout=65</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicemanagement.servicemanagementclient._ServiceManagementClient</span></code></p>
 <p>Note that this class is a preliminary work on SQL Database
 management. Since it lack a lot a features, final version
@@ -356,7 +356,7 @@ attribute.</p>
 </dl>
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.create_database">
-<code class="descname">create_database</code><span class="sig-paren">(</span><em>server_name</em>, <em>name</em>, <em>service_objective_id</em>, <em>edition=None</em>, <em>collation_name=None</em>, <em>max_size_bytes=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.create_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.create_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_database</code><span class="sig-paren">(</span><em class="sig-param">server_name</em>, <em class="sig-param">name</em>, <em class="sig-param">service_objective_id</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">collation_name=None</em>, <em class="sig-param">max_size_bytes=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.create_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.create_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Azure SQL Database.</p>
 <dl class="simple">
 <dt>server_name:</dt><dd><p>Name of the server to contain the new database.</p>
@@ -391,7 +391,7 @@ sizes. Convert MB or GB values to bytes.
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.create_firewall_rule">
-<code class="descname">create_firewall_rule</code><span class="sig-paren">(</span><em>server_name</em>, <em>name</em>, <em>start_ip_address</em>, <em>end_ip_address</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.create_firewall_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.create_firewall_rule" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_firewall_rule</code><span class="sig-paren">(</span><em class="sig-param">server_name</em>, <em class="sig-param">name</em>, <em class="sig-param">start_ip_address</em>, <em class="sig-param">end_ip_address</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.create_firewall_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.create_firewall_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Azure SQL Database server firewall rule.</p>
 <dl class="simple">
 <dt>server_name:</dt><dd><p>Name of the server to set the firewall rule on.</p>
@@ -412,7 +412,7 @@ connect to the server. The highest possible IP address is
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.create_server">
-<code class="descname">create_server</code><span class="sig-paren">(</span><em>admin_login</em>, <em>admin_password</em>, <em>location</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.create_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.create_server" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_server</code><span class="sig-paren">(</span><em class="sig-param">admin_login</em>, <em class="sig-param">admin_password</em>, <em class="sig-param">location</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.create_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.create_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new Azure SQL Database server.</p>
 <dl class="simple">
 <dt>admin_login:</dt><dd><p>The administrator login name for the new server.</p>
@@ -426,7 +426,7 @@ connect to the server. The highest possible IP address is
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.delete_database">
-<code class="descname">delete_database</code><span class="sig-paren">(</span><em>server_name</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.delete_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.delete_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_database</code><span class="sig-paren">(</span><em class="sig-param">server_name</em>, <em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.delete_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.delete_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an Azure SQL Database.</p>
 <dl class="simple">
 <dt>server_name:</dt><dd><p>Name of the server where the database is located.</p>
@@ -438,7 +438,7 @@ connect to the server. The highest possible IP address is
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.delete_firewall_rule">
-<code class="descname">delete_firewall_rule</code><span class="sig-paren">(</span><em>server_name</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.delete_firewall_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.delete_firewall_rule" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_firewall_rule</code><span class="sig-paren">(</span><em class="sig-param">server_name</em>, <em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.delete_firewall_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.delete_firewall_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an Azure SQL Database server firewall rule.</p>
 <dl class="simple">
 <dt>server_name:</dt><dd><p>Name of the server with the firewall rule you want to delete.</p>
@@ -450,7 +450,7 @@ connect to the server. The highest possible IP address is
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.delete_server">
-<code class="descname">delete_server</code><span class="sig-paren">(</span><em>server_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.delete_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.delete_server" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_server</code><span class="sig-paren">(</span><em class="sig-param">server_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.delete_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.delete_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an Azure SQL Database server (including all its databases).</p>
 <dl class="simple">
 <dt>server_name:</dt><dd><p>Name of the server you want to delete.</p>
@@ -460,7 +460,7 @@ connect to the server. The highest possible IP address is
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.get_server_event_logs">
-<code class="descname">get_server_event_logs</code><span class="sig-paren">(</span><em>server_name</em>, <em>start_date</em>, <em>interval_size_in_minutes</em>, <em>event_types=''</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.get_server_event_logs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.get_server_event_logs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_server_event_logs</code><span class="sig-paren">(</span><em class="sig-param">server_name</em>, <em class="sig-param">start_date</em>, <em class="sig-param">interval_size_in_minutes</em>, <em class="sig-param">event_types=''</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.get_server_event_logs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.get_server_event_logs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the event logs for an Azure SQL Database Server.</p>
 <dl>
 <dt>server_name:</dt><dd><p>Name of the server to retrieve the event logs from.</p>
@@ -490,13 +490,13 @@ Valid values are:</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_databases">
-<code class="descname">list_databases</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.list_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_databases" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_databases</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.list_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_databases" title="Permalink to this definition">¶</a></dt>
 <dd><p>List the SQL databases defined on the specified server name</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_firewall_rules">
-<code class="descname">list_firewall_rules</code><span class="sig-paren">(</span><em>server_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.list_firewall_rules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_firewall_rules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_firewall_rules</code><span class="sig-paren">(</span><em class="sig-param">server_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.list_firewall_rules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_firewall_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the set of firewall rules for an Azure SQL Database Server.</p>
 <dl class="simple">
 <dt>server_name:</dt><dd><p>Name of the server.</p>
@@ -506,7 +506,7 @@ Valid values are:</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_quotas">
-<code class="descname">list_quotas</code><span class="sig-paren">(</span><em>server_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.list_quotas"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_quotas" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_quotas</code><span class="sig-paren">(</span><em class="sig-param">server_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.list_quotas"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_quotas" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets quotas for an Azure SQL Database Server.</p>
 <dl class="simple">
 <dt>server_name:</dt><dd><p>Name of the server.</p>
@@ -516,13 +516,13 @@ Valid values are:</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_servers">
-<code class="descname">list_servers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.list_servers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_servers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_servers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.list_servers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_servers" title="Permalink to this definition">¶</a></dt>
 <dd><p>List the SQL servers defined on the account.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_service_level_objectives">
-<code class="descname">list_service_level_objectives</code><span class="sig-paren">(</span><em>server_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.list_service_level_objectives"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_service_level_objectives" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_service_level_objectives</code><span class="sig-paren">(</span><em class="sig-param">server_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.list_service_level_objectives"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.list_service_level_objectives" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the service level objectives for an Azure SQL Database server.</p>
 <dl class="simple">
 <dt>server_name:</dt><dd><p>Name of the server.</p>
@@ -532,7 +532,7 @@ Valid values are:</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.set_server_admin_password">
-<code class="descname">set_server_admin_password</code><span class="sig-paren">(</span><em>server_name</em>, <em>admin_password</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.set_server_admin_password"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.set_server_admin_password" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_server_admin_password</code><span class="sig-paren">(</span><em class="sig-param">server_name</em>, <em class="sig-param">admin_password</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.set_server_admin_password"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.set_server_admin_password" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset the administrator password for a server.</p>
 <dl class="simple">
 <dt>server_name:</dt><dd><p>Name of the server to change the password.</p>
@@ -544,7 +544,7 @@ Valid values are:</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.update_database">
-<code class="descname">update_database</code><span class="sig-paren">(</span><em>server_name</em>, <em>name</em>, <em>new_database_name=None</em>, <em>service_objective_id=None</em>, <em>edition=None</em>, <em>max_size_bytes=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.update_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.update_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_database</code><span class="sig-paren">(</span><em class="sig-param">server_name</em>, <em class="sig-param">name</em>, <em class="sig-param">new_database_name=None</em>, <em class="sig-param">service_objective_id=None</em>, <em class="sig-param">edition=None</em>, <em class="sig-param">max_size_bytes=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.update_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.update_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates existing database details.</p>
 <dl class="simple">
 <dt>server_name:</dt><dd><p>Name of the server to contain the new database.</p>
@@ -571,7 +571,7 @@ Tiers (Editions).</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.update_firewall_rule">
-<code class="descname">update_firewall_rule</code><span class="sig-paren">(</span><em>server_name</em>, <em>name</em>, <em>start_ip_address</em>, <em>end_ip_address</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.update_firewall_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.update_firewall_rule" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_firewall_rule</code><span class="sig-paren">(</span><em class="sig-param">server_name</em>, <em class="sig-param">name</em>, <em class="sig-param">start_ip_address</em>, <em class="sig-param">end_ip_address</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/sqldatabasemanagementservice.html#SqlDatabaseManagementService.update_firewall_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.sqldatabasemanagementservice.SqlDatabaseManagementService.update_firewall_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update a firewall rule for an Azure SQL Database server.</p>
 <dl class="simple">
 <dt>server_name:</dt><dd><p>Name of the server to set the firewall rule on.</p>

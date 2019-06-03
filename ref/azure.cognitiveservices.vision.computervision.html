@@ -327,7 +327,7 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.cognitiveservices.vision.computervision" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient">
-<em class="property">class </em><code class="descclassname">azure.cognitiveservices.vision.computervision.</code><code class="descname">ComputerVisionClient</code><span class="sig-paren">(</span><em>endpoint</em>, <em>credentials</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.</code><code class="sig-name descname">ComputerVisionClient</code><span class="sig-paren">(</span><em class="sig-param">endpoint</em>, <em class="sig-param">credentials</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>The Computer Vision API provides state-of-the-art algorithms to process images and return information. For example, it can be used to determine if an image contains mature content, or it can be used to find all the faces in an image.  It also has other features like estimating dominant and accent colors, categorizing the content of images, and describing an image with complete English sentences.  Additionally, it can also intelligently generate images thumbnails for displaying large images effectively.</p>
 <dl class="field-list simple">
@@ -344,7 +344,7 @@ client subscription.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.analyze_image">
-<code class="descname">analyze_image</code><span class="sig-paren">(</span><em>url</em>, <em>visual_features=None</em>, <em>details=None</em>, <em>language='en'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.analyze_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.analyze_image" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">analyze_image</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">visual_features=None</em>, <em class="sig-param">details=None</em>, <em class="sig-param">language='en'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.analyze_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.analyze_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation extracts a rich set of visual features based on the
 image content.
 Two input methods are supported – (1) Uploading an image or (2)
@@ -408,7 +408,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.analyze_image_by_domain">
-<code class="descname">analyze_image_by_domain</code><span class="sig-paren">(</span><em>model</em>, <em>url</em>, <em>language='en'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.analyze_image_by_domain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.analyze_image_by_domain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">analyze_image_by_domain</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">url</em>, <em class="sig-param">language='en'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.analyze_image_by_domain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.analyze_image_by_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation recognizes content within an image by applying a
 domain-specific model. The list of domain-specific models that are
 supported by the Computer Vision API can be retrieved using the /models
@@ -451,7 +451,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.analyze_image_by_domain_in_stream">
-<code class="descname">analyze_image_by_domain_in_stream</code><span class="sig-paren">(</span><em>model</em>, <em>image</em>, <em>language='en'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.analyze_image_by_domain_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.analyze_image_by_domain_in_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">analyze_image_by_domain_in_stream</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">image</em>, <em class="sig-param">language='en'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.analyze_image_by_domain_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.analyze_image_by_domain_in_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation recognizes content within an image by applying a
 domain-specific model. The list of domain-specific models that are
 supported by the Computer Vision API can be retrieved using the /models
@@ -498,7 +498,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.analyze_image_in_stream">
-<code class="descname">analyze_image_in_stream</code><span class="sig-paren">(</span><em>image</em>, <em>visual_features=None</em>, <em>details=None</em>, <em>language='en'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.analyze_image_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.analyze_image_in_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">analyze_image_in_stream</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">visual_features=None</em>, <em class="sig-param">details=None</em>, <em class="sig-param">language='en'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.analyze_image_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.analyze_image_in_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation extracts a rich set of visual features based on the
 image content.
 Two input methods are supported – (1) Uploading an image or (2)
@@ -566,7 +566,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.batch_read_file">
-<code class="descname">batch_read_file</code><span class="sig-paren">(</span><em>url</em>, <em>mode</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.batch_read_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.batch_read_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">batch_read_file</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">mode</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.batch_read_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.batch_read_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this interface to get the result of a Read operation, employing the
 state-of-the-art Optical Character Recognition (OCR) algorithms
 optimized for text-heavy documents. When you use the Read File
@@ -601,7 +601,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.batch_read_file_in_stream">
-<code class="descname">batch_read_file_in_stream</code><span class="sig-paren">(</span><em>image</em>, <em>mode</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.batch_read_file_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.batch_read_file_in_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">batch_read_file_in_stream</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">mode</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.batch_read_file_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.batch_read_file_in_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this interface to get the result of a Read Document operation,
 employing the state-of-the-art Optical Character Recognition (OCR)
 algorithms optimized for text-heavy documents. When you use the Read
@@ -641,7 +641,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.describe_image">
-<code class="descname">describe_image</code><span class="sig-paren">(</span><em>url</em>, <em>max_candidates=1</em>, <em>language='en'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.describe_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.describe_image" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">describe_image</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">max_candidates=1</em>, <em class="sig-param">language='en'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.describe_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.describe_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation generates a description of an image in human readable
 language with complete sentences. The description is based on a
 collection of content tags, which are also returned by the operation.
@@ -685,7 +685,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.describe_image_in_stream">
-<code class="descname">describe_image_in_stream</code><span class="sig-paren">(</span><em>image</em>, <em>max_candidates=1</em>, <em>language='en'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.describe_image_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.describe_image_in_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">describe_image_in_stream</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">max_candidates=1</em>, <em class="sig-param">language='en'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.describe_image_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.describe_image_in_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation generates a description of an image in human readable
 language with complete sentences. The description is based on a
 collection of content tags, which are also returned by the operation.
@@ -733,7 +733,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.detect_objects">
-<code class="descname">detect_objects</code><span class="sig-paren">(</span><em>url</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.detect_objects"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.detect_objects" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">detect_objects</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.detect_objects"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.detect_objects" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs object detection on the specified image.
 Two input methods are supported – (1) Uploading an image or (2)
 specifying an image URL.
@@ -766,7 +766,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.detect_objects_in_stream">
-<code class="descname">detect_objects_in_stream</code><span class="sig-paren">(</span><em>image</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.detect_objects_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.detect_objects_in_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">detect_objects_in_stream</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.detect_objects_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.detect_objects_in_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs object detection on the specified image.
 Two input methods are supported – (1) Uploading an image or (2)
 specifying an image URL.
@@ -803,7 +803,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.generate_thumbnail">
-<code class="descname">generate_thumbnail</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>url</em>, <em>smart_cropping=False</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.generate_thumbnail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.generate_thumbnail" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">generate_thumbnail</code><span class="sig-paren">(</span><em class="sig-param">width</em>, <em class="sig-param">height</em>, <em class="sig-param">url</em>, <em class="sig-param">smart_cropping=False</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.generate_thumbnail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.generate_thumbnail" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation generates a thumbnail image with the user-specified
 width and height. By default, the service analyzes the image,
 identifies the region of interest (ROI), and generates smart cropping
@@ -850,7 +850,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.generate_thumbnail_in_stream">
-<code class="descname">generate_thumbnail_in_stream</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>image</em>, <em>smart_cropping=False</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.generate_thumbnail_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.generate_thumbnail_in_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">generate_thumbnail_in_stream</code><span class="sig-paren">(</span><em class="sig-param">width</em>, <em class="sig-param">height</em>, <em class="sig-param">image</em>, <em class="sig-param">smart_cropping=False</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.generate_thumbnail_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.generate_thumbnail_in_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation generates a thumbnail image with the user-specified
 width and height. By default, the service analyzes the image,
 identifies the region of interest (ROI), and generates smart cropping
@@ -897,7 +897,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.get_area_of_interest">
-<code class="descname">get_area_of_interest</code><span class="sig-paren">(</span><em>url</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.get_area_of_interest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.get_area_of_interest" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_area_of_interest</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.get_area_of_interest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.get_area_of_interest" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation returns a bounding box around the most important area of
 the image.
 A successful response will be returned in JSON. If the request failed,
@@ -933,7 +933,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.get_area_of_interest_in_stream">
-<code class="descname">get_area_of_interest_in_stream</code><span class="sig-paren">(</span><em>image</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.get_area_of_interest_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.get_area_of_interest_in_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_area_of_interest_in_stream</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.get_area_of_interest_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.get_area_of_interest_in_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation returns a bounding box around the most important area of
 the image.
 A successful response will be returned in JSON. If the request failed,
@@ -973,7 +973,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.get_read_operation_result">
-<code class="descname">get_read_operation_result</code><span class="sig-paren">(</span><em>operation_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.get_read_operation_result"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.get_read_operation_result" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_read_operation_result</code><span class="sig-paren">(</span><em class="sig-param">operation_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.get_read_operation_result"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.get_read_operation_result" title="Permalink to this definition">¶</a></dt>
 <dd><p>This interface is used for getting OCR results of Read operation. The
 URL to this interface should be retrieved from “Operation-Location”
 field returned from Batch Read File interface.</p>
@@ -1004,7 +1004,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.get_text_operation_result">
-<code class="descname">get_text_operation_result</code><span class="sig-paren">(</span><em>operation_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.get_text_operation_result"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.get_text_operation_result" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_text_operation_result</code><span class="sig-paren">(</span><em class="sig-param">operation_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.get_text_operation_result"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.get_text_operation_result" title="Permalink to this definition">¶</a></dt>
 <dd><p>This interface is used for getting text operation result. The URL to
 this interface should be retrieved from ‘Operation-Location’ field
 returned from Recognize Text interface.</p>
@@ -1035,7 +1035,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.list_models">
-<code class="descname">list_models</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.list_models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.list_models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_models</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.list_models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.list_models" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation returns the list of domain-specific models that are
 supported by the Computer Vision API. Currently, the API supports
 following domain-specific models: celebrity recognizer, landmark
@@ -1068,7 +1068,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.recognize_printed_text">
-<code class="descname">recognize_printed_text</code><span class="sig-paren">(</span><em>url</em>, <em>detect_orientation=True</em>, <em>language='unk'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.recognize_printed_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.recognize_printed_text" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">recognize_printed_text</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">detect_orientation=True</em>, <em class="sig-param">language='unk'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.recognize_printed_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.recognize_printed_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optical Character Recognition (OCR) detects text in an image and
 extracts the recognized characters into a machine-usable character
 stream.
@@ -1113,7 +1113,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.recognize_printed_text_in_stream">
-<code class="descname">recognize_printed_text_in_stream</code><span class="sig-paren">(</span><em>image</em>, <em>detect_orientation=True</em>, <em>language='unk'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.recognize_printed_text_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.recognize_printed_text_in_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">recognize_printed_text_in_stream</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">detect_orientation=True</em>, <em class="sig-param">language='unk'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.recognize_printed_text_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.recognize_printed_text_in_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optical Character Recognition (OCR) detects text in an image and
 extracts the recognized characters into a machine-usable character
 stream.
@@ -1162,7 +1162,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.recognize_text">
-<code class="descname">recognize_text</code><span class="sig-paren">(</span><em>url</em>, <em>mode</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.recognize_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.recognize_text" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">recognize_text</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">mode</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.recognize_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.recognize_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Recognize Text operation. When you use the Recognize Text interface,
 the response contains a field called ‘Operation-Location’. The
 ‘Operation-Location’ field contains the URL that you must use for your
@@ -1195,7 +1195,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.recognize_text_in_stream">
-<code class="descname">recognize_text_in_stream</code><span class="sig-paren">(</span><em>image</em>, <em>mode</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.recognize_text_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.recognize_text_in_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">recognize_text_in_stream</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">mode</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.recognize_text_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.recognize_text_in_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Recognize Text operation. When you use the Recognize Text interface,
 the response contains a field called ‘Operation-Location’. The
 ‘Operation-Location’ field contains the URL that you must use for your
@@ -1232,7 +1232,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.tag_image">
-<code class="descname">tag_image</code><span class="sig-paren">(</span><em>url</em>, <em>language='en'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.tag_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.tag_image" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tag_image</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">language='en'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.tag_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.tag_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation generates a list of words, or tags, that are relevant to
 the content of the supplied image. The Computer Vision API can return
 tags based on objects, living beings, scenery or actions found in
@@ -1277,7 +1277,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.computervision.ComputerVisionClient.tag_image_in_stream">
-<code class="descname">tag_image_in_stream</code><span class="sig-paren">(</span><em>image</em>, <em>language='en'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.tag_image_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.tag_image_in_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tag_image_in_stream</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">language='en'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/computer_vision_client.html#ComputerVisionClient.tag_image_in_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.ComputerVisionClient.tag_image_in_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>This operation generates a list of words, or tags, that are relevant to
 the content of the supplied image. The Computer Vision API can return
 tags based on objects, living beings, scenery or actions found in

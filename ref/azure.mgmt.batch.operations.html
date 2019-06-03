@@ -318,7 +318,7 @@
 <span id="azure-mgmt-batch-operations-module"></span><h1>azure.mgmt.batch.operations module<a class="headerlink" href="#module-azure.mgmt.batch.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.batch.operations.BatchAccountOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.batch.operations.</code><code class="descname">BatchAccountOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">BatchAccountOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>BatchAccountOperations operations.</p>
 <dl class="field-list simple">
@@ -336,7 +336,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.BatchAccountOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Batch account with the specified parameters. Existing
 accounts cannot be updated with this API and should instead be updated
 with the Update Batch Account API.</p>
@@ -373,7 +373,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.BatchAccountOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the specified Batch account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -402,7 +402,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.BatchAccountOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets information about the specified Batch account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -432,7 +432,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.BatchAccountOperations.get_keys">
-<code class="descname">get_keys</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.get_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.get_keys" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.get_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.get_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the account keys for the specified Batch account.</p>
 <p>This operation applies only to Batch accounts created with a
 poolAllocationMode of ‘BatchService’. If the Batch account was created
@@ -467,7 +467,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.BatchAccountOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets information about the Batch accounts associated with the
 subscription.</p>
 <dl class="field-list simple">
@@ -494,7 +494,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.BatchAccountOperations.list_by_resource_group">
-<code class="descname">list_by_resource_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets information about the Batch accounts associated with the specified
 resource group.</p>
 <dl class="field-list simple">
@@ -523,12 +523,12 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.batch.operations.BatchAccountOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.BatchAccountOperations.regenerate_key">
-<code class="descname">regenerate_key</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>key_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.regenerate_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.regenerate_key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">regenerate_key</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">key_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.regenerate_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.regenerate_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Regenerates the specified account key for the Batch account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -560,7 +560,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.BatchAccountOperations.synchronize_auto_storage_keys">
-<code class="descname">synchronize_auto_storage_keys</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.synchronize_auto_storage_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.synchronize_auto_storage_keys" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">synchronize_auto_storage_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.synchronize_auto_storage_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.synchronize_auto_storage_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Synchronizes access keys for the auto-storage account configured for
 the specified Batch account.</p>
 <dl class="field-list simple">
@@ -590,7 +590,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.BatchAccountOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>tags=None</em>, <em>auto_storage=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">auto_storage=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/batch_account_operations.html#BatchAccountOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.BatchAccountOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates the properties of an existing Batch account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -625,7 +625,7 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.batch.operations.ApplicationPackageOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.batch.operations.</code><code class="descname">ApplicationPackageOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_package_operations.html#ApplicationPackageOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">ApplicationPackageOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_package_operations.html#ApplicationPackageOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ApplicationPackageOperations operations.</p>
 <dl class="field-list simple">
@@ -643,7 +643,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.ApplicationPackageOperations.activate">
-<code class="descname">activate</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>application_name</em>, <em>version_name</em>, <em>format</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_package_operations.html#ApplicationPackageOperations.activate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.activate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">activate</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">version_name</em>, <em class="sig-param">format</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_package_operations.html#ApplicationPackageOperations.activate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.activate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Activates the specified application package.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -677,7 +677,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.ApplicationPackageOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>application_name</em>, <em>version_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_package_operations.html#ApplicationPackageOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">version_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_package_operations.html#ApplicationPackageOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an application package record.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -710,7 +710,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.ApplicationPackageOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>application_name</em>, <em>version_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_package_operations.html#ApplicationPackageOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">version_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_package_operations.html#ApplicationPackageOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an application package record and its associated binary file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -742,7 +742,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.ApplicationPackageOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>application_name</em>, <em>version_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_package_operations.html#ApplicationPackageOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">version_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_package_operations.html#ApplicationPackageOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets information about the specified application package.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -775,7 +775,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.ApplicationPackageOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>application_name</em>, <em>maxresults=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_package_operations.html#ApplicationPackageOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">maxresults=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_package_operations.html#ApplicationPackageOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the application packages in the specified application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -808,14 +808,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.batch.operations.ApplicationPackageOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationPackageOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.batch.operations.ApplicationOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.batch.operations.</code><code class="descname">ApplicationOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_operations.html#ApplicationOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">ApplicationOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_operations.html#ApplicationOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ApplicationOperations operations.</p>
 <dl class="field-list simple">
@@ -833,7 +833,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.ApplicationOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>application_name</em>, <em>parameters=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_operations.html#ApplicationOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_operations.html#ApplicationOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds an application to the specified Batch account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -866,7 +866,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.ApplicationOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>application_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_operations.html#ApplicationOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_operations.html#ApplicationOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -897,7 +897,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.ApplicationOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>application_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_operations.html#ApplicationOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_operations.html#ApplicationOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets information about the specified application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -929,7 +929,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.ApplicationOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>maxresults=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_operations.html#ApplicationOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">maxresults=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_operations.html#ApplicationOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the applications in the specified account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -960,12 +960,12 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.batch.operations.ApplicationOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.ApplicationOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>application_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_operations.html#ApplicationOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/application_operations.html#ApplicationOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.ApplicationOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates settings for the specified application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1000,7 +1000,7 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.batch.operations.LocationOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.batch.operations.</code><code class="descname">LocationOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/location_operations.html#LocationOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.LocationOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">LocationOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/location_operations.html#LocationOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.LocationOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>LocationOperations operations.</p>
 <dl class="field-list simple">
@@ -1018,7 +1018,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.LocationOperations.check_name_availability">
-<code class="descname">check_name_availability</code><span class="sig-paren">(</span><em>location_name</em>, <em>name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/location_operations.html#LocationOperations.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.LocationOperations.check_name_availability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_name_availability</code><span class="sig-paren">(</span><em class="sig-param">location_name</em>, <em class="sig-param">name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/location_operations.html#LocationOperations.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.LocationOperations.check_name_availability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks whether the Batch account name is available in the specified
 region.</p>
 <dl class="field-list simple">
@@ -1048,7 +1048,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.LocationOperations.get_quotas">
-<code class="descname">get_quotas</code><span class="sig-paren">(</span><em>location_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/location_operations.html#LocationOperations.get_quotas"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.LocationOperations.get_quotas" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_quotas</code><span class="sig-paren">(</span><em class="sig-param">location_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/location_operations.html#LocationOperations.get_quotas"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.LocationOperations.get_quotas" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the Batch service quotas for the specified subscription at the
 given location.</p>
 <dl class="field-list simple">
@@ -1078,14 +1078,14 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.batch.operations.LocationOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.LocationOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.LocationOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.batch.operations.Operations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.batch.operations.</code><code class="descname">Operations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.Operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Operations operations.</p>
 <dl class="field-list simple">
@@ -1103,7 +1103,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.Operations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists available operations for the Microsoft.Batch provider.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1129,14 +1129,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.batch.operations.Operations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.batch.operations.CertificateOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.batch.operations.</code><code class="descname">CertificateOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">CertificateOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>CertificateOperations operations.</p>
 <dl class="field-list simple">
@@ -1154,7 +1154,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.CertificateOperations.cancel_deletion">
-<code class="descname">cancel_deletion</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>certificate_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations.cancel_deletion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.cancel_deletion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cancel_deletion</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">certificate_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations.cancel_deletion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.cancel_deletion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cancels a failed deletion of a certificate from the specified account.</p>
 <p>If you try to delete a certificate that is being used by a pool or
 compute node, the status of the certificate changes to deleteFailed. If
@@ -1195,7 +1195,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.CertificateOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>certificate_name</em>, <em>parameters</em>, <em>if_match=None</em>, <em>if_none_match=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">certificate_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">if_none_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new certificate inside the specified account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1235,7 +1235,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.CertificateOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>certificate_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">certificate_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the specified certificate.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1267,7 +1267,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.CertificateOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>certificate_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">certificate_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets information about the specified certificate.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1300,7 +1300,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.CertificateOperations.list_by_batch_account">
-<code class="descname">list_by_batch_account</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>maxresults=None</em>, <em>select=None</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations.list_by_batch_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.list_by_batch_account" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_batch_account</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">maxresults=None</em>, <em class="sig-param">select=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations.list_by_batch_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.list_by_batch_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the certificates in the specified account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1337,12 +1337,12 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.batch.operations.CertificateOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.CertificateOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>certificate_name</em>, <em>parameters</em>, <em>if_match=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">certificate_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/certificate_operations.html#CertificateOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.CertificateOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates the properties of an existing certificate.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1381,7 +1381,7 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.batch.operations.PoolOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.batch.operations.</code><code class="descname">PoolOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.batch.operations.</code><code class="sig-name descname">PoolOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>PoolOperations operations.</p>
 <dl class="field-list simple">
@@ -1399,7 +1399,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.PoolOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>pool_name</em>, <em>parameters</em>, <em>if_match=None</em>, <em>if_none_match=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">pool_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">if_none_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new pool inside the specified account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1438,7 +1438,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.PoolOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>pool_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">pool_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the specified pool.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1469,7 +1469,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.PoolOperations.disable_auto_scale">
-<code class="descname">disable_auto_scale</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>pool_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.disable_auto_scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.disable_auto_scale" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">disable_auto_scale</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">pool_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.disable_auto_scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.disable_auto_scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disables automatic scaling for a pool.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1501,7 +1501,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.PoolOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>pool_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">pool_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets information about the specified pool.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1533,7 +1533,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.PoolOperations.list_by_batch_account">
-<code class="descname">list_by_batch_account</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>maxresults=None</em>, <em>select=None</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.list_by_batch_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.list_by_batch_account" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_batch_account</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">maxresults=None</em>, <em class="sig-param">select=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.list_by_batch_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.list_by_batch_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the pools in the specified account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1580,12 +1580,12 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.batch.operations.PoolOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.batch.models' from 'd:\\a\\1\\s\\sdk\\batch\\azure-mgmt-batch\\azure\\mgmt\\batch\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.PoolOperations.stop_resize">
-<code class="descname">stop_resize</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>pool_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.stop_resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.stop_resize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stop_resize</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">pool_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.stop_resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.stop_resize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops an ongoing resize operation on the pool.</p>
 <p>This does not restore the pool to its previous state before the resize
 operation: it only stops any further changes being made, and the pool
@@ -1625,7 +1625,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.batch.operations.PoolOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>pool_name</em>, <em>parameters</em>, <em>if_match=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">pool_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/batch/operations/pool_operations.html#PoolOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.batch.operations.PoolOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates the properties of an existing pool.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

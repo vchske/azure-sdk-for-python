@@ -327,7 +327,7 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.keyvault" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.keyvault.KeyVaultClient">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">KeyVaultClient</code><span class="sig-paren">(</span><em>credentials</em>, <em>api_version=None</em>, <em>profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_client.html#KeyVaultClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">KeyVaultClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_client.html#KeyVaultClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.profiles.multiapiclient.MultiApiClientMixin</span></code></p>
 <p>The key vault client performs cryptographic key operations and vault operations against the Key Vault service.
 Implementation depends on the API version:</p>
@@ -353,17 +353,17 @@ missing in profile.</p></li>
 </dl>
 <dl class="attribute">
 <dt id="azure.keyvault.KeyVaultClient.DEFAULT_API_VERSION">
-<code class="descname">DEFAULT_API_VERSION</code><em class="property"> = '7.0'</em><a class="headerlink" href="#azure.keyvault.KeyVaultClient.DEFAULT_API_VERSION" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">DEFAULT_API_VERSION</code><em class="property"> = '7.0'</em><a class="headerlink" href="#azure.keyvault.KeyVaultClient.DEFAULT_API_VERSION" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.keyvault.KeyVaultClient.LATEST_PROFILE">
-<code class="descname">LATEST_PROFILE</code><em class="property"> = azure.keyvault.KeyVaultClient latest</em><a class="headerlink" href="#azure.keyvault.KeyVaultClient.LATEST_PROFILE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">LATEST_PROFILE</code><em class="property"> = azure.keyvault.KeyVaultClient latest</em><a class="headerlink" href="#azure.keyvault.KeyVaultClient.LATEST_PROFILE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.keyvault.KeyVaultClient.get_pending_certificate_signing_request">
-<code class="descname">get_pending_certificate_signing_request</code><span class="sig-paren">(</span><em>vault_base_url</em>, <em>certificate_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_client.html#KeyVaultClient.get_pending_certificate_signing_request"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultClient.get_pending_certificate_signing_request" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_pending_certificate_signing_request</code><span class="sig-paren">(</span><em class="sig-param">vault_base_url</em>, <em class="sig-param">certificate_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_client.html#KeyVaultClient.get_pending_certificate_signing_request"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultClient.get_pending_certificate_signing_request" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the Base64 pending certificate signing request (PKCS-10).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -391,9 +391,9 @@ if raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultClient.models">
-<code class="descname">models</code><a class="headerlink" href="#azure.keyvault.KeyVaultClient.models" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">models</code><a class="headerlink" href="#azure.keyvault.KeyVaultClient.models" title="Permalink to this definition">¶</a></dt>
 <dd><p>Module depends on the API version:
 * 2016-10-01: <code class="xref py py-mod docutils literal notranslate"><span class="pre">v2016_10_01.models</span></code>
 * 7.0: <code class="xref py py-mod docutils literal notranslate"><span class="pre">v7_0.models</span></code></p>
@@ -403,7 +403,7 @@ if raw=true</p>
 
 <dl class="class">
 <dt id="azure.keyvault.KeyVaultId">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">KeyVaultId</code><span class="sig-paren">(</span><em>collection</em>, <em>vault</em>, <em>name</em>, <em>version</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">KeyVaultId</code><span class="sig-paren">(</span><em class="sig-param">collection</em>, <em class="sig-param">vault</em>, <em class="sig-param">name</em>, <em class="sig-param">version</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>An identifier for an Azure Key Vault resource.</p>
 <dl class="field-list simple">
@@ -416,14 +416,14 @@ if raw=true</p>
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.base_id">
-<code class="descname">base_id</code><a class="headerlink" href="#azure.keyvault.KeyVaultId.base_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">base_id</code><a class="headerlink" href="#azure.keyvault.KeyVaultId.base_id" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.create_certificate_id">
-<em class="property">static </em><code class="descname">create_certificate_id</code><span class="sig-paren">(</span><em>vault</em>, <em>name</em>, <em>version=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.create_certificate_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.create_certificate_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">create_certificate_id</code><span class="sig-paren">(</span><em class="sig-param">vault</em>, <em class="sig-param">name</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.create_certificate_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.create_certificate_id" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -438,9 +438,9 @@ if raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.create_certificate_issuer_id">
-<em class="property">static </em><code class="descname">create_certificate_issuer_id</code><span class="sig-paren">(</span><em>vault</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.create_certificate_issuer_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.create_certificate_issuer_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">create_certificate_issuer_id</code><span class="sig-paren">(</span><em class="sig-param">vault</em>, <em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.create_certificate_issuer_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.create_certificate_issuer_id" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -454,9 +454,9 @@ if raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.create_certificate_operation_id">
-<em class="property">static </em><code class="descname">create_certificate_operation_id</code><span class="sig-paren">(</span><em>vault</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.create_certificate_operation_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.create_certificate_operation_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">create_certificate_operation_id</code><span class="sig-paren">(</span><em class="sig-param">vault</em>, <em class="sig-param">name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.create_certificate_operation_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.create_certificate_operation_id" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -470,9 +470,9 @@ if raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.create_key_id">
-<em class="property">static </em><code class="descname">create_key_id</code><span class="sig-paren">(</span><em>vault</em>, <em>name</em>, <em>version=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.create_key_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.create_key_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">create_key_id</code><span class="sig-paren">(</span><em class="sig-param">vault</em>, <em class="sig-param">name</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.create_key_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.create_key_id" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -487,9 +487,9 @@ if raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.create_object_id">
-<em class="property">static </em><code class="descname">create_object_id</code><span class="sig-paren">(</span><em>collection</em>, <em>vault</em>, <em>name</em>, <em>version</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.create_object_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.create_object_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">create_object_id</code><span class="sig-paren">(</span><em class="sig-param">collection</em>, <em class="sig-param">vault</em>, <em class="sig-param">name</em>, <em class="sig-param">version</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.create_object_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.create_object_id" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -505,9 +505,9 @@ if raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.create_secret_id">
-<em class="property">static </em><code class="descname">create_secret_id</code><span class="sig-paren">(</span><em>vault</em>, <em>name</em>, <em>version=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.create_secret_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.create_secret_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">create_secret_id</code><span class="sig-paren">(</span><em class="sig-param">vault</em>, <em class="sig-param">name</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.create_secret_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.create_secret_id" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -522,14 +522,14 @@ if raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.id">
-<code class="descname">id</code><a class="headerlink" href="#azure.keyvault.KeyVaultId.id" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#azure.keyvault.KeyVaultId.id" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.parse_certificate_id">
-<em class="property">static </em><code class="descname">parse_certificate_id</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.parse_certificate_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.parse_certificate_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">parse_certificate_id</code><span class="sig-paren">(</span><em class="sig-param">id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.parse_certificate_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.parse_certificate_id" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource collection type.</p>
@@ -540,9 +540,9 @@ if raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.parse_certificate_issuer_id">
-<em class="property">static </em><code class="descname">parse_certificate_issuer_id</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.parse_certificate_issuer_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.parse_certificate_issuer_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">parse_certificate_issuer_id</code><span class="sig-paren">(</span><em class="sig-param">id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.parse_certificate_issuer_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.parse_certificate_issuer_id" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource collection type.</p>
@@ -553,9 +553,9 @@ if raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.parse_certificate_operation_id">
-<em class="property">static </em><code class="descname">parse_certificate_operation_id</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.parse_certificate_operation_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.parse_certificate_operation_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">parse_certificate_operation_id</code><span class="sig-paren">(</span><em class="sig-param">id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.parse_certificate_operation_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.parse_certificate_operation_id" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource collection type.</p>
@@ -566,9 +566,9 @@ if raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.parse_key_id">
-<em class="property">static </em><code class="descname">parse_key_id</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.parse_key_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.parse_key_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">parse_key_id</code><span class="sig-paren">(</span><em class="sig-param">id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.parse_key_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.parse_key_id" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The key uri.</p>
@@ -579,9 +579,9 @@ if raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.parse_object_id">
-<em class="property">static </em><code class="descname">parse_object_id</code><span class="sig-paren">(</span><em>collection</em>, <em>id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.parse_object_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.parse_object_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">parse_object_id</code><span class="sig-paren">(</span><em class="sig-param">collection</em>, <em class="sig-param">id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.parse_object_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.parse_object_id" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -595,9 +595,9 @@ if raw=true</p>
 </dl>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.KeyVaultId.parse_secret_id">
-<em class="property">static </em><code class="descname">parse_secret_id</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.parse_secret_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.parse_secret_id" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">parse_secret_id</code><span class="sig-paren">(</span><em class="sig-param">id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyVaultId.parse_secret_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultId.parse_secret_id" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The secret uri.</p>
@@ -610,14 +610,14 @@ if raw=true</p>
 
 <dl class="attribute">
 <dt id="azure.keyvault.KeyVaultId.version_none">
-<code class="descname">version_none</code><em class="property"> = ''</em><a class="headerlink" href="#azure.keyvault.KeyVaultId.version_none" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">version_none</code><em class="property"> = ''</em><a class="headerlink" href="#azure.keyvault.KeyVaultId.version_none" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.keyvault.KeyId">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">KeyId</code><span class="sig-paren">(</span><em>uri=None</em>, <em>vault=None</em>, <em>name=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyId" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">KeyId</code><span class="sig-paren">(</span><em class="sig-param">uri=None</em>, <em class="sig-param">vault=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#KeyId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="azure.keyvault.key_vault_id.html#azure.keyvault.key_vault_id.KeyVaultIdentifier" title="azure.keyvault.key_vault_id.KeyVaultIdentifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.keyvault.key_vault_id.KeyVaultIdentifier</span></code></a></p>
 <p>Creates a key vault key id.  If uri is specified the id properties are parsed from the uri, otherwise 
 builds the id from the specified vault, name and version.
@@ -629,7 +629,7 @@ builds the id from the specified vault, name and version.
 
 <dl class="class">
 <dt id="azure.keyvault.SecretId">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">SecretId</code><span class="sig-paren">(</span><em>uri=None</em>, <em>vault=None</em>, <em>name=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#SecretId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.SecretId" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">SecretId</code><span class="sig-paren">(</span><em class="sig-param">uri=None</em>, <em class="sig-param">vault=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#SecretId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.SecretId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="azure.keyvault.key_vault_id.html#azure.keyvault.key_vault_id.KeyVaultIdentifier" title="azure.keyvault.key_vault_id.KeyVaultIdentifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.keyvault.key_vault_id.KeyVaultIdentifier</span></code></a></p>
 <p>Creates a key vault secret id.  If uri is specified the id properties are parsed from the uri, otherwise 
 builds the id from the specified vault, name and version.
@@ -641,7 +641,7 @@ builds the id from the specified vault, name and version.
 
 <dl class="class">
 <dt id="azure.keyvault.CertificateId">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">CertificateId</code><span class="sig-paren">(</span><em>uri=None</em>, <em>vault=None</em>, <em>name=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#CertificateId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.CertificateId" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">CertificateId</code><span class="sig-paren">(</span><em class="sig-param">uri=None</em>, <em class="sig-param">vault=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#CertificateId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.CertificateId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="azure.keyvault.key_vault_id.html#azure.keyvault.key_vault_id.KeyVaultIdentifier" title="azure.keyvault.key_vault_id.KeyVaultIdentifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.keyvault.key_vault_id.KeyVaultIdentifier</span></code></a></p>
 <p>Creates a key vault certificate id.  If uri is specified the id properties are parsed from the uri, otherwise 
 builds the id from the specified vault, name and version.
@@ -653,7 +653,7 @@ builds the id from the specified vault, name and version.
 
 <dl class="class">
 <dt id="azure.keyvault.CertificateIssuerId">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">CertificateIssuerId</code><span class="sig-paren">(</span><em>uri=None</em>, <em>vault=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#CertificateIssuerId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.CertificateIssuerId" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">CertificateIssuerId</code><span class="sig-paren">(</span><em class="sig-param">uri=None</em>, <em class="sig-param">vault=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#CertificateIssuerId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.CertificateIssuerId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="azure.keyvault.key_vault_id.html#azure.keyvault.key_vault_id.KeyVaultIdentifier" title="azure.keyvault.key_vault_id.KeyVaultIdentifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.keyvault.key_vault_id.KeyVaultIdentifier</span></code></a></p>
 <p>Creates a key vault certificate issuer id.  If uri is specified the id properties are parsed from the uri, otherwise 
 builds the id from the specified vault and name.
@@ -664,7 +664,7 @@ builds the id from the specified vault and name.
 
 <dl class="class">
 <dt id="azure.keyvault.CertificateOperationId">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">CertificateOperationId</code><span class="sig-paren">(</span><em>uri=None</em>, <em>vault=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#CertificateOperationId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.CertificateOperationId" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">CertificateOperationId</code><span class="sig-paren">(</span><em class="sig-param">uri=None</em>, <em class="sig-param">vault=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#CertificateOperationId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.CertificateOperationId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="azure.keyvault.key_vault_id.html#azure.keyvault.key_vault_id.KeyVaultIdentifier" title="azure.keyvault.key_vault_id.KeyVaultIdentifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.keyvault.key_vault_id.KeyVaultIdentifier</span></code></a></p>
 <p>Creates a key vault certificate operation id.  If uri is specified the id properties are parsed from the uri, otherwise 
 builds the id from the specified vault and name.
@@ -675,7 +675,7 @@ builds the id from the specified vault and name.
 
 <dl class="class">
 <dt id="azure.keyvault.StorageAccountId">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">StorageAccountId</code><span class="sig-paren">(</span><em>uri=None</em>, <em>vault=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#StorageAccountId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.StorageAccountId" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">StorageAccountId</code><span class="sig-paren">(</span><em class="sig-param">uri=None</em>, <em class="sig-param">vault=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#StorageAccountId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.StorageAccountId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="azure.keyvault.key_vault_id.html#azure.keyvault.key_vault_id.KeyVaultIdentifier" title="azure.keyvault.key_vault_id.KeyVaultIdentifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.keyvault.key_vault_id.KeyVaultIdentifier</span></code></a></p>
 <p>Creates a key vault storage account id.  If uri is specified the id properties are parsed from the uri, otherwise 
 builds the id from the specified vault and name.
@@ -686,7 +686,7 @@ builds the id from the specified vault and name.
 
 <dl class="class">
 <dt id="azure.keyvault.StorageSasDefinitionId">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">StorageSasDefinitionId</code><span class="sig-paren">(</span><em>uri=None</em>, <em>vault=None</em>, <em>account_name=None</em>, <em>sas_definition=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#StorageSasDefinitionId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.StorageSasDefinitionId" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">StorageSasDefinitionId</code><span class="sig-paren">(</span><em class="sig-param">uri=None</em>, <em class="sig-param">vault=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">sas_definition=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_id.html#StorageSasDefinitionId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.StorageSasDefinitionId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="azure.keyvault.key_vault_id.html#azure.keyvault.key_vault_id.KeyVaultIdentifier" title="azure.keyvault.key_vault_id.KeyVaultIdentifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.keyvault.key_vault_id.KeyVaultIdentifier</span></code></a></p>
 <p>Creates a key vault storage account sas definition id.  If uri is specified the id properties are parsed from the uri, otherwise 
 builds the id from the specified vault, account_name, and sas_definition.
@@ -698,35 +698,35 @@ builds the id from the specified vault, account_name, and sas_definition.
 
 <dl class="class">
 <dt id="azure.keyvault.HttpBearerChallenge">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">HttpBearerChallenge</code><span class="sig-paren">(</span><em>request_uri</em>, <em>challenge</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_bearer_challenge.html#HttpBearerChallenge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpBearerChallenge" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">HttpBearerChallenge</code><span class="sig-paren">(</span><em class="sig-param">request_uri</em>, <em class="sig-param">challenge</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_bearer_challenge.html#HttpBearerChallenge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpBearerChallenge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Parses an HTTP WWW-Authentication Bearer challenge from a server.</p>
 <dl class="method">
 <dt id="azure.keyvault.HttpBearerChallenge.get_authorization_server">
-<code class="descname">get_authorization_server</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_bearer_challenge.html#HttpBearerChallenge.get_authorization_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpBearerChallenge.get_authorization_server" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_authorization_server</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_bearer_challenge.html#HttpBearerChallenge.get_authorization_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpBearerChallenge.get_authorization_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the URI for the authorization server if present, otherwise empty string.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.keyvault.HttpBearerChallenge.get_resource">
-<code class="descname">get_resource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_bearer_challenge.html#HttpBearerChallenge.get_resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpBearerChallenge.get_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_bearer_challenge.html#HttpBearerChallenge.get_resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpBearerChallenge.get_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the resource if present, otherwise empty string.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.keyvault.HttpBearerChallenge.get_scope">
-<code class="descname">get_scope</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_bearer_challenge.html#HttpBearerChallenge.get_scope"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpBearerChallenge.get_scope" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_scope</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_bearer_challenge.html#HttpBearerChallenge.get_scope"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpBearerChallenge.get_scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the scope if present, otherwise empty string.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.keyvault.HttpBearerChallenge.get_value">
-<code class="descname">get_value</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_bearer_challenge.html#HttpBearerChallenge.get_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpBearerChallenge.get_value" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_value</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_bearer_challenge.html#HttpBearerChallenge.get_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpBearerChallenge.get_value" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="azure.keyvault.HttpBearerChallenge.is_bearer_challenge">
-<em class="property">static </em><code class="descname">is_bearer_challenge</code><span class="sig-paren">(</span><em>authentication_header</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_bearer_challenge.html#HttpBearerChallenge.is_bearer_challenge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpBearerChallenge.is_bearer_challenge" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">is_bearer_challenge</code><span class="sig-paren">(</span><em class="sig-param">authentication_header</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_bearer_challenge.html#HttpBearerChallenge.is_bearer_challenge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpBearerChallenge.is_bearer_challenge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tests whether an authentication header is a Bearer challenge.
 :param authentication_header: the authentication header to test
 rtype: bool</p>
@@ -736,55 +736,55 @@ rtype: bool</p>
 
 <dl class="class">
 <dt id="azure.keyvault.HttpChallenge">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">HttpChallenge</code><span class="sig-paren">(</span><em>request_uri</em>, <em>challenge</em>, <em>response_headers=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">HttpChallenge</code><span class="sig-paren">(</span><em class="sig-param">request_uri</em>, <em class="sig-param">challenge</em>, <em class="sig-param">response_headers=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Parses an HTTP WWW-Authentication Bearer challenge from a server.</p>
 <dl class="method">
 <dt id="azure.keyvault.HttpChallenge.get_authorization_server">
-<code class="descname">get_authorization_server</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.get_authorization_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.get_authorization_server" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_authorization_server</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.get_authorization_server"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.get_authorization_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the URI for the authorization server if present, otherwise empty string.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.keyvault.HttpChallenge.get_resource">
-<code class="descname">get_resource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.get_resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.get_resource" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.get_resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.get_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the resource if present, otherwise empty string.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.keyvault.HttpChallenge.get_scope">
-<code class="descname">get_scope</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.get_scope"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.get_scope" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_scope</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.get_scope"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.get_scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the scope if present, otherwise empty string.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.keyvault.HttpChallenge.get_value">
-<code class="descname">get_value</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.get_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.get_value" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_value</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.get_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.get_value" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.keyvault.HttpChallenge.is_bearer_challenge">
-<code class="descname">is_bearer_challenge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.is_bearer_challenge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.is_bearer_challenge" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">is_bearer_challenge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.is_bearer_challenge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.is_bearer_challenge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tests whether the HttpChallenge a Bearer challenge.
 rtype: bool</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.keyvault.HttpChallenge.is_pop_challenge">
-<code class="descname">is_pop_challenge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.is_pop_challenge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.is_pop_challenge" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">is_pop_challenge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.is_pop_challenge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.is_pop_challenge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Tests whether the HttpChallenge is a proof of possession challenge.
 rtype: bool</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.keyvault.HttpChallenge.supports_message_protection">
-<code class="descname">supports_message_protection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.supports_message_protection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.supports_message_protection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">supports_message_protection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.supports_message_protection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.supports_message_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns True if challenge vault supports message protection</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.keyvault.HttpChallenge.supports_pop">
-<code class="descname">supports_pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.supports_pop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.supports_pop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">supports_pop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_challenge.html#HttpChallenge.supports_pop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.HttpChallenge.supports_pop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns True if challenge supports pop token auth else False</p>
 </dd></dl>
 
@@ -792,7 +792,7 @@ rtype: bool</p>
 
 <dl class="class">
 <dt id="azure.keyvault.KeyVaultAuthentication">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">KeyVaultAuthentication</code><span class="sig-paren">(</span><em>authorization_callback=None</em>, <em>credentials=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_authentication.html#KeyVaultAuthentication"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultAuthentication" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">KeyVaultAuthentication</code><span class="sig-paren">(</span><em class="sig-param">authorization_callback=None</em>, <em class="sig-param">credentials=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_authentication.html#KeyVaultAuthentication"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultAuthentication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.authentication.OAuthTokenAuthentication</span></code></p>
 <p>Authentication class to be used as credentials for the KeyVaultClient.
 :Example Usage:</p>
@@ -821,7 +821,7 @@ a tuple of (token type, access token).
 </div></blockquote>
 <dl class="method">
 <dt id="azure.keyvault.KeyVaultAuthentication.refresh_session">
-<code class="descname">refresh_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_authentication.html#KeyVaultAuthentication.refresh_session"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultAuthentication.refresh_session" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">refresh_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_authentication.html#KeyVaultAuthentication.refresh_session"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultAuthentication.refresh_session" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return updated session if token has expired, attempts to
 refresh using refresh token.</p>
 <dl class="field-list simple">
@@ -833,7 +833,7 @@ refresh using refresh token.</p>
 
 <dl class="method">
 <dt id="azure.keyvault.KeyVaultAuthentication.signed_session">
-<code class="descname">signed_session</code><span class="sig-paren">(</span><em>session=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_authentication.html#KeyVaultAuthentication.signed_session"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultAuthentication.signed_session" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">signed_session</code><span class="sig-paren">(</span><em class="sig-param">session=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_authentication.html#KeyVaultAuthentication.signed_session"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultAuthentication.signed_session" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create requests session with any required auth headers applied.</p>
 <p>If a session object is provided, configure it directly. Otherwise,
 create a new session and return it.</p>
@@ -851,7 +851,7 @@ create a new session and return it.</p>
 
 <dl class="class">
 <dt id="azure.keyvault.KeyVaultAuthBase">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">KeyVaultAuthBase</code><span class="sig-paren">(</span><em>authorization_callback</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_authentication.html#KeyVaultAuthBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultAuthBase" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">KeyVaultAuthBase</code><span class="sig-paren">(</span><em class="sig-param">authorization_callback</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/key_vault_authentication.html#KeyVaultAuthBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.KeyVaultAuthBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">requests.auth.AuthBase</span></code></p>
 <p>Used for handling authentication challenges, by hooking into the request AuthBase extension model.</p>
 <p>Creates a new KeyVaultAuthBase instance used for handling authentication challenges, by hooking into the request AuthBase
@@ -870,31 +870,31 @@ an AccessToken</p>
 
 <dl class="function">
 <dt id="azure.keyvault.generate_pop_key">
-<code class="descclassname">azure.keyvault.</code><code class="descname">generate_pop_key</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_message_security.html#generate_pop_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.generate_pop_key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">generate_pop_key</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/http_message_security.html#generate_pop_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.generate_pop_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates a key which can be used for Proof Of Possession token authentication.
 :return:</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.keyvault.AccessToken">
-<em class="property">class </em><code class="descclassname">azure.keyvault.</code><code class="descname">AccessToken</code><span class="sig-paren">(</span><em>scheme</em>, <em>token</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#azure.keyvault.AccessToken" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.</code><code class="sig-name descname">AccessToken</code><span class="sig-paren">(</span><em class="sig-param">scheme</em>, <em class="sig-param">token</em>, <em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#azure.keyvault.AccessToken" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#tuple" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a></p>
 <p>Create new instance of AccessToken(scheme, token, key)</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.keyvault.AccessToken.key">
-<code class="descname">key</code><a class="headerlink" href="#azure.keyvault.AccessToken.key" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">key</code><a class="headerlink" href="#azure.keyvault.AccessToken.key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 2</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.keyvault.AccessToken.scheme">
-<code class="descname">scheme</code><a class="headerlink" href="#azure.keyvault.AccessToken.scheme" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">scheme</code><a class="headerlink" href="#azure.keyvault.AccessToken.scheme" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.keyvault.AccessToken.token">
-<code class="descname">token</code><a class="headerlink" href="#azure.keyvault.AccessToken.token" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">token</code><a class="headerlink" href="#azure.keyvault.AccessToken.token" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 

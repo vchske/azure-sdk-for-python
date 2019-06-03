@@ -324,7 +324,7 @@
 <span id="azure-servicemanagement-websitemanagementservice-module"></span><h1>azure.servicemanagement.websitemanagementservice module<a class="headerlink" href="#module-azure.servicemanagement.websitemanagementservice" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService">
-<em class="property">class </em><code class="descclassname">azure.servicemanagement.websitemanagementservice.</code><code class="descname">WebsiteManagementService</code><span class="sig-paren">(</span><em>subscription_id=None</em>, <em>cert_file=None</em>, <em>host='management.core.windows.net'</em>, <em>request_session=None</em>, <em>timeout=65</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.servicemanagement.websitemanagementservice.</code><code class="sig-name descname">WebsiteManagementService</code><span class="sig-paren">(</span><em class="sig-param">subscription_id=None</em>, <em class="sig-param">cert_file=None</em>, <em class="sig-param">host='management.core.windows.net'</em>, <em class="sig-param">request_session=None</em>, <em class="sig-param">timeout=65</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicemanagement.servicemanagementclient._ServiceManagementClient</span></code></p>
 <p>Note that this class is a preliminary work on WebSite
 management. Since it lack a lot a features, final version
@@ -355,7 +355,7 @@ attribute.</p>
 </dl>
 <dl class="method">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService.create_site">
-<code class="descname">create_site</code><span class="sig-paren">(</span><em>webspace_name</em>, <em>website_name</em>, <em>geo_region</em>, <em>host_names</em>, <em>plan='VirtualDedicatedPlan'</em>, <em>compute_mode='Shared'</em>, <em>server_farm=None</em>, <em>site_mode=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.create_site"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.create_site" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_site</code><span class="sig-paren">(</span><em class="sig-param">webspace_name</em>, <em class="sig-param">website_name</em>, <em class="sig-param">geo_region</em>, <em class="sig-param">host_names</em>, <em class="sig-param">plan='VirtualDedicatedPlan'</em>, <em class="sig-param">compute_mode='Shared'</em>, <em class="sig-param">server_farm=None</em>, <em class="sig-param">site_mode=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.create_site"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.create_site" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a website.</p>
 <dl class="simple">
 <dt>webspace_name:</dt><dd><p>The name of the webspace.</p>
@@ -389,7 +389,7 @@ parameter.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService.delete_site">
-<code class="descname">delete_site</code><span class="sig-paren">(</span><em>webspace_name</em>, <em>website_name</em>, <em>delete_empty_server_farm=False</em>, <em>delete_metrics=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.delete_site"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.delete_site" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_site</code><span class="sig-paren">(</span><em class="sig-param">webspace_name</em>, <em class="sig-param">website_name</em>, <em class="sig-param">delete_empty_server_farm=False</em>, <em class="sig-param">delete_metrics=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.delete_site"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.delete_site" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete a website.</p>
 <dl class="simple">
 <dt>webspace_name:</dt><dd><p>The name of the webspace.</p>
@@ -407,7 +407,7 @@ can set this to True.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_historical_usage_metrics">
-<code class="descname">get_historical_usage_metrics</code><span class="sig-paren">(</span><em>webspace_name</em>, <em>website_name</em>, <em>metrics=None</em>, <em>start_time=None</em>, <em>end_time=None</em>, <em>time_grain=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.get_historical_usage_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_historical_usage_metrics" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_historical_usage_metrics</code><span class="sig-paren">(</span><em class="sig-param">webspace_name</em>, <em class="sig-param">website_name</em>, <em class="sig-param">metrics=None</em>, <em class="sig-param">start_time=None</em>, <em class="sig-param">end_time=None</em>, <em class="sig-param">time_grain=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.get_historical_usage_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_historical_usage_metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get historical usage metrics.</p>
 <dl class="simple">
 <dt>webspace_name:</dt><dd><p>The name of the webspace.</p>
@@ -429,7 +429,7 @@ can set this to True.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_metric_definitions">
-<code class="descname">get_metric_definitions</code><span class="sig-paren">(</span><em>webspace_name</em>, <em>website_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.get_metric_definitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_metric_definitions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_metric_definitions</code><span class="sig-paren">(</span><em class="sig-param">webspace_name</em>, <em class="sig-param">website_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.get_metric_definitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_metric_definitions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get metric definitions of metrics available of this web site.</p>
 <dl class="simple">
 <dt>webspace_name:</dt><dd><p>The name of the webspace.</p>
@@ -441,7 +441,7 @@ can set this to True.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_publish_profile">
-<code class="descname">get_publish_profile</code><span class="sig-paren">(</span><em>webspace_name</em>, <em>website_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.get_publish_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_publish_profile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_publish_profile</code><span class="sig-paren">(</span><em class="sig-param">webspace_name</em>, <em class="sig-param">website_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.get_publish_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_publish_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a site’s publish profile as an object</p>
 <dl class="simple">
 <dt>webspace_name:</dt><dd><p>The name of the webspace.</p>
@@ -453,7 +453,7 @@ can set this to True.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_publish_profile_xml">
-<code class="descname">get_publish_profile_xml</code><span class="sig-paren">(</span><em>webspace_name</em>, <em>website_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.get_publish_profile_xml"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_publish_profile_xml" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_publish_profile_xml</code><span class="sig-paren">(</span><em class="sig-param">webspace_name</em>, <em class="sig-param">website_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.get_publish_profile_xml"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_publish_profile_xml" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a site’s publish profile as a string</p>
 <dl class="simple">
 <dt>webspace_name:</dt><dd><p>The name of the webspace.</p>
@@ -465,7 +465,7 @@ can set this to True.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_site">
-<code class="descname">get_site</code><span class="sig-paren">(</span><em>webspace_name</em>, <em>website_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.get_site"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_site" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_site</code><span class="sig-paren">(</span><em class="sig-param">webspace_name</em>, <em class="sig-param">website_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.get_site"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_site" title="Permalink to this definition">¶</a></dt>
 <dd><p>List the web sites defined on this webspace.</p>
 <dl class="simple">
 <dt>webspace_name:</dt><dd><p>The name of the webspace.</p>
@@ -477,7 +477,7 @@ can set this to True.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_webspace">
-<code class="descname">get_webspace</code><span class="sig-paren">(</span><em>webspace_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.get_webspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_webspace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_webspace</code><span class="sig-paren">(</span><em class="sig-param">webspace_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.get_webspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.get_webspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get details of a specific webspace.</p>
 <dl class="simple">
 <dt>webspace_name:</dt><dd><p>The name of the webspace.</p>
@@ -487,7 +487,7 @@ can set this to True.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService.list_sites">
-<code class="descname">list_sites</code><span class="sig-paren">(</span><em>webspace_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.list_sites"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.list_sites" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_sites</code><span class="sig-paren">(</span><em class="sig-param">webspace_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.list_sites"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.list_sites" title="Permalink to this definition">¶</a></dt>
 <dd><p>List the web sites defined on this webspace.</p>
 <dl class="simple">
 <dt>webspace_name:</dt><dd><p>The name of the webspace.</p>
@@ -497,13 +497,13 @@ can set this to True.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService.list_webspaces">
-<code class="descname">list_webspaces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.list_webspaces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.list_webspaces" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_webspaces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.list_webspaces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.list_webspaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>List the webspaces defined on the account.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService.restart_site">
-<code class="descname">restart_site</code><span class="sig-paren">(</span><em>webspace_name</em>, <em>website_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.restart_site"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.restart_site" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">restart_site</code><span class="sig-paren">(</span><em class="sig-param">webspace_name</em>, <em class="sig-param">website_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.restart_site"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.restart_site" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restart a web site.</p>
 <dl class="simple">
 <dt>webspace_name:</dt><dd><p>The name of the webspace.</p>
@@ -515,7 +515,7 @@ can set this to True.</p>
 
 <dl class="method">
 <dt id="azure.servicemanagement.websitemanagementservice.WebsiteManagementService.update_site">
-<code class="descname">update_site</code><span class="sig-paren">(</span><em>webspace_name</em>, <em>website_name</em>, <em>state=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.update_site"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.update_site" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_site</code><span class="sig-paren">(</span><em class="sig-param">webspace_name</em>, <em class="sig-param">website_name</em>, <em class="sig-param">state=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicemanagement/websitemanagementservice.html#WebsiteManagementService.update_site"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicemanagement.websitemanagementservice.WebsiteManagementService.update_site" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update a web site.</p>
 <dl class="simple">
 <dt>webspace_name:</dt><dd><p>The name of the webspace.</p>

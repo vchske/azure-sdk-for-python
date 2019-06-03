@@ -318,7 +318,7 @@
 <span id="azure-mgmt-managementgroups-operations-module"></span><h1>azure.mgmt.managementgroups.operations module<a class="headerlink" href="#module-azure.mgmt.managementgroups.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.managementgroups.operations.ManagementGroupsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.managementgroups.operations.</code><code class="descname">ManagementGroupsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_groups_operations.html#ManagementGroupsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.managementgroups.operations.</code><code class="sig-name descname">ManagementGroupsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_groups_operations.html#ManagementGroupsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ManagementGroupsOperations operations.</p>
 <dl class="field-list simple">
@@ -336,7 +336,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.managementgroups.operations.ManagementGroupsOperations.create_or_update">
-<code class="descname">create_or_update</code><span class="sig-paren">(</span><em>group_id</em>, <em>create_management_group_request</em>, <em>cache_control='no-cache'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_groups_operations.html#ManagementGroupsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">group_id</em>, <em class="sig-param">create_management_group_request</em>, <em class="sig-param">cache_control='no-cache'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_groups_operations.html#ManagementGroupsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update a management group. If a management group is already
 created and a subsequent create request is issued with different
 properties, the management group properties will be updated.</p>
@@ -371,7 +371,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.managementgroups.operations.ManagementGroupsOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>group_id</em>, <em>cache_control='no-cache'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_groups_operations.html#ManagementGroupsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">group_id</em>, <em class="sig-param">cache_control='no-cache'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_groups_operations.html#ManagementGroupsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete management group. If a management group contains child
 resources, the request will fail.</p>
 <dl class="field-list simple">
@@ -404,7 +404,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.managementgroups.operations.ManagementGroupsOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>group_id</em>, <em>expand=None</em>, <em>recurse=None</em>, <em>filter=None</em>, <em>cache_control='no-cache'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_groups_operations.html#ManagementGroupsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">group_id</em>, <em class="sig-param">expand=None</em>, <em class="sig-param">recurse=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">cache_control='no-cache'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_groups_operations.html#ManagementGroupsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the details of the management group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -443,7 +443,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.managementgroups.operations.ManagementGroupsOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>cache_control='no-cache'</em>, <em>skiptoken=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_groups_operations.html#ManagementGroupsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">cache_control='no-cache'</em>, <em class="sig-param">skiptoken=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_groups_operations.html#ManagementGroupsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List management groups for the authenticated user.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -476,12 +476,12 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.managementgroups.operations.ManagementGroupsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementgroups.models' from 'd:\\a\\1\\s\\sdk\\managementgroups\\azure-mgmt-managementgroups\\azure\\mgmt\\managementgroups\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementgroups.models' from 'd:\\a\\1\\s\\sdk\\managementgroups\\azure-mgmt-managementgroups\\azure\\mgmt\\managementgroups\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.managementgroups.operations.ManagementGroupsOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>group_id</em>, <em>patch_group_request</em>, <em>cache_control='no-cache'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_groups_operations.html#ManagementGroupsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">group_id</em>, <em class="sig-param">patch_group_request</em>, <em class="sig-param">cache_control='no-cache'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_groups_operations.html#ManagementGroupsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update a management group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -514,7 +514,7 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.managementgroups.operations.ManagementGroupSubscriptionsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.managementgroups.operations.</code><code class="descname">ManagementGroupSubscriptionsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_group_subscriptions_operations.html#ManagementGroupSubscriptionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupSubscriptionsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.managementgroups.operations.</code><code class="sig-name descname">ManagementGroupSubscriptionsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_group_subscriptions_operations.html#ManagementGroupSubscriptionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupSubscriptionsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ManagementGroupSubscriptionsOperations operations.</p>
 <dl class="field-list simple">
@@ -532,7 +532,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.managementgroups.operations.ManagementGroupSubscriptionsOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>group_id</em>, <em>subscription_id</em>, <em>cache_control='no-cache'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_group_subscriptions_operations.html#ManagementGroupSubscriptionsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupSubscriptionsOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">group_id</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">cache_control='no-cache'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_group_subscriptions_operations.html#ManagementGroupSubscriptionsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupSubscriptionsOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates existing subscription with the management group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -562,7 +562,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.managementgroups.operations.ManagementGroupSubscriptionsOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>group_id</em>, <em>subscription_id</em>, <em>cache_control='no-cache'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_group_subscriptions_operations.html#ManagementGroupSubscriptionsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupSubscriptionsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">group_id</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">cache_control='no-cache'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/management_group_subscriptions_operations.html#ManagementGroupSubscriptionsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupSubscriptionsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>De-associates subscription from the management group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -592,14 +592,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.managementgroups.operations.ManagementGroupSubscriptionsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementgroups.models' from 'd:\\a\\1\\s\\sdk\\managementgroups\\azure-mgmt-managementgroups\\azure\\mgmt\\managementgroups\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupSubscriptionsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementgroups.models' from 'd:\\a\\1\\s\\sdk\\managementgroups\\azure-mgmt-managementgroups\\azure\\mgmt\\managementgroups\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementgroups.operations.ManagementGroupSubscriptionsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.managementgroups.operations.Operations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.managementgroups.operations.</code><code class="descname">Operations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.managementgroups.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.Operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Operations operations.</p>
 <dl class="field-list simple">
@@ -617,7 +617,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.managementgroups.operations.Operations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the available Management REST API operations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -643,14 +643,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.managementgroups.operations.Operations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementgroups.models' from 'd:\\a\\1\\s\\sdk\\managementgroups\\azure-mgmt-managementgroups\\azure\\mgmt\\managementgroups\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementgroups.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementgroups.models' from 'd:\\a\\1\\s\\sdk\\managementgroups\\azure-mgmt-managementgroups\\azure\\mgmt\\managementgroups\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementgroups.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.managementgroups.operations.EntitiesOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.managementgroups.operations.</code><code class="descname">EntitiesOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/entities_operations.html#EntitiesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.EntitiesOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.managementgroups.operations.</code><code class="sig-name descname">EntitiesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/entities_operations.html#EntitiesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.EntitiesOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>EntitiesOperations operations.</p>
 <dl class="field-list simple">
@@ -668,7 +668,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.managementgroups.operations.EntitiesOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>skiptoken=None</em>, <em>skip=None</em>, <em>top=None</em>, <em>select=None</em>, <em>search=None</em>, <em>filter=None</em>, <em>view=None</em>, <em>group_name=None</em>, <em>cache_control='no-cache'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/entities_operations.html#EntitiesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.EntitiesOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">skiptoken=None</em>, <em class="sig-param">skip=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">select=None</em>, <em class="sig-param">search=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">view=None</em>, <em class="sig-param">group_name=None</em>, <em class="sig-param">cache_control='no-cache'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementgroups/operations/entities_operations.html#EntitiesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementgroups.operations.EntitiesOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all entities (Management Groups, Subscriptions, etc.) for the
 authenticated user.</p>
 <dl class="field-list simple">
@@ -736,7 +736,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.managementgroups.operations.EntitiesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementgroups.models' from 'd:\\a\\1\\s\\sdk\\managementgroups\\azure-mgmt-managementgroups\\azure\\mgmt\\managementgroups\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementgroups.operations.EntitiesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementgroups.models' from 'd:\\a\\1\\s\\sdk\\managementgroups\\azure-mgmt-managementgroups\\azure\\mgmt\\managementgroups\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementgroups.operations.EntitiesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

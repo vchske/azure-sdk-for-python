@@ -314,7 +314,7 @@
 <span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-azure.common.client_factory" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="azure.common.client_factory.get_client_from_auth_file">
-<code class="descclassname">azure.common.client_factory.</code><code class="descname">get_client_from_auth_file</code><span class="sig-paren">(</span><em>client_class</em>, <em>auth_path=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common/client_factory.html#get_client_from_auth_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.client_factory.get_client_from_auth_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">azure.common.client_factory.</code><code class="sig-name descname">get_client_from_auth_file</code><span class="sig-paren">(</span><em class="sig-param">client_class</em>, <em class="sig-param">auth_path=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common/client_factory.html#get_client_from_auth_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.client_factory.get_client_from_auth_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a SDK client initialized with auth file.</p>
 <p>The easiest way to obtain this file is to call the following CLI commands:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az ad sp create-for-rbac --sdk-auth
@@ -381,7 +381,7 @@ File must be UTF-8.</p>
 
 <dl class="function">
 <dt id="azure.common.client_factory.get_client_from_cli_profile">
-<code class="descclassname">azure.common.client_factory.</code><code class="descname">get_client_from_cli_profile</code><span class="sig-paren">(</span><em>client_class</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common/client_factory.html#get_client_from_cli_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.client_factory.get_client_from_cli_profile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">azure.common.client_factory.</code><code class="sig-name descname">get_client_from_cli_profile</code><span class="sig-paren">(</span><em class="sig-param">client_class</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common/client_factory.html#get_client_from_cli_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.client_factory.get_client_from_cli_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a SDK client initialized with current CLI credentials, CLI default subscription and CLI default cloud.</p>
 <p>This method will fill automatically the following client parameters:
 - credentials
@@ -415,7 +415,7 @@ File must be UTF-8.</p>
 
 <dl class="function">
 <dt id="azure.common.client_factory.get_client_from_json_dict">
-<code class="descclassname">azure.common.client_factory.</code><code class="descname">get_client_from_json_dict</code><span class="sig-paren">(</span><em>client_class</em>, <em>config_dict</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common/client_factory.html#get_client_from_json_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.client_factory.get_client_from_json_dict" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">azure.common.client_factory.</code><code class="sig-name descname">get_client_from_json_dict</code><span class="sig-paren">(</span><em class="sig-param">client_class</em>, <em class="sig-param">config_dict</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common/client_factory.html#get_client_from_json_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.client_factory.get_client_from_json_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a SDK client initialized with a JSON auth dict.</p>
 <p>The easiest way to obtain this content is to call the following CLI commands:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az ad sp create-for-rbac --sdk-auth
@@ -466,7 +466,7 @@ File must be UTF-8.</p>
 
 <span class="target" id="module-azure.common.credentials"></span><dl class="function">
 <dt id="azure.common.credentials.get_azure_cli_credentials">
-<code class="descclassname">azure.common.credentials.</code><code class="descname">get_azure_cli_credentials</code><span class="sig-paren">(</span><em>resource=None</em>, <em>with_tenant=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common/credentials.html#get_azure_cli_credentials"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.credentials.get_azure_cli_credentials" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">azure.common.credentials.</code><code class="sig-name descname">get_azure_cli_credentials</code><span class="sig-paren">(</span><em class="sig-param">resource=None</em>, <em class="sig-param">with_tenant=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common/credentials.html#get_azure_cli_credentials"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.credentials.get_azure_cli_credentials" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return Credentials and default SubscriptionID of current loaded profile of the CLI.</p>
 <p>Credentials will be the “az login” command:
 <a class="reference external" href="https://docs.microsoft.com/cli/azure/authenticate-azure-cli">https://docs.microsoft.com/cli/azure/authenticate-azure-cli</a></p>
@@ -493,7 +493,7 @@ File must be UTF-8.</p>
 
 <dl class="function">
 <dt id="azure.common.credentials.get_cli_profile">
-<code class="descclassname">azure.common.credentials.</code><code class="descname">get_cli_profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common/credentials.html#get_cli_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.credentials.get_cli_profile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">azure.common.credentials.</code><code class="sig-name descname">get_cli_profile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common/credentials.html#get_cli_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.credentials.get_cli_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a CLI profile class.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 1.1.6.</span></p>
@@ -516,25 +516,25 @@ File must be UTF-8.</p>
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.common" title="Permalink to this headline">¶</a></h2>
 <dl class="exception">
 <dt id="azure.common.AzureConflictHttpError">
-<em class="property">exception </em><code class="descclassname">azure.common.</code><code class="descname">AzureConflictHttpError</code><span class="sig-paren">(</span><em>message</em>, <em>status_code</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common.html#AzureConflictHttpError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.AzureConflictHttpError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">azure.common.</code><code class="sig-name descname">AzureConflictHttpError</code><span class="sig-paren">(</span><em class="sig-param">message</em>, <em class="sig-param">status_code</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common.html#AzureConflictHttpError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.AzureConflictHttpError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#azure.common.AzureHttpError" title="azure.common.AzureHttpError"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.common.AzureHttpError</span></code></a></p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="azure.common.AzureException">
-<em class="property">exception </em><code class="descclassname">azure.common.</code><code class="descname">AzureException</code><a class="reference internal" href="../_modules/azure/common.html#AzureException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.AzureException" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">azure.common.</code><code class="sig-name descname">AzureException</code><a class="reference internal" href="../_modules/azure/common.html#AzureException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.AzureException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#Exception" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="azure.common.AzureHttpError">
-<em class="property">exception </em><code class="descclassname">azure.common.</code><code class="descname">AzureHttpError</code><span class="sig-paren">(</span><em>message</em>, <em>status_code</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common.html#AzureHttpError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.AzureHttpError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">azure.common.</code><code class="sig-name descname">AzureHttpError</code><span class="sig-paren">(</span><em class="sig-param">message</em>, <em class="sig-param">status_code</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common.html#AzureHttpError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.AzureHttpError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#azure.common.AzureException" title="azure.common.AzureException"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.common.AzureException</span></code></a></p>
 </dd></dl>
 
 <dl class="exception">
 <dt id="azure.common.AzureMissingResourceHttpError">
-<em class="property">exception </em><code class="descclassname">azure.common.</code><code class="descname">AzureMissingResourceHttpError</code><span class="sig-paren">(</span><em>message</em>, <em>status_code</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common.html#AzureMissingResourceHttpError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.AzureMissingResourceHttpError" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">azure.common.</code><code class="sig-name descname">AzureMissingResourceHttpError</code><span class="sig-paren">(</span><em class="sig-param">message</em>, <em class="sig-param">status_code</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/common.html#AzureMissingResourceHttpError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.common.AzureMissingResourceHttpError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#azure.common.AzureHttpError" title="azure.common.AzureHttpError"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.common.AzureHttpError</span></code></a></p>
 </dd></dl>
 

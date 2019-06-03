@@ -327,7 +327,7 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.cognitiveservices.anomalydetector" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.cognitiveservices.anomalydetector.AnomalyDetectorClient">
-<em class="property">class </em><code class="descclassname">azure.cognitiveservices.anomalydetector.</code><code class="descname">AnomalyDetectorClient</code><span class="sig-paren">(</span><em>endpoint</em>, <em>credentials</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/anomaly_detector_client.html#AnomalyDetectorClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.AnomalyDetectorClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.anomalydetector.</code><code class="sig-name descname">AnomalyDetectorClient</code><span class="sig-paren">(</span><em class="sig-param">endpoint</em>, <em class="sig-param">credentials</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/anomaly_detector_client.html#AnomalyDetectorClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.AnomalyDetectorClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>The Anomaly Detector API detects anomalies automatically in time series data. It supports two functionalities, one is for detecting the whole series with model trained by the timeseries, another is detecting last point with model trained by points before. By using this service, business customers can discover incidents and establish a logic flow for root cause analysis.</p>
 <dl class="field-list simple">
@@ -345,7 +345,7 @@ client subscription.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.cognitiveservices.anomalydetector.AnomalyDetectorClient.entire_detect">
-<code class="descname">entire_detect</code><span class="sig-paren">(</span><em>body</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/anomaly_detector_client.html#AnomalyDetectorClient.entire_detect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.AnomalyDetectorClient.entire_detect" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">entire_detect</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/anomaly_detector_client.html#AnomalyDetectorClient.entire_detect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.AnomalyDetectorClient.entire_detect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Detect anomalies for the entire series in batch.</p>
 <p>This operation generates a model using an entire series, each point is
 detected with the same model. With this method, points before and after
@@ -378,7 +378,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.anomalydetector.AnomalyDetectorClient.last_detect">
-<code class="descname">last_detect</code><span class="sig-paren">(</span><em>body</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/anomaly_detector_client.html#AnomalyDetectorClient.last_detect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.AnomalyDetectorClient.last_detect" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">last_detect</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/anomaly_detector_client.html#AnomalyDetectorClient.last_detect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.AnomalyDetectorClient.last_detect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Detect anomaly status of the latest point in time series.</p>
 <p>This operation generates a model using points before the latest one.
 With this method, only historical points are used to determine whether

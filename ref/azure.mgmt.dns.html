@@ -319,7 +319,7 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.dns" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.dns.DnsManagementClient">
-<em class="property">class </em><code class="descclassname">azure.mgmt.dns.</code><code class="descname">DnsManagementClient</code><span class="sig-paren">(</span><em>credentials</em>, <em>subscription_id</em>, <em>api_version=None</em>, <em>base_url=None</em>, <em>profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/dns_management_client.html#DnsManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.</code><code class="sig-name descname">DnsManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/dns_management_client.html#DnsManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.profiles.multiapiclient.MultiApiClientMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>The DNS Management Client.</p>
 <p>This ready contains multiple API versions, to help you deal with all Azure clouds
@@ -347,26 +347,26 @@ missing in profile.</p></li>
 </dl>
 <dl class="attribute">
 <dt id="azure.mgmt.dns.DnsManagementClient.DEFAULT_API_VERSION">
-<code class="descname">DEFAULT_API_VERSION</code><em class="property"> = '2018-05-01'</em><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient.DEFAULT_API_VERSION" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">DEFAULT_API_VERSION</code><em class="property"> = '2018-05-01'</em><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient.DEFAULT_API_VERSION" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.dns.DnsManagementClient.LATEST_PROFILE">
-<code class="descname">LATEST_PROFILE</code><em class="property"> = azure.mgmt.dns.DnsManagementClient latest</em><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient.LATEST_PROFILE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">LATEST_PROFILE</code><em class="property"> = azure.mgmt.dns.DnsManagementClient latest</em><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient.LATEST_PROFILE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.dns.DnsManagementClient.dns_resource_reference">
-<code class="descname">dns_resource_reference</code><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient.dns_resource_reference" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">dns_resource_reference</code><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient.dns_resource_reference" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-05-01: <a class="reference internal" href="azure.mgmt.dns.v2018_05_01.operations.html#azure.mgmt.dns.v2018_05_01.operations.DnsResourceReferenceOperations" title="azure.mgmt.dns.v2018_05_01.operations.DnsResourceReferenceOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsResourceReferenceOperations</span></code></a></p></li>
 </ul>
 </dd></dl>
 
-<dl class="classmethod">
+<dl class="method">
 <dt id="azure.mgmt.dns.DnsManagementClient.models">
-<em class="property">classmethod </em><code class="descname">models</code><span class="sig-paren">(</span><em>api_version='2018-05-01'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/dns_management_client.html#DnsManagementClient.models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient.models" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">models</code><span class="sig-paren">(</span><em class="sig-param">api_version='2018-05-01'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/dns_management_client.html#DnsManagementClient.models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient.models" title="Permalink to this definition">¶</a></dt>
 <dd><p>Module depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-04-01: <a class="reference internal" href="azure.mgmt.dns.v2016_04_01.models.html#module-azure.mgmt.dns.v2016_04_01.models" title="azure.mgmt.dns.v2016_04_01.models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">v2016_04_01.models</span></code></a></p></li>
@@ -375,9 +375,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.dns.DnsManagementClient.record_sets">
-<code class="descname">record_sets</code><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient.record_sets" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">record_sets</code><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient.record_sets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-04-01: <a class="reference internal" href="azure.mgmt.dns.v2016_04_01.operations.html#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations" title="azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecordSetsOperations</span></code></a></p></li>
@@ -386,9 +386,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.dns.DnsManagementClient.zones">
-<code class="descname">zones</code><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient.zones" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">zones</code><a class="headerlink" href="#azure.mgmt.dns.DnsManagementClient.zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-04-01: <a class="reference internal" href="azure.mgmt.dns.v2016_04_01.operations.html#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations" title="azure.mgmt.dns.v2016_04_01.operations.ZonesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZonesOperations</span></code></a></p></li>

@@ -327,7 +327,7 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.cdn" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.cdn.CdnManagementClient">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cdn.</code><code class="descname">CdnManagementClient</code><span class="sig-paren">(</span><em>credentials</em>, <em>subscription_id</em>, <em>base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/cdn_management_client.html#CdnManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.CdnManagementClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cdn.</code><code class="sig-name descname">CdnManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/cdn_management_client.html#CdnManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.CdnManagementClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>Use these APIs to manage Azure CDN resources through the Azure Resource Manager. You must make sure that requests made to these resources are secure.</p>
 <dl class="field-list simple">
@@ -354,7 +354,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cdn.CdnManagementClient.check_name_availability">
-<code class="descname">check_name_availability</code><span class="sig-paren">(</span><em>name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/cdn_management_client.html#CdnManagementClient.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.CdnManagementClient.check_name_availability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_name_availability</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/cdn_management_client.html#CdnManagementClient.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.CdnManagementClient.check_name_availability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check the availability of a resource name. This is needed for resources
 where name is globally unique, such as a CDN endpoint.</p>
 <dl class="field-list simple">
@@ -383,7 +383,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.CdnManagementClient.check_name_availability_with_subscription">
-<code class="descname">check_name_availability_with_subscription</code><span class="sig-paren">(</span><em>name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/cdn_management_client.html#CdnManagementClient.check_name_availability_with_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.CdnManagementClient.check_name_availability_with_subscription" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_name_availability_with_subscription</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/cdn_management_client.html#CdnManagementClient.check_name_availability_with_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.CdnManagementClient.check_name_availability_with_subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check the availability of a resource name. This is needed for resources
 where name is globally unique, such as a CDN endpoint.</p>
 <dl class="field-list simple">
@@ -412,7 +412,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.CdnManagementClient.validate_probe">
-<code class="descname">validate_probe</code><span class="sig-paren">(</span><em>probe_url</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/cdn_management_client.html#CdnManagementClient.validate_probe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.CdnManagementClient.validate_probe" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">validate_probe</code><span class="sig-paren">(</span><em class="sig-param">probe_url</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/cdn_management_client.html#CdnManagementClient.validate_probe"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.CdnManagementClient.validate_probe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the probe path is a valid path and the file can be accessed.
 Probe path is the path to a file hosted on the origin server to help
 accelerate the delivery of dynamic content via the CDN endpoint. This

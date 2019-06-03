@@ -328,7 +328,7 @@
 <span id="azure-mgmt-containerservice-v2017-07-01-operations-module"></span><h1>azure.mgmt.containerservice.v2017_07_01.operations module<a class="headerlink" href="#module-azure.mgmt.containerservice.v2017_07_01.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.containerservice.v2017_07_01.operations.</code><code class="descname">ContainerServicesOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2017_07_01.operations.</code><code class="sig-name descname">ContainerServicesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ContainerServicesOperations operations.</p>
 <dl class="field-list simple">
@@ -343,7 +343,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.create_or_update">
-<code class="descname">create_or_update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>container_service_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">container_service_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates or updates a container service.</p>
 <p>Creates or updates a container service with the specified configuration
 of orchestrator, masters, and agents.</p>
@@ -379,7 +379,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>container_service_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">container_service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the specified container service.</p>
 <p>Deletes the specified container service in the specified subscription
 and resource group. The operation does not delete other resources
@@ -416,7 +416,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>container_service_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">container_service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the properties of the specified container service.</p>
 <p>Gets the properties of the specified container service in the specified
 subscription and resource group. The operation returns the properties
@@ -450,7 +450,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a list of container services in the specified subscription.</p>
 <p>Gets a list of container services in the specified subscription. The
 operation returns properties of each container service including state,
@@ -480,7 +480,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.list_by_resource_group">
-<code class="descname">list_by_resource_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a list of container services in the specified resource group.</p>
 <p>Gets a list of container services in the specified subscription and
 resource group. The operation returns properties of each container
@@ -511,7 +511,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.list_orchestrators">
-<code class="descname">list_orchestrators</code><span class="sig-paren">(</span><em>location</em>, <em>resource_type=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations.list_orchestrators"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.list_orchestrators" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_orchestrators</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">resource_type=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2017_07_01/operations/container_services_operations.html#ContainerServicesOperations.list_orchestrators"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.list_orchestrators" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a list of supported orchestrators in the specified subscription.</p>
 <p>Gets a list of supported orchestrators in the specified subscription.
 The operation returns properties of each orchestrator including
@@ -546,7 +546,7 @@ or ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerservice.v2017_07_01.models' from 'd:\\a\\1\\s\\sdk\\containerservice\\azure-mgmt-containerservice\\azure\\mgmt\\containerservice\\v2017_07_01\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.containerservice.v2017_07_01.models' from 'd:\\a\\1\\s\\sdk\\containerservice\\azure-mgmt-containerservice\\azure\\mgmt\\containerservice\\v2017_07_01\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.containerservice.v2017_07_01.operations.ContainerServicesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

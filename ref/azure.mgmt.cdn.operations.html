@@ -318,7 +318,7 @@
 <span id="azure-mgmt-cdn-operations-module"></span><h1>azure.mgmt.cdn.operations module<a class="headerlink" href="#module-azure.mgmt.cdn.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.cdn.operations.ProfilesOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cdn.operations.</code><code class="descname">ProfilesOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cdn.operations.</code><code class="sig-name descname">ProfilesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ProfilesOperations operations.</p>
 <dl class="field-list simple">
@@ -336,7 +336,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.ProfilesOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>profile</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">profile</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new CDN profile with a profile name under the specified
 subscription and resource group.</p>
 <dl class="field-list simple">
@@ -371,7 +371,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.ProfilesOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing CDN profile with the specified parameters. Deleting
 a profile will result in the deletion of all of the sub-resources
 including endpoints, origins and custom domains.</p>
@@ -405,7 +405,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri">
-<code class="descname">generate_sso_uri</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.generate_sso_uri"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">generate_sso_uri</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.generate_sso_uri"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.generate_sso_uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates a dynamic SSO URI used to sign in to the CDN supplemental
 portal. Supplemental portal is used to configure advanced feature
 capabilities that are not yet available in the Azure portal, such as
@@ -441,7 +441,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.ProfilesOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a CDN profile with the specified profile name under the specified
 subscription and resource group.</p>
 <dl class="field-list simple">
@@ -473,7 +473,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.ProfilesOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the CDN profiles within an Azure subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -499,7 +499,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group">
-<code class="descname">list_by_resource_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the CDN profiles within a resource group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -527,7 +527,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage">
-<code class="descname">list_resource_usage</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.list_resource_usage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_resource_usage</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.list_resource_usage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.list_resource_usage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks the quota and actual usage of endpoints under the given CDN
 profile.</p>
 <dl class="field-list simple">
@@ -558,7 +558,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.ProfilesOperations.list_supported_optimization_types">
-<code class="descname">list_supported_optimization_types</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.list_supported_optimization_types"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.list_supported_optimization_types" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_supported_optimization_types</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.list_supported_optimization_types"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.list_supported_optimization_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the supported optimization types for the current profile. A user
 can create an endpoint with an optimization type from the listed
 values.</p>
@@ -592,12 +592,12 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cdn.operations.ProfilesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.ProfilesOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>tags=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/profiles_operations.html#ProfilesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ProfilesOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates an existing CDN profile with the specified profile name under
 the specified subscription and resource group.</p>
 <dl class="field-list simple">
@@ -634,7 +634,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="class">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cdn.operations.</code><code class="descname">EndpointsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cdn.operations.</code><code class="sig-name descname">EndpointsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>EndpointsOperations operations.</p>
 <dl class="field-list simple">
@@ -652,7 +652,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>endpoint</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">endpoint</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new CDN endpoint with the specified endpoint name under the
 specified subscription, resource group and profile.</p>
 <dl class="field-list simple">
@@ -689,7 +689,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing CDN endpoint with the specified endpoint name under
 the specified subscription, resource group and profile.</p>
 <dl class="field-list simple">
@@ -724,7 +724,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets an existing CDN endpoint with the specified endpoint name under
 the specified subscription, resource group and profile.</p>
 <dl class="field-list simple">
@@ -758,7 +758,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile">
-<code class="descname">list_by_profile</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.list_by_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_profile</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.list_by_profile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.list_by_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists existing CDN endpoints.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -788,7 +788,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage">
-<code class="descname">list_resource_usage</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.list_resource_usage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_resource_usage</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.list_resource_usage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.list_resource_usage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks the quota and usage of geo filters and custom domains under the
 given endpoint.</p>
 <dl class="field-list simple">
@@ -821,7 +821,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations.load_content">
-<code class="descname">load_content</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>content_paths</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.load_content"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.load_content" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">load_content</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">content_paths</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.load_content"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.load_content" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pre-loads a content to CDN. Available for Verizon Profiles.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -857,12 +857,12 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="attribute">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations.purge_content">
-<code class="descname">purge_content</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>content_paths</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.purge_content"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.purge_content" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">purge_content</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">content_paths</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.purge_content"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.purge_content" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes a content from CDN.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -898,7 +898,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations.start">
-<code class="descname">start</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.start" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts an existing CDN endpoint that is on a stopped state.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -933,7 +933,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations.stop">
-<code class="descname">stop</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.stop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stop</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops an existing running CDN endpoint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -968,7 +968,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>endpoint_update_properties</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">endpoint_update_properties</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates an existing CDN endpoint with the specified endpoint name under
 the specified subscription, resource group and profile. Only tags and
 Origin HostHeader can be updated after creating an endpoint. To update
@@ -1008,7 +1008,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain">
-<code class="descname">validate_custom_domain</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>host_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.validate_custom_domain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">validate_custom_domain</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">host_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/endpoints_operations.html#EndpointsOperations.validate_custom_domain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EndpointsOperations.validate_custom_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Validates the custom domain mapping to ensure it maps to the correct
 CDN endpoint in DNS.</p>
 <dl class="field-list simple">
@@ -1046,7 +1046,7 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cdn.operations.OriginsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cdn.operations.</code><code class="descname">OriginsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/origins_operations.html#OriginsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.OriginsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cdn.operations.</code><code class="sig-name descname">OriginsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/origins_operations.html#OriginsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.OriginsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>OriginsOperations operations.</p>
 <dl class="field-list simple">
@@ -1064,7 +1064,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.OriginsOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>origin_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/origins_operations.html#OriginsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.OriginsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">origin_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/origins_operations.html#OriginsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.OriginsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets an existing origin within an endpoint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1099,7 +1099,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint">
-<code class="descname">list_by_endpoint</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/origins_operations.html#OriginsOperations.list_by_endpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_endpoint</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/origins_operations.html#OriginsOperations.list_by_endpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.OriginsOperations.list_by_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the existing origins within an endpoint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1131,12 +1131,12 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cdn.operations.OriginsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.OriginsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.OriginsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.OriginsOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>origin_name</em>, <em>origin_update_properties</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/origins_operations.html#OriginsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.OriginsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">origin_name</em>, <em class="sig-param">origin_update_properties</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/origins_operations.html#OriginsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.OriginsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates an existing origin within an endpoint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1176,7 +1176,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="class">
 <dt id="azure.mgmt.cdn.operations.CustomDomainsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cdn.operations.</code><code class="descname">CustomDomainsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cdn.operations.</code><code class="sig-name descname">CustomDomainsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>CustomDomainsOperations operations.</p>
 <dl class="field-list simple">
@@ -1194,7 +1194,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.CustomDomainsOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>custom_domain_name</em>, <em>host_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">custom_domain_name</em>, <em class="sig-param">host_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new custom domain within an endpoint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1233,7 +1233,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.CustomDomainsOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>custom_domain_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">custom_domain_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing custom domain within an endpoint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1270,7 +1270,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https">
-<code class="descname">disable_custom_https</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>custom_domain_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations.disable_custom_https"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">disable_custom_https</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">custom_domain_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations.disable_custom_https"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.disable_custom_https" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disable https delivery of the custom domain.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1305,7 +1305,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https">
-<code class="descname">enable_custom_https</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>custom_domain_name</em>, <em>custom_domain_https_parameters=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations.enable_custom_https"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_custom_https</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">custom_domain_name</em>, <em class="sig-param">custom_domain_https_parameters=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations.enable_custom_https"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.enable_custom_https" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable https delivery of the custom domain.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1344,7 +1344,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.CustomDomainsOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>custom_domain_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">custom_domain_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets an existing custom domain within an endpoint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1379,7 +1379,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint">
-<code class="descname">list_by_endpoint</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>profile_name</em>, <em>endpoint_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations.list_by_endpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_endpoint</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">profile_name</em>, <em class="sig-param">endpoint_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/custom_domains_operations.html#CustomDomainsOperations.list_by_endpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.list_by_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the existing custom domains within an endpoint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1411,14 +1411,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cdn.operations.CustomDomainsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.CustomDomainsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cdn.operations.ResourceUsageOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cdn.operations.</code><code class="descname">ResourceUsageOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/resource_usage_operations.html#ResourceUsageOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ResourceUsageOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cdn.operations.</code><code class="sig-name descname">ResourceUsageOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/resource_usage_operations.html#ResourceUsageOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ResourceUsageOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ResourceUsageOperations operations.</p>
 <dl class="field-list simple">
@@ -1436,7 +1436,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.ResourceUsageOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/resource_usage_operations.html#ResourceUsageOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ResourceUsageOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/resource_usage_operations.html#ResourceUsageOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.ResourceUsageOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check the quota and actual usage of the CDN profiles under the given
 subscription.</p>
 <dl class="field-list simple">
@@ -1463,14 +1463,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cdn.operations.ResourceUsageOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.ResourceUsageOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.ResourceUsageOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cdn.operations.Operations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cdn.operations.</code><code class="descname">Operations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cdn.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.Operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Operations operations.</p>
 <dl class="field-list simple">
@@ -1488,7 +1488,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.Operations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the available CDN REST API operations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1514,14 +1514,14 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cdn.operations.Operations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cdn.operations.EdgeNodesOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cdn.operations.</code><code class="descname">EdgeNodesOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/edge_nodes_operations.html#EdgeNodesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EdgeNodesOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cdn.operations.</code><code class="sig-name descname">EdgeNodesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/edge_nodes_operations.html#EdgeNodesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EdgeNodesOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>EdgeNodesOperations operations.</p>
 <dl class="field-list simple">
@@ -1539,7 +1539,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cdn.operations.EdgeNodesOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/edge_nodes_operations.html#EdgeNodesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EdgeNodesOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cdn/operations/edge_nodes_operations.html#EdgeNodesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cdn.operations.EdgeNodesOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Edgenodes are the global Point of Presence (POP) locations used to
 deliver CDN content to end users.</p>
 <dl class="field-list simple">
@@ -1566,7 +1566,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cdn.operations.EdgeNodesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.EdgeNodesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cdn.models' from 'd:\\a\\1\\s\\sdk\\cdn\\azure-mgmt-cdn\\azure\\mgmt\\cdn\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cdn.operations.EdgeNodesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

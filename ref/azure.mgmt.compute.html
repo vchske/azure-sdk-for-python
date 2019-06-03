@@ -328,7 +328,7 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.compute" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.compute.ComputeManagementClient">
-<em class="property">class </em><code class="descclassname">azure.mgmt.compute.</code><code class="descname">ComputeManagementClient</code><span class="sig-paren">(</span><em>credentials</em>, <em>subscription_id</em>, <em>api_version=None</em>, <em>base_url=None</em>, <em>profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/compute_management_client.html#ComputeManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.compute.</code><code class="sig-name descname">ComputeManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/compute_management_client.html#ComputeManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.profiles.multiapiclient.MultiApiClientMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>Compute Client.</p>
 <p>This ready contains multiple API versions, to help you deal with all Azure clouds
@@ -358,17 +358,17 @@ missing in profile.</p></li>
 </dl>
 <dl class="attribute">
 <dt id="azure.mgmt.compute.ComputeManagementClient.DEFAULT_API_VERSION">
-<code class="descname">DEFAULT_API_VERSION</code><em class="property"> = '2019-03-01'</em><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.DEFAULT_API_VERSION" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">DEFAULT_API_VERSION</code><em class="property"> = '2019-03-01'</em><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.DEFAULT_API_VERSION" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.compute.ComputeManagementClient.LATEST_PROFILE">
-<code class="descname">LATEST_PROFILE</code><em class="property"> = azure.mgmt.compute.ComputeManagementClient latest</em><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.LATEST_PROFILE" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">LATEST_PROFILE</code><em class="property"> = azure.mgmt.compute.ComputeManagementClient latest</em><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.LATEST_PROFILE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.availability_sets">
-<code class="descname">availability_sets</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.availability_sets" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">availability_sets</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.availability_sets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.compute.v2015_06_15.operations.html#azure.mgmt.compute.v2015_06_15.operations.AvailabilitySetsOperations" title="azure.mgmt.compute.v2015_06_15.operations.AvailabilitySetsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">AvailabilitySetsOperations</span></code></a></p></li>
@@ -383,9 +383,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.disks">
-<code class="descname">disks</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.disks" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">disks</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-04-30-preview: <a class="reference internal" href="azure.mgmt.compute.v2016_04_30_preview.operations.html#azure.mgmt.compute.v2016_04_30_preview.operations.DisksOperations" title="azure.mgmt.compute.v2016_04_30_preview.operations.DisksOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">DisksOperations</span></code></a></p></li>
@@ -396,9 +396,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.galleries">
-<code class="descname">galleries</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.galleries" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">galleries</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.galleries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-06-01: <a class="reference internal" href="azure.mgmt.compute.v2018_06_01.operations.html#azure.mgmt.compute.v2018_06_01.operations.GalleriesOperations" title="azure.mgmt.compute.v2018_06_01.operations.GalleriesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">GalleriesOperations</span></code></a></p></li>
@@ -406,9 +406,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.gallery_image_versions">
-<code class="descname">gallery_image_versions</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.gallery_image_versions" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">gallery_image_versions</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.gallery_image_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-06-01: <a class="reference internal" href="azure.mgmt.compute.v2018_06_01.operations.html#azure.mgmt.compute.v2018_06_01.operations.GalleryImageVersionsOperations" title="azure.mgmt.compute.v2018_06_01.operations.GalleryImageVersionsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">GalleryImageVersionsOperations</span></code></a></p></li>
@@ -416,9 +416,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.gallery_images">
-<code class="descname">gallery_images</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.gallery_images" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">gallery_images</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.gallery_images" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-06-01: <a class="reference internal" href="azure.mgmt.compute.v2018_06_01.operations.html#azure.mgmt.compute.v2018_06_01.operations.GalleryImagesOperations" title="azure.mgmt.compute.v2018_06_01.operations.GalleryImagesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">GalleryImagesOperations</span></code></a></p></li>
@@ -426,9 +426,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.images">
-<code class="descname">images</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.images" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">images</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.images" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-04-30-preview: <a class="reference internal" href="azure.mgmt.compute.v2016_04_30_preview.operations.html#azure.mgmt.compute.v2016_04_30_preview.operations.ImagesOperations" title="azure.mgmt.compute.v2016_04_30_preview.operations.ImagesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImagesOperations</span></code></a></p></li>
@@ -441,9 +441,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.log_analytics">
-<code class="descname">log_analytics</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.log_analytics" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">log_analytics</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.log_analytics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-12-01: <a class="reference internal" href="azure.mgmt.compute.v2017_12_01.operations.html#azure.mgmt.compute.v2017_12_01.operations.LogAnalyticsOperations" title="azure.mgmt.compute.v2017_12_01.operations.LogAnalyticsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogAnalyticsOperations</span></code></a></p></li>
@@ -454,9 +454,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="classmethod">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.models">
-<em class="property">classmethod </em><code class="descname">models</code><span class="sig-paren">(</span><em>api_version='2019-03-01'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/compute_management_client.html#ComputeManagementClient.models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.models" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">models</code><span class="sig-paren">(</span><em class="sig-param">api_version='2019-03-01'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/compute/compute_management_client.html#ComputeManagementClient.models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.models" title="Permalink to this definition">¶</a></dt>
 <dd><p>Module depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.compute.v2015_06_15.models.html#module-azure.mgmt.compute.v2015_06_15.models" title="azure.mgmt.compute.v2015_06_15.models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">v2015_06_15.models</span></code></a></p></li>
@@ -474,9 +474,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.operations">
-<code class="descname">operations</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.operations" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">operations</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-12-01: <a class="reference internal" href="azure.mgmt.compute.v2017_12_01.operations.html#azure.mgmt.compute.v2017_12_01.operations.Operations" title="azure.mgmt.compute.v2017_12_01.operations.Operations"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operations</span></code></a></p></li>
@@ -487,9 +487,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.proximity_placement_groups">
-<code class="descname">proximity_placement_groups</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.proximity_placement_groups" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">proximity_placement_groups</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.proximity_placement_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2018-04-01: <a class="reference internal" href="azure.mgmt.compute.v2018_04_01.operations.html#azure.mgmt.compute.v2018_04_01.operations.ProximityPlacementGroupsOperations" title="azure.mgmt.compute.v2018_04_01.operations.ProximityPlacementGroupsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProximityPlacementGroupsOperations</span></code></a></p></li>
@@ -499,9 +499,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.resource_skus">
-<code class="descname">resource_skus</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.resource_skus" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">resource_skus</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.resource_skus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-03-30: <a class="reference internal" href="azure.mgmt.compute.v2017_03_30.operations.html#azure.mgmt.compute.v2017_03_30.operations.ResourceSkusOperations" title="azure.mgmt.compute.v2017_03_30.operations.ResourceSkusOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceSkusOperations</span></code></a></p></li>
@@ -510,9 +510,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.snapshots">
-<code class="descname">snapshots</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.snapshots" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">snapshots</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.snapshots" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-04-30-preview: <a class="reference internal" href="azure.mgmt.compute.v2016_04_30_preview.operations.html#azure.mgmt.compute.v2016_04_30_preview.operations.SnapshotsOperations" title="azure.mgmt.compute.v2016_04_30_preview.operations.SnapshotsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">SnapshotsOperations</span></code></a></p></li>
@@ -523,9 +523,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.usage">
-<code class="descname">usage</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.usage" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">usage</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.usage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.compute.v2015_06_15.operations.html#azure.mgmt.compute.v2015_06_15.operations.UsageOperations" title="azure.mgmt.compute.v2015_06_15.operations.UsageOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">UsageOperations</span></code></a></p></li>
@@ -540,9 +540,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.virtual_machine_extension_images">
-<code class="descname">virtual_machine_extension_images</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_extension_images" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_machine_extension_images</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_extension_images" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.compute.v2015_06_15.operations.html#azure.mgmt.compute.v2015_06_15.operations.VirtualMachineExtensionImagesOperations" title="azure.mgmt.compute.v2015_06_15.operations.VirtualMachineExtensionImagesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualMachineExtensionImagesOperations</span></code></a></p></li>
@@ -557,9 +557,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.virtual_machine_extensions">
-<code class="descname">virtual_machine_extensions</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_extensions" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_machine_extensions</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_extensions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.compute.v2015_06_15.operations.html#azure.mgmt.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations" title="azure.mgmt.compute.v2015_06_15.operations.VirtualMachineExtensionsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualMachineExtensionsOperations</span></code></a></p></li>
@@ -574,9 +574,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.virtual_machine_images">
-<code class="descname">virtual_machine_images</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_images" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_machine_images</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_images" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.compute.v2015_06_15.operations.html#azure.mgmt.compute.v2015_06_15.operations.VirtualMachineImagesOperations" title="azure.mgmt.compute.v2015_06_15.operations.VirtualMachineImagesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualMachineImagesOperations</span></code></a></p></li>
@@ -591,9 +591,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.virtual_machine_run_commands">
-<code class="descname">virtual_machine_run_commands</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_run_commands" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_machine_run_commands</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_run_commands" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-03-30: <a class="reference internal" href="azure.mgmt.compute.v2017_03_30.operations.html#azure.mgmt.compute.v2017_03_30.operations.VirtualMachineRunCommandsOperations" title="azure.mgmt.compute.v2017_03_30.operations.VirtualMachineRunCommandsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualMachineRunCommandsOperations</span></code></a></p></li>
@@ -605,9 +605,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.virtual_machine_scale_set_extensions">
-<code class="descname">virtual_machine_scale_set_extensions</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_scale_set_extensions" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_machine_scale_set_extensions</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_scale_set_extensions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-03-30: <a class="reference internal" href="azure.mgmt.compute.v2017_03_30.operations.html#azure.mgmt.compute.v2017_03_30.operations.VirtualMachineScaleSetExtensionsOperations" title="azure.mgmt.compute.v2017_03_30.operations.VirtualMachineScaleSetExtensionsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualMachineScaleSetExtensionsOperations</span></code></a></p></li>
@@ -619,9 +619,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.virtual_machine_scale_set_rolling_upgrades">
-<code class="descname">virtual_machine_scale_set_rolling_upgrades</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_scale_set_rolling_upgrades" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_machine_scale_set_rolling_upgrades</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_scale_set_rolling_upgrades" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-03-30: <a class="reference internal" href="azure.mgmt.compute.v2017_03_30.operations.html#azure.mgmt.compute.v2017_03_30.operations.VirtualMachineScaleSetRollingUpgradesOperations" title="azure.mgmt.compute.v2017_03_30.operations.VirtualMachineScaleSetRollingUpgradesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualMachineScaleSetRollingUpgradesOperations</span></code></a></p></li>
@@ -633,9 +633,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.virtual_machine_scale_set_vms">
-<code class="descname">virtual_machine_scale_set_vms</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_scale_set_vms" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_machine_scale_set_vms</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_scale_set_vms" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.compute.v2015_06_15.operations.html#azure.mgmt.compute.v2015_06_15.operations.VirtualMachineScaleSetVMsOperations" title="azure.mgmt.compute.v2015_06_15.operations.VirtualMachineScaleSetVMsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualMachineScaleSetVMsOperations</span></code></a></p></li>
@@ -650,9 +650,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.virtual_machine_scale_sets">
-<code class="descname">virtual_machine_scale_sets</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_scale_sets" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_machine_scale_sets</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_scale_sets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.compute.v2015_06_15.operations.html#azure.mgmt.compute.v2015_06_15.operations.VirtualMachineScaleSetsOperations" title="azure.mgmt.compute.v2015_06_15.operations.VirtualMachineScaleSetsOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualMachineScaleSetsOperations</span></code></a></p></li>
@@ -667,9 +667,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.virtual_machine_sizes">
-<code class="descname">virtual_machine_sizes</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_sizes" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_machine_sizes</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machine_sizes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.compute.v2015_06_15.operations.html#azure.mgmt.compute.v2015_06_15.operations.VirtualMachineSizesOperations" title="azure.mgmt.compute.v2015_06_15.operations.VirtualMachineSizesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualMachineSizesOperations</span></code></a></p></li>
@@ -684,9 +684,9 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="azure.mgmt.compute.ComputeManagementClient.virtual_machines">
-<code class="descname">virtual_machines</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machines" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">virtual_machines</code><a class="headerlink" href="#azure.mgmt.compute.ComputeManagementClient.virtual_machines" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instance depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.compute.v2015_06_15.operations.html#azure.mgmt.compute.v2015_06_15.operations.VirtualMachinesOperations" title="azure.mgmt.compute.v2015_06_15.operations.VirtualMachinesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualMachinesOperations</span></code></a></p></li>

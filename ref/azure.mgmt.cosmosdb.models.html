@@ -318,7 +318,7 @@
 <span id="azure-mgmt-cosmosdb-models-module"></span><h1>azure.mgmt.cosmosdb.models module<a class="headerlink" href="#module-azure.mgmt.cosmosdb.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.ConsistencyPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ConsistencyPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>default_consistency_level</em>, <em>max_staleness_prefix: int = None</em>, <em>max_interval_in_seconds: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/consistency_policy_py3.html#ConsistencyPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConsistencyPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">ConsistencyPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">default_consistency_level</em>, <em class="sig-param">max_staleness_prefix: int = None</em>, <em class="sig-param">max_interval_in_seconds: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/consistency_policy_py3.html#ConsistencyPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConsistencyPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The consistency policy for the Cosmos DB database account.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -345,7 +345,7 @@ when defaultConsistencyPolicy is set to ‘BoundedStaleness’.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.Capability">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Capability</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/capability_py3.html#Capability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Capability" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">Capability</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/capability_py3.html#Capability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Capability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB capability object.</p>
 <dl class="field-list simple">
@@ -359,7 +359,7 @@ when defaultConsistencyPolicy is set to ‘BoundedStaleness’.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.Location">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Location</code><span class="sig-paren">(</span><em>*</em>, <em>location_name: str = None</em>, <em>provisioning_state: str = None</em>, <em>failover_priority: int = None</em>, <em>is_zone_redundant: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/location_py3.html#Location"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Location" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">Location</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location_name: str = None</em>, <em class="sig-param">provisioning_state: str = None</em>, <em class="sig-param">failover_priority: int = None</em>, <em class="sig-param">is_zone_redundant: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/location_py3.html#Location"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A region in which the Azure Cosmos DB database account is deployed.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -391,7 +391,7 @@ an AvailabilityZone region</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.FailoverPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">FailoverPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>location_name: str = None</em>, <em>failover_priority: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/failover_policy_py3.html#FailoverPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.FailoverPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">FailoverPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location_name: str = None</em>, <em class="sig-param">failover_priority: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/failover_policy_py3.html#FailoverPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.FailoverPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The failover policy for a given region of a database account.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -416,7 +416,7 @@ unique for each of the regions in which the database account exists.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.VirtualNetworkRule">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">VirtualNetworkRule</code><span class="sig-paren">(</span><em>*</em>, <em>id: str = None</em>, <em>ignore_missing_vnet_service_endpoint: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/virtual_network_rule_py3.html#VirtualNetworkRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.VirtualNetworkRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">VirtualNetworkRule</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">ignore_missing_vnet_service_endpoint: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/virtual_network_rule_py3.html#VirtualNetworkRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.VirtualNetworkRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Virtual Network ACL Rule object.</p>
 <dl class="field-list simple">
@@ -433,7 +433,7 @@ the virtual network has vnet service endpoint enabled.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccount">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccount</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>kind='GlobalDocumentDB'</em>, <em>provisioning_state: str = None</em>, <em>ip_range_filter: str = None</em>, <em>is_virtual_network_filter_enabled: bool = None</em>, <em>enable_automatic_failover: bool = None</em>, <em>consistency_policy=None</em>, <em>capabilities=None</em>, <em>virtual_network_rules=None</em>, <em>enable_multiple_write_locations: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_py3.html#DatabaseAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccount" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DatabaseAccount</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">kind='GlobalDocumentDB'</em>, <em class="sig-param">provisioning_state: str = None</em>, <em class="sig-param">ip_range_filter: str = None</em>, <em class="sig-param">is_virtual_network_filter_enabled: bool = None</em>, <em class="sig-param">enable_automatic_failover: bool = None</em>, <em class="sig-param">consistency_policy=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">virtual_network_rules=None</em>, <em class="sig-param">enable_multiple_write_locations: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_py3.html#DatabaseAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>An Azure Cosmos DB database account.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -491,7 +491,7 @@ multiple locations</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.SqlDatabase">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlDatabase</code><span class="sig-paren">(</span><em>*</em>, <em>sql_database_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>_rid: str = None</em>, <em>_ts=None</em>, <em>_etag: str = None</em>, <em>_colls: str = None</em>, <em>_users: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_database_py3.html#SqlDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlDatabase" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">SqlDatabase</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">sql_database_id: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">_rid: str = None</em>, <em class="sig-param">_ts=None</em>, <em class="sig-param">_etag: str = None</em>, <em class="sig-param">_colls: str = None</em>, <em class="sig-param">_users: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_database_py3.html#SqlDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlDatabase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>An Azure Cosmos DB SQL database.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -527,7 +527,7 @@ path of the users resource.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.Indexes">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Indexes</code><span class="sig-paren">(</span><em>*</em>, <em>data_type='String'</em>, <em>precision: int = None</em>, <em>kind='Hash'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/indexes_py3.html#Indexes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Indexes" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">Indexes</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">data_type='String'</em>, <em class="sig-param">precision: int = None</em>, <em class="sig-param">kind='Hash'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/indexes_py3.html#Indexes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Indexes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The indexes for the path.</p>
 <dl class="field-list simple">
@@ -546,7 +546,7 @@ to. Possible values include: ‘String’, ‘Number’, ‘Point’, ‘Polygon
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.IncludedPath">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">IncludedPath</code><span class="sig-paren">(</span><em>*</em>, <em>path: str = None</em>, <em>indexes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/included_path_py3.html#IncludedPath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IncludedPath" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">IncludedPath</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">path: str = None</em>, <em class="sig-param">indexes=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/included_path_py3.html#IncludedPath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IncludedPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The paths that are included in indexing.</p>
 <dl class="field-list simple">
@@ -562,7 +562,7 @@ paths typically start with root and end with wildcard (/path/<a href="#id1"><spa
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.ExcludedPath">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ExcludedPath</code><span class="sig-paren">(</span><em>*</em>, <em>path: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/excluded_path_py3.html#ExcludedPath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ExcludedPath" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">ExcludedPath</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">path: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/excluded_path_py3.html#ExcludedPath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ExcludedPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>ExcludedPath.</p>
 <dl class="field-list simple">
@@ -575,7 +575,7 @@ paths typically start with root and end with wildcard (/path/<a href="#id3"><spa
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.IndexingPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">IndexingPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>automatic: bool = None</em>, <em>indexing_mode='Consistent'</em>, <em>included_paths=None</em>, <em>excluded_paths=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/indexing_policy_py3.html#IndexingPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">IndexingPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">automatic: bool = None</em>, <em class="sig-param">indexing_mode='Consistent'</em>, <em class="sig-param">included_paths=None</em>, <em class="sig-param">excluded_paths=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/indexing_policy_py3.html#IndexingPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB indexing policy.</p>
 <dl class="field-list simple">
@@ -593,7 +593,7 @@ include: ‘Consistent’, ‘Lazy’, ‘None’. Default value: “Consistent�
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.ContainerPartitionKey">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ContainerPartitionKey</code><span class="sig-paren">(</span><em>*</em>, <em>paths=None</em>, <em>kind='Hash'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/container_partition_key_py3.html#ContainerPartitionKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ContainerPartitionKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">ContainerPartitionKey</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">paths=None</em>, <em class="sig-param">kind='Hash'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/container_partition_key_py3.html#ContainerPartitionKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ContainerPartitionKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The configuration of the partition key to be used for partitioning data
 into multiple partitions.</p>
@@ -611,7 +611,7 @@ Possible values include: ‘Hash’, ‘Range’. Default value: “Hash” .</p
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.UniqueKey">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">UniqueKey</code><span class="sig-paren">(</span><em>*</em>, <em>paths=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/unique_key_py3.html#UniqueKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UniqueKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">UniqueKey</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">paths=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/unique_key_py3.html#UniqueKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UniqueKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The unique key on that enforces uniqueness constraint on documents in the
 collection in the Azure Cosmos DB service.</p>
@@ -625,7 +625,7 @@ Cosmos DB service</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.UniqueKeyPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">UniqueKeyPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>unique_keys=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/unique_key_policy_py3.html#UniqueKeyPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UniqueKeyPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">UniqueKeyPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">unique_keys=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/unique_key_policy_py3.html#UniqueKeyPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UniqueKeyPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The unique key policy configuration for specifying uniqueness constraints
 on documents in the collection in the Azure Cosmos DB service.</p>
@@ -639,7 +639,7 @@ constraint on documents in the collection in the Azure Cosmos DB service.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.ConflictResolutionPolicy">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ConflictResolutionPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>mode='LastWriterWins'</em>, <em>conflict_resolution_path: str = None</em>, <em>conflict_resolution_procedure: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/conflict_resolution_policy_py3.html#ConflictResolutionPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConflictResolutionPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">ConflictResolutionPolicy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">mode='LastWriterWins'</em>, <em class="sig-param">conflict_resolution_path: str = None</em>, <em class="sig-param">conflict_resolution_procedure: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/conflict_resolution_policy_py3.html#ConflictResolutionPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConflictResolutionPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The conflict resolution policy for the container.</p>
 <dl class="field-list simple">
@@ -658,7 +658,7 @@ in the case of custom mode.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.SqlContainer">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlContainer</code><span class="sig-paren">(</span><em>*</em>, <em>sql_container_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>indexing_policy=None</em>, <em>partition_key=None</em>, <em>default_ttl: int = None</em>, <em>unique_key_policy=None</em>, <em>conflict_resolution_policy=None</em>, <em>_rid: str = None</em>, <em>_ts=None</em>, <em>_etag: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_container_py3.html#SqlContainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlContainer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">SqlContainer</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">sql_container_id: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">indexing_policy=None</em>, <em class="sig-param">partition_key=None</em>, <em class="sig-param">default_ttl: int = None</em>, <em class="sig-param">unique_key_policy=None</em>, <em class="sig-param">conflict_resolution_policy=None</em>, <em class="sig-param">_rid: str = None</em>, <em class="sig-param">_ts=None</em>, <em class="sig-param">_etag: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_container_py3.html#SqlContainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlContainer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>An Azure Cosmos DB container.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -701,7 +701,7 @@ required for optimistic concurrency control.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MongoDBDatabase">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBDatabase</code><span class="sig-paren">(</span><em>*</em>, <em>mongo_db_database_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_database_py3.html#MongoDBDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBDatabase" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MongoDBDatabase</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">mongo_db_database_id: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_database_py3.html#MongoDBDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBDatabase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>An Azure Cosmos DB MongoDB database.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -729,7 +729,7 @@ database</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MongoDBCollection">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBCollection</code><span class="sig-paren">(</span><em>*</em>, <em>mongo_db_collection_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>shard_key=None</em>, <em>indexes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_collection_py3.html#MongoDBCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MongoDBCollection</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">mongo_db_collection_id: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">shard_key=None</em>, <em class="sig-param">indexes=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_collection_py3.html#MongoDBCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>An Azure Cosmos DB MongoDB collection.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -760,7 +760,7 @@ request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.Table">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>*</em>, <em>table_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/table_py3.html#Table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">table_id: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/table_py3.html#Table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>An Azure Cosmos DB Table.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -787,7 +787,7 @@ belongs.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.CassandraKeyspace">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraKeyspace</code><span class="sig-paren">(</span><em>*</em>, <em>cassandra_keyspace_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_keyspace_py3.html#CassandraKeyspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraKeyspace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">CassandraKeyspace</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">cassandra_keyspace_id: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_keyspace_py3.html#CassandraKeyspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraKeyspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>An Azure Cosmos DB Cassandra keyspace.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -815,7 +815,7 @@ keyspace</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.CassandraTable">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraTable</code><span class="sig-paren">(</span><em>*</em>, <em>cassandra_table_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>default_ttl: int = None</em>, <em>schema=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_table_py3.html#CassandraTable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraTable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">CassandraTable</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">cassandra_table_id: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">default_ttl: int = None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_table_py3.html#CassandraTable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>An Azure Cosmos DB Cassandra table.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -844,7 +844,7 @@ belongs.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.GremlinDatabase">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinDatabase</code><span class="sig-paren">(</span><em>*</em>, <em>gremlin_database_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>_rid: str = None</em>, <em>_ts=None</em>, <em>_etag: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_database_py3.html#GremlinDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinDatabase" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">GremlinDatabase</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">gremlin_database_id: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">_rid: str = None</em>, <em class="sig-param">_ts=None</em>, <em class="sig-param">_etag: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_database_py3.html#GremlinDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinDatabase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>An Azure Cosmos DB Gremlin database.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -877,7 +877,7 @@ required for optimistic concurrency control.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.GremlinGraph">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinGraph</code><span class="sig-paren">(</span><em>*</em>, <em>gremlin_graph_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>indexing_policy=None</em>, <em>partition_key=None</em>, <em>default_ttl: int = None</em>, <em>unique_key_policy=None</em>, <em>conflict_resolution_policy=None</em>, <em>_rid: str = None</em>, <em>_ts=None</em>, <em>_etag: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_graph_py3.html#GremlinGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinGraph" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">GremlinGraph</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">gremlin_graph_id: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">indexing_policy=None</em>, <em class="sig-param">partition_key=None</em>, <em class="sig-param">default_ttl: int = None</em>, <em class="sig-param">unique_key_policy=None</em>, <em class="sig-param">conflict_resolution_policy=None</em>, <em class="sig-param">_rid: str = None</em>, <em class="sig-param">_ts=None</em>, <em class="sig-param">_etag: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_graph_py3.html#GremlinGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinGraph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>An Azure Cosmos DB Gremlin graph.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -919,7 +919,7 @@ required for optimistic concurrency control.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.ErrorResponse">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>*</em>, <em>code: str = None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">ErrorResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Error Response.</p>
 <dl class="field-list simple">
@@ -934,7 +934,7 @@ required for optimistic concurrency control.</p></li>
 
 <dl class="exception">
 <dt id="azure.mgmt.cosmosdb.models.ErrorResponseException">
-<em class="property">exception </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ErrorResponseException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">ErrorResponseException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
 <p>Server responsed with exception of type: ‘ErrorResponse’.</p>
 <dl class="field-list simple">
@@ -949,7 +949,7 @@ required for optimistic concurrency control.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.FailoverPolicies">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">FailoverPolicies</code><span class="sig-paren">(</span><em>*</em>, <em>failover_policies</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/failover_policies_py3.html#FailoverPolicies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.FailoverPolicies" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">FailoverPolicies</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">failover_policies</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/failover_policies_py3.html#FailoverPolicies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.FailoverPolicies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The list of new failover policies for the failover priority change.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -962,7 +962,7 @@ required for optimistic concurrency control.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.RegionForOnlineOffline">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">RegionForOnlineOffline</code><span class="sig-paren">(</span><em>*</em>, <em>region: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/region_for_online_offline_py3.html#RegionForOnlineOffline"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.RegionForOnlineOffline" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">RegionForOnlineOffline</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">region: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/region_for_online_offline_py3.html#RegionForOnlineOffline"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.RegionForOnlineOffline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB region to online or offline.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -976,7 +976,7 @@ each word capitalized.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.Resource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Resource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The core properties of ARM resources.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1001,7 +1001,7 @@ belongs.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.ExtendedResourceProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ExtendedResourceProperties</code><span class="sig-paren">(</span><em>*</em>, <em>_rid: str = None</em>, <em>_ts=None</em>, <em>_etag: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/extended_resource_properties_py3.html#ExtendedResourceProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ExtendedResourceProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">ExtendedResourceProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">_rid: str = None</em>, <em class="sig-param">_ts=None</em>, <em class="sig-param">_etag: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/extended_resource_properties_py3.html#ExtendedResourceProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ExtendedResourceProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The system generated resource properties associated with SQL databases and
 SQL containers.</p>
@@ -1020,7 +1020,7 @@ required for optimistic concurrency control.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccountCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>locations</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>kind='GlobalDocumentDB'</em>, <em>consistency_policy=None</em>, <em>ip_range_filter: str = None</em>, <em>is_virtual_network_filter_enabled: bool = None</em>, <em>enable_automatic_failover: bool = None</em>, <em>capabilities=None</em>, <em>virtual_network_rules=None</em>, <em>enable_multiple_write_locations: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_create_update_parameters_py3.html#DatabaseAccountCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DatabaseAccountCreateUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">locations</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">kind='GlobalDocumentDB'</em>, <em class="sig-param">consistency_policy=None</em>, <em class="sig-param">ip_range_filter: str = None</em>, <em class="sig-param">is_virtual_network_filter_enabled: bool = None</em>, <em class="sig-param">enable_automatic_failover: bool = None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">virtual_network_rules=None</em>, <em class="sig-param">enable_multiple_write_locations: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_create_update_parameters_py3.html#DatabaseAccountCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>Parameters to create and update Cosmos DB database accounts.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1068,14 +1068,14 @@ multiple locations</p></li>
 </dl>
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters.database_account_offer_type">
-<code class="descname">database_account_offer_type</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters.database_account_offer_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">database_account_offer_type</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters.database_account_offer_type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountPatchParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccountPatchParameters</code><span class="sig-paren">(</span><em>*</em>, <em>tags=None</em>, <em>capabilities=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_patch_parameters_py3.html#DatabaseAccountPatchParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountPatchParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DatabaseAccountPatchParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_patch_parameters_py3.html#DatabaseAccountPatchParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountPatchParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters for patching Azure Cosmos DB database account properties.</p>
 <dl class="field-list simple">
@@ -1090,7 +1090,7 @@ multiple locations</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountListReadOnlyKeysResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccountListReadOnlyKeysResult</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_list_read_only_keys_result_py3.html#DatabaseAccountListReadOnlyKeysResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountListReadOnlyKeysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DatabaseAccountListReadOnlyKeysResult</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_list_read_only_keys_result_py3.html#DatabaseAccountListReadOnlyKeysResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountListReadOnlyKeysResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The read-only access keys for the given database account.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1109,7 +1109,7 @@ secondary read-only key.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountListKeysResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccountListKeysResult</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_list_keys_result_py3.html#DatabaseAccountListKeysResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountListKeysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DatabaseAccountListKeysResult</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_list_keys_result_py3.html#DatabaseAccountListKeysResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountListKeysResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The access keys for the given database account.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1132,7 +1132,7 @@ secondary read-only key.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountConnectionString">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccountConnectionString</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_connection_string_py3.html#DatabaseAccountConnectionString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountConnectionString" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DatabaseAccountConnectionString</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_connection_string_py3.html#DatabaseAccountConnectionString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountConnectionString" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Connection string for the Cosmos DB account.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1149,7 +1149,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountListConnectionStringsResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccountListConnectionStringsResult</code><span class="sig-paren">(</span><em>*</em>, <em>connection_strings=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_list_connection_strings_result_py3.html#DatabaseAccountListConnectionStringsResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountListConnectionStringsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DatabaseAccountListConnectionStringsResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">connection_strings=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_list_connection_strings_result_py3.html#DatabaseAccountListConnectionStringsResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountListConnectionStringsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The connection strings for the given database account.</p>
 <dl class="field-list simple">
@@ -1162,7 +1162,7 @@ for the Cosmos DB account.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountRegenerateKeyParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccountRegenerateKeyParameters</code><span class="sig-paren">(</span><em>*</em>, <em>key_kind</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_regenerate_key_parameters_py3.html#DatabaseAccountRegenerateKeyParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountRegenerateKeyParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DatabaseAccountRegenerateKeyParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key_kind</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_regenerate_key_parameters_py3.html#DatabaseAccountRegenerateKeyParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountRegenerateKeyParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters to regenerate the keys within the database account.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1176,7 +1176,7 @@ include: ‘primary’, ‘secondary’, ‘primaryReadonly’, ‘secondaryRead
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.SqlDatabaseResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlDatabaseResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_database_resource_py3.html#SqlDatabaseResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlDatabaseResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">SqlDatabaseResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_database_resource_py3.html#SqlDatabaseResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlDatabaseResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB SQL database id object.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1189,7 +1189,7 @@ include: ‘primary’, ‘secondary’, ‘primaryReadonly’, ‘secondaryRead
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.SqlDatabaseCreateUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlDatabaseCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_database_create_update_parameters_py3.html#SqlDatabaseCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlDatabaseCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">SqlDatabaseCreateUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_database_create_update_parameters_py3.html#SqlDatabaseCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlDatabaseCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters to create and update Cosmos DB SQL database.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1206,7 +1206,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.SqlContainerResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlContainerResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>indexing_policy=None</em>, <em>partition_key=None</em>, <em>default_ttl: int = None</em>, <em>unique_key_policy=None</em>, <em>conflict_resolution_policy=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_container_resource_py3.html#SqlContainerResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlContainerResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">SqlContainerResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">indexing_policy=None</em>, <em class="sig-param">partition_key=None</em>, <em class="sig-param">default_ttl: int = None</em>, <em class="sig-param">unique_key_policy=None</em>, <em class="sig-param">conflict_resolution_policy=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_container_resource_py3.html#SqlContainerResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlContainerResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB SQL container resource object.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1232,7 +1232,7 @@ container.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.SqlContainerCreateUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlContainerCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_container_create_update_parameters_py3.html#SqlContainerCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlContainerCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">SqlContainerCreateUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_container_create_update_parameters_py3.html#SqlContainerCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlContainerCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters to create and update Cosmos DB container.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1249,7 +1249,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MongoDBDatabaseResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBDatabaseResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_database_resource_py3.html#MongoDBDatabaseResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBDatabaseResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MongoDBDatabaseResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_database_resource_py3.html#MongoDBDatabaseResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBDatabaseResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB MongoDB database id object.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1262,7 +1262,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MongoDBDatabaseCreateUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBDatabaseCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_database_create_update_parameters_py3.html#MongoDBDatabaseCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBDatabaseCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MongoDBDatabaseCreateUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_database_create_update_parameters_py3.html#MongoDBDatabaseCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBDatabaseCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters to create and update Cosmos DB MongoDB database.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1279,7 +1279,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MongoIndexKeys">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoIndexKeys</code><span class="sig-paren">(</span><em>*</em>, <em>keys=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_index_keys_py3.html#MongoIndexKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoIndexKeys" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MongoIndexKeys</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_index_keys_py3.html#MongoIndexKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoIndexKeys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB MongoDB collection resource object.</p>
 <dl class="field-list simple">
@@ -1292,7 +1292,7 @@ DB service</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MongoIndexOptions">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoIndexOptions</code><span class="sig-paren">(</span><em>*</em>, <em>expire_after_seconds: int = None</em>, <em>unique: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_index_options_py3.html#MongoIndexOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoIndexOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MongoIndexOptions</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">expire_after_seconds: int = None</em>, <em class="sig-param">unique: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_index_options_py3.html#MongoIndexOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoIndexOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB MongoDB collection index options.</p>
 <dl class="field-list simple">
@@ -1307,7 +1307,7 @@ DB service</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MongoIndex">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoIndex</code><span class="sig-paren">(</span><em>*</em>, <em>key=None</em>, <em>options=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_index_py3.html#MongoIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoIndex" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MongoIndex</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key=None</em>, <em class="sig-param">options=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_index_py3.html#MongoIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoIndex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB MongoDB collection index key.</p>
 <dl class="field-list simple">
@@ -1322,7 +1322,7 @@ DB service</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MongoDBCollectionResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBCollectionResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>shard_key=None</em>, <em>indexes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_collection_resource_py3.html#MongoDBCollectionResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBCollectionResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MongoDBCollectionResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">shard_key=None</em>, <em class="sig-param">indexes=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_collection_resource_py3.html#MongoDBCollectionResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBCollectionResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB MongoDB collection resource object.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1340,7 +1340,7 @@ request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MongoDBCollectionCreateUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBCollectionCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_collection_create_update_parameters_py3.html#MongoDBCollectionCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBCollectionCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MongoDBCollectionCreateUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_collection_create_update_parameters_py3.html#MongoDBCollectionCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBCollectionCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters to create and update Cosmos DB MongoDB collection.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1358,7 +1358,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.TableResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">TableResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/table_resource_py3.html#TableResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.TableResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">TableResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/table_resource_py3.html#TableResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.TableResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB table id object.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1371,7 +1371,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.TableCreateUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">TableCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/table_create_update_parameters_py3.html#TableCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.TableCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">TableCreateUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/table_create_update_parameters_py3.html#TableCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.TableCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters to create and update Cosmos DB Table.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1388,7 +1388,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.CassandraKeyspaceResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraKeyspaceResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_keyspace_resource_py3.html#CassandraKeyspaceResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraKeyspaceResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">CassandraKeyspaceResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_keyspace_resource_py3.html#CassandraKeyspaceResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraKeyspaceResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB Cassandra keyspace id object.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1401,7 +1401,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.CassandraKeyspaceCreateUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraKeyspaceCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_keyspace_create_update_parameters_py3.html#CassandraKeyspaceCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraKeyspaceCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">CassandraKeyspaceCreateUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_keyspace_create_update_parameters_py3.html#CassandraKeyspaceCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraKeyspaceCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters to create and update Cosmos DB Cassandra keyspace.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1419,7 +1419,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.Column">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Column</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>type: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/column_py3.html#Column"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Column" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">Column</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">type: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/column_py3.html#Column"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Column" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB Cassandra table column.</p>
 <dl class="field-list simple">
@@ -1434,7 +1434,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.CassandraPartitionKey">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraPartitionKey</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_partition_key_py3.html#CassandraPartitionKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraPartitionKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">CassandraPartitionKey</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_partition_key_py3.html#CassandraPartitionKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraPartitionKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB Cassandra table partition key.</p>
 <dl class="field-list simple">
@@ -1446,7 +1446,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.ClusterKey">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ClusterKey</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>order_by: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cluster_key_py3.html#ClusterKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ClusterKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">ClusterKey</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">order_by: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cluster_key_py3.html#ClusterKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ClusterKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB Cassandra table cluster key.</p>
 <dl class="field-list simple">
@@ -1462,7 +1462,7 @@ support “Asc” and “Desc”</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.CassandraSchema">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraSchema</code><span class="sig-paren">(</span><em>*</em>, <em>columns=None</em>, <em>partition_keys=None</em>, <em>cluster_keys=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_schema_py3.html#CassandraSchema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraSchema" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">CassandraSchema</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">columns=None</em>, <em class="sig-param">partition_keys=None</em>, <em class="sig-param">cluster_keys=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_schema_py3.html#CassandraSchema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraSchema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB Cassandra table schema.</p>
 <dl class="field-list simple">
@@ -1478,7 +1478,7 @@ support “Asc” and “Desc”</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.CassandraTableResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraTableResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>default_ttl: int = None</em>, <em>schema=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_table_resource_py3.html#CassandraTableResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraTableResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">CassandraTableResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">default_ttl: int = None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_table_resource_py3.html#CassandraTableResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraTableResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB Cassandra table id object.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1495,7 +1495,7 @@ support “Asc” and “Desc”</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.CassandraTableCreateUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraTableCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_table_create_update_parameters_py3.html#CassandraTableCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraTableCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">CassandraTableCreateUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_table_create_update_parameters_py3.html#CassandraTableCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraTableCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters to create and update Cosmos DB Cassandra table.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1512,7 +1512,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.GremlinDatabaseResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinDatabaseResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_database_resource_py3.html#GremlinDatabaseResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinDatabaseResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">GremlinDatabaseResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_database_resource_py3.html#GremlinDatabaseResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinDatabaseResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB Gremlin database id object.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1525,7 +1525,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.GremlinDatabaseCreateUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinDatabaseCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_database_create_update_parameters_py3.html#GremlinDatabaseCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinDatabaseCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">GremlinDatabaseCreateUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_database_create_update_parameters_py3.html#GremlinDatabaseCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinDatabaseCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters to create and update Cosmos DB Gremlin database.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1542,7 +1542,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.GremlinGraphResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinGraphResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>indexing_policy=None</em>, <em>partition_key=None</em>, <em>default_ttl: int = None</em>, <em>unique_key_policy=None</em>, <em>conflict_resolution_policy=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_graph_resource_py3.html#GremlinGraphResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinGraphResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">GremlinGraphResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">indexing_policy=None</em>, <em class="sig-param">partition_key=None</em>, <em class="sig-param">default_ttl: int = None</em>, <em class="sig-param">unique_key_policy=None</em>, <em class="sig-param">conflict_resolution_policy=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_graph_resource_py3.html#GremlinGraphResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinGraphResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cosmos DB Gremlin graph resource object.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1567,7 +1567,7 @@ graph.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.GremlinGraphCreateUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinGraphCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_graph_create_update_parameters_py3.html#GremlinGraphCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinGraphCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">GremlinGraphCreateUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource</em>, <em class="sig-param">options</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_graph_create_update_parameters_py3.html#GremlinGraphCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinGraphCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters to create and update Cosmos DB Gremlin graph.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -1584,7 +1584,7 @@ the request. This corresponds to the headers sent with the request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.OperationDisplay">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">OperationDisplay</code><span class="sig-paren">(</span><em>*</em>, <em>provider: str = None</em>, <em>resource: str = None</em>, <em>operation: str = None</em>, <em>description: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The object that represents the operation.</p>
 <dl class="field-list simple">
@@ -1602,7 +1602,7 @@ endpoint, etc.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.Operation">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>display=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Operation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Operation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>REST API operation.</p>
 <dl class="field-list simple">
@@ -1617,7 +1617,7 @@ endpoint, etc.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MetricName">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MetricName</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_name_py3.html#MetricName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricName" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MetricName</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_name_py3.html#MetricName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A metric name.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1634,7 +1634,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.Usage">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Usage</code><span class="sig-paren">(</span><em>*</em>, <em>unit=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/usage_py3.html#Usage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Usage" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">Usage</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/usage_py3.html#Usage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Usage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The usage data for a usage request.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1658,7 +1658,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.PartitionUsage">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">PartitionUsage</code><span class="sig-paren">(</span><em>*</em>, <em>unit=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/partition_usage_py3.html#PartitionUsage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionUsage" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">PartitionUsage</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/partition_usage_py3.html#PartitionUsage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionUsage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.usage_py3.Usage</span></code></p>
 <p>The partition level usage data for a usage request.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1685,7 +1685,7 @@ identifier) of the usages.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MetricAvailability">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MetricAvailability</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_availability_py3.html#MetricAvailability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricAvailability" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MetricAvailability</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_availability_py3.html#MetricAvailability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricAvailability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The availability of the metric.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1703,7 +1703,7 @@ values.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MetricDefinition">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MetricDefinition</code><span class="sig-paren">(</span><em>*</em>, <em>unit=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_definition_py3.html#MetricDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricDefinition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MetricDefinition</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_definition_py3.html#MetricDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The definition of a metric.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1731,7 +1731,7 @@ metric. Possible values include: ‘None’, ‘Average’, ‘Total’, ‘Mini
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MetricValue">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MetricValue</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_value_py3.html#MetricValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricValue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MetricValue</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_value_py3.html#MetricValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricValue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Represents metrics values.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1752,7 +1752,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.Metric">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Metric</code><span class="sig-paren">(</span><em>*</em>, <em>unit=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_py3.html#Metric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Metric" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">Metric</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_py3.html#Metric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Metric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Metric data.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1779,7 +1779,7 @@ timestep.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.PercentileMetricValue">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">PercentileMetricValue</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/percentile_metric_value_py3.html#PercentileMetricValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PercentileMetricValue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">PercentileMetricValue</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/percentile_metric_value_py3.html#PercentileMetricValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PercentileMetricValue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.metric_value_py3.MetricValue</span></code></p>
 <p>Represents percentile metrics values.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1807,7 +1807,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.PercentileMetric">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">PercentileMetric</code><span class="sig-paren">(</span><em>*</em>, <em>unit=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/percentile_metric_py3.html#PercentileMetric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PercentileMetric" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">PercentileMetric</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/percentile_metric_py3.html#PercentileMetric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PercentileMetric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Percentile Metric data.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1834,7 +1834,7 @@ window and timestep.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.PartitionMetric">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">PartitionMetric</code><span class="sig-paren">(</span><em>*</em>, <em>unit=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/partition_metric_py3.html#PartitionMetric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionMetric" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">PartitionMetric</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/partition_metric_py3.html#PartitionMetric"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionMetric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.metric_py3.Metric</span></code></p>
 <p>The metric values for a single partition.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -1865,406 +1865,406 @@ identifier) of the metric values.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccountPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_paged.html#DatabaseAccountPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DatabaseAccountPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_paged.html#DatabaseAccountPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.DatabaseAccount" title="azure.mgmt.cosmosdb.models.DatabaseAccount"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatabaseAccount</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MetricPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MetricPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_paged.html#MetricPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MetricPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_paged.html#MetricPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.Metric" title="azure.mgmt.cosmosdb.models.Metric"><code class="xref py py-class docutils literal notranslate"><span class="pre">Metric</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.UsagePaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">UsagePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/usage_paged.html#UsagePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UsagePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">UsagePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/usage_paged.html#UsagePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UsagePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.Usage" title="azure.mgmt.cosmosdb.models.Usage"><code class="xref py py-class docutils literal notranslate"><span class="pre">Usage</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MetricDefinitionPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MetricDefinitionPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_definition_paged.html#MetricDefinitionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricDefinitionPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MetricDefinitionPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_definition_paged.html#MetricDefinitionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricDefinitionPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricDefinition" title="azure.mgmt.cosmosdb.models.MetricDefinition"><code class="xref py py-class docutils literal notranslate"><span class="pre">MetricDefinition</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.SqlDatabasePaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlDatabasePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_database_paged.html#SqlDatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlDatabasePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">SqlDatabasePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_database_paged.html#SqlDatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlDatabasePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.SqlDatabase" title="azure.mgmt.cosmosdb.models.SqlDatabase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SqlDatabase</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.SqlContainerPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlContainerPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_container_paged.html#SqlContainerPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlContainerPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">SqlContainerPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_container_paged.html#SqlContainerPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlContainerPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.SqlContainer" title="azure.mgmt.cosmosdb.models.SqlContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">SqlContainer</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MongoDBDatabasePaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBDatabasePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_database_paged.html#MongoDBDatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBDatabasePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MongoDBDatabasePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_database_paged.html#MongoDBDatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBDatabasePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.MongoDBDatabase" title="azure.mgmt.cosmosdb.models.MongoDBDatabase"><code class="xref py py-class docutils literal notranslate"><span class="pre">MongoDBDatabase</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.MongoDBCollectionPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBCollectionPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_collection_paged.html#MongoDBCollectionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBCollectionPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">MongoDBCollectionPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_collection_paged.html#MongoDBCollectionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBCollectionPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.MongoDBCollection" title="azure.mgmt.cosmosdb.models.MongoDBCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">MongoDBCollection</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.TablePaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">TablePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/table_paged.html#TablePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.TablePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">TablePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/table_paged.html#TablePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.TablePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.Table" title="azure.mgmt.cosmosdb.models.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.CassandraKeyspacePaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraKeyspacePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_keyspace_paged.html#CassandraKeyspacePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraKeyspacePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">CassandraKeyspacePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_keyspace_paged.html#CassandraKeyspacePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraKeyspacePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.CassandraKeyspace" title="azure.mgmt.cosmosdb.models.CassandraKeyspace"><code class="xref py py-class docutils literal notranslate"><span class="pre">CassandraKeyspace</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.CassandraTablePaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraTablePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_table_paged.html#CassandraTablePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraTablePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">CassandraTablePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_table_paged.html#CassandraTablePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraTablePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.CassandraTable" title="azure.mgmt.cosmosdb.models.CassandraTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CassandraTable</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.GremlinDatabasePaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinDatabasePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_database_paged.html#GremlinDatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinDatabasePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">GremlinDatabasePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_database_paged.html#GremlinDatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinDatabasePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.GremlinDatabase" title="azure.mgmt.cosmosdb.models.GremlinDatabase"><code class="xref py py-class docutils literal notranslate"><span class="pre">GremlinDatabase</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.GremlinGraphPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinGraphPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_graph_paged.html#GremlinGraphPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinGraphPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">GremlinGraphPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_graph_paged.html#GremlinGraphPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinGraphPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.GremlinGraph" title="azure.mgmt.cosmosdb.models.GremlinGraph"><code class="xref py py-class docutils literal notranslate"><span class="pre">GremlinGraph</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.OperationPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">OperationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.Operation" title="azure.mgmt.cosmosdb.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.PercentileMetricPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">PercentileMetricPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/percentile_metric_paged.html#PercentileMetricPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PercentileMetricPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">PercentileMetricPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/percentile_metric_paged.html#PercentileMetricPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PercentileMetricPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.PercentileMetric" title="azure.mgmt.cosmosdb.models.PercentileMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">PercentileMetric</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.PartitionMetricPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">PartitionMetricPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/partition_metric_paged.html#PartitionMetricPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionMetricPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">PartitionMetricPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/partition_metric_paged.html#PartitionMetricPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionMetricPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.PartitionMetric" title="azure.mgmt.cosmosdb.models.PartitionMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartitionMetric</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.PartitionUsagePaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">PartitionUsagePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/partition_usage_paged.html#PartitionUsagePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionUsagePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">PartitionUsagePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/partition_usage_paged.html#PartitionUsagePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionUsagePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.PartitionUsage" title="azure.mgmt.cosmosdb.models.PartitionUsage"><code class="xref py py-class docutils literal notranslate"><span class="pre">PartitionUsage</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountKind">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccountKind</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#DatabaseAccountKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountKind" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DatabaseAccountKind</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#DatabaseAccountKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountKind" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountKind.global_document_db">
-<code class="descname">global_document_db</code><em class="property"> = 'GlobalDocumentDB'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountKind.global_document_db" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">global_document_db</code><em class="property"> = 'GlobalDocumentDB'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountKind.global_document_db" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountKind.mongo_db">
-<code class="descname">mongo_db</code><em class="property"> = 'MongoDB'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountKind.mongo_db" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mongo_db</code><em class="property"> = 'MongoDB'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountKind.mongo_db" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountKind.parse">
-<code class="descname">parse</code><em class="property"> = 'Parse'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountKind.parse" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">parse</code><em class="property"> = 'Parse'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountKind.parse" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountOfferType">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccountOfferType</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#DatabaseAccountOfferType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountOfferType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DatabaseAccountOfferType</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#DatabaseAccountOfferType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountOfferType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountOfferType.standard">
-<code class="descname">standard</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountOfferType.standard" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">standard</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountOfferType.standard" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DefaultConsistencyLevel">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DefaultConsistencyLevel</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#DefaultConsistencyLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DefaultConsistencyLevel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DefaultConsistencyLevel</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#DefaultConsistencyLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DefaultConsistencyLevel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.bounded_staleness">
-<code class="descname">bounded_staleness</code><em class="property"> = 'BoundedStaleness'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.bounded_staleness" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bounded_staleness</code><em class="property"> = 'BoundedStaleness'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.bounded_staleness" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.consistent_prefix">
-<code class="descname">consistent_prefix</code><em class="property"> = 'ConsistentPrefix'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.consistent_prefix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">consistent_prefix</code><em class="property"> = 'ConsistentPrefix'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.consistent_prefix" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.eventual">
-<code class="descname">eventual</code><em class="property"> = 'Eventual'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.eventual" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">eventual</code><em class="property"> = 'Eventual'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.eventual" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.session">
-<code class="descname">session</code><em class="property"> = 'Session'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.session" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">session</code><em class="property"> = 'Session'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.session" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.strong">
-<code class="descname">strong</code><em class="property"> = 'Strong'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.strong" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">strong</code><em class="property"> = 'Strong'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DefaultConsistencyLevel.strong" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.IndexingMode">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">IndexingMode</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#IndexingMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingMode" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">IndexingMode</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#IndexingMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingMode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.IndexingMode.consistent">
-<code class="descname">consistent</code><em class="property"> = 'Consistent'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingMode.consistent" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">consistent</code><em class="property"> = 'Consistent'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingMode.consistent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.IndexingMode.lazy">
-<code class="descname">lazy</code><em class="property"> = 'Lazy'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingMode.lazy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lazy</code><em class="property"> = 'Lazy'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingMode.lazy" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.IndexingMode.none">
-<code class="descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingMode.none" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingMode.none" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DataType">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DataType</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#DataType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DataType</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#DataType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DataType.line_string">
-<code class="descname">line_string</code><em class="property"> = 'LineString'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.line_string" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">line_string</code><em class="property"> = 'LineString'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.line_string" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DataType.multi_polygon">
-<code class="descname">multi_polygon</code><em class="property"> = 'MultiPolygon'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.multi_polygon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">multi_polygon</code><em class="property"> = 'MultiPolygon'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.multi_polygon" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DataType.number">
-<code class="descname">number</code><em class="property"> = 'Number'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.number" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">number</code><em class="property"> = 'Number'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.number" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DataType.point">
-<code class="descname">point</code><em class="property"> = 'Point'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.point" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">point</code><em class="property"> = 'Point'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.point" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DataType.polygon">
-<code class="descname">polygon</code><em class="property"> = 'Polygon'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.polygon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">polygon</code><em class="property"> = 'Polygon'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.polygon" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.DataType.string">
-<code class="descname">string</code><em class="property"> = 'String'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.string" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">string</code><em class="property"> = 'String'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.string" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.IndexKind">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">IndexKind</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#IndexKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexKind" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">IndexKind</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#IndexKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexKind" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.IndexKind.hash">
-<code class="descname">hash</code><em class="property"> = 'Hash'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexKind.hash" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">hash</code><em class="property"> = 'Hash'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexKind.hash" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.IndexKind.range">
-<code class="descname">range</code><em class="property"> = 'Range'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexKind.range" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">range</code><em class="property"> = 'Range'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexKind.range" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.IndexKind.spatial">
-<code class="descname">spatial</code><em class="property"> = 'Spatial'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexKind.spatial" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">spatial</code><em class="property"> = 'Spatial'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexKind.spatial" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.PartitionKind">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">PartitionKind</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#PartitionKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionKind" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">PartitionKind</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#PartitionKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionKind" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.PartitionKind.hash">
-<code class="descname">hash</code><em class="property"> = 'Hash'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionKind.hash" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">hash</code><em class="property"> = 'Hash'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionKind.hash" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.PartitionKind.range">
-<code class="descname">range</code><em class="property"> = 'Range'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionKind.range" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">range</code><em class="property"> = 'Range'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionKind.range" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.ConflictResolutionMode">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ConflictResolutionMode</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#ConflictResolutionMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConflictResolutionMode" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">ConflictResolutionMode</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#ConflictResolutionMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConflictResolutionMode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.ConflictResolutionMode.custom">
-<code class="descname">custom</code><em class="property"> = 'Custom'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConflictResolutionMode.custom" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">custom</code><em class="property"> = 'Custom'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConflictResolutionMode.custom" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.ConflictResolutionMode.last_writer_wins">
-<code class="descname">last_writer_wins</code><em class="property"> = 'LastWriterWins'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConflictResolutionMode.last_writer_wins" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">last_writer_wins</code><em class="property"> = 'LastWriterWins'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConflictResolutionMode.last_writer_wins" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.KeyKind">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">KeyKind</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#KeyKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.KeyKind" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">KeyKind</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#KeyKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.KeyKind" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.KeyKind.primary">
-<code class="descname">primary</code><em class="property"> = 'primary'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.KeyKind.primary" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">primary</code><em class="property"> = 'primary'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.KeyKind.primary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.KeyKind.primary_readonly">
-<code class="descname">primary_readonly</code><em class="property"> = 'primaryReadonly'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.KeyKind.primary_readonly" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">primary_readonly</code><em class="property"> = 'primaryReadonly'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.KeyKind.primary_readonly" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.KeyKind.secondary">
-<code class="descname">secondary</code><em class="property"> = 'secondary'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.KeyKind.secondary" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">secondary</code><em class="property"> = 'secondary'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.KeyKind.secondary" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.KeyKind.secondary_readonly">
-<code class="descname">secondary_readonly</code><em class="property"> = 'secondaryReadonly'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.KeyKind.secondary_readonly" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">secondary_readonly</code><em class="property"> = 'secondaryReadonly'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.KeyKind.secondary_readonly" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.UnitType">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">UnitType</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#UnitType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">UnitType</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#UnitType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.UnitType.bytes">
-<code class="descname">bytes</code><em class="property"> = 'Bytes'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.bytes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bytes</code><em class="property"> = 'Bytes'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.bytes" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.UnitType.bytes_per_second">
-<code class="descname">bytes_per_second</code><em class="property"> = 'BytesPerSecond'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.bytes_per_second" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bytes_per_second</code><em class="property"> = 'BytesPerSecond'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.bytes_per_second" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.UnitType.count">
-<code class="descname">count</code><em class="property"> = 'Count'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">count</code><em class="property"> = 'Count'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.count" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.UnitType.count_per_second">
-<code class="descname">count_per_second</code><em class="property"> = 'CountPerSecond'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.count_per_second" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">count_per_second</code><em class="property"> = 'CountPerSecond'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.count_per_second" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.UnitType.milliseconds">
-<code class="descname">milliseconds</code><em class="property"> = 'Milliseconds'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.milliseconds" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">milliseconds</code><em class="property"> = 'Milliseconds'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.milliseconds" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.UnitType.percent">
-<code class="descname">percent</code><em class="property"> = 'Percent'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.percent" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">percent</code><em class="property"> = 'Percent'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.percent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.UnitType.seconds">
-<code class="descname">seconds</code><em class="property"> = 'Seconds'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.seconds" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">seconds</code><em class="property"> = 'Seconds'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.seconds" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.PrimaryAggregationType">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">PrimaryAggregationType</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#PrimaryAggregationType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">PrimaryAggregationType</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#PrimaryAggregationType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.PrimaryAggregationType.average">
-<code class="descname">average</code><em class="property"> = 'Average'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType.average" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">average</code><em class="property"> = 'Average'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType.average" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.PrimaryAggregationType.last">
-<code class="descname">last</code><em class="property"> = 'Last'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType.last" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">last</code><em class="property"> = 'Last'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType.last" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.PrimaryAggregationType.maximum">
-<code class="descname">maximum</code><em class="property"> = 'Maximum'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType.maximum" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">maximum</code><em class="property"> = 'Maximum'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType.maximum" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.PrimaryAggregationType.minimimum">
-<code class="descname">minimimum</code><em class="property"> = 'Minimimum'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType.minimimum" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">minimimum</code><em class="property"> = 'Minimimum'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType.minimimum" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.PrimaryAggregationType.none">
-<code class="descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType.none" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType.none" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.PrimaryAggregationType.total">
-<code class="descname">total</code><em class="property"> = 'Total'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType.total" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">total</code><em class="property"> = 'Total'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PrimaryAggregationType.total" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

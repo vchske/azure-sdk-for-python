@@ -318,7 +318,7 @@
 <span id="azure-mgmt-resourcegraph-models-module"></span><h1>azure.mgmt.resourcegraph.models module<a class="headerlink" href="#module-azure.mgmt.resourcegraph.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.QueryRequestOptions">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">QueryRequestOptions</code><span class="sig-paren">(</span><em>*</em>, <em>skip_token: str = None</em>, <em>top: int = None</em>, <em>skip: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/query_request_options_py3.html#QueryRequestOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.QueryRequestOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">QueryRequestOptions</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">skip_token: str = None</em>, <em class="sig-param">top: int = None</em>, <em class="sig-param">skip: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/query_request_options_py3.html#QueryRequestOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.QueryRequestOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The options for query evaluation.</p>
 <dl class="field-list simple">
@@ -337,7 +337,7 @@ Overrides the next page offset when <code class="docutils literal notranslate"><
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.FacetRequestOptions">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">FacetRequestOptions</code><span class="sig-paren">(</span><em>*</em>, <em>sort_by: str = None</em>, <em>sort_order='desc'</em>, <em>filter: str = None</em>, <em>top: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/facet_request_options_py3.html#FacetRequestOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetRequestOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">FacetRequestOptions</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">sort_by: str = None</em>, <em class="sig-param">sort_order='desc'</em>, <em class="sig-param">filter: str = None</em>, <em class="sig-param">top: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/facet_request_options_py3.html#FacetRequestOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetRequestOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The options for facet evaluation.</p>
 <dl class="field-list simple">
@@ -357,7 +357,7 @@ will be run on main query’s result, just before the actual faceting.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.FacetRequest">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">FacetRequest</code><span class="sig-paren">(</span><em>*</em>, <em>expression: str</em>, <em>options=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/facet_request_py3.html#FacetRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">FacetRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">expression: str</em>, <em class="sig-param">options=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/facet_request_py3.html#FacetRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A request to compute additional statistics (facets) over the query results.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -373,7 +373,7 @@ will be run on main query’s result, just before the actual faceting.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.QueryRequest">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">QueryRequest</code><span class="sig-paren">(</span><em>*</em>, <em>subscriptions</em>, <em>query: str</em>, <em>options=None</em>, <em>facets=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/query_request_py3.html#QueryRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.QueryRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">QueryRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">subscriptions</em>, <em class="sig-param">query: str</em>, <em class="sig-param">options=None</em>, <em class="sig-param">facets=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/query_request_py3.html#QueryRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.QueryRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes a query to be executed.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -393,7 +393,7 @@ result.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.Column">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">Column</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/column_py3.html#Column"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Column" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">Column</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">type</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/column_py3.html#Column"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Column" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Query result column descriptor.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -410,7 +410,7 @@ result.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.Table">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>*</em>, <em>columns</em>, <em>rows</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/table_py3.html#Table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">columns</em>, <em class="sig-param">rows</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/table_py3.html#Table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Query output in tabular format.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -426,7 +426,7 @@ result.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.Facet">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">Facet</code><span class="sig-paren">(</span><em>*</em>, <em>expression: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/facet_py3.html#Facet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Facet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">Facet</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">expression: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/facet_py3.html#Facet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Facet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A facet containing additional statistics on the response of a query. Can be
 either FacetResult or FacetError.</p>
@@ -446,7 +446,7 @@ corresponding facet request.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.QueryResponse">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">QueryResponse</code><span class="sig-paren">(</span><em>*</em>, <em>total_records: int</em>, <em>count: int</em>, <em>result_truncated</em>, <em>data</em>, <em>skip_token: str = None</em>, <em>facets=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/query_response_py3.html#QueryResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.QueryResponse" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">QueryResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">total_records: int</em>, <em class="sig-param">count: int</em>, <em class="sig-param">result_truncated</em>, <em class="sig-param">data</em>, <em class="sig-param">skip_token: str = None</em>, <em class="sig-param">facets=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/query_response_py3.html#QueryResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.QueryResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Query result.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -473,7 +473,7 @@ current request) to retrieve the next page of data.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.FacetResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">FacetResult</code><span class="sig-paren">(</span><em>*</em>, <em>expression: str</em>, <em>total_records: int</em>, <em>count: int</em>, <em>data</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/facet_result_py3.html#FacetResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">FacetResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">expression: str</em>, <em class="sig-param">total_records: int</em>, <em class="sig-param">count: int</em>, <em class="sig-param">data</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/facet_result_py3.html#FacetResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.resourcegraph.models.facet_py3.Facet</span></code></p>
 <p>Successfully executed facet containing additional statistics on the
 response of a query.</p>
@@ -496,7 +496,7 @@ if the facet is valid.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.ErrorDetails">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">ErrorDetails</code><span class="sig-paren">(</span><em>*</em>, <em>code: str</em>, <em>message: str</em>, <em>additional_properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/error_details_py3.html#ErrorDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ErrorDetails" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">ErrorDetails</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code: str</em>, <em class="sig-param">message: str</em>, <em class="sig-param">additional_properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/error_details_py3.html#ErrorDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ErrorDetails" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Error details.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -514,7 +514,7 @@ deserialized this collection</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.FacetError">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">FacetError</code><span class="sig-paren">(</span><em>*</em>, <em>expression: str</em>, <em>errors</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/facet_error_py3.html#FacetError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetError" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">FacetError</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">expression: str</em>, <em class="sig-param">errors</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/facet_error_py3.html#FacetError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.resourcegraph.models.facet_py3.Facet</span></code></p>
 <p>A facet whose execution resulted in an error.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -533,7 +533,7 @@ details.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.Error">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">Error</code><span class="sig-paren">(</span><em>*</em>, <em>code: str</em>, <em>message: str</em>, <em>details=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/error_py3.html#Error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Error" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">Error</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code: str</em>, <em class="sig-param">message: str</em>, <em class="sig-param">details=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/error_py3.html#Error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Error info.</p>
 <p>Error details.</p>
@@ -551,7 +551,7 @@ details.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.ErrorResponse">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>*</em>, <em>error</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">ErrorResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">error</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Error response.</p>
 <p>An error response from the API.</p>
@@ -565,7 +565,7 @@ details.</p></li>
 
 <dl class="exception">
 <dt id="azure.mgmt.resourcegraph.models.ErrorResponseException">
-<em class="property">exception </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">ErrorResponseException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">ErrorResponseException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
 <p>Server responsed with exception of type: ‘ErrorResponse’.</p>
 <dl class="field-list simple">
@@ -580,7 +580,7 @@ details.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.OperationDisplay">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">OperationDisplay</code><span class="sig-paren">(</span><em>*</em>, <em>provider: str = None</em>, <em>resource: str = None</em>, <em>operation: str = None</em>, <em>description: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Display metadata associated with the operation.</p>
 <dl class="field-list simple">
@@ -597,7 +597,7 @@ details.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.Operation">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>display=None</em>, <em>origin: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Operation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">origin: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Operation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Resource Graph REST API operation definition.</p>
 <dl class="field-list simple">
@@ -613,73 +613,73 @@ details.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.OperationPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">OperationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.resourcegraph.models.Operation" title="azure.mgmt.resourcegraph.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.FacetSortOrder">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">FacetSortOrder</code><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/resource_graph_client_enums.html#FacetSortOrder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetSortOrder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">FacetSortOrder</code><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/resource_graph_client_enums.html#FacetSortOrder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetSortOrder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.resourcegraph.models.FacetSortOrder.asc">
-<code class="descname">asc</code><em class="property"> = 'asc'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetSortOrder.asc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">asc</code><em class="property"> = 'asc'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetSortOrder.asc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.resourcegraph.models.FacetSortOrder.desc">
-<code class="descname">desc</code><em class="property"> = 'desc'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetSortOrder.desc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">desc</code><em class="property"> = 'desc'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.FacetSortOrder.desc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.ResultTruncated">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">ResultTruncated</code><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/resource_graph_client_enums.html#ResultTruncated"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ResultTruncated" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">ResultTruncated</code><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/resource_graph_client_enums.html#ResultTruncated"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ResultTruncated" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.resourcegraph.models.ResultTruncated.false">
-<code class="descname">false</code><em class="property"> = 'false'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ResultTruncated.false" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">false</code><em class="property"> = 'false'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ResultTruncated.false" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.resourcegraph.models.ResultTruncated.true">
-<code class="descname">true</code><em class="property"> = 'true'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ResultTruncated.true" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">true</code><em class="property"> = 'true'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ResultTruncated.true" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.ColumnDataType">
-<em class="property">class </em><code class="descclassname">azure.mgmt.resourcegraph.models.</code><code class="descname">ColumnDataType</code><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/resource_graph_client_enums.html#ColumnDataType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ColumnDataType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">ColumnDataType</code><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/resource_graph_client_enums.html#ColumnDataType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ColumnDataType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.resourcegraph.models.ColumnDataType.boolean">
-<code class="descname">boolean</code><em class="property"> = 'boolean'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ColumnDataType.boolean" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">boolean</code><em class="property"> = 'boolean'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ColumnDataType.boolean" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.resourcegraph.models.ColumnDataType.integer">
-<code class="descname">integer</code><em class="property"> = 'integer'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ColumnDataType.integer" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">integer</code><em class="property"> = 'integer'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ColumnDataType.integer" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.resourcegraph.models.ColumnDataType.number">
-<code class="descname">number</code><em class="property"> = 'number'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ColumnDataType.number" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">number</code><em class="property"> = 'number'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ColumnDataType.number" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.resourcegraph.models.ColumnDataType.object_enum">
-<code class="descname">object_enum</code><em class="property"> = 'object'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ColumnDataType.object_enum" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">object_enum</code><em class="property"> = 'object'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ColumnDataType.object_enum" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.resourcegraph.models.ColumnDataType.string">
-<code class="descname">string</code><em class="property"> = 'string'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ColumnDataType.string" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">string</code><em class="property"> = 'string'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ColumnDataType.string" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

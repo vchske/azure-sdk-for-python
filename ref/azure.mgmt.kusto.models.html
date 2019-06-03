@@ -318,7 +318,7 @@
 <span id="azure-mgmt-kusto-models-module"></span><h1>azure.mgmt.kusto.models module<a class="headerlink" href="#module-azure.mgmt.kusto.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.TrustedExternalTenant">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">TrustedExternalTenant</code><span class="sig-paren">(</span><em>*</em>, <em>value: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/trusted_external_tenant_py3.html#TrustedExternalTenant"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.TrustedExternalTenant" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">TrustedExternalTenant</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/trusted_external_tenant_py3.html#TrustedExternalTenant"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.TrustedExternalTenant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Represents a tenant ID that is trusted by the cluster.</p>
 <dl class="field-list simple">
@@ -330,7 +330,7 @@
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.AzureSku">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">AzureSku</code><span class="sig-paren">(</span><em>*</em>, <em>name</em>, <em>capacity: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/azure_sku_py3.html#AzureSku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSku" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">AzureSku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name</em>, <em class="sig-param">capacity: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/azure_sku_py3.html#AzureSku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSku" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Azure SKU definition.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -350,14 +350,14 @@ sending a request.</p>
 </dl>
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.AzureSku.tier">
-<code class="descname">tier</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSku.tier" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tier</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSku.tier" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.AzureCapacity">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">AzureCapacity</code><span class="sig-paren">(</span><em>*</em>, <em>scale_type</em>, <em>minimum: int</em>, <em>maximum: int</em>, <em>default: int</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/azure_capacity_py3.html#AzureCapacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureCapacity" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">AzureCapacity</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">scale_type</em>, <em class="sig-param">minimum: int</em>, <em class="sig-param">maximum: int</em>, <em class="sig-param">default: int</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/azure_capacity_py3.html#AzureCapacity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureCapacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Azure capacity definition.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -376,7 +376,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.AzureResourceSku">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">AzureResourceSku</code><span class="sig-paren">(</span><em>*</em>, <em>resource_type: str = None</em>, <em>sku=None</em>, <em>capacity=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/azure_resource_sku_py3.html#AzureResourceSku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureResourceSku" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">AzureResourceSku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource_type: str = None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/azure_resource_sku_py3.html#AzureResourceSku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureResourceSku" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Azure resource SKU definition.</p>
 <dl class="field-list simple">
@@ -392,7 +392,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DatabaseStatistics">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DatabaseStatistics</code><span class="sig-paren">(</span><em>*</em>, <em>size: float = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_statistics_py3.html#DatabaseStatistics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabaseStatistics" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DatabaseStatistics</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">size: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_statistics_py3.html#DatabaseStatistics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabaseStatistics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A class that contains database statistics information.</p>
 <dl class="field-list simple">
@@ -405,7 +405,7 @@ index in bytes.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.Cluster">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>sku</em>, <em>tags=None</em>, <em>trusted_external_tenants=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/cluster_py3.html#Cluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">sku</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">trusted_external_tenants=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/cluster_py3.html#Cluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.kusto.models.tracked_resource_py3.TrackedResource</span></code></p>
 <p>Class representing a Kusto cluster.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -442,7 +442,7 @@ values include: ‘Running’, ‘Creating’, ‘Deleting’, ‘Succeeded’, 
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.ClusterUpdate">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">ClusterUpdate</code><span class="sig-paren">(</span><em>*</em>, <em>tags=None</em>, <em>location: str = None</em>, <em>sku=None</em>, <em>trusted_external_tenants=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/cluster_update_py3.html#ClusterUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.ClusterUpdate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">ClusterUpdate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">trusted_external_tenants=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/cluster_update_py3.html#ClusterUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.ClusterUpdate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.kusto.models.resource_py3.Resource</span></code></p>
 <p>Class representing an update to a Kusto cluster.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -478,7 +478,7 @@ values include: ‘Running’, ‘Creating’, ‘Deleting’, ‘Succeeded’, 
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.Database">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>soft_delete_period=None</em>, <em>hot_cache_period=None</em>, <em>statistics=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_py3.html#Database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.Database" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">soft_delete_period=None</em>, <em class="sig-param">hot_cache_period=None</em>, <em class="sig-param">statistics=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_py3.html#Database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.kusto.models.proxy_resource_py3.ProxyResource</span></code></p>
 <p>Class representing a Kusto database.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -511,7 +511,7 @@ for fast queries in TimeSpan.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DatabaseUpdate">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DatabaseUpdate</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>soft_delete_period=None</em>, <em>hot_cache_period=None</em>, <em>statistics=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_update_py3.html#DatabaseUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabaseUpdate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DatabaseUpdate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">soft_delete_period=None</em>, <em class="sig-param">hot_cache_period=None</em>, <em class="sig-param">statistics=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_update_py3.html#DatabaseUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabaseUpdate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.kusto.models.resource_py3.Resource</span></code></p>
 <p>Class representing an update to a Kusto database.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -544,7 +544,7 @@ for fast queries in TimeSpan.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipal">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DatabasePrincipal</code><span class="sig-paren">(</span><em>*</em>, <em>role</em>, <em>name: str</em>, <em>type</em>, <em>fqn: str = None</em>, <em>email: str = None</em>, <em>app_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_principal_py3.html#DatabasePrincipal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipal" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DatabasePrincipal</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">role</em>, <em class="sig-param">name: str</em>, <em class="sig-param">type</em>, <em class="sig-param">fqn: str = None</em>, <em class="sig-param">email: str = None</em>, <em class="sig-param">app_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_principal_py3.html#DatabasePrincipal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A class representing database principal entity.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -567,7 +567,7 @@ type.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalListResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DatabasePrincipalListResult</code><span class="sig-paren">(</span><em>*</em>, <em>value=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_principal_list_result_py3.html#DatabasePrincipalListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalListResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DatabasePrincipalListResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_principal_list_result_py3.html#DatabasePrincipalListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalListResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The list Kusto database principals operation response.</p>
 <dl class="field-list simple">
@@ -579,7 +579,7 @@ type.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DataConnection">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DataConnection</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/data_connection_py3.html#DataConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DataConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DataConnection</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/data_connection_py3.html#DataConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DataConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.kusto.models.proxy_resource_py3.ProxyResource</span></code></p>
 <p>Class representing an data connection.</p>
 <p>You probably want to use the sub-classes and not this class directly. Known
@@ -608,7 +608,7 @@ Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DataConnectionValidationResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DataConnectionValidationResult</code><span class="sig-paren">(</span><em>*</em>, <em>error_message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/data_connection_validation_result_py3.html#DataConnectionValidationResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DataConnectionValidationResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DataConnectionValidationResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">error_message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/data_connection_validation_result_py3.html#DataConnectionValidationResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DataConnectionValidationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The result returned from a data connection validation request.</p>
 <dl class="field-list simple">
@@ -621,7 +621,7 @@ connection validation.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalListRequest">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DatabasePrincipalListRequest</code><span class="sig-paren">(</span><em>*</em>, <em>value=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_principal_list_request_py3.html#DatabasePrincipalListRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalListRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DatabasePrincipalListRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_principal_list_request_py3.html#DatabasePrincipalListRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalListRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The list Kusto database principals operation request.</p>
 <dl class="field-list simple">
@@ -633,7 +633,7 @@ connection validation.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DataConnectionValidation">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DataConnectionValidation</code><span class="sig-paren">(</span><em>*</em>, <em>data_connection_name: str = None</em>, <em>properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/data_connection_validation_py3.html#DataConnectionValidation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DataConnectionValidation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DataConnectionValidation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">data_connection_name: str = None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/data_connection_validation_py3.html#DataConnectionValidation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DataConnectionValidation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Class representing an data connection validation.</p>
 <dl class="field-list simple">
@@ -648,7 +648,7 @@ connection validation.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.EventHubDataConnection">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">EventHubDataConnection</code><span class="sig-paren">(</span><em>*</em>, <em>event_hub_resource_id: str</em>, <em>consumer_group: str</em>, <em>location: str = None</em>, <em>table_name: str = None</em>, <em>mapping_rule_name: str = None</em>, <em>data_format=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/event_hub_data_connection_py3.html#EventHubDataConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.EventHubDataConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">EventHubDataConnection</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">event_hub_resource_id: str</em>, <em class="sig-param">consumer_group: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">table_name: str = None</em>, <em class="sig-param">mapping_rule_name: str = None</em>, <em class="sig-param">data_format=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/event_hub_data_connection_py3.html#EventHubDataConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.EventHubDataConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.kusto.models.data_connection_py3.DataConnection</span></code></p>
 <p>Class representing an event hub data connection.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -686,7 +686,7 @@ format can be added to each message. Possible values include: ‘MULTIJSON’,
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.EventGridDataConnection">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">EventGridDataConnection</code><span class="sig-paren">(</span><em>*</em>, <em>storage_account_resource_id: str</em>, <em>event_hub_resource_id: str</em>, <em>consumer_group: str</em>, <em>table_name: str</em>, <em>data_format</em>, <em>location: str = None</em>, <em>mapping_rule_name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/event_grid_data_connection_py3.html#EventGridDataConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.EventGridDataConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">EventGridDataConnection</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">storage_account_resource_id: str</em>, <em class="sig-param">event_hub_resource_id: str</em>, <em class="sig-param">consumer_group: str</em>, <em class="sig-param">table_name: str</em>, <em class="sig-param">data_format</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">mapping_rule_name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/event_grid_data_connection_py3.html#EventGridDataConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.EventGridDataConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.kusto.models.data_connection_py3.DataConnection</span></code></p>
 <p>Class representing an Event Grid data connection.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -726,7 +726,7 @@ the data format can be added to each message. Possible values include:
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DataConnectionValidationListResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DataConnectionValidationListResult</code><span class="sig-paren">(</span><em>*</em>, <em>value=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/data_connection_validation_list_result_py3.html#DataConnectionValidationListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DataConnectionValidationListResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DataConnectionValidationListResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/data_connection_validation_list_result_py3.html#DataConnectionValidationListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DataConnectionValidationListResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The list Kusto data connection validation result.</p>
 <dl class="field-list simple">
@@ -738,7 +738,7 @@ the data format can be added to each message. Possible values include:
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.ClusterCheckNameRequest">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">ClusterCheckNameRequest</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/cluster_check_name_request_py3.html#ClusterCheckNameRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.ClusterCheckNameRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">ClusterCheckNameRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/cluster_check_name_request_py3.html#ClusterCheckNameRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.ClusterCheckNameRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The result returned from a cluster check name availability request.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -755,14 +755,14 @@ Default value: “Microsoft.Kusto/clusters” .</p>
 </dl>
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.ClusterCheckNameRequest.type">
-<code class="descname">type</code><em class="property"> = 'Microsoft.Kusto/clusters'</em><a class="headerlink" href="#azure.mgmt.kusto.models.ClusterCheckNameRequest.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property"> = 'Microsoft.Kusto/clusters'</em><a class="headerlink" href="#azure.mgmt.kusto.models.ClusterCheckNameRequest.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DatabaseCheckNameRequest">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DatabaseCheckNameRequest</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_check_name_request_py3.html#DatabaseCheckNameRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabaseCheckNameRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DatabaseCheckNameRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_check_name_request_py3.html#DatabaseCheckNameRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabaseCheckNameRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The result returned from a database check name availability request.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -780,14 +780,14 @@ Microsoft.Kusto/clusters/databases. Default value:
 </dl>
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DatabaseCheckNameRequest.type">
-<code class="descname">type</code><em class="property"> = 'Microsoft.Kusto/clusters/databases'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabaseCheckNameRequest.type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">type</code><em class="property"> = 'Microsoft.Kusto/clusters/databases'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabaseCheckNameRequest.type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.CheckNameResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">CheckNameResult</code><span class="sig-paren">(</span><em>*</em>, <em>name_available: bool = None</em>, <em>name: str = None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/check_name_result_py3.html#CheckNameResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.CheckNameResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">CheckNameResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name_available: bool = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/check_name_result_py3.html#CheckNameResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.CheckNameResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The result returned from a check name availability request.</p>
 <dl class="field-list simple">
@@ -805,7 +805,7 @@ or a description of the naming rules that are violated.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.OperationDisplay">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">OperationDisplay</code><span class="sig-paren">(</span><em>*</em>, <em>provider: str = None</em>, <em>operation: str = None</em>, <em>resource: str = None</em>, <em>description: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The object that describes the operation.</p>
 <dl class="field-list simple">
@@ -822,7 +822,7 @@ or a description of the naming rules that are violated.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.Operation">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>display=None</em>, <em>origin: str = None</em>, <em>properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.Operation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">origin: str = None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.Operation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A REST API operation.</p>
 <dl class="field-list simple">
@@ -840,7 +840,7 @@ or a description of the naming rules that are violated.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.TrackedResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">TrackedResource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/tracked_resource_py3.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">TrackedResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/tracked_resource_py3.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.kusto.models.resource_py3.Resource</span></code></p>
 <p>The resource model definition for a ARM tracked top level resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -867,7 +867,7 @@ Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.AzureEntityResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">AzureEntityResource</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/azure_entity_resource_py3.html#AzureEntityResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureEntityResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">AzureEntityResource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/azure_entity_resource_py3.html#AzureEntityResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureEntityResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.kusto.models.resource_py3.Resource</span></code></p>
 <p>The resource model definition for a Azure Resource Manager resource with an
 etag.</p>
@@ -889,7 +889,7 @@ Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.Resource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.Resource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.Resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -909,7 +909,7 @@ Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.ProxyResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">ProxyResource</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/proxy_resource_py3.html#ProxyResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.ProxyResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">ProxyResource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/proxy_resource_py3.html#ProxyResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.ProxyResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.kusto.models.resource_py3.Resource</span></code></p>
 <p>The resource model definition for a ARM proxy resource. It will have
 everything other than required location and tags.</p>
@@ -930,318 +930,318 @@ Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.ClusterPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">ClusterPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/cluster_paged.html#ClusterPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.ClusterPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">ClusterPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/cluster_paged.html#ClusterPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.ClusterPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.kusto.models.Cluster" title="azure.mgmt.kusto.models.Cluster"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cluster</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.AzureSkuPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">AzureSkuPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/azure_sku_paged.html#AzureSkuPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">AzureSkuPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/azure_sku_paged.html#AzureSkuPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.kusto.models.AzureSku" title="azure.mgmt.kusto.models.AzureSku"><code class="xref py py-class docutils literal notranslate"><span class="pre">AzureSku</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.AzureResourceSkuPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">AzureResourceSkuPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/azure_resource_sku_paged.html#AzureResourceSkuPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureResourceSkuPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">AzureResourceSkuPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/azure_resource_sku_paged.html#AzureResourceSkuPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureResourceSkuPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.kusto.models.AzureResourceSku" title="azure.mgmt.kusto.models.AzureResourceSku"><code class="xref py py-class docutils literal notranslate"><span class="pre">AzureResourceSku</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DatabasePaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DatabasePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_paged.html#DatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DatabasePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_paged.html#DatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.kusto.models.Database" title="azure.mgmt.kusto.models.Database"><code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DatabasePrincipalPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_principal_paged.html#DatabasePrincipalPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DatabasePrincipalPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/database_principal_paged.html#DatabasePrincipalPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.kusto.models.DatabasePrincipal" title="azure.mgmt.kusto.models.DatabasePrincipal"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatabasePrincipal</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DataConnectionPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DataConnectionPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/data_connection_paged.html#DataConnectionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DataConnectionPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DataConnectionPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/data_connection_paged.html#DataConnectionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DataConnectionPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.kusto.models.DataConnection" title="azure.mgmt.kusto.models.DataConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataConnection</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.OperationPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">OperationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.kusto.models.Operation" title="azure.mgmt.kusto.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.State">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">State</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#State"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.State" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">State</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#State"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.State" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.State.creating">
-<code class="descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.creating" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.creating" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.State.deleted">
-<code class="descname">deleted</code><em class="property"> = 'Deleted'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.deleted" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">deleted</code><em class="property"> = 'Deleted'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.deleted" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.State.deleting">
-<code class="descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.deleting" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.deleting" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.State.running">
-<code class="descname">running</code><em class="property"> = 'Running'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.running" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">running</code><em class="property"> = 'Running'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.running" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.State.starting">
-<code class="descname">starting</code><em class="property"> = 'Starting'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.starting" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">starting</code><em class="property"> = 'Starting'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.starting" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.State.stopped">
-<code class="descname">stopped</code><em class="property"> = 'Stopped'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.stopped" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stopped</code><em class="property"> = 'Stopped'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.stopped" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.State.stopping">
-<code class="descname">stopping</code><em class="property"> = 'Stopping'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.stopping" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stopping</code><em class="property"> = 'Stopping'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.stopping" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.State.unavailable">
-<code class="descname">unavailable</code><em class="property"> = 'Unavailable'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.unavailable" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">unavailable</code><em class="property"> = 'Unavailable'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.unavailable" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.State.updating">
-<code class="descname">updating</code><em class="property"> = 'Updating'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.updating" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">updating</code><em class="property"> = 'Updating'</em><a class="headerlink" href="#azure.mgmt.kusto.models.State.updating" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.ProvisioningState">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">ProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#ProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.ProvisioningState" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">ProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#ProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.ProvisioningState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.ProvisioningState.creating">
-<code class="descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.kusto.models.ProvisioningState.creating" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.kusto.models.ProvisioningState.creating" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.ProvisioningState.deleting">
-<code class="descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.kusto.models.ProvisioningState.deleting" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.kusto.models.ProvisioningState.deleting" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.ProvisioningState.failed">
-<code class="descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.kusto.models.ProvisioningState.failed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.kusto.models.ProvisioningState.failed" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.ProvisioningState.running">
-<code class="descname">running</code><em class="property"> = 'Running'</em><a class="headerlink" href="#azure.mgmt.kusto.models.ProvisioningState.running" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">running</code><em class="property"> = 'Running'</em><a class="headerlink" href="#azure.mgmt.kusto.models.ProvisioningState.running" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.ProvisioningState.succeeded">
-<code class="descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.kusto.models.ProvisioningState.succeeded" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.kusto.models.ProvisioningState.succeeded" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.AzureSkuName">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">AzureSkuName</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#AzureSkuName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">AzureSkuName</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#AzureSkuName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.AzureSkuName.d11_v2">
-<code class="descname">d11_v2</code><em class="property"> = 'D11_v2'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.d11_v2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">d11_v2</code><em class="property"> = 'D11_v2'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.d11_v2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.AzureSkuName.d12_v2">
-<code class="descname">d12_v2</code><em class="property"> = 'D12_v2'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.d12_v2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">d12_v2</code><em class="property"> = 'D12_v2'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.d12_v2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.AzureSkuName.d13_v2">
-<code class="descname">d13_v2</code><em class="property"> = 'D13_v2'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.d13_v2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">d13_v2</code><em class="property"> = 'D13_v2'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.d13_v2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.AzureSkuName.d14_v2">
-<code class="descname">d14_v2</code><em class="property"> = 'D14_v2'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.d14_v2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">d14_v2</code><em class="property"> = 'D14_v2'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.d14_v2" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.AzureSkuName.l16">
-<code class="descname">l16</code><em class="property"> = 'L16'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.l16" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">l16</code><em class="property"> = 'L16'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.l16" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.AzureSkuName.l4">
-<code class="descname">l4</code><em class="property"> = 'L4'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.l4" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">l4</code><em class="property"> = 'L4'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.l4" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.AzureSkuName.l8">
-<code class="descname">l8</code><em class="property"> = 'L8'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.l8" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">l8</code><em class="property"> = 'L8'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureSkuName.l8" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.AzureScaleType">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">AzureScaleType</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#AzureScaleType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureScaleType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">AzureScaleType</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#AzureScaleType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.AzureScaleType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.AzureScaleType.automatic">
-<code class="descname">automatic</code><em class="property"> = 'automatic'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureScaleType.automatic" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">automatic</code><em class="property"> = 'automatic'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureScaleType.automatic" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.AzureScaleType.manual">
-<code class="descname">manual</code><em class="property"> = 'manual'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureScaleType.manual" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">manual</code><em class="property"> = 'manual'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureScaleType.manual" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.AzureScaleType.none">
-<code class="descname">none</code><em class="property"> = 'none'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureScaleType.none" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">none</code><em class="property"> = 'none'</em><a class="headerlink" href="#azure.mgmt.kusto.models.AzureScaleType.none" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DataFormat">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DataFormat</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#DataFormat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DataFormat</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#DataFormat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DataFormat.avro">
-<code class="descname">avro</code><em class="property"> = 'AVRO'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.avro" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">avro</code><em class="property"> = 'AVRO'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.avro" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DataFormat.csv">
-<code class="descname">csv</code><em class="property"> = 'CSV'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.csv" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">csv</code><em class="property"> = 'CSV'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.csv" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DataFormat.json">
-<code class="descname">json</code><em class="property"> = 'JSON'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.json" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">json</code><em class="property"> = 'JSON'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.json" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DataFormat.multijson">
-<code class="descname">multijson</code><em class="property"> = 'MULTIJSON'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.multijson" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">multijson</code><em class="property"> = 'MULTIJSON'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.multijson" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DataFormat.psv">
-<code class="descname">psv</code><em class="property"> = 'PSV'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.psv" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">psv</code><em class="property"> = 'PSV'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.psv" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DataFormat.raw">
-<code class="descname">raw</code><em class="property"> = 'RAW'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.raw" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">raw</code><em class="property"> = 'RAW'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.raw" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DataFormat.scsv">
-<code class="descname">scsv</code><em class="property"> = 'SCSV'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.scsv" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scsv</code><em class="property"> = 'SCSV'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.scsv" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DataFormat.singlejson">
-<code class="descname">singlejson</code><em class="property"> = 'SINGLEJSON'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.singlejson" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">singlejson</code><em class="property"> = 'SINGLEJSON'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.singlejson" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DataFormat.sohsv">
-<code class="descname">sohsv</code><em class="property"> = 'SOHSV'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.sohsv" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sohsv</code><em class="property"> = 'SOHSV'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.sohsv" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DataFormat.tsv">
-<code class="descname">tsv</code><em class="property"> = 'TSV'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.tsv" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tsv</code><em class="property"> = 'TSV'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.tsv" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DataFormat.txt">
-<code class="descname">txt</code><em class="property"> = 'TXT'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.txt" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">txt</code><em class="property"> = 'TXT'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DataFormat.txt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalRole">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DatabasePrincipalRole</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#DatabasePrincipalRole"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DatabasePrincipalRole</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#DatabasePrincipalRole"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalRole.admin">
-<code class="descname">admin</code><em class="property"> = 'Admin'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole.admin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">admin</code><em class="property"> = 'Admin'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole.admin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalRole.ingestor">
-<code class="descname">ingestor</code><em class="property"> = 'Ingestor'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole.ingestor" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ingestor</code><em class="property"> = 'Ingestor'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole.ingestor" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalRole.monitor">
-<code class="descname">monitor</code><em class="property"> = 'Monitor'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole.monitor" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">monitor</code><em class="property"> = 'Monitor'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole.monitor" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalRole.unrestricted_viewers">
-<code class="descname">unrestricted_viewers</code><em class="property"> = 'UnrestrictedViewers'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole.unrestricted_viewers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">unrestricted_viewers</code><em class="property"> = 'UnrestrictedViewers'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole.unrestricted_viewers" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalRole.user">
-<code class="descname">user</code><em class="property"> = 'User'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole.user" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">user</code><em class="property"> = 'User'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole.user" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalRole.viewer">
-<code class="descname">viewer</code><em class="property"> = 'Viewer'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole.viewer" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">viewer</code><em class="property"> = 'Viewer'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalRole.viewer" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalType">
-<em class="property">class </em><code class="descclassname">azure.mgmt.kusto.models.</code><code class="descname">DatabasePrincipalType</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#DatabasePrincipalType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.kusto.models.</code><code class="sig-name descname">DatabasePrincipalType</code><a class="reference internal" href="../_modules/azure/mgmt/kusto/models/kusto_management_client_enums.html#DatabasePrincipalType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalType.app">
-<code class="descname">app</code><em class="property"> = 'App'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalType.app" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">app</code><em class="property"> = 'App'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalType.app" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalType.group">
-<code class="descname">group</code><em class="property"> = 'Group'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalType.group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">group</code><em class="property"> = 'Group'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalType.group" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.kusto.models.DatabasePrincipalType.user">
-<code class="descname">user</code><em class="property"> = 'User'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalType.user" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">user</code><em class="property"> = 'User'</em><a class="headerlink" href="#azure.mgmt.kusto.models.DatabasePrincipalType.user" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

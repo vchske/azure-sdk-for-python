@@ -318,7 +318,7 @@
 <span id="azure-cognitiveservices-vision-face-operations-module"></span><h1>azure.cognitiveservices.vision.face.operations module<a class="headerlink" href="#module-azure.cognitiveservices.vision.face.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceOperations">
-<em class="property">class </em><code class="descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="descname">FaceOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="sig-name descname">FaceOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>FaceOperations operations.</p>
 <dl class="field-list simple">
@@ -333,7 +333,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceOperations.detect_with_stream">
-<code class="descname">detect_with_stream</code><span class="sig-paren">(</span><em>image</em>, <em>return_face_id=True</em>, <em>return_face_landmarks=False</em>, <em>return_face_attributes=None</em>, <em>recognition_model='recognition_01'</em>, <em>return_recognition_model=False</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.detect_with_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.detect_with_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">detect_with_stream</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">return_face_id=True</em>, <em class="sig-param">return_face_landmarks=False</em>, <em class="sig-param">return_face_attributes=None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">return_recognition_model=False</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.detect_with_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.detect_with_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Detect human faces in an image and returns face locations, and
 optionally with faceIds, landmarks, and attributes.</p>
 <dl class="field-list simple">
@@ -388,7 +388,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceOperations.detect_with_url">
-<code class="descname">detect_with_url</code><span class="sig-paren">(</span><em>url</em>, <em>return_face_id=True</em>, <em>return_face_landmarks=False</em>, <em>return_face_attributes=None</em>, <em>recognition_model='recognition_01'</em>, <em>return_recognition_model=False</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.detect_with_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.detect_with_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">detect_with_url</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">return_face_id=True</em>, <em class="sig-param">return_face_landmarks=False</em>, <em class="sig-param">return_face_attributes=None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">return_recognition_model=False</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.detect_with_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.detect_with_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Detect human faces in an image, return face rectangles, and optionally
 with faceIds, landmarks, and attributes.&lt;br /&gt;
 * Optional parameters including faceId, landmarks, and attributes.
@@ -477,7 +477,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceOperations.find_similar">
-<code class="descname">find_similar</code><span class="sig-paren">(</span><em>face_id</em>, <em>face_list_id=None</em>, <em>large_face_list_id=None</em>, <em>face_ids=None</em>, <em>max_num_of_candidates_returned=20</em>, <em>mode='matchPerson'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.find_similar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.find_similar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">find_similar</code><span class="sig-paren">(</span><em class="sig-param">face_id</em>, <em class="sig-param">face_list_id=None</em>, <em class="sig-param">large_face_list_id=None</em>, <em class="sig-param">face_ids=None</em>, <em class="sig-param">max_num_of_candidates_returned=20</em>, <em class="sig-param">mode='matchPerson'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.find_similar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.find_similar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given query face’s faceId, to search the similar-looking faces from a
 faceId array, a face list or a large face list. faceId array contains
 the faces created by [Face -
@@ -551,7 +551,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceOperations.group">
-<code class="descname">group</code><span class="sig-paren">(</span><em>face_ids</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">group</code><span class="sig-paren">(</span><em class="sig-param">face_ids</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Divide candidate faces into groups based on face similarity.&lt;br /&gt;
 * The output is one or more disjointed face groups and a messyGroup. A
 face group contains faces that have similar looking, often of the same
@@ -595,7 +595,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceOperations.identify">
-<code class="descname">identify</code><span class="sig-paren">(</span><em>face_ids</em>, <em>person_group_id=None</em>, <em>large_person_group_id=None</em>, <em>max_num_of_candidates_returned=1</em>, <em>confidence_threshold=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.identify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.identify" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">identify</code><span class="sig-paren">(</span><em class="sig-param">face_ids</em>, <em class="sig-param">person_group_id=None</em>, <em class="sig-param">large_person_group_id=None</em>, <em class="sig-param">max_num_of_candidates_returned=1</em>, <em class="sig-param">confidence_threshold=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.identify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.identify" title="Permalink to this definition">¶</a></dt>
 <dd><p>1-to-many identification to find the closest matches of the specific
 query person face from a person group or large person group.
 &lt;br/&gt; For each face in the faceIds array, Face Identify will compute
@@ -668,12 +668,12 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceOperations.verify_face_to_face">
-<code class="descname">verify_face_to_face</code><span class="sig-paren">(</span><em>face_id1</em>, <em>face_id2</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.verify_face_to_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.verify_face_to_face" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">verify_face_to_face</code><span class="sig-paren">(</span><em class="sig-param">face_id1</em>, <em class="sig-param">face_id2</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.verify_face_to_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.verify_face_to_face" title="Permalink to this definition">¶</a></dt>
 <dd><p>Verify whether two faces belong to a same person or whether one face
 belongs to a person.
 &lt;br/&gt;
@@ -714,7 +714,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceOperations.verify_face_to_person">
-<code class="descname">verify_face_to_person</code><span class="sig-paren">(</span><em>face_id</em>, <em>person_id</em>, <em>person_group_id=None</em>, <em>large_person_group_id=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.verify_face_to_person"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.verify_face_to_person" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">verify_face_to_person</code><span class="sig-paren">(</span><em class="sig-param">face_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">person_group_id=None</em>, <em class="sig-param">large_person_group_id=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_operations.html#FaceOperations.verify_face_to_person"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceOperations.verify_face_to_person" title="Permalink to this definition">¶</a></dt>
 <dd><p>Verify whether two faces belong to a same person. Compares a face Id
 with a Person Id.</p>
 <dl class="field-list simple">
@@ -756,7 +756,7 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations">
-<em class="property">class </em><code class="descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="descname">PersonGroupPersonOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="sig-name descname">PersonGroupPersonOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>PersonGroupPersonOperations operations.</p>
 <dl class="field-list simple">
@@ -771,7 +771,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.add_face_from_stream">
-<code class="descname">add_face_from_stream</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>person_id</em>, <em>image</em>, <em>user_data=None</em>, <em>target_face=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.add_face_from_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.add_face_from_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_face_from_stream</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">image</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">target_face=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.add_face_from_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.add_face_from_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a representative face to a person for identification. The input
 face is specified as an image with a targetFace rectangle.</p>
 <dl class="field-list simple">
@@ -813,7 +813,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.add_face_from_url">
-<code class="descname">add_face_from_url</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>person_id</em>, <em>url</em>, <em>user_data=None</em>, <em>target_face=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.add_face_from_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.add_face_from_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_face_from_url</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">url</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">target_face=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.add_face_from_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.add_face_from_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a face to a person into a large person group for face
 identification or verification. To deal with an image contains multiple
 faces, input face can be specified as an image with a targetFace
@@ -880,7 +880,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>name=None</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new person in a specified person group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -910,7 +910,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>person_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete an existing person from a person group. The persistedFaceId,
 userData, person name and face feature in the person entry will all be
 deleted.</p>
@@ -940,7 +940,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.delete_face">
-<code class="descname">delete_face</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>person_id</em>, <em>persisted_face_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.delete_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.delete_face" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_face</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">persisted_face_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.delete_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.delete_face" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete a face from a person in a person group by specified
 personGroupId, personId and persistedFaceId.
 &lt;br /&gt; Adding/deleting faces to/from a same person will be processed
@@ -974,7 +974,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>person_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve a person’s information, including registered persisted faces,
 name and userData.</p>
 <dl class="field-list simple">
@@ -1004,7 +1004,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.get_face">
-<code class="descname">get_face</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>person_id</em>, <em>persisted_face_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.get_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.get_face" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_face</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">persisted_face_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.get_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.get_face" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a persisted face (specified by
 persistedFaceId, personId and its belonging personGroupId).</p>
 <dl class="field-list simple">
@@ -1036,7 +1036,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>start=None</em>, <em>top=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">start=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all persons in a person group, and retrieve person information
 (including personId, name, userData and persistedFaceIds of registered
 faces of the person).</p>
@@ -1070,12 +1070,12 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>person_id</em>, <em>name=None</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update name or userData of a person.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1105,7 +1105,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.update_face">
-<code class="descname">update_face</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>person_id</em>, <em>persisted_face_id</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.update_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.update_face" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_face</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">persisted_face_id</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_person_operations.html#PersonGroupPersonOperations.update_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.update_face" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a face to a person into a person group for face identification or
 verification. To deal with an image contains multiple faces, input face
 can be specified as an image with a targetFace rectangle. It returns a
@@ -1169,7 +1169,7 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupOperations">
-<em class="property">class </em><code class="descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="descname">PersonGroupOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="sig-name descname">PersonGroupOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>PersonGroupOperations operations.</p>
 <dl class="field-list simple">
@@ -1184,7 +1184,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>name=None</em>, <em>user_data=None</em>, <em>recognition_model='recognition_01'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new person group with specified personGroupId, name,
 user-provided userData and recognitionModel.
 &lt;br /&gt; A person group is the container of the uploaded person data,
@@ -1255,7 +1255,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete an existing person group. Persisted face features of all people
 in the person group will also be deleted.</p>
 <dl class="field-list simple">
@@ -1283,7 +1283,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>return_recognition_model=False</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">return_recognition_model=False</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve person group name, userData and recognitionModel. To get
 person information under this personGroup, use [PersonGroup Person -
 List](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395241).</p>
@@ -1315,7 +1315,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupOperations.get_training_status">
-<code class="descname">get_training_status</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.get_training_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.get_training_status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_training_status</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.get_training_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.get_training_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the training status of a person group (completed or ongoing).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1343,7 +1343,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>start=None</em>, <em>top=1000</em>, <em>return_recognition_model=False</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">start=None</em>, <em class="sig-param">top=1000</em>, <em class="sig-param">return_recognition_model=False</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List person groups’ personGroupId, name, userData and
 recognitionModel.&lt;br /&gt;
 * Person groups are stored in alphabetical order of personGroupId.
@@ -1390,12 +1390,12 @@ or ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupOperations.train">
-<code class="descname">train</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.train" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.train" title="Permalink to this definition">¶</a></dt>
 <dd><p>Queue a person group training task, the training task may not be
 started immediately.</p>
 <dl class="field-list simple">
@@ -1423,7 +1423,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.PersonGroupOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>person_group_id</em>, <em>name=None</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">person_group_id</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/person_group_operations.html#PersonGroupOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.PersonGroupOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update an existing person group’s display name and userData. The
 properties which does not appear in request body will not be updated.</p>
 <dl class="field-list simple">
@@ -1455,7 +1455,7 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceListOperations">
-<em class="property">class </em><code class="descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="descname">FaceListOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="sig-name descname">FaceListOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>FaceListOperations operations.</p>
 <dl class="field-list simple">
@@ -1470,7 +1470,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceListOperations.add_face_from_stream">
-<code class="descname">add_face_from_stream</code><span class="sig-paren">(</span><em>face_list_id</em>, <em>image</em>, <em>user_data=None</em>, <em>target_face=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.add_face_from_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.add_face_from_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_face_from_stream</code><span class="sig-paren">(</span><em class="sig-param">face_list_id</em>, <em class="sig-param">image</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">target_face=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.add_face_from_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.add_face_from_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a face to a face list. The input face is specified as an image with
 a targetFace rectangle. It returns a persistedFaceId representing the
 added face, and persistedFaceId will not expire.</p>
@@ -1512,7 +1512,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceListOperations.add_face_from_url">
-<code class="descname">add_face_from_url</code><span class="sig-paren">(</span><em>face_list_id</em>, <em>url</em>, <em>user_data=None</em>, <em>target_face=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.add_face_from_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.add_face_from_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_face_from_url</code><span class="sig-paren">(</span><em class="sig-param">face_list_id</em>, <em class="sig-param">url</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">target_face=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.add_face_from_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.add_face_from_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a face to a specified face list, up to 1,000 faces.
 &lt;br /&gt; To deal with an image contains multiple faces, input face can be
 specified as an image with a targetFace rectangle. It returns a
@@ -1574,7 +1574,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceListOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>face_list_id</em>, <em>name=None</em>, <em>user_data=None</em>, <em>recognition_model='recognition_01'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">face_list_id</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an empty face list with user-specified faceListId, name, an
 optional userData and recognitionModel. Up to 64 face lists are allowed
 in one subscription.
@@ -1643,7 +1643,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceListOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>face_list_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">face_list_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete a specified face list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1670,7 +1670,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceListOperations.delete_face">
-<code class="descname">delete_face</code><span class="sig-paren">(</span><em>face_list_id</em>, <em>persisted_face_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.delete_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.delete_face" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_face</code><span class="sig-paren">(</span><em class="sig-param">face_list_id</em>, <em class="sig-param">persisted_face_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.delete_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.delete_face" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete a face from a face list by specified faceListId and
 persistedFaceId.
 &lt;br /&gt; Adding/deleting faces to/from a same face list are processed
@@ -1702,7 +1702,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceListOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>face_list_id</em>, <em>return_recognition_model=False</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">face_list_id</em>, <em class="sig-param">return_recognition_model=False</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve a face list’s faceListId, name, userData, recognitionModel and
 faces in the face list.
 .</p>
@@ -1734,7 +1734,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceListOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>return_recognition_model=False</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">return_recognition_model=False</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List face lists’ faceListId, name, userData and recognitionModel. &lt;br
 /&gt;
 To get face information inside faceList use [FaceList -
@@ -1767,12 +1767,12 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceListOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.FaceListOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>face_list_id</em>, <em>name=None</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">face_list_id</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/face_list_operations.html#FaceListOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.FaceListOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update information of a face list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1803,7 +1803,7 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations">
-<em class="property">class </em><code class="descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="descname">LargePersonGroupPersonOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="sig-name descname">LargePersonGroupPersonOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>LargePersonGroupPersonOperations operations.</p>
 <dl class="field-list simple">
@@ -1818,7 +1818,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.add_face_from_stream">
-<code class="descname">add_face_from_stream</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>person_id</em>, <em>image</em>, <em>user_data=None</em>, <em>target_face=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.add_face_from_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.add_face_from_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_face_from_stream</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">image</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">target_face=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.add_face_from_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.add_face_from_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a representative face to a person for identification. The input
 face is specified as an image with a targetFace rectangle.</p>
 <dl class="field-list simple">
@@ -1861,7 +1861,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.add_face_from_url">
-<code class="descname">add_face_from_url</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>person_id</em>, <em>url</em>, <em>user_data=None</em>, <em>target_face=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.add_face_from_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.add_face_from_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_face_from_url</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">url</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">target_face=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.add_face_from_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.add_face_from_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a face to a person into a large person group for face
 identification or verification. To deal with an image contains multiple
 faces, input face can be specified as an image with a targetFace
@@ -1929,7 +1929,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>name=None</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new person in a specified large person group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1960,7 +1960,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>person_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete an existing person from a large person group. The
 persistedFaceId, userData, person name and face feature in the person
 entry will all be deleted.</p>
@@ -1991,7 +1991,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.delete_face">
-<code class="descname">delete_face</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>person_id</em>, <em>persisted_face_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.delete_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.delete_face" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_face</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">persisted_face_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.delete_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.delete_face" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete a face from a person in a large person group by specified
 largePersonGroupId, personId and persistedFaceId.
 &lt;br /&gt; Adding/deleting faces to/from a same person will be processed
@@ -2026,7 +2026,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>person_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve a person’s name and userData, and the persisted faceIds
 representing the registered person face feature.</p>
 <dl class="field-list simple">
@@ -2057,7 +2057,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.get_face">
-<code class="descname">get_face</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>person_id</em>, <em>persisted_face_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.get_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.get_face" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_face</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">persisted_face_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.get_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.get_face" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a persisted face (specified by
 persistedFaceId, personId and its belonging largePersonGroupId).</p>
 <dl class="field-list simple">
@@ -2090,7 +2090,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>start=None</em>, <em>top=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">start=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all persons in a large person group, and retrieve person
 information (including personId, name, userData and persistedFaceIds of
 registered faces of the person).</p>
@@ -2125,12 +2125,12 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>person_id</em>, <em>name=None</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update name or userData of a person.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2161,7 +2161,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.update_face">
-<code class="descname">update_face</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>person_id</em>, <em>persisted_face_id</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.update_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.update_face" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_face</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">person_id</em>, <em class="sig-param">persisted_face_id</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_person_operations.html#LargePersonGroupPersonOperations.update_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupPersonOperations.update_face" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update a person persisted face’s userData field.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2196,7 +2196,7 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations">
-<em class="property">class </em><code class="descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="descname">LargePersonGroupOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="sig-name descname">LargePersonGroupOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>LargePersonGroupOperations operations.</p>
 <dl class="field-list simple">
@@ -2211,7 +2211,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>name=None</em>, <em>user_data=None</em>, <em>recognition_model='recognition_01'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a new large person group with user-specified largePersonGroupId,
 name, an optional userData and recognitionModel.
 &lt;br /&gt; A large person group is the container of the uploaded person
@@ -2280,7 +2280,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete an existing large person group. Persisted face features of all
 people in the large person group will also be deleted.</p>
 <dl class="field-list simple">
@@ -2309,7 +2309,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>return_recognition_model=False</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">return_recognition_model=False</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the information of a large person group, including its name,
 userData and recognitionModel. This API returns large person group
 information only, use [LargePersonGroup Person -
@@ -2345,7 +2345,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.get_training_status">
-<code class="descname">get_training_status</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.get_training_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.get_training_status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_training_status</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.get_training_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.get_training_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the training status of a large person group (completed or
 ongoing).</p>
 <dl class="field-list simple">
@@ -2375,7 +2375,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>start=None</em>, <em>top=1000</em>, <em>return_recognition_model=False</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">start=None</em>, <em class="sig-param">top=1000</em>, <em class="sig-param">return_recognition_model=False</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all existing large person groups’ largePersonGroupId, name,
 userData and recognitionModel.&lt;br /&gt;
 * Large person groups are stored in alphabetical order of
@@ -2424,12 +2424,12 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.train">
-<code class="descname">train</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.train" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.train" title="Permalink to this definition">¶</a></dt>
 <dd><p>Queue a large person group training task, the training task may not be
 started immediately.</p>
 <dl class="field-list simple">
@@ -2458,7 +2458,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>large_person_group_id</em>, <em>name=None</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">large_person_group_id</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_person_group_operations.html#LargePersonGroupOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargePersonGroupOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update an existing large person group’s display name and userData. The
 properties which does not appear in request body will not be updated.</p>
 <dl class="field-list simple">
@@ -2491,7 +2491,7 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations">
-<em class="property">class </em><code class="descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="descname">LargeFaceListOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="sig-name descname">LargeFaceListOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>LargeFaceListOperations operations.</p>
 <dl class="field-list simple">
@@ -2506,7 +2506,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.add_face_from_stream">
-<code class="descname">add_face_from_stream</code><span class="sig-paren">(</span><em>large_face_list_id</em>, <em>image</em>, <em>user_data=None</em>, <em>target_face=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>callback=None</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.add_face_from_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.add_face_from_stream" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_face_from_stream</code><span class="sig-paren">(</span><em class="sig-param">large_face_list_id</em>, <em class="sig-param">image</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">target_face=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.add_face_from_stream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.add_face_from_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a face to a large face list. The input face is specified as an
 image with a targetFace rectangle. It returns a persistedFaceId
 representing the added face, and persistedFaceId will not expire.</p>
@@ -2549,7 +2549,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.add_face_from_url">
-<code class="descname">add_face_from_url</code><span class="sig-paren">(</span><em>large_face_list_id</em>, <em>url</em>, <em>user_data=None</em>, <em>target_face=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.add_face_from_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.add_face_from_url" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_face_from_url</code><span class="sig-paren">(</span><em class="sig-param">large_face_list_id</em>, <em class="sig-param">url</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">target_face=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.add_face_from_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.add_face_from_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a face to a specified large face list, up to 1,000,000 faces.
 &lt;br /&gt; To deal with an image contains multiple faces, input face can be
 specified as an image with a targetFace rectangle. It returns a
@@ -2615,7 +2615,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.create">
-<code class="descname">create</code><span class="sig-paren">(</span><em>large_face_list_id</em>, <em>name=None</em>, <em>user_data=None</em>, <em>recognition_model='recognition_01'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">large_face_list_id</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create an empty large face list with user-specified largeFaceListId,
 name, an optional userData and recognitionModel.
 &lt;br /&gt; Large face list is a list of faces, up to 1,000,000 faces, and
@@ -2688,7 +2688,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>large_face_list_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">large_face_list_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete a specified large face list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2716,7 +2716,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.delete_face">
-<code class="descname">delete_face</code><span class="sig-paren">(</span><em>large_face_list_id</em>, <em>persisted_face_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.delete_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.delete_face" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_face</code><span class="sig-paren">(</span><em class="sig-param">large_face_list_id</em>, <em class="sig-param">persisted_face_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.delete_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.delete_face" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete a face from a large face list by specified largeFaceListId and
 persistedFaceId.
 &lt;br /&gt; Adding/deleting faces to/from a same large face list are
@@ -2750,7 +2750,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>large_face_list_id</em>, <em>return_recognition_model=False</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">large_face_list_id</em>, <em class="sig-param">return_recognition_model=False</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve a large face list’s largeFaceListId, name, userData and
 recognitionModel.</p>
 <dl class="field-list simple">
@@ -2782,7 +2782,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.get_face">
-<code class="descname">get_face</code><span class="sig-paren">(</span><em>large_face_list_id</em>, <em>persisted_face_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.get_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.get_face" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_face</code><span class="sig-paren">(</span><em class="sig-param">large_face_list_id</em>, <em class="sig-param">persisted_face_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.get_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.get_face" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a persisted face (specified by
 persistedFaceId and its belonging largeFaceListId).</p>
 <dl class="field-list simple">
@@ -2814,7 +2814,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.get_training_status">
-<code class="descname">get_training_status</code><span class="sig-paren">(</span><em>large_face_list_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.get_training_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.get_training_status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_training_status</code><span class="sig-paren">(</span><em class="sig-param">large_face_list_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.get_training_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.get_training_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the training status of a large face list (completed or
 ongoing).</p>
 <dl class="field-list simple">
@@ -2844,7 +2844,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>return_recognition_model=False</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">return_recognition_model=False</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List large face lists’ information of largeFaceListId, name, userData
 and recognitionModel. &lt;br /&gt;
 To get face information inside largeFaceList use [LargeFaceList Face -
@@ -2892,7 +2892,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.list_faces">
-<code class="descname">list_faces</code><span class="sig-paren">(</span><em>large_face_list_id</em>, <em>start=None</em>, <em>top=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.list_faces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.list_faces" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_faces</code><span class="sig-paren">(</span><em class="sig-param">large_face_list_id</em>, <em class="sig-param">start=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.list_faces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.list_faces" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all faces in a large face list, and retrieve face information
 (including userData and persistedFaceIds of registered faces of the
 face).</p>
@@ -2927,12 +2927,12 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.train">
-<code class="descname">train</code><span class="sig-paren">(</span><em>large_face_list_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.train" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">large_face_list_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.train" title="Permalink to this definition">¶</a></dt>
 <dd><p>Queue a large face list training task, the training task may not be
 started immediately.</p>
 <dl class="field-list simple">
@@ -2961,7 +2961,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>large_face_list_id</em>, <em>name=None</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">large_face_list_id</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update information of a large face list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2991,7 +2991,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.update_face">
-<code class="descname">update_face</code><span class="sig-paren">(</span><em>large_face_list_id</em>, <em>persisted_face_id</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.update_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.update_face" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_face</code><span class="sig-paren">(</span><em class="sig-param">large_face_list_id</em>, <em class="sig-param">persisted_face_id</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/large_face_list_operations.html#LargeFaceListOperations.update_face"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.update_face" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update a persisted face’s userData field.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3025,7 +3025,7 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.operations.SnapshotOperations">
-<em class="property">class </em><code class="descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="descname">SnapshotOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.operations.</code><code class="sig-name descname">SnapshotOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>SnapshotOperations operations.</p>
 <dl class="field-list simple">
@@ -3040,7 +3040,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.SnapshotOperations.apply">
-<code class="descname">apply</code><span class="sig-paren">(</span><em>snapshot_id</em>, <em>object_id</em>, <em>mode='CreateNew'</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.apply"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.apply" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">apply</code><span class="sig-paren">(</span><em class="sig-param">snapshot_id</em>, <em class="sig-param">object_id</em>, <em class="sig-param">mode='CreateNew'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.apply"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.apply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Submit an operation to apply a snapshot to current subscription. For
 each snapshot, only subscriptions included in the applyScope of
 Snapshot - Take can apply it.&lt;br /&gt;
@@ -3112,7 +3112,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.SnapshotOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>snapshot_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">snapshot_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete an existing snapshot according to the snapshotId. All object
 data and information in the snapshot will also be deleted. Only the
 source subscription who took the snapshot can delete the snapshot. If
@@ -3143,7 +3143,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.SnapshotOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>snapshot_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">snapshot_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a snapshot. Snapshot is only accessible to
 the source subscription who took it, and target subscriptions included
 in the applyScope in Snapshot - Take.</p>
@@ -3173,7 +3173,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.SnapshotOperations.get_operation_status">
-<code class="descname">get_operation_status</code><span class="sig-paren">(</span><em>operation_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.get_operation_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.get_operation_status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_operation_status</code><span class="sig-paren">(</span><em class="sig-param">operation_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.get_operation_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.get_operation_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the status of a take/apply snapshot operation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3202,7 +3202,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.SnapshotOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>type=None</em>, <em>apply_scope=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">type=None</em>, <em class="sig-param">apply_scope=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all accessible snapshots with related information, including
 snapshots that were taken by the user, or snapshots to be applied to
 the user (subscription id was included in the applyScope in Snapshot -
@@ -3240,12 +3240,12 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.cognitiveservices.vision.face.operations.SnapshotOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.cognitiveservices.vision.face.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-cognitiveservices-vision-face\\azure\\cognitiveservices\\vision\\face\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.SnapshotOperations.take">
-<code class="descname">take</code><span class="sig-paren">(</span><em>type</em>, <em>object_id</em>, <em>apply_scope</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.take"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.take" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">take</code><span class="sig-paren">(</span><em class="sig-param">type</em>, <em class="sig-param">object_id</em>, <em class="sig-param">apply_scope</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.take"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.take" title="Permalink to this definition">¶</a></dt>
 <dd><p>Submit an operation to take a snapshot of face list, large face list,
 person group or large person group, with user-specified snapshot type,
 source object id, apply scope and an optional user data.&lt;br /&gt;
@@ -3318,7 +3318,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.cognitiveservices.vision.face.operations.SnapshotOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>snapshot_id</em>, <em>apply_scope=None</em>, <em>user_data=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">snapshot_id</em>, <em class="sig-param">apply_scope=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/operations/snapshot_operations.html#SnapshotOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.operations.SnapshotOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the information of a snapshot. Only the source subscription who
 took the snapshot can update the snapshot.</p>
 <dl class="field-list simple">
