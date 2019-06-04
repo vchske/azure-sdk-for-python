@@ -320,25 +320,25 @@
 
 <span class="sd">    :param disk_count: Virtual machine disk count.</span>
 <span class="sd">    :type disk_count: int</span>
+<span class="sd">    :param starting_device_id: Device id of the first disk to be updated.</span>
+<span class="sd">    :type starting_device_id: int</span>
 <span class="sd">    :param disk_configuration_type: Disk configuration to apply to SQL Server.</span>
 <span class="sd">     Possible values include: &#39;NEW&#39;, &#39;EXTEND&#39;, &#39;ADD&#39;</span>
 <span class="sd">    :type disk_configuration_type: str or</span>
 <span class="sd">     ~azure.mgmt.sqlvirtualmachine.models.DiskConfigurationType</span>
-<span class="sd">    :param starting_device_id: Device id of the first disk to be updated.</span>
-<span class="sd">    :type starting_device_id: int</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;disk_count&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;diskCount&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;disk_configuration_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;diskConfigurationType&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;starting_device_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;startingDeviceId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;disk_configuration_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;diskConfigurationType&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">disk_count</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">disk_configuration_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">starting_device_id</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">disk_count</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">starting_device_id</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">disk_configuration_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">SqlStorageUpdateSettings</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">disk_count</span> <span class="o">=</span> <span class="n">disk_count</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">disk_configuration_type</span> <span class="o">=</span> <span class="n">disk_configuration_type</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">starting_device_id</span> <span class="o">=</span> <span class="n">starting_device_id</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">starting_device_id</span> <span class="o">=</span> <span class="n">starting_device_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">disk_configuration_type</span> <span class="o">=</span> <span class="n">disk_configuration_type</span></div>
 </pre></div>
 
            </div>

@@ -338,7 +338,7 @@
 <span class="sd">    :param virtual_machine_resource_id: ARM Resource id of underlying virtual</span>
 <span class="sd">     machine created from SQL marketplace image.</span>
 <span class="sd">    :type virtual_machine_resource_id: str</span>
-<span class="sd">    :ivar provisioning_state: Provisioning state to track the aysnc operation</span>
+<span class="sd">    :ivar provisioning_state: Provisioning state to track the async operation</span>
 <span class="sd">     status.</span>
 <span class="sd">    :vartype provisioning_state: str</span>
 <span class="sd">    :ivar sql_image_offer: SQL image offer. Examples include SQL2016-WS2016,</span>
@@ -348,9 +348,9 @@
 <span class="sd">     include: &#39;PAYG&#39;, &#39;AHUB&#39;</span>
 <span class="sd">    :type sql_server_license_type: str or</span>
 <span class="sd">     ~azure.mgmt.sqlvirtualmachine.models.SqlServerLicenseType</span>
-<span class="sd">    :ivar sql_image_sku: SQL image sku. Possible values include: &#39;Developer&#39;,</span>
-<span class="sd">     &#39;Express&#39;, &#39;Standard&#39;, &#39;Enterprise&#39;, &#39;Web&#39;</span>
-<span class="sd">    :vartype sql_image_sku: str or</span>
+<span class="sd">    :param sql_image_sku: SQL Server edition type. Possible values include:</span>
+<span class="sd">     &#39;Developer&#39;, &#39;Express&#39;, &#39;Standard&#39;, &#39;Enterprise&#39;, &#39;Web&#39;</span>
+<span class="sd">    :type sql_image_sku: str or</span>
 <span class="sd">     ~azure.mgmt.sqlvirtualmachine.models.SqlImageSku</span>
 <span class="sd">    :param sql_virtual_machine_group_resource_id: ARM resource id of the SQL</span>
 <span class="sd">     virtual machine group this SQL virtual machine is or will be part of.</span>
@@ -382,7 +382,6 @@
         <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;sql_image_offer&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-        <span class="s1">&#39;sql_image_sku&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
     <span class="p">}</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
@@ -405,14 +404,14 @@
         <span class="s1">&#39;server_configurations_management_settings&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.serverConfigurationsManagementSettings&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ServerConfigurationsManagementSettings&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">identity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">virtual_machine_resource_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sql_server_license_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sql_virtual_machine_group_resource_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wsfc_domain_credentials</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auto_patching_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auto_backup_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">key_vault_credential_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">server_configurations_management_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">identity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">virtual_machine_resource_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sql_server_license_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sql_image_sku</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sql_virtual_machine_group_resource_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wsfc_domain_credentials</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auto_patching_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auto_backup_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">key_vault_credential_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">server_configurations_management_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">SqlVirtualMachine</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">identity</span> <span class="o">=</span> <span class="n">identity</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">virtual_machine_resource_id</span> <span class="o">=</span> <span class="n">virtual_machine_resource_id</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">provisioning_state</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sql_image_offer</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sql_server_license_type</span> <span class="o">=</span> <span class="n">sql_server_license_type</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sql_image_sku</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sql_image_sku</span> <span class="o">=</span> <span class="n">sql_image_sku</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sql_virtual_machine_group_resource_id</span> <span class="o">=</span> <span class="n">sql_virtual_machine_group_resource_id</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">wsfc_domain_credentials</span> <span class="o">=</span> <span class="n">wsfc_domain_credentials</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">auto_patching_settings</span> <span class="o">=</span> <span class="n">auto_patching_settings</span>
