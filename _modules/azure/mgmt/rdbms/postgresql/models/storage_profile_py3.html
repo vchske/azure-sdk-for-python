@@ -326,19 +326,25 @@
 <span class="sd">     ~azure.mgmt.rdbms.postgresql.models.GeoRedundantBackup</span>
 <span class="sd">    :param storage_mb: Max storage allowed for a server.</span>
 <span class="sd">    :type storage_mb: int</span>
+<span class="sd">    :param storage_autogrow: Enable Storage Auto Grow. Possible values</span>
+<span class="sd">     include: &#39;Enabled&#39;, &#39;Disabled&#39;</span>
+<span class="sd">    :type storage_autogrow: str or</span>
+<span class="sd">     ~azure.mgmt.rdbms.postgresql.models.StorageAutogrow</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;backup_retention_days&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;backupRetentionDays&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
         <span class="s1">&#39;geo_redundant_backup&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;geoRedundantBackup&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;storage_mb&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;storageMB&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;storage_autogrow&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;storageAutogrow&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">backup_retention_days</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">geo_redundant_backup</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">storage_mb</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">backup_retention_days</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">geo_redundant_backup</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">storage_mb</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">storage_autogrow</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">StorageProfile</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">backup_retention_days</span> <span class="o">=</span> <span class="n">backup_retention_days</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">geo_redundant_backup</span> <span class="o">=</span> <span class="n">geo_redundant_backup</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">storage_mb</span> <span class="o">=</span> <span class="n">storage_mb</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">storage_mb</span> <span class="o">=</span> <span class="n">storage_mb</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">storage_autogrow</span> <span class="o">=</span> <span class="n">storage_autogrow</span></div>
 </pre></div>
 
            </div>
