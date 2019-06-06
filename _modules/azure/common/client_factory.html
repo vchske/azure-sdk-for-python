@@ -327,10 +327,10 @@
 
 
 <span class="k">def</span> <span class="nf">_instantiate_client</span><span class="p">(</span><span class="n">client_class</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Instantiate a client from kwargs, removing the subscription_id/tenant_id argument if unsupported.</span>
+    <span class="sd">&quot;&quot;&quot;Instantiate a client from kwargs, removing the subscription_id/tenant_id/base_url argument if unsupported.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">args</span> <span class="o">=</span> <span class="n">get_arg_spec</span><span class="p">(</span><span class="n">client_class</span><span class="o">.</span><span class="fm">__init__</span><span class="p">)</span><span class="o">.</span><span class="n">args</span>
-    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;subscription_id&#39;</span><span class="p">,</span> <span class="s1">&#39;tenant_id&#39;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;subscription_id&#39;</span><span class="p">,</span> <span class="s1">&#39;tenant_id&#39;</span><span class="p">,</span> <span class="s1">&#39;base_url&#39;</span><span class="p">]:</span>
         <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
             <span class="k">continue</span>
         <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
@@ -449,6 +449,7 @@
 <span class="sd">    :return: An instantiated client</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">is_graphrbac</span> <span class="o">=</span> <span class="n">client_class</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;GraphRbacManagementClient&#39;</span>
+    <span class="n">is_keyvault</span> <span class="o">=</span> <span class="n">client_class</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;KeyVaultClient&#39;</span>
     <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;subscription_id&#39;</span><span class="p">:</span> <span class="n">config_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subscriptionId&#39;</span><span class="p">),</span>
         <span class="s1">&#39;base_url&#39;</span><span class="p">:</span> <span class="n">config_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;resourceManagerEndpointUrl&#39;</span><span class="p">),</span>
@@ -461,6 +462,8 @@
         <span class="c1"># Get the right resource for Credentials</span>
         <span class="k">if</span> <span class="n">is_graphrbac</span><span class="p">:</span>
             <span class="n">resource</span> <span class="o">=</span> <span class="n">config_dict</span><span class="p">[</span><span class="s1">&#39;activeDirectoryGraphResourceId&#39;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">is_keyvault</span><span class="p">:</span>
+            <span class="n">resource</span> <span class="o">=</span> <span class="s2">&quot;https://vault.azure.net&quot;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">if</span> <span class="s2">&quot;activeDirectoryResourceId&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config_dict</span> <span class="ow">and</span> <span class="s1">&#39;resourceManagerEndpointUrl&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config_dict</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Need activeDirectoryResourceId or resourceManagerEndpointUrl key&quot;</span><span class="p">)</span>
