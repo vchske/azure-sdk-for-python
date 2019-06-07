@@ -1125,6 +1125,37 @@ ClientRawResponse</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_keyspace_throughput">
+<code class="sig-name descname">get_cassandra_keyspace_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">keyspace_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_cassandra_keyspace_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_keyspace_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the RUs per second of the Cassandra Keyspace under an existing
+Azure Cosmos DB database account with the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>keyspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB keyspace name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Throughput or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_table">
 <code class="sig-name descname">get_cassandra_table</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">keyspace_name</em>, <em class="sig-param">table_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_cassandra_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the Cassandra table under an existing Azure Cosmos DB database
@@ -1157,6 +1188,38 @@ ClientRawResponse</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_table_throughput">
+<code class="sig-name descname">get_cassandra_table_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">keyspace_name</em>, <em class="sig-param">table_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_cassandra_table_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_table_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the RUs per second of the Cassandra table under an existing Azure
+Cosmos DB database account with the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>keyspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB keyspace name.</p></li>
+<li><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB table name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Throughput or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_database">
 <code class="sig-name descname">get_gremlin_database</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_gremlin_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the Gremlin databases under an existing Azure Cosmos DB database
@@ -1179,6 +1242,37 @@ overrides</span>.</p></li>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinDatabase" title="azure.mgmt.cosmosdb.models.GremlinDatabase">GremlinDatabase</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_database_throughput">
+<code class="sig-name descname">get_gremlin_database_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_gremlin_database_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_database_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the RUs per second of the Gremlin database under an existing Azure
+Cosmos DB database account with the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Throughput or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a> or
 ClientRawResponse</p>
 </dd>
 <dt class="field-even">Raises</dt>
@@ -1220,6 +1314,38 @@ ClientRawResponse</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_graph_throughput">
+<code class="sig-name descname">get_gremlin_graph_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">graph_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_gremlin_graph_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_graph_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Gremlin graph throughput under an existing Azure Cosmos DB
+database account with the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>graph_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB graph name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Throughput or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_collection">
 <code class="sig-name descname">get_mongo_db_collection</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">collection_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_mongo_db_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_collection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the MongoDB collection under an existing Azure Cosmos DB database
@@ -1252,6 +1378,38 @@ ClientRawResponse</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_collection_throughput">
+<code class="sig-name descname">get_mongo_db_collection_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">collection_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_mongo_db_collection_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_collection_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the RUs per second of the MongoDB collection under an existing
+Azure Cosmos DB database account with the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>collection_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB collection name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Throughput or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_database">
 <code class="sig-name descname">get_mongo_db_database</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_mongo_db_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the MongoDB databases under an existing Azure Cosmos DB database
@@ -1274,6 +1432,37 @@ overrides</span>.</p></li>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBDatabase" title="azure.mgmt.cosmosdb.models.MongoDBDatabase">MongoDBDatabase</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_database_throughput">
+<code class="sig-name descname">get_mongo_db_database_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_mongo_db_database_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_database_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the RUs per second of the MongoDB database under an existing Azure
+Cosmos DB database account with the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Throughput or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a> or
 ClientRawResponse</p>
 </dd>
 <dt class="field-even">Raises</dt>
@@ -1346,9 +1535,41 @@ ClientRawResponse</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_container_throughput">
+<code class="sig-name descname">get_sql_container_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">container_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_sql_container_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_container_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the RUs per second of the SQL container under an existing Azure
+Cosmos DB database account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB container name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Throughput or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_database">
 <code class="sig-name descname">get_sql_database</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_sql_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_database" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the SQL databases under an existing Azure Cosmos DB database
+<dd><p>Gets the SQL database under an existing Azure Cosmos DB database
 account with the provided name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1368,6 +1589,37 @@ overrides</span>.</p></li>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlDatabase" title="azure.mgmt.cosmosdb.models.SqlDatabase">SqlDatabase</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_database_throughput">
+<code class="sig-name descname">get_sql_database_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_sql_database_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_database_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the RUs per second of the SQL database under an existing Azure
+Cosmos DB database account with the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Throughput or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a> or
 ClientRawResponse</p>
 </dd>
 <dt class="field-even">Raises</dt>
@@ -1399,6 +1651,37 @@ overrides</span>.</p></li>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Table" title="azure.mgmt.cosmosdb.models.Table">Table</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_table_throughput">
+<code class="sig-name descname">get_table_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">table_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_table_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_table_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the RUs per second of the Table under an existing Azure Cosmos DB
+database account with the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB table name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Throughput or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a> or
 ClientRawResponse</p>
 </dd>
 <dt class="field-even">Raises</dt>
@@ -2042,6 +2325,307 @@ ClientRawResponse&lt;None&gt; if raw==True</p>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
 AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_cassandra_keyspace_throughput">
+<code class="sig-name descname">update_cassandra_keyspace_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">keyspace_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.update_cassandra_keyspace_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_cassandra_keyspace_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update RUs per second of an Azure Cosmos DB Cassandra Keyspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>keyspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB keyspace name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.ThroughputResource" title="azure.mgmt.cosmosdb.models.ThroughputResource"><em>ThroughputResource</em></a>) – The standard JSON format of a resource throughput</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Throughput or
+ClientRawResponse&lt;Throughput&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_cassandra_table_throughput">
+<code class="sig-name descname">update_cassandra_table_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">keyspace_name</em>, <em class="sig-param">table_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.update_cassandra_table_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_cassandra_table_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update RUs per second of an Azure Cosmos DB Cassandra table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>keyspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB keyspace name.</p></li>
+<li><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB table name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.ThroughputResource" title="azure.mgmt.cosmosdb.models.ThroughputResource"><em>ThroughputResource</em></a>) – The standard JSON format of a resource throughput</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Throughput or
+ClientRawResponse&lt;Throughput&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_gremlin_database_throughput">
+<code class="sig-name descname">update_gremlin_database_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.update_gremlin_database_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_gremlin_database_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update RUs per second of an Azure Cosmos DB Gremlin database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.ThroughputResource" title="azure.mgmt.cosmosdb.models.ThroughputResource"><em>ThroughputResource</em></a>) – The standard JSON format of a resource throughput</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Throughput or
+ClientRawResponse&lt;Throughput&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_gremlin_graph_throughput">
+<code class="sig-name descname">update_gremlin_graph_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">graph_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.update_gremlin_graph_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_gremlin_graph_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update RUs per second of an Azure Cosmos DB Gremlin graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>graph_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB graph name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.ThroughputResource" title="azure.mgmt.cosmosdb.models.ThroughputResource"><em>ThroughputResource</em></a>) – The standard JSON format of a resource throughput</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Throughput or
+ClientRawResponse&lt;Throughput&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_mongo_db_collection_throughput">
+<code class="sig-name descname">update_mongo_db_collection_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">collection_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.update_mongo_db_collection_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_mongo_db_collection_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the RUs per second of an Azure Cosmos DB MongoDB collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>collection_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB collection name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.ThroughputResource" title="azure.mgmt.cosmosdb.models.ThroughputResource"><em>ThroughputResource</em></a>) – The standard JSON format of a resource throughput</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Throughput or
+ClientRawResponse&lt;Throughput&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_mongo_db_database_throughput">
+<code class="sig-name descname">update_mongo_db_database_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.update_mongo_db_database_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_mongo_db_database_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update RUs per second of the an Azure Cosmos DB MongoDB database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.ThroughputResource" title="azure.mgmt.cosmosdb.models.ThroughputResource"><em>ThroughputResource</em></a>) – The standard JSON format of a resource throughput</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Throughput or
+ClientRawResponse&lt;Throughput&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_sql_container_throughput">
+<code class="sig-name descname">update_sql_container_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">container_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.update_sql_container_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_sql_container_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update RUs per second of an Azure Cosmos DB SQL container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB container name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.ThroughputResource" title="azure.mgmt.cosmosdb.models.ThroughputResource"><em>ThroughputResource</em></a>) – The standard JSON format of a resource throughput</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Throughput or
+ClientRawResponse&lt;Throughput&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_sql_database_throughput">
+<code class="sig-name descname">update_sql_database_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">database_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.update_sql_database_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_sql_database_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update RUs per second of an Azure Cosmos DB SQL database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.ThroughputResource" title="azure.mgmt.cosmosdb.models.ThroughputResource"><em>ThroughputResource</em></a>) – The standard JSON format of a resource throughput</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Throughput or
+ClientRawResponse&lt;Throughput&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_table_throughput">
+<code class="sig-name descname">update_table_throughput</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">table_name</em>, <em class="sig-param">resource</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.update_table_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.update_table_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update RUs per second of an Azure Cosmos DB Table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB table name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.ThroughputResource" title="azure.mgmt.cosmosdb.models.ThroughputResource"><em>ThroughputResource</em></a>) – The standard JSON format of a resource throughput</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Throughput or
+ClientRawResponse&lt;Throughput&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Throughput" title="azure.mgmt.cosmosdb.models.Throughput">Throughput</a>]]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>

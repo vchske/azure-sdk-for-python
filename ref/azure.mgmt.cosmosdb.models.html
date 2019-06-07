@@ -1019,6 +1019,33 @@ required for optimistic concurrency control.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.Throughput">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">Throughput</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">throughput: int</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/throughput_py3.html#Throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
+<p>An Azure Cosmos DB resource throughput.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
+<li><p><strong>throughput</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. Value of the Cosmos DB resource throughput</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters">
 <em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">DatabaseAccountCreateUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">locations</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">kind='GlobalDocumentDB'</em>, <em class="sig-param">consistency_policy=None</em>, <em class="sig-param">ip_range_filter: str = None</em>, <em class="sig-param">is_virtual_network_filter_enabled: bool = None</em>, <em class="sig-param">enable_automatic_failover: bool = None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">virtual_network_rules=None</em>, <em class="sig-param">enable_multiple_write_locations: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_create_update_parameters_py3.html#DatabaseAccountCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
@@ -1170,6 +1197,33 @@ for the Cosmos DB account.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>key_kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.KeyKind" title="azure.mgmt.cosmosdb.models.KeyKind"><em>KeyKind</em></a>) – Required. The access key to regenerate. Possible values
 include: ‘primary’, ‘secondary’, ‘primaryReadonly’, ‘secondaryReadonly’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.ThroughputResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">ThroughputResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">throughput: int</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/throughput_resource_py3.html#ThroughputResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ThroughputResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB resource throughput object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>throughput</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. Value of the Cosmos DB resource throughput</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.ThroughputUpdateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cosmosdb.models.</code><code class="sig-name descname">ThroughputUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">resource</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/throughput_update_parameters_py3.html#ThroughputUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ThroughputUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters to update Cosmos DB resource throughput.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>resource</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.ThroughputResource" title="azure.mgmt.cosmosdb.models.ThroughputResource"><em>ThroughputResource</em></a>) – Required. The standard JSON format of a resource
+throughput</p>
 </dd>
 </dl>
 </dd></dl>
