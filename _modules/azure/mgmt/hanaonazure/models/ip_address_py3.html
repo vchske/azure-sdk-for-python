@@ -318,24 +318,17 @@
 <div class="viewcode-block" id="IpAddress"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.IpAddress">[docs]</a><span class="k">class</span> <span class="nc">IpAddress</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Specifies the IP address of the network interface.</span>
 
-<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
-<span class="sd">    sending a request.</span>
-
-<span class="sd">    :ivar ip_address: Specifies the IP address of the network interface.</span>
-<span class="sd">    :vartype ip_address: str</span>
+<span class="sd">    :param ip_address: Specifies the IP address of the network interface.</span>
+<span class="sd">    :type ip_address: str</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;ip_address&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-    <span class="p">}</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;ip_address&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;ipAddress&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">ip_address</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">IpAddress</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ip_address</span> <span class="o">=</span> <span class="kc">None</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ip_address</span> <span class="o">=</span> <span class="n">ip_address</span></div>
 </pre></div>
 
            </div>

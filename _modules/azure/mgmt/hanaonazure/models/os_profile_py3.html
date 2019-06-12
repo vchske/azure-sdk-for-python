@@ -321,22 +321,20 @@
 <span class="sd">    Variables are only populated by the server, and will be ignored when</span>
 <span class="sd">    sending a request.</span>
 
-<span class="sd">    :ivar computer_name: Specifies the host OS name of the HANA instance.</span>
-<span class="sd">    :vartype computer_name: str</span>
+<span class="sd">    :param computer_name: Specifies the host OS name of the HANA instance.</span>
+<span class="sd">    :type computer_name: str</span>
 <span class="sd">    :ivar os_type: This property allows you to specify the type of the OS.</span>
 <span class="sd">    :vartype os_type: str</span>
 <span class="sd">    :ivar version: Specifies version of operating system.</span>
 <span class="sd">    :vartype version: str</span>
-<span class="sd">    :ivar ssh_public_key: Specifies the SSH public key used to access the</span>
+<span class="sd">    :param ssh_public_key: Specifies the SSH public key used to access the</span>
 <span class="sd">     operating system.</span>
-<span class="sd">    :vartype ssh_public_key: str</span>
+<span class="sd">    :type ssh_public_key: str</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;computer_name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;os_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-        <span class="s1">&#39;ssh_public_key&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
     <span class="p">}</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
@@ -346,12 +344,12 @@
         <span class="s1">&#39;ssh_public_key&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;sshPublicKey&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">computer_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ssh_public_key</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">OSProfile</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">computer_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">computer_name</span> <span class="o">=</span> <span class="n">computer_name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">os_type</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ssh_public_key</span> <span class="o">=</span> <span class="kc">None</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ssh_public_key</span> <span class="o">=</span> <span class="n">ssh_public_key</span></div>
 </pre></div>
 
            </div>

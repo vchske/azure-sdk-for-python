@@ -327,8 +327,8 @@
 <span class="sd">    :vartype name: str</span>
 <span class="sd">    :ivar type: Resource type</span>
 <span class="sd">    :vartype type: str</span>
-<span class="sd">    :ivar location: Resource location</span>
-<span class="sd">    :vartype location: str</span>
+<span class="sd">    :param location: Resource location</span>
+<span class="sd">    :type location: str</span>
 <span class="sd">    :ivar tags: Resource tags</span>
 <span class="sd">    :vartype tags: dict[str, str]</span>
 <span class="sd">    :param hardware_profile: Specifies the hardware settings for the HANA</span>
@@ -353,9 +353,9 @@
 <span class="sd">    :vartype proximity_placement_group: str</span>
 <span class="sd">    :ivar hw_revision: Hardware revision of a HANA instance</span>
 <span class="sd">    :vartype hw_revision: str</span>
-<span class="sd">    :ivar partner_node_id: ARM ID of another HanaInstance that will share a</span>
+<span class="sd">    :param partner_node_id: ARM ID of another HanaInstance that will share a</span>
 <span class="sd">     network with this HanaInstance</span>
-<span class="sd">    :vartype partner_node_id: str</span>
+<span class="sd">    :type partner_node_id: str</span>
 <span class="sd">    :ivar provisioning_state: State of provisioning of the HanaInstance.</span>
 <span class="sd">     Possible values include: &#39;Accepted&#39;, &#39;Creating&#39;, &#39;Updating&#39;, &#39;Failed&#39;,</span>
 <span class="sd">     &#39;Succeeded&#39;, &#39;Deleting&#39;, &#39;Migrating&#39;</span>
@@ -367,13 +367,11 @@
         <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-        <span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;tags&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;hana_instance_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;power_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;proximity_placement_group&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;hw_revision&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-        <span class="s1">&#39;partner_node_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
     <span class="p">}</span>
 
@@ -395,8 +393,8 @@
         <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.provisioningState&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">hardware_profile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">storage_profile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">os_profile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">network_profile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">HanaInstance</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hardware_profile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">storage_profile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">os_profile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">network_profile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">partner_node_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">HanaInstance</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hardware_profile</span> <span class="o">=</span> <span class="n">hardware_profile</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">storage_profile</span> <span class="o">=</span> <span class="n">storage_profile</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">os_profile</span> <span class="o">=</span> <span class="n">os_profile</span>
@@ -405,7 +403,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">power_state</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">proximity_placement_group</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hw_revision</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">partner_node_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partner_node_id</span> <span class="o">=</span> <span class="n">partner_node_id</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">provisioning_state</span> <span class="o">=</span> <span class="kc">None</span></div>
 </pre></div>
 
