@@ -314,12 +314,12 @@
 
 <span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">SDKClient</span>
 <span class="kn">from</span> <span class="nn">msrest</span> <span class="k">import</span> <span class="n">Serializer</span><span class="p">,</span> <span class="n">Deserializer</span>
-<span class="kn">from</span> <span class="nn">msrestazure</span> <span class="k">import</span> <span class="n">AzureConfiguration</span>
 
 <span class="kn">from</span> <span class="nn">azure.profiles</span> <span class="k">import</span> <span class="n">KnownProfiles</span><span class="p">,</span> <span class="n">ProfileDefinition</span>
 <span class="kn">from</span> <span class="nn">azure.profiles.multiapiclient</span> <span class="k">import</span> <span class="n">MultiApiClientMixin</span>
-<span class="kn">from</span> <span class="nn">._configuration</span> <span class="k">import</span> <span class="n">StorageManagementClientConfiguration</span>
 <span class="kn">from</span> <span class="nn">.version</span> <span class="k">import</span> <span class="n">VERSION</span>
+<span class="kn">from</span> <span class="nn">._configuration</span> <span class="k">import</span> <span class="n">StorageManagementClientConfiguration</span>
+
 
 
 <div class="viewcode-block" id="StorageManagementClient"><a class="viewcode-back" href="../../../../ref/azure.mgmt.storage.html#azure.mgmt.storage.StorageManagementClient">[docs]</a><span class="k">class</span> <span class="nc">StorageManagementClient</span><span class="p">(</span><span class="n">MultiApiClientMixin</span><span class="p">,</span> <span class="n">SDKClient</span><span class="p">):</span>
@@ -350,10 +350,11 @@
 <span class="sd">    :type profile: azure.profiles.KnownProfiles</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">DEFAULT_API_VERSION</span><span class="o">=</span><span class="s1">&#39;2019-04-01&#39;</span>
+    <span class="n">DEFAULT_API_VERSION</span> <span class="o">=</span> <span class="s1">&#39;2019-04-01&#39;</span>
     <span class="n">_PROFILE_TAG</span> <span class="o">=</span> <span class="s2">&quot;azure.mgmt.storage.StorageManagementClient&quot;</span>
     <span class="n">LATEST_PROFILE</span> <span class="o">=</span> <span class="n">ProfileDefinition</span><span class="p">({</span>
         <span class="n">_PROFILE_TAG</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;usage&#39;</span><span class="p">:</span> <span class="s1">&#39;2018-02-01&#39;</span><span class="p">,</span>
             <span class="kc">None</span><span class="p">:</span> <span class="n">DEFAULT_API_VERSION</span>
         <span class="p">}},</span>
         <span class="n">_PROFILE_TAG</span> <span class="o">+</span> <span class="s2">&quot; latest&quot;</span>
@@ -367,8 +368,6 @@
             <span class="n">api_version</span><span class="o">=</span><span class="n">api_version</span><span class="p">,</span>
             <span class="n">profile</span><span class="o">=</span><span class="n">profile</span>
         <span class="p">)</span>
-
-<span class="c1">############ Generated from here ############</span>
 
     <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">_models_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">api_version</span><span class="p">):</span>
