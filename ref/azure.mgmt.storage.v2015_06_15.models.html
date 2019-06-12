@@ -329,24 +329,8 @@
   <div class="section" id="module-azure.mgmt.storage.v2015_06_15.models">
 <span id="azure-mgmt-storage-v2015-06-15-models-module"></span><h1>azure.mgmt.storage.v2015_06_15.models module<a class="headerlink" href="#module-azure.mgmt.storage.v2015_06_15.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="azure.mgmt.storage.v2015_06_15.models.StorageAccountCheckNameAvailabilityParameters">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccountCheckNameAvailabilityParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">type: str = 'Microsoft.Storage/storageAccounts'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/storage_account_check_name_availability_parameters_py3.html#StorageAccountCheckNameAvailabilityParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccountCheckNameAvailabilityParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The parameters used to check the availability of the storage account name.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required.</p></li>
-<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Default value: “Microsoft.Storage/storageAccounts” .</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.CheckNameAvailabilityResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">CheckNameAvailabilityResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name_available: bool = None</em>, <em class="sig-param">reason=None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/check_name_availability_result_py3.html#CheckNameAvailabilityResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.CheckNameAvailabilityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">CheckNameAvailabilityResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name_available: bool = None</em>, <em class="sig-param">reason=None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_models_py3.html#CheckNameAvailabilityResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.CheckNameAvailabilityResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The CheckNameAvailability operation response.</p>
 <dl class="field-list simple">
@@ -366,55 +350,8 @@ detail.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.storage.v2015_06_15.models.StorageAccountCreateParameters">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccountCreateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">account_type</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/storage_account_create_parameters_py3.html#StorageAccountCreateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccountCreateParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The parameters to provide for the account.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The location of the resource. This will be one
-of the supported and registered Azure Geo Regions (e.g. West US, East US,
-Southeast Asia, etc.). The geo region of a resource cannot be changed once
-it is created, but if an identical geo region is specified on update, the
-request will succeed.</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A list of key value pairs that describe the resource. These
-tags can be used for viewing and grouping this resource (across resource
-groups). A maximum of 15 tags can be provided for a resource. Each tag
-must have a key with a length no greater than 128 characters and a value
-with a length no greater than 256 characters.</p></li>
-<li><p><strong>account_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.storage.v2015_06_15.models.AccountType" title="azure.mgmt.storage.v2015_06_15.models.AccountType"><em>AccountType</em></a>) – Required. The sku name. Required for account
-creation; optional for update. Note that in older versions, sku name was
-called accountType. Possible values include: ‘Standard_LRS’,
-‘Standard_ZRS’, ‘Standard_GRS’, ‘Standard_RAGRS’, ‘Premium_LRS’</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.storage.v2015_06_15.models.Endpoints">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">Endpoints</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">blob: str = None</em>, <em class="sig-param">queue: str = None</em>, <em class="sig-param">table: str = None</em>, <em class="sig-param">file: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/endpoints_py3.html#Endpoints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.Endpoints" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The URIs that are used to perform a retrieval of a public blob, queue or
-table object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>blob</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The blob endpoint.</p></li>
-<li><p><strong>queue</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The queue endpoint.</p></li>
-<li><p><strong>table</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The table endpoint.</p></li>
-<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The file endpoint.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.CustomDomain">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">CustomDomain</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">use_sub_domain_name: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/custom_domain_py3.html#CustomDomain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.CustomDomain" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">CustomDomain</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">use_sub_domain_name: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_models_py3.html#CustomDomain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.CustomDomain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The custom domain assigned to this storage account. This can be set via
 Update.</p>
@@ -431,9 +368,51 @@ enabled. Default value is false. This should only be set on updates</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.storage.v2015_06_15.models.Endpoints">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">Endpoints</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">blob: str = None</em>, <em class="sig-param">queue: str = None</em>, <em class="sig-param">table: str = None</em>, <em class="sig-param">file: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_models_py3.html#Endpoints"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.Endpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The URIs that are used to perform a retrieval of a public blob, queue or
+table object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blob</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The blob endpoint.</p></li>
+<li><p><strong>queue</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The queue endpoint.</p></li>
+<li><p><strong>table</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The table endpoint.</p></li>
+<li><p><strong>file</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The file endpoint.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.storage.v2015_06_15.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_models_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Describes a storage resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.StorageAccount">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccount</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">provisioning_state=None</em>, <em class="sig-param">account_type=None</em>, <em class="sig-param">primary_endpoints=None</em>, <em class="sig-param">primary_location: str = None</em>, <em class="sig-param">status_of_primary=None</em>, <em class="sig-param">last_geo_failover_time=None</em>, <em class="sig-param">secondary_location: str = None</em>, <em class="sig-param">status_of_secondary=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">secondary_endpoints=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/storage_account_py3.html#StorageAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccount" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.storage.v2015_06_15.models.resource_py3.Resource</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccount</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">provisioning_state=None</em>, <em class="sig-param">account_type=None</em>, <em class="sig-param">primary_endpoints=None</em>, <em class="sig-param">primary_location: str = None</em>, <em class="sig-param">status_of_primary=None</em>, <em class="sig-param">last_geo_failover_time=None</em>, <em class="sig-param">secondary_location: str = None</em>, <em class="sig-param">status_of_secondary=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">secondary_endpoints=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_models_py3.html#StorageAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.storage.v2015_06_15.models._models_py3.Resource</span></code></p>
 <p>The storage account.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -492,8 +471,53 @@ the storage account. Only available if the SKU name is Standard_RAGRS.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.storage.v2015_06_15.models.StorageAccountCheckNameAvailabilityParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccountCheckNameAvailabilityParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">type: str = 'Microsoft.Storage/storageAccounts'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_models_py3.html#StorageAccountCheckNameAvailabilityParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccountCheckNameAvailabilityParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to check the availability of the storage account name.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Default value: “Microsoft.Storage/storageAccounts” .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.storage.v2015_06_15.models.StorageAccountCreateParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccountCreateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">account_type</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_models_py3.html#StorageAccountCreateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccountCreateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters to provide for the account.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The location of the resource. This will be one
+of the supported and registered Azure Geo Regions (e.g. West US, East US,
+Southeast Asia, etc.). The geo region of a resource cannot be changed once
+it is created, but if an identical geo region is specified on update, the
+request will succeed.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A list of key value pairs that describe the resource. These
+tags can be used for viewing and grouping this resource (across resource
+groups). A maximum of 15 tags can be provided for a resource. Each tag
+must have a key with a length no greater than 128 characters and a value
+with a length no greater than 256 characters.</p></li>
+<li><p><strong>account_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.storage.v2015_06_15.models.AccountType" title="azure.mgmt.storage.v2015_06_15.models.AccountType"><em>AccountType</em></a>) – Required. The sku name. Required for account
+creation; optional for update. Note that in older versions, sku name was
+called accountType. Possible values include: ‘Standard_LRS’,
+‘Standard_ZRS’, ‘Standard_GRS’, ‘Standard_RAGRS’, ‘Premium_LRS’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.StorageAccountKeys">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccountKeys</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key1: str = None</em>, <em class="sig-param">key2: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/storage_account_keys_py3.html#StorageAccountKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccountKeys" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccountKeys</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key1: str = None</em>, <em class="sig-param">key2: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_models_py3.html#StorageAccountKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccountKeys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The access keys for the storage account.</p>
 <dl class="field-list simple">
@@ -507,8 +531,21 @@ the storage account. Only available if the SKU name is Standard_RAGRS.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.storage.v2015_06_15.models.StorageAccountRegenerateKeyParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccountRegenerateKeyParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key_name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_models_py3.html#StorageAccountRegenerateKeyParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccountRegenerateKeyParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters used to regenerate the storage account key.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.StorageAccountUpdateParameters">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccountUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">account_type=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/storage_account_update_parameters_py3.html#StorageAccountUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccountUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccountUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">account_type=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_models_py3.html#StorageAccountUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccountUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The parameters to update on the account.</p>
 <dl class="field-list simple">
@@ -531,36 +568,8 @@ the custom domain name property.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.storage.v2015_06_15.models.StorageAccountRegenerateKeyParameters">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccountRegenerateKeyParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key_name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/storage_account_regenerate_key_parameters_py3.html#StorageAccountRegenerateKeyParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccountRegenerateKeyParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The parameters used to regenerate the storage account key.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.storage.v2015_06_15.models.UsageName">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">UsageName</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value: str = None</em>, <em class="sig-param">localized_value: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/usage_name_py3.html#UsageName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.UsageName" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The Usage Names.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A string describing the resource name.</p></li>
-<li><p><strong>localized_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A localized string describing the resource name.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.Usage">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">Usage</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">unit</em>, <em class="sig-param">current_value: int</em>, <em class="sig-param">limit: int</em>, <em class="sig-param">name</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/usage_py3.html#Usage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.Usage" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">Usage</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">unit</em>, <em class="sig-param">current_value: int</em>, <em class="sig-param">limit: int</em>, <em class="sig-param">name</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_models_py3.html#Usage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.Usage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes Storage Resource Usage.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -581,24 +590,15 @@ allocated in the subscription.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.storage.v2015_06_15.models.Resource">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.storage.v2015_06_15.models.UsageName">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">UsageName</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value: str = None</em>, <em class="sig-param">localized_value: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_models_py3.html#UsageName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.UsageName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Describes a storage resource.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
+<p>The Usage Names.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A string describing the resource name.</p></li>
+<li><p><strong>localized_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A localized string describing the resource name.</p></li>
 </ul>
 </dd>
 </dl>
@@ -606,21 +606,21 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.StorageAccountPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccountPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/storage_account_paged.html#StorageAccountPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccountPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">StorageAccountPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_paged_models.html#StorageAccountPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccountPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.storage.v2015_06_15.models.StorageAccount" title="azure.mgmt.storage.v2015_06_15.models.StorageAccount"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageAccount</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.UsagePaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">UsagePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/usage_paged.html#UsagePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.UsagePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">UsagePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_paged_models.html#UsagePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.UsagePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.storage.v2015_06_15.models.Usage" title="azure.mgmt.storage.v2015_06_15.models.Usage"><code class="xref py py-class docutils literal notranslate"><span class="pre">Usage</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.Reason">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">Reason</code><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/storage_management_client_enums.html#Reason"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.Reason" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">Reason</code><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_storage_management_client_enums.html#Reason"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.Reason" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -637,7 +637,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.AccountType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">AccountType</code><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/storage_management_client_enums.html#AccountType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.AccountType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">AccountType</code><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_storage_management_client_enums.html#AccountType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.AccountType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -669,7 +669,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.ProvisioningState">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">ProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/storage_management_client_enums.html#ProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.ProvisioningState" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">ProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_storage_management_client_enums.html#ProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.ProvisioningState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -691,7 +691,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.AccountStatus">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">AccountStatus</code><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/storage_management_client_enums.html#AccountStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.AccountStatus" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">AccountStatus</code><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_storage_management_client_enums.html#AccountStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.AccountStatus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -708,7 +708,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.models.UsageUnit">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">UsageUnit</code><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/storage_management_client_enums.html#UsageUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.UsageUnit" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.models.</code><code class="sig-name descname">UsageUnit</code><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/models/_storage_management_client_enums.html#UsageUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.models.UsageUnit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">

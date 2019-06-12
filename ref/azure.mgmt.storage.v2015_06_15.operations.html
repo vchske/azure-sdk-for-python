@@ -330,9 +330,10 @@
 <span id="azure-mgmt-storage-v2015-06-15-operations-module"></span><h1>azure.mgmt.storage.v2015_06_15.operations module<a class="headerlink" href="#module-azure.mgmt.storage.v2015_06_15.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.operations.</code><code class="sig-name descname">StorageAccountsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/storage_accounts_operations.html#StorageAccountsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.operations.</code><code class="sig-name descname">StorageAccountsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/_storage_accounts_operations.html#StorageAccountsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>StorageAccountsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -348,7 +349,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability">
-<code class="sig-name descname">check_name_availability</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">type='Microsoft.Storage/storageAccounts'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/storage_accounts_operations.html#StorageAccountsOperations.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_name_availability</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">type='Microsoft.Storage/storageAccounts'</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/_storage_accounts_operations.html#StorageAccountsOperations.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.check_name_availability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks that the storage account name is valid and is not already in
 use.</p>
 <dl class="field-list simple">
@@ -378,7 +379,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/storage_accounts_operations.html#StorageAccountsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/_storage_accounts_operations.html#StorageAccountsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Asynchronously creates a new storage account with the specified
 parameters. If an account is already created and a subsequent create
 request is issued with different properties, the account properties
@@ -418,7 +419,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/storage_accounts_operations.html#StorageAccountsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/_storage_accounts_operations.html#StorageAccountsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a storage account in Microsoft Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -449,7 +450,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties">
-<code class="sig-name descname">get_properties</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/storage_accounts_operations.html#StorageAccountsOperations.get_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_properties</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/_storage_accounts_operations.html#StorageAccountsOperations.get_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.get_properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the properties for the specified storage account including but
 not limited to name, SKU name, location, and account status. The
 ListKeys operation should be used to retrieve storage keys.</p>
@@ -483,7 +484,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/storage_accounts_operations.html#StorageAccountsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/_storage_accounts_operations.html#StorageAccountsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the storage accounts available under the subscription. Note
 that storage keys are not returned; use the ListKeys operation for
 this.</p>
@@ -511,7 +512,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group">
-<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/storage_accounts_operations.html#StorageAccountsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/_storage_accounts_operations.html#StorageAccountsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the storage accounts available under the given resource
 group. Note that storage keys are not returned; use the ListKeys
 operation for this.</p>
@@ -541,7 +542,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys">
-<code class="sig-name descname">list_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/storage_accounts_operations.html#StorageAccountsOperations.list_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/_storage_accounts_operations.html#StorageAccountsOperations.list_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.list_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the access keys for the specified storage account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -578,7 +579,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key">
-<code class="sig-name descname">regenerate_key</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">key_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/storage_accounts_operations.html#StorageAccountsOperations.regenerate_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">regenerate_key</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">key_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/_storage_accounts_operations.html#StorageAccountsOperations.regenerate_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.regenerate_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Regenerates one of the access keys for the specified storage account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -611,7 +612,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/storage_accounts_operations.html#StorageAccountsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/_storage_accounts_operations.html#StorageAccountsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.StorageAccountsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>The update operation can be used to update the SKU, encryption, access
 tier, or tags for a storage account. It can also be used to map the
 account to a custom domain. Only one custom domain is supported per
@@ -655,9 +656,10 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.storage.v2015_06_15.operations.UsageOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.operations.</code><code class="sig-name descname">UsageOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/usage_operations.html#UsageOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.UsageOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.storage.v2015_06_15.operations.</code><code class="sig-name descname">UsageOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/_usage_operations.html#UsageOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.UsageOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>UsageOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -673,7 +675,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.storage.v2015_06_15.operations.UsageOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/usage_operations.html#UsageOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.UsageOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storage/v2015_06_15/operations/_usage_operations.html#UsageOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storage.v2015_06_15.operations.UsageOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the current usage count and the limit for the resources under the
 subscription.</p>
 <dl class="field-list simple">
