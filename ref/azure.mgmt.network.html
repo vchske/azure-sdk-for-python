@@ -335,8 +335,8 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.network" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.network.NetworkManagementClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.network.</code><code class="sig-name descname">NetworkManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/network/network_management_client.html#NetworkManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.profiles.multiapiclient.MultiApiClientMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.network.</code><code class="sig-name descname">NetworkManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/network/_network_management_client.html#NetworkManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.network._operations_mixin.NetworkManagementClientOperationsMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.profiles.multiapiclient.MultiApiClientMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>Network Client</p>
 <p>This ready contains multiple API versions, to help you deal with all Azure clouds
 (Azure Stack, Azure Government, Azure China, etc.).
@@ -347,7 +347,7 @@ The api-version parameter sets the default API version if the operation
 group is not described in the profile.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="azure.mgmt.network.v2015_06_15.html#azure.mgmt.network.v2015_06_15.NetworkManagementClientConfiguration" title="azure.mgmt.network.v2015_06_15.NetworkManagementClientConfiguration"><em>NetworkManagementClientConfiguration</em></a>) – Configuration for client.</p>
+<dd class="field-odd"><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="#azure.mgmt.network.NetworkManagementClientConfiguration" title="azure.mgmt.network.NetworkManagementClientConfiguration"><em>NetworkManagementClientConfiguration</em></a>) – Configuration for client.</p>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
@@ -557,40 +557,6 @@ missing in profile.</p></li>
 <li><p>2019-02-01: <a class="reference internal" href="azure.mgmt.network.v2019_02_01.operations.html#azure.mgmt.network.v2019_02_01.operations.BgpServiceCommunitiesOperations" title="azure.mgmt.network.v2019_02_01.operations.BgpServiceCommunitiesOperations"><code class="xref py py-class docutils literal notranslate"><span class="pre">BgpServiceCommunitiesOperations</span></code></a></p></li>
 <li><p>2019-04-01: <code class="xref py py-class docutils literal notranslate"><span class="pre">BgpServiceCommunitiesOperations</span></code></p></li>
 </ul>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.mgmt.network.NetworkManagementClient.check_dns_name_availability">
-<code class="sig-name descname">check_dns_name_availability</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">domain_name_label</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/network/network_management_client.html#NetworkManagementClient.check_dns_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.check_dns_name_availability" title="Permalink to this definition">¶</a></dt>
-<dd><p>Checks whether a domain name in the cloudapp.azure.com zone is
-available for use.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the domain name.</p></li>
-<li><p><strong>domain_name_label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The domain name to be verified. It must
-conform to the following regular expression:
-^[a-z][a-z0-9-]{1,61}[a-z0-9]$.</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.network.v2018_08_01.models.html#azure.mgmt.network.v2018_08_01.models.DnsNameAvailabilityResult" title="azure.mgmt.network.v2018_08_01.models.DnsNameAvailabilityResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsNameAvailabilityResult</span></code></a> or
-<code class="xref py py-class docutils literal notranslate"><span class="pre">ClientRawResponse</span></code> if
-raw=true</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.network.v2018_08_01.models.html#azure.mgmt.network.v2018_08_01.models.DnsNameAvailabilityResult" title="azure.mgmt.network.v2018_08_01.models.DnsNameAvailabilityResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">DnsNameAvailabilityResult</span></code></a> or
-<code class="xref py py-class docutils literal notranslate"><span class="pre">ClientRawResponse</span></code></p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -1150,7 +1116,7 @@ raw=true</p>
 
 <dl class="method">
 <dt id="azure.mgmt.network.NetworkManagementClient.models">
-<em class="property">classmethod </em><code class="sig-name descname">models</code><span class="sig-paren">(</span><em class="sig-param">api_version='2019-04-01'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/network/network_management_client.html#NetworkManagementClient.models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.models" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">models</code><span class="sig-paren">(</span><em class="sig-param">api_version='2019-04-01'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/network/_network_management_client.html#NetworkManagementClient.models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClient.models" title="Permalink to this definition">¶</a></dt>
 <dd><p>Module depends on the API version:</p>
 <ul class="simple">
 <li><p>2015-06-15: <a class="reference internal" href="azure.mgmt.network.v2015_06_15.models.html#module-azure.mgmt.network.v2015_06_15.models" title="azure.mgmt.network.v2015_06_15.models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">v2015_06_15.models</span></code></a></p></li>
@@ -1963,6 +1929,27 @@ raw=true</p>
 </ul>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.network.NetworkManagementClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.network.</code><code class="sig-name descname">NetworkManagementClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/network/_configuration.html#NetworkManagementClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.network.NetworkManagementClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrestazure.azure_configuration.AzureConfiguration</span></code></p>
+<p>Configuration for NetworkManagementClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subscription credentials which uniquely
+identify the Microsoft Azure subscription. The subscription ID forms part
+of the URI for every service call.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
