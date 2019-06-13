@@ -355,15 +355,14 @@
     <span class="n">LATEST_PROFILE</span> <span class="o">=</span> <span class="n">ProfileDefinition</span><span class="p">({</span>
         <span class="n">_PROFILE_TAG</span><span class="p">:</span> <span class="p">{</span>
             <span class="kc">None</span><span class="p">:</span> <span class="n">DEFAULT_API_VERSION</span><span class="p">,</span>
+            <span class="s1">&#39;build_steps&#39;</span><span class="p">:</span> <span class="s1">&#39;2018-02-01-preview&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;build_tasks&#39;</span><span class="p">:</span> <span class="s1">&#39;2018-02-01-preview&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;builds&#39;</span><span class="p">:</span> <span class="s1">&#39;2018-02-01-preview&#39;</span><span class="p">,</span>
             <span class="s1">&#39;scope_maps&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-05-01-preview&#39;</span><span class="p">,</span>
             <span class="s1">&#39;tokens&#39;</span><span class="p">:</span> <span class="s1">&#39;2019-05-01-preview&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;build_steps&#39;</span><span class="p">:</span> <span class="s1">&#39;2018-02-01-preview&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;build_taks&#39;</span><span class="p">:</span> <span class="s1">&#39;2018-02-01-preview&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;builds&#39;</span><span class="p">:</span> <span class="s1">&#39;2018-02-01-preview&#39;</span><span class="p">,</span>
         <span class="p">}},</span>
         <span class="n">_PROFILE_TAG</span> <span class="o">+</span> <span class="s2">&quot; latest&quot;</span>
     <span class="p">)</span>
-
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">api_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="n">KnownProfiles</span><span class="o">.</span><span class="n">default</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">ContainerRegistryManagementClientConfiguration</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
