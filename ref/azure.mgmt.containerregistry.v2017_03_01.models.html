@@ -326,44 +326,16 @@
   <div class="section" id="module-azure.mgmt.containerregistry.v2017_03_01.models">
 <span id="azure-mgmt-containerregistry-v2017-03-01-models-module"></span><h1>azure.mgmt.containerregistry.v2017_03_01.models module<a class="headerlink" href="#module-azure.mgmt.containerregistry.v2017_03_01.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameCheckRequest">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryNameCheckRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/registry_name_check_request_py3.html#RegistryNameCheckRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameCheckRequest" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.containerregistry.v2017_03_01.models.OperationDefinition">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">OperationDefinition</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#OperationDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.OperationDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A request to check whether a container registry name is available.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name of the container registry.</p>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The resource type of the container registry. This
-field must be set to ‘Microsoft.ContainerRegistry/registries’. Default
-value: “Microsoft.ContainerRegistry/registries” .</p>
-</dd>
-</dl>
-<dl class="attribute">
-<dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameCheckRequest.type">
-<code class="sig-name descname">type</code><em class="property"> = 'Microsoft.ContainerRegistry/registries'</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameCheckRequest.type" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameStatus">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryNameStatus</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name_available: bool = None</em>, <em class="sig-param">reason: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/registry_name_status_py3.html#RegistryNameStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameStatus" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The result of a request to check the availability of a container registry
-name.</p>
+<p>The definition of a container registry operation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name_available</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The value that indicates whether the name is
-available.</p></li>
-<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – If any, the reason that the name is not available.</p></li>
-<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – If any, the error message that provides more detail for
-the reason that the name is not available.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}.</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.containerregistry.v2017_03_01.models.OperationDisplayDefinition" title="azure.mgmt.containerregistry.v2017_03_01.models.OperationDisplayDefinition"><em>OperationDisplayDefinition</em></a>) – The display information for the container registry
+operation.</p></li>
 </ul>
 </dd>
 </dl>
@@ -371,7 +343,7 @@ the reason that the name is not available.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2017_03_01.models.OperationDisplayDefinition">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">OperationDisplayDefinition</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/operation_display_definition_py3.html#OperationDisplayDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.OperationDisplayDefinition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">OperationDisplayDefinition</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#OperationDisplayDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.OperationDisplayDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The display information for a container registry operation.</p>
 <dl class="field-list simple">
@@ -387,58 +359,25 @@ the reason that the name is not available.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.containerregistry.v2017_03_01.models.OperationDefinition">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">OperationDefinition</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/operation_definition_py3.html#OperationDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.OperationDefinition" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegenerateCredentialParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegenerateCredentialParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#RegenerateCredentialParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegenerateCredentialParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The definition of a container registry operation.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}.</p></li>
-<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.containerregistry.v2017_03_01.models.OperationDisplayDefinition" title="azure.mgmt.containerregistry.v2017_03_01.models.OperationDisplayDefinition"><em>OperationDisplayDefinition</em></a>) – The display information for the container registry
-operation.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerregistry.v2017_03_01.models.Sku">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">Sku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/sku_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.Sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The SKU of a container registry.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
+<p>The parameters used to regenerate the login credential.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The SKU name of the container registry. Required
-for registry creation. Allowed value: Basic.</p>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.kusto.models.html#azure.mgmt.kusto.models.AzureSku.tier" title="azure.mgmt.kusto.models.AzureSku.tier"><strong>tier</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.containerregistry.v2017_03_01.models.SkuTier" title="azure.mgmt.containerregistry.v2017_03_01.models.SkuTier"><em>SkuTier</em></a>) – The SKU tier based on the SKU name. Possible values include:
-‘Basic’</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerregistry.v2017_03_01.models.StorageAccountProperties">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">StorageAccountProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/storage_account_properties_py3.html#StorageAccountProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.StorageAccountProperties" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The properties of a storage account for a container registry.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the storage account.</p>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.containerregistry.v2017_03_01.models.PasswordName" title="azure.mgmt.containerregistry.v2017_03_01.models.PasswordName"><em>PasswordName</em></a>) – Required. Specifies name of the password which should be
+regenerated – password or password2. Possible values include: ‘password’,
+‘password2’</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2017_03_01.models.Registry">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">sku</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">admin_user_enabled: bool = False</em>, <em class="sig-param">storage_account=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/registry_py3.html#Registry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.Registry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.containerregistry.v2017_03_01.models.resource_py3.Resource</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">sku</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">admin_user_enabled: bool = False</em>, <em class="sig-param">storage_account=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#Registry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.Registry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.containerregistry.v2017_03_01.models._models_py3.Resource</span></code></p>
 <p>An object that represents a container registry.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -475,24 +414,8 @@ container registry.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.containerregistry.v2017_03_01.models.StorageAccountParameters">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">StorageAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">access_key: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/storage_account_parameters_py3.html#StorageAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.StorageAccountParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The parameters of a storage account for a container registry.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name of the storage account.</p></li>
-<li><p><strong>access_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The access key to the storage account.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryCreateParameters">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryCreateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">sku</em>, <em class="sig-param">storage_account</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">admin_user_enabled: bool = False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/registry_create_parameters_py3.html#RegistryCreateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryCreateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryCreateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">sku</em>, <em class="sig-param">storage_account</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">admin_user_enabled: bool = False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#RegistryCreateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryCreateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The parameters for creating a container registry.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -514,8 +437,84 @@ same physical location as the container registry.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryListCredentialsResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryListCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">username: str = None</em>, <em class="sig-param">passwords=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#RegistryListCredentialsResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryListCredentialsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The response from the ListCredentials operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>username</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The username for a container registry.</p></li>
+<li><p><strong>passwords</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryPassword" title="azure.mgmt.containerregistry.v2017_03_01.models.RegistryPassword"><em>RegistryPassword</em></a><em>]</em>) – The list of passwords for a container registry.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameCheckRequest">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryNameCheckRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#RegistryNameCheckRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameCheckRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A request to check whether a container registry name is available.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name of the container registry.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The resource type of the container registry. This
+field must be set to ‘Microsoft.ContainerRegistry/registries’. Default
+value: “Microsoft.ContainerRegistry/registries” .</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameCheckRequest.type">
+<code class="sig-name descname">type</code><em class="property"> = 'Microsoft.ContainerRegistry/registries'</em><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameCheckRequest.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameStatus">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryNameStatus</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name_available: bool = None</em>, <em class="sig-param">reason: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#RegistryNameStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryNameStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The result of a request to check the availability of a container registry
+name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name_available</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The value that indicates whether the name is
+available.</p></li>
+<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – If any, the reason that the name is not available.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – If any, the error message that provides more detail for
+the reason that the name is not available.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryPassword">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryPassword</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name=None</em>, <em class="sig-param">value: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#RegistryPassword"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryPassword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The login password for the container registry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.containerregistry.v2017_03_01.models.PasswordName" title="azure.mgmt.containerregistry.v2017_03_01.models.PasswordName"><em>PasswordName</em></a>) – The password name. Possible values include: ‘password’,
+‘password2’</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The password value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryUpdateParameters">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">admin_user_enabled: bool = None</em>, <em class="sig-param">storage_account=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/registry_update_parameters_py3.html#RegistryUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">admin_user_enabled: bool = None</em>, <em class="sig-param">storage_account=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#RegistryUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The parameters for updating a container registry.</p>
 <dl class="field-list simple">
@@ -533,56 +532,8 @@ physical location as the container registry.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryPassword">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryPassword</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name=None</em>, <em class="sig-param">value: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/registry_password_py3.html#RegistryPassword"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryPassword" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The login password for the container registry.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.containerregistry.v2017_03_01.models.PasswordName" title="azure.mgmt.containerregistry.v2017_03_01.models.PasswordName"><em>PasswordName</em></a>) – The password name. Possible values include: ‘password’,
-‘password2’</p></li>
-<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The password value.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryListCredentialsResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryListCredentialsResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">username: str = None</em>, <em class="sig-param">passwords=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/registry_list_credentials_result_py3.html#RegistryListCredentialsResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryListCredentialsResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The response from the ListCredentials operation.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>username</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The username for a container registry.</p></li>
-<li><p><strong>passwords</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryPassword" title="azure.mgmt.containerregistry.v2017_03_01.models.RegistryPassword"><em>RegistryPassword</em></a><em>]</em>) – The list of passwords for a container registry.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegenerateCredentialParameters">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegenerateCredentialParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/regenerate_credential_parameters_py3.html#RegenerateCredentialParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegenerateCredentialParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The parameters used to regenerate the login credential.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.containerregistry.v2017_03_01.models.PasswordName" title="azure.mgmt.containerregistry.v2017_03_01.models.PasswordName"><em>PasswordName</em></a>) – Required. Specifies name of the password which should be
-regenerated – password or password2. Possible values include: ‘password’,
-‘password2’</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.containerregistry.v2017_03_01.models.Resource">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.Resource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.Resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>An Azure resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -607,22 +558,71 @@ changed after the resource is created.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.containerregistry.v2017_03_01.models.Sku">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">Sku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.Sku" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The SKU of a container registry.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The SKU name of the container registry. Required
+for registry creation. Allowed value: Basic.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.kusto.models.html#azure.mgmt.kusto.models.AzureSku.tier" title="azure.mgmt.kusto.models.AzureSku.tier"><strong>tier</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.containerregistry.v2017_03_01.models.SkuTier" title="azure.mgmt.containerregistry.v2017_03_01.models.SkuTier"><em>SkuTier</em></a>) – The SKU tier based on the SKU name. Possible values include:
+‘Basic’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerregistry.v2017_03_01.models.StorageAccountParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">StorageAccountParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">access_key: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#StorageAccountParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.StorageAccountParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters of a storage account for a container registry.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name of the storage account.</p></li>
+<li><p><strong>access_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The access key to the storage account.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerregistry.v2017_03_01.models.StorageAccountProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">StorageAccountProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_models_py3.html#StorageAccountProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.StorageAccountProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The properties of a storage account for a container registry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the storage account.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.containerregistry.v2017_03_01.models.RegistryPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/registry_paged.html#RegistryPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">RegistryPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_paged_models.html#RegistryPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.RegistryPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.containerregistry.v2017_03_01.models.Registry" title="azure.mgmt.containerregistry.v2017_03_01.models.Registry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Registry</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2017_03_01.models.OperationDefinitionPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">OperationDefinitionPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/operation_definition_paged.html#OperationDefinitionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.OperationDefinitionPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">OperationDefinitionPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_paged_models.html#OperationDefinitionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.OperationDefinitionPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.containerregistry.v2017_03_01.models.OperationDefinition" title="azure.mgmt.containerregistry.v2017_03_01.models.OperationDefinition"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationDefinition</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2017_03_01.models.SkuTier">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">SkuTier</code><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/container_registry_management_client_enums.html#SkuTier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.SkuTier" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">SkuTier</code><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_container_registry_management_client_enums.html#SkuTier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.SkuTier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -634,7 +634,7 @@ changed after the resource is created.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2017_03_01.models.ProvisioningState">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">ProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/container_registry_management_client_enums.html#ProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.ProvisioningState" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">ProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_container_registry_management_client_enums.html#ProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.ProvisioningState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -651,7 +651,7 @@ changed after the resource is created.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.v2017_03_01.models.PasswordName">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">PasswordName</code><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/container_registry_management_client_enums.html#PasswordName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.PasswordName" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.v2017_03_01.models.</code><code class="sig-name descname">PasswordName</code><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/v2017_03_01/models/_container_registry_management_client_enums.html#PasswordName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.v2017_03_01.models.PasswordName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">

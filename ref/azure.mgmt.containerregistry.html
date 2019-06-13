@@ -321,21 +321,30 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.containerregistry" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.containerregistry.ContainerRegistryManagementClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.</code><code class="sig-name descname">ContainerRegistryManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/container_registry_management_client.html#ContainerRegistryManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.ContainerRegistryManagementClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.</code><code class="sig-name descname">ContainerRegistryManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/_container_registry_management_client.html#ContainerRegistryManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.ContainerRegistryManagementClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.profiles.multiapiclient.MultiApiClientMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
+<p>This ready contains multiple API versions, to help you deal with all Azure clouds
+(Azure Stack, Azure Government, Azure China, etc.).
+By default, uses latest API version available on public Azure.
+For production, you should stick a particular api-version and/or profile.
+The profile sets a mapping between the operation group and an API version.
+The api-version parameter sets the default API version if the operation
+group is not described in the profile.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>ContainerRegistryManagementClientConfiguration</em>) – Configuration for client.</p>
+<dd class="field-odd"><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="#azure.mgmt.containerregistry.ContainerRegistryManagementClientConfiguration" title="azure.mgmt.containerregistry.ContainerRegistryManagementClientConfiguration"><em>ContainerRegistryManagementClientConfiguration</em></a>) – Configuration for client.</p>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
 <span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
-<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Microsoft Azure subscription ID.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subscription credentials which uniquely identify
+Microsoft Azure subscription. The subscription ID forms part of the URI
+for every service call.</p></li>
 <li><p><strong>api_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – API version to use if no profile is provided, or if
 missing in profile.</p></li>
 <li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
-<li><p><strong>profile</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A dict using operation group name to API version.</p></li>
+<li><p><strong>profile</strong> (<em>azure.profiles.KnownProfiles</em>) – A profile definition, from KnownProfiles to dict.</p></li>
 </ul>
 </dd>
 </dl>
@@ -378,7 +387,7 @@ missing in profile.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.containerregistry.ContainerRegistryManagementClient.models">
-<em class="property">classmethod </em><code class="sig-name descname">models</code><span class="sig-paren">(</span><em class="sig-param">api_version='2019-05-01'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/container_registry_management_client.html#ContainerRegistryManagementClient.models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.ContainerRegistryManagementClient.models" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">models</code><span class="sig-paren">(</span><em class="sig-param">api_version='2019-05-01'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/_container_registry_management_client.html#ContainerRegistryManagementClient.models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.ContainerRegistryManagementClient.models" title="Permalink to this definition">¶</a></dt>
 <dd><p>Module depends on the API version:</p>
 <ul class="simple">
 <li><p>2017-03-01: <a class="reference internal" href="azure.mgmt.containerregistry.v2017_03_01.models.html#module-azure.mgmt.containerregistry.v2017_03_01.models" title="azure.mgmt.containerregistry.v2017_03_01.models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">v2017_03_01.models</span></code></a></p></li>
@@ -489,6 +498,25 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerregistry.ContainerRegistryManagementClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerregistry.</code><code class="sig-name descname">ContainerRegistryManagementClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerregistry/_configuration.html#ContainerRegistryManagementClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerregistry.ContainerRegistryManagementClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrestazure.azure_configuration.AzureConfiguration</span></code></p>
+<p>Configuration for ContainerRegistryManagementClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Microsoft Azure subscription ID.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
