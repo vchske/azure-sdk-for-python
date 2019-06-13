@@ -323,7 +323,7 @@
 <span id="azure-mgmt-resource-features-v2015-12-01-models-module"></span><h1>azure.mgmt.resource.features.v2015_12_01.models module<a class="headerlink" href="#module-azure.mgmt.resource.features.v2015_12_01.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.resource.features.v2015_12_01.models.FeatureProperties">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.models.</code><code class="sig-name descname">FeatureProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">state: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/models/feature_properties_py3.html#FeatureProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.models.FeatureProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.models.</code><code class="sig-name descname">FeatureProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">state: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/models/_models_py3.html#FeatureProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.models.FeatureProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Information about feature.</p>
 <dl class="field-list simple">
@@ -335,7 +335,7 @@
 
 <dl class="class">
 <dt id="azure.mgmt.resource.features.v2015_12_01.models.FeatureResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.models.</code><code class="sig-name descname">FeatureResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">type: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/models/feature_result_py3.html#FeatureResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.models.FeatureResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.models.</code><code class="sig-name descname">FeatureResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">type: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/models/_models_py3.html#FeatureResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.models.FeatureResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Previewed feature information.</p>
 <dl class="field-list simple">
@@ -351,8 +351,23 @@
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.resource.features.v2015_12_01.models.Operation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/models/_models_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Microsoft.Features operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.resource.features.v2015_12_01.models.OperationDisplay" title="azure.mgmt.resource.features.v2015_12_01.models.OperationDisplay"><em>OperationDisplay</em></a>) – The object that represents the operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.resource.features.v2015_12_01.models.OperationDisplay">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/models/_models_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The object that represents the operation.</p>
 <dl class="field-list simple">
@@ -368,30 +383,15 @@ endpoint, etc.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.resource.features.v2015_12_01.models.Operation">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.models.Operation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Microsoft.Features operation.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}</p></li>
-<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.resource.features.v2015_12_01.models.OperationDisplay" title="azure.mgmt.resource.features.v2015_12_01.models.OperationDisplay"><em>OperationDisplay</em></a>) – The object that represents the operation.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.resource.features.v2015_12_01.models.OperationPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/models/_paged_models.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.resource.features.v2015_12_01.models.Operation" title="azure.mgmt.resource.features.v2015_12_01.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.features.v2015_12_01.models.FeatureResultPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.models.</code><code class="sig-name descname">FeatureResultPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/models/feature_result_paged.html#FeatureResultPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.models.FeatureResultPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.models.</code><code class="sig-name descname">FeatureResultPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/models/_paged_models.html#FeatureResultPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.models.FeatureResultPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.resource.features.v2015_12_01.models.FeatureResult" title="azure.mgmt.resource.features.v2015_12_01.models.FeatureResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureResult</span></code></a> object</p>
 </dd></dl>

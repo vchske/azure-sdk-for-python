@@ -317,18 +317,27 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.resource.links" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.resource.links.ManagementLinkClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.</code><code class="sig-name descname">ManagementLinkClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/management_link_client.html#ManagementLinkClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.ManagementLinkClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.</code><code class="sig-name descname">ManagementLinkClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">profile=&lt;KnownProfiles.default: &lt;azure.profiles.DefaultProfile object&gt;&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/_management_link_client.html#ManagementLinkClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.ManagementLinkClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.profiles.multiapiclient.MultiApiClientMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>Azure resources can be linked together to form logical relationships. You can establish links between resources belonging to different resource groups. However, all the linked resources must belong to the same subscription. Each resource can be linked to 50 other resources. If any of the linked resources are deleted or moved, the link owner must clean up the remaining link.</p>
+<p>This ready contains multiple API versions, to help you deal with all Azure clouds
+(Azure Stack, Azure Government, Azure China, etc.).
+By default, uses latest API version available on public Azure.
+For production, you should stick a particular api-version and/or profile.
+The profile sets a mapping between the operation group and an API version.
+The api-version parameter sets the default API version if the operation
+group is not described in the profile.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>ManagementLinkClientConfiguration</em>) – Configuration for client.</p>
+<dd class="field-odd"><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="#azure.mgmt.resource.links.ManagementLinkClientConfiguration" title="azure.mgmt.resource.links.ManagementLinkClientConfiguration"><em>ManagementLinkClientConfiguration</em></a>) – Configuration for client.</p>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
 <span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
-<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the target subscription.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subscription credentials which uniquely identify
+Microsoft Azure subscription. The subscription ID forms part of the URI
+for every service call.</p></li>
 <li><p><strong>api_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – API version to use if no profile is provided, or if
 missing in profile.</p></li>
 <li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
@@ -348,7 +357,7 @@ missing in profile.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.links.ManagementLinkClient.models">
-<em class="property">classmethod </em><code class="sig-name descname">models</code><span class="sig-paren">(</span><em class="sig-param">api_version='2016-09-01'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/management_link_client.html#ManagementLinkClient.models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.ManagementLinkClient.models" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">models</code><span class="sig-paren">(</span><em class="sig-param">api_version='2016-09-01'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/_management_link_client.html#ManagementLinkClient.models"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.ManagementLinkClient.models" title="Permalink to this definition">¶</a></dt>
 <dd><p>Module depends on the API version:</p>
 <ul class="simple">
 <li><p>2016-09-01: <a class="reference internal" href="azure.mgmt.resource.links.v2016_09_01.models.html#module-azure.mgmt.resource.links.v2016_09_01.models" title="azure.mgmt.resource.links.v2016_09_01.models"><code class="xref py py-mod docutils literal notranslate"><span class="pre">v2016_09_01.models</span></code></a></p></li>
@@ -373,6 +382,25 @@ missing in profile.</p></li>
 </ul>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resource.links.ManagementLinkClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.</code><code class="sig-name descname">ManagementLinkClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/_configuration.html#ManagementLinkClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.ManagementLinkClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrestazure.azure_configuration.AzureConfiguration</span></code></p>
+<p>Configuration for ManagementLinkClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the target subscription.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

@@ -327,19 +327,38 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.resource.managedapplications" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.ApplicationClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.</code><code class="sig-name descname">ApplicationClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/application_client.html#ApplicationClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.ApplicationClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.</code><code class="sig-name descname">ApplicationClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/_application_client.html#ApplicationClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.ApplicationClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>ARM applications</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>ApplicationClientConfiguration</em>) – Configuration for client.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="#azure.mgmt.resource.managedapplications.ApplicationClientConfiguration" title="azure.mgmt.resource.managedapplications.ApplicationClientConfiguration"><em>ApplicationClientConfiguration</em></a>) – Configuration for client.</p></li>
 <li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.HealthEvaluationKind.applications" title="azure.servicefabric.models.HealthEvaluationKind.applications"><strong>applications</strong></a> (<a class="reference internal" href="azure.mgmt.resource.managedapplications.operations.html#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations" title="azure.mgmt.resource.managedapplications.operations.ApplicationsOperations"><em>azure.mgmt.resource.managedapplications.operations.ApplicationsOperations</em></a>) – Applications operations</p></li>
 <li><p><strong>application_definitions</strong> (<a class="reference internal" href="azure.mgmt.resource.managedapplications.operations.html#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations" title="azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations"><em>azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations</em></a>) – ApplicationDefinitions operations</p></li>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the target subscription.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resource.managedapplications.ApplicationClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.</code><code class="sig-name descname">ApplicationClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/_configuration.html#ApplicationClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.ApplicationClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrestazure.azure_configuration.AzureConfiguration</span></code></p>
+<p>Configuration for ApplicationClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
 <span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
 <li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the target subscription.</p></li>

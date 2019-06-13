@@ -318,9 +318,10 @@
 <span id="azure-mgmt-resource-managedapplications-operations-module"></span><h1>azure.mgmt.resource.managedapplications.operations module<a class="headerlink" href="#module-azure.mgmt.resource.managedapplications.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.operations.</code><code class="sig-name descname">ApplicationsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/applications_operations.html#ApplicationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.operations.</code><code class="sig-name descname">ApplicationsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_applications_operations.html#ApplicationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ApplicationsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -336,7 +337,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.create_or_update">
-<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/applications_operations.html#ApplicationsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_applications_operations.html#ApplicationsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new managed application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -370,7 +371,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.create_or_update_by_id">
-<code class="sig-name descname">create_or_update_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_id</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/applications_operations.html#ApplicationsOperations.create_or_update_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.create_or_update_by_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_id</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_applications_operations.html#ApplicationsOperations.create_or_update_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.create_or_update_by_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new managed application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -405,7 +406,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/applications_operations.html#ApplicationsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_applications_operations.html#ApplicationsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the managed application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -436,7 +437,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.delete_by_id">
-<code class="sig-name descname">delete_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/applications_operations.html#ApplicationsOperations.delete_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.delete_by_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_applications_operations.html#ApplicationsOperations.delete_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.delete_by_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the managed application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -468,7 +469,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/applications_operations.html#ApplicationsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_applications_operations.html#ApplicationsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the managed application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -498,7 +499,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.get_by_id">
-<code class="sig-name descname">get_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/applications_operations.html#ApplicationsOperations.get_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.get_by_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_applications_operations.html#ApplicationsOperations.get_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.get_by_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the managed application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -529,7 +530,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.list_by_resource_group">
-<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/applications_operations.html#ApplicationsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_applications_operations.html#ApplicationsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets all the applications within a resource group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -557,7 +558,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.list_by_subscription">
-<code class="sig-name descname">list_by_subscription</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/applications_operations.html#ApplicationsOperations.list_by_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.list_by_subscription" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_subscription</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_applications_operations.html#ApplicationsOperations.list_by_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.list_by_subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets all the applications within a subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -588,7 +589,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/applications_operations.html#ApplicationsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_applications_operations.html#ApplicationsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates an existing managed application. The only value that can be
 updated via PATCH currently is the tags.</p>
 <dl class="field-list simple">
@@ -621,7 +622,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.update_by_id">
-<code class="sig-name descname">update_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_id</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/applications_operations.html#ApplicationsOperations.update_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.update_by_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_id</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_applications_operations.html#ApplicationsOperations.update_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationsOperations.update_by_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates an existing managed application. The only value that can be
 updated via PATCH currently is the tags.</p>
 <dl class="field-list simple">
@@ -657,9 +658,10 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.operations.</code><code class="sig-name descname">ApplicationDefinitionsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/application_definitions_operations.html#ApplicationDefinitionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.operations.</code><code class="sig-name descname">ApplicationDefinitionsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_application_definitions_operations.html#ApplicationDefinitionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ApplicationDefinitionsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -675,7 +677,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.create_or_update">
-<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_definition_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/application_definitions_operations.html#ApplicationDefinitionsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_definition_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_application_definitions_operations.html#ApplicationDefinitionsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new managed application definition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -710,7 +712,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.create_or_update_by_id">
-<code class="sig-name descname">create_or_update_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_definition_id</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/application_definitions_operations.html#ApplicationDefinitionsOperations.create_or_update_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.create_or_update_by_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_definition_id</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_application_definitions_operations.html#ApplicationDefinitionsOperations.create_or_update_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.create_or_update_by_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new managed application definition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -745,7 +747,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_definition_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/application_definitions_operations.html#ApplicationDefinitionsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_definition_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_application_definitions_operations.html#ApplicationDefinitionsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the managed application definition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -777,7 +779,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.delete_by_id">
-<code class="sig-name descname">delete_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_definition_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/application_definitions_operations.html#ApplicationDefinitionsOperations.delete_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.delete_by_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_definition_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_application_definitions_operations.html#ApplicationDefinitionsOperations.delete_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.delete_by_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the managed application definition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -809,7 +811,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_definition_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/application_definitions_operations.html#ApplicationDefinitionsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">application_definition_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_application_definitions_operations.html#ApplicationDefinitionsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the managed application definition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -840,7 +842,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.get_by_id">
-<code class="sig-name descname">get_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_definition_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/application_definitions_operations.html#ApplicationDefinitionsOperations.get_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.get_by_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_by_id</code><span class="sig-paren">(</span><em class="sig-param">application_definition_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_application_definitions_operations.html#ApplicationDefinitionsOperations.get_by_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.get_by_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the managed application definition.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -871,7 +873,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.list_by_resource_group">
-<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/application_definitions_operations.html#ApplicationDefinitionsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/operations/_application_definitions_operations.html#ApplicationDefinitionsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.operations.ApplicationDefinitionsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the managed application definitions in a resource group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -334,19 +334,38 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.resource.policy.v2015_10_01_preview" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.resource.policy.v2015_10_01_preview.PolicyClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2015_10_01_preview.</code><code class="sig-name descname">PolicyClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2015_10_01_preview/policy_client.html#PolicyClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2015_10_01_preview.PolicyClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2015_10_01_preview.</code><code class="sig-name descname">PolicyClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2015_10_01_preview/_policy_client.html#PolicyClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2015_10_01_preview.PolicyClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>To manage and control access to your resources, you can define customized policies and assign them at a scope.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>PolicyClientConfiguration</em>) – Configuration for client.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="azure.mgmt.resource.policy.html#azure.mgmt.resource.policy.PolicyClientConfiguration" title="azure.mgmt.resource.policy.PolicyClientConfiguration"><em>PolicyClientConfiguration</em></a>) – Configuration for client.</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.resource.policy.html#azure.mgmt.resource.policy.PolicyClient.policy_assignments" title="azure.mgmt.resource.policy.PolicyClient.policy_assignments"><strong>policy_assignments</strong></a> (<a class="reference internal" href="azure.mgmt.resource.policy.v2015_10_01_preview.operations.html#azure.mgmt.resource.policy.v2015_10_01_preview.operations.PolicyAssignmentsOperations" title="azure.mgmt.resource.policy.v2015_10_01_preview.operations.PolicyAssignmentsOperations"><em>azure.mgmt.resource.policy.v2015_10_01_preview.operations.PolicyAssignmentsOperations</em></a>) – PolicyAssignments operations</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.resource.policy.html#azure.mgmt.resource.policy.PolicyClient.policy_definitions" title="azure.mgmt.resource.policy.PolicyClient.policy_definitions"><strong>policy_definitions</strong></a> (<a class="reference internal" href="azure.mgmt.resource.policy.v2015_10_01_preview.operations.html#azure.mgmt.resource.policy.v2015_10_01_preview.operations.PolicyDefinitionsOperations" title="azure.mgmt.resource.policy.v2015_10_01_preview.operations.PolicyDefinitionsOperations"><em>azure.mgmt.resource.policy.v2015_10_01_preview.operations.PolicyDefinitionsOperations</em></a>) – PolicyDefinitions operations</p></li>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the target subscription.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resource.policy.v2015_10_01_preview.PolicyClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2015_10_01_preview.</code><code class="sig-name descname">PolicyClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2015_10_01_preview/_configuration.html#PolicyClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2015_10_01_preview.PolicyClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrestazure.azure_configuration.AzureConfiguration</span></code></p>
+<p>Configuration for PolicyClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
 <span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
 <li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the target subscription.</p></li>

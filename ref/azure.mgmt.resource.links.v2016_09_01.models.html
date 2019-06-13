@@ -322,8 +322,62 @@
   <div class="section" id="module-azure.mgmt.resource.links.v2016_09_01.models">
 <span id="azure-mgmt-resource-links-v2016-09-01-models-module"></span><h1>azure.mgmt.resource.links.v2016_09_01.models module<a class="headerlink" href="#module-azure.mgmt.resource.links.v2016_09_01.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="azure.mgmt.resource.links.v2016_09_01.models.Operation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/_models_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Microsoft.Resources operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.resource.links.v2016_09_01.models.OperationDisplay" title="azure.mgmt.resource.links.v2016_09_01.models.OperationDisplay"><em>OperationDisplay</em></a>) – The object that represents the operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resource.links.v2016_09_01.models.OperationDisplay">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/_models_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The object that represents the operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service provider: Microsoft.Resources</p></li>
+<li><p><strong>resource</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource on which the operation is performed: Profile,
+endpoint, etc.</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation type: Read, write, delete, etc.</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Description of the operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resource.links.v2016_09_01.models.ResourceLink">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">ResourceLink</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/_models_py3.html#ResourceLink"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.ResourceLink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The resource link.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The fully qualified ID of the resource link.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource link.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – The resource link object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkProperties" title="azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkProperties"><em>ResourceLinkProperties</em></a>) – Properties for resource link.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkFilter">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">ResourceLinkFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">target_id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/resource_link_filter_py3.html#ResourceLinkFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkFilter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">ResourceLinkFilter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">target_id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/_models_py3.html#ResourceLinkFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Resource link filter.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -336,7 +390,7 @@
 
 <dl class="class">
 <dt id="azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkProperties">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">ResourceLinkProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">target_id: str</em>, <em class="sig-param">notes: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/resource_link_properties_py3.html#ResourceLinkProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">ResourceLinkProperties</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">target_id: str</em>, <em class="sig-param">notes: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/_models_py3.html#ResourceLinkProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The resource link properties.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -358,76 +412,22 @@ in the link.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.resource.links.v2016_09_01.models.ResourceLink">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">ResourceLink</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/resource_link_py3.html#ResourceLink"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.ResourceLink" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The resource link.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The fully qualified ID of the resource link.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource link.</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – The resource link object.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkProperties" title="azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkProperties"><em>ResourceLinkProperties</em></a>) – Properties for resource link.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.resource.links.v2016_09_01.models.OperationDisplay">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">provider: str = None</em>, <em class="sig-param">resource: str = None</em>, <em class="sig-param">operation: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The object that represents the operation.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service provider: Microsoft.Resources</p></li>
-<li><p><strong>resource</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource on which the operation is performed: Profile,
-endpoint, etc.</p></li>
-<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation type: Read, write, delete, etc.</p></li>
-<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Description of the operation.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.resource.links.v2016_09_01.models.Operation">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.Operation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Microsoft.Resources operation.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}</p></li>
-<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.resource.links.v2016_09_01.models.OperationDisplay" title="azure.mgmt.resource.links.v2016_09_01.models.OperationDisplay"><em>OperationDisplay</em></a>) – The object that represents the operation.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.resource.links.v2016_09_01.models.OperationPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/_paged_models.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.resource.links.v2016_09_01.models.Operation" title="azure.mgmt.resource.links.v2016_09_01.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">ResourceLinkPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/resource_link_paged.html#ResourceLinkPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">ResourceLinkPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/_paged_models.html#ResourceLinkPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.ResourceLinkPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.resource.links.v2016_09_01.models.ResourceLink" title="azure.mgmt.resource.links.v2016_09_01.models.ResourceLink"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResourceLink</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.links.v2016_09_01.models.Filter">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">Filter</code><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/management_link_client_enums.html#Filter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.Filter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.links.v2016_09_01.models.</code><code class="sig-name descname">Filter</code><a class="reference internal" href="../_modules/azure/mgmt/resource/links/v2016_09_01/models/_management_link_client_enums.html#Filter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.links.v2016_09_01.models.Filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">

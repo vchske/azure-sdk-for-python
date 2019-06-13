@@ -332,13 +332,13 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.resource.features.v2015_12_01" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.resource.features.v2015_12_01.FeatureClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.</code><code class="sig-name descname">FeatureClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/feature_client.html#FeatureClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.FeatureClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.</code><code class="sig-name descname">FeatureClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/_feature_client.html#FeatureClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.FeatureClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.resource.features.v2015_12_01.operations._feature_client_operations.FeatureClientOperationsMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>Azure Feature Exposure Control (AFEC) provides a mechanism for the resource providers to control feature exposure to users. Resource providers typically use this mechanism to provide public/private preview for new features prior to making them generally available. Users need to explicitly register for AFEC features to get access to such functionality.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>FeatureClientConfiguration</em>) – Configuration for client.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="azure.mgmt.resource.features.html#azure.mgmt.resource.features.FeatureClientConfiguration" title="azure.mgmt.resource.features.FeatureClientConfiguration"><em>FeatureClientConfiguration</em></a>) – Configuration for client.</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.resource.features.html#module-azure.mgmt.resource.features" title="azure.mgmt.resource.features"><strong>features</strong></a> (<a class="reference internal" href="azure.mgmt.resource.features.v2015_12_01.operations.html#azure.mgmt.resource.features.v2015_12_01.operations.FeaturesOperations" title="azure.mgmt.resource.features.v2015_12_01.operations.FeaturesOperations"><em>azure.mgmt.resource.features.v2015_12_01.operations.FeaturesOperations</em></a>) – Features operations</p></li>
 </ul>
 </dd>
@@ -351,32 +351,25 @@
 </ul>
 </dd>
 </dl>
-<dl class="method">
-<dt id="azure.mgmt.resource.features.v2015_12_01.FeatureClient.list_operations">
-<code class="sig-name descname">list_operations</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/feature_client.html#FeatureClient.list_operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.FeatureClient.list_operations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists all of the available Microsoft.Features REST API operations.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resource.features.v2015_12_01.FeatureClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.features.v2015_12_01.</code><code class="sig-name descname">FeatureClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/features/v2015_12_01/_configuration.html#FeatureClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.features.v2015_12_01.FeatureClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrestazure.azure_configuration.AzureConfiguration</span></code></p>
+<p>Configuration for FeatureClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the target subscription.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An iterator like instance of Operation</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.resource.features.v2015_12_01.models.html#azure.mgmt.resource.features.v2015_12_01.models.OperationPaged" title="azure.mgmt.resource.features.v2015_12_01.models.OperationPaged">OperationPaged</a>[<a class="reference internal" href="azure.mgmt.resource.features.v2015_12_01.models.html#azure.mgmt.resource.features.v2015_12_01.models.Operation" title="azure.mgmt.resource.features.v2015_12_01.models.Operation">Operation</a>]</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
-</dd>
 </dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>

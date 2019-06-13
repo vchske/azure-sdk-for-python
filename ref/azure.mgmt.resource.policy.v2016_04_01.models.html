@@ -324,8 +324,27 @@
   <div class="section" id="module-azure.mgmt.resource.policy.v2016_04_01.models">
 <span id="azure-mgmt-resource-policy-v2016-04-01-models-module"></span><h1>azure.mgmt.resource.policy.v2016_04_01.models module<a class="headerlink" href="#module-azure.mgmt.resource.policy.v2016_04_01.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="azure.mgmt.resource.policy.v2016_04_01.models.PolicyAssignment">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2016_04_01.models.</code><code class="sig-name descname">PolicyAssignment</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">display_name: str = None</em>, <em class="sig-param">policy_definition_id: str = None</em>, <em class="sig-param">scope: str = None</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">type: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2016_04_01/models/_models_py3.html#PolicyAssignment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2016_04_01.models.PolicyAssignment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The policy assignment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>display_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The display name of the policy assignment.</p></li>
+<li><p><strong>policy_definition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the policy definition.</p></li>
+<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The scope for the policy assignment.</p></li>
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the policy assignment.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the policy assignment.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the policy assignment.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.resource.policy.v2016_04_01.models.PolicyDefinition">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2016_04_01.models.</code><code class="sig-name descname">PolicyDefinition</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">display_name: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">policy_rule=None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2016_04_01/models/policy_definition_py3.html#PolicyDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2016_04_01.models.PolicyDefinition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2016_04_01.models.</code><code class="sig-name descname">PolicyDefinition</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">policy_type=None</em>, <em class="sig-param">display_name: str = None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">policy_rule=None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2016_04_01/models/_models_py3.html#PolicyDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2016_04_01.models.PolicyDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The policy definition.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -352,41 +371,22 @@ URI.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.resource.policy.v2016_04_01.models.PolicyAssignment">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2016_04_01.models.</code><code class="sig-name descname">PolicyAssignment</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">display_name: str = None</em>, <em class="sig-param">policy_definition_id: str = None</em>, <em class="sig-param">scope: str = None</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">type: str = None</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2016_04_01/models/policy_assignment_py3.html#PolicyAssignment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2016_04_01.models.PolicyAssignment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The policy assignment.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>display_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The display name of the policy assignment.</p></li>
-<li><p><strong>policy_definition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the policy definition.</p></li>
-<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The scope for the policy assignment.</p></li>
-<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the policy assignment.</p></li>
-<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the policy assignment.</p></li>
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the policy assignment.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.resource.policy.v2016_04_01.models.PolicyAssignmentPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2016_04_01.models.</code><code class="sig-name descname">PolicyAssignmentPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2016_04_01/models/policy_assignment_paged.html#PolicyAssignmentPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2016_04_01.models.PolicyAssignmentPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2016_04_01.models.</code><code class="sig-name descname">PolicyAssignmentPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2016_04_01/models/_paged_models.html#PolicyAssignmentPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2016_04_01.models.PolicyAssignmentPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.resource.policy.v2016_04_01.models.PolicyAssignment" title="azure.mgmt.resource.policy.v2016_04_01.models.PolicyAssignment"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolicyAssignment</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.policy.v2016_04_01.models.PolicyDefinitionPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2016_04_01.models.</code><code class="sig-name descname">PolicyDefinitionPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2016_04_01/models/policy_definition_paged.html#PolicyDefinitionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2016_04_01.models.PolicyDefinitionPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2016_04_01.models.</code><code class="sig-name descname">PolicyDefinitionPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2016_04_01/models/_paged_models.html#PolicyDefinitionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2016_04_01.models.PolicyDefinitionPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.resource.policy.v2016_04_01.models.PolicyDefinition" title="azure.mgmt.resource.policy.v2016_04_01.models.PolicyDefinition"><code class="xref py py-class docutils literal notranslate"><span class="pre">PolicyDefinition</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.policy.v2016_04_01.models.PolicyType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2016_04_01.models.</code><code class="sig-name descname">PolicyType</code><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2016_04_01/models/policy_client_enums.html#PolicyType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2016_04_01.models.PolicyType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.policy.v2016_04_01.models.</code><code class="sig-name descname">PolicyType</code><a class="reference internal" href="../_modules/azure/mgmt/resource/policy/v2016_04_01/models/_policy_client_enums.html#PolicyType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.policy.v2016_04_01.models.PolicyType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">

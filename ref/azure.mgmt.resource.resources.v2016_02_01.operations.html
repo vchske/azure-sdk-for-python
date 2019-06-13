@@ -327,9 +327,10 @@
 <span id="azure-mgmt-resource-resources-v2016-02-01-operations-module"></span><h1>azure.mgmt.resource.resources.v2016_02_01.operations module<a class="headerlink" href="#module-azure.mgmt.resource.resources.v2016_02_01.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.resources.v2016_02_01.operations.</code><code class="sig-name descname">DeploymentsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/deployments_operations.html#DeploymentsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.resources.v2016_02_01.operations.</code><code class="sig-name descname">DeploymentsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_deployments_operations.html#DeploymentsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>DeploymentsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -345,7 +346,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.cancel">
-<code class="sig-name descname">cancel</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/deployments_operations.html#DeploymentsOperations.cancel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.cancel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cancel</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_deployments_operations.html#DeploymentsOperations.cancel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.cancel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cancel a currently running template deployment.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -374,7 +375,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.check_existence">
-<code class="sig-name descname">check_existence</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/deployments_operations.html#DeploymentsOperations.check_existence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.check_existence" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_existence</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_deployments_operations.html#DeploymentsOperations.check_existence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.check_existence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks whether deployment exists.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -403,7 +404,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.create_or_update">
-<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/deployments_operations.html#DeploymentsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_deployments_operations.html#DeploymentsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a named template deployment using a template.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -436,7 +437,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/deployments_operations.html#DeploymentsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_deployments_operations.html#DeploymentsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete deployment.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -467,7 +468,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.export_template">
-<code class="sig-name descname">export_template</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/deployments_operations.html#DeploymentsOperations.export_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.export_template" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">export_template</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_deployments_operations.html#DeploymentsOperations.export_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.export_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exports a deployment template.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -497,7 +498,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/deployments_operations.html#DeploymentsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_deployments_operations.html#DeploymentsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a deployment.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -527,7 +528,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/deployments_operations.html#DeploymentsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_deployments_operations.html#DeploymentsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of deployments.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -563,7 +564,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.validate">
-<code class="sig-name descname">validate</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/deployments_operations.html#DeploymentsOperations.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.validate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">validate</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_deployments_operations.html#DeploymentsOperations.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentsOperations.validate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Validate a deployment template.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -596,9 +597,10 @@ or ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.resources.v2016_02_01.operations.</code><code class="sig-name descname">ProvidersOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/providers_operations.html#ProvidersOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.resources.v2016_02_01.operations.</code><code class="sig-name descname">ProvidersOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_providers_operations.html#ProvidersOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ProvidersOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -614,7 +616,7 @@ or ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">expand=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/providers_operations.html#ProvidersOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">expand=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_providers_operations.html#ProvidersOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a resource provider.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -645,7 +647,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">top=None</em>, <em class="sig-param">expand=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/providers_operations.html#ProvidersOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">top=None</em>, <em class="sig-param">expand=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_providers_operations.html#ProvidersOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a list of resource providers.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -680,7 +682,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations.register">
-<code class="sig-name descname">register</code><span class="sig-paren">(</span><em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/providers_operations.html#ProvidersOperations.register"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations.register" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">register</code><span class="sig-paren">(</span><em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_providers_operations.html#ProvidersOperations.register"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations.register" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers provider to be used with a subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -709,7 +711,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations.unregister">
-<code class="sig-name descname">unregister</code><span class="sig-paren">(</span><em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/providers_operations.html#ProvidersOperations.unregister"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations.unregister" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">unregister</code><span class="sig-paren">(</span><em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_providers_operations.html#ProvidersOperations.unregister"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ProvidersOperations.unregister" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unregisters provider from a subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -740,9 +742,10 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.resources.v2016_02_01.operations.</code><code class="sig-name descname">ResourceGroupsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resource_groups_operations.html#ResourceGroupsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.resources.v2016_02_01.operations.</code><code class="sig-name descname">ResourceGroupsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resource_groups_operations.html#ResourceGroupsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ResourceGroupsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -758,7 +761,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence">
-<code class="sig-name descname">check_existence</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resource_groups_operations.html#ResourceGroupsOperations.check_existence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_existence</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resource_groups_operations.html#ResourceGroupsOperations.check_existence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.check_existence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks whether resource group exists.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -786,7 +789,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update">
-<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resource_groups_operations.html#ResourceGroupsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resource_groups_operations.html#ResourceGroupsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a resource group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -817,7 +820,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resource_groups_operations.html#ResourceGroupsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resource_groups_operations.html#ResourceGroupsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete resource group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -847,19 +850,19 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template">
-<code class="sig-name descname">export_template</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">options=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resource_groups_operations.html#ResourceGroupsOperations.export_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">export_template</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">options=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resource_groups_operations.html#ResourceGroupsOperations.export_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.export_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Captures the specified resource group as a template.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group to be
 created or updated.</p></li>
-<li><p><strong>resources</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The ids of the resources. The only supported string
-currently is ‘*’ (all resources). Future api updates will support
-exporting specific resources.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The export template options. Supported values include
-‘IncludeParameterDefaultValue’, ‘IncludeComments’ or
-‘IncludeParameterDefaultValue, IncludeComments</p></li>
+<li><p><strong>resources</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The IDs of the resources to filter the export by. To
+export all resources, supply an array with single entry ‘*’.</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The export template options. A CSV-formatted list
+containing zero or more of the following:
+‘IncludeParameterDefaultValue’, ‘IncludeComments’,
+‘SkipResourceNameParameterization’, ‘SkipAllParameterization’</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
 <li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
 deserialized response</p></li>
@@ -882,7 +885,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resource_groups_operations.html#ResourceGroupsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resource_groups_operations.html#ResourceGroupsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a resource group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -911,7 +914,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resource_groups_operations.html#ResourceGroupsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resource_groups_operations.html#ResourceGroupsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a collection of resource groups.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -940,7 +943,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources">
-<code class="sig-name descname">list_resources</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">expand=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resource_groups_operations.html#ResourceGroupsOperations.list_resources"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_resources</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">expand=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resource_groups_operations.html#ResourceGroupsOperations.list_resources"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.list_resources" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all of the resources under a subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -977,7 +980,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch">
-<code class="sig-name descname">patch</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resource_groups_operations.html#ResourceGroupsOperations.patch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">patch</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resource_groups_operations.html#ResourceGroupsOperations.patch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourceGroupsOperations.patch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resource groups can be updated through a simple PATCH operation to a
 group address. The format of the request is the same as that for
 creating a resource groups, though if a field is unspecified current
@@ -1013,9 +1016,10 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.resources.v2016_02_01.operations.</code><code class="sig-name descname">ResourcesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resources_operations.html#ResourcesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.resources.v2016_02_01.operations.</code><code class="sig-name descname">ResourcesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resources_operations.html#ResourcesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ResourcesOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1031,7 +1035,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.check_existence">
-<code class="sig-name descname">check_existence</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">parent_resource_path</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">resource_name</em>, <em class="sig-param">api_version</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resources_operations.html#ResourcesOperations.check_existence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.check_existence" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_existence</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">parent_resource_path</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">resource_name</em>, <em class="sig-param">api_version</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resources_operations.html#ResourcesOperations.check_existence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.check_existence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks whether resource exists.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1064,7 +1068,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.create_or_update">
-<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">parent_resource_path</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">resource_name</em>, <em class="sig-param">api_version</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resources_operations.html#ResourcesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">parent_resource_path</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">resource_name</em>, <em class="sig-param">api_version</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resources_operations.html#ResourcesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1099,7 +1103,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">parent_resource_path</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">resource_name</em>, <em class="sig-param">api_version</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resources_operations.html#ResourcesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">parent_resource_path</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">resource_name</em>, <em class="sig-param">api_version</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resources_operations.html#ResourcesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete resource and all of its resources. .</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1132,7 +1136,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">parent_resource_path</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">resource_name</em>, <em class="sig-param">api_version</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resources_operations.html#ResourcesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">parent_resource_path</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">resource_name</em>, <em class="sig-param">api_version</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resources_operations.html#ResourcesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a resource belonging to a resource group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1166,7 +1170,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">expand=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resources_operations.html#ResourcesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">expand=None</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resources_operations.html#ResourcesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all of the resources under a subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1201,7 +1205,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.move_resources">
-<code class="sig-name descname">move_resources</code><span class="sig-paren">(</span><em class="sig-param">source_resource_group_name</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">target_resource_group=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resources_operations.html#ResourcesOperations.move_resources"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.move_resources" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">move_resources</code><span class="sig-paren">(</span><em class="sig-param">source_resource_group_name</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">target_resource_group=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resources_operations.html#ResourcesOperations.move_resources"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.move_resources" title="Permalink to this definition">¶</a></dt>
 <dd><p>Move resources from one resource group to another. The resources being
 moved should all be in the same resource group.</p>
 <dl class="field-list simple">
@@ -1233,7 +1237,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">parent_resource_path</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">resource_name</em>, <em class="sig-param">api_version</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/resources_operations.html#ResourcesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">resource_provider_namespace</em>, <em class="sig-param">parent_resource_path</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">resource_name</em>, <em class="sig-param">api_version</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_resources_operations.html#ResourcesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.ResourcesOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates a resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1273,9 +1277,10 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="class">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.resources.v2016_02_01.operations.</code><code class="sig-name descname">TagsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/tags_operations.html#TagsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.resources.v2016_02_01.operations.</code><code class="sig-name descname">TagsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_tags_operations.html#TagsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>TagsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1291,7 +1296,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.create_or_update">
-<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">tag_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/tags_operations.html#TagsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">tag_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_tags_operations.html#TagsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a subscription resource tag.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1319,7 +1324,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.create_or_update_value">
-<code class="sig-name descname">create_or_update_value</code><span class="sig-paren">(</span><em class="sig-param">tag_name</em>, <em class="sig-param">tag_value</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/tags_operations.html#TagsOperations.create_or_update_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.create_or_update_value" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update_value</code><span class="sig-paren">(</span><em class="sig-param">tag_name</em>, <em class="sig-param">tag_value</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_tags_operations.html#TagsOperations.create_or_update_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.create_or_update_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a subscription resource tag value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1348,7 +1353,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">tag_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/tags_operations.html#TagsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">tag_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_tags_operations.html#TagsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete a subscription resource tag.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1375,7 +1380,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.delete_value">
-<code class="sig-name descname">delete_value</code><span class="sig-paren">(</span><em class="sig-param">tag_name</em>, <em class="sig-param">tag_value</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/tags_operations.html#TagsOperations.delete_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.delete_value" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_value</code><span class="sig-paren">(</span><em class="sig-param">tag_name</em>, <em class="sig-param">tag_value</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_tags_operations.html#TagsOperations.delete_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.delete_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete a subscription resource tag value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1403,7 +1408,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/tags_operations.html#TagsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_tags_operations.html#TagsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.TagsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of subscription resource tags.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1436,9 +1441,10 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.resources.v2016_02_01.operations.</code><code class="sig-name descname">DeploymentOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/deployment_operations.html#DeploymentOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.resources.v2016_02_01.operations.</code><code class="sig-name descname">DeploymentOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_deployment_operations.html#DeploymentOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>DeploymentOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1454,7 +1460,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">operation_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/deployment_operations.html#DeploymentOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">operation_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_deployment_operations.html#DeploymentOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of deployments operations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1485,7 +1491,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/deployment_operations.html#DeploymentOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">deployment_name</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/resources/v2016_02_01/operations/_deployment_operations.html#DeploymentOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.resources.v2016_02_01.operations.DeploymentOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a list of deployments operations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

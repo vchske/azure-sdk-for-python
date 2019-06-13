@@ -317,28 +317,9 @@
   <div class="section" id="module-azure.mgmt.resource.managedapplications.models">
 <span id="azure-mgmt-resource-managedapplications-models-module"></span><h1>azure.mgmt.resource.managedapplications.models module<a class="headerlink" href="#module-azure.mgmt.resource.managedapplications.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="azure.mgmt.resource.managedapplications.models.Plan">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">Plan</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">publisher: str</em>, <em class="sig-param">product: str</em>, <em class="sig-param">version: str</em>, <em class="sig-param">promotion_code: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/plan_py3.html#Plan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.Plan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Plan for the managed application.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The plan name.</p></li>
-<li><p><strong>publisher</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The publisher ID.</p></li>
-<li><p><strong>product</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The product code.</p></li>
-<li><p><strong>promotion_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The promotion code.</p></li>
-<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The plan’s version.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.models.Application">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">Application</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">managed_resource_group_id: str</em>, <em class="sig-param">kind: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">managed_by: str = None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">application_definition_id: str = None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">ui_definition_uri: str = None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/application_py3.html#Application"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.Application" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.resource.managedapplications.models.generic_resource_py3.GenericResource</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">Application</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">managed_resource_group_id: str</em>, <em class="sig-param">kind: str</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">managed_by: str = None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">application_definition_id: str = None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">ui_definition_uri: str = None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#Application"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.Application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.resource.managedapplications.models._models_py3.GenericResource</span></code></p>
 <p>Information about managed application.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -381,91 +362,8 @@ are MarketPlace and ServiceCatalog.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.resource.managedapplications.models.PlanPatchable">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">PlanPatchable</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">publisher: str = None</em>, <em class="sig-param">product: str = None</em>, <em class="sig-param">promotion_code: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/plan_patchable_py3.html#PlanPatchable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.PlanPatchable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Plan for the managed application.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The plan name.</p></li>
-<li><p><strong>publisher</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The publisher ID.</p></li>
-<li><p><strong>product</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The product code.</p></li>
-<li><p><strong>promotion_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The promotion code.</p></li>
-<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The plan’s version.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.resource.managedapplications.models.ApplicationPatchable">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationPatchable</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">managed_by: str = None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">managed_resource_group_id: str = None</em>, <em class="sig-param">application_definition_id: str = None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">ui_definition_uri: str = None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">kind: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/application_patchable_py3.html#ApplicationPatchable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationPatchable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.resource.managedapplications.models.generic_resource_py3.GenericResource</span></code></p>
-<p>Information about managed application.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
-<li><p><strong>outputs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Name and value pairs that define the managed application
-outputs.</p></li>
-<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.resource.managedapplications.models.ProvisioningState" title="azure.mgmt.resource.managedapplications.models.ProvisioningState"><em>ProvisioningState</em></a>) – The managed application provisioning state.
-Possible values include: ‘Accepted’, ‘Running’, ‘Ready’, ‘Creating’,
-‘Created’, ‘Deleting’, ‘Deleted’, ‘Canceled’, ‘Failed’, ‘Succeeded’,
-‘Updating’</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
-<li><p><strong>managed_by</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ID of the resource that manages this resource.</p></li>
-<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.resource.managedapplications.models.Sku" title="azure.mgmt.resource.managedapplications.models.Sku"><em>Sku</em></a>) – The SKU of the resource.</p></li>
-<li><p><strong>identity</strong> (<a class="reference internal" href="#azure.mgmt.resource.managedapplications.models.Identity" title="azure.mgmt.resource.managedapplications.models.Identity"><em>Identity</em></a>) – The identity of the resource.</p></li>
-<li><p><strong>managed_resource_group_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The managed resource group Id.</p></li>
-<li><p><strong>application_definition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The fully qualified path of managed
-application definition Id.</p></li>
-<li><p><strong>parameters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Name and value pairs that define the managed
-application parameters. It can be a JObject or a well formed JSON string.</p></li>
-<li><p><strong>ui_definition_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The blob URI where the UI definition file is
-located.</p></li>
-<li><p><strong>plan</strong> (<a class="reference internal" href="#azure.mgmt.resource.managedapplications.models.PlanPatchable" title="azure.mgmt.resource.managedapplications.models.PlanPatchable"><em>PlanPatchable</em></a>) – The plan information.</p></li>
-<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The kind of the managed application. Allowed values are
-MarketPlace and ServiceCatalog.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.resource.managedapplications.models.ApplicationProviderAuthorization">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationProviderAuthorization</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">principal_id: str</em>, <em class="sig-param">role_definition_id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/application_provider_authorization_py3.html#ApplicationProviderAuthorization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationProviderAuthorization" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The managed application provider authorization.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The provider’s principal identifier. This
-is the identity that the provider will use to call ARM to manage the
-managed application resources.</p></li>
-<li><p><strong>role_definition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The provider’s role definition
-identifier. This role will define all the permissions that the provider
-must have on the managed application’s container resource group. This role
-definition cannot have permission to delete the resource group.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.models.ApplicationArtifact">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationArtifact</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">uri: str = None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/application_artifact_py3.html#ApplicationArtifact"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationArtifact" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationArtifact</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">uri: str = None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#ApplicationArtifact"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationArtifact" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Managed application artifact.</p>
 <dl class="field-list simple">
@@ -483,8 +381,8 @@ include: ‘Template’, ‘Custom’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.models.ApplicationDefinition">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationDefinition</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">lock_level</em>, <em class="sig-param">authorizations</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">managed_by: str = None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">display_name: str = None</em>, <em class="sig-param">is_enabled: str = None</em>, <em class="sig-param">artifacts=None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">package_file_uri: str = None</em>, <em class="sig-param">main_template=None</em>, <em class="sig-param">create_ui_definition=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/application_definition_py3.html#ApplicationDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationDefinition" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.resource.managedapplications.models.generic_resource_py3.GenericResource</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationDefinition</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">lock_level</em>, <em class="sig-param">authorizations</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">managed_by: str = None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">display_name: str = None</em>, <em class="sig-param">is_enabled: str = None</em>, <em class="sig-param">artifacts=None</em>, <em class="sig-param">description: str = None</em>, <em class="sig-param">package_file_uri: str = None</em>, <em class="sig-param">main_template=None</em>, <em class="sig-param">create_ui_definition=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#ApplicationDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationDefinition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.resource.managedapplications.models._models_py3.GenericResource</span></code></p>
 <p>Information about managed application definition.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -530,50 +428,106 @@ JObject or well-formed JSON string.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.resource.managedapplications.models.Sku">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">Sku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">tier: str = None</em>, <em class="sig-param">size: str = None</em>, <em class="sig-param">family: str = None</em>, <em class="sig-param">model: str = None</em>, <em class="sig-param">capacity: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/sku_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.Sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>SKU for the resource.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
+<dt id="azure.mgmt.resource.managedapplications.models.ApplicationPatchable">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationPatchable</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">managed_by: str = None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">managed_resource_group_id: str = None</em>, <em class="sig-param">application_definition_id: str = None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">ui_definition_uri: str = None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">kind: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#ApplicationPatchable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationPatchable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.resource.managedapplications.models._models_py3.GenericResource</span></code></p>
+<p>Information about managed application.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The SKU name.</p></li>
-<li><p><strong>tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SKU tier.</p></li>
-<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SKU size.</p></li>
-<li><p><strong>family</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SKU family.</p></li>
-<li><p><strong>model</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SKU model.</p></li>
-<li><p><strong>capacity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The SKU capacity.</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>outputs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Name and value pairs that define the managed application
+outputs.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.resource.managedapplications.models.ProvisioningState" title="azure.mgmt.resource.managedapplications.models.ProvisioningState"><em>ProvisioningState</em></a>) – The managed application provisioning state.
+Possible values include: ‘Accepted’, ‘Running’, ‘Ready’, ‘Creating’,
+‘Created’, ‘Deleting’, ‘Deleted’, ‘Canceled’, ‘Failed’, ‘Succeeded’,
+‘Updating’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>managed_by</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ID of the resource that manages this resource.</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.resource.managedapplications.models.Sku" title="azure.mgmt.resource.managedapplications.models.Sku"><em>Sku</em></a>) – The SKU of the resource.</p></li>
+<li><p><strong>identity</strong> (<a class="reference internal" href="#azure.mgmt.resource.managedapplications.models.Identity" title="azure.mgmt.resource.managedapplications.models.Identity"><em>Identity</em></a>) – The identity of the resource.</p></li>
+<li><p><strong>managed_resource_group_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The managed resource group Id.</p></li>
+<li><p><strong>application_definition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The fully qualified path of managed
+application definition Id.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Name and value pairs that define the managed
+application parameters. It can be a JObject or a well formed JSON string.</p></li>
+<li><p><strong>ui_definition_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The blob URI where the UI definition file is
+located.</p></li>
+<li><p><strong>plan</strong> (<a class="reference internal" href="#azure.mgmt.resource.managedapplications.models.PlanPatchable" title="azure.mgmt.resource.managedapplications.models.PlanPatchable"><em>PlanPatchable</em></a>) – The plan information.</p></li>
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The kind of the managed application. Allowed values are
+MarketPlace and ServiceCatalog.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.resource.managedapplications.models.Identity">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">Identity</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/identity_py3.html#Identity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.Identity" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.resource.managedapplications.models.ApplicationProviderAuthorization">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationProviderAuthorization</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">principal_id: str</em>, <em class="sig-param">role_definition_id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#ApplicationProviderAuthorization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationProviderAuthorization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Identity for the resource.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
+<p>The managed application provider authorization.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The principal ID of resource identity.</p></li>
-<li><p><strong>tenant_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The tenant ID of resource.</p></li>
+<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The provider’s principal identifier. This
+is the identity that the provider will use to call ARM to manage the
+managed application resources.</p></li>
+<li><p><strong>role_definition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The provider’s role definition
+identifier. This role will define all the permissions that the provider
+must have on the managed application’s container resource group. This role
+definition cannot have permission to delete the resource group.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.resource.managedapplications.models.ResourceIdentityType" title="azure.mgmt.resource.managedapplications.models.ResourceIdentityType"><em>ResourceIdentityType</em></a>) – The identity type. Possible values include: ‘SystemAssigned’</p>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resource.managedapplications.models.ErrorResponse">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ErrorResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">http_status: str = None</em>, <em class="sig-param">error_code: str = None</em>, <em class="sig-param">error_message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Error response indicates managed application is not able to process the
+incoming request. The reason is provided in the error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>http_status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Http status code.</p></li>
+<li><p><strong>error_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error code.</p></li>
+<li><p><strong>error_message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error message indicating why the operation failed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.mgmt.resource.managedapplications.models.ErrorResponseException">
+<em class="property">exception </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ErrorResponseException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘ErrorResponse’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.models.GenericResource">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">GenericResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">managed_by: str = None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/generic_resource_py3.html#GenericResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.GenericResource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.resource.managedapplications.models.resource_py3.Resource</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">GenericResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">managed_by: str = None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#GenericResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.GenericResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.resource.managedapplications.models._models_py3.Resource</span></code></p>
 <p>Resource information.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -598,8 +552,66 @@ sending a request.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.resource.managedapplications.models.Identity">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">Identity</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#Identity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.Identity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Identity for the resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The principal ID of resource identity.</p></li>
+<li><p><strong>tenant_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The tenant ID of resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.resource.managedapplications.models.ResourceIdentityType" title="azure.mgmt.resource.managedapplications.models.ResourceIdentityType"><em>ResourceIdentityType</em></a>) – The identity type. Possible values include: ‘SystemAssigned’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resource.managedapplications.models.Plan">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">Plan</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">publisher: str</em>, <em class="sig-param">product: str</em>, <em class="sig-param">version: str</em>, <em class="sig-param">promotion_code: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#Plan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.Plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Plan for the managed application.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The plan name.</p></li>
+<li><p><strong>publisher</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The publisher ID.</p></li>
+<li><p><strong>product</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The product code.</p></li>
+<li><p><strong>promotion_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The promotion code.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The plan’s version.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resource.managedapplications.models.PlanPatchable">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">PlanPatchable</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">publisher: str = None</em>, <em class="sig-param">product: str = None</em>, <em class="sig-param">promotion_code: str = None</em>, <em class="sig-param">version: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#PlanPatchable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.PlanPatchable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Plan for the managed application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The plan name.</p></li>
+<li><p><strong>publisher</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The publisher ID.</p></li>
+<li><p><strong>product</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The product code.</p></li>
+<li><p><strong>promotion_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The promotion code.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The plan’s version.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.models.Resource">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.Resource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.Resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Resource information.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -622,32 +634,20 @@ sending a request.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.resource.managedapplications.models.ErrorResponse">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ErrorResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">http_status: str = None</em>, <em class="sig-param">error_code: str = None</em>, <em class="sig-param">error_message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.resource.managedapplications.models.Sku">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">Sku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">tier: str = None</em>, <em class="sig-param">size: str = None</em>, <em class="sig-param">family: str = None</em>, <em class="sig-param">model: str = None</em>, <em class="sig-param">capacity: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_models_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.Sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Error response indicates managed application is not able to process the
-incoming request. The reason is provided in the error message.</p>
+<p>SKU for the resource.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>http_status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Http status code.</p></li>
-<li><p><strong>error_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error code.</p></li>
-<li><p><strong>error_message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error message indicating why the operation failed.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="exception">
-<dt id="azure.mgmt.resource.managedapplications.models.ErrorResponseException">
-<em class="property">exception </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ErrorResponseException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
-<p>Server responsed with exception of type: ‘ErrorResponse’.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>deserialize</strong> – A deserializer</p></li>
-<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The SKU name.</p></li>
+<li><p><strong>tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SKU tier.</p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SKU size.</p></li>
+<li><p><strong>family</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SKU family.</p></li>
+<li><p><strong>model</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SKU model.</p></li>
+<li><p><strong>capacity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The SKU capacity.</p></li>
 </ul>
 </dd>
 </dl>
@@ -655,21 +655,21 @@ incoming request. The reason is provided in the error message.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.models.ApplicationPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/application_paged.html#ApplicationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_paged_models.html#ApplicationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.resource.managedapplications.models.Application" title="azure.mgmt.resource.managedapplications.models.Application"><code class="xref py py-class docutils literal notranslate"><span class="pre">Application</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.models.ApplicationDefinitionPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationDefinitionPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/application_definition_paged.html#ApplicationDefinitionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationDefinitionPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationDefinitionPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_paged_models.html#ApplicationDefinitionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationDefinitionPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.resource.managedapplications.models.ApplicationDefinition" title="azure.mgmt.resource.managedapplications.models.ApplicationDefinition"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApplicationDefinition</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.models.ProvisioningState">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/application_client_enums.html#ProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ProvisioningState" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_application_client_enums.html#ProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ProvisioningState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -731,7 +731,7 @@ incoming request. The reason is provided in the error message.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.models.ApplicationLockLevel">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationLockLevel</code><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/application_client_enums.html#ApplicationLockLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationLockLevel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationLockLevel</code><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_application_client_enums.html#ApplicationLockLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationLockLevel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -753,7 +753,7 @@ incoming request. The reason is provided in the error message.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.models.ApplicationArtifactType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationArtifactType</code><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/application_client_enums.html#ApplicationArtifactType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationArtifactType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ApplicationArtifactType</code><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_application_client_enums.html#ApplicationArtifactType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ApplicationArtifactType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -770,7 +770,7 @@ incoming request. The reason is provided in the error message.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.resource.managedapplications.models.ResourceIdentityType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ResourceIdentityType</code><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/application_client_enums.html#ResourceIdentityType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ResourceIdentityType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resource.managedapplications.models.</code><code class="sig-name descname">ResourceIdentityType</code><a class="reference internal" href="../_modules/azure/mgmt/resource/managedapplications/models/_application_client_enums.html#ResourceIdentityType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resource.managedapplications.models.ResourceIdentityType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
