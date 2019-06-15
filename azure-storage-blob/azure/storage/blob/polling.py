@@ -7,8 +7,8 @@
 import logging
 import time
 
-from ._utils import process_storage_error, basic_error_map
 from ._generated.models import StorageErrorException
+from ._utils import process_storage_error
 from ._deserialize import deserialize_blob_properties
 from azure.core.exceptions import AzureError
 from azure.core.polling import PollingMethod, LROPoller, NoPolling
@@ -26,7 +26,7 @@ class CopyStatusPoller(LROPoller):
             polling_interval = 2
         polling_method = CopyBlobPolling if polling else CopyBlob
         poller = polling_method(polling_interval, **kwargs)
-        super().__init__(client, copy_id, None, poller)
+        super(CopyStatusPoller, self).__init__(client, copy_id, None, poller)
 
     def copy_id(self):
         return self._polling_method.id
@@ -51,10 +51,7 @@ class CopyBlob(PollingMethod):
 
     def _update_status(self):
         try:
-            self.blob = self._client._client.blob.get_properties(
-                cls=deserialize_blob_properties,
-                error_map=basic_error_map(),
-                **self.kwargs)
+            self.blob = self._client._client.blob.get_properties(cls=deserialize_blob_properties, **self.kwargs)
         except StorageErrorException as error:
             process_storage_error(error)
         self._status = self.blob.copy.status
@@ -68,10 +65,10 @@ class CopyBlob(PollingMethod):
             self.id = initial_status
             self._update_status()
         else:
-            self._status = initial_status['x-ms-copy-status']
-            self.id = initial_status['x-ms-copy-id']
-            self.etag = initial_status['ETag']
-            self.last_modified = initial_status['Last-Modified']
+            self._status = initial_status['copy_status']
+            self.id = initial_status['copy_id']
+            self.etag = initial_status['etag']
+            self.last_modified = initial_status['last_modified']
 
     def run(self):
         # type: () -> None

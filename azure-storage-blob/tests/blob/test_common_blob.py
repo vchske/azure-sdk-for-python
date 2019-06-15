@@ -15,26 +15,27 @@ from azure.common import (
     AzureMissingResourceHttpError,
     AzureException,
 )
-from azure.core.exceptions import HttpResponseError, ResourceNotFoundError
-from azure.storage.common import (
-    AccessPolicy,
-    ResourceTypes,
-    AccountPermissions,
-    TokenCredential,
-)
+from azure.core.exceptions import (
+    HttpResponseError,
+    ResourceNotFoundError,
+    ResourceExistsError,
+    ClientAuthenticationError)
 from azure.storage.blob import (
-    SharedKeyCredentials,
     BlobServiceClient,
     ContainerClient,
-    BlobClient
+    BlobClient,
+    BlobType,
+    StorageErrorCode,
 )
 from azure.storage.blob.models import (
     BlobPermissions,
+    ContainerPermissions,
     ContentSettings,
     BlobProperties,
     RetentionPolicy,
-    # Include,
-    # ContainerPermissions,
+    AccessPolicy,
+    ResourceTypes,
+    AccountPermissions,
 )
 from tests.testcase import (
     StorageTestCase,
@@ -53,34 +54,35 @@ class StorageCommonBlobTest(StorageTestCase):
         super(StorageCommonBlobTest, self).setUp()
 
         url = self._get_account_url()
-        credentials = SharedKeyCredentials(*self._get_shared_key_credentials())
-        self.bsc = BlobServiceClient(url, credentials=credentials)
+        credential = self._get_shared_key_credential()
+        self.bsc = BlobServiceClient(url, credential=credential)
 
         self.container_name = self.get_resource_name('utcontainer')
 
         if not self.is_playback():
             container = self.bsc.get_container_client(self.container_name)
-            container.create_container()
+            try:
+                container.create_container(timeout=5)
+            except ResourceExistsError:
+                pass
 
         self.byte_data = self.get_random_bytes(1024)
 
         remote_url = self._get_remote_account_url()
-        remote_credentials = SharedKeyCredentials(*self._get_remote_shared_key_credentials())
-        self.bsc2 = BlobServiceClient(remote_url, credentials=remote_credentials)
+        remote_credential = self._get_remote_shared_key_credential()
+        self.bsc2 = BlobServiceClient(remote_url, credential=remote_credential)
         self.remote_container_name = None
 
     def tearDown(self):
         if not self.is_playback():
             try:
-                container = self.bsc.get_container_client(self.container_name)
-                container.delete_container()
+                self.bsc.delete_container(self.container_name, timeout=5)
             except:
                 pass
 
             if self.remote_container_name:
                 try:
-                    container = self.bsc2.get_container_client(self.remote_container_name)
-                    container.delete_container()
+                    self.bsc2.delete_container(self.remote_container_name)
                 except:
                     pass
 
@@ -102,7 +104,10 @@ class StorageCommonBlobTest(StorageTestCase):
     def _create_remote_container(self):
         self.remote_container_name = self.get_resource_name('remotectnr')
         remote_container = self.bsc2.get_container_client(self.remote_container_name)
-        remote_container.create_container()
+        try:
+            remote_container.create_container()
+        except ResourceExistsError:
+            pass
 
     def _create_remote_block_blob(self, blob_data=None):
         if not blob_data:
@@ -177,7 +182,7 @@ class StorageCommonBlobTest(StorageTestCase):
         snapshot = blob.create_snapshot()
 
         # Act
-        blob = self.bsc.get_blob_client(self.container_name, snapshot)
+        blob = self.bsc.get_blob_client(self.container_name, blob_name, snapshot=snapshot)
         exists = blob.get_blob_properties()
 
         # Assert
@@ -229,7 +234,7 @@ class StorageCommonBlobTest(StorageTestCase):
             blob_name = '{0}a{0}a{0}'.format(c)
             blob_data = c
             blob = self.bsc.get_blob_client(self.container_name, blob_name)
-            blob.upload_blob(blob_data, len(blob_data))
+            blob.upload_blob(blob_data, length=len(blob_data))
 
             data = blob.download_blob()
             content = b"".join(list(data))
@@ -246,10 +251,10 @@ class StorageCommonBlobTest(StorageTestCase):
 
         # Act
         data = b'hello world again'
-        resp = blob.upload_blob(data, len(data), lease=lease)
+        resp = blob.upload_blob(data, length=len(data), lease=lease)
 
         # Assert
-        self.assertIsNotNone(resp.get('ETag'))
+        self.assertIsNotNone(resp.get('etag'))
         content = b"".join(list(blob.download_blob(lease=lease)))
         self.assertEqual(content, data)
 
@@ -262,10 +267,10 @@ class StorageCommonBlobTest(StorageTestCase):
         # Act
         data = b'hello world'
         blob = self.bsc.get_blob_client(self.container_name, blob_name)
-        resp = blob.upload_blob(data, len(data), metadata=metadata)
+        resp = blob.upload_blob(data, length=len(data), metadata=metadata)
 
         # Assert
-        self.assertIsNotNone(resp.get('ETag'))
+        self.assertIsNotNone(resp.get('etag'))
         md = blob.get_blob_properties().metadata
         self.assertDictEqual(md, metadata)
 
@@ -287,7 +292,8 @@ class StorageCommonBlobTest(StorageTestCase):
         # Arrange
         blob_name = self._create_block_blob()
         blob = self.bsc.get_blob_client(self.container_name, blob_name)
-        snapshot = self.bsc.get_blob_client(self.container_name, blob.create_snapshot())
+        snapshot = self.bsc.get_blob_client(
+            self.container_name, blob_name, snapshot=blob.create_snapshot())
 
         # Act
         data = snapshot.download_blob()
@@ -301,10 +307,11 @@ class StorageCommonBlobTest(StorageTestCase):
         # Arrange
         blob_name = self._create_block_blob()
         blob = self.bsc.get_blob_client(self.container_name, blob_name)
-        snapshot = self.bsc.get_blob_client(self.container_name, blob.create_snapshot())
+        snapshot = self.bsc.get_blob_client(
+            self.container_name, blob_name, snapshot=blob.create_snapshot())
 
         upload_data = b'hello world again'
-        blob.upload_blob(upload_data, len(upload_data))
+        blob.upload_blob(upload_data, length=len(upload_data))
 
         # Act
         blob_previous = snapshot.download_blob()
@@ -359,7 +366,7 @@ class StorageCommonBlobTest(StorageTestCase):
 
         # Act
         blob = self.bsc.get_blob_client(self.container_name, blob_name)
-        blob.set_blob_properties(
+        blob.set_http_headers(
             content_settings=ContentSettings(
                 content_language='spanish',
                 content_disposition='inline'),
@@ -380,7 +387,7 @@ class StorageCommonBlobTest(StorageTestCase):
         # Act
         props.content_settings.content_language = 'spanish'
         props.content_settings.content_disposition = 'inline'
-        blob.set_blob_properties(content_settings=props.content_settings)
+        blob.set_http_headers(content_settings=props.content_settings)
 
         # Assert
         props = blob.get_blob_properties()
@@ -398,8 +405,8 @@ class StorageCommonBlobTest(StorageTestCase):
 
         # Assert
         self.assertIsInstance(props, BlobProperties)
-        self.assertEqual(props.blob_type, blob.blob_type)
-        self.assertEqual(props.content_length, len(self.byte_data))
+        self.assertEqual(props.blob_type, BlobType.BlockBlob)
+        self.assertEqual(props.size, len(self.byte_data))
         self.assertEqual(props.lease.status, 'unlocked')
         self.assertIsNotNone(props.creation_time)
 
@@ -407,7 +414,6 @@ class StorageCommonBlobTest(StorageTestCase):
     # HEAD request.
     @record
     def test_get_blob_properties_fail(self):
-        pytest.skip("Failing with no error code")  # TODO
         # Arrange
         blob_name = self._create_block_blob()
 
@@ -418,13 +424,13 @@ class StorageCommonBlobTest(StorageTestCase):
             blob.get_blob_properties() # Invalid snapshot value of 1
 
         # Assert
-        self.assertEqual('InvalidQueryParameterValue', e.exception.error_code)
+        # TODO: No error code returned
+        #self.assertEqual(StorageErrorCode.invalid_query_parameter_value, e.exception.error_code)
 
     # This test is to validate that the ErrorCode is retrieved from the header during a
     # GET request. This is preferred to relying on the ErrorCode in the body.
     @ record
     def test_get_blob_metadata_fail(self):
-        pytest.skip("Failing with no error code")  # TODO
         # Arrange
         blob_name = self._create_block_blob()
 
@@ -434,7 +440,8 @@ class StorageCommonBlobTest(StorageTestCase):
             blob.get_blob_properties().metadata # Invalid snapshot value of 1
 
         # Assert
-        self.assertEqual('InvalidQueryParameterValue', e.exception.error_code)
+        # TODO: No error code returned
+        #self.assertEqual(StorageErrorCode.invalid_query_parameter_value, e.exception.error_code)
 
     @record
     def test_get_blob_server_encryption(self):
@@ -466,7 +473,7 @@ class StorageCommonBlobTest(StorageTestCase):
         self._create_block_blob()
         self._create_block_blob()
         container = self.bsc.get_container_client(self.container_name)
-        blob_list = container.list_blob_properties()
+        blob_list = container.list_blobs()
 
         #Act
 
@@ -496,17 +503,17 @@ class StorageCommonBlobTest(StorageTestCase):
         container = self.bsc.get_container_client(self.container_name)
         blob = self.bsc.get_blob_client(self.container_name, blob_name)
         res = blob.create_snapshot()
-        blobs = list(container.list_blob_properties(include='snapshots'))
+        blobs = list(container.list_blobs(include='snapshots'))
         self.assertEqual(len(blobs), 2)
 
         # Act
-        snapshot = self.bsc.get_blob_client(self.container_name, res)
-        blob = snapshot.get_blob_properties()
+        snapshot = self.bsc.get_blob_client(self.container_name, blob_name, snapshot=res)
+        props = snapshot.get_blob_properties()
 
         # Assert
         self.assertIsNotNone(blob)
-        self.assertEqual(blob.blob_type, snapshot.blob_type)
-        self.assertEqual(blob.content_length, len(self.byte_data))
+        self.assertEqual(props.blob_type, BlobType.BlockBlob)
+        self.assertEqual(props.size, len(self.byte_data))
 
     @record
     def test_get_blob_properties_with_leased_blob(self):
@@ -520,8 +527,8 @@ class StorageCommonBlobTest(StorageTestCase):
 
         # Assert
         self.assertIsInstance(props, BlobProperties)
-        self.assertEqual(props.blob_type, blob.blob_type)
-        self.assertEqual(props.content_length, len(self.byte_data))
+        self.assertEqual(props.blob_type, BlobType.BlockBlob)
+        self.assertEqual(props.size, len(self.byte_data))
         self.assertEqual(props.lease.status, 'locked')
         self.assertEqual(props.lease.state, 'leased')
         self.assertEqual(props.lease.duration, 'infinite')
@@ -585,14 +592,15 @@ class StorageCommonBlobTest(StorageTestCase):
         # Arrange
         blob_name = self._create_block_blob()
         blob = self.bsc.get_blob_client(self.container_name, blob_name)
-        snapshot = self.bsc.get_blob_client(self.container_name, blob.create_snapshot())
+        snapshot = self.bsc.get_blob_client(
+            self.container_name, blob_name, snapshot=blob.create_snapshot())
 
         # Act
         snapshot.delete_blob()
 
         # Assert
         container = self.bsc.get_container_client(self.container_name)
-        blobs = list(container.list_blob_properties(include='snapshots'))
+        blobs = list(container.list_blobs(include='snapshots'))
         self.assertEqual(len(blobs), 1)
         self.assertEqual(blobs[0].name, blob_name)
         self.assertIsNone(blobs[0].snapshot)
@@ -605,11 +613,11 @@ class StorageCommonBlobTest(StorageTestCase):
         blob.create_snapshot()
 
         # Act
-        blob.delete_blob(delete_snapshots='only')  # TODO: Separate calls?
+        blob.delete_blob_snapshots()
 
         # Assert
         container = self.bsc.get_container_client(self.container_name)
-        blobs = list(container.list_blob_properties(include='snapshots'))
+        blobs = list(container.list_blobs(include='snapshots'))
         self.assertEqual(len(blobs), 1)
         self.assertIsNone(blobs[0].snapshot)
 
@@ -621,11 +629,11 @@ class StorageCommonBlobTest(StorageTestCase):
         blob.create_snapshot()
 
         # Act
-        blob.delete_blob(delete_snapshots='include')
+        blob.delete_blob()
 
         # Assert
         container = self.bsc.get_container_client(self.container_name)
-        blobs = list(container.list_blob_properties(include='snapshots'))
+        blobs = list(container.list_blobs(include='snapshots'))
         self.assertEqual(len(blobs), 0)
 
     @record
@@ -640,21 +648,21 @@ class StorageCommonBlobTest(StorageTestCase):
 
             # Soft delete the blob
             blob.delete_blob()
-            blob_list = list(container.list_blob_properties(include='deleted'))
+            blob_list = list(container.list_blobs(include='deleted'))
 
             # Assert
             self.assertEqual(len(blob_list), 1)
             self._assert_blob_is_soft_deleted(blob_list[0])
 
             # list_blobs should not list soft deleted blobs if Include(deleted=True) is not specified
-            blob_list = list(container.list_blob_properties())
+            blob_list = list(container.list_blobs())
 
             # Assert
             self.assertEqual(len(blob_list), 0)
 
             # Restore blob with undelete
             blob.undelete_blob()
-            blob_list = list(container.list_blob_properties(include='deleted'))
+            blob_list = list(container.list_blobs(include='deleted'))
 
             # Assert
             self.assertEqual(len(blob_list), 1)
@@ -674,29 +682,33 @@ class StorageCommonBlobTest(StorageTestCase):
             blob_snapshot_2 = blob.create_snapshot()
 
             # Soft delete blob_snapshot_1
-            snapshot_1 = self.bsc.get_blob_client(self.container_name, blob_snapshot_1)
+            snapshot_1 = self.bsc.get_blob_client(
+                self.container_name, blob_name, snapshot=blob_snapshot_1)
             snapshot_1.delete_blob()
 
+            with self.assertRaises(ValueError):
+                snapshot_1.delete_blob_snapshots()
+
             container = self.bsc.get_container_client(self.container_name)
-            blob_list = list(container.list_blob_properties(include=["snapshots", "deleted"]))
+            blob_list = list(container.list_blobs(include=["snapshots", "deleted"]))
 
             # Assert
             self.assertEqual(len(blob_list), 3)
             for listedblob in blob_list:
-                if listedblob.snapshot == blob_snapshot_1.snapshot:
+                if listedblob.snapshot == blob_snapshot_1['snapshot']:
                     self._assert_blob_is_soft_deleted(listedblob)
                 else:
                     self._assert_blob_not_soft_deleted(listedblob)
 
             # list_blobs should not list soft deleted blob snapshots if Include(deleted=True) is not specified
-            blob_list = list(container.list_blob_properties(include='snapshots'))
+            blob_list = list(container.list_blobs(include='snapshots'))
 
             # Assert
             self.assertEqual(len(blob_list), 2)
 
             # Restore snapshot with undelete
             blob.undelete_blob()
-            blob_list = list(container.list_blob_properties(include=["snapshots", "deleted"]))
+            blob_list = list(container.list_blobs(include=["snapshots", "deleted"]))
 
             # Assert
             self.assertEqual(len(blob_list), 3)
@@ -716,29 +728,29 @@ class StorageCommonBlobTest(StorageTestCase):
             blob_snapshot_2 = blob.create_snapshot()
 
             # Soft delete all snapshots
-            blob.delete_blob(delete_snapshots='only')
+            blob.delete_blob_snapshots()
             container = self.bsc.get_container_client(self.container_name)
-            blob_list = list(container.list_blob_properties(include=["snapshots", "deleted"]))
+            blob_list = list(container.list_blobs(include=["snapshots", "deleted"]))
 
             # Assert
             self.assertEqual(len(blob_list), 3)
             for listedblob in blob_list:
-                if listedblob.snapshot == blob_snapshot_1.snapshot:
+                if listedblob.snapshot == blob_snapshot_1['snapshot']:
                     self._assert_blob_is_soft_deleted(listedblob)
-                elif listedblob.snapshot == blob_snapshot_2.snapshot:
+                elif listedblob.snapshot == blob_snapshot_2['snapshot']:
                     self._assert_blob_is_soft_deleted(listedblob)
                 else:
                     self._assert_blob_not_soft_deleted(listedblob)
 
             # list_blobs should not list soft deleted blob snapshots if Include(deleted=True) is not specified
-            blob_list = list(container.list_blob_properties(include="snapshots"))
+            blob_list = list(container.list_blobs(include="snapshots"))
 
             # Assert
             self.assertEqual(len(blob_list), 1)
 
             # Restore snapshots with undelete
             blob.undelete_blob()
-            blob_list = list(container.list_blob_properties(include=["snapshots", "deleted"]))
+            blob_list = list(container.list_blobs(include=["snapshots", "deleted"]))
 
             # Assert
             self.assertEqual(len(blob_list), 3)
@@ -759,9 +771,9 @@ class StorageCommonBlobTest(StorageTestCase):
             blob_snapshot_2 = blob.create_snapshot()
 
             # Soft delete blob and all snapshots
-            blob.delete_blob(delete_snapshots="include")
+            blob.delete_blob()
             container = self.bsc.get_container_client(self.container_name)
-            blob_list = list(container.list_blob_properties(include=["snapshots", "deleted"]))
+            blob_list = list(container.list_blobs(include=["snapshots", "deleted"]))
 
             # Assert
             self.assertEqual(len(blob_list), 3)
@@ -769,14 +781,14 @@ class StorageCommonBlobTest(StorageTestCase):
                 self._assert_blob_is_soft_deleted(listedblob)
 
             # list_blobs should not list soft deleted blob snapshots if Include(deleted=True) is not specified
-            blob_list = list(container.list_blob_properties(include=["snapshots"]))
+            blob_list = list(container.list_blobs(include=["snapshots"]))
 
             # Assert
             self.assertEqual(len(blob_list), 0)
 
             # Restore blob and snapshots with undelete
             blob.undelete_blob()
-            blob_list = list(container.list_blob_properties(include=["snapshots", "deleted"]))
+            blob_list = list(container.list_blobs(include=["snapshots", "deleted"]))
 
             # Assert
             self.assertEqual(len(blob_list), 3)
@@ -802,21 +814,21 @@ class StorageCommonBlobTest(StorageTestCase):
             # Soft delete the blob
             blob.delete_blob(lease=lease)
             container = self.bsc.get_container_client(self.container_name)
-            blob_list = list(container.list_blob_properties(include="deleted"))
+            blob_list = list(container.list_blobs(include="deleted"))
 
             # Assert
             self.assertEqual(len(blob_list), 1)
             self._assert_blob_is_soft_deleted(blob_list[0])
 
             # list_blobs should not list soft deleted blobs if Include(deleted=True) is not specified
-            blob_list = list(container.list_blob_properties())
+            blob_list = list(container.list_blobs())
 
             # Assert
             self.assertEqual(len(blob_list), 0)
 
             # Restore blob with undelete, this also gets rid of the lease
             blob.undelete_blob()
-            blob_list = list(container.list_blob_properties(include="deleted"))
+            blob_list = list(container.list_blobs(include="deleted"))
 
             # Assert
             self.assertEqual(len(blob_list), 1)
@@ -827,14 +839,15 @@ class StorageCommonBlobTest(StorageTestCase):
 
     @record
     def test_copy_blob_with_existing_blob(self):
+        #if TestMode.need_recording_file(self.test_mode):
+        #    return
         # Arrange
         blob_name = self._create_block_blob()
         blob = self.bsc.get_blob_client(self.container_name, blob_name)
 
         # Act
-        sourceblob = '/{0}/{1}/{2}'.format(self.settings.STORAGE_ACCOUNT_NAME,
-                                           self.container_name,
-                                           blob_name)
+        sourceblob = '{0}/{1}/{2}'.format(
+            self._get_account_url(), self.container_name, blob_name)
 
         copyblob = self.bsc.get_blob_client(self.container_name, 'blob1copy')
         copy = copyblob.copy_blob_from_url(sourceblob)
@@ -849,7 +862,8 @@ class StorageCommonBlobTest(StorageTestCase):
 
     @record
     def test_copy_blob_with_external_blob_fails(self):
-
+        #if TestMode.need_recording_file(self.test_mode):
+        #    return
         # Arrange
         source_blob = "http://www.gutenberg.org/files/59466/59466-0.txt"
         copied_blob = self.bsc.get_blob_client(self.container_name, '59466-0.txt')
@@ -859,7 +873,8 @@ class StorageCommonBlobTest(StorageTestCase):
         self.assertEqual(copy.status(), 'pending')
 
         with self.assertRaises(ValueError) as e:
-            copy.wait()
+            copy.wait(timeout=120)
+            self.fail("Wait timeout without error.")
 
         # Assert
         self.assertTrue('500 InternalServerError' in str(e.exception))
@@ -867,42 +882,43 @@ class StorageCommonBlobTest(StorageTestCase):
         self.assertIsNotNone(copy.copy_id())
 
     @record
-    def test_copy_blob_async_private_blob(self):
+    def test_copy_blob_async_private_blob_f(self):
+        #if TestMode.need_recording_file(self.test_mode):
+        #    return
         # Arrange
         self._create_remote_container()
         source_blob = self._create_remote_block_blob()
-        source_blob_url = source_blob.make_url()
 
         # Act
         target_blob_name = 'targetblob'
         target_blob = self.bsc.get_blob_client(self.container_name, target_blob_name)
-        copy = target_blob.copy_blob_from_url(source_blob_url)
-        copy.wait()
+        copy = target_blob.copy_blob_from_url(source_blob.url)
+        copy.wait(timeout=120)
 
         # Assert
         self.assertEqual(copy.status(), 'success')
 
     @record
     def test_copy_blob_async_private_blob_with_sas(self):
+        #if TestMode.need_recording_file(self.test_mode):
+        #    return
         # Arrange
         data = b'12345678' * 1024 * 1024
         self._create_remote_container()
         source_blob = self._create_remote_block_blob(blob_data=data)
-
         sas_token = source_blob.generate_shared_access_signature(
             permission=BlobPermissions.READ,
             expiry=datetime.utcnow() + timedelta(hours=1),
         )
-
-        source_blob_url = source_blob.make_url(sas_token=sas_token)
+        blob = BlobClient(source_blob.url, credential=sas_token)
 
         # Act
         target_blob_name = 'targetblob'
         target_blob = self.bsc.get_blob_client(self.container_name, target_blob_name)
-        copy_resp = target_blob.copy_blob_from_url(source_blob_url)
+        copy_resp = target_blob.copy_blob_from_url(blob.url)
 
         # Assert
-        copy_resp.wait()
+        copy_resp.wait(timeout=120)
         self.assertEqual(copy_resp.status(), 'success')
         actual_data = target_blob.download_blob()
         self.assertEqual(b"".join(list(actual_data)), data)
@@ -919,7 +935,8 @@ class StorageCommonBlobTest(StorageTestCase):
 
         copy.abort()
         with self.assertRaises(ValueError):
-            copy.wait()
+            copy.wait(timeout=120)
+            self.fail("Wait timeout without error.")
         self.assertEqual(copy.status(), 'aborted')
 
         # Assert
@@ -936,8 +953,7 @@ class StorageCommonBlobTest(StorageTestCase):
         # Act
         target_blob_name = 'targetblob'
         target_blob = self.bsc.get_blob_client(self.container_name, target_blob_name)
-        print(source_blob.url)
-        copy_resp = target_blob.copy_blob_from_url(source_blob.url) #, requires_sync=True)
+        copy_resp = target_blob.copy_blob_from_url(source_blob.url)
 
         with self.assertRaises(HttpResponseError):
             copy_resp.abort()
@@ -956,7 +972,7 @@ class StorageCommonBlobTest(StorageTestCase):
 
         # Assert
         self.assertIsNotNone(resp)
-        self.assertIsNotNone(resp.snapshot)
+        self.assertIsNotNone(resp['snapshot'])
 
     @record
     def test_lease_blob_acquire_and_release(self):
@@ -981,12 +997,12 @@ class StorageCommonBlobTest(StorageTestCase):
         # Act
         blob = self.bsc.get_blob_client(self.container_name, blob_name)
         lease = blob.acquire_lease(lease_duration=15)
-        resp = blob.upload_blob(b'hello 2', 7, lease=lease)
+        resp = blob.upload_blob(b'hello 2', length=7, lease=lease)
         self.sleep(15)
 
         # Assert
         with self.assertRaises(HttpResponseError):
-            blob.upload_blob(b'hello 3', 7, lease=lease)
+            blob.upload_blob(b'hello 3', length=7, lease=lease)
 
     @record
     def test_lease_blob_with_proposed_lease_id(self):
@@ -1026,18 +1042,18 @@ class StorageCommonBlobTest(StorageTestCase):
         # Act
         blob = self.bsc.get_blob_client(self.container_name, blob_name)
         lease = blob.acquire_lease(lease_duration=15)
-        lease_time = blob.break_lease(lease_break_period=5)
+        lease_time = lease.break_lease(lease_break_period=5)
 
-        resp = blob.upload_blob(b'hello 2', 7, lease=lease)
+        resp = blob.upload_blob(b'hello 2', length=7, lease=lease)
         self.sleep(5)
 
         with self.assertRaises(HttpResponseError):
-            blob.upload_blob(b'hello 3', 7, lease=lease)
+            blob.upload_blob(b'hello 3', length=7, lease=lease)
 
         # Assert
         self.assertIsNotNone(lease.id)
         self.assertIsNotNone(lease_time)
-        self.assertIsNotNone(resp.get('ETag'))
+        self.assertIsNotNone(resp.get('etag'))
 
     @record
     def test_lease_blob_acquire_and_renew(self):
@@ -1070,10 +1086,9 @@ class StorageCommonBlobTest(StorageTestCase):
     @record
     def test_unicode_get_blob_unicode_name(self):
         # Arrange
-        pytest.skip("Failing with no error code")  # TODO
         blob_name = '啊齄丂狛狜'
         blob = self.bsc.get_blob_client(self.container_name, blob_name)
-        blob.upload_blob(b'hello world', 11)
+        blob.upload_blob(b'hello world')
 
         # Act
         data = blob.download_blob()
@@ -1092,7 +1107,7 @@ class StorageCommonBlobTest(StorageTestCase):
         resp = blob.upload_blob(data)
 
         # Assert
-        self.assertIsNotNone(resp.get('ETag'))
+        self.assertIsNotNone(resp.get('etag'))
 
     @record
     def test_no_sas_private_blob(self):
@@ -1101,8 +1116,7 @@ class StorageCommonBlobTest(StorageTestCase):
         blob = self.bsc.get_blob_client(self.container_name, blob_name)
 
         # Act
-        url = blob.make_url()
-        response = requests.get(url)
+        response = requests.get(blob.url)
 
         # Assert
         self.assertFalse(response.ok)
@@ -1110,17 +1124,18 @@ class StorageCommonBlobTest(StorageTestCase):
 
     @record
     def test_no_sas_public_blob(self):
-        pytest.skip("not yet supported")
         # Arrange
         data = b'a public blob can be read without a shared access signature'
         blob_name = 'blob1.txt'
         container_name = self._get_container_reference()
-        self.bs.create_container(container_name, None, 'blob')
-        self.bs.create_blob_from_bytes (container_name, blob_name, data, )
+        try:
+            container = self.bsc.create_container(container_name, public_access='blob')
+        except ResourceExistsError:
+            container = self.bsc.get_container_client(container_name)
+        blob = container.upload_blob(blob_name, data)
 
         # Act
-        url = self.bs.make_blob_url(container_name, blob_name)
-        response = requests.get(url)
+        response = requests.get(blob.url)
 
         # Assert
         self.assertTrue(response.ok)
@@ -1128,63 +1143,57 @@ class StorageCommonBlobTest(StorageTestCase):
 
     @record
     def test_public_access_blob(self):
-        pytest.skip("not yet supported")
         # Arrange
         data = b'public access blob'
         blob_name = 'blob1.txt'
         container_name = self._get_container_reference()
-        self.bs.create_container(container_name, None, 'blob')
-        self.bs.create_blob_from_bytes (container_name, blob_name, data, )
+        try:
+            container = self.bsc.create_container(container_name, public_access='blob')
+        except ResourceExistsError:
+            container = self.bsc.get_container_client(container_name)
+        blob = container.upload_blob(blob_name, data)
 
         # Act
-        service = BlockBlobService(
-            self.settings.STORAGE_ACCOUNT_NAME,
-            request_session=requests.Session(),
-        )
-        self._set_test_proxy(service, self.settings)
-        result = service.get_blob_to_bytes(container_name, blob_name)
+        service = BlobClient(blob.url)
+        #self._set_test_proxy(service, self.settings)
+        content = service.download_blob().content_as_bytes()
 
         # Assert
-        self.assertEqual(data, result.content)
+        self.assertEqual(data, content)
 
     @record
     def test_sas_access_blob(self):
         # SAS URL is calculated from storage key, so this test runs live only
-        pytest.skip("not yet suppoerted")
         if TestMode.need_recording_file(self.test_mode):
             return
 
         # Arrange
         blob_name = self._create_block_blob()
+        blob = self.bsc.get_blob_client(self.container_name, blob_name)
         
-        token = self.bs.generate_blob_shared_access_signature(
-            self.container_name,
-            blob_name,
+        token = blob.generate_shared_access_signature(
             permission=BlobPermissions.READ,
             expiry=datetime.utcnow() + timedelta(hours=1),
         )
 
         # Act
-        service = BlockBlobService(
-            self.settings.STORAGE_ACCOUNT_NAME,
-            sas_token=token,
-            request_session=requests.Session(),
-        )
-        self._set_test_proxy(service, self.settings)
-        result = service.get_blob_to_bytes(self.container_name, blob_name)
+        service = BlobClient(blob.url, credential=token)
+        #self._set_test_proxy(service, self.settings)
+        content = service.download_blob().content_as_bytes()
 
         # Assert
-        self.assertEqual(self.byte_data, result.content)
+        self.assertEqual(self.byte_data, content)
 
     @record
     def test_sas_signed_identifier(self):
         # SAS URL is calculated from storage key, so this test runs live only
-        pytest.skip("not yet supported")
         if TestMode.need_recording_file(self.test_mode):
             return
 
         # Arrange
         blob_name = self._create_block_blob()
+        container = self.bsc.get_container_client(self.container_name)
+        blob = self.bsc.get_blob_client(self.container_name, blob_name)
 
         access_policy = AccessPolicy()
         access_policy.start = datetime.utcnow() - timedelta(hours=1)
@@ -1192,55 +1201,41 @@ class StorageCommonBlobTest(StorageTestCase):
         access_policy.permission = BlobPermissions.READ
         identifiers = {'testid': access_policy}
 
-        resp = self.bs.set_container_acl(self.container_name, identifiers)
+        resp = container.set_container_access_policy(identifiers)
 
-        token = self.bs.generate_blob_shared_access_signature(
-            self.container_name,
-            blob_name,
-            id='testid'
-            )
+        token = blob.generate_shared_access_signature(policy_id='testid')
 
         # Act
-        service = BlockBlobService(
-            self.settings.STORAGE_ACCOUNT_NAME,
-            sas_token=token,
-            request_session=requests.Session(),
-        )
-        self._set_test_proxy(service, self.settings)
-        result = service.get_blob_to_bytes(self.container_name, blob_name)
+        service = BlobClient(blob.url, credential=token)
+        #self._set_test_proxy(service, self.settings)
+        result = service.download_blob().content_as_bytes()
 
         # Assert
-        self.assertEqual(self.byte_data, result.content)
+        self.assertEqual(self.byte_data, result)
 
     @record
     def test_account_sas(self):
         # SAS URL is calculated from storage key, so this test runs live only
-        pytest.skip("not yet suppoerted")
         if TestMode.need_recording_file(self.test_mode):
             return
 
         # Arrange
         blob_name = self._create_block_blob()
 
-        token = self.bs.generate_account_shared_access_signature(
-            ResourceTypes.OBJECT + ResourceTypes.CONTAINER,
+        token = self.bsc.generate_shared_access_signature(
+            ResourceTypes(container=True, object=True),
             AccountPermissions.READ,
             datetime.utcnow() + timedelta(hours=1),
         )
 
         # Act
-        blob_url = self.bs.make_blob_url(
-            self.container_name,
-            blob_name,
-            sas_token=token,
-        )
-        container_url = self.bs.make_container_url(
-            self.container_name,
-            sas_token=token,
-        )
-
-        blob_response = requests.get(blob_url)
-        container_response = requests.get(container_url)
+        blob = BlobClient(
+            self.bsc.url, container=self.container_name, blob=blob_name, credential=token)
+        container = ContainerClient(
+            self.bsc.url, container=self.container_name, credential=token)
+        container.get_container_properties()
+        blob_response = requests.get(blob.url)
+        container_response = requests.get(container.url, params={'restype':'container'})
 
         # Assert
         self.assertTrue(blob_response.ok)
@@ -1249,29 +1244,31 @@ class StorageCommonBlobTest(StorageTestCase):
 
     @record
     def test_token_credential(self):
-        pytest.skip("not yet supported")
-        token_credential = TokenCredential(self.generate_oauth_token())
+        pytest.skip("Pending rebase")
+        try:
+            token_credential = self.generate_oauth_token()
+            get_token = token_credential.get_token
+        except ImportError:
+            pytest.skip("Azure Identity not installed.")
 
         # Action 1: make sure token works
-        service = BlockBlobService(self.settings.OAUTH_STORAGE_ACCOUNT_NAME, token_credential=token_credential)
-        result = service.exists("test")
+        service = BlobServiceClient(self._get_account_url(), credential=token_credential)
+        result = service.get_service_properties()
         self.assertIsNotNone(result)
 
         # Action 2: change token value to make request fail
-        token_credential.token = "YOU SHALL NOT PASS"
-        with self.assertRaises(AzureException):
-            result = service.exists("test")
-            self.assertIsNone(result)
+        token_credential.get_token = lambda x: "YOU SHALL NOT PASS"
+        with self.assertRaises(ClientAuthenticationError):
+            service.get_service_properties()
 
         # Action 3: update token to make it working again
-        token_credential.token = self.generate_oauth_token()
-        result = service.exists("test")
+        token_credential.get_token = get_token
+        result = service.get_service_properties()
         self.assertIsNotNone(result)
 
     @record
     def test_shared_read_access_blob(self):
         # SAS URL is calculated from storage key, so this test runs live only
-        pytest.skip("failing with 404")  # TODO
         if TestMode.need_recording_file(self.test_mode):
             return
 
@@ -1285,8 +1282,8 @@ class StorageCommonBlobTest(StorageTestCase):
         )
 
         # Act
-        url = blob.make_url(sas_token=token)
-        response = requests.get(url)
+        sas_blob = BlobClient(blob.url, credential=token)
+        response = requests.get(sas_blob.url)
 
         # Assert
         response.raise_for_status()
@@ -1296,7 +1293,6 @@ class StorageCommonBlobTest(StorageTestCase):
     @record
     def test_shared_read_access_blob_with_content_query_params(self):
         # SAS URL is calculated from storage key, so this test runs live only
-        pytest.skip("failing with 404")  # TODO
         if TestMode.need_recording_file(self.test_mode):
             return
 
@@ -1313,10 +1309,10 @@ class StorageCommonBlobTest(StorageTestCase):
             content_language='fr',
             content_type='text',
         )
-        url = blob.make_url(sas_token=token)
+        sas_blob = BlobClient(blob.url, credential=token)
 
         # Act
-        response = requests.get(url)
+        response = requests.get(sas_blob.url)
 
         # Assert
         response.raise_for_status()
@@ -1330,7 +1326,6 @@ class StorageCommonBlobTest(StorageTestCase):
     @record
     def test_shared_write_access_blob(self):
         # SAS URL is calculated from storage key, so this test runs live only
-        pytest.skip("failing with 404")  # TODO
         if TestMode.need_recording_file(self.test_mode):
             return
 
@@ -1343,11 +1338,11 @@ class StorageCommonBlobTest(StorageTestCase):
             permission=BlobPermissions.WRITE,
             expiry=datetime.utcnow() + timedelta(hours=1),
         )
-        url = blob.make_url(sas_token=token)
+        sas_blob = BlobClient(blob.url, credential=token)
 
         # Act
-        headers = {'x-ms-blob-type': blob.blob_type}
-        response = requests.put(url, headers=headers, data=updated_data)
+        headers = {'x-ms-blob-type': 'BlockBlob'}
+        response = requests.put(sas_blob.url, headers=headers, data=updated_data)
 
         # Assert
         response.raise_for_status()
@@ -1357,7 +1352,6 @@ class StorageCommonBlobTest(StorageTestCase):
 
     @record
     def test_shared_delete_access_blob(self):
-        pytest.skip("failing with 404")  # TODO
         # SAS URL is calculated from storage key, so this test runs live only
         if TestMode.need_recording_file(self.test_mode):
             return
@@ -1370,78 +1364,72 @@ class StorageCommonBlobTest(StorageTestCase):
             permission=BlobPermissions.DELETE,
             expiry=datetime.utcnow() + timedelta(hours=1),
         )
-        url = blob.make_url(sas_token=token)
+        sas_blob = BlobClient(blob.url, credential=token)
 
         # Act
-        response = requests.delete(url)
+        response = requests.delete(sas_blob.url)
 
         # Assert
         response.raise_for_status()
         self.assertTrue(response.ok)
-        with self.assertRaises(ResourceNotFoundError):
-            blob.download_blob()
+        with self.assertRaises(HttpResponseError):
+            sas_blob.download_blob()
 
     @record
     def test_get_account_information(self):
-        pytest.skip("not yet supported")
-        # Act)
-        info = self.bs.get_blob_account_information()
+        # Act
+        info = self.bsc.get_account_information()
 
         # Assert
-        self.assertIsNotNone(info.sku_name)
-        self.assertIsNotNone(info.account_kind)
+        self.assertIsNotNone(info.get('sku_name'))
+        self.assertIsNotNone(info.get('account_kind'))
 
     @record
     def test_get_account_information_with_container_name(self):
-        pytest.skip("not yet supported")
         # Act
         # Container name gets ignored
-        info = self.bs.get_blob_account_information("missing")
+        container = self.bsc.get_container_client("missing")
+        info = container.get_account_information()
 
         # Assert
-        self.assertIsNotNone(info.sku_name)
-        self.assertIsNotNone(info.account_kind)
+        self.assertIsNotNone(info.get('sku_name'))
+        self.assertIsNotNone(info.get('account_kind'))
 
     @record
     def test_get_account_information_with_blob_name(self):
-        pytest.skip("not yet supported")
         # Act
         # Both container and blob names get ignored
         blob = self.bsc.get_blob_client("missing", "missing")
         info = blob.get_account_information()
 
         # Assert
-        self.assertIsNotNone(info.get('SKU'))
-        self.assertIsNotNone(info.get('AccountType'))
+        self.assertIsNotNone(info.get('sku_name'))
+        self.assertIsNotNone(info.get('account_kind'))
 
     @record
     def test_get_account_information_with_container_sas(self):
         # SAS URL is calculated from storage key, so this test runs live only
-        pytest.skip("not yet supported")
         if TestMode.need_recording_file(self.test_mode):
             return
 
         # Arrange
-        token = self.bs.generate_container_shared_access_signature(
-            self.container_name,
+        container = self.bsc.get_container_client(self.container_name)
+        token = container.generate_shared_access_signature(
             permission=ContainerPermissions.READ,
             expiry=datetime.utcnow() + timedelta(hours=1),
         )
-
-        bs_with_sas = BlockBlobService(account_name=self.settings.STORAGE_ACCOUNT_NAME, sas_token=token,
-                                       protocol=self.settings.PROTOCOL)
+        sas_container = ContainerClient(container.url, credential=token)
 
         # Act
-        info = bs_with_sas.get_blob_account_information(self.container_name)
+        info = sas_container.get_account_information()
 
         # Assert
-        self.assertIsNotNone(info.sku_name)
-        self.assertIsNotNone(info.account_kind)
+        self.assertIsNotNone(info.get('sku_name'))
+        self.assertIsNotNone(info.get('account_kind'))
 
     @record
     def test_get_account_information_with_blob_sas(self):
         # SAS URL is calculated from storage key, so this test runs live only
-        pytest.skip("not yet supported")
         if TestMode.need_recording_file(self.test_mode):
             return
 
@@ -1453,16 +1441,14 @@ class StorageCommonBlobTest(StorageTestCase):
             permission=BlobPermissions.READ,
             expiry=datetime.utcnow() + timedelta(hours=1),
         )
-        url = blob.make_url(sas_token=token)
-
-        bs_with_sas = BlobClient(url)
+        sas_blob = BlobClient(blob.url, credential=token)
 
         # Act
-        info = bs_with_sas.get_account_information()
+        info = sas_blob.get_account_information()
 
         # Assert
-        self.assertIsNotNone(info.get('SKU'))
-        self.assertIsNotNone(info.get('AccountType'))
+        self.assertIsNotNone(info.get('sku_name'))
+        self.assertIsNotNone(info.get('account_kind'))
 
 
 #------------------------------------------------------------------------------

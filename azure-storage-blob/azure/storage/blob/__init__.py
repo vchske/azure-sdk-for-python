@@ -6,18 +6,23 @@
 
 __version__ = "3.0.0a8"
 
-from .common import BlobType
+from .common import BlobType, StorageErrorCode, LocationMode
 from .blob_client import BlobClient
 from .container_client import ContainerClient
 from .blob_service_client import BlobServiceClient
-from .lease import Lease
-from .authentication import SharedKeyCredentials
+from .lease import LeaseClient
+from ._policies import ExponentialRetry, LinearRetry, NoRetry
+
 
 __all__ = [
     'BlobServiceClient',
     'ContainerClient',
     'BlobClient',
     'BlobType',
-    'Lease',
-    'SharedKeyCredentials',
+    'LeaseClient',
+    'StorageErrorCode',
+    'ExponentialRetry',
+    'LinearRetry',
+    'NoRetry',
+    'LocationMode'
 ]

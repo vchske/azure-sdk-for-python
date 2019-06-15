@@ -16,7 +16,11 @@ from ._generated.models import StorageServiceProperties
 from ._generated.models import BlobProperties as GenBlobProps
 from ._generated.models import AccessPolicy as GenAccessPolicy
 from ._generated.models import StorageErrorException
-from ._utils import decode_base64, serialize_iso, process_storage_error
+from ._utils import (
+    decode_base64,
+    serialize_iso,
+    process_storage_error,
+    return_context_and_deserialized)
 from .common import BlockState, BlobType
 
 
@@ -27,6 +31,53 @@ def _get_enum_value(value):
         return value.value
     except AttributeError:
         return value
+
+
+class DictMixin(object):
+
+    def __setitem__(self, key, item):
+        self.__dict__[key] = item
+
+    def __getitem__(self, key):
+        return self.__dict__[key]
+
+    def __repr__(self):
+        return repr(self.__dict__)
+
+    def __len__(self):
+        return len(self.__dict__)
+
+    def __delitem__(self, key):
+        self.__dict__[key] = None
+
+    def __eq__(self, other):
+        """Compare objects by comparing all attributes."""
+        if isinstance(other, self.__class__):
+            return self.__dict__ == other.__dict__
+        return False
+
+    def __ne__(self, other):
+        """Compare objects by comparing all attributes."""
+        return not self.__eq__(other)
+
+    def __str__(self):
+        return str(self.__dict__)
+
+    def has_key(self, k):
+        return k in self.__dict__
+
+    def update(self, *args, **kwargs):
+        return self.__dict__.update(*args, **kwargs)
+
+    def keys(self):
+        return self.__dict__.keys()
+
+    def values(self):
+        return self.__dict__.values()
+
+    def items(self):
+        return self.__dict__.items()
+
 
 class Logging(GeneratedLogging):
     """Azure Analytics Logging settings.
@@ -128,7 +179,6 @@ class StaticWebsite(GeneratedStaticWebsite):
             self.error_document404_path = None
 
 
-
 class CorsRule(GeneratedCorsRule):
     """CORS is an HTTP feature that enables a web application running under one
     domain to access resources in another domain. Web browsers implement a
@@ -171,7 +221,7 @@ class CorsRule(GeneratedCorsRule):
         self.max_age_in_seconds = kwargs.get('max_age_in_seconds', 0)
 
 
-class ContainerProperties(object):
+class ContainerProperties(DictMixin):
     """
     Blob container's properties class.
 
@@ -221,6 +271,7 @@ class ContainerPropertiesPaged(Paged):
         self.current_marker = None
         self.results_per_page = results_per_page
         self.next_marker = marker or ""
+        self.location_mode = None
 
     def _advance_page(self):
         # type: () -> List[Model]
@@ -236,9 +287,11 @@ class ContainerPropertiesPaged(Paged):
             raise StopIteration("End of paging")
         self._current_page_iter_index = 0
         try:
-            self._response = self._get_next(
+            self.location_mode, self._response = self._get_next(
                 marker=self.next_marker or None,
-                maxresults=self.results_per_page)
+                maxresults=self.results_per_page,
+                cls=return_context_and_deserialized,
+                use_location=self.location_mode)
         except StorageErrorException as error:
             process_storage_error(error)
 
@@ -256,19 +309,10 @@ class ContainerPropertiesPaged(Paged):
             return item
         return ContainerProperties._from_generated(item)
 
-
-class SnapshotProperties(object):
-
-    def __init__(self, **kwargs):
-        self.name = None
-        self.container = None
-        self.snapshot = kwargs.get('x-ms-snapshot')
-        self.blob_type = None
-        self.last_modified = kwargs.get('Last-Modified')
-        self.etag = kwargs.get('ETag')
+    next = __next__
 
 
-class BlobProperties(object):
+class BlobProperties(DictMixin):
     """
     Blob Properties
 
@@ -279,8 +323,8 @@ class BlobProperties(object):
     :ivar str etag:
         The ETag contains a value that you can use to perform operations
         conditionally.
-    :ivar int content_length:
-        The length of the content returned. If the entire blob was requested,
+    :ivar int size:
+        The size of the content returned. If the entire blob was requested,
         the length of blob in bytes. If a subset of the blob was requested, the
         length of the returned subset.
     :ivar str content_range:
@@ -327,7 +371,7 @@ class BlobProperties(object):
         self.metadata = kwargs.get('metadata')
         self.last_modified = kwargs.get('Last-Modified')
         self.etag = kwargs.get('ETag')
-        self.content_length = kwargs.get('Content-Length')
+        self.size = kwargs.get('Content-Length')
         self.content_range = kwargs.get('Content-Range')
         self.append_blob_committed_block_count = kwargs.get('x-ms-blob-committed-block-count')
         self.page_blob_sequence_number = kwargs.get('x-ms-blob-sequence-number')
@@ -358,7 +402,7 @@ class BlobProperties(object):
         blob.last_modified = generated.properties.last_modified
         blob.creation_time = generated.properties.creation_time
         blob.content_settings = ContentSettings._from_generated(generated)
-        blob.content_length = generated.properties.content_length
+        blob.size = generated.properties.content_length
         blob.page_blob_sequence_number = generated.properties.blob_sequence_number
         blob.server_encrypted = generated.properties.server_encrypted
         blob.deleted_time = generated.properties.deleted_time
@@ -368,7 +412,6 @@ class BlobProperties(object):
         blob.archive_status = generated.properties.archive_status
         blob.blob_tier_change_time = generated.properties.access_tier_change_time
         return blob
-
 
 
 class BlobPropertiesPaged(Paged):
@@ -382,7 +425,8 @@ class BlobPropertiesPaged(Paged):
         self.next_marker = marker or ""
         self.container_name = container
         self.delimiter = None
-        self.segment = None
+        self.current_page = None
+        self.location_mode = None
 
     def _advance_page(self):
         # type: () -> List[Model]
@@ -397,10 +441,13 @@ class BlobPropertiesPaged(Paged):
         if self.next_marker is None:
             raise StopIteration("End of paging")
         self._current_page_iter_index = 0
+        
         try:
-            self._response = self._get_next(
+            self.location_mode, self._response = self._get_next(
                 marker=self.next_marker or None,
-                maxresults=self.results_per_page)
+                maxresults=self.results_per_page,
+                cls=return_context_and_deserialized,
+                use_location=self.location_mode)
         except StorageErrorException as error:
             process_storage_error(error)
 
@@ -420,54 +467,58 @@ class BlobPropertiesPaged(Paged):
             return item
         return BlobProperties._from_generated(item)
 
-
-class BlobPropertiesWalked(BlobPropertiesPaged):
-
-    def _advance_page(self):
-        # type: () -> List[Model]
-        """Force moving the cursor to the next azure call.
-
-        This method is for advanced usage, iterator protocol is prefered.
-
-        :raises: StopIteration if no further page
-        :return: The current page list
-        :rtype: list
-        """
-        if self.next_marker is None:
-            raise StopIteration("End of paging")
-        self._current_page_iter_index = 0
-        self._response = self._get_next(
-            marker=self.next_marker or None,
-            maxresults=self.results_per_page)
-
-        self.service_endpoint = self._response.service_endpoint
-        self.prefix = self._response.prefix
-        self.current_marker = self._response.marker
-        self.results_per_page = self._response.max_results
-        self.current_page_blobs = self._response.segment.blob_items
-        self.current_page_dirs = self._response.segment.blob_prefixes
-        self.next_marker = self._response.next_marker or None
-        self.container_name = self._response.container_name
-        self.delimiter = self._response.delimiter
-
-    def __next__(self):
-        item = super(BlobPropertiesPaged, self).__next__()
-        if isinstance(item, BlobProperties):
-            return item
-        return BlobProperties._from_generated(item)
-
-    def __next__(self):
-        """Iterate through responses."""
-        if self.current_page and self._current_page_iter_index < len(self.current_page):
-            response = self.current_page[self._current_page_iter_index]
-            self._current_page_iter_index += 1
-            return response
-        else:
-            self._advance_page()
-            return self.__next__()
+    next = __next__
 
 
-class LeaseProperties(object):
+# class BlobPropertiesWalked(BlobPropertiesPaged):
+
+#     def _advance_page(self):
+#         # type: () -> List[Model]
+#         """Force moving the cursor to the next azure call.
+
+#         This method is for advanced usage, iterator protocol is prefered.
+
+#         :raises: StopIteration if no further page
+#         :return: The current page list
+#         :rtype: list
+#         """
+#         if self.next_marker is None:
+#             raise StopIteration("End of paging")
+#         self._current_page_iter_index = 0
+#         self._response = self._get_next(
+#             marker=self.next_marker or None,
+#             maxresults=self.results_per_page)
+
+#         self.service_endpoint = self._response.service_endpoint
+#         self.prefix = self._response.prefix
+#         self.current_marker = self._response.marker
+#         self.results_per_page = self._response.max_results
+#         self.current_page_blobs = self._response.segment.blob_items
+#         self.current_page_dirs = self._response.segment.blob_prefixes
+#         self.next_marker = self._response.next_marker or None
+#         self.container_name = self._response.container_name
+#         self.delimiter = self._response.delimiter
+
+#     def __next__(self):
+#         item = super(BlobPropertiesPaged, self).__next__()
+#         if isinstance(item, BlobProperties):
+#             return item
+#         return BlobProperties._from_generated(item)
+
+#     def __next__(self):
+#         """Iterate through responses."""
+#         if self.current_page and self._current_page_iter_index < len(self.current_page):
+#             response = self.current_page[self._current_page_iter_index]
+#             self._current_page_iter_index += 1
+#             return response
+#         else:
+#             self._advance_page()
+#             return self.__next__()
+
+#     next = __next__
+
+
+class LeaseProperties(DictMixin):
     """
     Blob Lease Properties.
 
@@ -495,7 +546,7 @@ class LeaseProperties(object):
         return lease
 
 
-class ContentSettings(object):
+class ContentSettings(DictMixin):
     """
     Used to store the content settings of a blob.
 
@@ -546,7 +597,7 @@ class ContentSettings(object):
         return settings
 
 
-class CopyProperties(object):
+class CopyProperties(DictMixin):
     """
     Blob Copy Properties.
 
@@ -610,7 +661,7 @@ class CopyProperties(object):
         return copy
 
 
-class BlobBlock(object):
+class BlobBlock(DictMixin):
     """
     BlockBlob Block class.
 
@@ -639,7 +690,7 @@ class BlobBlock(object):
         return block
 
 
-class PageRange(object):
+class PageRange(DictMixin):
     """
     Page Range for page blob.
 
@@ -703,8 +754,8 @@ class AccessPolicy(GenAccessPolicy):
             be UTC.
         :type start: datetime or str
         '''
-        self.start = serialize_iso(start)
-        self.expiry = serialize_iso(expiry)
+        self.start = start
+        self.expiry = expiry
         self.permission = permission
 
 

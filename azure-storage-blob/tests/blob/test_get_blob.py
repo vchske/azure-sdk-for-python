@@ -19,7 +19,7 @@ from azure.storage.blob import (
     BlobServiceClient,
     ContainerClient,
     BlobClient,
-    SharedKeyCredentials
+    StorageErrorCode
 )
 from azure.storage.blob.models import BlobProperties
 from tests.testcase import (
@@ -40,7 +40,7 @@ class StorageGetBlobTest(StorageTestCase):
         super(StorageGetBlobTest, self).setUp()
 
         url = self._get_account_url()
-        credentials = SharedKeyCredentials(*self._get_shared_key_credentials())
+        credential = self._get_shared_key_credential()
 
         # test chunking functionality by reducing the threshold
         # for chunking and the size of each chunk, otherwise
@@ -49,7 +49,7 @@ class StorageGetBlobTest(StorageTestCase):
         self.config.blob_settings.max_single_get_size = 32 * 1024
         self.config.blob_settings.max_chunk_get_size = 4 * 1024
 
-        self.bsc = BlobServiceClient(url, credentials=credentials, configuration=self.config)
+        self.bsc = BlobServiceClient(url, credential=credential, configuration=self.config)
         self.container_name = self.get_resource_name('utcontainer')
 
         if not self.is_playback():
@@ -66,8 +66,7 @@ class StorageGetBlobTest(StorageTestCase):
     def tearDown(self):
         if not self.is_playback():
             try:
-                container = self.bsc.get_container_client(self.container_name)
-                container.delete_container()
+                self.bsc.delete_container(self.container_name)
             except:
                 pass
 
@@ -144,7 +143,7 @@ class StorageGetBlobTest(StorageTestCase):
 
         # Assert
         self.assertEqual(blob_data, content.content_as_bytes())
-        self.assertEqual(0, content.properties.content_length)
+        self.assertEqual(0, content.properties.size)
 
     def test_get_blob_to_bytes(self):
         # parallel tests introduce random order of requests, can only run live
@@ -193,11 +192,11 @@ class StorageGetBlobTest(StorageTestCase):
         # the get request should fail in this case since the blob is empty and yet there is a range specified
         with self.assertRaises(HttpResponseError) as e:
             blob.download_blob(offset=0, length=5)
-        self.assertEqual('InvalidRange', e.exception.error_code)
+        self.assertEqual(StorageErrorCode.invalid_range, e.exception.error_code)
 
         with self.assertRaises(HttpResponseError) as e:
             blob.download_blob(offset=3, length=5)
-        self.assertEqual('InvalidRange', e.exception.error_code)
+        self.assertEqual(StorageErrorCode.invalid_range, e.exception.error_code)
 
     @record
     def test_ranged_get_blob_with_missing_start_range(self):
@@ -219,7 +218,7 @@ class StorageGetBlobTest(StorageTestCase):
         # Arrange
         blob = self.bsc.get_blob_client(self.container_name, self.byte_blob)
         snapshot_ref = blob.create_snapshot()
-        snapshot = self.bsc.get_blob_client(self.container_name, snapshot_ref)
+        snapshot = self.bsc.get_blob_client(self.container_name, self.byte_blob, snapshot=snapshot_ref)
         
         blob.upload_blob(self.byte_data) # Modify the blob so the Etag no longer matches
 
@@ -239,7 +238,7 @@ class StorageGetBlobTest(StorageTestCase):
         blob = self.bsc.get_blob_client(self.container_name, self.byte_blob)
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -261,7 +260,7 @@ class StorageGetBlobTest(StorageTestCase):
         blob = self.bsc.get_blob_client(self.container_name, self.byte_blob)
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -287,7 +286,7 @@ class StorageGetBlobTest(StorageTestCase):
         progress = []
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -331,7 +330,7 @@ class StorageGetBlobTest(StorageTestCase):
         blob = self.bsc.get_blob_client(self.container_name, self.byte_blob)
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -357,7 +356,7 @@ class StorageGetBlobTest(StorageTestCase):
         blob = self.bsc.get_blob_client(self.container_name, self.byte_blob)
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -388,7 +387,7 @@ class StorageGetBlobTest(StorageTestCase):
         progress = []
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -439,7 +438,7 @@ class StorageGetBlobTest(StorageTestCase):
         blob = self.bsc.get_blob_client(self.container_name, self.byte_blob)
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -576,7 +575,7 @@ class StorageGetBlobTest(StorageTestCase):
         progress = []
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -602,7 +601,7 @@ class StorageGetBlobTest(StorageTestCase):
         progress = []
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -628,7 +627,7 @@ class StorageGetBlobTest(StorageTestCase):
         progress = []
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -669,7 +668,7 @@ class StorageGetBlobTest(StorageTestCase):
         progress = []
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -727,7 +726,7 @@ class StorageGetBlobTest(StorageTestCase):
         progress = []
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -757,7 +756,7 @@ class StorageGetBlobTest(StorageTestCase):
         progress = []
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -788,7 +787,7 @@ class StorageGetBlobTest(StorageTestCase):
         progress = []
 
         def callback(response):
-            current = response.context['data_stream_current']
+            current = response.context['download_stream_current']
             total = response.context['data_stream_total']
             progress.append((current, total))
 
@@ -845,7 +844,7 @@ class StorageGetBlobTest(StorageTestCase):
         blob = self.bsc.get_blob_client(self.container_name, self.byte_blob)
         props = blob.get_blob_properties()
         props.content_settings.content_md5 = b'MDAwMDAwMDA='
-        blob.set_blob_properties(props.content_settings)
+        blob.set_http_headers(props.content_settings)
 
         # Act
         with open(FILE_PATH, 'wb') as stream:
@@ -867,7 +866,7 @@ class StorageGetBlobTest(StorageTestCase):
         # Arrange
         props = blob.get_blob_properties()
         props.content_settings.content_md5 = b'MDAwMDAwMDA='
-        blob.set_blob_properties(props.content_settings)
+        blob.set_http_headers(props.content_settings)
 
         # Act
         content = blob.download_blob(offset=0, length=1024, validate_content=True)
@@ -886,7 +885,7 @@ class StorageGetBlobTest(StorageTestCase):
         # Arrange
         props = blob.get_blob_properties()
         props.content_settings.content_md5 = None
-        blob.set_blob_properties(props.content_settings)
+        blob.set_http_headers(props.content_settings)
 
         # Act
         content = blob.download_blob(offset=0, length=1024, validate_content=True)

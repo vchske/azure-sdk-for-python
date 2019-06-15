@@ -65,6 +65,7 @@ setup(
     version=version,
     description='Microsoft {} Client Library for Python'.format(PACKAGE_PPRINT_NAME),
     long_description=open('README.md', 'r').read(),
+    long_description_content_type='text/markdown',
     license='MIT License',
     author='Microsoft Corporation',
     author_email='ascl@microsoft.com',
@@ -92,8 +93,8 @@ setup(
         'tests.common'
     ]),
     install_requires=[
-        'azure-core',
-        'azure-common>=1.1.5',
+        #'azure-core~=0.0.1',
+        'azure-common~=1.1',
     ],
     extras_require={
         ":python_version<'3.0'": ['futures'],

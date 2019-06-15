@@ -11,8 +11,8 @@ STORAGE_ACCOUNT_NAME = "storagename"
 STORAGE_ACCOUNT_KEY = "NzhL3hKZbJBuJ2484dPTR+xF30kYaWSSCbs2BzLgVVI1woqeST/1IgqaLm6QAOTxtGvxctSNbIR/1hW8yH+bJg=="
 BLOB_STORAGE_ACCOUNT_NAME = "blobstoragename"
 BLOB_STORAGE_ACCOUNT_KEY = "NzhL3hKZbJBuJ2484dPTR+xF30kYaWSSCbs2BzLgVVI1woqeST/1IgqaLm6QAOTxtGvxctSNbIR/1hW8yH+bJg=="
-REMOTE_STORAGE_ACCOUNT_NAME = "remotestoragename"
-REMOTE_STORAGE_ACCOUNT_KEY = "3pJwX7wjxoQEW2nKAhJZARpQWpKvPOUN9JwoV/HhlMmJlS1pORhzzHpPfQqgFcwGsriu6dwYqnugWOjGShC5VQ=="
+REMOTE_STORAGE_ACCOUNT_NAME = "storagename"
+REMOTE_STORAGE_ACCOUNT_KEY = "NzhL3hKZbJBuJ2484dPTR+xF30kYaWSSCbs2BzLgVVI1woqeST/1IgqaLm6QAOTxtGvxctSNbIR/1hW8yH+bJg=="
 PREMIUM_STORAGE_ACCOUNT_NAME = "premiumstoragename"
 PREMIUM_STORAGE_ACCOUNT_KEY = "NzhL3hKZbJBuJ2484dPTR+xF30kYaWSSCbs2BzLgVVI1woqeST/1IgqaLm6QAOTxtGvxctSNbIR/1hW8yH+bJg=="
 OAUTH_STORAGE_ACCOUNT_NAME = "oauthstoragename"
@@ -29,9 +29,6 @@ BLOB_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=blobstorage
 PREMIUM_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=premiumstoragename;AccountKey=NzhL3hKZbJBuJ2484dPTR+xF30kYaWSSCbs2BzLgVVI1woqeST/1IgqaLm6QAOTxtGvxctSNbIR/1hW8yH+bJg==;EndpointSuffix=core.windows.net"
 # Use 'https' or 'http' protocol for sending requests, 'https' highly recommended
 PROTOCOL = "https"
-
-# Set to true to target the development storage emulator
-IS_EMULATED = False
 
 # Set to true if server side file encryption is enabled
 IS_SERVER_SIDE_FILE_ENCRYPTION_ENABLED = True

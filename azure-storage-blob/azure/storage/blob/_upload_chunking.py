@@ -195,8 +195,16 @@ class _BlobChunkUploader(object):
         chunk_offset = chunk_data[0]
         return self._upload_chunk_with_progress(chunk_offset, chunk_bytes)
 
+    def _update_progress(self, length):
+        if self.progress_lock is not None:
+            with self.progress_lock:
+                self.progress_total += length
+        else:
+            self.progress_total += length
+
     def _upload_chunk_with_progress(self, chunk_offset, chunk_data):
         range_id = self._upload_chunk(chunk_offset, chunk_data)
+        self._update_progress(len(chunk_data))
         return range_id
 
     def get_substream_blocks(self):
@@ -241,6 +249,8 @@ class _BlockBlobChunkUploader(_BlobChunkUploader):
             timeout=self.timeout,
             lease_access_conditions=self.lease_access_conditions,
             validate_content=self.validate_content,
+            data_stream_total=self.blob_size,
+            upload_stream_current=self.progress_total,
             **self.request_options)
         return BlobBlock(block_id)
 
@@ -253,8 +263,9 @@ class _BlockBlobChunkUploader(_BlobChunkUploader):
                 validate_content=self.validate_content,
                 lease_access_conditions=self.lease_access_conditions,
                 timeout=self.timeout,
-                **self.request_options
-            )
+                data_stream_total=self.blob_size,
+                upload_stream_current=self.progress_total,
+                **self.request_options)
         finally:
             block_stream.close()
         return BlobBlock(block_id)
@@ -286,12 +297,13 @@ class _PageBlobChunkUploader(_BlobChunkUploader):
                 modified_access_conditions=self.modified_access_conditions,
                 validate_content=self.validate_content,
                 cls=return_response_headers,
-                **self.request_options
-            )
+                data_stream_total=self.blob_size,
+                upload_stream_current=self.progress_total,
+                **self.request_options)
 
             if not self.parallel:
                 self.modified_access_conditions = get_modification_conditions(
-                    if_match=self.response_headers['ETag'])
+                    if_match=self.response_headers['etag'])
         return None
 
 
@@ -308,9 +320,11 @@ class _AppendBlobChunkUploader(_BlobChunkUploader):
                 validate_content=self.validate_content,
                 append_position_access_conditions=self.append_conditions,
                 cls=return_response_headers,
+                data_stream_total=self.blob_size,
+                upload_stream_current=self.progress_total,
                 **self.request_options
             )
-            self.current_length = int(self.response_headers['x-ms-blob-append-offset'])
+            self.current_length = int(self.response_headers['blob_append_offset'])
         else:
             self.append_conditions.append_position = self.current_length + chunk_offset
             self.response_headers = self.blob_service.append_block(
@@ -322,6 +336,8 @@ class _AppendBlobChunkUploader(_BlobChunkUploader):
                 validate_content=self.validate_content,
                 append_position_access_conditions=self.append_conditions,
                 cls=return_response_headers,
+                data_stream_total=self.blob_size,
+                upload_stream_current=self.progress_total,
                 **self.request_options
             )
 
@@ -487,8 +503,17 @@ class IterStreamer(object):
     def __iter__(self):
         return self.iterator
 
+    def seekable(self):
+        return False
+
     def next(self):
         return next(self.iterator)
+
+    def tell(self, *args, **kwargs):
+        raise UnsupportedOperation("Data generator does not support tell.")
+
+    def seek(self, *args, **kwargs):
+        raise UnsupportedOperation("Data generator is unseekable.")
 
     def read(self, size):
         data = self.leftover

@@ -14,6 +14,7 @@ try:
 except ImportError:
     from urlparse import urlparse
 
+from ._generated.models import StorageErrorException
 from ._shared_access_signature import SharedAccessSignature
 from .container_client import ContainerClient
 from .blob_client import BlobClient
@@ -22,17 +23,18 @@ from .models import (
     StorageServiceProperties,
     ContainerPropertiesPaged
 )
-from ._generated.models import StorageErrorException
-from .common import BlobType
+from .common import BlobType, LocationMode
 from ._utils import (
+    StorageAccountHostsMixin,
     create_client,
     create_pipeline,
     create_configuration,
     get_access_conditions,
     process_storage_error,
-    basic_error_map,
     return_response_headers,
-    parse_connection_str
+    parse_connection_str,
+    parse_query,
+    is_credential_sastoken,
 )
 
 if TYPE_CHECKING:
@@ -40,6 +42,7 @@ if TYPE_CHECKING:
     from azure.core import Configuration
     from azure.core.pipeline.transport import HttpTransport
     from azure.core.pipeline.policies import HTTPPolicy
+    from .lease import LeaseClient
     from .models import (
         AccountPermissions,
         ResourceTypes,
@@ -53,35 +56,35 @@ if TYPE_CHECKING:
     )
 
 
-class BlobServiceClient(object):
+class BlobServiceClient(StorageAccountHostsMixin):
 
     def __init__(
             self, account_url,  # type: str
-            credentials=None,  # type: Optional[HTTPPolicy]
+            credential=None,  # type: Optional[Any]
             configuration=None, # type: Optional[Configuration]
             **kwargs  # type: Any
         ):
         # type: (...) -> None
+        try:
+            if not account_url.lower().startswith('http'):
+                account_url = "https://" + account_url
+        except AttributeError:
+            raise ValueError("Account URL must be a string.")
         parsed_url = urlparse(account_url.rstrip('/'))
-        self.scheme = parsed_url.scheme
-        self.account = parsed_url.hostname.split(".blob.core.")[0]
-        self.credentials = credentials
-        self.url = account_url if not parsed_url.path else "{}://{}".format(
-            self.scheme,
-            parsed_url.hostname
-        )
+        if not parsed_url.netloc:
+            raise ValueError("Invalid URL: {}".format(account_url))
 
-        self.require_encryption = kwargs.get('require_encryption', False)
-        self.key_encryption_key = kwargs.get('key_encryption_key')
-        self.key_resolver_function = kwargs.get('key_resolver_function')
+        _, sas_token = parse_query(parsed_url.query)
+        self._query_str, credential = self._format_query_string(sas_token, credential)
+        super(BlobServiceClient, self).__init__(parsed_url, credential, configuration, **kwargs)
 
-        self._config, self._pipeline = create_pipeline(configuration, credentials, **kwargs)
-        self._client = create_client(self.url, self._pipeline)
+    def _format_url(self, hostname):
+        return "{}://{}/{}".format(self.scheme, hostname, self._query_str)
 
     @classmethod
     def from_connection_string(
             cls, conn_str,  # type: str
-            credentials=None,  # type: Optional[HTTPPolicy]
+            credential=None,  # type: Optional[Any]
             configuration=None, # type: Optional[Configuration]
             **kwargs  # type: Any
         ):
@@ -89,48 +92,14 @@ class BlobServiceClient(object):
         Create BlobServiceClient from a Connection String.
 
         :param str conn_str: A connection string to an Azure Storage account.
-        :param credentials: Optional credentials object to override the SAS key as provided
-         in the connection string.
+        :param credential:
         :param configuration: Optional pipeline configuration settings.
         :type configuration: ~azure.core.configuration.Configuration
         """
-        account_url, creds = parse_connection_str(conn_str, credentials)
-        return cls(account_url, credentials=creds, configuration=configuration, **kwargs)
-
-    @staticmethod
-    def create_configuration(**kwargs):
-        # type: (**Any) -> Configuration
-        """
-        Get an HTTP Pipeline Configuration with all default policies for the Blob
-        Storage service.
-
-        :rtype: ~azure.core.configuration.Configuration
-        """
-        return create_configuration(**kwargs)
-
-    def make_url(self, protocol=None, sas_token=None):
-        # type: (Optional[str], Optional[str]) -> str
-        """
-        Creates the url to access this account.
-
-        :param str protocol:
-            Protocol to use: 'http' or 'https'. If not specified, uses the
-            protocol specified in the URL when the client was created..
-        :param str sas_token:
-            Shared access signature token created with
-            generate_shared_access_signature.
-        :return: blob access URL.
-        :rtype: str
-        """
-        parsed_url = urlparse(self.url)
-        new_scheme = protocol or parsed_url.scheme
-        new_url = "{}://{}{}".format(
-            new_scheme,
-            parsed_url.netloc,
-            parsed_url.path)
-        if sas_token:
-            new_url += "?{}".format(sas_token)
-        return new_url
+        account_url, secondary, credential = parse_connection_str(conn_str, credential)
+        if 'secondary_hostname' not in kwargs:
+            kwargs['secondary_hostname'] = secondary
+        return cls(account_url, credential=credential, configuration=configuration, **kwargs)
 
     def generate_shared_access_signature(
             self, resource_types,  # type: Union[ResourceTypes, str]
@@ -179,10 +148,10 @@ class BlobServiceClient(object):
         :return: A Shared Access Signature (sas) token.
         :rtype: str
         '''
-        if not hasattr(self.credentials, 'account_key') and not self.credentials.account_key:
+        if not hasattr(self.credential, 'account_key') and not self.credential.account_key:
             raise ValueError("No account SAS key available.")
 
-        sas = SharedAccessSignature(self.account, self.credentials.account_key)
+        sas = SharedAccessSignature(self.credential.account_name, self.credential.account_key)
         return sas.generate_account(resource_types, permission,
                                     expiry, start=start, ip=ip, protocol=protocol)
 
@@ -196,13 +165,9 @@ class BlobServiceClient(object):
         :rtype: dict(str, str)
         """
         try:
-            response = self._client.service.get_account_info(cls=return_response_headers)
+            return self._client.service.get_account_info(cls=return_response_headers)
         except StorageErrorException as error:
             process_storage_error(error)
-        return {
-            'SKU': response.get('x-ms-sku-name'),
-            'AccountType': response.get('x-ms-account-kind')
-        }
 
     def get_service_stats(self, timeout=None, **kwargs):
         # type: (Optional[int], **Any) -> Dict[str, Any]
@@ -230,7 +195,8 @@ class BlobServiceClient(object):
         :rtype: ~azure.storage.blob._generated.models.StorageServiceStats
         """
         try:
-            return self._client.service.get_statistics(timeout=timeout, secondary_storage=True, **kwargs)
+            return self._client.service.get_statistics(
+                timeout=timeout, use_location=LocationMode.SECONDARY, **kwargs)
         except StorageErrorException as error:
             process_storage_error(error)
 
@@ -245,10 +211,7 @@ class BlobServiceClient(object):
         :rtype: ~azure.storage.blob._generated.models.StorageServiceProperties
         """
         try:
-            return self._client.service.get_properties(
-                timeout=timeout,
-                error_map=basic_error_map(),
-                **kwargs)
+            return self._client.service.get_properties(timeout=timeout, **kwargs)
         except StorageErrorException as error:
             process_storage_error(error)
 
@@ -315,16 +278,12 @@ class BlobServiceClient(object):
             static_website=static_website
         )
         try:
-            return self._client.service.set_properties(
-                props,
-                timeout=timeout,
-                error_map=basic_error_map(),
-                **kwargs)
+            return self._client.service.set_properties(props, timeout=timeout, **kwargs)
         except StorageErrorException as error:
             process_storage_error(error)
 
-    def list_container_properties(
-            self, starts_with=None,  # type: Optional[str]
+    def list_containers(
+            self, name_starts_with=None,  # type: Optional[str]
             include_metadata=False,  # type: Optional[bool]
             marker=None,  # type: Optional[str]
             timeout=None,  # type: Optional[int]
@@ -336,7 +295,7 @@ class BlobServiceClient(object):
         The generator will lazily follow the continuation tokens returned by
         the service and stop when all containers have been returned.
 
-        :param str starts_with:
+        :param str name_starts_with:
             Filters the results to return only containers whose names
             begin with the specified prefix.
         :param bool include_metadata:
@@ -354,13 +313,89 @@ class BlobServiceClient(object):
         results_per_page = kwargs.pop('results_per_page', None)
         command = functools.partial(
             self._client.service.list_containers_segment,
-            prefix=starts_with,
+            prefix=name_starts_with,
             include=include,
             timeout=timeout,
-            error_map=basic_error_map(),
             **kwargs)
         return ContainerPropertiesPaged(
-            command, prefix=starts_with, results_per_page=results_per_page, marker=marker)
+            command, prefix=name_starts_with, results_per_page=results_per_page, marker=marker)
+
+    def create_container(
+            self, name,  # type: Union[ContainerProperties, str]
+            metadata=None,  # type: Optional[Dict[str, str]]
+            public_access=None,  # type: Optional[Union[PublicAccess, str]]
+            timeout=None,  # type: Optional[int]
+            **kwargs
+        ):
+        # type: (...) -> ContainerClient
+        """
+        Creates a new container under the specified account. If the container
+        with the same name already exists, the operation fails.
+
+        :param container: The container for the blob. If specified, this value will override
+         a container value specified in the blob URL.
+        :type container: str or ~azure.storage.blob.models.ContainerProperties
+        :param metadata:
+            A dict with name_value pairs to associate with the
+            container as metadata. Example:{'Category':'test'}
+        :type metadata: dict(str, str)
+        :param ~azure.storage.blob.models.PublicAccess public_access:
+            Possible values include: container, blob.
+        :param int timeout:
+            The timeout parameter is expressed in seconds.
+        :rtype: None
+        """
+        container = self.get_container_client(name)
+        container.create_container(
+            metadata=metadata, public_access=public_access, timeout=timeout, **kwargs)
+        return container
+
+    def delete_container(
+            self, container,  # type: Union[ContainerProperties, str]
+            lease=None,  # type: Optional[Union[LeaseClient, str]]
+            if_modified_since=None,  # type: Optional[datetime]
+            if_unmodified_since=None,  # type: Optional[datetime]
+            if_match=None,  # type: Optional[str]
+            if_none_match=None,  # type: Optional[str]
+            timeout=None,  # type: Optional[int]
+            **kwargs
+        ):
+        # type: (...) -> None
+        """
+        Marks the specified container for deletion. The container and any blobs
+        contained within it are later deleted during garbage collection.
+
+        :param container: The container for the blob. If specified, this value will override
+         a container value specified in the blob URL.
+        :param ~azure.storage.blob.lease.LeaseClient lease:
+            If specified, delete_container only succeeds if the
+            container's lease is active and matches this ID.
+            Required if the container has an active lease.
+        :param datetime if_modified_since:
+            A DateTime value. Azure expects the date value passed in to be UTC.
+            If timezone is included, any non-UTC datetimes will be converted to UTC.
+            If a date is passed in without timezone info, it is assumed to be UTC. 
+            Specify this header to perform the operation only
+            if the resource has been modified since the specified time.
+        :param datetime if_unmodified_since:
+            A DateTime value. Azure expects the date value passed in to be UTC.
+            If timezone is included, any non-UTC datetimes will be converted to UTC.
+            If a date is passed in without timezone info, it is assumed to be UTC.
+            Specify this header to perform the operation only if
+            the resource has not been modified since the specified date/time.
+        :param int timeout:
+            The timeout parameter is expressed in seconds.
+        :rtype: None
+        """
+        container = self.get_container_client(container)
+        container.delete_container(
+            lease=lease,
+            if_modified_since=if_modified_since,
+            if_unmodified_since=if_unmodified_since,
+            if_match=if_match,
+            if_none_match=if_none_match,
+            timeout=timeout,
+            **kwargs)
 
     def get_container_client(self, container):
         # type: (Union[ContainerProperties, str]) -> ContainerClient
@@ -375,14 +410,14 @@ class BlobServiceClient(object):
         :rtype: ~azure.core.blob.container_client.ContainerClient
         """
         return ContainerClient(self.url, container=container,
-            credentials=self.credentials, configuration=self._config, _pipeline=self._pipeline,
+            credential=self.credential, configuration=self._config,
+            _pipeline=self._pipeline, _location_mode=self._location_mode, _hosts=self._hosts,
             require_encryption=self.require_encryption, key_encryption_key=self.key_encryption_key,
             key_resolver_function=self.key_resolver_function)
 
     def get_blob_client(
             self, container,  # type: Union[ContainerProperties, str]
             blob,  # type: Union[BlobProperties, str]
-            blob_type=BlobType.BlockBlob,  # type: Union[BlobType, str]
             snapshot=None  # type: Optional[Union[SnapshotProperties, str]]
         ):
         # type: (...) -> BlobClient
@@ -396,14 +431,13 @@ class BlobServiceClient(object):
         :param blob: The blob with which to interact. If specified, this value will override
          a blob value specified in the blob URL.
         :type blob: str or ~azure.storage.blob.models.BlobProperties
-        :param ~azure.storage.blob.common.BlobType blob_type: The type of Blob. Default
-         vale is BlobType.BlockBlob
         :param str snapshot: The optional blob snapshot on which to operate.
         :returns: A BlobClient.
         :rtype: ~azure.core.blob.blob_client.BlobClient
         """
         return BlobClient(
-            self.url, container=container, blob=blob, blob_type=blob_type, snapshot=snapshot,
-            credentials=self.credentials, configuration=self._config, _pipeline=self._pipeline,
+            self.url, container=container, blob=blob, snapshot=snapshot,
+            credential=self.credential, configuration=self._config,
+            _pipeline=self._pipeline, _location_mode=self._location_mode, _hosts=self._hosts,
             require_encryption=self.require_encryption, key_encryption_key=self.key_encryption_key,
             key_resolver_function=self.key_resolver_function)

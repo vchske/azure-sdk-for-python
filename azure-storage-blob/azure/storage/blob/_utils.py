@@ -11,6 +11,7 @@ import sys
 import isodate
 import logging
 from os import fstat
+import xml.etree.ElementTree as ET
 from io import (BytesIO, IOBase, SEEK_CUR, SEEK_END, SEEK_SET, UnsupportedOperation)
 from typing import (  # pylint: disable=unused-import
     Union, Optional, Any, Iterable, Dict, List, Type,
@@ -34,22 +35,36 @@ from azure.core.pipeline.policies import (
     RedirectPolicy,
     ContentDecodePolicy,
     NetworkTraceLoggingPolicy,
-    ProxyPolicy
-)
-from azure.core.exceptions import ResourceNotFoundError
+    BearerTokenCredentialPolicy,
+    ProxyPolicy)
+from azure.core.exceptions import (
+    HttpResponseError,
+    ResourceNotFoundError,
+    ResourceModifiedError,
+    ResourceExistsError,
+    ClientAuthenticationError,
+    ResourceModifiedError,
+    DecodeError)
 
-from .authentication import SharedKeyCredentials
+from .constants import STORAGE_OAUTH_SCOPE, SERVICE_HOST_BASE, DEFAULT_SOCKET_TIMEOUT
+from .common import StorageErrorCode, LocationMode
+from .authentication import SharedKeyCredentialPolicy
 from ._policies import (
     StorageBlobSettings,
     StorageHeadersPolicy,
     StorageContentValidation,
-    StorageSecondaryAccount,
-    StorageResponseHook)
+    StorageRequestHook,
+    StorageResponseHook,
+    StorageLoggingPolicy,
+    StorageHosts,
+    ExponentialRetry,
+    LinearRetry)
 from ._generated import AzureBlobStorage
 from ._generated.models import (
     LeaseAccessConditions,
     ModifiedAccessConditions,
-    SequenceNumberAccessConditions
+    SequenceNumberAccessConditions,
+    StorageErrorException
 )
 
 if TYPE_CHECKING:
@@ -57,7 +72,7 @@ if TYPE_CHECKING:
     from azure.core.pipeline.transport import HttpTransport
     from azure.core.pipeline.policies import HTTPPolicy
     from azure.core.exceptions import AzureError
-    from .lease import Lease
+    from .lease import LeaseClient
 
 
 _LOGGER = logging.getLogger(__name__)
@@ -111,19 +126,170 @@ class _QueryStringConstants(object):
         ]
 
 
-def parse_connection_str(conn_str, credentials):
+class StorageAccountHostsMixin(object):
+
+    def __init__(
+            self, parsed_url,  # type: str
+            credential=None,  # type: Optional[Any]
+            configuration=None, # type: Optional[Configuration]
+            **kwargs  # type: Any
+        ):
+        # type: (...) -> None
+        self._location_mode = kwargs.get('_location_mode', LocationMode.PRIMARY)
+        self._hosts = kwargs.get('_hosts')
+        self.scheme = parsed_url.scheme
+
+        account = parsed_url.netloc.split(".blob.core.")
+        secondary_hostname = None
+        self.credential = self._format_shared_key_credential(account, credential)
+        if self.scheme.lower() != 'https' and hasattr(self.credential, 'get_token'):
+            raise ValueError("Token credential is only supported with HTTPS.")
+        elif hasattr(self.credential, 'account_name'):
+            secondary_hostname = "{}-secondary.blob.{}".format(
+                self.credential.account_name, SERVICE_HOST_BASE)
+
+        if not self._hosts:
+            if len(account) > 1:
+                secondary_hostname = parsed_url.netloc.replace(
+                    account[0],
+                    account[0] + '-secondary')
+            if kwargs.get('secondary_hostname'):
+                secondary_hostname = kwargs['secondary_hostname']
+            self._hosts = {
+                LocationMode.PRIMARY: parsed_url.netloc,
+                LocationMode.SECONDARY: secondary_hostname}
+
+        self.require_encryption = kwargs.get('require_encryption', False)
+        self.key_encryption_key = kwargs.get('key_encryption_key')
+        self.key_resolver_function = kwargs.get('key_resolver_function')
+
+        self._config, self._pipeline = create_pipeline(
+            configuration, self.credential, hosts=self._hosts, **kwargs)
+        self._client = create_client(self.url, self._pipeline)
+
+    def __enter__(self):
+        self._client.__enter__()
+        return self
+
+    def __exit__(self, *args):
+        self._client.__exit__(*args)
+
+    @property
+    def url(self):
+        return self._format_url(self._hosts[self._location_mode])
+
+    @property
+    def primary_endpoint(self):
+        return self._format_url(self._hosts[LocationMode.PRIMARY])
+
+    @property
+    def primary_hostname(self):
+        return self._hosts[LocationMode.PRIMARY]
+
+    @property
+    def secondary_endpoint(self):
+        if not self._hosts[LocationMode.SECONDARY]:
+            raise ValueError("No secondary host configured.")
+        return self._format_url(self._hosts[LocationMode.SECONDARY])
+
+    @property
+    def secondary_hostname(self):
+        return self._hosts[LocationMode.SECONDARY]
+
+    @property
+    def location_mode(self):
+        return self._location_mode
+
+    @location_mode.setter
+    def location_mode(self, value):
+        if self._hosts.get(value):
+            self._location_mode = value
+            self._client._config.url = self.url
+        else:
+            raise ValueError("No host URL for location mode: {}".format(value))
+
+    @staticmethod
+    def create_configuration(**kwargs):
+        # type: (**Any) -> Configuration
+        """
+        Get an HTTP Pipeline Configuration with all default policies for the Blob
+        Storage service.
+
+        :rtype: ~azure.core.configuration.Configuration
+        """
+        return create_configuration(**kwargs)
+
+    def _format_shared_key_credential(self, account, credential):
+        if isinstance(credential, six.string_types):
+            if len(account) < 2:
+                raise ValueError("Unable to determine account name for shared key credential.")
+            credential = {
+                'account_name': account[0],
+                'account_key': credential
+            }
+        if isinstance(credential, dict):
+            if 'account_name' not in credential:
+                raise ValueError("Shared key credential missing 'account_name")
+            elif 'account_key' not in credential:
+                raise ValueError("Shared key credential missing 'account_key")
+            return SharedKeyCredentialPolicy(**credential)
+        return credential
+
+    def _format_query_string(self, sas_token, credential, snapshot=None):
+        query_str = "?"
+        if snapshot:
+            query_str += 'snapshot={}&'.format(self.snapshot)
+        if sas_token and not credential:
+            query_str += sas_token
+        elif is_credential_sastoken(credential):
+            query_str += credential.lstrip('?')
+            credential = None
+        return query_str.rstrip('?&'), credential
+
+
+def parse_connection_str(conn_str, credential):
+    conn_str = conn_str.rstrip(';')
     conn_settings = dict([s.split('=', 1) for s in conn_str.split(';')])
-    try:
-        account_url = "{}://{}.blob.{}".format(
-            conn_settings['DefaultEndpointsProtocol'],
-            conn_settings['AccountName'],
-            conn_settings['EndpointSuffix']
-        )
-        creds = credentials or SharedKeyCredentials(
-            conn_settings['AccountName'], conn_settings['AccountKey'])
-        return account_url, creds
-    except KeyError as error:
-        raise ValueError("Connection string missing setting: '{}'".format(error.args[0]))
+    primary = None
+    secondary = None
+    if not credential:
+        try:
+            credential = {
+                'account_name': conn_settings['AccountName'],
+                'account_key': conn_settings['AccountKey']
+            }
+        except KeyError:
+            credential = conn_settings.get('SharedAccessSignature')
+    if 'BlobEndpoint' in conn_settings:
+        primary = conn_settings['BlobEndpoint']
+        if 'BlobSecondaryEndpoint' in conn_settings:
+            secondary = conn_settings['BlobSecondaryEndpoint']
+    else:
+        if 'BlobSecondaryEndpoint' in conn_settings:
+            raise ValueError("Connection string specifies only secondary endpoint.")
+        try:
+            primary = "{}://{}.blob.{}".format(
+                conn_settings['DefaultEndpointsProtocol'],
+                conn_settings['AccountName'],
+                conn_settings['EndpointSuffix']
+            )
+            secondary = "{}-secondary.blob.{}".format(
+                conn_settings['AccountName'],
+                conn_settings['EndpointSuffix']
+            )
+        except KeyError as error:
+            pass
+
+    if not primary:
+        try:
+            primary = "https://{}.blob.{}".format(
+                conn_settings['AccountName'],
+                conn_settings.get('EndpointSuffix', SERVICE_HOST_BASE)
+            )
+        except KeyError:
+            raise ValueError("Connection string missing required connection details.")
+    return primary, secondary, credential
+
 
 def url_quote(url):
     return quote(url)
@@ -227,6 +393,24 @@ def get_length(data):
 
     return length
 
+
+def read_length(data):
+    try:
+        if hasattr(data, 'read'):
+            read_data = b''
+            for chunk in iter(lambda: data.read(4096), b""):
+                read_data += chunk
+            return len(read_data), read_data
+        elif hasattr(data, '__iter__'):
+            read_data = b''
+            for chunk in data:
+                read_data += chunk
+            return len(read_data), read_data
+    except:
+        pass
+    raise ValueError("Unable to calculate content length, please specify.")
+
+
 def parse_length_from_content_range(content_range):
     '''
     Parses the blob length from the content range header: bytes 1-3/65537
@@ -276,12 +460,25 @@ def validate_and_format_range_headers(start_range, end_range, start_range_requir
     return range_header, range_validation
 
 
+def normalize_headers(headers):
+    normalized = {}
+    for key, value in headers.items():
+        if key.startswith('x-ms-'):
+            key = key[5:]
+        normalized[key.lower().replace('-', '_')] = value
+    return normalized
+
+
 def return_response_headers(response, deserialized, response_headers):
-    return response_headers
+    return normalize_headers(response_headers)
 
 
-def return_response_and_deserialized(response, deserialized, response_headers):
-    return {'header': response_headers, 'deserialized': deserialized}
+def return_headers_and_deserialized(response, deserialized, response_headers):
+    return normalize_headers(response_headers), deserialized
+
+
+def return_context_and_deserialized(response, deserialized, response_headers):
+    return response.location_mode, deserialized
 
 
 def create_client(url, pipeline):
@@ -291,20 +488,29 @@ def create_client(url, pipeline):
 
 def create_configuration(**kwargs):
     # type: (**Any) -> Configuration
+    if not 'connection_timeout' in kwargs:
+        kwargs['connection_timeout'] = DEFAULT_SOCKET_TIMEOUT
     config = Configuration(**kwargs)
     config.headers_policy = StorageHeadersPolicy(**kwargs)
     config.user_agent_policy = UserAgentPolicy(**kwargs)
-    config.retry_policy = RetryPolicy(**kwargs)
+    config.retry_policy = kwargs.get('retry_policy') or ExponentialRetry(**kwargs)
     config.redirect_policy = RedirectPolicy(**kwargs)
-    config.logging_policy = NetworkTraceLoggingPolicy(**kwargs)
+    config.logging_policy = StorageLoggingPolicy(**kwargs)
     config.proxy_policy = ProxyPolicy(**kwargs)
-    config.custom_hook_policy = StorageResponseHook(**kwargs)
     config.blob_settings = StorageBlobSettings(**kwargs)
     return config
 
 
-def create_pipeline(configuration, credentials, **kwargs):
+def create_pipeline(configuration, credential, **kwargs):
     # type: (Configuration, Optional[HTTPPolicy], **Any) -> Tuple[Configuration, Pipeline]
+    credential_policy = None
+    if hasattr(credential, 'get_token'):
+        credential_policy = BearerTokenCredentialPolicy(credential, STORAGE_OAUTH_SCOPE)
+    elif isinstance(credential, SharedKeyCredentialPolicy):
+        credential_policy = credential
+    elif credential is not None:
+        raise TypeError("Unsupported credential: {}".format(credential))
+
     config = configuration or create_configuration(**kwargs)
     if kwargs.get('_pipeline'):
         return config, kwargs['_pipeline']
@@ -312,25 +518,19 @@ def create_pipeline(configuration, credentials, **kwargs):
     if not transport:
         transport = RequestsTransport(config)
     policies = [
-        StorageSecondaryAccount(),
         config.user_agent_policy,
         config.headers_policy,
         StorageContentValidation(),
-        credentials,
+        StorageRequestHook(**kwargs),
+        credential_policy,
         ContentDecodePolicy(),
         config.redirect_policy,
+        StorageHosts(**kwargs),
         config.retry_policy,
         config.logging_policy,
-        config.custom_hook_policy,
+        StorageResponseHook(**kwargs),
     ]
     return config, Pipeline(transport, policies=policies)
-
-
-def basic_error_map():
-    # type: () -> Dict[int, Type]
-    return {
-        404: ResourceNotFoundError
-    }
 
 
 def parse_query(query_str):
@@ -345,19 +545,69 @@ def parse_query(query_str):
 
 
 def is_credential_sastoken(credential):
-    if credential or not isinstance(credential, six.string_types):
+    if not credential or not isinstance(credential, six.string_types):
         return False
 
-    parsed_query = parse_qs(credential)
+    sas_values = _QueryStringConstants.to_list()
+    parsed_query = parse_qs(credential.lstrip('?'))
     if parsed_query and all([k in sas_values for k in parsed_query.keys()]):
         return True
     return False
 
 
-def process_storage_error(error):
-    error.error_code = error.response.headers.get('x-ms-error-code')
-    if error.error_code:
-        error.message += "\nErrorCode: {}".format(error.error_code)
+def process_storage_error(storage_error):
+    raise_error = HttpResponseError
+    error_code = storage_error.response.headers.get('x-ms-error-code')
+    error_message = storage_error.message
+    additional_data = {}
+    try:
+        error_body = ContentDecodePolicy.deserialize_from_http_generics(storage_error.response)
+        if error_body:
+            for info in error_body.getchildren():
+                if info.tag.lower() == 'code':
+                    error_code = info.text
+                elif info.tag.lower() == 'message':
+                    error_message = info.text
+                else:
+                    additional_data[info.tag] = info.text
+    except DecodeError:
+        pass
+
+    try:
+        if error_code:
+            error_code = StorageErrorCode(error_code)
+            if error_code in [StorageErrorCode.condition_not_met,
+                            StorageErrorCode.blob_overwritten]:
+                raise_error = ResourceModifiedError
+            if error_code in [StorageErrorCode.invalid_authentication_info,
+                            StorageErrorCode.authentication_failed]:
+                raise_error = ClientAuthenticationError
+            if error_code in [StorageErrorCode.resource_not_found,
+                            StorageErrorCode.blob_not_found,
+                            StorageErrorCode.container_not_found]:
+                raise_error = ResourceNotFoundError
+            if error_code in [StorageErrorCode.account_already_exists,
+                            StorageErrorCode.account_being_created,
+                            StorageErrorCode.resource_already_exists,
+                            StorageErrorCode.resource_type_mismatch,
+                            StorageErrorCode.blob_already_exists,
+                            StorageErrorCode.container_already_exists,
+                            StorageErrorCode.container_being_deleted]:
+                raise_error = ResourceExistsError
+    except ValueError:
+        # Got an unknown error code
+        pass
+
+    try:
+        error_message += "\nErrorCode:{}".format(error_code.value)
+    except AttributeError:
+        error_message += "\nErrorCode:{}".format(error_code)
+    for name, info in additional_data.items():
+        error_message += "\n{}:{}".format(name, info)
+
+    error = raise_error(message=error_message, response=storage_error.response)
+    error.error_code = error_code
+    error.additional_info = additional_data
     raise error
 
 
@@ -371,7 +621,7 @@ def add_metadata_headers(metadata):
 
 
 def get_access_conditions(lease):
-    # type: (Optional[Union[Lease, str]]) -> Union[LeaseAccessConditions, None]
+    # type: (Optional[Union[LeaseClient, str]]) -> Union[LeaseAccessConditions, None]
     try:
         lease_id = lease.id
     except AttributeError:
