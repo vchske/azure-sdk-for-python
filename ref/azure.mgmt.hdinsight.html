@@ -327,13 +327,13 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.hdinsight" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.hdinsight.HDInsightManagementClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.</code><code class="sig-name descname">HDInsightManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/hd_insight_management_client.html#HDInsightManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.HDInsightManagementClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.</code><code class="sig-name descname">HDInsightManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/_hd_insight_management_client.html#HDInsightManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.HDInsightManagementClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>HDInsight Management Client</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>HDInsightManagementClientConfiguration</em>) – Configuration for client.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="#azure.mgmt.hdinsight.HDInsightManagementClientConfiguration" title="azure.mgmt.hdinsight.HDInsightManagementClientConfiguration"><em>HDInsightManagementClientConfiguration</em></a>) – Configuration for client.</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.eventhub.html#azure.mgmt.eventhub.EventHubManagementClient.clusters" title="azure.mgmt.eventhub.EventHubManagementClient.clusters"><strong>clusters</strong></a> (<a class="reference internal" href="azure.mgmt.hdinsight.operations.html#azure.mgmt.hdinsight.operations.ClustersOperations" title="azure.mgmt.hdinsight.operations.ClustersOperations"><em>azure.mgmt.hdinsight.operations.ClustersOperations</em></a>) – Clusters operations</p></li>
 <li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.HealthEvaluationKind.applications" title="azure.servicefabric.models.HealthEvaluationKind.applications"><strong>applications</strong></a> (<a class="reference internal" href="azure.mgmt.hdinsight.operations.html#azure.mgmt.hdinsight.operations.ApplicationsOperations" title="azure.mgmt.hdinsight.operations.ApplicationsOperations"><em>azure.mgmt.hdinsight.operations.ApplicationsOperations</em></a>) – Applications operations</p></li>
 <li><p><strong>locations</strong> (<a class="reference internal" href="azure.mgmt.hdinsight.operations.html#azure.mgmt.hdinsight.operations.LocationsOperations" title="azure.mgmt.hdinsight.operations.LocationsOperations"><em>azure.mgmt.hdinsight.operations.LocationsOperations</em></a>) – Locations operations</p></li>
@@ -346,6 +346,27 @@
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subscription credentials which uniquely
+identify Microsoft Azure subscription. The subscription ID forms part of
+the URI for every service call.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.HDInsightManagementClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.</code><code class="sig-name descname">HDInsightManagementClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/_configuration.html#HDInsightManagementClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.HDInsightManagementClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrestazure.azure_configuration.AzureConfiguration</span></code></p>
+<p>Configuration for HDInsightManagementClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
 <span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
 <li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subscription credentials which uniquely

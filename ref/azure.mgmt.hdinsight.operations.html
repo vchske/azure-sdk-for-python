@@ -318,9 +318,10 @@
 <span id="azure-mgmt-hdinsight-operations-module"></span><h1>azure.mgmt.hdinsight.operations module<a class="headerlink" href="#module-azure.mgmt.hdinsight.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.hdinsight.operations.ClustersOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">ClustersOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/clusters_operations.html#ClustersOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">ClustersOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_clusters_operations.html#ClustersOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ClustersOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -339,7 +340,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ClustersOperations.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/clusters_operations.html#ClustersOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_clusters_operations.html#ClustersOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new HDInsight cluster with the specified parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -371,7 +372,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ClustersOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/clusters_operations.html#ClustersOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_clusters_operations.html#ClustersOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the specified HDInsight cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -401,7 +402,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ClustersOperations.execute_script_actions">
-<code class="sig-name descname">execute_script_actions</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">persist_on_success</em>, <em class="sig-param">script_actions=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/clusters_operations.html#ClustersOperations.execute_script_actions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.execute_script_actions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">execute_script_actions</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">persist_on_success</em>, <em class="sig-param">script_actions=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_clusters_operations.html#ClustersOperations.execute_script_actions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.execute_script_actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Executes script actions on the specified HDInsight cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -434,7 +435,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ClustersOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/clusters_operations.html#ClustersOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_clusters_operations.html#ClustersOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the specified cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -463,7 +464,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ClustersOperations.get_gateway_settings">
-<code class="sig-name descname">get_gateway_settings</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/clusters_operations.html#ClustersOperations.get_gateway_settings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.get_gateway_settings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_gateway_settings</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_clusters_operations.html#ClustersOperations.get_gateway_settings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.get_gateway_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the gateway settings for the specified cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -492,7 +493,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ClustersOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/clusters_operations.html#ClustersOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_clusters_operations.html#ClustersOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the HDInsight clusters under the subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -518,7 +519,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ClustersOperations.list_by_resource_group">
-<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/clusters_operations.html#ClustersOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_clusters_operations.html#ClustersOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the HDInsight clusters in a resource group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -550,7 +551,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ClustersOperations.resize">
-<code class="sig-name descname">resize</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">target_instance_count=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/clusters_operations.html#ClustersOperations.resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.resize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resize</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">target_instance_count=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_clusters_operations.html#ClustersOperations.resize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.resize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resizes the specified HDInsight cluster to the specified size.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -582,7 +583,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ClustersOperations.rotate_disk_encryption_key">
-<code class="sig-name descname">rotate_disk_encryption_key</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/clusters_operations.html#ClustersOperations.rotate_disk_encryption_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.rotate_disk_encryption_key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rotate_disk_encryption_key</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_clusters_operations.html#ClustersOperations.rotate_disk_encryption_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.rotate_disk_encryption_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotate disk encryption key of the specified HDInsight cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -613,7 +614,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ClustersOperations.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/clusters_operations.html#ClustersOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_clusters_operations.html#ClustersOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Patch HDInsight cluster with the specified parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -643,7 +644,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ClustersOperations.update_gateway_settings">
-<code class="sig-name descname">update_gateway_settings</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/clusters_operations.html#ClustersOperations.update_gateway_settings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.update_gateway_settings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_gateway_settings</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_clusters_operations.html#ClustersOperations.update_gateway_settings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ClustersOperations.update_gateway_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the gateway settings on the specified cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -676,9 +677,10 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="class">
 <dt id="azure.mgmt.hdinsight.operations.ApplicationsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">ApplicationsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/applications_operations.html#ApplicationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ApplicationsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">ApplicationsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_applications_operations.html#ApplicationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ApplicationsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ApplicationsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -694,7 +696,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ApplicationsOperations.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/applications_operations.html#ApplicationsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ApplicationsOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_applications_operations.html#ApplicationsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ApplicationsOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates applications for the HDInsight cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -727,7 +729,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ApplicationsOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/applications_operations.html#ApplicationsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ApplicationsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_applications_operations.html#ApplicationsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ApplicationsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the specified application on the HDInsight cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -758,7 +760,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ApplicationsOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/applications_operations.html#ApplicationsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ApplicationsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">application_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_applications_operations.html#ApplicationsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ApplicationsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets properties of the specified application.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -788,7 +790,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ApplicationsOperations.list_by_cluster">
-<code class="sig-name descname">list_by_cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/applications_operations.html#ApplicationsOperations.list_by_cluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ApplicationsOperations.list_by_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_applications_operations.html#ApplicationsOperations.list_by_cluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ApplicationsOperations.list_by_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the applications for the HDInsight cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -823,9 +825,10 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.hdinsight.operations.LocationsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">LocationsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/locations_operations.html#LocationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.LocationsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">LocationsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_locations_operations.html#LocationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.LocationsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>LocationsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -841,7 +844,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.LocationsOperations.list_usages">
-<code class="sig-name descname">list_usages</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/locations_operations.html#LocationsOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.LocationsOperations.list_usages" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_usages</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_locations_operations.html#LocationsOperations.list_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.LocationsOperations.list_usages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the usages for the specified location.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -876,9 +879,10 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.hdinsight.operations.ConfigurationsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">ConfigurationsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/configurations_operations.html#ConfigurationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ConfigurationsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">ConfigurationsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_configurations_operations.html#ConfigurationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ConfigurationsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ConfigurationsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -894,7 +898,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ConfigurationsOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">configuration_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/configurations_operations.html#ConfigurationsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ConfigurationsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">configuration_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_configurations_operations.html#ConfigurationsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ConfigurationsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration object for the specified cluster. This API is not
 recommended and might be removed in the future. Please consider using
 List configurations API instead.</p>
@@ -925,7 +929,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ConfigurationsOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/configurations_operations.html#ConfigurationsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ConfigurationsOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_configurations_operations.html#ConfigurationsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ConfigurationsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets all configuration information for an HDI cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -959,7 +963,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ConfigurationsOperations.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">configuration_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/configurations_operations.html#ConfigurationsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ConfigurationsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">configuration_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_configurations_operations.html#ConfigurationsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ConfigurationsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the HTTP settings on the specified cluster. This API is
 deprecated, please use UpdateGatewaySettings in cluster endpoint
 instead.</p>
@@ -995,9 +999,10 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="class">
 <dt id="azure.mgmt.hdinsight.operations.ExtensionsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">ExtensionsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/extensions_operations.html#ExtensionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">ExtensionsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_extensions_operations.html#ExtensionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ExtensionsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1013,7 +1018,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ExtensionsOperations.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">extension_name</em>, <em class="sig-param">workspace_id=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/extensions_operations.html#ExtensionsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">extension_name</em>, <em class="sig-param">workspace_id=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_extensions_operations.html#ExtensionsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an HDInsight cluster extension.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1048,7 +1053,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ExtensionsOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">extension_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/extensions_operations.html#ExtensionsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">extension_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_extensions_operations.html#ExtensionsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the specified extension for HDInsight cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1079,7 +1084,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ExtensionsOperations.disable_monitoring">
-<code class="sig-name descname">disable_monitoring</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/extensions_operations.html#ExtensionsOperations.disable_monitoring"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations.disable_monitoring" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">disable_monitoring</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_extensions_operations.html#ExtensionsOperations.disable_monitoring"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations.disable_monitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disables the Operations Management Suite (OMS) on the HDInsight
 cluster.</p>
 <dl class="field-list simple">
@@ -1110,7 +1115,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ExtensionsOperations.enable_monitoring">
-<code class="sig-name descname">enable_monitoring</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">workspace_id=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/extensions_operations.html#ExtensionsOperations.enable_monitoring"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations.enable_monitoring" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_monitoring</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">workspace_id=None</em>, <em class="sig-param">primary_key=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_extensions_operations.html#ExtensionsOperations.enable_monitoring"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations.enable_monitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables the Operations Management Suite (OMS) on the HDInsight cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1144,7 +1149,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ExtensionsOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">extension_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/extensions_operations.html#ExtensionsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">extension_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_extensions_operations.html#ExtensionsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the extension properties for the specified HDInsight cluster
 extension.</p>
 <dl class="field-list simple">
@@ -1175,7 +1180,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ExtensionsOperations.get_monitoring_status">
-<code class="sig-name descname">get_monitoring_status</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/extensions_operations.html#ExtensionsOperations.get_monitoring_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations.get_monitoring_status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_monitoring_status</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_extensions_operations.html#ExtensionsOperations.get_monitoring_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ExtensionsOperations.get_monitoring_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the status of Operations Management Suite (OMS) on the HDInsight
 cluster.</p>
 <dl class="field-list simple">
@@ -1212,9 +1217,10 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.hdinsight.operations.ScriptActionsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">ScriptActionsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/script_actions_operations.html#ScriptActionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptActionsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">ScriptActionsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_script_actions_operations.html#ScriptActionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptActionsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ScriptActionsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1230,7 +1236,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ScriptActionsOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">script_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/script_actions_operations.html#ScriptActionsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptActionsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">script_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_script_actions_operations.html#ScriptActionsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptActionsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a specified persisted script action of the cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1259,7 +1265,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ScriptActionsOperations.get_execution_detail">
-<code class="sig-name descname">get_execution_detail</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">script_execution_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/script_actions_operations.html#ScriptActionsOperations.get_execution_detail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptActionsOperations.get_execution_detail" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_execution_detail</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">script_execution_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_script_actions_operations.html#ScriptActionsOperations.get_execution_detail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptActionsOperations.get_execution_detail" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the script execution detail for the given script execution ID.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1289,7 +1295,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ScriptActionsOperations.list_by_cluster">
-<code class="sig-name descname">list_by_cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/script_actions_operations.html#ScriptActionsOperations.list_by_cluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptActionsOperations.list_by_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_script_actions_operations.html#ScriptActionsOperations.list_by_cluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptActionsOperations.list_by_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the persisted script actions for the specified cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1324,9 +1330,10 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.hdinsight.operations.ScriptExecutionHistoryOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">ScriptExecutionHistoryOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/script_execution_history_operations.html#ScriptExecutionHistoryOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptExecutionHistoryOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">ScriptExecutionHistoryOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_script_execution_history_operations.html#ScriptExecutionHistoryOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptExecutionHistoryOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ScriptExecutionHistoryOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1342,7 +1349,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ScriptExecutionHistoryOperations.list_by_cluster">
-<code class="sig-name descname">list_by_cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/script_execution_history_operations.html#ScriptExecutionHistoryOperations.list_by_cluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptExecutionHistoryOperations.list_by_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_script_execution_history_operations.html#ScriptExecutionHistoryOperations.list_by_cluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptExecutionHistoryOperations.list_by_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all scripts’ execution history for the specified cluster.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1375,7 +1382,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.ScriptExecutionHistoryOperations.promote">
-<code class="sig-name descname">promote</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">script_execution_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/script_execution_history_operations.html#ScriptExecutionHistoryOperations.promote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptExecutionHistoryOperations.promote" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">promote</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">cluster_name</em>, <em class="sig-param">script_execution_id</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_script_execution_history_operations.html#ScriptExecutionHistoryOperations.promote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.ScriptExecutionHistoryOperations.promote" title="Permalink to this definition">¶</a></dt>
 <dd><p>Promotes the specified ad-hoc script execution to a persisted script.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1406,9 +1413,10 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.hdinsight.operations.Operations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hdinsight.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.Operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Operations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1424,7 +1432,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.hdinsight.operations.Operations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/operations/_operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the available HDInsight REST API operations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
