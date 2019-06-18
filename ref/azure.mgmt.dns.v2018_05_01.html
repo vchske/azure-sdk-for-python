@@ -334,13 +334,13 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.dns.v2018_05_01" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.dns.v2018_05_01.DnsManagementClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.</code><code class="sig-name descname">DnsManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/dns_management_client.html#DnsManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.DnsManagementClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.</code><code class="sig-name descname">DnsManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/_dns_management_client.html#DnsManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.DnsManagementClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>The DNS Management Client.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>DnsManagementClientConfiguration</em>) – Configuration for client.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="azure.mgmt.dns.html#azure.mgmt.dns.DnsManagementClientConfiguration" title="azure.mgmt.dns.DnsManagementClientConfiguration"><em>DnsManagementClientConfiguration</em></a>) – Configuration for client.</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.dns.html#azure.mgmt.dns.DnsManagementClient.record_sets" title="azure.mgmt.dns.DnsManagementClient.record_sets"><strong>record_sets</strong></a> (<a class="reference internal" href="azure.mgmt.dns.v2018_05_01.operations.html#azure.mgmt.dns.v2018_05_01.operations.RecordSetsOperations" title="azure.mgmt.dns.v2018_05_01.operations.RecordSetsOperations"><em>azure.mgmt.dns.v2018_05_01.operations.RecordSetsOperations</em></a>) – RecordSets operations</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.dns.html#azure.mgmt.dns.DnsManagementClient.zones" title="azure.mgmt.dns.DnsManagementClient.zones"><strong>zones</strong></a> (<a class="reference internal" href="azure.mgmt.dns.v2018_05_01.operations.html#azure.mgmt.dns.v2018_05_01.operations.ZonesOperations" title="azure.mgmt.dns.v2018_05_01.operations.ZonesOperations"><em>azure.mgmt.dns.v2018_05_01.operations.ZonesOperations</em></a>) – Zones operations</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.dns.html#azure.mgmt.dns.DnsManagementClient.dns_resource_reference" title="azure.mgmt.dns.DnsManagementClient.dns_resource_reference"><strong>dns_resource_reference</strong></a> (<a class="reference internal" href="azure.mgmt.dns.v2018_05_01.operations.html#azure.mgmt.dns.v2018_05_01.operations.DnsResourceReferenceOperations" title="azure.mgmt.dns.v2018_05_01.operations.DnsResourceReferenceOperations"><em>azure.mgmt.dns.v2018_05_01.operations.DnsResourceReferenceOperations</em></a>) – DnsResourceReference operations</p></li>
@@ -348,6 +348,26 @@
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the Azure subscription ID, which
+uniquely identifies the Microsoft Azure subscription.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.dns.v2018_05_01.DnsManagementClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.</code><code class="sig-name descname">DnsManagementClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/_configuration.html#DnsManagementClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.DnsManagementClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrestazure.azure_configuration.AzureConfiguration</span></code></p>
+<p>Configuration for DnsManagementClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
 <span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
 <li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the Azure subscription ID, which

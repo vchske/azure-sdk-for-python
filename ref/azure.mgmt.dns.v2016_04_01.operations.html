@@ -325,9 +325,10 @@
 <span id="azure-mgmt-dns-v2016-04-01-operations-module"></span><h1>azure.mgmt.dns.v2016_04_01.operations module<a class="headerlink" href="#module-azure.mgmt.dns.v2016_04_01.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2016_04_01.operations.</code><code class="sig-name descname">RecordSetsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/record_sets_operations.html#RecordSetsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2016_04_01.operations.</code><code class="sig-name descname">RecordSetsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_record_sets_operations.html#RecordSetsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>RecordSetsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -343,7 +344,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.create_or_update">
-<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">relative_record_set_name</em>, <em class="sig-param">record_type</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">if_none_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/record_sets_operations.html#RecordSetsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">relative_record_set_name</em>, <em class="sig-param">record_type</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">if_none_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_record_sets_operations.html#RecordSetsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates or updates a record set within a DNS zone.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -389,7 +390,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">relative_record_set_name</em>, <em class="sig-param">record_type</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/record_sets_operations.html#RecordSetsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">relative_record_set_name</em>, <em class="sig-param">record_type</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_record_sets_operations.html#RecordSetsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a record set from a DNS zone. This operation cannot be undone.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -429,7 +430,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">relative_record_set_name</em>, <em class="sig-param">record_type</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/record_sets_operations.html#RecordSetsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">relative_record_set_name</em>, <em class="sig-param">record_type</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_record_sets_operations.html#RecordSetsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a record set.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -466,7 +467,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.list_by_dns_zone">
-<code class="sig-name descname">list_by_dns_zone</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">top=None</em>, <em class="sig-param">recordsetnamesuffix=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/record_sets_operations.html#RecordSetsOperations.list_by_dns_zone"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.list_by_dns_zone" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_dns_zone</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">top=None</em>, <em class="sig-param">recordsetnamesuffix=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_record_sets_operations.html#RecordSetsOperations.list_by_dns_zone"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.list_by_dns_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all record sets in a DNS zone.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -502,7 +503,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.list_by_type">
-<code class="sig-name descname">list_by_type</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">record_type</em>, <em class="sig-param">top=None</em>, <em class="sig-param">recordsetnamesuffix=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/record_sets_operations.html#RecordSetsOperations.list_by_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.list_by_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_type</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">record_type</em>, <em class="sig-param">top=None</em>, <em class="sig-param">recordsetnamesuffix=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_record_sets_operations.html#RecordSetsOperations.list_by_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.list_by_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the record sets of a specified type in a DNS zone.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -547,7 +548,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">relative_record_set_name</em>, <em class="sig-param">record_type</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/record_sets_operations.html#RecordSetsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">relative_record_set_name</em>, <em class="sig-param">record_type</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_record_sets_operations.html#RecordSetsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.RecordSetsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates a record set within a DNS zone.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -590,9 +591,10 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.ZonesOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2016_04_01.operations.</code><code class="sig-name descname">ZonesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/zones_operations.html#ZonesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2016_04_01.operations.</code><code class="sig-name descname">ZonesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_zones_operations.html#ZonesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ZonesOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -608,7 +610,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.create_or_update">
-<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">if_none_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/zones_operations.html#ZonesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">if_none_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_zones_operations.html#ZonesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates or updates a DNS zone. Does not modify DNS records within the
 zone.</p>
 <dl class="field-list simple">
@@ -648,7 +650,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/zones_operations.html#ZonesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">if_match=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_zones_operations.html#ZonesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a DNS zone. WARNING: All DNS records in the zone will also be
 deleted. This operation cannot be undone.</p>
 <dl class="field-list simple">
@@ -685,7 +687,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/zones_operations.html#ZonesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">zone_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_zones_operations.html#ZonesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a DNS zone. Retrieves the zone properties, but not the record sets
 within the zone.</p>
 <dl class="field-list simple">
@@ -717,7 +719,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/zones_operations.html#ZonesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_zones_operations.html#ZonesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the DNS zones in all resource groups in a subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -745,7 +747,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.list_by_resource_group">
-<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/zones_operations.html#ZonesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">top=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2016_04_01/operations/_zones_operations.html#ZonesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2016_04_01.operations.ZonesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the DNS zones within a resource group.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -324,20 +324,8 @@
   <div class="section" id="module-azure.mgmt.dns.v2018_05_01.models">
 <span id="azure-mgmt-dns-v2018-05-01-models-module"></span><h1>azure.mgmt.dns.v2018_05_01.models module<a class="headerlink" href="#module-azure.mgmt.dns.v2018_05_01.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.ARecord">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">ARecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">ipv4_address: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/arecord_py3.html#ARecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.ARecord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An A record.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>ipv4_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The IPv4 address of this A record.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.dns.v2018_05_01.models.AaaaRecord">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">AaaaRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">ipv6_address: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/aaaa_record_py3.html#AaaaRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.AaaaRecord" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">AaaaRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">ipv6_address: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#AaaaRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.AaaaRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>An AAAA record.</p>
 <dl class="field-list simple">
@@ -348,110 +336,20 @@
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.MxRecord">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">MxRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">preference: int = None</em>, <em class="sig-param">exchange: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/mx_record_py3.html#MxRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.MxRecord" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.dns.v2018_05_01.models.ARecord">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">ARecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">ipv4_address: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#ARecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.ARecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An MX record.</p>
+<p>An A record.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>preference</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The preference value for this MX record.</p></li>
-<li><p><strong>exchange</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The domain name of the mail host for this MX record.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.NsRecord">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">NsRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">nsdname: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/ns_record_py3.html#NsRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.NsRecord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An NS record.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>nsdname</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name server name for this NS record.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.PtrRecord">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">PtrRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">ptrdname: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/ptr_record_py3.html#PtrRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.PtrRecord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A PTR record.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>ptrdname</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The PTR target domain name for this PTR record.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.SrvRecord">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">SrvRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">priority: int = None</em>, <em class="sig-param">weight: int = None</em>, <em class="sig-param">port: int = None</em>, <em class="sig-param">target: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/srv_record_py3.html#SrvRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.SrvRecord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An SRV record.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>priority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The priority value for this SRV record.</p></li>
-<li><p><strong>weight</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The weight value for this SRV record.</p></li>
-<li><p><strong>port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The port value for this SRV record.</p></li>
-<li><p><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The target domain name for this SRV record.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.TxtRecord">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">TxtRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/txt_record_py3.html#TxtRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.TxtRecord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A TXT record.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The text value of this TXT record.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.CnameRecord">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">CnameRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">cname: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/cname_record_py3.html#CnameRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.CnameRecord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A CNAME record.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>cname</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The canonical name for this CNAME record.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.SoaRecord">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">SoaRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">host: str = None</em>, <em class="sig-param">email: str = None</em>, <em class="sig-param">serial_number: int = None</em>, <em class="sig-param">refresh_time: int = None</em>, <em class="sig-param">retry_time: int = None</em>, <em class="sig-param">expire_time: int = None</em>, <em class="sig-param">minimum_ttl: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/soa_record_py3.html#SoaRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.SoaRecord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An SOA record.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>host</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The domain name of the authoritative name server for this SOA
-record.</p></li>
-<li><p><strong>email</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The email contact for this SOA record.</p></li>
-<li><p><strong>serial_number</strong> (<em>long</em>) – The serial number for this SOA record.</p></li>
-<li><p><strong>refresh_time</strong> (<em>long</em>) – The refresh value for this SOA record.</p></li>
-<li><p><strong>retry_time</strong> (<em>long</em>) – The retry time for this SOA record.</p></li>
-<li><p><strong>expire_time</strong> (<em>long</em>) – The expire time for this SOA record.</p></li>
-<li><p><strong>minimum_ttl</strong> (<em>long</em>) – The minimum value for this SOA record. By convention
-this is used to determine the negative caching duration.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>ipv4_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The IPv4 address of this A record.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.dns.v2018_05_01.models.CaaRecord">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">CaaRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">flags: int = None</em>, <em class="sig-param">tag: str = None</em>, <em class="sig-param">value: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/caa_record_py3.html#CaaRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.CaaRecord" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">CaaRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">flags: int = None</em>, <em class="sig-param">tag: str = None</em>, <em class="sig-param">value: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#CaaRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.CaaRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A CAA record.</p>
 <dl class="field-list simple">
@@ -467,20 +365,102 @@ this is used to determine the negative caching duration.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.SubResource">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">SubResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/sub_resource_py3.html#SubResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.SubResource" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.dns.v2018_05_01.models.CnameRecord">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">CnameRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">cname: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#CnameRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.CnameRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A reference to a another resource.</p>
+<p>A CNAME record.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p>
+<dd class="field-odd"><p><strong>cname</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The canonical name for this CNAME record.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.dns.v2018_05_01.models.DnsResourceReference">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">DnsResourceReference</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">dns_resources=None</em>, <em class="sig-param">target_resource=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#DnsResourceReference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.DnsResourceReference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents a single Azure resource and its referencing DNS records.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dns_resources</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.dns.v2018_05_01.models.SubResource" title="azure.mgmt.dns.v2018_05_01.models.SubResource"><em>SubResource</em></a><em>]</em>) – A list of dns Records</p></li>
+<li><p><strong>target_resource</strong> (<a class="reference internal" href="#azure.mgmt.dns.v2018_05_01.models.SubResource" title="azure.mgmt.dns.v2018_05_01.models.SubResource"><em>SubResource</em></a>) – A reference to an azure resource from where the
+dns resource value is taken.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.dns.v2018_05_01.models.DnsResourceReferenceRequest">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">DnsResourceReferenceRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">target_resources=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#DnsResourceReferenceRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.DnsResourceReferenceRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents the properties of the Dns Resource Reference Request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target_resources</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.dns.v2018_05_01.models.SubResource" title="azure.mgmt.dns.v2018_05_01.models.SubResource"><em>SubResource</em></a><em>]</em>) – A list of references to azure resources for which
+referencing dns records need to be queried.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.dns.v2018_05_01.models.DnsResourceReferenceResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">DnsResourceReferenceResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">dns_resource_references=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#DnsResourceReferenceResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.DnsResourceReferenceResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents the properties of the Dns Resource Reference Result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dns_resource_references</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.dns.v2018_05_01.models.DnsResourceReference" title="azure.mgmt.dns.v2018_05_01.models.DnsResourceReference"><em>DnsResourceReference</em></a><em>]</em>) – The result of dns resource reference
+request. A list of dns resource references for each of the azure resource
+in the request</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.dns.v2018_05_01.models.MxRecord">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">MxRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">preference: int = None</em>, <em class="sig-param">exchange: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#MxRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.MxRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An MX record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>preference</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The preference value for this MX record.</p></li>
+<li><p><strong>exchange</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The domain name of the mail host for this MX record.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.dns.v2018_05_01.models.NsRecord">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">NsRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">nsdname: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#NsRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.NsRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An NS record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nsdname</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name server name for this NS record.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.dns.v2018_05_01.models.PtrRecord">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">PtrRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">ptrdname: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#PtrRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.PtrRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A PTR record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ptrdname</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The PTR target domain name for this PTR record.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.dns.v2018_05_01.models.RecordSet">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">RecordSet</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">etag: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">ttl: int = None</em>, <em class="sig-param">target_resource=None</em>, <em class="sig-param">arecords=None</em>, <em class="sig-param">aaaa_records=None</em>, <em class="sig-param">mx_records=None</em>, <em class="sig-param">ns_records=None</em>, <em class="sig-param">ptr_records=None</em>, <em class="sig-param">srv_records=None</em>, <em class="sig-param">txt_records=None</em>, <em class="sig-param">cname_record=None</em>, <em class="sig-param">soa_record=None</em>, <em class="sig-param">caa_records=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/record_set_py3.html#RecordSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.RecordSet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">RecordSet</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">etag: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">ttl: int = None</em>, <em class="sig-param">target_resource=None</em>, <em class="sig-param">arecords=None</em>, <em class="sig-param">aaaa_records=None</em>, <em class="sig-param">mx_records=None</em>, <em class="sig-param">ns_records=None</em>, <em class="sig-param">ptr_records=None</em>, <em class="sig-param">srv_records=None</em>, <em class="sig-param">txt_records=None</em>, <em class="sig-param">cname_record=None</em>, <em class="sig-param">soa_record=None</em>, <em class="sig-param">caa_records=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#RecordSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.RecordSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes a DNS record set (a collection of DNS records with the same name
 and type).</p>
@@ -520,7 +500,7 @@ dns resource value is taken.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.dns.v2018_05_01.models.RecordSetUpdateParameters">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">RecordSetUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">record_set=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/record_set_update_parameters_py3.html#RecordSetUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.RecordSetUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">RecordSetUpdateParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">record_set=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#RecordSetUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.RecordSetUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters supplied to update a record set.</p>
 <dl class="field-list simple">
@@ -532,9 +512,97 @@ updated.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.dns.v2018_05_01.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Common properties of an Azure Resource Manager resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.dns.v2018_05_01.models.SoaRecord">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">SoaRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">host: str = None</em>, <em class="sig-param">email: str = None</em>, <em class="sig-param">serial_number: int = None</em>, <em class="sig-param">refresh_time: int = None</em>, <em class="sig-param">retry_time: int = None</em>, <em class="sig-param">expire_time: int = None</em>, <em class="sig-param">minimum_ttl: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#SoaRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.SoaRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An SOA record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>host</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The domain name of the authoritative name server for this SOA
+record.</p></li>
+<li><p><strong>email</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The email contact for this SOA record.</p></li>
+<li><p><strong>serial_number</strong> (<em>long</em>) – The serial number for this SOA record.</p></li>
+<li><p><strong>refresh_time</strong> (<em>long</em>) – The refresh value for this SOA record.</p></li>
+<li><p><strong>retry_time</strong> (<em>long</em>) – The retry time for this SOA record.</p></li>
+<li><p><strong>expire_time</strong> (<em>long</em>) – The expire time for this SOA record.</p></li>
+<li><p><strong>minimum_ttl</strong> (<em>long</em>) – The minimum value for this SOA record. By convention
+this is used to determine the negative caching duration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.dns.v2018_05_01.models.SrvRecord">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">SrvRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">priority: int = None</em>, <em class="sig-param">weight: int = None</em>, <em class="sig-param">port: int = None</em>, <em class="sig-param">target: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#SrvRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.SrvRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An SRV record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>priority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The priority value for this SRV record.</p></li>
+<li><p><strong>weight</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The weight value for this SRV record.</p></li>
+<li><p><strong>port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The port value for this SRV record.</p></li>
+<li><p><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The target domain name for this SRV record.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.dns.v2018_05_01.models.SubResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">SubResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#SubResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.SubResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A reference to a another resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.dns.v2018_05_01.models.TxtRecord">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">TxtRecord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">value=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#TxtRecord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.TxtRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A TXT record.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The text value of this TXT record.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.dns.v2018_05_01.models.Zone">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">etag: str = None</em>, <em class="sig-param">zone_type='Public'</em>, <em class="sig-param">registration_virtual_networks=None</em>, <em class="sig-param">resolution_virtual_networks=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/zone_py3.html#Zone"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.Zone" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.dns.v2018_05_01.models.resource_py3.Resource</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">etag: str = None</em>, <em class="sig-param">zone_type='Public'</em>, <em class="sig-param">registration_virtual_networks=None</em>, <em class="sig-param">resolution_virtual_networks=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#Zone"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.Zone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.dns.v2018_05_01.models._models_py3.Resource</span></code></p>
 <p>Describes a DNS zone.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -575,7 +643,7 @@ ZoneType is Private.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.dns.v2018_05_01.models.ZoneUpdate">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">ZoneUpdate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/zone_update_py3.html#ZoneUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.ZoneUpdate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">ZoneUpdate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_models_py3.html#ZoneUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.ZoneUpdate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Describes a request to update a DNS zone.</p>
 <dl class="field-list simple">
@@ -586,90 +654,22 @@ ZoneType is Private.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.DnsResourceReferenceRequest">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">DnsResourceReferenceRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">target_resources=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/dns_resource_reference_request_py3.html#DnsResourceReferenceRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.DnsResourceReferenceRequest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Represents the properties of the Dns Resource Reference Request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>target_resources</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.dns.v2018_05_01.models.SubResource" title="azure.mgmt.dns.v2018_05_01.models.SubResource"><em>SubResource</em></a><em>]</em>) – A list of references to azure resources for which
-referencing dns records need to be queried.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.DnsResourceReference">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">DnsResourceReference</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">dns_resources=None</em>, <em class="sig-param">target_resource=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/dns_resource_reference_py3.html#DnsResourceReference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.DnsResourceReference" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Represents a single Azure resource and its referencing DNS records.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>dns_resources</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.dns.v2018_05_01.models.SubResource" title="azure.mgmt.dns.v2018_05_01.models.SubResource"><em>SubResource</em></a><em>]</em>) – A list of dns Records</p></li>
-<li><p><strong>target_resource</strong> (<a class="reference internal" href="#azure.mgmt.dns.v2018_05_01.models.SubResource" title="azure.mgmt.dns.v2018_05_01.models.SubResource"><em>SubResource</em></a>) – A reference to an azure resource from where the
-dns resource value is taken.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.DnsResourceReferenceResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">DnsResourceReferenceResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">dns_resource_references=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/dns_resource_reference_result_py3.html#DnsResourceReferenceResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.DnsResourceReferenceResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Represents the properties of the Dns Resource Reference Result.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>dns_resource_references</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.dns.v2018_05_01.models.DnsResourceReference" title="azure.mgmt.dns.v2018_05_01.models.DnsResourceReference"><em>DnsResourceReference</em></a><em>]</em>) – The result of dns resource reference
-request. A list of dns resource references for each of the azure resource
-in the request</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.dns.v2018_05_01.models.Resource">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.Resource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Common properties of an Azure Resource Manager resource.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location.</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.dns.v2018_05_01.models.RecordSetPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">RecordSetPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/record_set_paged.html#RecordSetPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.RecordSetPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">RecordSetPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_paged_models.html#RecordSetPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.RecordSetPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.dns.v2018_05_01.models.RecordSet" title="azure.mgmt.dns.v2018_05_01.models.RecordSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">RecordSet</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.dns.v2018_05_01.models.ZonePaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">ZonePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/zone_paged.html#ZonePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.ZonePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">ZonePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_paged_models.html#ZonePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.ZonePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.dns.v2018_05_01.models.Zone" title="azure.mgmt.dns.v2018_05_01.models.Zone"><code class="xref py py-class docutils literal notranslate"><span class="pre">Zone</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.dns.v2018_05_01.models.ZoneType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">ZoneType</code><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/dns_management_client_enums.html#ZoneType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.ZoneType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">ZoneType</code><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_dns_management_client_enums.html#ZoneType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.ZoneType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -686,7 +686,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.dns.v2018_05_01.models.RecordType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">RecordType</code><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/dns_management_client_enums.html#RecordType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.RecordType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.dns.v2018_05_01.models.</code><code class="sig-name descname">RecordType</code><a class="reference internal" href="../_modules/azure/mgmt/dns/v2018_05_01/models/_dns_management_client_enums.html#RecordType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.dns.v2018_05_01.models.RecordType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
