@@ -318,7 +318,7 @@
 <span id="azure-mgmt-resourcegraph-models-module"></span><h1>azure.mgmt.resourcegraph.models module<a class="headerlink" href="#module-azure.mgmt.resourcegraph.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.QueryRequestOptions">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">QueryRequestOptions</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">skip_token: str = None</em>, <em class="sig-param">top: int = None</em>, <em class="sig-param">skip: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/query_request_options_py3.html#QueryRequestOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.QueryRequestOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">QueryRequestOptions</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">skip_token: str = None</em>, <em class="sig-param">top: int = None</em>, <em class="sig-param">skip: int = None</em>, <em class="sig-param">result_format=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/query_request_options_py3.html#QueryRequestOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.QueryRequestOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The options for query evaluation.</p>
 <dl class="field-list simple">
@@ -330,6 +330,8 @@ page size and offset, as well as the context of the query.</p></li>
 Overrides the page size when <code class="docutils literal notranslate"><span class="pre">`$skipToken`</span></code> property is present.</p></li>
 <li><p><strong>skip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of rows to skip from the beginning of the results.
 Overrides the next page offset when <code class="docutils literal notranslate"><span class="pre">`$skipToken`</span></code> property is present.</p></li>
+<li><p><strong>result_format</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.resourcegraph.models.ResultFormat" title="azure.mgmt.resourcegraph.models.ResultFormat"><em>ResultFormat</em></a>) – Defines in which format query result returned.
+Possible values include: ‘table’, ‘objectArray’</p></li>
 </ul>
 </dd>
 </dl>
@@ -392,39 +394,6 @@ result.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.resourcegraph.models.Column">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">Column</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">type</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/column_py3.html#Column"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Column" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Query result column descriptor.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Column name.</p></li>
-<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.resourcegraph.models.ColumnDataType" title="azure.mgmt.resourcegraph.models.ColumnDataType"><em>ColumnDataType</em></a>) – Required. Column data type. Possible values include:
-‘string’, ‘integer’, ‘number’, ‘boolean’, ‘object’</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.resourcegraph.models.Table">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">columns</em>, <em class="sig-param">rows</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/table_py3.html#Table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Table" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Query output in tabular format.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>columns</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.resourcegraph.models.Column" title="azure.mgmt.resourcegraph.models.Column"><em>Column</em></a><em>]</em>) – Required. Query result column descriptors.</p></li>
-<li><p><strong>rows</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a><em>]</em><em>]</em>) – Required. Query result rows.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.resourcegraph.models.Facet">
 <em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">Facet</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">expression: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/facet_py3.html#Facet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Facet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
@@ -464,8 +433,41 @@ truncated. Possible values include: ‘true’, ‘false’</p></li>
 <li><p><strong>skip_token</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – When present, the value can be passed to a subsequent
 query call (together with the same query and subscriptions used in the
 current request) to retrieve the next page of data.</p></li>
-<li><p><strong>data</strong> (<a class="reference internal" href="#azure.mgmt.resourcegraph.models.Table" title="azure.mgmt.resourcegraph.models.Table"><em>Table</em></a>) – Required. Query output in tabular format.</p></li>
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Required. Query output in tabular format.</p></li>
 <li><p><strong>facets</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.resourcegraph.models.Facet" title="azure.mgmt.resourcegraph.models.Facet"><em>Facet</em></a><em>]</em>) – Query facets.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resourcegraph.models.Column">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">Column</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">type</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/column_py3.html#Column"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Column" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Query result column descriptor.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Column name.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.resourcegraph.models.ColumnDataType" title="azure.mgmt.resourcegraph.models.ColumnDataType"><em>ColumnDataType</em></a>) – Required. Column data type. Possible values include:
+‘string’, ‘integer’, ‘number’, ‘boolean’, ‘object’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resourcegraph.models.Table">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">columns</em>, <em class="sig-param">rows</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/table_py3.html#Table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.Table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Query output in tabular format.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>columns</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.resourcegraph.models.Column" title="azure.mgmt.resourcegraph.models.Column"><em>Column</em></a><em>]</em>) – Required. Query result column descriptors.</p></li>
+<li><p><strong>rows</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a><em>]</em><em>]</em>) – Required. Query result rows.</p></li>
 </ul>
 </dd>
 </dl>
@@ -487,7 +489,7 @@ corresponding facet request.</p></li>
 <li><p><strong>total_records</strong> (<em>long</em>) – Required. Number of total records in the facet
 results.</p></li>
 <li><p><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. Number of records returned in the facet response.</p></li>
-<li><p><strong>data</strong> (<a class="reference internal" href="#azure.mgmt.resourcegraph.models.Table" title="azure.mgmt.resourcegraph.models.Table"><em>Table</em></a>) – Required. A table containing the desired facets. Only present
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Required. A table containing the desired facets. Only present
 if the facet is valid.</p></li>
 </ul>
 </dd>
@@ -616,6 +618,23 @@ details.</p></li>
 <em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.resourcegraph.models.Operation" title="azure.mgmt.resourcegraph.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resourcegraph.models.ResultFormat">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.models.</code><code class="sig-name descname">ResultFormat</code><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/models/resource_graph_client_enums.html#ResultFormat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ResultFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.resourcegraph.models.ResultFormat.object_array">
+<code class="sig-name descname">object_array</code><em class="property"> = 'objectArray'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ResultFormat.object_array" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.resourcegraph.models.ResultFormat.table">
+<code class="sig-name descname">table</code><em class="property"> = 'table'</em><a class="headerlink" href="#azure.mgmt.resourcegraph.models.ResultFormat.table" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">

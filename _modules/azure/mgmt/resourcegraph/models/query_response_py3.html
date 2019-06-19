@@ -336,7 +336,7 @@
 <span class="sd">     current request) to retrieve the next page of data.</span>
 <span class="sd">    :type skip_token: str</span>
 <span class="sd">    :param data: Required. Query output in tabular format.</span>
-<span class="sd">    :type data: ~azure.mgmt.resourcegraph.models.Table</span>
+<span class="sd">    :type data: object</span>
 <span class="sd">    :param facets: Query facets.</span>
 <span class="sd">    :type facets: list[~azure.mgmt.resourcegraph.models.Facet]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -353,7 +353,7 @@
         <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
         <span class="s1">&#39;result_truncated&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;resultTruncated&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ResultTruncated&#39;</span><span class="p">},</span>
         <span class="s1">&#39;skip_token&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;$skipToken&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Table&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">},</span>
         <span class="s1">&#39;facets&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;facets&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[Facet]&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
