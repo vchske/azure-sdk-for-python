@@ -324,12 +324,78 @@
   <div class="section" id="module-azure.mgmt.eventhub.v2017_04_01.models">
 <span id="azure-mgmt-eventhub-v2017-04-01-models-module"></span><h1>azure.mgmt.eventhub.v2017_04_01.models module<a class="headerlink" href="#module-azure.mgmt.eventhub.v2017_04_01.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.TrackedResource">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">TrackedResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/tracked_resource_py3.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models.resource_py3.Resource</span></code></p>
-<p>Definition of Resource.</p>
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.AccessKeys">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">AccessKeys</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#AccessKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.AccessKeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Namespace/EventHub Connection String.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>primary_connection_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Primary connection string of the created
+namespace AuthorizationRule.</p></li>
+<li><p><strong>secondary_connection_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Secondary connection string of the
+created namespace AuthorizationRule.</p></li>
+<li><p><strong>alias_primary_connection_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Primary connection string of the
+alias if GEO DR is enabled</p></li>
+<li><p><strong>alias_secondary_connection_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Secondary  connection string of
+the alias if GEO DR is enabled</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Policykey.primary_key" title="azure.mgmt.eventhub.v2015_08_01.models.Policykey.primary_key"><strong>primary_key</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A base64-encoded 256-bit primary key for signing and
+validating the SAS token.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Policykey.secondary_key" title="azure.mgmt.eventhub.v2015_08_01.models.Policykey.secondary_key"><strong>secondary_key</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A base64-encoded 256-bit primary key for signing and
+validating the SAS token.</p></li>
+<li><p><strong>key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A string that describes the AuthorizationRule.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.ArmDisasterRecovery">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ArmDisasterRecovery</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">partner_namespace: str = None</em>, <em class="sig-param">alternate_name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#ArmDisasterRecovery"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ArmDisasterRecovery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models._models_py3.Resource</span></code></p>
+<p>Single item in List or Get Alias(Disaster Recovery configuration)
+operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.ProvisioningStateDR" title="azure.mgmt.eventhub.v2017_04_01.models.ProvisioningStateDR"><em>ProvisioningStateDR</em></a>) – Provisioning state of the Alias(Disaster
+Recovery configuration) - possible values ‘Accepted’ or ‘Succeeded’ or
+‘Failed’. Possible values include: ‘Accepted’, ‘Succeeded’, ‘Failed’</p></li>
+<li><p><strong>role</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.RoleDisasterRecovery" title="azure.mgmt.eventhub.v2017_04_01.models.RoleDisasterRecovery"><em>RoleDisasterRecovery</em></a>) – role of namespace in GEO DR - possible values ‘Primary’ or
+‘PrimaryNotReplicating’ or ‘Secondary’. Possible values include:
+‘Primary’, ‘PrimaryNotReplicating’, ‘Secondary’</p></li>
+<li><p><strong>pending_replication_operations_count</strong> (<em>long</em>) – Number of entities pending to
+be replicated.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>partner_namespace</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ARM Id of the Primary/Secondary eventhub
+namespace name, which is part of GEO DR pairing</p></li>
+<li><p><strong>alternate_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Alternate name specified when alias and namespace
+names are same.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.AuthorizationRule">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">AuthorizationRule</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">rights</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#AuthorizationRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.AuthorizationRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models._models_py3.Resource</span></code></p>
+<p>Single item in a List or Get AuthorizationRule operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
@@ -339,19 +405,84 @@ sending a request.</p>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<dd class="field-even"><p><strong>rights</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.AccessRights" title="azure.mgmt.eventhub.v2017_04_01.models.AccessRights"><em>AccessRights</em></a><em>]</em>) – Required. The rights associated with the rule.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.CaptureDescription">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">CaptureDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">enabled: bool = None</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">interval_in_seconds: int = None</em>, <em class="sig-param">size_limit_in_bytes: int = None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">skip_empty_archives: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#CaptureDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.CaptureDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties to configure capture description for eventhub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A value that indicates whether capture description is
+enabled.</p></li>
+<li><p><strong>encoding</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.EncodingCaptureDescription" title="azure.mgmt.eventhub.v2017_04_01.models.EncodingCaptureDescription"><em>EncodingCaptureDescription</em></a>) – Enumerates the possible values for the encoding format of
+capture description. Note: ‘AvroDeflate’ will be deprecated in New API
+Version. Possible values include: ‘Avro’, ‘AvroDeflate’</p></li>
+<li><p><strong>interval_in_seconds</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The time window allows you to set the
+frequency with which the capture to Azure Blobs will happen, value should
+between 60 to 900 seconds</p></li>
+<li><p><strong>size_limit_in_bytes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The size window defines the amount of data
+built up in your Event Hub before an capture operation, value should be
+between 10485760 to 524288000 bytes</p></li>
+<li><p><strong>destination</strong> (<a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.Destination" title="azure.mgmt.eventhub.v2017_04_01.models.Destination"><em>Destination</em></a>) – Properties of Destination where capture will be
+stored. (Storage Account, Blob Names)</p></li>
+<li><p><strong>skip_empty_archives</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A value that indicates whether to Skip Empty
+Archives</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.Resource">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.CheckNameAvailabilityParameter">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">CheckNameAvailabilityParameter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#CheckNameAvailabilityParameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.CheckNameAvailabilityParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The Resource definition.</p>
+<p>Parameter supplied to check Namespace name availability operation .</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name to check the namespace name availability</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.CheckNameAvailabilityResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">CheckNameAvailabilityResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name_available: bool = None</em>, <em class="sig-param">reason=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#CheckNameAvailabilityResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.CheckNameAvailabilityResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Result of the CheckNameAvailability operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.Severity.message" title="azure.mgmt.datamigration.models.Severity.message"><strong>message</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The detailed info regarding the reason associated with the
+Namespace.</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>name_available</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Value indicating Namespace is availability, true if
+the Namespace is available; otherwise, false.</p></li>
+<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.UnavailableReason" title="azure.mgmt.eventhub.v2017_04_01.models.UnavailableReason"><em>UnavailableReason</em></a>) – The reason for unavailability of a Namespace. Possible
+values include: ‘None’, ‘InvalidName’, ‘SubscriptionIsDisabled’,
+‘NameInUse’, ‘NameInLockdown’, ‘TooManyNamespaceInCurrentSubscription’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.ConsumerGroup">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ConsumerGroup</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">user_metadata: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#ConsumerGroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ConsumerGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models._models_py3.Resource</span></code></p>
+<p>Single item in List or Get Consumer group operation.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <dl class="field-list simple">
@@ -360,26 +491,35 @@ sending a request.</p>
 <li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
 <li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>created_at</strong> (<em>datetime</em>) – Exact time the message was created.</p></li>
+<li><p><strong>updated_at</strong> (<em>datetime</em>) – The exact time the message was updated.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>user_metadata</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User Metadata is a placeholder to store user-defined
+string data with maximum length 1024. e.g. it can be used to store
+descriptive data, such as list of teams and their contact information also
+user-defined configuration settings can be stored.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.Sku">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">Sku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">capacity: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/sku_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.Sku" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.Destination">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">Destination</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">storage_account_resource_id: str = None</em>, <em class="sig-param">blob_container: str = None</em>, <em class="sig-param">archive_name_format: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#Destination"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.Destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>SKU parameters supplied to the create namespace operation.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
+<p>Capture storage details for capture description.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.SkuName" title="azure.mgmt.eventhub.v2017_04_01.models.SkuName"><em>SkuName</em></a>) – Required. Name of this SKU. Possible values include: ‘Basic’,
-‘Standard’</p></li>
-<li><p><strong>tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.SkuTier" title="azure.mgmt.eventhub.v2017_04_01.models.SkuTier"><em>SkuTier</em></a>) – The billing tier of this particular SKU. Possible values
-include: ‘Basic’, ‘Standard’</p></li>
-<li><p><strong>capacity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The Event Hubs throughput units, value should be 0 to 20
-throughput units.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name for capture destination</p></li>
+<li><p><strong>storage_account_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource id of the storage account to
+be used to create the blobs</p></li>
+<li><p><strong>blob_container</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Blob container Name</p></li>
+<li><p><strong>archive_name_format</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Blob naming convention for archive, e.g.
+{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}.
+Here all the parameters (Namespace,EventHub .. etc) are mandatory
+irrespective of order</p></li>
 </ul>
 </dd>
 </dl>
@@ -387,8 +527,8 @@ throughput units.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.EHNamespace">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">EHNamespace</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">is_auto_inflate_enabled: bool = None</em>, <em class="sig-param">maximum_throughput_units: int = None</em>, <em class="sig-param">kafka_enabled: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/eh_namespace_py3.html#EHNamespace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.EHNamespace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models.tracked_resource_py3.TrackedResource</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">EHNamespace</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">is_auto_inflate_enabled: bool = None</em>, <em class="sig-param">maximum_throughput_units: int = None</em>, <em class="sig-param">kafka_enabled: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#EHNamespace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.EHNamespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models._models_py3.TrackedResource</span></code></p>
 <p>Single Namespace item in List or Get Operation.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -424,120 +564,31 @@ eventhub namespace.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.AuthorizationRule">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">AuthorizationRule</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">rights</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/authorization_rule_py3.html#AuthorizationRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.AuthorizationRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models.resource_py3.Resource</span></code></p>
-<p>Single item in a List or Get AuthorizationRule operation.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>rights</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.AccessRights" title="azure.mgmt.eventhub.v2017_04_01.models.AccessRights"><em>AccessRights</em></a><em>]</em>) – Required. The rights associated with the rule.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.AccessKeys">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">AccessKeys</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/access_keys_py3.html#AccessKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.AccessKeys" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.ErrorResponse">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ErrorResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Namespace/EventHub Connection String.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>primary_connection_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Primary connection string of the created
-namespace AuthorizationRule.</p></li>
-<li><p><strong>secondary_connection_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Secondary connection string of the
-created namespace AuthorizationRule.</p></li>
-<li><p><strong>alias_primary_connection_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Primary connection string of the
-alias if GEO DR is enabled</p></li>
-<li><p><strong>alias_secondary_connection_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Secondary  connection string of
-the alias if GEO DR is enabled</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Policykey.primary_key" title="azure.mgmt.eventhub.v2015_08_01.models.Policykey.primary_key"><strong>primary_key</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A base64-encoded 256-bit primary key for signing and
-validating the SAS token.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2015_08_01.models.html#azure.mgmt.eventhub.v2015_08_01.models.Policykey.secondary_key" title="azure.mgmt.eventhub.v2015_08_01.models.Policykey.secondary_key"><strong>secondary_key</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A base64-encoded 256-bit primary key for signing and
-validating the SAS token.</p></li>
-<li><p><strong>key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A string that describes the AuthorizationRule.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.RegenerateAccessKeyParameters">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">RegenerateAccessKeyParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key_type</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/regenerate_access_key_parameters_py3.html#RegenerateAccessKeyParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.RegenerateAccessKeyParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Parameters supplied to the Regenerate Authorization Rule operation,
-specifies which key needs to be reset.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
+<p>Error response indicates EventHub service is not able to process the
+incoming request. The reason is provided in the error message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>key_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.KeyType" title="azure.mgmt.eventhub.v2017_04_01.models.KeyType"><em>KeyType</em></a>) – Required. The access key to regenerate. Possible values
-include: ‘PrimaryKey’, ‘SecondaryKey’</p></li>
-<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional, if the key value provided, is set for KeyType or
-autogenerated Key value set for keyType</p></li>
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error code.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error message indicating why the operation failed.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.Destination">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">Destination</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">storage_account_resource_id: str = None</em>, <em class="sig-param">blob_container: str = None</em>, <em class="sig-param">archive_name_format: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/destination_py3.html#Destination"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.Destination" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Capture storage details for capture description.</p>
+<dl class="exception">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.ErrorResponseException">
+<em class="property">exception </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ErrorResponseException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘ErrorResponse’.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name for capture destination</p></li>
-<li><p><strong>storage_account_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource id of the storage account to
-be used to create the blobs</p></li>
-<li><p><strong>blob_container</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Blob container Name</p></li>
-<li><p><strong>archive_name_format</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Blob naming convention for archive, e.g.
-{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}.
-Here all the parameters (Namespace,EventHub .. etc) are mandatory
-irrespective of order</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.CaptureDescription">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">CaptureDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">enabled: bool = None</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">interval_in_seconds: int = None</em>, <em class="sig-param">size_limit_in_bytes: int = None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">skip_empty_archives: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/capture_description_py3.html#CaptureDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.CaptureDescription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Properties to configure capture description for eventhub.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A value that indicates whether capture description is
-enabled.</p></li>
-<li><p><strong>encoding</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.EncodingCaptureDescription" title="azure.mgmt.eventhub.v2017_04_01.models.EncodingCaptureDescription"><em>EncodingCaptureDescription</em></a>) – Enumerates the possible values for the encoding format of
-capture description. Note: ‘AvroDeflate’ will be deprecated in New API
-Version. Possible values include: ‘Avro’, ‘AvroDeflate’</p></li>
-<li><p><strong>interval_in_seconds</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The time window allows you to set the
-frequency with which the capture to Azure Blobs will happen, value should
-between 60 to 900 seconds</p></li>
-<li><p><strong>size_limit_in_bytes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The size window defines the amount of data
-built up in your Event Hub before an capture operation, value should be
-between 10485760 to 524288000 bytes</p></li>
-<li><p><strong>destination</strong> (<a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.Destination" title="azure.mgmt.eventhub.v2017_04_01.models.Destination"><em>Destination</em></a>) – Properties of Destination where capture will be
-stored. (Storage Account, Blob Names)</p></li>
-<li><p><strong>skip_empty_archives</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A value that indicates whether to Skip Empty
-Archives</p></li>
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
 </ul>
 </dd>
 </dl>
@@ -545,8 +596,8 @@ Archives</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.Eventhub">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">Eventhub</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">message_retention_in_days: int = None</em>, <em class="sig-param">partition_count: int = None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">capture_description=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/eventhub_py3.html#Eventhub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.Eventhub" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models.resource_py3.Resource</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">Eventhub</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">message_retention_in_days: int = None</em>, <em class="sig-param">partition_count: int = None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">capture_description=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#Eventhub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.Eventhub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models._models_py3.Resource</span></code></p>
 <p>Single item in List or Get Event Hub operation.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -578,219 +629,9 @@ Hub. Possible values include: ‘Active’, ‘Disabled’, ‘Restoring’,
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.ConsumerGroup">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ConsumerGroup</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">user_metadata: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/consumer_group_py3.html#ConsumerGroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ConsumerGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models.resource_py3.Resource</span></code></p>
-<p>Single item in List or Get Consumer group operation.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
-<li><p><strong>created_at</strong> (<em>datetime</em>) – Exact time the message was created.</p></li>
-<li><p><strong>updated_at</strong> (<em>datetime</em>) – The exact time the message was updated.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>user_metadata</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User Metadata is a placeholder to store user-defined
-string data with maximum length 1024. e.g. it can be used to store
-descriptive data, such as list of teams and their contact information also
-user-defined configuration settings can be stored.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.CheckNameAvailabilityParameter">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">CheckNameAvailabilityParameter</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/check_name_availability_parameter_py3.html#CheckNameAvailabilityParameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.CheckNameAvailabilityParameter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Parameter supplied to check Namespace name availability operation .</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name to check the namespace name availability</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.CheckNameAvailabilityResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">CheckNameAvailabilityResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name_available: bool = None</em>, <em class="sig-param">reason=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/check_name_availability_result_py3.html#CheckNameAvailabilityResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.CheckNameAvailabilityResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The Result of the CheckNameAvailability operation.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.Severity.message" title="azure.mgmt.datamigration.models.Severity.message"><strong>message</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The detailed info regarding the reason associated with the
-Namespace.</p>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>name_available</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Value indicating Namespace is availability, true if
-the Namespace is available; otherwise, false.</p></li>
-<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.UnavailableReason" title="azure.mgmt.eventhub.v2017_04_01.models.UnavailableReason"><em>UnavailableReason</em></a>) – The reason for unavailability of a Namespace. Possible
-values include: ‘None’, ‘InvalidName’, ‘SubscriptionIsDisabled’,
-‘NameInUse’, ‘NameInLockdown’, ‘TooManyNamespaceInCurrentSubscription’</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.OperationDisplay">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The object that represents the operation.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service provider: Microsoft.EventHub</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.models.html#azure.mgmt.datalake.analytics.catalog.models.FileType.resource" title="azure.mgmt.datalake.analytics.catalog.models.FileType.resource"><strong>resource</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource on which the operation is performed: Invoice,
-etc.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.monitor.models.html#azure.mgmt.monitor.models.AutoscaleNotification.operation" title="azure.mgmt.monitor.models.AutoscaleNotification.operation"><strong>operation</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation type: Read, write, delete, etc.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.Operation">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.Operation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A Event Hub REST API operation.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}</p>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.OperationDisplay" title="azure.mgmt.eventhub.v2017_04_01.models.OperationDisplay"><em>OperationDisplay</em></a>) – The object that represents the operation.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.ErrorResponse">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ErrorResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Error response indicates EventHub service is not able to process the
-incoming request. The reason is provided in the error message.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error code.</p></li>
-<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error message indicating why the operation failed.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="exception">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.ErrorResponseException">
-<em class="property">exception </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ErrorResponseException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
-<p>Server responsed with exception of type: ‘ErrorResponse’.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>deserialize</strong> – A deserializer</p></li>
-<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.ArmDisasterRecovery">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ArmDisasterRecovery</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">partner_namespace: str = None</em>, <em class="sig-param">alternate_name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/arm_disaster_recovery_py3.html#ArmDisasterRecovery"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ArmDisasterRecovery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models.resource_py3.Resource</span></code></p>
-<p>Single item in List or Get Alias(Disaster Recovery configuration)
-operation.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
-<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.ProvisioningStateDR" title="azure.mgmt.eventhub.v2017_04_01.models.ProvisioningStateDR"><em>ProvisioningStateDR</em></a>) – Provisioning state of the Alias(Disaster
-Recovery configuration) - possible values ‘Accepted’ or ‘Succeeded’ or
-‘Failed’. Possible values include: ‘Accepted’, ‘Succeeded’, ‘Failed’</p></li>
-<li><p><strong>role</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.RoleDisasterRecovery" title="azure.mgmt.eventhub.v2017_04_01.models.RoleDisasterRecovery"><em>RoleDisasterRecovery</em></a>) – role of namespace in GEO DR - possible values ‘Primary’ or
-‘PrimaryNotReplicating’ or ‘Secondary’. Possible values include:
-‘Primary’, ‘PrimaryNotReplicating’, ‘Secondary’</p></li>
-<li><p><strong>pending_replication_operations_count</strong> (<em>long</em>) – Number of entities pending to
-be replicated.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>partner_namespace</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ARM Id of the Primary/Secondary eventhub
-namespace name, which is part of GEO DR pairing</p></li>
-<li><p><strong>alternate_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Alternate name specified when alias and namespace
-names are same.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.MessagingRegionsProperties">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">MessagingRegionsProperties</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/messaging_regions_properties_py3.html#MessagingRegionsProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.MessagingRegionsProperties" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>MessagingRegionsProperties.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.code" title="azure.servicefabric.models.PackageSharingPolicyScope.code"><strong>code</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Region code</p></li>
-<li><p><strong>full_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Full name of the region</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.MessagingRegions">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">MessagingRegions</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/messaging_regions_py3.html#MessagingRegions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.MessagingRegions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models.tracked_resource_py3.TrackedResource</span></code></p>
-<p>Messaging Region.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
-<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.MessagingRegionsProperties" title="azure.mgmt.eventhub.v2017_04_01.models.MessagingRegionsProperties"><em>MessagingRegionsProperties</em></a>) – </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.MessagingPlan">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">MessagingPlan</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/messaging_plan_py3.html#MessagingPlan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.MessagingPlan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models.tracked_resource_py3.TrackedResource</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">MessagingPlan</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#MessagingPlan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.MessagingPlan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models._models_py3.TrackedResource</span></code></p>
 <p>Messaging Plan for the namespace.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -816,46 +657,42 @@ sending a request.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.Subnet">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">Subnet</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/subnet_py3.html#Subnet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.Subnet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Properties supplied for Subnet.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.MessagingRegions">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">MessagingRegions</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#MessagingRegions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.MessagingRegions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models._models_py3.TrackedResource</span></code></p>
+<p>Messaging Region.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource ID of Virtual Network Subnet</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.NWRuleSetIpRules">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">NWRuleSetIpRules</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">ip_mask: str = None</em>, <em class="sig-param">action='Allow'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/nw_rule_set_ip_rules_py3.html#NWRuleSetIpRules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.NWRuleSetIpRules" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Description of NetWorkRuleSet - IpRules resource.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ip_mask</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – IP Mask</p></li>
-<li><p><strong>action</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.NetworkRuleIPAction" title="azure.mgmt.eventhub.v2017_04_01.models.NetworkRuleIPAction"><em>NetworkRuleIPAction</em></a>) – The IP Filter Action. Possible values include: ‘Allow’.
-Default value: “Allow” .</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.MessagingRegionsProperties" title="azure.mgmt.eventhub.v2017_04_01.models.MessagingRegionsProperties"><em>MessagingRegionsProperties</em></a>) – </p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.eventhub.v2017_04_01.models.NWRuleSetVirtualNetworkRules">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">NWRuleSetVirtualNetworkRules</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">subnet=None</em>, <em class="sig-param">ignore_missing_vnet_service_endpoint: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/nw_rule_set_virtual_network_rules_py3.html#NWRuleSetVirtualNetworkRules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.NWRuleSetVirtualNetworkRules" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.MessagingRegionsProperties">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">MessagingRegionsProperties</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#MessagingRegionsProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.MessagingRegionsProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Description of VirtualNetworkRules - NetworkRules resource.</p>
+<p>MessagingRegionsProperties.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>subnet</strong> (<a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.Subnet" title="azure.mgmt.eventhub.v2017_04_01.models.Subnet"><em>Subnet</em></a>) – Subnet properties</p></li>
-<li><p><strong>ignore_missing_vnet_service_endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Value that indicates whether
-to ignore missing VNet Service Endpoint</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.code" title="azure.servicefabric.models.PackageSharingPolicyScope.code"><strong>code</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Region code</p></li>
+<li><p><strong>full_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Full name of the region</p></li>
 </ul>
 </dd>
 </dl>
@@ -863,8 +700,8 @@ to ignore missing VNet Service Endpoint</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.NetworkRuleSet">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">NetworkRuleSet</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">default_action=None</em>, <em class="sig-param">virtual_network_rules=None</em>, <em class="sig-param">ip_rules=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/network_rule_set_py3.html#NetworkRuleSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.NetworkRuleSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models.resource_py3.Resource</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">NetworkRuleSet</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">default_action=None</em>, <em class="sig-param">virtual_network_rules=None</em>, <em class="sig-param">ip_rules=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#NetworkRuleSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.NetworkRuleSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models._models_py3.Resource</span></code></p>
 <p>Description of NetworkRuleSet resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -889,57 +726,220 @@ values include: ‘Allow’, ‘Deny’</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.NWRuleSetIpRules">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">NWRuleSetIpRules</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">ip_mask: str = None</em>, <em class="sig-param">action='Allow'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#NWRuleSetIpRules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.NWRuleSetIpRules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Description of NetWorkRuleSet - IpRules resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ip_mask</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – IP Mask</p></li>
+<li><p><strong>action</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.NetworkRuleIPAction" title="azure.mgmt.eventhub.v2017_04_01.models.NetworkRuleIPAction"><em>NetworkRuleIPAction</em></a>) – The IP Filter Action. Possible values include: ‘Allow’.
+Default value: “Allow” .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.NWRuleSetVirtualNetworkRules">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">NWRuleSetVirtualNetworkRules</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">subnet=None</em>, <em class="sig-param">ignore_missing_vnet_service_endpoint: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#NWRuleSetVirtualNetworkRules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.NWRuleSetVirtualNetworkRules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Description of VirtualNetworkRules - NetworkRules resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subnet</strong> (<a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.Subnet" title="azure.mgmt.eventhub.v2017_04_01.models.Subnet"><em>Subnet</em></a>) – Subnet properties</p></li>
+<li><p><strong>ignore_missing_vnet_service_endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Value that indicates whether
+to ignore missing VNet Service Endpoint</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.Operation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Event Hub REST API operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.OperationDisplay" title="azure.mgmt.eventhub.v2017_04_01.models.OperationDisplay"><em>OperationDisplay</em></a>) – The object that represents the operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.OperationDisplay">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">OperationDisplay</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The object that represents the operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service provider: Microsoft.EventHub</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.models.html#azure.mgmt.datalake.analytics.catalog.models.FileType.resource" title="azure.mgmt.datalake.analytics.catalog.models.FileType.resource"><strong>resource</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource on which the operation is performed: Invoice,
+etc.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.monitor.models.html#azure.mgmt.monitor.models.AutoscaleNotification.operation" title="azure.mgmt.monitor.models.AutoscaleNotification.operation"><strong>operation</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation type: Read, write, delete, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.RegenerateAccessKeyParameters">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">RegenerateAccessKeyParameters</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key_type</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#RegenerateAccessKeyParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.RegenerateAccessKeyParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters supplied to the Regenerate Authorization Rule operation,
+specifies which key needs to be reset.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.KeyType" title="azure.mgmt.eventhub.v2017_04_01.models.KeyType"><em>KeyType</em></a>) – Required. The access key to regenerate. Possible values
+include: ‘PrimaryKey’, ‘SecondaryKey’</p></li>
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional, if the key value provided, is set for KeyType or
+autogenerated Key value set for keyType</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Resource definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.Sku">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">Sku</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">capacity: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.Sku" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>SKU parameters supplied to the create namespace operation.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.SkuName" title="azure.mgmt.eventhub.v2017_04_01.models.SkuName"><em>SkuName</em></a>) – Required. Name of this SKU. Possible values include: ‘Basic’,
+‘Standard’</p></li>
+<li><p><strong>tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.SkuTier" title="azure.mgmt.eventhub.v2017_04_01.models.SkuTier"><em>SkuTier</em></a>) – The billing tier of this particular SKU. Possible values
+include: ‘Basic’, ‘Standard’</p></li>
+<li><p><strong>capacity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The Event Hubs throughput units, value should be 0 to 20
+throughput units.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.Subnet">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">Subnet</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#Subnet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.Subnet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties supplied for Subnet.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource ID of Virtual Network Subnet</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.eventhub.v2017_04_01.models.TrackedResource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">TrackedResource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_models_py3.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.eventhub.v2017_04_01.models._models_py3.Resource</span></code></p>
+<p>Definition of Resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.OperationPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_paged_models.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.Operation" title="azure.mgmt.eventhub.v2017_04_01.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.EHNamespacePaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">EHNamespacePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/eh_namespace_paged.html#EHNamespacePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.EHNamespacePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">EHNamespacePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_paged_models.html#EHNamespacePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.EHNamespacePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.EHNamespace" title="azure.mgmt.eventhub.v2017_04_01.models.EHNamespace"><code class="xref py py-class docutils literal notranslate"><span class="pre">EHNamespace</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.AuthorizationRulePaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">AuthorizationRulePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/authorization_rule_paged.html#AuthorizationRulePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.AuthorizationRulePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">AuthorizationRulePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_paged_models.html#AuthorizationRulePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.AuthorizationRulePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.AuthorizationRule" title="azure.mgmt.eventhub.v2017_04_01.models.AuthorizationRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">AuthorizationRule</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.ArmDisasterRecoveryPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ArmDisasterRecoveryPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/arm_disaster_recovery_paged.html#ArmDisasterRecoveryPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ArmDisasterRecoveryPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ArmDisasterRecoveryPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_paged_models.html#ArmDisasterRecoveryPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ArmDisasterRecoveryPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.ArmDisasterRecovery" title="azure.mgmt.eventhub.v2017_04_01.models.ArmDisasterRecovery"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArmDisasterRecovery</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.EventhubPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">EventhubPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/eventhub_paged.html#EventhubPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.EventhubPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">EventhubPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_paged_models.html#EventhubPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.EventhubPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.Eventhub" title="azure.mgmt.eventhub.v2017_04_01.models.Eventhub"><code class="xref py py-class docutils literal notranslate"><span class="pre">Eventhub</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.ConsumerGroupPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ConsumerGroupPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/consumer_group_paged.html#ConsumerGroupPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ConsumerGroupPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ConsumerGroupPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_paged_models.html#ConsumerGroupPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ConsumerGroupPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.ConsumerGroup" title="azure.mgmt.eventhub.v2017_04_01.models.ConsumerGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConsumerGroup</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.MessagingRegionsPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">MessagingRegionsPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/messaging_regions_paged.html#MessagingRegionsPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.MessagingRegionsPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">MessagingRegionsPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_paged_models.html#MessagingRegionsPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.MessagingRegionsPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.eventhub.v2017_04_01.models.MessagingRegions" title="azure.mgmt.eventhub.v2017_04_01.models.MessagingRegions"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessagingRegions</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.SkuName">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">SkuName</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/event_hub_management_client_enums.html#SkuName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.SkuName" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">SkuName</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_event_hub_management_client_enums.html#SkuName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.SkuName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -956,7 +956,7 @@ values include: ‘Allow’, ‘Deny’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.SkuTier">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">SkuTier</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/event_hub_management_client_enums.html#SkuTier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.SkuTier" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">SkuTier</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_event_hub_management_client_enums.html#SkuTier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.SkuTier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -973,7 +973,7 @@ values include: ‘Allow’, ‘Deny’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.AccessRights">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">AccessRights</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/event_hub_management_client_enums.html#AccessRights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.AccessRights" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">AccessRights</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_event_hub_management_client_enums.html#AccessRights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.AccessRights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -995,7 +995,7 @@ values include: ‘Allow’, ‘Deny’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.KeyType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">KeyType</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/event_hub_management_client_enums.html#KeyType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.KeyType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">KeyType</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_event_hub_management_client_enums.html#KeyType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.KeyType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1012,7 +1012,7 @@ values include: ‘Allow’, ‘Deny’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.EntityStatus">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">EntityStatus</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/event_hub_management_client_enums.html#EntityStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.EntityStatus" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">EntityStatus</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_event_hub_management_client_enums.html#EntityStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.EntityStatus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1064,7 +1064,7 @@ values include: ‘Allow’, ‘Deny’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.EncodingCaptureDescription">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">EncodingCaptureDescription</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/event_hub_management_client_enums.html#EncodingCaptureDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.EncodingCaptureDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">EncodingCaptureDescription</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_event_hub_management_client_enums.html#EncodingCaptureDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.EncodingCaptureDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1081,7 +1081,7 @@ values include: ‘Allow’, ‘Deny’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.UnavailableReason">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">UnavailableReason</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/event_hub_management_client_enums.html#UnavailableReason"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.UnavailableReason" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">UnavailableReason</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_event_hub_management_client_enums.html#UnavailableReason"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.UnavailableReason" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1118,7 +1118,7 @@ values include: ‘Allow’, ‘Deny’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.ProvisioningStateDR">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ProvisioningStateDR</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/event_hub_management_client_enums.html#ProvisioningStateDR"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ProvisioningStateDR" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">ProvisioningStateDR</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_event_hub_management_client_enums.html#ProvisioningStateDR"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.ProvisioningStateDR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1140,7 +1140,7 @@ values include: ‘Allow’, ‘Deny’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.RoleDisasterRecovery">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">RoleDisasterRecovery</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/event_hub_management_client_enums.html#RoleDisasterRecovery"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.RoleDisasterRecovery" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">RoleDisasterRecovery</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_event_hub_management_client_enums.html#RoleDisasterRecovery"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.RoleDisasterRecovery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1162,7 +1162,7 @@ values include: ‘Allow’, ‘Deny’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.NetworkRuleIPAction">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">NetworkRuleIPAction</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/event_hub_management_client_enums.html#NetworkRuleIPAction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.NetworkRuleIPAction" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">NetworkRuleIPAction</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_event_hub_management_client_enums.html#NetworkRuleIPAction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.NetworkRuleIPAction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1174,7 +1174,7 @@ values include: ‘Allow’, ‘Deny’</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.eventhub.v2017_04_01.models.DefaultAction">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">DefaultAction</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/event_hub_management_client_enums.html#DefaultAction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.DefaultAction" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.eventhub.v2017_04_01.models.</code><code class="sig-name descname">DefaultAction</code><a class="reference internal" href="../_modules/azure/mgmt/eventhub/v2017_04_01/models/_event_hub_management_client_enums.html#DefaultAction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.eventhub.v2017_04_01.models.DefaultAction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
