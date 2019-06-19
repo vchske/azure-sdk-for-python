@@ -318,9 +318,10 @@
 <span id="azure-mgmt-resourcegraph-operations-module"></span><h1>azure.mgmt.resourcegraph.operations module<a class="headerlink" href="#module-azure.mgmt.resourcegraph.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.resourcegraph.operations.Operations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/operations/_operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.operations.Operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Operations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -336,7 +337,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.resourcegraph.operations.Operations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/operations/_operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all of the available REST API operations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -364,6 +365,41 @@ overrides</span>.</p></li>
 <dt id="azure.mgmt.resourcegraph.operations.Operations.models">
 <code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.resourcegraph.models' from 'd:\\a\\1\\s\\sdk\\resources\\azure-mgmt-resourcegraph\\azure\\mgmt\\resourcegraph\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.resourcegraph.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.resourcegraph.operations.ResourceGraphClientOperationsMixin">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.resourcegraph.operations.</code><code class="sig-name descname">ResourceGraphClientOperationsMixin</code><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/operations/_resource_graph_client_operations.html#ResourceGraphClientOperationsMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.operations.ResourceGraphClientOperationsMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="azure.mgmt.resourcegraph.operations.ResourceGraphClientOperationsMixin.resources">
+<code class="sig-name descname">resources</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/resourcegraph/operations/_resource_graph_client_operations.html#ResourceGraphClientOperationsMixin.resources"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.resourcegraph.operations.ResourceGraphClientOperationsMixin.resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the resources managed by Azure Resource Manager for all
+subscriptions specified in the request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<a class="reference internal" href="azure.mgmt.resourcegraph.models.html#azure.mgmt.resourcegraph.models.QueryRequest" title="azure.mgmt.resourcegraph.models.QueryRequest"><em>QueryRequest</em></a>) – Request specifying query and its options.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>QueryResponse or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.resourcegraph.models.html#azure.mgmt.resourcegraph.models.QueryResponse" title="azure.mgmt.resourcegraph.models.QueryResponse">QueryResponse</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.resourcegraph.models.html#azure.mgmt.resourcegraph.models.ErrorResponseException" title="azure.mgmt.resourcegraph.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
