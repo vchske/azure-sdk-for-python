@@ -327,13 +327,13 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.batch" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.batch.BatchServiceClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.batch.</code><code class="sig-name descname">BatchServiceClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">batch_url</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/batch/batch_service_client.html#BatchServiceClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.batch.BatchServiceClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.batch.</code><code class="sig-name descname">BatchServiceClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">batch_url</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/batch/_batch_service_client.html#BatchServiceClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.batch.BatchServiceClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>A client for issuing REST requests to the Azure Batch service.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>BatchServiceClientConfiguration</em>) – Configuration for client.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="#azure.batch.BatchServiceClientConfiguration" title="azure.batch.BatchServiceClientConfiguration"><em>BatchServiceClientConfiguration</em></a>) – Configuration for client.</p></li>
 <li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.EntityKind.application" title="azure.servicefabric.models.EntityKind.application"><strong>application</strong></a> (<a class="reference internal" href="azure.batch.operations.html#azure.batch.operations.ApplicationOperations" title="azure.batch.operations.ApplicationOperations"><em>azure.batch.operations.ApplicationOperations</em></a>) – Application operations</p></li>
 <li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.AutoUserScope.pool" title="azure.batch.models.AutoUserScope.pool"><strong>pool</strong></a> (<a class="reference internal" href="azure.batch.operations.html#azure.batch.operations.PoolOperations" title="azure.batch.operations.PoolOperations"><em>azure.batch.operations.PoolOperations</em></a>) – Pool operations</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html#module-azure.mgmt.datalake.analytics.account" title="azure.mgmt.datalake.analytics.account"><strong>account</strong></a> (<a class="reference internal" href="azure.batch.operations.html#azure.batch.operations.AccountOperations" title="azure.batch.operations.AccountOperations"><em>azure.batch.operations.AccountOperations</em></a>) – Account operations</p></li>
@@ -347,6 +347,24 @@
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>batch_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The base URL for all Azure Batch service requests.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.batch.BatchServiceClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.batch.</code><code class="sig-name descname">BatchServiceClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">batch_url</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/batch/_configuration.html#BatchServiceClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.batch.BatchServiceClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrestazure.azure_configuration.AzureConfiguration</span></code></p>
+<p>Configuration for BatchServiceClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
 <span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
 <li><p><strong>batch_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The base URL for all Azure Batch service requests.</p></li>

@@ -310,7 +310,7 @@
 
 <span class="kn">from</span> <span class="nn">..models</span> <span class="k">import</span> <span class="n">BatchErrorException</span><span class="p">,</span> <span class="n">TaskAddCollectionResult</span><span class="p">,</span> <span class="n">TaskAddStatus</span>
 <span class="kn">from</span> <span class="nn">..custom.custom_errors</span> <span class="k">import</span> <span class="n">CreateTasksErrorException</span>
-<span class="kn">from</span> <span class="nn">..operations.task_operations</span> <span class="k">import</span> <span class="n">TaskOperations</span>
+<span class="kn">from</span> <span class="nn">..operations._task_operations</span> <span class="k">import</span> <span class="n">TaskOperations</span>
 
 <span class="n">MAX_TASKS_PER_REQUEST</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">_LOGGER</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
@@ -580,15 +580,24 @@
         <span class="c1"># Only define error if all threads have finished and there were failures</span>
         <span class="k">if</span> <span class="n">task_workflow_manager</span><span class="o">.</span><span class="n">failure_tasks</span> <span class="ow">or</span> <span class="n">task_workflow_manager</span><span class="o">.</span><span class="n">errors</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">CreateTasksErrorException</span><span class="p">(</span>
-                    <span class="s2">&quot;One or more tasks failed to be added&quot;</span><span class="p">,</span>
-                    <span class="n">task_workflow_manager</span><span class="o">.</span><span class="n">failure_tasks</span><span class="p">,</span>
                     <span class="n">task_workflow_manager</span><span class="o">.</span><span class="n">tasks_to_add</span><span class="p">,</span>
+                    <span class="n">task_workflow_manager</span><span class="o">.</span><span class="n">failure_tasks</span><span class="p">,</span>
                     <span class="n">task_workflow_manager</span><span class="o">.</span><span class="n">errors</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">submitted_tasks</span> <span class="o">=</span> <span class="n">_handle_output</span><span class="p">(</span><span class="n">results_queue</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">TaskAddCollectionResult</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">submitted_tasks</span><span class="p">)</span>
     <span class="n">bulk_add_collection</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/jobs/</span><span class="si">{jobId}</span><span class="s1">/addtaskcollection&#39;</span><span class="p">}</span>
     <span class="k">return</span> <span class="n">bulk_add_collection</span>
+
+
+<span class="k">def</span> <span class="nf">batch_error_exception_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="s2">&quot;Request encountered an exception.</span><span class="se">\n</span><span class="s2">Code: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Message: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">code</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">error_detail</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error_detail</span><span class="o">.</span><span class="n">key</span><span class="p">,</span> <span class="n">error_detail</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ret</span>
 
 
 <span class="k">def</span> <span class="nf">patch_client</span><span class="p">():</span>
@@ -601,6 +610,8 @@
 
     <span class="n">operations_modules</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;azure.batch.operations&#39;</span><span class="p">)</span>
     <span class="n">operations_modules</span><span class="o">.</span><span class="n">TaskOperations</span><span class="o">.</span><span class="n">add_collection</span> <span class="o">=</span> <span class="n">build_new_add_collection</span><span class="p">(</span><span class="n">operations_modules</span><span class="o">.</span><span class="n">TaskOperations</span><span class="o">.</span><span class="n">add_collection</span><span class="p">)</span>
+    <span class="n">models</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;azure.batch.models&#39;</span><span class="p">)</span>
+    <span class="n">models</span><span class="o">.</span><span class="n">BatchErrorException</span><span class="o">.</span><span class="fm">__str__</span> <span class="o">=</span> <span class="n">batch_error_exception_string</span>
 </pre></div>
 
            </div>
