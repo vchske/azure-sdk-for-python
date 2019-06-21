@@ -284,9 +284,10 @@
 <span id="azure-mgmt-cognitiveservices-operations-module"></span><h1>azure.mgmt.cognitiveservices.operations module<a class="headerlink" href="#module-azure.mgmt.cognitiveservices.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cognitiveservices.operations.</code><code class="sig-name descname">AccountsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cognitiveservices.operations.</code><code class="sig-name descname">AccountsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_accounts_operations.html#AccountsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>AccountsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -302,7 +303,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_accounts_operations.html#AccountsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create Cognitive Services Account. Accounts is a resource group wide
 resource type. It holds the keys for developer to access intelligent
 APIs. It’s also the resource type for billing.</p>
@@ -335,7 +336,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_accounts_operations.html#AccountsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a Cognitive Services account from the resource group. .</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -364,7 +365,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations.get_properties">
-<code class="sig-name descname">get_properties</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations.get_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.get_properties" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_properties</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_accounts_operations.html#AccountsOperations.get_properties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.get_properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Cognitive Services account specified by the parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -394,7 +395,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations.get_usages">
-<code class="sig-name descname">get_usages</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations.get_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.get_usages" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_usages</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_accounts_operations.html#AccountsOperations.get_usages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.get_usages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get usages for the requested Cognitive Services account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -427,7 +428,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_accounts_operations.html#AccountsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all the resources of a particular type belonging to a
 subscription.</p>
 <dl class="field-list simple">
@@ -454,7 +455,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations.list_by_resource_group">
-<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_accounts_operations.html#AccountsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all the resources of a particular type belonging to a resource
 group.</p>
 <dl class="field-list simple">
@@ -483,7 +484,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations.list_keys">
-<code class="sig-name descname">list_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations.list_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.list_keys" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_keys</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_accounts_operations.html#AccountsOperations.list_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.list_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the account keys for the specified Cognitive Services account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -513,7 +514,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations.list_skus">
-<code class="sig-name descname">list_skus</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations.list_skus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.list_skus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_skus</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_accounts_operations.html#AccountsOperations.list_skus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.list_skus" title="Permalink to this definition">¶</a></dt>
 <dd><p>List available SKUs for the requested Cognitive Services account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -549,7 +550,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations.regenerate_key">
-<code class="sig-name descname">regenerate_key</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">key_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations.regenerate_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.regenerate_key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">regenerate_key</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">key_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_accounts_operations.html#AccountsOperations.regenerate_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.regenerate_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Regenerates the specified account key for the specified Cognitive
 Services account.</p>
 <dl class="field-list simple">
@@ -582,7 +583,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">account_name</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_accounts_operations.html#AccountsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates a Cognitive Services account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -622,9 +623,10 @@ or ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cognitiveservices.operations.ResourceSkusOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cognitiveservices.operations.</code><code class="sig-name descname">ResourceSkusOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/resource_skus_operations.html#ResourceSkusOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.ResourceSkusOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cognitiveservices.operations.</code><code class="sig-name descname">ResourceSkusOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_resource_skus_operations.html#ResourceSkusOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.ResourceSkusOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ResourceSkusOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -640,7 +642,7 @@ or ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.ResourceSkusOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/resource_skus_operations.html#ResourceSkusOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.ResourceSkusOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_resource_skus_operations.html#ResourceSkusOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.ResourceSkusOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the list of Microsoft.CognitiveServices SKUs available for your
 Subscription.</p>
 <dl class="field-list simple">
@@ -674,9 +676,10 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cognitiveservices.operations.Operations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cognitiveservices.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cognitiveservices.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.Operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Operations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -692,7 +695,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.Operations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all the available Cognitive Services account operations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -725,9 +728,10 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cognitiveservices.operations.CheckSkuAvailabilityOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cognitiveservices.operations.</code><code class="sig-name descname">CheckSkuAvailabilityOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/check_sku_availability_operations.html#CheckSkuAvailabilityOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.CheckSkuAvailabilityOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cognitiveservices.operations.</code><code class="sig-name descname">CheckSkuAvailabilityOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_check_sku_availability_operations.html#CheckSkuAvailabilityOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.CheckSkuAvailabilityOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>CheckSkuAvailabilityOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -743,7 +747,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.CheckSkuAvailabilityOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">skus</em>, <em class="sig-param">kind</em>, <em class="sig-param">type</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/check_sku_availability_operations.html#CheckSkuAvailabilityOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.CheckSkuAvailabilityOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">skus</em>, <em class="sig-param">kind</em>, <em class="sig-param">type</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_check_sku_availability_operations.html#CheckSkuAvailabilityOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.CheckSkuAvailabilityOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check available SKUs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -777,6 +781,42 @@ ClientRawResponse</p>
 <dt id="azure.mgmt.cognitiveservices.operations.CheckSkuAvailabilityOperations.models">
 <code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cognitiveservices.models' from 'd:\\a\\1\\s\\sdk\\cognitiveservices\\azure-mgmt-cognitiveservices\\azure\\mgmt\\cognitiveservices\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.CheckSkuAvailabilityOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cognitiveservices.operations.CognitiveServicesManagementClientOperationsMixin">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cognitiveservices.operations.</code><code class="sig-name descname">CognitiveServicesManagementClientOperationsMixin</code><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_cognitive_services_management_client_operations.html#CognitiveServicesManagementClientOperationsMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.CognitiveServicesManagementClientOperationsMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="azure.mgmt.cognitiveservices.operations.CognitiveServicesManagementClientOperationsMixin.check_domain_availability">
+<code class="sig-name descname">check_domain_availability</code><span class="sig-paren">(</span><em class="sig-param">subdomain_name</em>, <em class="sig-param">type</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/_cognitive_services_management_client_operations.html#CognitiveServicesManagementClientOperationsMixin.check_domain_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.CognitiveServicesManagementClientOperationsMixin.check_domain_availability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether a domain is available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subdomain_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subdomain name to use.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Type of the resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CheckDomainAvailabilityResult or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cognitiveservices.models.html#azure.mgmt.cognitiveservices.models.CheckDomainAvailabilityResult" title="azure.mgmt.cognitiveservices.models.CheckDomainAvailabilityResult">CheckDomainAvailabilityResult</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 

@@ -293,13 +293,13 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.cognitiveservices" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.cognitiveservices.CognitiveServicesManagementClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cognitiveservices.</code><code class="sig-name descname">CognitiveServicesManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/cognitive_services_management_client.html#CognitiveServicesManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.CognitiveServicesManagementClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cognitiveservices.</code><code class="sig-name descname">CognitiveServicesManagementClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/_cognitive_services_management_client.html#CognitiveServicesManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.CognitiveServicesManagementClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cognitiveservices.operations._cognitive_services_management_client_operations.CognitiveServicesManagementClientOperationsMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>Cognitive Services Management Client</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>CognitiveServicesManagementClientConfiguration</em>) – Configuration for client.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="#azure.mgmt.cognitiveservices.CognitiveServicesManagementClientConfiguration" title="azure.mgmt.cognitiveservices.CognitiveServicesManagementClientConfiguration"><em>CognitiveServicesManagementClientConfiguration</em></a>) – Configuration for client.</p></li>
 <li><p><strong>accounts</strong> (<a class="reference internal" href="azure.mgmt.cognitiveservices.operations.html#azure.mgmt.cognitiveservices.operations.AccountsOperations" title="azure.mgmt.cognitiveservices.operations.AccountsOperations"><em>azure.mgmt.cognitiveservices.operations.AccountsOperations</em></a>) – Accounts operations</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.compute.html#azure.mgmt.compute.ComputeManagementClient.resource_skus" title="azure.mgmt.compute.ComputeManagementClient.resource_skus"><strong>resource_skus</strong></a> (<a class="reference internal" href="azure.mgmt.cognitiveservices.operations.html#azure.mgmt.cognitiveservices.operations.ResourceSkusOperations" title="azure.mgmt.cognitiveservices.operations.ResourceSkusOperations"><em>azure.mgmt.cognitiveservices.operations.ResourceSkusOperations</em></a>) – ResourceSkus operations</p></li>
 <li><p><a class="reference internal" href="azure.applicationinsights.operations.html#module-azure.applicationinsights.operations" title="azure.applicationinsights.operations"><strong>operations</strong></a> (<a class="reference internal" href="azure.mgmt.cognitiveservices.operations.html#azure.mgmt.cognitiveservices.operations.Operations" title="azure.mgmt.cognitiveservices.operations.Operations"><em>azure.mgmt.cognitiveservices.operations.Operations</em></a>) – Operations operations</p></li>
@@ -308,6 +308,25 @@
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure Subscription ID.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cognitiveservices.CognitiveServicesManagementClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.cognitiveservices.</code><code class="sig-name descname">CognitiveServicesManagementClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/_configuration.html#CognitiveServicesManagementClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.CognitiveServicesManagementClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrestazure.azure_configuration.AzureConfiguration</span></code></p>
+<p>Configuration for CognitiveServicesManagementClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
 <span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
 <li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure Subscription ID.</p></li>
