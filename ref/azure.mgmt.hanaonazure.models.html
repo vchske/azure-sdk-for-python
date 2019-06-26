@@ -284,53 +284,8 @@
   <div class="section" id="module-azure.mgmt.hanaonazure.models">
 <span id="azure-mgmt-hanaonazure-models-module"></span><h1>azure.mgmt.hanaonazure.models module<a class="headerlink" href="#module-azure.mgmt.hanaonazure.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="azure.mgmt.hanaonazure.models.Resource">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.Resource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The resource model definition.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
-<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.hanaonazure.models.HardwareProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HardwareProfile</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/hardware_profile_py3.html#HardwareProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HardwareProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Specifies the hardware settings for the HANA instance.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>hardware_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.hanaonazure.models.HanaHardwareTypeNamesEnum" title="azure.mgmt.hanaonazure.models.HanaHardwareTypeNamesEnum"><em>HanaHardwareTypeNamesEnum</em></a>) – Name of the hardware type (vendor and/or their
-product name). Possible values include: ‘Cisco_UCS’, ‘HPE’</p></li>
-<li><p><strong>hana_instance_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.hanaonazure.models.HanaInstanceSizeNamesEnum" title="azure.mgmt.hanaonazure.models.HanaInstanceSizeNamesEnum"><em>HanaInstanceSizeNamesEnum</em></a>) – Specifies the HANA instance SKU. Possible values
-include: ‘S72m’, ‘S144m’, ‘S72’, ‘S144’, ‘S192’, ‘S192m’, ‘S192xm’, ‘S96’,
-‘S384’, ‘S384m’, ‘S384xm’, ‘S384xxm’, ‘S576m’, ‘S576xm’, ‘S768’, ‘S768m’,
-‘S768xm’, ‘S960m’, ‘S224o’, ‘S224m’, ‘S224om’, ‘S224oxm’, ‘S224oxxm’</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.hanaonazure.models.Disk">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">Disk</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">disk_size_gb: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/disk_py3.html#Disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.Disk" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">Disk</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">disk_size_gb: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#Disk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.Disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Specifies the disk information fo the HANA instance.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -352,82 +307,71 @@ for each data disk attached to a VM.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.hanaonazure.models.StorageProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">StorageProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">os_disks=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/storage_profile_py3.html#StorageProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.StorageProfile" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.hanaonazure.models.Display">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">Display</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#Display"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.Display" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Specifies the storage settings for the HANA instance disks.</p>
+<p>Detailed HANA operation information.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><strong>nfs_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – IP Address to connect to storage.</p>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>os_disks</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hanaonazure.models.Disk" title="azure.mgmt.hanaonazure.models.Disk"><em>Disk</em></a><em>]</em>) – Specifies information about the operating system disk
-used by the hana instance.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized friendly form of the resource provider name.
+This form is also expected to include the publisher/company responsible.
+Use Title Casing. Begin with “Microsoft” for 1st party services.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.models.html#azure.mgmt.datalake.analytics.catalog.models.FileType.resource" title="azure.mgmt.datalake.analytics.catalog.models.FileType.resource"><strong>resource</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized friendly form of the resource type related
+to this action/operation. This form should match the public documentation
+for the resource provider. Use Title Casing. For examples, refer to the
+“name” section.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.apimanagement.models.html#azure.mgmt.apimanagement.models.PolicyScopeContract.operation" title="azure.mgmt.apimanagement.models.PolicyScopeContract.operation"><strong>operation</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized friendly name for the operation as shown to
+the user. This name should be concise (to fit in drop downs), but clear
+(self-documenting). Use Title Casing and include the entity/resource to
+which it applies.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized friendly description for the operation as
+shown to the user. This description should be thorough, yet concise. It
+will be used in tool-tips and detailed views.</p></li>
+<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The intended executor of the operation; governs the display
+of the operation in the RBAC UX and the audit logs UX. Default value is
+‘user,system’</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.hanaonazure.models.OSProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">OSProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">computer_name: str = None</em>, <em class="sig-param">ssh_public_key: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/os_profile_py3.html#OSProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.OSProfile" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.hanaonazure.models.ErrorResponse">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">ErrorResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Specifies the operating system settings for the HANA instance.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
+<p>Describes the format of Error response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>computer_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the host OS name of the HANA instance.</p></li>
-<li><p><strong>ssh_public_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the SSH public key used to access the
-operating system.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – This property allows you to specify the type of the OS.</p></li>
-<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies version of operating system.</p></li>
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error code</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error message indicating why the operation failed.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="class">
-<dt id="azure.mgmt.hanaonazure.models.IpAddress">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">IpAddress</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">ip_address: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/ip_address_py3.html#IpAddress"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.IpAddress" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Specifies the IP address of the network interface.</p>
+<dl class="exception">
+<dt id="azure.mgmt.hanaonazure.models.ErrorResponseException">
+<em class="property">exception </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">ErrorResponseException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘ErrorResponse’.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the IP address of the network interface.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.hanaonazure.models.NetworkProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">NetworkProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/network_profile_py3.html#NetworkProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.NetworkProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Specifies the network settings for the HANA instance disks.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>network_interfaces</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hanaonazure.models.IpAddress" title="azure.mgmt.hanaonazure.models.IpAddress"><em>IpAddress</em></a><em>]</em>) – Specifies the network interfaces for the HANA
-instance.</p>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>circuit_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the circuit id for connecting to express
-route.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.hanaonazure.models.HanaInstance">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HanaInstance</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">hardware_profile=None</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">network_profile=None</em>, <em class="sig-param">partner_node_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/hana_instance_py3.html#HanaInstance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaInstance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.hanaonazure.models.resource_py3.Resource</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HanaInstance</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">hardware_profile=None</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">os_profile=None</em>, <em class="sig-param">network_profile=None</em>, <em class="sig-param">partner_node_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#HanaInstance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.hanaonazure.models._models_py3.Resource</span></code></p>
 <p>HANA instance info on Azure (ARM properties and HANA properties).</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -469,101 +413,43 @@ network with this HanaInstance</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.hanaonazure.models.Display">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">Display</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/display_py3.html#Display"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.Display" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.hanaonazure.models.HardwareProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HardwareProfile</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#HardwareProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HardwareProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Detailed HANA operation information.</p>
+<p>Specifies the hardware settings for the HANA instance.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized friendly form of the resource provider name.
-This form is also expected to include the publisher/company responsible.
-Use Title Casing. Begin with “Microsoft” for 1st party services.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.models.html#azure.mgmt.datalake.analytics.catalog.models.FileType.resource" title="azure.mgmt.datalake.analytics.catalog.models.FileType.resource"><strong>resource</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized friendly form of the resource type related
-to this action/operation. This form should match the public documentation
-for the resource provider. Use Title Casing. For examples, refer to the
-“name” section.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.apimanagement.models.html#azure.mgmt.apimanagement.models.PolicyScopeContract.operation" title="azure.mgmt.apimanagement.models.PolicyScopeContract.operation"><strong>operation</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized friendly name for the operation as shown to
-the user. This name should be concise (to fit in drop downs), but clear
-(self-documenting). Use Title Casing and include the entity/resource to
-which it applies.</p></li>
-<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized friendly description for the operation as
-shown to the user. This description should be thorough, yet concise. It
-will be used in tool-tips and detailed views.</p></li>
-<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The intended executor of the operation; governs the display
-of the operation in the RBAC UX and the audit logs UX. Default value is
-‘user,system’</p></li>
+<li><p><strong>hardware_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.hanaonazure.models.HanaHardwareTypeNamesEnum" title="azure.mgmt.hanaonazure.models.HanaHardwareTypeNamesEnum"><em>HanaHardwareTypeNamesEnum</em></a>) – Name of the hardware type (vendor and/or their
+product name). Possible values include: ‘Cisco_UCS’, ‘HPE’</p></li>
+<li><p><strong>hana_instance_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.hanaonazure.models.HanaInstanceSizeNamesEnum" title="azure.mgmt.hanaonazure.models.HanaInstanceSizeNamesEnum"><em>HanaInstanceSizeNamesEnum</em></a>) – Specifies the HANA instance SKU. Possible values
+include: ‘S72m’, ‘S144m’, ‘S72’, ‘S144’, ‘S192’, ‘S192m’, ‘S192xm’, ‘S96’,
+‘S384’, ‘S384m’, ‘S384xm’, ‘S384xxm’, ‘S576m’, ‘S576xm’, ‘S768’, ‘S768m’,
+‘S768xm’, ‘S960m’, ‘S224o’, ‘S224m’, ‘S224om’, ‘S224oxm’, ‘S224oxxm’</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.hanaonazure.models.Operation">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.hanaonazure.models.IpAddress">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">IpAddress</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">ip_address: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#IpAddress"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.IpAddress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>HANA operation information.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the operation being performed on this particular
-object. This name should match the action name that appears in RBAC / the
-event service.</p>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.hanaonazure.models.Display" title="azure.mgmt.hanaonazure.models.Display"><em>Display</em></a>) – Displayed HANA operation information</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.hanaonazure.models.ErrorResponse">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">ErrorResponse</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Describes the format of Error response.</p>
+<p>Specifies the IP address of the network interface.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error code</p></li>
-<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error message indicating why the operation failed.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="exception">
-<dt id="azure.mgmt.hanaonazure.models.ErrorResponseException">
-<em class="property">exception </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">ErrorResponseException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
-<p>Server responsed with exception of type: ‘ErrorResponse’.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>deserialize</strong> – A deserializer</p></li>
-<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.hanaonazure.models.Tags">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">Tags</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/tags_py3.html#Tags"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.Tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Tags field of the HANA instance.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Tags field of the HANA instance.</p>
+<dd class="field-odd"><p><strong>ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the IP address of the network interface.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.hanaonazure.models.MonitoringDetails">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">MonitoringDetails</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">hana_subnet: str = None</em>, <em class="sig-param">hana_hostname: str = None</em>, <em class="sig-param">hana_db_name: str = None</em>, <em class="sig-param">hana_db_sql_port: int = None</em>, <em class="sig-param">hana_db_username: str = None</em>, <em class="sig-param">hana_db_password: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/monitoring_details_py3.html#MonitoringDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.MonitoringDetails" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">MonitoringDetails</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">hana_subnet: str = None</em>, <em class="sig-param">hana_hostname: str = None</em>, <em class="sig-param">hana_db_name: str = None</em>, <em class="sig-param">hana_db_sql_port: int = None</em>, <em class="sig-param">hana_db_username: str = None</em>, <em class="sig-param">hana_db_password: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#MonitoringDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.MonitoringDetails" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Details needed to monitor a Hana Instance.</p>
 <dl class="field-list simple">
@@ -585,22 +471,177 @@ monitoring</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.hanaonazure.models.NetworkProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">NetworkProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#NetworkProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.NetworkProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Specifies the network settings for the HANA instance disks.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>network_interfaces</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hanaonazure.models.IpAddress" title="azure.mgmt.hanaonazure.models.IpAddress"><em>IpAddress</em></a><em>]</em>) – Specifies the network interfaces for the HANA
+instance.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>circuit_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the circuit id for connecting to express
+route.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hanaonazure.models.Operation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">Operation</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">display=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>HANA operation information.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the operation being performed on this particular
+object. This name should match the action name that appears in RBAC / the
+event service.</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.hanaonazure.models.Display" title="azure.mgmt.hanaonazure.models.Display"><em>Display</em></a>) – Displayed HANA operation information</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hanaonazure.models.OSProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">OSProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">computer_name: str = None</em>, <em class="sig-param">ssh_public_key: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#OSProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.OSProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Specifies the operating system settings for the HANA instance.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>computer_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the host OS name of the HANA instance.</p></li>
+<li><p><strong>ssh_public_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the SSH public key used to access the
+operating system.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – This property allows you to specify the type of the OS.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies version of operating system.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hanaonazure.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The resource model definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hanaonazure.models.SapMonitor">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">SapMonitor</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str = None</em>, <em class="sig-param">hana_subnet: str = None</em>, <em class="sig-param">hana_hostname: str = None</em>, <em class="sig-param">hana_db_name: str = None</em>, <em class="sig-param">hana_db_sql_port: int = None</em>, <em class="sig-param">hana_db_username: str = None</em>, <em class="sig-param">hana_db_password: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#SapMonitor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.SapMonitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.hanaonazure.models._models_py3.Resource</span></code></p>
+<p>SAP monitor info on Azure (ARM properties and SAP monitor properties).</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum" title="azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum"><em>HanaProvisioningStatesEnum</em></a>) – State of provisioning of the HanaInstance.
+Possible values include: ‘Accepted’, ‘Creating’, ‘Updating’, ‘Failed’,
+‘Succeeded’, ‘Deleting’, ‘Migrating’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>hana_subnet</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the SAP monitor unique ID.</p></li>
+<li><p><strong>hana_hostname</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Hostname of the HANA instance.</p></li>
+<li><p><strong>hana_db_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Database name of the HANA instance.</p></li>
+<li><p><strong>hana_db_sql_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Database port of the HANA instance.</p></li>
+<li><p><strong>hana_db_username</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Database username of the HANA instance.</p></li>
+<li><p><strong>hana_db_password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Database password of the HANA instance.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hanaonazure.models.StorageProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">StorageProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">os_disks=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#StorageProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.StorageProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Specifies the storage settings for the HANA instance disks.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>nfs_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – IP Address to connect to storage.</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>os_disks</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hanaonazure.models.Disk" title="azure.mgmt.hanaonazure.models.Disk"><em>Disk</em></a><em>]</em>) – Specifies information about the operating system disk
+used by the hana instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hanaonazure.models.Tags">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">Tags</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_models_py3.html#Tags"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.Tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Tags field of the HANA instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Tags field of the HANA instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.hanaonazure.models.OperationPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">OperationPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_paged_models.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.hanaonazure.models.Operation" title="azure.mgmt.hanaonazure.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.hanaonazure.models.HanaInstancePaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HanaInstancePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/hana_instance_paged.html#HanaInstancePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaInstancePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HanaInstancePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_paged_models.html#HanaInstancePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaInstancePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.hanaonazure.models.HanaInstance" title="azure.mgmt.hanaonazure.models.HanaInstance"><code class="xref py py-class docutils literal notranslate"><span class="pre">HanaInstance</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.hanaonazure.models.SapMonitorPaged">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">SapMonitorPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_paged_models.html#SapMonitorPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.SapMonitorPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.hanaonazure.models.SapMonitor" title="azure.mgmt.hanaonazure.models.SapMonitor"><code class="xref py py-class docutils literal notranslate"><span class="pre">SapMonitor</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.hanaonazure.models.HanaHardwareTypeNamesEnum">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HanaHardwareTypeNamesEnum</code><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/hana_management_client_enums.html#HanaHardwareTypeNamesEnum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaHardwareTypeNamesEnum" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HanaHardwareTypeNamesEnum</code><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_hana_management_client_enums.html#HanaHardwareTypeNamesEnum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaHardwareTypeNamesEnum" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -617,7 +658,7 @@ monitoring</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.hanaonazure.models.HanaInstanceSizeNamesEnum">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HanaInstanceSizeNamesEnum</code><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/hana_management_client_enums.html#HanaInstanceSizeNamesEnum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaInstanceSizeNamesEnum" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HanaInstanceSizeNamesEnum</code><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_hana_management_client_enums.html#HanaInstanceSizeNamesEnum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaInstanceSizeNamesEnum" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -739,7 +780,7 @@ monitoring</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.hanaonazure.models.HanaInstancePowerStateEnum">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HanaInstancePowerStateEnum</code><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/hana_management_client_enums.html#HanaInstancePowerStateEnum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaInstancePowerStateEnum" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HanaInstancePowerStateEnum</code><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_hana_management_client_enums.html#HanaInstancePowerStateEnum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaInstancePowerStateEnum" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -776,7 +817,7 @@ monitoring</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HanaProvisioningStatesEnum</code><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/hana_management_client_enums.html#HanaProvisioningStatesEnum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.models.</code><code class="sig-name descname">HanaProvisioningStatesEnum</code><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/models/_hana_management_client_enums.html#HanaProvisioningStatesEnum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.models.HanaProvisioningStatesEnum" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">

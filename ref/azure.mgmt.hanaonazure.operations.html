@@ -285,9 +285,10 @@
 <span id="azure-mgmt-hanaonazure-operations-module"></span><h1>azure.mgmt.hanaonazure.operations module<a class="headerlink" href="#module-azure.mgmt.hanaonazure.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.hanaonazure.operations.Operations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.Operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Operations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -303,7 +304,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.hanaonazure.operations.Operations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a list of SAP HANA management operations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -336,9 +337,10 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.hanaonazure.operations.HanaInstancesOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.operations.</code><code class="sig-name descname">HanaInstancesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/hana_instances_operations.html#HanaInstancesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.operations.</code><code class="sig-name descname">HanaInstancesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_hana_instances_operations.html#HanaInstancesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>HanaInstancesOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -354,7 +356,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.hanaonazure.operations.HanaInstancesOperations.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">hana_instance_parameter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/hana_instances_operations.html#HanaInstancesOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">hana_instance_parameter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_hana_instances_operations.html#HanaInstancesOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a SAP HANA instance.</p>
 <p>Creates a SAP HANA instance for the specified subscription, resource
 group, and instance name.</p>
@@ -389,7 +391,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.hanaonazure.operations.HanaInstancesOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/hana_instances_operations.html#HanaInstancesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_hana_instances_operations.html#HanaInstancesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes a SAP HANA instance.</p>
 <p>Deletes a SAP HANA instance with the specified subscription, resource
 group, and instance name.</p>
@@ -421,7 +423,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.hanaonazure.operations.HanaInstancesOperations.enable_monitoring">
-<code class="sig-name descname">enable_monitoring</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">monitoring_parameter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/hana_instances_operations.html#HanaInstancesOperations.enable_monitoring"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.enable_monitoring" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_monitoring</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">monitoring_parameter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_hana_instances_operations.html#HanaInstancesOperations.enable_monitoring"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.enable_monitoring" title="Permalink to this definition">¶</a></dt>
 <dd><p>The operation to add a monitor to an SAP HANA instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -453,7 +455,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.hanaonazure.operations.HanaInstancesOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/hana_instances_operations.html#HanaInstancesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_hana_instances_operations.html#HanaInstancesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets properties of a SAP HANA instance.</p>
 <p>Gets properties of a SAP HANA instance for the specified subscription,
 resource group, and instance name.</p>
@@ -484,7 +486,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.hanaonazure.operations.HanaInstancesOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/hana_instances_operations.html#HanaInstancesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_hana_instances_operations.html#HanaInstancesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a list of SAP HANA instances in the specified subscription.</p>
 <p>Gets a list of SAP HANA instances in the specified subscription. The
 operations returns various properties of each SAP HANA on Azure
@@ -513,7 +515,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.hanaonazure.operations.HanaInstancesOperations.list_by_resource_group">
-<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/hana_instances_operations.html#HanaInstancesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_hana_instances_operations.html#HanaInstancesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a list of SAP HANA instances in the specified subscription and the
 resource group.</p>
 <p>Gets a list of SAP HANA instances in the specified subscription and the
@@ -549,7 +551,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.hanaonazure.operations.HanaInstancesOperations.restart">
-<code class="sig-name descname">restart</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/hana_instances_operations.html#HanaInstancesOperations.restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.restart" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">restart</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_hana_instances_operations.html#HanaInstancesOperations.restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.restart" title="Permalink to this definition">¶</a></dt>
 <dd><p>The operation to restart a SAP HANA instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -572,14 +574,74 @@ ClientRawResponse&lt;None&gt; if raw==True</p>
 AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.ErrorResponseException" title="azure.mgmt.hanaonazure.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.hanaonazure.operations.HanaInstancesOperations.shutdown">
+<code class="sig-name descname">shutdown</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_hana_instances_operations.html#HanaInstancesOperations.shutdown"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>The operation to shutdown a SAP HANA instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group.</p></li>
+<li><p><strong>hana_instance_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SAP HANA on Azure instance.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.ErrorResponseException" title="azure.mgmt.hanaonazure.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.hanaonazure.operations.HanaInstancesOperations.start">
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_hana_instances_operations.html#HanaInstancesOperations.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>The operation to start a SAP HANA instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group.</p></li>
+<li><p><strong>hana_instance_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SAP HANA on Azure instance.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.ErrorResponseException" title="azure.mgmt.hanaonazure.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.hanaonazure.operations.HanaInstancesOperations.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/hana_instances_operations.html#HanaInstancesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">hana_instance_name</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_hana_instances_operations.html#HanaInstancesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.HanaInstancesOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Patches the Tags field of a SAP HANA instance.</p>
 <p>Patches the Tags field of a SAP HANA instance for the specified
 subscription, resource group, and instance name.</p>
@@ -601,6 +663,189 @@ overrides</span>.</p></li>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.HanaInstance" title="azure.mgmt.hanaonazure.models.HanaInstance">HanaInstance</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.ErrorResponseException" title="azure.mgmt.hanaonazure.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hanaonazure.operations.SapMonitorsOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.hanaonazure.operations.</code><code class="sig-name descname">SapMonitorsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_sap_monitors_operations.html#SapMonitorsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.SapMonitorsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>SapMonitorsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Client API version. Constant value: “2017-11-03-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.hanaonazure.operations.SapMonitorsOperations.create">
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">sap_monitor_name</em>, <em class="sig-param">sap_monitor_parameter</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_sap_monitors_operations.html#SapMonitorsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.SapMonitorsOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a SAP monitor.</p>
+<p>Creates a SAP monitor for the specified subscription, resource group,
+and resource name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group.</p></li>
+<li><p><strong>sap_monitor_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SAP monitor resource.</p></li>
+<li><p><strong>sap_monitor_parameter</strong> (<a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.SapMonitor" title="azure.mgmt.hanaonazure.models.SapMonitor"><em>SapMonitor</em></a>) – Request body representing a SAP Monitor</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns SapMonitor or
+ClientRawResponse&lt;SapMonitor&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.SapMonitor" title="azure.mgmt.hanaonazure.models.SapMonitor">SapMonitor</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.SapMonitor" title="azure.mgmt.hanaonazure.models.SapMonitor">SapMonitor</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.ErrorResponseException" title="azure.mgmt.hanaonazure.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.hanaonazure.operations.SapMonitorsOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">sap_monitor_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_sap_monitors_operations.html#SapMonitorsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.SapMonitorsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a SAP monitor.</p>
+<p>Deletes a SAP monitor with the specified subscription, resource group,
+and monitor name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group.</p></li>
+<li><p><strong>sap_monitor_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SAP monitor resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.ErrorResponseException" title="azure.mgmt.hanaonazure.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.hanaonazure.operations.SapMonitorsOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">sap_monitor_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_sap_monitors_operations.html#SapMonitorsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.SapMonitorsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets properties of a SAP monitor.</p>
+<p>Gets properties of a SAP monitor for the specified subscription,
+resource group, and resource name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group.</p></li>
+<li><p><strong>sap_monitor_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SAP monitor resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SapMonitor or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.SapMonitor" title="azure.mgmt.hanaonazure.models.SapMonitor">SapMonitor</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.ErrorResponseException" title="azure.mgmt.hanaonazure.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.hanaonazure.operations.SapMonitorsOperations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_sap_monitors_operations.html#SapMonitorsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.SapMonitorsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list of SAP monitors in the specified subscription.</p>
+<p>Gets a list of SAP monitors in the specified subscription. The
+operations returns various properties of each SAP monitor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SapMonitor</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.SapMonitorPaged" title="azure.mgmt.hanaonazure.models.SapMonitorPaged">SapMonitorPaged</a>[<a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.SapMonitor" title="azure.mgmt.hanaonazure.models.SapMonitor">SapMonitor</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.ErrorResponseException" title="azure.mgmt.hanaonazure.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hanaonazure.operations.SapMonitorsOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.hanaonazure.models' from 'd:\\a\\1\\s\\sdk\\hanaonazure\\azure-mgmt-hanaonazure\\azure\\mgmt\\hanaonazure\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.SapMonitorsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.hanaonazure.operations.SapMonitorsOperations.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">resource_group_name</em>, <em class="sig-param">sap_monitor_name</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hanaonazure/operations/_sap_monitors_operations.html#SapMonitorsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hanaonazure.operations.SapMonitorsOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Patches the Tags field of a SAP monitor.</p>
+<p>Patches the Tags field of a SAP monitor for the specified subscription,
+resource group, and monitor name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group.</p></li>
+<li><p><strong>sap_monitor_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SAP monitor resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Tags field of the HANA instance.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SapMonitor or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.hanaonazure.models.html#azure.mgmt.hanaonazure.models.SapMonitor" title="azure.mgmt.hanaonazure.models.SapMonitor">SapMonitor</a> or
 ClientRawResponse</p>
 </dd>
 <dt class="field-even">Raises</dt>
