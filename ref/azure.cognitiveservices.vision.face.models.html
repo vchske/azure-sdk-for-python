@@ -284,15 +284,17 @@
   <div class="section" id="module-azure.cognitiveservices.vision.face.models">
 <span id="azure-cognitiveservices-vision-face-models-module"></span><h1>azure.cognitiveservices.vision.face.models module<a class="headerlink" href="#module-azure.cognitiveservices.vision.face.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.Error">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Error</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/error_py3.html#Error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Error" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.face.models.Accessory">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Accessory</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type=None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#Accessory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Accessory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Error body.</p>
+<p>Accessory item and corresponding confidence level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.AccessoryType" title="azure.cognitiveservices.vision.face.models.AccessoryType"><em>AccessoryType</em></a>) – Type of an accessory. Possible values include: ‘headWear’,
+‘glasses’, ‘mask’</p></li>
+<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Confidence level of an accessory</p></li>
 </ul>
 </dd>
 </dl>
@@ -300,7 +302,7 @@
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.APIError">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">APIError</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">error=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/api_error_py3.html#APIError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.APIError" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">APIError</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">error=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#APIError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.APIError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Error information returned by the API.</p>
 <dl class="field-list simple">
@@ -312,7 +314,7 @@
 
 <dl class="exception">
 <dt id="azure.cognitiveservices.vision.face.models.APIErrorException">
-<em class="property">exception </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">APIErrorException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/api_error_py3.html#APIErrorException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.APIErrorException" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">APIErrorException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#APIErrorException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.APIErrorException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
 <p>Server responsed with exception of type: ‘APIError’.</p>
 <dl class="field-list simple">
@@ -326,20 +328,40 @@
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.FaceRectangle">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FaceRectangle</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">width: int</em>, <em class="sig-param">height: int</em>, <em class="sig-param">left: int</em>, <em class="sig-param">top: int</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_rectangle_py3.html#FaceRectangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FaceRectangle" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.face.models.ApplySnapshotRequest">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">ApplySnapshotRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">object_id: str</em>, <em class="sig-param">mode='CreateNew'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#ApplySnapshotRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.ApplySnapshotRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A rectangle within which a face can be found.</p>
+<p>Request body for applying snapshot operation.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. The width of the rectangle, in pixels.</p></li>
-<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. The height of the rectangle, in pixels.</p></li>
-<li><p><strong>left</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. The distance from the left edge if the image to the
-left edge of the rectangle, in pixels.</p></li>
-<li><p><strong>top</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. The distance from the top edge if the image to the
-top edge of the rectangle, in pixels.</p></li>
+<li><p><strong>object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. User specified target object id to be created
+from the snapshot.</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.SnapshotApplyMode" title="azure.cognitiveservices.vision.face.models.SnapshotApplyMode"><em>SnapshotApplyMode</em></a>) – Snapshot applying mode. Currently only CreateNew is
+supported, which means the apply operation will fail if target
+subscription already contains an object of same type and using the same
+objectId. Users can specify the “objectId” in request body to avoid such
+conflicts. Possible values include: ‘CreateNew’. Default value:
+“CreateNew” .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.Blur">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Blur</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">blur_level=None</em>, <em class="sig-param">value: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#Blur"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Blur" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties describing any presence of blur within the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blur_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.BlurLevel" title="azure.cognitiveservices.vision.face.models.BlurLevel"><em>BlurLevel</em></a>) – An enum value indicating level of blurriness. Possible
+values include: ‘Low’, ‘Medium’, ‘High’</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – A number indicating level of blurriness ranging from 0 to 1.</p></li>
 </ul>
 </dd>
 </dl>
@@ -347,7 +369,7 @@ top edge of the rectangle, in pixels.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.Coordinate">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Coordinate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">x: float</em>, <em class="sig-param">y: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/coordinate_py3.html#Coordinate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Coordinate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Coordinate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">x: float</em>, <em class="sig-param">y: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#Coordinate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Coordinate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Coordinates within an image.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -362,8 +384,116 @@ top edge of the rectangle, in pixels.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.DetectedFace">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">DetectedFace</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_rectangle</em>, <em class="sig-param">face_id: str = None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">face_landmarks=None</em>, <em class="sig-param">face_attributes=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#DetectedFace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.DetectedFace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Detected Face object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
+<li><p><strong>recognition_model</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.RecognitionModel" title="azure.cognitiveservices.vision.face.models.RecognitionModel"><em>RecognitionModel</em></a>) – Possible values include: ‘recognition_01’,
+‘recognition_02’. Default value: “recognition_01” .</p></li>
+<li><p><strong>face_rectangle</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.FaceRectangle" title="azure.cognitiveservices.vision.face.models.FaceRectangle"><em>FaceRectangle</em></a>) – Required.</p></li>
+<li><p><strong>face_landmarks</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.FaceLandmarks" title="azure.cognitiveservices.vision.face.models.FaceLandmarks"><em>FaceLandmarks</em></a>) – </p></li>
+<li><p><strong>face_attributes</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.FaceAttributes" title="azure.cognitiveservices.vision.face.models.FaceAttributes"><em>FaceAttributes</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.Emotion">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Emotion</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">anger: float = None</em>, <em class="sig-param">contempt: float = None</em>, <em class="sig-param">disgust: float = None</em>, <em class="sig-param">fear: float = None</em>, <em class="sig-param">happiness: float = None</em>, <em class="sig-param">neutral: float = None</em>, <em class="sig-param">sadness: float = None</em>, <em class="sig-param">surprise: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#Emotion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Emotion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties describing facial emotion in form of confidence ranging from 0
+to 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>anger</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
+<li><p><strong>contempt</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
+<li><p><strong>disgust</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
+<li><p><strong>fear</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
+<li><p><strong>happiness</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
+<li><p><strong>neutral</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
+<li><p><strong>sadness</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
+<li><p><strong>surprise</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.Error">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Error</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#Error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Error body.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.Exposure">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Exposure</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">exposure_level=None</em>, <em class="sig-param">value: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#Exposure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Exposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties describing exposure level of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>exposure_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.ExposureLevel" title="azure.cognitiveservices.vision.face.models.ExposureLevel"><em>ExposureLevel</em></a>) – An enum value indicating level of exposure.
+Possible values include: ‘UnderExposure’, ‘GoodExposure’, ‘OverExposure’</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – A number indicating level of exposure level ranging from 0
+to 1. [0, 0.25) is under exposure. [0.25, 0.75) is good exposure. [0.75,
+1] is over exposure.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.FaceAttributes">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FaceAttributes</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">age: float = None</em>, <em class="sig-param">gender=None</em>, <em class="sig-param">smile: float = None</em>, <em class="sig-param">facial_hair=None</em>, <em class="sig-param">glasses=None</em>, <em class="sig-param">head_pose=None</em>, <em class="sig-param">emotion=None</em>, <em class="sig-param">hair=None</em>, <em class="sig-param">makeup=None</em>, <em class="sig-param">occlusion=None</em>, <em class="sig-param">accessories=None</em>, <em class="sig-param">blur=None</em>, <em class="sig-param">exposure=None</em>, <em class="sig-param">noise=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#FaceAttributes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FaceAttributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Face Attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>age</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Age in years</p></li>
+<li><p><strong>gender</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Gender" title="azure.cognitiveservices.vision.face.models.Gender"><em>Gender</em></a>) – Possible gender of the face. Possible values include:
+‘male’, ‘female’</p></li>
+<li><p><strong>smile</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Smile intensity, a number between [0,1]</p></li>
+<li><p><strong>facial_hair</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.FacialHair" title="azure.cognitiveservices.vision.face.models.FacialHair"><em>FacialHair</em></a>) – Properties describing facial hair attributes.</p></li>
+<li><p><strong>glasses</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.GlassesType" title="azure.cognitiveservices.vision.face.models.GlassesType"><em>GlassesType</em></a>) – Glasses type if any of the face. Possible values include:
+‘noGlasses’, ‘readingGlasses’, ‘sunglasses’, ‘swimmingGoggles’</p></li>
+<li><p><strong>head_pose</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.HeadPose" title="azure.cognitiveservices.vision.face.models.HeadPose"><em>HeadPose</em></a>) – Properties indicating head pose of the face.</p></li>
+<li><p><strong>emotion</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Emotion" title="azure.cognitiveservices.vision.face.models.Emotion"><em>Emotion</em></a>) – Properties describing facial emotion in form of confidence
+ranging from 0 to 1.</p></li>
+<li><p><strong>hair</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Hair" title="azure.cognitiveservices.vision.face.models.Hair"><em>Hair</em></a>) – Properties describing hair attributes.</p></li>
+<li><p><strong>makeup</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Makeup" title="azure.cognitiveservices.vision.face.models.Makeup"><em>Makeup</em></a>) – Properties describing present makeups on a given face.</p></li>
+<li><p><strong>occlusion</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Occlusion" title="azure.cognitiveservices.vision.face.models.Occlusion"><em>Occlusion</em></a>) – Properties describing occlusions on a given face.</p></li>
+<li><p><strong>accessories</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Accessory" title="azure.cognitiveservices.vision.face.models.Accessory"><em>Accessory</em></a><em>]</em>) – Properties describing any accessories on a given face.</p></li>
+<li><p><strong>blur</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Blur" title="azure.cognitiveservices.vision.face.models.Blur"><em>Blur</em></a>) – Properties describing any presence of blur within the image.</p></li>
+<li><p><strong>exposure</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Exposure" title="azure.cognitiveservices.vision.face.models.Exposure"><em>Exposure</em></a>) – Properties describing exposure level of the image.</p></li>
+<li><p><strong>noise</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Noise" title="azure.cognitiveservices.vision.face.models.Noise"><em>Noise</em></a>) – Properties describing noise level of the image.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.FaceLandmarks">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FaceLandmarks</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">pupil_left=None</em>, <em class="sig-param">pupil_right=None</em>, <em class="sig-param">nose_tip=None</em>, <em class="sig-param">mouth_left=None</em>, <em class="sig-param">mouth_right=None</em>, <em class="sig-param">eyebrow_left_outer=None</em>, <em class="sig-param">eyebrow_left_inner=None</em>, <em class="sig-param">eye_left_outer=None</em>, <em class="sig-param">eye_left_top=None</em>, <em class="sig-param">eye_left_bottom=None</em>, <em class="sig-param">eye_left_inner=None</em>, <em class="sig-param">eyebrow_right_inner=None</em>, <em class="sig-param">eyebrow_right_outer=None</em>, <em class="sig-param">eye_right_inner=None</em>, <em class="sig-param">eye_right_top=None</em>, <em class="sig-param">eye_right_bottom=None</em>, <em class="sig-param">eye_right_outer=None</em>, <em class="sig-param">nose_root_left=None</em>, <em class="sig-param">nose_root_right=None</em>, <em class="sig-param">nose_left_alar_top=None</em>, <em class="sig-param">nose_right_alar_top=None</em>, <em class="sig-param">nose_left_alar_out_tip=None</em>, <em class="sig-param">nose_right_alar_out_tip=None</em>, <em class="sig-param">upper_lip_top=None</em>, <em class="sig-param">upper_lip_bottom=None</em>, <em class="sig-param">under_lip_top=None</em>, <em class="sig-param">under_lip_bottom=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_landmarks_py3.html#FaceLandmarks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FaceLandmarks" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FaceLandmarks</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">pupil_left=None</em>, <em class="sig-param">pupil_right=None</em>, <em class="sig-param">nose_tip=None</em>, <em class="sig-param">mouth_left=None</em>, <em class="sig-param">mouth_right=None</em>, <em class="sig-param">eyebrow_left_outer=None</em>, <em class="sig-param">eyebrow_left_inner=None</em>, <em class="sig-param">eye_left_outer=None</em>, <em class="sig-param">eye_left_top=None</em>, <em class="sig-param">eye_left_bottom=None</em>, <em class="sig-param">eye_left_inner=None</em>, <em class="sig-param">eyebrow_right_inner=None</em>, <em class="sig-param">eyebrow_right_outer=None</em>, <em class="sig-param">eye_right_inner=None</em>, <em class="sig-param">eye_right_top=None</em>, <em class="sig-param">eye_right_bottom=None</em>, <em class="sig-param">eye_right_outer=None</em>, <em class="sig-param">nose_root_left=None</em>, <em class="sig-param">nose_root_right=None</em>, <em class="sig-param">nose_left_alar_top=None</em>, <em class="sig-param">nose_right_alar_top=None</em>, <em class="sig-param">nose_left_alar_out_tip=None</em>, <em class="sig-param">nose_right_alar_out_tip=None</em>, <em class="sig-param">upper_lip_top=None</em>, <em class="sig-param">upper_lip_bottom=None</em>, <em class="sig-param">under_lip_top=None</em>, <em class="sig-param">under_lip_bottom=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#FaceLandmarks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FaceLandmarks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A collection of 27-point face landmarks pointing to the important positions
 of face components.</p>
@@ -403,8 +533,49 @@ of face components.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.FaceList">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FaceList</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_list_id: str</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">persisted_faces=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#FaceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FaceList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.vision.face.models._models_py3.MetaDataContract</span></code></p>
+<p>Face list object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User defined name, maximum length is 128.</p></li>
+<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data. Length should not exceed 16KB.</p></li>
+<li><p><strong>recognition_model</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.RecognitionModel" title="azure.cognitiveservices.vision.face.models.RecognitionModel"><em>RecognitionModel</em></a>) – Possible values include: ‘recognition_01’,
+‘recognition_02’. Default value: “recognition_01” .</p></li>
+<li><p><strong>face_list_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. FaceListId of the target face list.</p></li>
+<li><p><strong>persisted_faces</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.PersistedFace" title="azure.cognitiveservices.vision.face.models.PersistedFace"><em>PersistedFace</em></a><em>]</em>) – Persisted faces within the face list.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.FaceRectangle">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FaceRectangle</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">width: int</em>, <em class="sig-param">height: int</em>, <em class="sig-param">left: int</em>, <em class="sig-param">top: int</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#FaceRectangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FaceRectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A rectangle within which a face can be found.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. The width of the rectangle, in pixels.</p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. The height of the rectangle, in pixels.</p></li>
+<li><p><strong>left</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. The distance from the left edge if the image to the
+left edge of the rectangle, in pixels.</p></li>
+<li><p><strong>top</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. The distance from the top edge if the image to the
+top edge of the rectangle, in pixels.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.FacialHair">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FacialHair</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">moustache: float = None</em>, <em class="sig-param">beard: float = None</em>, <em class="sig-param">sideburns: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/facial_hair_py3.html#FacialHair"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FacialHair" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FacialHair</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">moustache: float = None</em>, <em class="sig-param">beard: float = None</em>, <em class="sig-param">sideburns: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#FacialHair"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FacialHair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Properties describing facial hair attributes.</p>
 <dl class="field-list simple">
@@ -419,242 +590,8 @@ of face components.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.HeadPose">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">HeadPose</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">roll: float = None</em>, <em class="sig-param">yaw: float = None</em>, <em class="sig-param">pitch: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/head_pose_py3.html#HeadPose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.HeadPose" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Properties indicating head pose of the face.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>roll</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
-<li><p><strong>yaw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
-<li><p><strong>pitch</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.Emotion">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Emotion</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">anger: float = None</em>, <em class="sig-param">contempt: float = None</em>, <em class="sig-param">disgust: float = None</em>, <em class="sig-param">fear: float = None</em>, <em class="sig-param">happiness: float = None</em>, <em class="sig-param">neutral: float = None</em>, <em class="sig-param">sadness: float = None</em>, <em class="sig-param">surprise: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/emotion_py3.html#Emotion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Emotion" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Properties describing facial emotion in form of confidence ranging from 0
-to 1.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>anger</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
-<li><p><strong>contempt</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
-<li><p><strong>disgust</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
-<li><p><strong>fear</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
-<li><p><strong>happiness</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
-<li><p><strong>neutral</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
-<li><p><strong>sadness</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
-<li><p><strong>surprise</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.HairColor">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">HairColor</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">color=None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/hair_color_py3.html#HairColor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.HairColor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Hair color and associated confidence.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>color</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.HairColorType" title="azure.cognitiveservices.vision.face.models.HairColorType"><em>HairColorType</em></a>) – Name of the hair color. Possible values include: ‘unknown’,
-‘white’, ‘gray’, ‘blond’, ‘brown’, ‘red’, ‘black’, ‘other’</p></li>
-<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Confidence level of the color</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.Hair">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Hair</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">bald: float = None</em>, <em class="sig-param">invisible: bool = None</em>, <em class="sig-param">hair_color=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/hair_py3.html#Hair"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Hair" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Properties describing hair attributes.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>bald</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – A number describing confidence level of whether the person is
-bald.</p></li>
-<li><p><strong>invisible</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A boolean value describing whether the hair is visible
-in the image.</p></li>
-<li><p><strong>hair_color</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.HairColor" title="azure.cognitiveservices.vision.face.models.HairColor"><em>HairColor</em></a><em>]</em>) – An array of candidate colors and confidence level in
-the presence of each.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.Makeup">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Makeup</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">eye_makeup: bool = None</em>, <em class="sig-param">lip_makeup: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/makeup_py3.html#Makeup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Makeup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Properties describing present makeups on a given face.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>eye_makeup</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A boolean value describing whether eye makeup is
-present on a face.</p></li>
-<li><p><strong>lip_makeup</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A boolean value describing whether lip makeup is
-present on a face.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.Occlusion">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Occlusion</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">forehead_occluded: bool = None</em>, <em class="sig-param">eye_occluded: bool = None</em>, <em class="sig-param">mouth_occluded: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/occlusion_py3.html#Occlusion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Occlusion" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Properties describing occlusions on a given face.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>forehead_occluded</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A boolean value indicating whether forehead is
-occluded.</p></li>
-<li><p><strong>eye_occluded</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A boolean value indicating whether eyes are occluded.</p></li>
-<li><p><strong>mouth_occluded</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A boolean value indicating whether the mouth is
-occluded.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.Accessory">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Accessory</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type=None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/accessory_py3.html#Accessory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Accessory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Accessory item and corresponding confidence level.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.AccessoryType" title="azure.cognitiveservices.vision.face.models.AccessoryType"><em>AccessoryType</em></a>) – Type of an accessory. Possible values include: ‘headWear’,
-‘glasses’, ‘mask’</p></li>
-<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Confidence level of an accessory</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.Blur">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Blur</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">blur_level=None</em>, <em class="sig-param">value: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/blur_py3.html#Blur"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Blur" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Properties describing any presence of blur within the image.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>blur_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.BlurLevel" title="azure.cognitiveservices.vision.face.models.BlurLevel"><em>BlurLevel</em></a>) – An enum value indicating level of blurriness. Possible
-values include: ‘Low’, ‘Medium’, ‘High’</p></li>
-<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – A number indicating level of blurriness ranging from 0 to 1.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.Exposure">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Exposure</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">exposure_level=None</em>, <em class="sig-param">value: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/exposure_py3.html#Exposure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Exposure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Properties describing exposure level of the image.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>exposure_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.ExposureLevel" title="azure.cognitiveservices.vision.face.models.ExposureLevel"><em>ExposureLevel</em></a>) – An enum value indicating level of exposure.
-Possible values include: ‘UnderExposure’, ‘GoodExposure’, ‘OverExposure’</p></li>
-<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – A number indicating level of exposure level ranging from 0
-to 1. [0, 0.25) is under exposure. [0.25, 0.75) is good exposure. [0.75,
-1] is over exposure.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.Noise">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Noise</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">noise_level=None</em>, <em class="sig-param">value: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/noise_py3.html#Noise"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Noise" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Properties describing noise level of the image.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>noise_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.NoiseLevel" title="azure.cognitiveservices.vision.face.models.NoiseLevel"><em>NoiseLevel</em></a>) – An enum value indicating level of noise. Possible
-values include: ‘Low’, ‘Medium’, ‘High’</p></li>
-<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – A number indicating level of noise level ranging from 0 to
-1. [0, 0.25) is under exposure. [0.25, 0.75) is good exposure. [0.75, 1]
-is over exposure. [0, 0.3) is low noise level. [0.3, 0.7) is medium noise
-level. [0.7, 1] is high noise level.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.FaceAttributes">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FaceAttributes</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">age: float = None</em>, <em class="sig-param">gender=None</em>, <em class="sig-param">smile: float = None</em>, <em class="sig-param">facial_hair=None</em>, <em class="sig-param">glasses=None</em>, <em class="sig-param">head_pose=None</em>, <em class="sig-param">emotion=None</em>, <em class="sig-param">hair=None</em>, <em class="sig-param">makeup=None</em>, <em class="sig-param">occlusion=None</em>, <em class="sig-param">accessories=None</em>, <em class="sig-param">blur=None</em>, <em class="sig-param">exposure=None</em>, <em class="sig-param">noise=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_attributes_py3.html#FaceAttributes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FaceAttributes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Face Attributes.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>age</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Age in years</p></li>
-<li><p><strong>gender</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Gender" title="azure.cognitiveservices.vision.face.models.Gender"><em>Gender</em></a>) – Possible gender of the face. Possible values include:
-‘male’, ‘female’</p></li>
-<li><p><strong>smile</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Smile intensity, a number between [0,1]</p></li>
-<li><p><strong>facial_hair</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.FacialHair" title="azure.cognitiveservices.vision.face.models.FacialHair"><em>FacialHair</em></a>) – Properties describing facial hair attributes.</p></li>
-<li><p><strong>glasses</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.GlassesType" title="azure.cognitiveservices.vision.face.models.GlassesType"><em>GlassesType</em></a>) – Glasses type if any of the face. Possible values include:
-‘noGlasses’, ‘readingGlasses’, ‘sunglasses’, ‘swimmingGoggles’</p></li>
-<li><p><strong>head_pose</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.HeadPose" title="azure.cognitiveservices.vision.face.models.HeadPose"><em>HeadPose</em></a>) – Properties indicating head pose of the face.</p></li>
-<li><p><strong>emotion</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Emotion" title="azure.cognitiveservices.vision.face.models.Emotion"><em>Emotion</em></a>) – Properties describing facial emotion in form of confidence
-ranging from 0 to 1.</p></li>
-<li><p><strong>hair</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Hair" title="azure.cognitiveservices.vision.face.models.Hair"><em>Hair</em></a>) – Properties describing hair attributes.</p></li>
-<li><p><strong>makeup</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Makeup" title="azure.cognitiveservices.vision.face.models.Makeup"><em>Makeup</em></a>) – Properties describing present makeups on a given face.</p></li>
-<li><p><strong>occlusion</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Occlusion" title="azure.cognitiveservices.vision.face.models.Occlusion"><em>Occlusion</em></a>) – Properties describing occlusions on a given face.</p></li>
-<li><p><strong>accessories</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Accessory" title="azure.cognitiveservices.vision.face.models.Accessory"><em>Accessory</em></a><em>]</em>) – Properties describing any accessories on a given face.</p></li>
-<li><p><strong>blur</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Blur" title="azure.cognitiveservices.vision.face.models.Blur"><em>Blur</em></a>) – Properties describing any presence of blur within the image.</p></li>
-<li><p><strong>exposure</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Exposure" title="azure.cognitiveservices.vision.face.models.Exposure"><em>Exposure</em></a>) – Properties describing exposure level of the image.</p></li>
-<li><p><strong>noise</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.Noise" title="azure.cognitiveservices.vision.face.models.Noise"><em>Noise</em></a>) – Properties describing noise level of the image.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.DetectedFace">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">DetectedFace</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_rectangle</em>, <em class="sig-param">face_id: str = None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">face_landmarks=None</em>, <em class="sig-param">face_attributes=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/detected_face_py3.html#DetectedFace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.DetectedFace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Detected Face object.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>face_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>recognition_model</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.RecognitionModel" title="azure.cognitiveservices.vision.face.models.RecognitionModel"><em>RecognitionModel</em></a>) – Possible values include: ‘recognition_01’,
-‘recognition_02’. Default value: “recognition_01” .</p></li>
-<li><p><strong>face_rectangle</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.FaceRectangle" title="azure.cognitiveservices.vision.face.models.FaceRectangle"><em>FaceRectangle</em></a>) – Required.</p></li>
-<li><p><strong>face_landmarks</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.FaceLandmarks" title="azure.cognitiveservices.vision.face.models.FaceLandmarks"><em>FaceLandmarks</em></a>) – </p></li>
-<li><p><strong>face_attributes</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.models.FaceAttributes" title="azure.cognitiveservices.vision.face.models.FaceAttributes"><em>FaceAttributes</em></a>) – </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.FindSimilarRequest">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FindSimilarRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_id: str</em>, <em class="sig-param">face_list_id: str = None</em>, <em class="sig-param">large_face_list_id: str = None</em>, <em class="sig-param">face_ids=None</em>, <em class="sig-param">max_num_of_candidates_returned: int = 20</em>, <em class="sig-param">mode='matchPerson'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/find_similar_request_py3.html#FindSimilarRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FindSimilarRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FindSimilarRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_id: str</em>, <em class="sig-param">face_list_id: str = None</em>, <em class="sig-param">large_face_list_id: str = None</em>, <em class="sig-param">face_ids=None</em>, <em class="sig-param">max_num_of_candidates_returned: int = 20</em>, <em class="sig-param">mode='matchPerson'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#FindSimilarRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FindSimilarRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Request body for find similar operation.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -690,29 +627,8 @@ value: “matchPerson” .</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.SimilarFace">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">SimilarFace</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">confidence: float</em>, <em class="sig-param">face_id: str = None</em>, <em class="sig-param">persisted_face_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/similar_face_py3.html#SimilarFace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.SimilarFace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Response body for find similar face operation.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>face_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – FaceId of candidate face when find by faceIds. faceId is
-created by Face - Detect and will expire 24 hours after the detection call</p></li>
-<li><p><strong>persisted_face_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – PersistedFaceId of candidate face when find by
-faceListId. persistedFaceId in face list is persisted and will not expire.
-As showed in below response</p></li>
-<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Required. Similarity confidence of the candidate face.
-The higher confidence, the more similar. Range between [0,1].</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.GroupRequest">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">GroupRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_ids</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/group_request_py3.html#GroupRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.GroupRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">GroupRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_ids</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#GroupRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.GroupRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Request body for group request.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -726,7 +642,7 @@ Detect. The maximum is 1000 faces</p>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.GroupResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">GroupResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">groups</em>, <em class="sig-param">messy_group=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/group_result_py3.html#GroupResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.GroupResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">GroupResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">groups</em>, <em class="sig-param">messy_group=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#GroupResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.GroupResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>An array of face groups based on face similarity.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -743,8 +659,78 @@ faces from original faces.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.Hair">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Hair</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">bald: float = None</em>, <em class="sig-param">invisible: bool = None</em>, <em class="sig-param">hair_color=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#Hair"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Hair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties describing hair attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bald</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – A number describing confidence level of whether the person is
+bald.</p></li>
+<li><p><strong>invisible</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A boolean value describing whether the hair is visible
+in the image.</p></li>
+<li><p><strong>hair_color</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.HairColor" title="azure.cognitiveservices.vision.face.models.HairColor"><em>HairColor</em></a><em>]</em>) – An array of candidate colors and confidence level in
+the presence of each.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.HairColor">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">HairColor</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">color=None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#HairColor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.HairColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Hair color and associated confidence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>color</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.HairColorType" title="azure.cognitiveservices.vision.face.models.HairColorType"><em>HairColorType</em></a>) – Name of the hair color. Possible values include: ‘unknown’,
+‘white’, ‘gray’, ‘blond’, ‘brown’, ‘red’, ‘black’, ‘other’</p></li>
+<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Confidence level of the color</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.HeadPose">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">HeadPose</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">roll: float = None</em>, <em class="sig-param">yaw: float = None</em>, <em class="sig-param">pitch: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#HeadPose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.HeadPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties indicating head pose of the face.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>roll</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
+<li><p><strong>yaw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
+<li><p><strong>pitch</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.IdentifyCandidate">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">IdentifyCandidate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">person_id: str</em>, <em class="sig-param">confidence: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#IdentifyCandidate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.IdentifyCandidate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>All possible faces that may qualify.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>person_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Id of candidate</p></li>
+<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Required. Confidence threshold of identification, used
+to judge whether one face belong to one person. The range of
+confidenceThreshold is [0, 1] (default specified by algorithm).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.IdentifyRequest">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">IdentifyRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_ids</em>, <em class="sig-param">person_group_id: str = None</em>, <em class="sig-param">large_person_group_id: str = None</em>, <em class="sig-param">max_num_of_candidates_returned: int = 1</em>, <em class="sig-param">confidence_threshold: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/identify_request_py3.html#IdentifyRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.IdentifyRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">IdentifyRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_ids</em>, <em class="sig-param">person_group_id: str = None</em>, <em class="sig-param">large_person_group_id: str = None</em>, <em class="sig-param">max_num_of_candidates_returned: int = 1</em>, <em class="sig-param">confidence_threshold: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#IdentifyRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.IdentifyRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Request body for identify face operation.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -773,26 +759,8 @@ confidenceThreshold is [0, 1] (default specified by algorithm).</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.IdentifyCandidate">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">IdentifyCandidate</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">person_id: str</em>, <em class="sig-param">confidence: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/identify_candidate_py3.html#IdentifyCandidate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.IdentifyCandidate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>All possible faces that may qualify.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>person_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Id of candidate</p></li>
-<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Required. Confidence threshold of identification, used
-to judge whether one face belong to one person. The range of
-confidenceThreshold is [0, 1] (default specified by algorithm).</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.IdentifyResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">IdentifyResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_id: str</em>, <em class="sig-param">candidates</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/identify_result_py3.html#IdentifyResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.IdentifyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">IdentifyResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_id: str</em>, <em class="sig-param">candidates</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#IdentifyResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.IdentifyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Response body for identify face operation.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -810,157 +778,22 @@ empty array.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.VerifyFaceToPersonRequest">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">VerifyFaceToPersonRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_id: str</em>, <em class="sig-param">person_id: str</em>, <em class="sig-param">person_group_id: str = None</em>, <em class="sig-param">large_person_group_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/verify_face_to_person_request_py3.html#VerifyFaceToPersonRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.VerifyFaceToPersonRequest" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.face.models.ImageUrl">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">ImageUrl</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">url: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#ImageUrl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.ImageUrl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Request body for face to person verification.</p>
+<p>ImageUrl.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>face_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. FaceId of the face, comes from Face - Detect</p></li>
-<li><p><strong>person_group_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Using existing personGroupId and personId for fast
-loading a specified person. personGroupId is created in PersonGroup -
-Create. Parameter personGroupId and largePersonGroupId should not be
-provided at the same time.</p></li>
-<li><p><strong>large_person_group_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Using existing largePersonGroupId and
-personId for fast loading a specified person. largePersonGroupId is
-created in LargePersonGroup - Create. Parameter personGroupId and
-largePersonGroupId should not be provided at the same time.</p></li>
-<li><p><strong>person_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Specify a certain person in a person group or
-a large person group. personId is created in PersonGroup Person - Create
-or LargePersonGroup Person - Create.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.VerifyFaceToFaceRequest">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">VerifyFaceToFaceRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_id1: str</em>, <em class="sig-param">face_id2: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/verify_face_to_face_request_py3.html#VerifyFaceToFaceRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.VerifyFaceToFaceRequest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Request body for face to face verification.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>face_id1</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. FaceId of the first face, comes from Face -
-Detect</p></li>
-<li><p><strong>face_id2</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. FaceId of the second face, comes from Face -
-Detect</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.VerifyResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">VerifyResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">is_identical: bool</em>, <em class="sig-param">confidence: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/verify_result_py3.html#VerifyResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.VerifyResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Result of the verify operation.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>is_identical</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Required. True if the two faces belong to the same
-person or the face belongs to the person, otherwise false.</p></li>
-<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Required. A number indicates the similarity confidence
-of whether two faces belong to the same person, or whether the face
-belongs to the person. By default, isIdentical is set to True if
-similarity confidence is greater than or equal to 0.5. This is useful for
-advanced users to override “isIdentical” and fine-tune the result on their
-own data.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.PersistedFace">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">PersistedFace</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">persisted_face_id: str</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/persisted_face_py3.html#PersistedFace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.PersistedFace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>PersonFace object.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>persisted_face_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The persistedFaceId of the target
-face, which is persisted and will not expire. Different from faceId
-created by Face - Detect and will expire in 24 hours after the detection
-call.</p></li>
-<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User-provided data attached to the face. The size limit
-is 1KB.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.FaceList">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FaceList</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_list_id: str</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">persisted_faces=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_list_py3.html#FaceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FaceList" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.vision.face.models.meta_data_contract_py3.MetaDataContract</span></code></p>
-<p>Face list object.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User defined name, maximum length is 128.</p></li>
-<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data. Length should not exceed 16KB.</p></li>
-<li><p><strong>recognition_model</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.RecognitionModel" title="azure.cognitiveservices.vision.face.models.RecognitionModel"><em>RecognitionModel</em></a>) – Possible values include: ‘recognition_01’,
-‘recognition_02’. Default value: “recognition_01” .</p></li>
-<li><p><strong>face_list_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. FaceListId of the target face list.</p></li>
-<li><p><strong>persisted_faces</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.PersistedFace" title="azure.cognitiveservices.vision.face.models.PersistedFace"><em>PersistedFace</em></a><em>]</em>) – Persisted faces within the face list.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.PersonGroup">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">PersonGroup</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">person_group_id: str</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/person_group_py3.html#PersonGroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.PersonGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.vision.face.models.meta_data_contract_py3.MetaDataContract</span></code></p>
-<p>Person group object.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User defined name, maximum length is 128.</p></li>
-<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data. Length should not exceed 16KB.</p></li>
-<li><p><strong>recognition_model</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.RecognitionModel" title="azure.cognitiveservices.vision.face.models.RecognitionModel"><em>RecognitionModel</em></a>) – Possible values include: ‘recognition_01’,
-‘recognition_02’. Default value: “recognition_01” .</p></li>
-<li><p><strong>person_group_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. PersonGroupId of the target person
-group.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.Person">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Person</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">person_id: str</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">persisted_face_ids=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/person_py3.html#Person"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Person" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.vision.face.models.name_and_user_data_contract_py3.NameAndUserDataContract</span></code></p>
-<p>Person object.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User defined name, maximum length is 128.</p></li>
-<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data. Length should not exceed 16KB.</p></li>
-<li><p><strong>person_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. PersonId of the target face list.</p></li>
-<li><p><strong>persisted_face_ids</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – PersistedFaceIds of registered faces in the
-person. These persistedFaceIds are returned from Person - Add a Person
-Face, and will not expire.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Publicly reachable URL of an image</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.LargeFaceList">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">LargeFaceList</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">large_face_list_id: str</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/large_face_list_py3.html#LargeFaceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.LargeFaceList" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.vision.face.models.meta_data_contract_py3.MetaDataContract</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">LargeFaceList</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">large_face_list_id: str</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#LargeFaceList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.LargeFaceList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.vision.face.models._models_py3.MetaDataContract</span></code></p>
 <p>Large face list object.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
@@ -980,8 +813,8 @@ face list.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.LargePersonGroup">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">LargePersonGroup</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">large_person_group_id: str</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/large_person_group_py3.html#LargePersonGroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.LargePersonGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.vision.face.models.meta_data_contract_py3.MetaDataContract</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">LargePersonGroup</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">large_person_group_id: str</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#LargePersonGroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.LargePersonGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.vision.face.models._models_py3.MetaDataContract</span></code></p>
 <p>Large person group object.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
@@ -1000,64 +833,17 @@ large person groups</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.UpdateFaceRequest">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">UpdateFaceRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/update_face_request_py3.html#UpdateFaceRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.UpdateFaceRequest" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.face.models.Makeup">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Makeup</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">eye_makeup: bool = None</em>, <em class="sig-param">lip_makeup: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#Makeup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Makeup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Request to update face data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User-provided data attached to the face. The size limit
-is 1KB.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.TrainingStatus">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">TrainingStatus</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">status</em>, <em class="sig-param">created</em>, <em class="sig-param">last_action=None</em>, <em class="sig-param">last_successful_training=None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/training_status_py3.html#TrainingStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.TrainingStatus" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Training status object.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
+<p>Properties describing present makeups on a given face.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.TrainingStatusType" title="azure.cognitiveservices.vision.face.models.TrainingStatusType"><em>TrainingStatusType</em></a>) – Required. Training status: notstarted, running, succeeded,
-failed. If the training process is waiting to perform, the status is
-notstarted. If the training is ongoing, the status is running. Status
-succeed means this person group or large person group is ready for Face -
-Identify, or this large face list is ready for Face - Find Similar. Status
-failed is often caused by no person or no persisted face exist in the
-person group or large person group, or no persisted face exist in the
-large face list. Possible values include: ‘nonstarted’, ‘running’,
-‘succeeded’, ‘failed’</p></li>
-<li><p><strong>created</strong> (<em>datetime</em>) – Required. A combined UTC date and time string that
-describes the created time of the person group, large person group or
-large face list.</p></li>
-<li><p><strong>last_action</strong> (<em>datetime</em>) – A combined UTC date and time string that describes the
-last modify time of the person group, large person group or large face
-list, could be null value when the group is not successfully trained.</p></li>
-<li><p><strong>last_successful_training</strong> (<em>datetime</em>) – A combined UTC date and time string that
-describes the last successful training time of the person group, large
-person group or large face list.</p></li>
-<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Show failure message when training failed (omitted when
-training succeed).</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.NameAndUserDataContract">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">NameAndUserDataContract</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/name_and_user_data_contract_py3.html#NameAndUserDataContract"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.NameAndUserDataContract" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A combination of user defined name and user specified data for the person,
-largePersonGroup/personGroup, and largeFaceList/faceList.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User defined name, maximum length is 128.</p></li>
-<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data. Length should not exceed 16KB.</p></li>
+<li><p><strong>eye_makeup</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A boolean value describing whether eye makeup is
+present on a face.</p></li>
+<li><p><strong>lip_makeup</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A boolean value describing whether lip makeup is
+present on a face.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1065,8 +851,8 @@ largePersonGroup/personGroup, and largeFaceList/faceList.</p>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.MetaDataContract">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">MetaDataContract</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/meta_data_contract_py3.html#MetaDataContract"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.MetaDataContract" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.vision.face.models.name_and_user_data_contract_py3.NameAndUserDataContract</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">MetaDataContract</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#MetaDataContract"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.MetaDataContract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.vision.face.models._models_py3.NameAndUserDataContract</span></code></p>
 <p>A combination of user defined name and user specified data and recognition
 model name for largePersonGroup/personGroup, and largeFaceList/faceList.</p>
 <dl class="field-list simple">
@@ -1083,104 +869,54 @@ model name for largePersonGroup/personGroup, and largeFaceList/faceList.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.ApplySnapshotRequest">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">ApplySnapshotRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">object_id: str</em>, <em class="sig-param">mode='CreateNew'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/apply_snapshot_request_py3.html#ApplySnapshotRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.ApplySnapshotRequest" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.face.models.NameAndUserDataContract">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">NameAndUserDataContract</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#NameAndUserDataContract"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.NameAndUserDataContract" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Request body for applying snapshot operation.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
+<p>A combination of user defined name and user specified data for the person,
+largePersonGroup/personGroup, and largeFaceList/faceList.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. User specified target object id to be created
-from the snapshot.</p></li>
-<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.SnapshotApplyMode" title="azure.cognitiveservices.vision.face.models.SnapshotApplyMode"><em>SnapshotApplyMode</em></a>) – Snapshot applying mode. Currently only CreateNew is
-supported, which means the apply operation will fail if target
-subscription already contains an object of same type and using the same
-objectId. Users can specify the “objectId” in request body to avoid such
-conflicts. Possible values include: ‘CreateNew’. Default value:
-“CreateNew” .</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User defined name, maximum length is 128.</p></li>
+<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data. Length should not exceed 16KB.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.Snapshot">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">account: str</em>, <em class="sig-param">type</em>, <em class="sig-param">apply_scope</em>, <em class="sig-param">created_time</em>, <em class="sig-param">last_update_time</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/snapshot_py3.html#Snapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Snapshot" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.face.models.Noise">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Noise</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">noise_level=None</em>, <em class="sig-param">value: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#Noise"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Noise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Snapshot object.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
+<p>Properties describing noise level of the image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Snapshot id.</p></li>
-<li><p><strong>account</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Azure Cognitive Service Face account id of the
-subscriber who created the snapshot by Snapshot - Take.</p></li>
-<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.SnapshotObjectType" title="azure.cognitiveservices.vision.face.models.SnapshotObjectType"><em>SnapshotObjectType</em></a>) – Required. Type of the source object in the snapshot,
-specified by the subscriber who created the snapshot when calling Snapshot
-- Take. Currently FaceList, PersonGroup, LargeFaceList and
-LargePersonGroup are supported. Possible values include: ‘FaceList’,
-‘LargeFaceList’, ‘LargePersonGroup’, ‘PersonGroup’</p></li>
-<li><p><strong>apply_scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. Array of the target Face subscription ids
-for the snapshot, specified by the user who created the snapshot when
-calling Snapshot - Take. For each snapshot, only subscriptions included in
-the applyScope of Snapshot - Take can apply it.</p></li>
-<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data about the snapshot for any purpose.
-Length should not exceed 16KB.</p></li>
-<li><p><strong>created_time</strong> (<em>datetime</em>) – Required. A combined UTC date and time string that
-describes the created time of the snapshot. E.g.
-2018-12-25T11:41:02.2331413Z.</p></li>
-<li><p><strong>last_update_time</strong> (<em>datetime</em>) – Required. A combined UTC date and time string
-that describes the last time when the snapshot was created or updated by
-Snapshot - Update. E.g. 2018-12-25T11:51:27.8705696Z.</p></li>
+<li><p><strong>noise_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.NoiseLevel" title="azure.cognitiveservices.vision.face.models.NoiseLevel"><em>NoiseLevel</em></a>) – An enum value indicating level of noise. Possible
+values include: ‘Low’, ‘Medium’, ‘High’</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – A number indicating level of noise level ranging from 0 to
+1. [0, 0.25) is under exposure. [0.25, 0.75) is good exposure. [0.75, 1]
+is over exposure. [0, 0.3) is low noise level. [0.3, 0.7) is medium noise
+level. [0.7, 1] is high noise level.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.TakeSnapshotRequest">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">TakeSnapshotRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type</em>, <em class="sig-param">object_id: str</em>, <em class="sig-param">apply_scope</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/take_snapshot_request_py3.html#TakeSnapshotRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.TakeSnapshotRequest" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.face.models.Occlusion">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Occlusion</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">forehead_occluded: bool = None</em>, <em class="sig-param">eye_occluded: bool = None</em>, <em class="sig-param">mouth_occluded: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#Occlusion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Occlusion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Request body for taking snapshot operation.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
+<p>Properties describing occlusions on a given face.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.SnapshotObjectType" title="azure.cognitiveservices.vision.face.models.SnapshotObjectType"><em>SnapshotObjectType</em></a>) – Required. User specified type for the source object to take
-snapshot from. Currently FaceList, PersonGroup, LargeFaceList and
-LargePersonGroup are supported. Possible values include: ‘FaceList’,
-‘LargeFaceList’, ‘LargePersonGroup’, ‘PersonGroup’</p></li>
-<li><p><strong>object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. User specified source object id to take
-snapshot from.</p></li>
-<li><p><strong>apply_scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. User specified array of target Face
-subscription ids for the snapshot. For each snapshot, only subscriptions
-included in the applyScope of Snapshot - Take can apply it.</p></li>
-<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data about the snapshot for any purpose.
-Length should not exceed 16KB.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.UpdateSnapshotRequest">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">UpdateSnapshotRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">apply_scope=None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/update_snapshot_request_py3.html#UpdateSnapshotRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.UpdateSnapshotRequest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Request body for updating a snapshot, with a combination of user defined
-apply scope and user specified data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>apply_scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Array of the target Face subscription ids for the
-snapshot, specified by the user who created the snapshot when calling
-Snapshot - Take. For each snapshot, only subscriptions included in the
-applyScope of Snapshot - Take can apply it.</p></li>
-<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data about the snapshot for any purpose.
-Length should not exceed 16KB.</p></li>
+<li><p><strong>forehead_occluded</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A boolean value indicating whether forehead is
+occluded.</p></li>
+<li><p><strong>eye_occluded</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A boolean value indicating whether eyes are occluded.</p></li>
+<li><p><strong>mouth_occluded</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A boolean value indicating whether the mouth is
+occluded.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1188,7 +924,7 @@ Length should not exceed 16KB.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.OperationStatus">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">OperationStatus</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">status</em>, <em class="sig-param">created_time</em>, <em class="sig-param">last_action_time=None</em>, <em class="sig-param">resource_location: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/operation_status_py3.html#OperationStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.OperationStatus" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">OperationStatus</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">status</em>, <em class="sig-param">created_time</em>, <em class="sig-param">last_action_time=None</em>, <em class="sig-param">resource_location: str = None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#OperationStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.OperationStatus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Operation status object. Operation refers to the asynchronous backend task
 including taking a snapshot and applying a snapshot.</p>
@@ -1228,21 +964,285 @@ operation succeeds).</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.face.models.ImageUrl">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">ImageUrl</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">url: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/image_url_py3.html#ImageUrl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.ImageUrl" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.face.models.PersistedFace">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">PersistedFace</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">persisted_face_id: str</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#PersistedFace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.PersistedFace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>ImageUrl.</p>
+<p>PersonFace object.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Publicly reachable URL of an image</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>persisted_face_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The persistedFaceId of the target
+face, which is persisted and will not expire. Different from faceId
+created by Face - Detect and will expire in 24 hours after the detection
+call.</p></li>
+<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User-provided data attached to the face. The size limit
+is 1KB.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.Person">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Person</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">person_id: str</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">persisted_face_ids=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#Person"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Person" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.vision.face.models._models_py3.NameAndUserDataContract</span></code></p>
+<p>Person object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User defined name, maximum length is 128.</p></li>
+<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data. Length should not exceed 16KB.</p></li>
+<li><p><strong>person_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. PersonId of the target face list.</p></li>
+<li><p><strong>persisted_face_ids</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – PersistedFaceIds of registered faces in the
+person. These persistedFaceIds are returned from Person - Add a Person
+Face, and will not expire.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.PersonGroup">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">PersonGroup</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">person_group_id: str</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">recognition_model='recognition_01'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#PersonGroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.PersonGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.vision.face.models._models_py3.MetaDataContract</span></code></p>
+<p>Person group object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User defined name, maximum length is 128.</p></li>
+<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data. Length should not exceed 16KB.</p></li>
+<li><p><strong>recognition_model</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.RecognitionModel" title="azure.cognitiveservices.vision.face.models.RecognitionModel"><em>RecognitionModel</em></a>) – Possible values include: ‘recognition_01’,
+‘recognition_02’. Default value: “recognition_01” .</p></li>
+<li><p><strong>person_group_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. PersonGroupId of the target person
+group.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.SimilarFace">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">SimilarFace</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">confidence: float</em>, <em class="sig-param">face_id: str = None</em>, <em class="sig-param">persisted_face_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#SimilarFace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.SimilarFace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Response body for find similar face operation.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – FaceId of candidate face when find by faceIds. faceId is
+created by Face - Detect and will expire 24 hours after the detection call</p></li>
+<li><p><strong>persisted_face_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – PersistedFaceId of candidate face when find by
+faceListId. persistedFaceId in face list is persisted and will not expire.
+As showed in below response</p></li>
+<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Required. Similarity confidence of the candidate face.
+The higher confidence, the more similar. Range between [0,1].</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.Snapshot">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">id: str</em>, <em class="sig-param">account: str</em>, <em class="sig-param">type</em>, <em class="sig-param">apply_scope</em>, <em class="sig-param">created_time</em>, <em class="sig-param">last_update_time</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#Snapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Snapshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Snapshot object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Snapshot id.</p></li>
+<li><p><strong>account</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Azure Cognitive Service Face account id of the
+subscriber who created the snapshot by Snapshot - Take.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.SnapshotObjectType" title="azure.cognitiveservices.vision.face.models.SnapshotObjectType"><em>SnapshotObjectType</em></a>) – Required. Type of the source object in the snapshot,
+specified by the subscriber who created the snapshot when calling Snapshot
+- Take. Currently FaceList, PersonGroup, LargeFaceList and
+LargePersonGroup are supported. Possible values include: ‘FaceList’,
+‘LargeFaceList’, ‘LargePersonGroup’, ‘PersonGroup’</p></li>
+<li><p><strong>apply_scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. Array of the target Face subscription ids
+for the snapshot, specified by the user who created the snapshot when
+calling Snapshot - Take. For each snapshot, only subscriptions included in
+the applyScope of Snapshot - Take can apply it.</p></li>
+<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data about the snapshot for any purpose.
+Length should not exceed 16KB.</p></li>
+<li><p><strong>created_time</strong> (<em>datetime</em>) – Required. A combined UTC date and time string that
+describes the created time of the snapshot. E.g.
+2018-12-25T11:41:02.2331413Z.</p></li>
+<li><p><strong>last_update_time</strong> (<em>datetime</em>) – Required. A combined UTC date and time string
+that describes the last time when the snapshot was created or updated by
+Snapshot - Update. E.g. 2018-12-25T11:51:27.8705696Z.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.TakeSnapshotRequest">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">TakeSnapshotRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">type</em>, <em class="sig-param">object_id: str</em>, <em class="sig-param">apply_scope</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#TakeSnapshotRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.TakeSnapshotRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Request body for taking snapshot operation.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.SnapshotObjectType" title="azure.cognitiveservices.vision.face.models.SnapshotObjectType"><em>SnapshotObjectType</em></a>) – Required. User specified type for the source object to take
+snapshot from. Currently FaceList, PersonGroup, LargeFaceList and
+LargePersonGroup are supported. Possible values include: ‘FaceList’,
+‘LargeFaceList’, ‘LargePersonGroup’, ‘PersonGroup’</p></li>
+<li><p><strong>object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. User specified source object id to take
+snapshot from.</p></li>
+<li><p><strong>apply_scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. User specified array of target Face
+subscription ids for the snapshot. For each snapshot, only subscriptions
+included in the applyScope of Snapshot - Take can apply it.</p></li>
+<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data about the snapshot for any purpose.
+Length should not exceed 16KB.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.TrainingStatus">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">TrainingStatus</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">status</em>, <em class="sig-param">created</em>, <em class="sig-param">last_action=None</em>, <em class="sig-param">last_successful_training=None</em>, <em class="sig-param">message: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#TrainingStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.TrainingStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Training status object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.face.models.TrainingStatusType" title="azure.cognitiveservices.vision.face.models.TrainingStatusType"><em>TrainingStatusType</em></a>) – Required. Training status: notstarted, running, succeeded,
+failed. If the training process is waiting to perform, the status is
+notstarted. If the training is ongoing, the status is running. Status
+succeed means this person group or large person group is ready for Face -
+Identify, or this large face list is ready for Face - Find Similar. Status
+failed is often caused by no person or no persisted face exist in the
+person group or large person group, or no persisted face exist in the
+large face list. Possible values include: ‘nonstarted’, ‘running’,
+‘succeeded’, ‘failed’</p></li>
+<li><p><strong>created</strong> (<em>datetime</em>) – Required. A combined UTC date and time string that
+describes the created time of the person group, large person group or
+large face list.</p></li>
+<li><p><strong>last_action</strong> (<em>datetime</em>) – A combined UTC date and time string that describes the
+last modify time of the person group, large person group or large face
+list, could be null value when the group is not successfully trained.</p></li>
+<li><p><strong>last_successful_training</strong> (<em>datetime</em>) – A combined UTC date and time string that
+describes the last successful training time of the person group, large
+person group or large face list.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Show failure message when training failed (omitted when
+training succeed).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.UpdateFaceRequest">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">UpdateFaceRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#UpdateFaceRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.UpdateFaceRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Request to update face data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User-provided data attached to the face. The size limit
+is 1KB.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.UpdateSnapshotRequest">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">UpdateSnapshotRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">apply_scope=None</em>, <em class="sig-param">user_data: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#UpdateSnapshotRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.UpdateSnapshotRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Request body for updating a snapshot, with a combination of user defined
+apply scope and user specified data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>apply_scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Array of the target Face subscription ids for the
+snapshot, specified by the user who created the snapshot when calling
+Snapshot - Take. For each snapshot, only subscriptions included in the
+applyScope of Snapshot - Take can apply it.</p></li>
+<li><p><strong>user_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User specified data about the snapshot for any purpose.
+Length should not exceed 16KB.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.VerifyFaceToFaceRequest">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">VerifyFaceToFaceRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_id1: str</em>, <em class="sig-param">face_id2: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#VerifyFaceToFaceRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.VerifyFaceToFaceRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Request body for face to face verification.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face_id1</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. FaceId of the first face, comes from Face -
+Detect</p></li>
+<li><p><strong>face_id2</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. FaceId of the second face, comes from Face -
+Detect</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.VerifyFaceToPersonRequest">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">VerifyFaceToPersonRequest</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">face_id: str</em>, <em class="sig-param">person_id: str</em>, <em class="sig-param">person_group_id: str = None</em>, <em class="sig-param">large_person_group_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#VerifyFaceToPersonRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.VerifyFaceToPersonRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Request body for face to person verification.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. FaceId of the face, comes from Face - Detect</p></li>
+<li><p><strong>person_group_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Using existing personGroupId and personId for fast
+loading a specified person. personGroupId is created in PersonGroup -
+Create. Parameter personGroupId and largePersonGroupId should not be
+provided at the same time.</p></li>
+<li><p><strong>large_person_group_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Using existing largePersonGroupId and
+personId for fast loading a specified person. largePersonGroupId is
+created in LargePersonGroup - Create. Parameter personGroupId and
+largePersonGroupId should not be provided at the same time.</p></li>
+<li><p><strong>person_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Specify a certain person in a person group or
+a large person group. personId is created in PersonGroup Person - Create
+or LargePersonGroup Person - Create.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.VerifyResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">VerifyResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">is_identical: bool</em>, <em class="sig-param">confidence: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_models_py3.html#VerifyResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.VerifyResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Result of the verify operation.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>is_identical</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Required. True if the two faces belong to the same
+person or the face belongs to the person, otherwise false.</p></li>
+<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Required. A number indicates the similarity confidence
+of whether two faces belong to the same person, or whether the face
+belongs to the person. By default, isIdentical is set to True if
+similarity confidence is greater than or equal to 0.5. This is useful for
+advanced users to override “isIdentical” and fine-tune the result on their
+own data.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.RecognitionModel">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">RecognitionModel</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#RecognitionModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.RecognitionModel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">RecognitionModel</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#RecognitionModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.RecognitionModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1259,7 +1259,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.Gender">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Gender</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#Gender"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Gender" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">Gender</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#Gender"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.Gender" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1276,7 +1276,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.GlassesType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">GlassesType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#GlassesType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.GlassesType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">GlassesType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#GlassesType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.GlassesType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1303,7 +1303,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.HairColorType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">HairColorType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#HairColorType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.HairColorType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">HairColorType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#HairColorType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.HairColorType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1350,7 +1350,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.AccessoryType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">AccessoryType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#AccessoryType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.AccessoryType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">AccessoryType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#AccessoryType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.AccessoryType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1372,7 +1372,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.BlurLevel">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">BlurLevel</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#BlurLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.BlurLevel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">BlurLevel</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#BlurLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.BlurLevel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1394,7 +1394,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.ExposureLevel">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">ExposureLevel</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#ExposureLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.ExposureLevel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">ExposureLevel</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#ExposureLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.ExposureLevel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1416,7 +1416,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.NoiseLevel">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">NoiseLevel</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#NoiseLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.NoiseLevel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">NoiseLevel</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#NoiseLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.NoiseLevel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1438,7 +1438,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.FindSimilarMatchMode">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FindSimilarMatchMode</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#FindSimilarMatchMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FindSimilarMatchMode" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FindSimilarMatchMode</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#FindSimilarMatchMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FindSimilarMatchMode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1455,7 +1455,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.TrainingStatusType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">TrainingStatusType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#TrainingStatusType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.TrainingStatusType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">TrainingStatusType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#TrainingStatusType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.TrainingStatusType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1482,7 +1482,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.SnapshotApplyMode">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">SnapshotApplyMode</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#SnapshotApplyMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.SnapshotApplyMode" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">SnapshotApplyMode</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#SnapshotApplyMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.SnapshotApplyMode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1494,7 +1494,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.SnapshotObjectType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">SnapshotObjectType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#SnapshotObjectType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.SnapshotObjectType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">SnapshotObjectType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#SnapshotObjectType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.SnapshotObjectType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1521,7 +1521,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.OperationStatusType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">OperationStatusType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#OperationStatusType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.OperationStatusType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">OperationStatusType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#OperationStatusType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.OperationStatusType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1548,7 +1548,7 @@ operation succeeds).</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.models.FaceAttributeType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FaceAttributeType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/face_client_enums.html#FaceAttributeType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FaceAttributeType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">FaceAttributeType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#FaceAttributeType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FaceAttributeType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1619,6 +1619,23 @@ operation succeeds).</p></li>
 <dl class="attribute">
 <dt id="azure.cognitiveservices.vision.face.models.FaceAttributeType.smile">
 <code class="sig-name descname">smile</code><em class="property"> = 'smile'</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.FaceAttributeType.smile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.models.DetectionModel">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.models.</code><code class="sig-name descname">DetectionModel</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/models/_face_client_enums.html#DetectionModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.DetectionModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.vision.face.models.DetectionModel.detection_01">
+<code class="sig-name descname">detection_01</code><em class="property"> = 'detection_01'</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.DetectionModel.detection_01" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.vision.face.models.DetectionModel.detection_02">
+<code class="sig-name descname">detection_02</code><em class="property"> = 'detection_02'</em><a class="headerlink" href="#azure.cognitiveservices.vision.face.models.DetectionModel.detection_02" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

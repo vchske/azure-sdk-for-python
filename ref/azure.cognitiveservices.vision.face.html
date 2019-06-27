@@ -294,13 +294,13 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.cognitiveservices.vision.face" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.face.FaceClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.</code><code class="sig-name descname">FaceClient</code><span class="sig-paren">(</span><em class="sig-param">endpoint</em>, <em class="sig-param">credentials</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/face_client.html#FaceClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.FaceClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.</code><code class="sig-name descname">FaceClient</code><span class="sig-paren">(</span><em class="sig-param">endpoint</em>, <em class="sig-param">credentials</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/_face_client.html#FaceClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.FaceClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>An API for face detection, verification, and identification.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>FaceClientConfiguration</em>) – Configuration for client.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="#azure.cognitiveservices.vision.face.FaceClientConfiguration" title="azure.cognitiveservices.vision.face.FaceClientConfiguration"><em>FaceClientConfiguration</em></a>) – Configuration for client.</p></li>
 <li><p><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.models.html#azure.cognitiveservices.search.customimagesearch.models.ImageContent.face" title="azure.cognitiveservices.search.customimagesearch.models.ImageContent.face"><strong>face</strong></a> (<a class="reference internal" href="azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.FaceOperations" title="azure.cognitiveservices.vision.face.operations.FaceOperations"><em>azure.cognitiveservices.vision.face.operations.FaceOperations</em></a>) – Face operations</p></li>
 <li><p><strong>person_group_person</strong> (<a class="reference internal" href="azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations" title="azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations"><em>azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations</em></a>) – PersonGroupPerson operations</p></li>
 <li><p><a class="reference internal" href="azure.cognitiveservices.vision.face.models.html#azure.cognitiveservices.vision.face.models.SnapshotObjectType.person_group" title="azure.cognitiveservices.vision.face.models.SnapshotObjectType.person_group"><strong>person_group</strong></a> (<a class="reference internal" href="azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.PersonGroupOperations" title="azure.cognitiveservices.vision.face.operations.PersonGroupOperations"><em>azure.cognitiveservices.vision.face.operations.PersonGroupOperations</em></a>) – PersonGroup operations</p></li>
@@ -313,6 +313,25 @@
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Supported Cognitive Services endpoints (protocol and
+hostname, for example: <a class="reference external" href="https://westus.api.cognitive.microsoft.com">https://westus.api.cognitive.microsoft.com</a>).</p></li>
+<li><p><strong>credentials</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)"><em>None</em></a>) – Subscription credentials which uniquely identify
+client subscription.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.face.FaceClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.face.</code><code class="sig-name descname">FaceClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">endpoint</em>, <em class="sig-param">credentials</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/face/_configuration.html#FaceClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.face.FaceClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.configuration.Configuration</span></code></p>
+<p>Configuration for FaceClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Supported Cognitive Services endpoints (protocol and
 hostname, for example: <a class="reference external" href="https://westus.api.cognitive.microsoft.com">https://westus.api.cognitive.microsoft.com</a>).</p></li>
 <li><p><strong>credentials</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)"><em>None</em></a>) – Subscription credentials which uniquely identify
