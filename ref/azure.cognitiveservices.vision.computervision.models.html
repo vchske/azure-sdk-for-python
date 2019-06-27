@@ -284,91 +284,8 @@
   <div class="section" id="module-azure.cognitiveservices.vision.computervision.models">
 <span id="azure-cognitiveservices-vision-computervision-models-module"></span><h1>azure.cognitiveservices.vision.computervision.models module<a class="headerlink" href="#module-azure.cognitiveservices.vision.computervision.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.FaceRectangle">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">FaceRectangle</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">left: int = None</em>, <em class="sig-param">top: int = None</em>, <em class="sig-param">width: int = None</em>, <em class="sig-param">height: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/face_rectangle_py3.html#FaceRectangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.FaceRectangle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An object describing face rectangle.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>left</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – X-coordinate of the top left point of the face, in pixels.</p></li>
-<li><p><strong>top</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Y-coordinate of the top left point of the face, in pixels.</p></li>
-<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Width measured from the top-left point of the face, in
-pixels.</p></li>
-<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Height measured from the top-left point of the face, in
-pixels.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.CelebritiesModel">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">CelebritiesModel</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">face_rectangle=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/celebrities_model_py3.html#CelebritiesModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.CelebritiesModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An object describing possible celebrity identification.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the celebrity.</p></li>
-<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Confidence level for the celebrity recognition as a
-value ranging from 0 to 1.</p></li>
-<li><p><strong>face_rectangle</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.FaceRectangle" title="azure.cognitiveservices.vision.computervision.models.FaceRectangle"><em>FaceRectangle</em></a>) – Location of the identified face in the image.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.LandmarksModel">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">LandmarksModel</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/landmarks_model_py3.html#LandmarksModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.LandmarksModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A landmark recognized in the image.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the landmark.</p></li>
-<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Confidence level for the landmark recognition as a
-value ranging from 0 to 1.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.CategoryDetail">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">CategoryDetail</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">celebrities=None</em>, <em class="sig-param">landmarks=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/category_detail_py3.html#CategoryDetail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.CategoryDetail" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An object describing additional category details.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>celebrities</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.CelebritiesModel" title="azure.cognitiveservices.vision.computervision.models.CelebritiesModel"><em>CelebritiesModel</em></a><em>]</em>) – An array of celebrities if any identified.</p></li>
-<li><p><strong>landmarks</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.LandmarksModel" title="azure.cognitiveservices.vision.computervision.models.LandmarksModel"><em>LandmarksModel</em></a><em>]</em>) – An array of landmarks if any identified.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.Category">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">Category</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">score: float = None</em>, <em class="sig-param">detail=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/category_py3.html#Category"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.Category" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An object describing identified category.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the category.</p></li>
-<li><p><strong>score</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Scoring of the category.</p></li>
-<li><p><strong>detail</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.CategoryDetail" title="azure.cognitiveservices.vision.computervision.models.CategoryDetail"><em>CategoryDetail</em></a>) – Details of the identified category.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.AdultInfo">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">AdultInfo</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">is_adult_content: bool = None</em>, <em class="sig-param">is_racy_content: bool = None</em>, <em class="sig-param">adult_score: float = None</em>, <em class="sig-param">racy_score: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/adult_info_py3.html#AdultInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.AdultInfo" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">AdultInfo</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">is_adult_content: bool = None</em>, <em class="sig-param">is_racy_content: bool = None</em>, <em class="sig-param">adult_score: float = None</em>, <em class="sig-param">racy_score: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#AdultInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.AdultInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>An object describing whether the image contains adult-oriented content
 and/or is racy.</p>
@@ -388,8 +305,110 @@ image.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.AreaOfInterestResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">AreaOfInterestResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#AreaOfInterestResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.AreaOfInterestResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Result of AreaOfInterest operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>area_of_interest</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.BoundingRect" title="azure.cognitiveservices.vision.computervision.models.BoundingRect"><em>BoundingRect</em></a>) – A bounding box for an area of interest inside an
+image.</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>request_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id of the REST API request.</p></li>
+<li><p><strong>metadata</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ImageMetadata" title="azure.cognitiveservices.vision.computervision.models.ImageMetadata"><em>ImageMetadata</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.BoundingRect">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">BoundingRect</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">x: int = None</em>, <em class="sig-param">y: int = None</em>, <em class="sig-param">w: int = None</em>, <em class="sig-param">h: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#BoundingRect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.BoundingRect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A bounding box for an area inside an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – X-coordinate of the top left point of the area, in pixels.</p></li>
+<li><p><strong>y</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Y-coordinate of the top left point of the area, in pixels.</p></li>
+<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Width measured from the top-left point of the area, in pixels.</p></li>
+<li><p><strong>h</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Height measured from the top-left point of the area, in pixels.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.Category">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">Category</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">score: float = None</em>, <em class="sig-param">detail=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#Category"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.Category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An object describing identified category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the category.</p></li>
+<li><p><strong>score</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Scoring of the category.</p></li>
+<li><p><strong>detail</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.CategoryDetail" title="azure.cognitiveservices.vision.computervision.models.CategoryDetail"><em>CategoryDetail</em></a>) – Details of the identified category.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.CategoryDetail">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">CategoryDetail</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">celebrities=None</em>, <em class="sig-param">landmarks=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#CategoryDetail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.CategoryDetail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An object describing additional category details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>celebrities</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.CelebritiesModel" title="azure.cognitiveservices.vision.computervision.models.CelebritiesModel"><em>CelebritiesModel</em></a><em>]</em>) – An array of celebrities if any identified.</p></li>
+<li><p><strong>landmarks</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.LandmarksModel" title="azure.cognitiveservices.vision.computervision.models.LandmarksModel"><em>LandmarksModel</em></a><em>]</em>) – An array of landmarks if any identified.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.CelebritiesModel">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">CelebritiesModel</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">face_rectangle=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#CelebritiesModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.CelebritiesModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An object describing possible celebrity identification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the celebrity.</p></li>
+<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Confidence level for the celebrity recognition as a
+value ranging from 0 to 1.</p></li>
+<li><p><strong>face_rectangle</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.FaceRectangle" title="azure.cognitiveservices.vision.computervision.models.FaceRectangle"><em>FaceRectangle</em></a>) – Location of the identified face in the image.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.CelebrityResults">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">CelebrityResults</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">celebrities=None</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#CelebrityResults"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.CelebrityResults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Result of domain-specific classifications for the domain of celebrities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>celebrities</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.CelebritiesModel" title="azure.cognitiveservices.vision.computervision.models.CelebritiesModel"><em>CelebritiesModel</em></a><em>]</em>) – List of celebrities recognized in the image.</p></li>
+<li><p><strong>request_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id of the REST API request.</p></li>
+<li><p><strong>metadata</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ImageMetadata" title="azure.cognitiveservices.vision.computervision.models.ImageMetadata"><em>ImageMetadata</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.ColorInfo">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ColorInfo</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">dominant_color_foreground: str = None</em>, <em class="sig-param">dominant_color_background: str = None</em>, <em class="sig-param">dominant_colors=None</em>, <em class="sig-param">accent_color: str = None</em>, <em class="sig-param">is_bw_img: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/color_info_py3.html#ColorInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ColorInfo" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ColorInfo</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">dominant_color_foreground: str = None</em>, <em class="sig-param">dominant_color_background: str = None</em>, <em class="sig-param">dominant_colors=None</em>, <em class="sig-param">accent_color: str = None</em>, <em class="sig-param">is_bw_img: bool = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ColorInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ColorInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>An object providing additional metadata describing color attributes.</p>
 <dl class="field-list simple">
@@ -406,118 +425,52 @@ image.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.ImageType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageType</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">clip_art_type: int = None</em>, <em class="sig-param">line_drawing_type: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/image_type_py3.html#ImageType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageType" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.computervision.models.ComputerVisionError">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ComputerVisionError</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code</em>, <em class="sig-param">message: str</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ComputerVisionError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ComputerVisionError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An object providing possible image types and matching confidence levels.</p>
+<p>Details about the API request error.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>clip_art_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Confidence level that the image is a clip art.</p></li>
-<li><p><strong>line_drawing_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Confidence level that the image is a line
-drawing.</p></li>
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Required. The error code.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. A message explaining the error reported by the
+service.</p></li>
+<li><p><strong>request_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A unique request identifier.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.cognitiveservices.vision.computervision.models.ComputerVisionErrorException">
+<em class="property">exception </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ComputerVisionErrorException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ComputerVisionErrorException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ComputerVisionErrorException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘ComputerVisionError’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.ImageTag">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageTag</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">hint: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/image_tag_py3.html#ImageTag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageTag" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.computervision.models.DetectedBrand">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">DetectedBrand</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#DetectedBrand"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.DetectedBrand" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An entity observation in the image, along with the confidence score.</p>
+<p>A brand detected in an image.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the entity.</p></li>
-<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The level of confidence that the entity was observed.</p></li>
-<li><p><strong>hint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional hint/details for this tag.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.ImageCaption">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageCaption</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">text: str = None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/image_caption_py3.html#ImageCaption"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageCaption" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An image caption, i.e. a brief description of what the image depicts.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The text of the caption.</p></li>
-<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The level of confidence the service has in the caption.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.ImageDescriptionDetails">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageDescriptionDetails</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">captions=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/image_description_details_py3.html#ImageDescriptionDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageDescriptionDetails" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A collection of content tags, along with a list of captions sorted by
-confidence level, and image metadata.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A collection of image tags.</p></li>
-<li><p><strong>captions</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ImageCaption" title="azure.cognitiveservices.vision.computervision.models.ImageCaption"><em>ImageCaption</em></a><em>]</em>) – A list of captions, sorted by confidence level.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.FaceDescription">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">FaceDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">age: int = None</em>, <em class="sig-param">gender=None</em>, <em class="sig-param">face_rectangle=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/face_description_py3.html#FaceDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.FaceDescription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An object describing a face identified in the image.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>age</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Possible age of the face.</p></li>
-<li><p><strong>gender</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.Gender" title="azure.cognitiveservices.vision.computervision.models.Gender"><em>Gender</em></a>) – Possible gender of the face. Possible values include:
-‘Male’, ‘Female’</p></li>
-<li><p><strong>face_rectangle</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.FaceRectangle" title="azure.cognitiveservices.vision.computervision.models.FaceRectangle"><em>FaceRectangle</em></a>) – Rectangle in the image containing the identified
-face.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.BoundingRect">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">BoundingRect</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">x: int = None</em>, <em class="sig-param">y: int = None</em>, <em class="sig-param">w: int = None</em>, <em class="sig-param">h: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/bounding_rect_py3.html#BoundingRect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.BoundingRect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A bounding box for an area inside an image.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – X-coordinate of the top left point of the area, in pixels.</p></li>
-<li><p><strong>y</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Y-coordinate of the top left point of the area, in pixels.</p></li>
-<li><p><strong>w</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Width measured from the top-left point of the area, in pixels.</p></li>
-<li><p><strong>h</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Height measured from the top-left point of the area, in pixels.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.ObjectHierarchy">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ObjectHierarchy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">object_property: str = None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/object_hierarchy_py3.html#ObjectHierarchy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ObjectHierarchy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An object detected inside an image.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>object_property</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Label for the object.</p></li>
-<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Confidence score of having observed the object in the
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Label for the brand.</p></li>
+<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Confidence score of having observed the brand in the
 image, as a value ranging from 0 to 1.</p></li>
-<li><p><strong>parent</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ObjectHierarchy" title="azure.cognitiveservices.vision.computervision.models.ObjectHierarchy"><em>ObjectHierarchy</em></a>) – The parent object, from a taxonomy perspective.
-The parent object is a more generic form of this object.  For example, a
-‘bulldog’ would have a parent of ‘dog’.</p></li>
+<li><p><strong>rectangle</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.BoundingRect" title="azure.cognitiveservices.vision.computervision.models.BoundingRect"><em>BoundingRect</em></a>) – Approximate location of the detected brand.</p></li>
 </ul>
 </dd>
 </dl>
@@ -525,7 +478,7 @@ The parent object is a more generic form of this object.  For example, a
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.DetectedObject">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">DetectedObject</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">object_property: str = None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/detected_object_py3.html#DetectedObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.DetectedObject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">DetectedObject</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">object_property: str = None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#DetectedObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.DetectedObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>An object detected in an image.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -548,35 +501,75 @@ The parent object is a more generic form of this object.  For example, a
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.DetectedBrand">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">DetectedBrand</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/detected_brand_py3.html#DetectedBrand"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.DetectedBrand" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.computervision.models.DetectResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">DetectResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#DetectResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.DetectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A brand detected in an image.</p>
+<p>Result of a DetectImage call.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Label for the brand.</p></li>
-<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Confidence score of having observed the brand in the
-image, as a value ranging from 0 to 1.</p></li>
-<li><p><strong>rectangle</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.BoundingRect" title="azure.cognitiveservices.vision.computervision.models.BoundingRect"><em>BoundingRect</em></a>) – Approximate location of the detected brand.</p></li>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.objects" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.objects"><strong>objects</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.DetectedObject" title="azure.cognitiveservices.vision.computervision.models.DetectedObject"><em>DetectedObject</em></a><em>]</em>) – An array of detected objects.</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>request_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id of the REST API request.</p></li>
+<li><p><strong>metadata</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ImageMetadata" title="azure.cognitiveservices.vision.computervision.models.ImageMetadata"><em>ImageMetadata</em></a>) – </p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.ImageMetadata">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageMetadata</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">width: int = None</em>, <em class="sig-param">height: int = None</em>, <em class="sig-param">format: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/image_metadata_py3.html#ImageMetadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageMetadata" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.computervision.models.DomainModelResults">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">DomainModelResults</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">result=None</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#DomainModelResults"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.DomainModelResults" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Image metadata.</p>
+<p>Result of image analysis using a specific domain model including additional
+metadata.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Image width, in pixels.</p></li>
-<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Image height, in pixels.</p></li>
-<li><p><strong>format</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Image format.</p></li>
+<li><p><strong>result</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Model-specific response.</p></li>
+<li><p><strong>request_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id of the REST API request.</p></li>
+<li><p><strong>metadata</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ImageMetadata" title="azure.cognitiveservices.vision.computervision.models.ImageMetadata"><em>ImageMetadata</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.FaceDescription">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">FaceDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">age: int = None</em>, <em class="sig-param">gender=None</em>, <em class="sig-param">face_rectangle=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#FaceDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.FaceDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An object describing a face identified in the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>age</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Possible age of the face.</p></li>
+<li><p><strong>gender</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.Gender" title="azure.cognitiveservices.vision.computervision.models.Gender"><em>Gender</em></a>) – Possible gender of the face. Possible values include:
+‘Male’, ‘Female’</p></li>
+<li><p><strong>face_rectangle</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.FaceRectangle" title="azure.cognitiveservices.vision.computervision.models.FaceRectangle"><em>FaceRectangle</em></a>) – Rectangle in the image containing the identified
+face.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.FaceRectangle">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">FaceRectangle</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">left: int = None</em>, <em class="sig-param">top: int = None</em>, <em class="sig-param">width: int = None</em>, <em class="sig-param">height: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#FaceRectangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.FaceRectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An object describing face rectangle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>left</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – X-coordinate of the top left point of the face, in pixels.</p></li>
+<li><p><strong>top</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Y-coordinate of the top left point of the face, in pixels.</p></li>
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Width measured from the top-left point of the face, in
+pixels.</p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Height measured from the top-left point of the face, in
+pixels.</p></li>
 </ul>
 </dd>
 </dl>
@@ -584,7 +577,7 @@ image, as a value ranging from 0 to 1.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.ImageAnalysis">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageAnalysis</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">categories=None</em>, <em class="sig-param">adult=None</em>, <em class="sig-param">color=None</em>, <em class="sig-param">image_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">faces=None</em>, <em class="sig-param">objects=None</em>, <em class="sig-param">brands=None</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/image_analysis_py3.html#ImageAnalysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageAnalysis" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageAnalysis</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">categories=None</em>, <em class="sig-param">adult=None</em>, <em class="sig-param">color=None</em>, <em class="sig-param">image_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">faces=None</em>, <em class="sig-param">objects=None</em>, <em class="sig-param">brands=None</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ImageAnalysis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageAnalysis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Result of AnalyzeImage operation.</p>
 <dl class="field-list simple">
@@ -612,8 +605,23 @@ image.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.ImageCaption">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageCaption</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">text: str = None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ImageCaption"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageCaption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An image caption, i.e. a brief description of what the image depicts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The text of the caption.</p></li>
+<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The level of confidence the service has in the caption.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.ImageDescription">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">captions=None</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/image_description_py3.html#ImageDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">captions=None</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ImageDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A collection of content tags, along with a list of captions sorted by
 confidence level, and image metadata.</p>
@@ -630,18 +638,91 @@ confidence level, and image metadata.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.DetectResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">DetectResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/detect_result_py3.html#DetectResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.DetectResult" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.computervision.models.ImageDescriptionDetails">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageDescriptionDetails</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">captions=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ImageDescriptionDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageDescriptionDetails" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Result of a DetectImage call.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
+<p>A collection of content tags, along with a list of captions sorted by
+confidence level, and image metadata.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.objects" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.objects"><strong>objects</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.DetectedObject" title="azure.cognitiveservices.vision.computervision.models.DetectedObject"><em>DetectedObject</em></a><em>]</em>) – An array of detected objects.</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A collection of image tags.</p></li>
+<li><p><strong>captions</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ImageCaption" title="azure.cognitiveservices.vision.computervision.models.ImageCaption"><em>ImageCaption</em></a><em>]</em>) – A list of captions, sorted by confidence level.</p></li>
+</ul>
 </dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.ImageMetadata">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageMetadata</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">width: int = None</em>, <em class="sig-param">height: int = None</em>, <em class="sig-param">format: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ImageMetadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Image metadata.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Image width, in pixels.</p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Image height, in pixels.</p></li>
+<li><p><strong>format</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Image format.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.ImageTag">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageTag</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">hint: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ImageTag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An entity observation in the image, along with the confidence score.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the entity.</p></li>
+<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The level of confidence that the entity was observed.</p></li>
+<li><p><strong>hint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional hint/details for this tag.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.ImageType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageType</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">clip_art_type: int = None</em>, <em class="sig-param">line_drawing_type: int = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ImageType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An object providing possible image types and matching confidence levels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clip_art_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Confidence level that the image is a clip art.</p></li>
+<li><p><strong>line_drawing_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Confidence level that the image is a line
+drawing.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.ImageUrl">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageUrl</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">url: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ImageUrl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageUrl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>ImageUrl.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Publicly reachable URL of an image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.LandmarkResults">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">LandmarkResults</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">landmarks=None</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#LandmarkResults"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.LandmarkResults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Result of domain-specific classifications for the domain of landmarks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>landmarks</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.LandmarksModel" title="azure.cognitiveservices.vision.computervision.models.LandmarksModel"><em>LandmarksModel</em></a><em>]</em>) – List of landmarks recognized in the image.</p></li>
 <li><p><strong>request_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id of the REST API request.</p></li>
 <li><p><strong>metadata</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ImageMetadata" title="azure.cognitiveservices.vision.computervision.models.ImageMetadata"><em>ImageMetadata</em></a>) – </p></li>
 </ul>
@@ -650,8 +731,54 @@ sending a request.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.LandmarksModel">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">LandmarksModel</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#LandmarksModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.LandmarksModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A landmark recognized in the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the landmark.</p></li>
+<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Confidence level for the landmark recognition as a
+value ranging from 0 to 1.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.Line">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">Line</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">bounding_box=None</em>, <em class="sig-param">text: str = None</em>, <em class="sig-param">words=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#Line"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.Line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An object representing a recognized text line.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bounding_box</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a><em>]</em>) – Bounding box of a recognized line.</p></li>
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The text content of the line.</p></li>
+<li><p><strong>words</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.Word" title="azure.cognitiveservices.vision.computervision.models.Word"><em>Word</em></a><em>]</em>) – List of words in the text line.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.ListModelsResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ListModelsResult</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ListModelsResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ListModelsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Result of the List Domain Models operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>models_property</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ModelDescription" title="azure.cognitiveservices.vision.computervision.models.ModelDescription"><em>ModelDescription</em></a><em>]</em>) – An array of supported models.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.ModelDescription">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ModelDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">categories=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/model_description_py3.html#ModelDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ModelDescription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ModelDescription</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">categories=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ModelDescription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ModelDescription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>An object describing supported model by name and categories.</p>
 <dl class="field-list simple">
@@ -665,51 +792,19 @@ sending a request.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.ListModelsResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ListModelsResult</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/list_models_result_py3.html#ListModelsResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ListModelsResult" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.computervision.models.ObjectHierarchy">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ObjectHierarchy</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">object_property: str = None</em>, <em class="sig-param">confidence: float = None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ObjectHierarchy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ObjectHierarchy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Result of the List Domain Models operation.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><strong>models_property</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ModelDescription" title="azure.cognitiveservices.vision.computervision.models.ModelDescription"><em>ModelDescription</em></a><em>]</em>) – An array of supported models.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.DomainModelResults">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">DomainModelResults</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">result=None</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/domain_model_results_py3.html#DomainModelResults"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.DomainModelResults" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Result of image analysis using a specific domain model including additional
-metadata.</p>
+<p>An object detected inside an image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>result</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Model-specific response.</p></li>
-<li><p><strong>request_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id of the REST API request.</p></li>
-<li><p><strong>metadata</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ImageMetadata" title="azure.cognitiveservices.vision.computervision.models.ImageMetadata"><em>ImageMetadata</em></a>) – </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.OcrWord">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">OcrWord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">bounding_box: str = None</em>, <em class="sig-param">text: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/ocr_word_py3.html#OcrWord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.OcrWord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Information on a recognized word.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>bounding_box</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Bounding box of a recognized word. The four integers
-represent the x-coordinate of the left edge, the y-coordinate of the top
-edge, width, and height of the bounding box, in the coordinate system of
-the input image, after it has been rotated around its center according to
-the detected text angle (see textAngle property), with the origin at the
-top-left corner, and the y-axis pointing down.</p></li>
-<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – String value of a recognized word.</p></li>
+<li><p><strong>object_property</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Label for the object.</p></li>
+<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Confidence score of having observed the object in the
+image, as a value ranging from 0 to 1.</p></li>
+<li><p><strong>parent</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ObjectHierarchy" title="azure.cognitiveservices.vision.computervision.models.ObjectHierarchy"><em>ObjectHierarchy</em></a>) – The parent object, from a taxonomy perspective.
+The parent object is a more generic form of this object.  For example, a
+‘bulldog’ would have a parent of ‘dog’.</p></li>
 </ul>
 </dd>
 </dl>
@@ -717,7 +812,7 @@ top-left corner, and the y-axis pointing down.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.OcrLine">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">OcrLine</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">bounding_box: str = None</em>, <em class="sig-param">words=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/ocr_line_py3.html#OcrLine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.OcrLine" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">OcrLine</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">bounding_box: str = None</em>, <em class="sig-param">words=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#OcrLine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.OcrLine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>An object describing a single recognized line of text.</p>
 <dl class="field-list simple">
@@ -738,7 +833,7 @@ recognized word.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.OcrRegion">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">OcrRegion</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">bounding_box: str = None</em>, <em class="sig-param">lines=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/ocr_region_py3.html#OcrRegion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.OcrRegion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">OcrRegion</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">bounding_box: str = None</em>, <em class="sig-param">lines=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#OcrRegion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.OcrRegion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A region consists of multiple lines (e.g. a column of text in a
 multi-column document).</p>
@@ -759,7 +854,7 @@ origin at the top-left corner, and the y-axis pointing down.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.OcrResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">OcrResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">language: str = None</em>, <em class="sig-param">text_angle: float = None</em>, <em class="sig-param">orientation: str = None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/ocr_result_py3.html#OcrResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.OcrResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">OcrResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">language: str = None</em>, <em class="sig-param">text_angle: float = None</em>, <em class="sig-param">orientation: str = None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#OcrResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.OcrResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>OcrResult.</p>
 <dl class="field-list simple">
@@ -788,8 +883,46 @@ of recognized text.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.OcrWord">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">OcrWord</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">bounding_box: str = None</em>, <em class="sig-param">text: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#OcrWord"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.OcrWord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Information on a recognized word.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bounding_box</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Bounding box of a recognized word. The four integers
+represent the x-coordinate of the left edge, the y-coordinate of the top
+edge, width, and height of the bounding box, in the coordinate system of
+the input image, after it has been rotated around its center according to
+the detected text angle (see textAngle property), with the origin at the
+top-left corner, and the y-axis pointing down.</p></li>
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – String value of a recognized word.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.vision.computervision.models.ReadOperationResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ReadOperationResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">status=None</em>, <em class="sig-param">recognition_results=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#ReadOperationResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ReadOperationResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>OCR result of the read operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes" title="azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes"><em>TextOperationStatusCodes</em></a>) – Status of the read operation. Possible values include:
+‘NotStarted’, ‘Running’, ‘Failed’, ‘Succeeded’</p></li>
+<li><p><strong>recognition_results</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResult" title="azure.cognitiveservices.vision.computervision.models.TextRecognitionResult"><em>TextRecognitionResult</em></a><em>]</em>) – An array of text recognition result of the
+read operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.TagResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TagResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/tag_result_py3.html#TagResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TagResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TagResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#TagResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TagResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The results of a image tag operation, including any tags and image
 metadata.</p>
@@ -805,134 +938,17 @@ metadata.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.AreaOfInterestResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">AreaOfInterestResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/area_of_interest_result_py3.html#AreaOfInterestResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.AreaOfInterestResult" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.computervision.models.TextOperationResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TextOperationResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">status=None</em>, <em class="sig-param">recognition_result=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#TextOperationResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextOperationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Result of AreaOfInterest operation.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><strong>area_of_interest</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.BoundingRect" title="azure.cognitiveservices.vision.computervision.models.BoundingRect"><em>BoundingRect</em></a>) – A bounding box for an area of interest inside an
-image.</p>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>request_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id of the REST API request.</p></li>
-<li><p><strong>metadata</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ImageMetadata" title="azure.cognitiveservices.vision.computervision.models.ImageMetadata"><em>ImageMetadata</em></a>) – </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.ImageUrl">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ImageUrl</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">url: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/image_url_py3.html#ImageUrl"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ImageUrl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>ImageUrl.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Publicly reachable URL of an image.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.ComputerVisionError">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ComputerVisionError</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">code</em>, <em class="sig-param">message: str</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/computer_vision_error_py3.html#ComputerVisionError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ComputerVisionError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Details about the API request error.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
+<p>Result of recognition text operation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Required. The error code.</p></li>
-<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. A message explaining the error reported by the
-service.</p></li>
-<li><p><strong>request_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A unique request identifier.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="exception">
-<dt id="azure.cognitiveservices.vision.computervision.models.ComputerVisionErrorException">
-<em class="property">exception </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ComputerVisionErrorException</code><span class="sig-paren">(</span><em class="sig-param">deserialize</em>, <em class="sig-param">response</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/computer_vision_error_py3.html#ComputerVisionErrorException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ComputerVisionErrorException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
-<p>Server responsed with exception of type: ‘ComputerVisionError’.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>deserialize</strong> – A deserializer</p></li>
-<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.LandmarkResults">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">LandmarkResults</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">landmarks=None</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/landmark_results_py3.html#LandmarkResults"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.LandmarkResults" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Result of domain-specific classifications for the domain of landmarks.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>landmarks</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.LandmarksModel" title="azure.cognitiveservices.vision.computervision.models.LandmarksModel"><em>LandmarksModel</em></a><em>]</em>) – List of landmarks recognized in the image.</p></li>
-<li><p><strong>request_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id of the REST API request.</p></li>
-<li><p><strong>metadata</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ImageMetadata" title="azure.cognitiveservices.vision.computervision.models.ImageMetadata"><em>ImageMetadata</em></a>) – </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.CelebrityResults">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">CelebrityResults</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">celebrities=None</em>, <em class="sig-param">request_id: str = None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/celebrity_results_py3.html#CelebrityResults"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.CelebrityResults" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Result of domain-specific classifications for the domain of celebrities.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>celebrities</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.CelebritiesModel" title="azure.cognitiveservices.vision.computervision.models.CelebritiesModel"><em>CelebritiesModel</em></a><em>]</em>) – List of celebrities recognized in the image.</p></li>
-<li><p><strong>request_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id of the REST API request.</p></li>
-<li><p><strong>metadata</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.ImageMetadata" title="azure.cognitiveservices.vision.computervision.models.ImageMetadata"><em>ImageMetadata</em></a>) – </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.Word">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">Word</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">bounding_box</em>, <em class="sig-param">text: str</em>, <em class="sig-param">confidence=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/word_py3.html#Word"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.Word" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Json object representing a recognized word.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>bounding_box</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a><em>]</em>) – Required. Bounding box of a recognized word.</p></li>
-<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The text content of the word.</p></li>
-<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResultConfidenceClass" title="azure.cognitiveservices.vision.computervision.models.TextRecognitionResultConfidenceClass"><em>TextRecognitionResultConfidenceClass</em></a>) – Qualitative confidence measure. Possible values
-include: ‘High’, ‘Low’</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.Line">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">Line</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">bounding_box=None</em>, <em class="sig-param">text: str = None</em>, <em class="sig-param">words=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/line_py3.html#Line"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.Line" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Json object representing a recognized text line.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>bounding_box</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a><em>]</em>) – Bounding box of a recognized line.</p></li>
-<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The text content of the line.</p></li>
-<li><p><strong>words</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.Word" title="azure.cognitiveservices.vision.computervision.models.Word"><em>Word</em></a><em>]</em>) – List of words in the text line.</p></li>
+<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes" title="azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes"><em>TextOperationStatusCodes</em></a>) – Status of the text operation. Possible values include:
+‘NotStarted’, ‘Running’, ‘Failed’, ‘Succeeded’</p></li>
+<li><p><strong>recognition_result</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResult" title="azure.cognitiveservices.vision.computervision.models.TextRecognitionResult"><em>TextRecognitionResult</em></a>) – Text recognition result of the text operation.</p></li>
 </ul>
 </dd>
 </dl>
@@ -940,9 +956,9 @@ include: ‘High’, ‘Low’</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.TextRecognitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TextRecognitionResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">lines</em>, <em class="sig-param">page: int = None</em>, <em class="sig-param">clockwise_orientation: float = None</em>, <em class="sig-param">width: float = None</em>, <em class="sig-param">height: float = None</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/text_recognition_result_py3.html#TextRecognitionResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TextRecognitionResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">lines</em>, <em class="sig-param">page: int = None</em>, <em class="sig-param">clockwise_orientation: float = None</em>, <em class="sig-param">width: float = None</em>, <em class="sig-param">height: float = None</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#TextRecognitionResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Json object representing a recognized text region.</p>
+<p>An object representing a recognized text region.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -954,7 +970,7 @@ the clockwise direction. Range between [0, 360).</p></li>
 <li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The height of the image in pixels or the PDF in inches.</p></li>
 <li><p><strong>unit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
 </em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResultDimensionUnit" title="azure.cognitiveservices.vision.computervision.models.TextRecognitionResultDimensionUnit"><em>TextRecognitionResultDimensionUnit</em></a>) – The unit used in the Width, Height and BoundingBox. For
-images, the unit is “pixel”. For PDF, the unit is “inch”. Possible values
+images, the unit is ‘pixel’. For PDF, the unit is ‘inch’. Possible values
 include: ‘pixel’, ‘inch’</p></li>
 <li><p><strong>lines</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.Line" title="azure.cognitiveservices.vision.computervision.models.Line"><em>Line</em></a><em>]</em>) – Required. A list of recognized text lines.</p></li>
 </ul>
@@ -963,35 +979,19 @@ include: ‘pixel’, ‘inch’</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.TextOperationResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TextOperationResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">status=None</em>, <em class="sig-param">recognition_result=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/text_operation_result_py3.html#TextOperationResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextOperationResult" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.cognitiveservices.vision.computervision.models.Word">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">Word</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">bounding_box</em>, <em class="sig-param">text: str</em>, <em class="sig-param">confidence=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_models_py3.html#Word"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.Word" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Result of recognition text operation.</p>
+<p>An object representing a recognized word.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes" title="azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes"><em>TextOperationStatusCodes</em></a>) – Status of the text operation. Possible values include: ‘Not
-Started’, ‘Running’, ‘Failed’, ‘Succeeded’</p></li>
-<li><p><strong>recognition_result</strong> (<a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResult" title="azure.cognitiveservices.vision.computervision.models.TextRecognitionResult"><em>TextRecognitionResult</em></a>) – Text recognition result of the text operation.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cognitiveservices.vision.computervision.models.ReadOperationResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">ReadOperationResult</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">status=None</em>, <em class="sig-param">recognition_results=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/read_operation_result_py3.html#ReadOperationResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.ReadOperationResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>OCR result of the read operation.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes" title="azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes"><em>TextOperationStatusCodes</em></a>) – Status of the read operation. Possible values include: ‘Not
-Started’, ‘Running’, ‘Failed’, ‘Succeeded’</p></li>
-<li><p><strong>recognition_results</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResult" title="azure.cognitiveservices.vision.computervision.models.TextRecognitionResult"><em>TextRecognitionResult</em></a><em>]</em>) – A array of text recognition result of the read
-operation.</p></li>
+<li><p><strong>bounding_box</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a><em>]</em>) – Required. Bounding box of a recognized word.</p></li>
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The text content of the word.</p></li>
+<li><p><strong>confidence</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResultConfidenceClass" title="azure.cognitiveservices.vision.computervision.models.TextRecognitionResultConfidenceClass"><em>TextRecognitionResultConfidenceClass</em></a>) – Qualitative confidence measure. Possible values
+include: ‘High’, ‘Low’</p></li>
 </ul>
 </dd>
 </dl>
@@ -999,7 +999,7 @@ operation.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.Gender">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">Gender</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/computer_vision_client_enums.html#Gender"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.Gender" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">Gender</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_computer_vision_client_enums.html#Gender"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.Gender" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1016,7 +1016,7 @@ operation.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TextOperationStatusCodes</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/computer_vision_client_enums.html#TextOperationStatusCodes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TextOperationStatusCodes</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_computer_vision_client_enums.html#TextOperationStatusCodes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1026,7 +1026,7 @@ operation.</p></li>
 
 <dl class="attribute">
 <dt id="azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes.not_started">
-<code class="sig-name descname">not_started</code><em class="property"> = 'Not Started'</em><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes.not_started" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">not_started</code><em class="property"> = 'NotStarted'</em><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextOperationStatusCodes.not_started" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1043,7 +1043,7 @@ operation.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.TextRecognitionResultDimensionUnit">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TextRecognitionResultDimensionUnit</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/computer_vision_client_enums.html#TextRecognitionResultDimensionUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResultDimensionUnit" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TextRecognitionResultDimensionUnit</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_computer_vision_client_enums.html#TextRecognitionResultDimensionUnit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResultDimensionUnit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1060,7 +1060,7 @@ operation.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.TextRecognitionResultConfidenceClass">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TextRecognitionResultConfidenceClass</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/computer_vision_client_enums.html#TextRecognitionResultConfidenceClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResultConfidenceClass" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TextRecognitionResultConfidenceClass</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_computer_vision_client_enums.html#TextRecognitionResultConfidenceClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionResultConfidenceClass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1077,7 +1077,7 @@ operation.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.OcrLanguages">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">OcrLanguages</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/computer_vision_client_enums.html#OcrLanguages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.OcrLanguages" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">OcrLanguages</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_computer_vision_client_enums.html#OcrLanguages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.OcrLanguages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1219,7 +1219,7 @@ operation.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">VisualFeatureTypes</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/computer_vision_client_enums.html#VisualFeatureTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">VisualFeatureTypes</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_computer_vision_client_enums.html#VisualFeatureTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1271,7 +1271,7 @@ operation.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.TextRecognitionMode">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TextRecognitionMode</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/computer_vision_client_enums.html#TextRecognitionMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionMode" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">TextRecognitionMode</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_computer_vision_client_enums.html#TextRecognitionMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.TextRecognitionMode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1288,7 +1288,7 @@ operation.</p></li>
 
 <dl class="class">
 <dt id="azure.cognitiveservices.vision.computervision.models.Details">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">Details</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/computer_vision_client_enums.html#Details"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.Details" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cognitiveservices.vision.computervision.models.</code><code class="sig-name descname">Details</code><a class="reference internal" href="../_modules/azure/cognitiveservices/vision/computervision/models/_computer_vision_client_enums.html#Details"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.vision.computervision.models.Details" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
