@@ -115,9 +115,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
@@ -202,8 +207,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
 </ul>
 
@@ -302,7 +310,7 @@
 <span class="kn">from</span> <span class="nn">azure.servicebus.base_handler</span> <span class="k">import</span> <span class="n">BaseHandler</span>
 
 
-<div class="viewcode-block" id="ServiceBusClient"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.ServiceBusClient">[docs]</a><span class="k">class</span> <span class="nc">ServiceBusClient</span><span class="p">(</span><span class="n">mixins</span><span class="o">.</span><span class="n">ServiceBusMixin</span><span class="p">):</span>
+<div class="viewcode-block" id="ServiceBusClient"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient">[docs]</a><span class="k">class</span> <span class="nc">ServiceBusClient</span><span class="p">(</span><span class="n">mixins</span><span class="o">.</span><span class="n">ServiceBusMixin</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A Service Bus client for a namespace with the specified SAS authentication settings.</span>
 
 <span class="sd">    :param str service_namespace: Service Bus namespace, required for all operations.</span>
@@ -342,7 +350,7 @@
             <span class="n">timeout</span><span class="o">=</span><span class="n">http_request_timeout</span><span class="p">,</span>
             <span class="n">request_session</span><span class="o">=</span><span class="n">http_request_session</span><span class="p">)</span>
 
-<div class="viewcode-block" id="ServiceBusClient.from_connection_string"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.ServiceBusClient.from_connection_string">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="ServiceBusClient.from_connection_string"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.from_connection_string">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_connection_string</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">conn_str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Create a Service Bus client from a connection string.</span>
 
@@ -371,7 +379,7 @@
     <span class="k">def</span> <span class="nf">_get_host</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="s2">&quot;sb://&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">service_namespace</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">host_base</span>
 
-<div class="viewcode-block" id="ServiceBusClient.get_queue"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.ServiceBusClient.get_queue">[docs]</a>    <span class="k">def</span> <span class="nf">get_queue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue_name</span><span class="p">):</span>
+<div class="viewcode-block" id="ServiceBusClient.get_queue"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.get_queue">[docs]</a>    <span class="k">def</span> <span class="nf">get_queue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue_name</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get a client for a queue entity.</span>
 
 <span class="sd">        :param queue_name: The name of the queue.</span>
@@ -402,7 +410,7 @@
             <span class="n">mgmt_client</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="p">,</span>
             <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ServiceBusClient.list_queues"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.ServiceBusClient.list_queues">[docs]</a>    <span class="k">def</span> <span class="nf">list_queues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ServiceBusClient.list_queues"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.list_queues">[docs]</a>    <span class="k">def</span> <span class="nf">list_queues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get clients for all queue entities in the namespace.</span>
 
 <span class="sd">        :rtype: list[~azure.servicebus.servicebus_client.QueueClient]</span>
@@ -431,7 +439,7 @@
                 <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">queue_clients</span></div>
 
-<div class="viewcode-block" id="ServiceBusClient.get_topic"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.ServiceBusClient.get_topic">[docs]</a>    <span class="k">def</span> <span class="nf">get_topic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">):</span>
+<div class="viewcode-block" id="ServiceBusClient.get_topic"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.get_topic">[docs]</a>    <span class="k">def</span> <span class="nf">get_topic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get a client for a topic entity.</span>
 
 <span class="sd">        :param topic_name: The name of the topic.</span>
@@ -461,7 +469,7 @@
             <span class="n">shared_access_key_value</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_value</span><span class="p">,</span>
             <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ServiceBusClient.list_topics"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.ServiceBusClient.list_topics">[docs]</a>    <span class="k">def</span> <span class="nf">list_topics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ServiceBusClient.list_topics"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.list_topics">[docs]</a>    <span class="k">def</span> <span class="nf">list_topics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get a client for all topic entities in the namespace.</span>
 
 <span class="sd">        :rtype: list[~azure.servicebus.servicebus_client.TopicClient]</span>
@@ -489,7 +497,7 @@
                 <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">topic_clients</span></div>
 
-<div class="viewcode-block" id="ServiceBusClient.get_subscription"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.ServiceBusClient.get_subscription">[docs]</a>    <span class="k">def</span> <span class="nf">get_subscription</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">,</span> <span class="n">subscription_name</span><span class="p">):</span>
+<div class="viewcode-block" id="ServiceBusClient.get_subscription"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.get_subscription">[docs]</a>    <span class="k">def</span> <span class="nf">get_subscription</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">,</span> <span class="n">subscription_name</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get a client for a subscription entity.</span>
 
 <span class="sd">        :param topic_name: The name of the topic.</span>
@@ -521,7 +529,7 @@
             <span class="n">shared_access_key_value</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key_value</span><span class="p">,</span>
             <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ServiceBusClient.list_subscriptions"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.ServiceBusClient.list_subscriptions">[docs]</a>    <span class="k">def</span> <span class="nf">list_subscriptions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">):</span>
+<div class="viewcode-block" id="ServiceBusClient.list_subscriptions"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ServiceBusClient.list_subscriptions">[docs]</a>    <span class="k">def</span> <span class="nf">list_subscriptions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">topic_name</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get a client for all subscription entities in the topic.</span>
 
 <span class="sd">        :param topic_name: The topic to list subscriptions for.</span>
@@ -555,9 +563,9 @@
         <span class="k">return</span> <span class="n">sub_clients</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">SendClientMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="SendClientMixin"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.SendClientMixin">[docs]</a><span class="k">class</span> <span class="nc">SendClientMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">messages</span><span class="p">,</span> <span class="n">message_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="SendClientMixin.send"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.SendClientMixin.send">[docs]</a>    <span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">messages</span><span class="p">,</span> <span class="n">message_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Send one or more messages to the current entity.</span>
 
 <span class="sd">        This operation will open a single-use connection, send the supplied messages, and close</span>
@@ -612,9 +620,9 @@
                         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Item </span><span class="si">{}</span><span class="s2"> in iterator is not of type &#39;Message&#39;.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
                     <span class="n">sender</span><span class="o">.</span><span class="n">queue_message</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
 
-            <span class="k">return</span> <span class="n">sender</span><span class="o">.</span><span class="n">send_pending_messages</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">sender</span><span class="o">.</span><span class="n">send_pending_messages</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">get_sender</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="SendClientMixin.get_sender"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.SendClientMixin.get_sender">[docs]</a>    <span class="k">def</span> <span class="nf">get_sender</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get a Sender for the Service Bus endpoint.</span>
 
 <span class="sd">        A Sender represents a single open Connection with which multiple send operations can be made.</span>
@@ -657,12 +665,12 @@
             <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">,</span>
             <span class="n">debug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">,</span>
             <span class="n">msg_timeout</span><span class="o">=</span><span class="n">message_timeout</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">ReceiveClientMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="ReceiveClientMixin"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin">[docs]</a><span class="k">class</span> <span class="nc">ReceiveClientMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">start_from</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="ReceiveClientMixin.peek"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin.peek">[docs]</a>    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">start_from</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Browse messages currently pending in the queue.</span>
 
 <span class="sd">        Peeked messages are not removed from queue, nor are they locked. They cannot be completed,</span>
@@ -698,9 +706,9 @@
             <span class="k">return</span> <span class="n">handler</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>  <span class="c1"># pylint: disable=protected-access</span>
                 <span class="n">REQUEST_RESPONSE_PEEK_OPERATION</span><span class="p">,</span>
                 <span class="n">message</span><span class="p">,</span>
-                <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">peek_op</span><span class="p">)</span>
+                <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">peek_op</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">list_sessions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">updated_since</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="ReceiveClientMixin.list_sessions"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin.list_sessions">[docs]</a>    <span class="k">def</span> <span class="nf">list_sessions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">updated_since</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_results</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;List session IDs.</span>
 
 <span class="sd">        List the Session IDs with pending messages in the queue where the state of the session</span>
@@ -736,9 +744,9 @@
             <span class="k">return</span> <span class="n">handler</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>  <span class="c1"># pylint: disable=protected-access</span>
                 <span class="n">REQUEST_RESPONSE_GET_MESSAGE_SESSIONS_OPERATION</span><span class="p">,</span>
                 <span class="n">message</span><span class="p">,</span>
-                <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">list_sessions_op</span><span class="p">)</span>
+                <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">list_sessions_op</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">receive_deferred_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sequence_numbers</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">ReceiveSettleMode</span><span class="o">.</span><span class="n">PeekLock</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="ReceiveClientMixin.receive_deferred_messages"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin.receive_deferred_messages">[docs]</a>    <span class="k">def</span> <span class="nf">receive_deferred_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sequence_numbers</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">ReceiveSettleMode</span><span class="o">.</span><span class="n">PeekLock</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Receive messages by sequence number that have been previously deferred.</span>
 
 <span class="sd">        When receiving deferred messages from a partitioned entity, all of the supplied</span>
@@ -780,9 +788,9 @@
             <span class="k">return</span> <span class="n">handler</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>  <span class="c1"># pylint: disable=protected-access</span>
                 <span class="n">REQUEST_RESPONSE_RECEIVE_BY_SEQUENCE_NUMBER</span><span class="p">,</span>
                 <span class="n">message</span><span class="p">,</span>
-                <span class="n">mgmt_handler</span><span class="p">)</span>
+                <span class="n">mgmt_handler</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">settle_deferred_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settlement</span><span class="p">,</span> <span class="n">messages</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="ReceiveClientMixin.settle_deferred_messages"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin.settle_deferred_messages">[docs]</a>    <span class="k">def</span> <span class="nf">settle_deferred_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">settlement</span><span class="p">,</span> <span class="n">messages</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Settle messages that have been previously deferred.</span>
 
 <span class="sd">        :param settlement: How the messages are to be settled. This must be a string</span>
@@ -814,9 +822,9 @@
             <span class="k">return</span> <span class="n">handler</span><span class="o">.</span><span class="n">_mgmt_request_response</span><span class="p">(</span>  <span class="c1"># pylint: disable=protected-access</span>
                 <span class="n">REQUEST_RESPONSE_UPDATE_DISPOSTION_OPERATION</span><span class="p">,</span>
                 <span class="n">message</span><span class="p">,</span>
-                <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">default</span><span class="p">)</span>
+                <span class="n">mgmt_handlers</span><span class="o">.</span><span class="n">default</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">get_receiver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">prefetch</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">ReceiveSettleMode</span><span class="o">.</span><span class="n">PeekLock</span><span class="p">,</span> <span class="n">idle_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="ReceiveClientMixin.get_receiver"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin.get_receiver">[docs]</a>    <span class="k">def</span> <span class="nf">get_receiver</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">prefetch</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">ReceiveSettleMode</span><span class="o">.</span><span class="n">PeekLock</span><span class="p">,</span> <span class="n">idle_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get a Receiver for the Service Bus endpoint.</span>
 
 <span class="sd">        A Receiver represents a single open Connection with which multiple receive operations can be made.</span>
@@ -881,9 +889,9 @@
             <span class="n">timeout</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">idle_timeout</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">),</span>
             <span class="n">prefetch</span><span class="o">=</span><span class="n">prefetch</span><span class="p">,</span>
             <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">get_deadletter_receiver</span><span class="p">(</span>
+<div class="viewcode-block" id="ReceiveClientMixin.get_deadletter_receiver"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.ReceiveClientMixin.get_deadletter_receiver">[docs]</a>    <span class="k">def</span> <span class="nf">get_deadletter_receiver</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">transfer_deadletter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">prefetch</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
             <span class="n">mode</span><span class="o">=</span><span class="n">ReceiveSettleMode</span><span class="o">.</span><span class="n">PeekLock</span><span class="p">,</span> <span class="n">idle_timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get a Receiver for the deadletter endpoint of the queue.</span>
@@ -936,10 +944,10 @@
             <span class="n">timeout</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">idle_timeout</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">),</span>
             <span class="n">prefetch</span><span class="o">=</span><span class="n">prefetch</span><span class="p">,</span>
             <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="QueueClient"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.QueueClient">[docs]</a><span class="k">class</span> <span class="nc">QueueClient</span><span class="p">(</span><span class="n">SendClientMixin</span><span class="p">,</span> <span class="n">ReceiveClientMixin</span><span class="p">,</span> <span class="n">mixins</span><span class="o">.</span><span class="n">BaseClient</span><span class="p">):</span>
+<div class="viewcode-block" id="QueueClient"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.QueueClient">[docs]</a><span class="k">class</span> <span class="nc">QueueClient</span><span class="p">(</span><span class="n">SendClientMixin</span><span class="p">,</span> <span class="n">ReceiveClientMixin</span><span class="p">,</span> <span class="n">mixins</span><span class="o">.</span><span class="n">BaseClient</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A queue client.</span>
 
 <span class="sd">    The QueueClient class defines a high level interface for sending</span>
@@ -978,7 +986,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">get_queue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="TopicClient"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.TopicClient">[docs]</a><span class="k">class</span> <span class="nc">TopicClient</span><span class="p">(</span><span class="n">SendClientMixin</span><span class="p">,</span> <span class="n">mixins</span><span class="o">.</span><span class="n">BaseClient</span><span class="p">):</span>
+<div class="viewcode-block" id="TopicClient"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.TopicClient">[docs]</a><span class="k">class</span> <span class="nc">TopicClient</span><span class="p">(</span><span class="n">SendClientMixin</span><span class="p">,</span> <span class="n">mixins</span><span class="o">.</span><span class="n">BaseClient</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A topic client.</span>
 
 <span class="sd">    The TopicClient class defines a high level interface for sending</span>
@@ -1014,7 +1022,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mgmt_client</span><span class="o">.</span><span class="n">get_topic</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="SubscriptionClient"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.SubscriptionClient">[docs]</a><span class="k">class</span> <span class="nc">SubscriptionClient</span><span class="p">(</span><span class="n">ReceiveClientMixin</span><span class="p">,</span> <span class="n">mixins</span><span class="o">.</span><span class="n">BaseClient</span><span class="p">):</span>
+<div class="viewcode-block" id="SubscriptionClient"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.SubscriptionClient">[docs]</a><span class="k">class</span> <span class="nc">SubscriptionClient</span><span class="p">(</span><span class="n">ReceiveClientMixin</span><span class="p">,</span> <span class="n">mixins</span><span class="o">.</span><span class="n">BaseClient</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A subscription client.</span>
 
 <span class="sd">    The SubscriptionClient class defines a high level interface for receiving</span>
@@ -1054,7 +1062,7 @@
             <span class="n">shared_access_key_value</span><span class="o">=</span><span class="n">shared_access_key_value</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="n">debug</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">topic_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">address</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 
-<div class="viewcode-block" id="SubscriptionClient.from_connection_string"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.SubscriptionClient.from_connection_string">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="SubscriptionClient.from_connection_string"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.SubscriptionClient.from_connection_string">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_connection_string</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">conn_str</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">topic</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># pylint: disable=arguments-differ</span>
         <span class="sd">&quot;&quot;&quot;Create a SubscriptionClient from a connection string.</span>
 
@@ -1072,7 +1080,7 @@
         <span class="n">address</span> <span class="o">+=</span> <span class="s2">&quot;/Subscriptions/&quot;</span> <span class="o">+</span> <span class="n">name</span>
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">shared_access_key_name</span><span class="o">=</span><span class="n">policy</span><span class="p">,</span> <span class="n">shared_access_key_value</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="SubscriptionClient.from_entity"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.SubscriptionClient.from_entity">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="SubscriptionClient.from_entity"><a class="viewcode-back" href="../../../ref/azure.servicebus.html#azure.servicebus.servicebus_client.SubscriptionClient.from_entity">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_entity</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">entity</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># pylint: disable=arguments-differ</span>
         <span class="n">client</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span>
             <span class="n">address</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">topic</span> <span class="o">+</span> <span class="s2">&quot;/Subscriptions/&quot;</span> <span class="o">+</span> <span class="n">entity</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>

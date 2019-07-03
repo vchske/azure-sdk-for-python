@@ -125,9 +125,14 @@
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
@@ -212,8 +217,11 @@
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
 </ul>
 
@@ -444,8 +452,8 @@ sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>documents</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.EntitiesBatchResultItem" title="azure.cognitiveservices.language.textanalytics.models.EntitiesBatchResultItem"><em>EntitiesBatchResultItem</em></a><em>]</em>) – Response by document</p></li>
-<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.ErrorRecord" title="azure.cognitiveservices.language.textanalytics.models.ErrorRecord"><em>ErrorRecord</em></a><em>]</em>) – Errors and Warnings by document</p></li>
+<li><p><a class="reference internal" href="azure.cosmos.html#module-azure.cosmos.documents" title="azure.cosmos.documents"><strong>documents</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.EntitiesBatchResultItem" title="azure.cognitiveservices.language.textanalytics.models.EntitiesBatchResultItem"><em>EntitiesBatchResultItem</em></a><em>]</em>) – Response by document</p></li>
+<li><p><a class="reference internal" href="azure.cosmos.html#module-azure.cosmos.errors" title="azure.cosmos.errors"><strong>errors</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.ErrorRecord" title="azure.cognitiveservices.language.textanalytics.models.ErrorRecord"><em>ErrorRecord</em></a><em>]</em>) – Errors and Warnings by document</p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3.5/library/statistics.html#module-statistics" title="(in Python v3.5)"><strong>statistics</strong></a> (<a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.RequestStatistics" title="azure.cognitiveservices.language.textanalytics.models.RequestStatistics"><em>RequestStatistics</em></a>) – (Optional) if showStats=true was specified in the
 request this field will contain information about the request payload.</p></li>
 </ul>
@@ -534,8 +542,8 @@ sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>documents</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.KeyPhraseBatchResultItem" title="azure.cognitiveservices.language.textanalytics.models.KeyPhraseBatchResultItem"><em>KeyPhraseBatchResultItem</em></a><em>]</em>) – Response by document</p></li>
-<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.ErrorRecord" title="azure.cognitiveservices.language.textanalytics.models.ErrorRecord"><em>ErrorRecord</em></a><em>]</em>) – Errors and Warnings by document</p></li>
+<li><p><a class="reference internal" href="azure.cosmos.html#module-azure.cosmos.documents" title="azure.cosmos.documents"><strong>documents</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.KeyPhraseBatchResultItem" title="azure.cognitiveservices.language.textanalytics.models.KeyPhraseBatchResultItem"><em>KeyPhraseBatchResultItem</em></a><em>]</em>) – Response by document</p></li>
+<li><p><a class="reference internal" href="azure.cosmos.html#module-azure.cosmos.errors" title="azure.cosmos.errors"><strong>errors</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.ErrorRecord" title="azure.cognitiveservices.language.textanalytics.models.ErrorRecord"><em>ErrorRecord</em></a><em>]</em>) – Errors and Warnings by document</p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3.5/library/statistics.html#module-statistics" title="(in Python v3.5)"><strong>statistics</strong></a> (<a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.RequestStatistics" title="azure.cognitiveservices.language.textanalytics.models.RequestStatistics"><em>RequestStatistics</em></a>) – =(Optional) if showStats=true was specified in the
 request this field will contain information about the request payload.</p></li>
 </ul>
@@ -616,8 +624,8 @@ sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>documents</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.LanguageBatchResultItem" title="azure.cognitiveservices.language.textanalytics.models.LanguageBatchResultItem"><em>LanguageBatchResultItem</em></a><em>]</em>) – Response by document</p></li>
-<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.ErrorRecord" title="azure.cognitiveservices.language.textanalytics.models.ErrorRecord"><em>ErrorRecord</em></a><em>]</em>) – Errors and Warnings by document</p></li>
+<li><p><a class="reference internal" href="azure.cosmos.html#module-azure.cosmos.documents" title="azure.cosmos.documents"><strong>documents</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.LanguageBatchResultItem" title="azure.cognitiveservices.language.textanalytics.models.LanguageBatchResultItem"><em>LanguageBatchResultItem</em></a><em>]</em>) – Response by document</p></li>
+<li><p><a class="reference internal" href="azure.cosmos.html#module-azure.cosmos.errors" title="azure.cosmos.errors"><strong>errors</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.ErrorRecord" title="azure.cognitiveservices.language.textanalytics.models.ErrorRecord"><em>ErrorRecord</em></a><em>]</em>) – Errors and Warnings by document</p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3.5/library/statistics.html#module-statistics" title="(in Python v3.5)"><strong>statistics</strong></a> (<a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.RequestStatistics" title="azure.cognitiveservices.language.textanalytics.models.RequestStatistics"><em>RequestStatistics</em></a>) – (Optional) if showStats=true was specified in the
 request this field will contain information about the request payload.</p></li>
 </ul>
@@ -655,8 +663,8 @@ sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>documents</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.SentimentBatchResultItem" title="azure.cognitiveservices.language.textanalytics.models.SentimentBatchResultItem"><em>SentimentBatchResultItem</em></a><em>]</em>) – Response by document</p></li>
-<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.ErrorRecord" title="azure.cognitiveservices.language.textanalytics.models.ErrorRecord"><em>ErrorRecord</em></a><em>]</em>) – Errors and Warnings by document</p></li>
+<li><p><a class="reference internal" href="azure.cosmos.html#module-azure.cosmos.documents" title="azure.cosmos.documents"><strong>documents</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.SentimentBatchResultItem" title="azure.cognitiveservices.language.textanalytics.models.SentimentBatchResultItem"><em>SentimentBatchResultItem</em></a><em>]</em>) – Response by document</p></li>
+<li><p><a class="reference internal" href="azure.cosmos.html#module-azure.cosmos.errors" title="azure.cosmos.errors"><strong>errors</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.ErrorRecord" title="azure.cognitiveservices.language.textanalytics.models.ErrorRecord"><em>ErrorRecord</em></a><em>]</em>) – Errors and Warnings by document</p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3.5/library/statistics.html#module-statistics" title="(in Python v3.5)"><strong>statistics</strong></a> (<a class="reference internal" href="#azure.cognitiveservices.language.textanalytics.models.RequestStatistics" title="azure.cognitiveservices.language.textanalytics.models.RequestStatistics"><em>RequestStatistics</em></a>) – (Optional) if showStats=true was specified in the
 request this field will contain information about the request payload.</p></li>
 </ul>

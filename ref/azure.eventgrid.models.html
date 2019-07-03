@@ -117,6 +117,8 @@
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="azure.eventgrid.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">azure.eventgrid.models module</a></li>
@@ -126,8 +128,11 @@
 <li class="toctree-l2"><a class="reference internal" href="azure.eventgrid.html#module-azure.eventgrid">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
@@ -212,8 +217,11 @@
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
 </ul>
 
@@ -1306,7 +1314,7 @@ sending a request.</p>
 error.</p></li>
 <li><p><a class="reference internal" href="azure.cognitiveservices.search.newssearch.operations.html#azure.cognitiveservices.search.newssearch.operations.NewsOperations.category" title="azure.cognitiveservices.search.newssearch.operations.NewsOperations.category"><strong>category</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobErrorCategory" title="azure.eventgrid.models.MediaJobErrorCategory"><em>MediaJobErrorCategory</em></a>) – Helps with categorization of errors. Possible values
 include: ‘Service’, ‘Download’, ‘Upload’, ‘Configuration’, ‘Content’</p></li>
-<li><p><strong>retry</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobRetry" title="azure.eventgrid.models.MediaJobRetry"><em>MediaJobRetry</em></a>) – Indicates that it may be possible to retry the Job. If retry
+<li><p><a class="reference internal" href="azure.core.pipeline.policies.html#module-azure.core.pipeline.policies.retry" title="azure.core.pipeline.policies.retry"><strong>retry</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobRetry" title="azure.eventgrid.models.MediaJobRetry"><em>MediaJobRetry</em></a>) – Indicates that it may be possible to retry the Job. If retry
 is unsuccessful, please contact Azure support via Azure Portal. Possible
 values include: ‘DoNotRetry’, ‘MayRetry’</p></li>
 <li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.operations.html#azure.cognitiveservices.search.imagesearch.operations.ImagesOperations.details" title="azure.cognitiveservices.search.imagesearch.operations.ImagesOperations.details"><strong>details</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.eventgrid.models.MediaJobErrorDetail" title="azure.eventgrid.models.MediaJobErrorDetail"><em>MediaJobErrorDetail</em></a><em>]</em>) – An array of details about specific errors that led to this

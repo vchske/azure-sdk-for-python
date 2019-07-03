@@ -117,9 +117,14 @@
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
@@ -212,8 +217,11 @@
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
 </ul>
 
@@ -639,7 +647,7 @@ sending a request.</p>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference internal" href="#azure.mgmt.scheduler.models.JobStatus" title="azure.mgmt.scheduler.models.JobStatus"><em>JobStatus</em></a>) – Gets the job status.</p>
+<dd class="field-even"><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference internal" href="#azure.mgmt.scheduler.models.JobStatus" title="azure.mgmt.scheduler.models.JobStatus"><em>JobStatus</em></a>) – Gets the job status.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -682,7 +690,7 @@ job.</p></li>
 <li><p><strong>action_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
 </em><a class="reference internal" href="#azure.mgmt.scheduler.models.JobHistoryActionName" title="azure.mgmt.scheduler.models.JobHistoryActionName"><em>JobHistoryActionName</em></a>) – Gets the job history action name. Possible values
 include: ‘MainAction’, ‘ErrorAction’</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.scheduler.models.JobExecutionStatus" title="azure.mgmt.scheduler.models.JobExecutionStatus"><em>JobExecutionStatus</em></a>) – Gets the job history status. Possible values include:
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.scheduler.models.JobExecutionStatus" title="azure.mgmt.scheduler.models.JobExecutionStatus"><em>JobExecutionStatus</em></a>) – Gets the job history status. Possible values include:
 ‘Completed’, ‘Failed’, ‘Postponed’</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.Severity.message" title="azure.mgmt.datamigration.models.Severity.message"><strong>message</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the message for the job history.</p></li>
 <li><p><strong>retry_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Gets the retry count for job.</p></li>

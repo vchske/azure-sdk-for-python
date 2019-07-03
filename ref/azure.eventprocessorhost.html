@@ -1,0 +1,1732 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.eventprocessorhost package &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>azure.eventprocessorhost package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.eventprocessorhost.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="azure-eventprocessorhost-package">
+<h1>azure.eventprocessorhost package<a class="headerlink" href="#azure-eventprocessorhost-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventprocessorhost.vendor.html">azure.eventprocessorhost.vendor package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventprocessorhost.vendor.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.html">azure.eventprocessorhost.vendor.storage package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.blob.html">azure.eventprocessorhost.vendor.storage.blob package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.blob.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.blob.html#module-azure.eventprocessorhost.vendor.storage.blob.appendblobservice">azure.eventprocessorhost.vendor.storage.blob.appendblobservice module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.blob.html#module-azure.eventprocessorhost.vendor.storage.blob.baseblobservice">azure.eventprocessorhost.vendor.storage.blob.baseblobservice module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.blob.html#module-azure.eventprocessorhost.vendor.storage.blob.blockblobservice">azure.eventprocessorhost.vendor.storage.blob.blockblobservice module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.blob.html#module-azure.eventprocessorhost.vendor.storage.blob.models">azure.eventprocessorhost.vendor.storage.blob.models module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.blob.html#module-azure.eventprocessorhost.vendor.storage.blob.pageblobservice">azure.eventprocessorhost.vendor.storage.blob.pageblobservice module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.blob.html#module-azure.eventprocessorhost.vendor.storage.blob.sharedaccesssignature">azure.eventprocessorhost.vendor.storage.blob.sharedaccesssignature module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.blob.html#module-azure.eventprocessorhost.vendor.storage.blob">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.common.html">azure.eventprocessorhost.vendor.storage.common package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.common.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.common.html#module-azure.eventprocessorhost.vendor.storage.common.cloudstorageaccount">azure.eventprocessorhost.vendor.storage.common.cloudstorageaccount module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.common.html#module-azure.eventprocessorhost.vendor.storage.common.models">azure.eventprocessorhost.vendor.storage.common.models module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.common.html#module-azure.eventprocessorhost.vendor.storage.common.retry">azure.eventprocessorhost.vendor.storage.common.retry module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.common.html#module-azure.eventprocessorhost.vendor.storage.common.sharedaccesssignature">azure.eventprocessorhost.vendor.storage.common.sharedaccesssignature module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.common.html#module-azure.eventprocessorhost.vendor.storage.common.storageclient">azure.eventprocessorhost.vendor.storage.common.storageclient module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.common.html#module-azure.eventprocessorhost.vendor.storage.common.tokencredential">azure.eventprocessorhost.vendor.storage.common.tokencredential module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.common.html#module-azure.eventprocessorhost.vendor.storage.common">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="azure.eventprocessorhost.vendor.storage.html#module-azure.eventprocessorhost.vendor.storage">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.eventprocessorhost.vendor.html#module-azure.eventprocessorhost.vendor">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-azure.eventprocessorhost.abstract_checkpoint_manager">
+<span id="azure-eventprocessorhost-abstract-checkpoint-manager-module"></span><h2>azure.eventprocessorhost.abstract_checkpoint_manager module<a class="headerlink" href="#module-azure.eventprocessorhost.abstract_checkpoint_manager" title="Permalink to this headline">¶</a></h2>
+<p>Author: Aaron (Ari) Bornstien</p>
+<dl class="class">
+<dt id="azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.abstract_checkpoint_manager.</code><code class="sig-name descname">AbstractCheckpointManager</code><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_checkpoint_manager.html#AbstractCheckpointManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/abc.html#abc.ABC" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
+<p>If you wish to have EventProcessorHost store checkpoints somewhere other than Azure Storage,
+you can write your own checkpoint manager using this abstract class.</p>
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager.create_checkpoint_if_not_exists_async">
+<em class="property">abstract async </em><code class="sig-name descname">create_checkpoint_if_not_exists_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_checkpoint_manager.html#AbstractCheckpointManager.create_checkpoint_if_not_exists_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager.create_checkpoint_if_not_exists_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the given partition checkpoint if it doesn’t exist.Do nothing if it does exist.
+The offset/sequenceNumber for a freshly-created checkpoint should be set to StartOfStream/0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of a given parition.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The checkpoint for the given partition, whether newly created or already existing.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.eventprocessorhost.checkpoint.Checkpoint" title="azure.eventprocessorhost.checkpoint.Checkpoint">Checkpoint</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager.create_checkpoint_store_if_not_exists_async">
+<em class="property">abstract async </em><code class="sig-name descname">create_checkpoint_store_if_not_exists_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_checkpoint_manager.html#AbstractCheckpointManager.create_checkpoint_store_if_not_exists_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager.create_checkpoint_store_if_not_exists_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the checkpoint store if it doesn’t exist. Do nothing if it does exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>True</cite> if the checkpoint store already exists or was created OK, <cite>False</cite>
+if there was a failure.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager.delete_checkpoint_async">
+<em class="property">abstract async </em><code class="sig-name descname">delete_checkpoint_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_checkpoint_manager.html#AbstractCheckpointManager.delete_checkpoint_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager.delete_checkpoint_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the stored checkpoint for the given partition. If there is no stored checkpoint
+for the given partition, that is treated as success.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of a given parition.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager.get_checkpoint_async">
+<em class="property">abstract async </em><code class="sig-name descname">get_checkpoint_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_checkpoint_manager.html#AbstractCheckpointManager.get_checkpoint_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager.get_checkpoint_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the checkpoint data associated with the given partition.
+Could return null if no checkpoint has been created for that partition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of a given parition.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Given partition checkpoint info, or <cite>None</cite> if none has been previously stored.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.eventprocessorhost.checkpoint.Checkpoint" title="azure.eventprocessorhost.checkpoint.Checkpoint">Checkpoint</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager.update_checkpoint_async">
+<em class="property">abstract async </em><code class="sig-name descname">update_checkpoint_async</code><span class="sig-paren">(</span><em class="sig-param">lease</em>, <em class="sig-param">checkpoint</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_checkpoint_manager.html#AbstractCheckpointManager.update_checkpoint_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager.update_checkpoint_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the checkpoint in the store with the offset/sequenceNumber in the provided checkpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The lease to be updated.</p></li>
+<li><p><strong>checkpoint</strong> (<a class="reference internal" href="#azure.eventprocessorhost.checkpoint.Checkpoint" title="azure.eventprocessorhost.checkpoint.Checkpoint"><em>Checkpoint</em></a>) – offset/sequeceNumber to update the store with.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.abstract_event_processor">
+<span id="azure-eventprocessorhost-abstract-event-processor-module"></span><h2>azure.eventprocessorhost.abstract_event_processor module<a class="headerlink" href="#module-azure.eventprocessorhost.abstract_event_processor" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventprocessorhost.abstract_event_processor.AbstractEventProcessor">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.abstract_event_processor.</code><code class="sig-name descname">AbstractEventProcessor</code><span class="sig-paren">(</span><em class="sig-param">params=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_event_processor.html#AbstractEventProcessor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_event_processor.AbstractEventProcessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/abc.html#abc.ABC" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
+<p>Abstract that must be extended by event processor classes.</p>
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_event_processor.AbstractEventProcessor.close_async">
+<em class="property">abstract async </em><code class="sig-name descname">close_async</code><span class="sig-paren">(</span><em class="sig-param">context</em>, <em class="sig-param">reason</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_event_processor.html#AbstractEventProcessor.close_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_event_processor.AbstractEventProcessor.close_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by processor host to indicate that the event processor is being stopped.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>context</strong> (<a class="reference internal" href="#azure.eventprocessorhost.partition_context.PartitionContext" title="azure.eventprocessorhost.partition_context.PartitionContext"><em>PartitionContext</em></a>) – Information about the partition</p></li>
+<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The reason for closing.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_event_processor.AbstractEventProcessor.open_async">
+<em class="property">abstract async </em><code class="sig-name descname">open_async</code><span class="sig-paren">(</span><em class="sig-param">context</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_event_processor.html#AbstractEventProcessor.open_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_event_processor.AbstractEventProcessor.open_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by processor host to initialize the event processor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> (<a class="reference internal" href="#azure.eventprocessorhost.partition_context.PartitionContext" title="azure.eventprocessorhost.partition_context.PartitionContext"><em>PartitionContext</em></a>) – Information about the partition</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_event_processor.AbstractEventProcessor.process_error_async">
+<em class="property">abstract async </em><code class="sig-name descname">process_error_async</code><span class="sig-paren">(</span><em class="sig-param">context</em>, <em class="sig-param">error</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_event_processor.html#AbstractEventProcessor.process_error_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_event_processor.AbstractEventProcessor.process_error_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when the underlying client experiences an error while receiving.
+EventProcessorHost will take care of recovering from the error and
+continuing to pump messages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>context</strong> (<a class="reference internal" href="#azure.eventprocessorhost.partition_context.PartitionContext" title="azure.eventprocessorhost.partition_context.PartitionContext"><em>PartitionContext</em></a>) – Information about the partition</p></li>
+<li><p><strong>error</strong> – The error that occured.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_event_processor.AbstractEventProcessor.process_events_async">
+<em class="property">abstract async </em><code class="sig-name descname">process_events_async</code><span class="sig-paren">(</span><em class="sig-param">context</em>, <em class="sig-param">messages</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_event_processor.html#AbstractEventProcessor.process_events_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_event_processor.AbstractEventProcessor.process_events_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by the processor host when a batch of events has arrived.
+This is where the real work of the event processor is done.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>context</strong> (<a class="reference internal" href="#azure.eventprocessorhost.partition_context.PartitionContext" title="azure.eventprocessorhost.partition_context.PartitionContext"><em>PartitionContext</em></a>) – Information about the partition</p></li>
+<li><p><strong>messages</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="azure.eventhub.html#azure.eventhub.common.EventData" title="azure.eventhub.common.EventData"><em>EventData</em></a><em>]</em>) – The events to be processed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.abstract_lease_manager">
+<span id="azure-eventprocessorhost-abstract-lease-manager-module"></span><h2>azure.eventprocessorhost.abstract_lease_manager module<a class="headerlink" href="#module-azure.eventprocessorhost.abstract_lease_manager" title="Permalink to this headline">¶</a></h2>
+<p>Author: Aaron (Ari) Bornstien</p>
+<dl class="class">
+<dt id="azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.abstract_lease_manager.</code><code class="sig-name descname">AbstractLeaseManager</code><span class="sig-paren">(</span><em class="sig-param">lease_renew_interval</em>, <em class="sig-param">lease_duration</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_lease_manager.html#AbstractLeaseManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/abc.html#abc.ABC" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
+<p>If you wish to have EventProcessorHost store leases somewhere other than Azure Storage,
+you can write your own lease manager using this abstract class. The Azure Storage managers
+use the same storage for both lease and checkpoints, so both interfaces are implemented by
+the same class.You are free to do the same thing if you have  a unified store for both
+types of data.</p>
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.acquire_lease_async">
+<em class="property">abstract async </em><code class="sig-name descname">acquire_lease_async</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_lease_manager.html#AbstractLeaseManager.acquire_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.acquire_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Acquire the lease on the desired partition for this EventProcessorHost.
+Note that it is legal to acquire a lease that is already owned by another host.
+Lease-stealing is how partitions are redistributed when additional hosts are started.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The lease to be acquired.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>True</cite> if the lease was acquired successfully, <cite>False</cite> if not.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.create_lease_if_not_exists_async">
+<em class="property">abstract async </em><code class="sig-name descname">create_lease_if_not_exists_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_lease_manager.html#AbstractLeaseManager.create_lease_if_not_exists_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.create_lease_if_not_exists_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create in the store the lease info for the given partition, if it does not exist.
+Do nothing if it does exist in the store already.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition_id</strong> – The ID of a given partition.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The existing or newly-created lease info for the partition.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.create_lease_store_if_not_exists_async">
+<em class="property">abstract async </em><code class="sig-name descname">create_lease_store_if_not_exists_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_lease_manager.html#AbstractLeaseManager.create_lease_store_if_not_exists_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.create_lease_store_if_not_exists_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the lease store if it does not exist, do nothing if it does exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>True</cite> if the lease store already exists or was created successfully, <cite>False</cite> if not.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.delete_lease_async">
+<em class="property">abstract async </em><code class="sig-name descname">delete_lease_async</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_lease_manager.html#AbstractLeaseManager.delete_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.delete_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the lease info for the given partition from the store.
+If there is no stored lease for the given partition, that is treated as success.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The lease to be deleted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.delete_lease_store_async">
+<em class="property">abstract async </em><code class="sig-name descname">delete_lease_store_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_lease_manager.html#AbstractLeaseManager.delete_lease_store_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.delete_lease_store_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not used by EventProcessorHost, but a convenient function to have for testing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>True</cite> if the lease store was deleted successfully, <cite>False</cite> if not.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.get_all_leases">
+<em class="property">abstract </em><code class="sig-name descname">get_all_leases</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_lease_manager.html#AbstractLeaseManager.get_all_leases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.get_all_leases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the lease info for all partitions.
+A typical implementation could just call get_lease_async() on all partitions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of lease info.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.get_lease_async">
+<em class="property">async </em><code class="sig-name descname">get_lease_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_lease_manager.html#AbstractLeaseManager.get_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.get_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the lease info for the specified partition.
+Can return null if no lease has been created in the store for the specified partition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition_id</strong> – The ID of a given partition.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Lease info for the partition, or <cite>None</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.release_lease_async">
+<em class="property">abstract async </em><code class="sig-name descname">release_lease_async</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_lease_manager.html#AbstractLeaseManager.release_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.release_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Give up a lease currently held by this host. If the lease has been stolen, or expired,
+releasing it is unnecessary, and will fail if attempted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The lease to be released.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>True</cite> if the lease was released successfully, <cite>False</cite> if not.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.renew_lease_async">
+<em class="property">abstract async </em><code class="sig-name descname">renew_lease_async</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_lease_manager.html#AbstractLeaseManager.renew_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.renew_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renew a lease currently held by this host.
+If the lease has been stolen, or expired, or released, it is not possible to renew it.
+You will have to call get_lease_async() and then acquire_lease_async() again.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The lease to be renewed.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>True</cite> if the lease was renewed successfully, <cite>False</cite> if not.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.update_lease_async">
+<em class="property">abstract async </em><code class="sig-name descname">update_lease_async</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/abstract_lease_manager.html#AbstractLeaseManager.update_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager.update_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the store with the information in the provided lease. It is necessary to currently
+hold a lease in order to update it. If the lease has been stolen, or expired, or released,
+it cannot be updated. Updating should renew the lease before performing the update to
+avoid lease expiration during the process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The lease to be updated.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>True</cite> if the updated was performed successfully, <cite>False</cite> if not.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.azure_blob_lease">
+<span id="azure-eventprocessorhost-azure-blob-lease-module"></span><h2>azure.eventprocessorhost.azure_blob_lease module<a class="headerlink" href="#module-azure.eventprocessorhost.azure_blob_lease" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventprocessorhost.azure_blob_lease.AzureBlobLease">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.azure_blob_lease.</code><code class="sig-name descname">AzureBlobLease</code><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_blob_lease.html#AzureBlobLease"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_blob_lease.AzureBlobLease" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventprocessorhost.lease.Lease</span></code></a></p>
+<p>Azure Blob Lease</p>
+<p>Init Azure Blob Lease.</p>
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_blob_lease.AzureBlobLease.is_expired">
+<em class="property">async </em><code class="sig-name descname">is_expired</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_blob_lease.html#AzureBlobLease.is_expired"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_blob_lease.AzureBlobLease.is_expired" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check and return Azure Blob Lease state using Storage API.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_blob_lease.AzureBlobLease.serializable">
+<code class="sig-name descname">serializable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_blob_lease.html#AzureBlobLease.serializable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_blob_lease.AzureBlobLease.serializable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Serialiazble instance of <cite>__dict__</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_blob_lease.AzureBlobLease.with_blob">
+<code class="sig-name descname">with_blob</code><span class="sig-paren">(</span><em class="sig-param">blob</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_blob_lease.html#AzureBlobLease.with_blob"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_blob_lease.AzureBlobLease.with_blob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init Azure Blob Lease with existing blob.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_blob_lease.AzureBlobLease.with_lease">
+<code class="sig-name descname">with_lease</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_blob_lease.html#AzureBlobLease.with_lease"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_blob_lease.AzureBlobLease.with_lease" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init with exisiting lease.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_blob_lease.AzureBlobLease.with_source">
+<code class="sig-name descname">with_source</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_blob_lease.html#AzureBlobLease.with_source"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_blob_lease.AzureBlobLease.with_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init Azure Blob Lease from existing.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.azure_storage_checkpoint_manager">
+<span id="azure-eventprocessorhost-azure-storage-checkpoint-manager-module"></span><h2>azure.eventprocessorhost.azure_storage_checkpoint_manager module<a class="headerlink" href="#module-azure.eventprocessorhost.azure_storage_checkpoint_manager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.azure_storage_checkpoint_manager.</code><code class="sig-name descname">AzureStorageCheckpointLeaseManager</code><span class="sig-paren">(</span><em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_account_key=None</em>, <em class="sig-param">lease_container_name='eph-leases'</em>, <em class="sig-param">storage_blob_prefix=None</em>, <em class="sig-param">lease_renew_interval=10</em>, <em class="sig-param">lease_duration=30</em>, <em class="sig-param">sas_token=None</em>, <em class="sig-param">endpoint_suffix='core.windows.net'</em>, <em class="sig-param">connection_string=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager" title="azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventprocessorhost.abstract_checkpoint_manager.AbstractCheckpointManager</span></code></a>, <a class="reference internal" href="#azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager" title="azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventprocessorhost.abstract_lease_manager.AbstractLeaseManager</span></code></a></p>
+<p>Manages checkpoints and lease with azure storage blobs. In this implementation,
+checkpoints are data that’s actually in the lease blob, so checkpoint operations
+turn into lease operations under the covers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>storage_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The storage account name. This is used to
+authenticate requests signed with an account key and to construct the storage
+endpoint. It is required unless a connection string is given.</p></li>
+<li><p><strong>storage_account_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The storage account key. This is used for shared key
+authentication. If neither account key or sas token is specified, anonymous access
+will be used.</p></li>
+<li><p><strong>lease_container_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the container that will be used to store
+leases. If it does not already exist it will be created. Default value is ‘eph-leases’.</p></li>
+<li><p><strong>lease_renew_interval</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The interval in seconds at which EPH will attempt to
+renew the lease of a particular partition. Default value is 10.</p></li>
+<li><p><strong>lease_duration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The duration in seconds of a lease on a partition.
+Default value is 30.</p></li>
+<li><p><strong>sas_token</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A shared access signature token to use to authenticate requests
+instead of the account key. If account key and sas token are both specified,
+account key will be used to sign. If neither are specified, anonymous access will be used.</p></li>
+<li><p><strong>endpoint_suffix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The host base component of the url, minus the account name.
+Defaults to Azure (core.windows.net). Override this to use a National Cloud.</p></li>
+<li><p><strong>connection_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – If specified, this will override all other endpoint parameters.
+See <a class="reference external" href="http://azure.microsoft.com/en-us/documentation/articles/storage-configure-connection-string/">http://azure.microsoft.com/en-us/documentation/articles/storage-configure-connection-string/</a>
+for the connection string format.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.acquire_lease_async">
+<em class="property">async </em><code class="sig-name descname">acquire_lease_async</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.acquire_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.acquire_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Acquire the lease on the desired partition for this EventProcessorHost.
+Note that it is legal to acquire a lease that is already owned by another host.
+Lease-stealing is how partitions are redistributed when additional hosts are started.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The stored lease to be acquired.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>True</cite> if the lease was acquired successfully, <cite>False</cite> if not.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.create_checkpoint_if_not_exists_async">
+<em class="property">async </em><code class="sig-name descname">create_checkpoint_if_not_exists_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.create_checkpoint_if_not_exists_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.create_checkpoint_if_not_exists_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the given partition checkpoint if it doesn’t exist.Do nothing if it does exist.
+The offset/sequenceNumber for a freshly-created checkpoint should be set to StartOfStream/0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition ID.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The checkpoint for the given partition, whether newly created or already existing.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.eventprocessorhost.checkpoint.Checkpoint" title="azure.eventprocessorhost.checkpoint.Checkpoint">Checkpoint</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.create_checkpoint_store_if_not_exists_async">
+<em class="property">async </em><code class="sig-name descname">create_checkpoint_store_if_not_exists_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.create_checkpoint_store_if_not_exists_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.create_checkpoint_store_if_not_exists_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the checkpoint store if it doesn’t exist. Do nothing if it does exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>True</cite> if the checkpoint store already exists or was created OK, <cite>False</cite>
+if there was a failure.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.create_lease_if_not_exists_async">
+<em class="property">async </em><code class="sig-name descname">create_lease_if_not_exists_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.create_lease_if_not_exists_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.create_lease_if_not_exists_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create in the store the lease info for the given partition, if it does not exist.
+Do nothing if it does exist in the store already.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of a given parition.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the existing or newly-created lease info for the partition.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease">Lease</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.create_lease_store_if_not_exists_async">
+<em class="property">async </em><code class="sig-name descname">create_lease_store_if_not_exists_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.create_lease_store_if_not_exists_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.create_lease_store_if_not_exists_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the lease store if it does not exist, do nothing if it does exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>True</cite> if the lease store already exists or was created successfully, <cite>False</cite> if not.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.delete_checkpoint_async">
+<em class="property">async </em><code class="sig-name descname">delete_checkpoint_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.delete_checkpoint_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.delete_checkpoint_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the stored checkpoint for the given partition. If there is no stored checkpoint
+for the given partition, that is treated as success.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition ID.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.delete_lease_async">
+<em class="property">async </em><code class="sig-name descname">delete_lease_async</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.delete_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.delete_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the lease info for the given partition from the store.
+If there is no stored lease for the given partition, that is treated as success.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The stored lease to be deleted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.delete_lease_store_async">
+<em class="property">async </em><code class="sig-name descname">delete_lease_store_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.delete_lease_store_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.delete_lease_store_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Not used by EventProcessorHost, but a convenient function to have for testing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>True</cite> if the lease store was deleted successfully, <cite>False</cite> if not.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.get_all_leases">
+<em class="property">async </em><code class="sig-name descname">get_all_leases</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.get_all_leases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.get_all_leases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the lease info for all partitions.
+A typical implementation could just call get_lease_async() on all partitions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of lease info.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a>[<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease">Lease</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.get_checkpoint_async">
+<em class="property">async </em><code class="sig-name descname">get_checkpoint_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.get_checkpoint_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.get_checkpoint_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the checkpoint data associated with the given partition.
+Could return null if no checkpoint has been created for that partition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition ID.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Given partition checkpoint info, or <cite>None</cite> if none has been previously stored.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.eventprocessorhost.checkpoint.Checkpoint" title="azure.eventprocessorhost.checkpoint.Checkpoint">Checkpoint</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.get_lease_async">
+<em class="property">async </em><code class="sig-name descname">get_lease_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.get_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.get_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the lease info for the specified partition.
+Can return null if no lease has been created in the store for the specified partition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition ID.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>lease info for the partition, or <cite>None</cite>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease">Lease</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.initialize">
+<code class="sig-name descname">initialize</code><span class="sig-paren">(</span><em class="sig-param">host</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>The EventProcessorHost can’t pass itself to the AzureStorageCheckpointLeaseManager
+constructor because it is still being constructed. Do other initialization here
+also because it might throw and hence we don’t want it in the constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.release_lease_async">
+<em class="property">async </em><code class="sig-name descname">release_lease_async</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.release_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.release_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Give up a lease currently held by this host. If the lease has been stolen, or expired,
+releasing it is unnecessary, and will fail if attempted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The stored lease to be released.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>True</cite> if the lease was released successfully, <cite>False</cite> if not.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.renew_lease_async">
+<em class="property">async </em><code class="sig-name descname">renew_lease_async</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.renew_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.renew_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renew a lease currently held by this host.
+If the lease has been stolen, or expired, or released, it is not possible to renew it.
+You will have to call getLease() and then acquireLease() again.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The stored lease to be renewed.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>True</cite> if the lease was renewed successfully, <cite>False</cite> if not.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.update_checkpoint_async">
+<em class="property">async </em><code class="sig-name descname">update_checkpoint_async</code><span class="sig-paren">(</span><em class="sig-param">lease</em>, <em class="sig-param">checkpoint</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.update_checkpoint_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.update_checkpoint_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the checkpoint in the store with the offset/sequenceNumber in the provided checkpoint
+checkpoint:offset/sequeceNumber to update the store with.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The stored lease to be updated.</p></li>
+<li><p><strong>checkpoint</strong> (<a class="reference internal" href="#azure.eventprocessorhost.checkpoint.Checkpoint" title="azure.eventprocessorhost.checkpoint.Checkpoint"><em>Checkpoint</em></a>) – The checkpoint to update the lease with.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.update_lease_async">
+<em class="property">async </em><code class="sig-name descname">update_lease_async</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/azure_storage_checkpoint_manager.html#AzureStorageCheckpointLeaseManager.update_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager.update_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the store with the information in the provided lease. It is necessary to currently
+hold a lease in order to update it. If the lease has been stolen, or expired, or released,
+it cannot be updated. Updating should renew the lease before performing the update to
+avoid lease expiration during the process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The stored lease to be updated.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><cite>True</cite> if the updated was performed successfully, <cite>False</cite> if not.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.cancellation_token">
+<span id="azure-eventprocessorhost-cancellation-token-module"></span><h2>azure.eventprocessorhost.cancellation_token module<a class="headerlink" href="#module-azure.eventprocessorhost.cancellation_token" title="Permalink to this headline">¶</a></h2>
+<p>Based on <a class="reference external" href="https://stackoverflow.com/questions/43229939/how-to-pass-a-boolean-by-reference-across-threads-and-modules">https://stackoverflow.com/questions/43229939/how-to-pass-a-boolean-by-reference-across-threads-and-modules</a></p>
+<dl class="class">
+<dt id="azure.eventprocessorhost.cancellation_token.CancellationToken">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.cancellation_token.</code><code class="sig-name descname">CancellationToken</code><a class="reference internal" href="../_modules/azure/eventprocessorhost/cancellation_token.html#CancellationToken"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.cancellation_token.CancellationToken" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Thread Safe Mutable Cancellation Token.</p>
+<dl class="method">
+<dt id="azure.eventprocessorhost.cancellation_token.CancellationToken.cancel">
+<code class="sig-name descname">cancel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/cancellation_token.html#CancellationToken.cancel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.cancellation_token.CancellationToken.cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancel the token.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.checkpoint">
+<span id="azure-eventprocessorhost-checkpoint-module"></span><h2>azure.eventprocessorhost.checkpoint module<a class="headerlink" href="#module-azure.eventprocessorhost.checkpoint" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventprocessorhost.checkpoint.Checkpoint">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.checkpoint.</code><code class="sig-name descname">Checkpoint</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em>, <em class="sig-param">offset='-1'</em>, <em class="sig-param">sequence_number='0'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/checkpoint.html#Checkpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.checkpoint.Checkpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Contains checkpoint metadata.</p>
+<p>Initialize Checkpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The parition ID of the checkpoint.</p></li>
+<li><p><strong>offset</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The receive offset of the checkpoint.</p></li>
+<li><p><strong>sequence_number</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The sequence number of the checkpoint.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.eventprocessorhost.checkpoint.Checkpoint.from_source">
+<code class="sig-name descname">from_source</code><span class="sig-paren">(</span><em class="sig-param">checkpoint</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/checkpoint.html#Checkpoint.from_source"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.checkpoint.Checkpoint.from_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new Checkpoint from an existing checkpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>checkpoint</strong> (<a class="reference internal" href="#azure.eventprocessorhost.checkpoint.Checkpoint" title="azure.eventprocessorhost.checkpoint.Checkpoint"><em>Checkpoint</em></a>) – Existing checkpoint.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.eh_config">
+<span id="azure-eventprocessorhost-eh-config-module"></span><h2>azure.eventprocessorhost.eh_config module<a class="headerlink" href="#module-azure.eventprocessorhost.eh_config" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventprocessorhost.eh_config.EventHubConfig">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.eh_config.</code><code class="sig-name descname">EventHubConfig</code><span class="sig-paren">(</span><em class="sig-param">sb_name</em>, <em class="sig-param">eh_name</em>, <em class="sig-param">policy</em>, <em class="sig-param">sas_key</em>, <em class="sig-param">consumer_group='$default'</em>, <em class="sig-param">namespace_suffix='servicebus.windows.net'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eh_config.html#EventHubConfig"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eh_config.EventHubConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A container class for Event Hub properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sb_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The EventHub (ServiceBus) namespace.</p></li>
+<li><p><strong>eh_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The EventHub name.</p></li>
+<li><p><strong>policy</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SAS policy name.</p></li>
+<li><p><strong>sas_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SAS access key.</p></li>
+<li><p><strong>consumer_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The EventHub consumer group to receive from. The
+default value is ‘$default’.</p></li>
+<li><p><strong>namespace_suffix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ServiceBus namespace URL suffix.
+The default value is ‘servicebus.windows.net’.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.eventprocessorhost.eh_config.EventHubConfig.get_client_address">
+<code class="sig-name descname">get_client_address</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eh_config.html#EventHubConfig.get_client_address"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eh_config.EventHubConfig.get_client_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an auth token dictionary for making calls to eventhub
+REST API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.eh_config.EventHubConfig.get_rest_token">
+<code class="sig-name descname">get_rest_token</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eh_config.html#EventHubConfig.get_rest_token"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eh_config.EventHubConfig.get_rest_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an auth token for making calls to eventhub REST API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.eh_partition_pump">
+<span id="azure-eventprocessorhost-eh-partition-pump-module"></span><h2>azure.eventprocessorhost.eh_partition_pump module<a class="headerlink" href="#module-azure.eventprocessorhost.eh_partition_pump" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventprocessorhost.eh_partition_pump.EventHubPartitionPump">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.eh_partition_pump.</code><code class="sig-name descname">EventHubPartitionPump</code><span class="sig-paren">(</span><em class="sig-param">host</em>, <em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eh_partition_pump.html#EventHubPartitionPump"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eh_partition_pump.EventHubPartitionPump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#azure.eventprocessorhost.partition_pump.PartitionPump" title="azure.eventprocessorhost.partition_pump.PartitionPump"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventprocessorhost.partition_pump.PartitionPump</span></code></a></p>
+<p>Pulls and messages from lease partition from eventhub and sends them to processor.</p>
+<dl class="method">
+<dt id="azure.eventprocessorhost.eh_partition_pump.EventHubPartitionPump.clean_up_clients_async">
+<em class="property">async </em><code class="sig-name descname">clean_up_clients_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eh_partition_pump.html#EventHubPartitionPump.clean_up_clients_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eh_partition_pump.EventHubPartitionPump.clean_up_clients_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the pump swallows all exceptions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.eh_partition_pump.EventHubPartitionPump.on_closing_async">
+<em class="property">async </em><code class="sig-name descname">on_closing_async</code><span class="sig-paren">(</span><em class="sig-param">reason</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eh_partition_pump.html#EventHubPartitionPump.on_closing_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eh_partition_pump.EventHubPartitionPump.on_closing_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overides partition pump on closing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The reason for the shutdown.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.eh_partition_pump.EventHubPartitionPump.on_open_async">
+<em class="property">async </em><code class="sig-name descname">on_open_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eh_partition_pump.html#EventHubPartitionPump.on_open_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eh_partition_pump.EventHubPartitionPump.on_open_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Eventhub Override for on_open_async.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.eh_partition_pump.EventHubPartitionPump.open_clients_async">
+<em class="property">async </em><code class="sig-name descname">open_clients_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eh_partition_pump.html#EventHubPartitionPump.open_clients_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eh_partition_pump.EventHubPartitionPump.open_clients_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Responsible for establishing connection to event hub client
+throws EventHubsException, IOException, InterruptedException, ExecutionException.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventprocessorhost.eh_partition_pump.PartitionReceiver">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.eh_partition_pump.</code><code class="sig-name descname">PartitionReceiver</code><span class="sig-paren">(</span><em class="sig-param">eh_partition_pump</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eh_partition_pump.html#PartitionReceiver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eh_partition_pump.PartitionReceiver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Recieves events asynchronously until lease is lost.</p>
+<dl class="method">
+<dt id="azure.eventprocessorhost.eh_partition_pump.PartitionReceiver.process_error_async">
+<em class="property">async </em><code class="sig-name descname">process_error_async</code><span class="sig-paren">(</span><em class="sig-param">error</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eh_partition_pump.html#PartitionReceiver.process_error_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eh_partition_pump.PartitionReceiver.process_error_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles processing errors this is never called since python recieve client doesn’t
+have error handling implemented (TBD add fault pump handling).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>error</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#Exception" title="(in Python v3.5)"><em>Exception</em></a>) – An error the occurred.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.eh_partition_pump.PartitionReceiver.process_events_async">
+<em class="property">async </em><code class="sig-name descname">process_events_async</code><span class="sig-paren">(</span><em class="sig-param">events</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eh_partition_pump.html#PartitionReceiver.process_events_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eh_partition_pump.PartitionReceiver.process_events_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called on the thread that the EH client uses to run the pump.
+There is one pump per EventHubClient. Since each PartitionPump creates a
+new EventHubClient, using that thread to call OnEvents does no harm. Even if OnEvents
+is slow, the pump will get control back each time OnEvents returns, and be able to receive
+a new batch of messages with which to make the next OnEvents call.The pump gains nothing
+by running faster than OnEvents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>events</strong> (<em>list of ~azure.eventhub.common.EventData</em>) – List of events to be processed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.eh_partition_pump.PartitionReceiver.run">
+<em class="property">async </em><code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eh_partition_pump.html#PartitionReceiver.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eh_partition_pump.PartitionReceiver.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the async partion reciever event loop to retrive messages from the event queue.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.eph">
+<span id="azure-eventprocessorhost-eph-module"></span><h2>azure.eventprocessorhost.eph module<a class="headerlink" href="#module-azure.eventprocessorhost.eph" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventprocessorhost.eph.EPHOptions">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.eph.</code><code class="sig-name descname">EPHOptions</code><a class="reference internal" href="../_modules/azure/eventprocessorhost/eph.html#EPHOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eph.EPHOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class that contains default and overidable EPH option.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_batch_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum number of events retrieved for processing
+at a time. This value must be less than or equal to the prefetch count. The actual
+number of events returned for processing may be any number up to the maximum.
+The default value is 10.</p></li>
+<li><p><strong>prefetch_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of events to fetch from the service in advance of
+processing. The default value is 300.</p></li>
+<li><p><strong>receive_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The length of time a single partition receiver will wait in
+order to receive a batch of events. Default is 60 seconds.</p></li>
+<li><p><strong>release_pump_on_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to shutdown an individual partition receiver if
+no events were received in the specified timeout. Shutting down the pump will release
+the lease to allow it to be picked up by another host. Default is False.</p></li>
+<li><p><strong>initial_offset_provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The initial event offset to receive from if no persisted
+offset is found. Default is “-1” (i.e. from the first event available).</p></li>
+<li><p><strong>debug_trace</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to emit the network traffic in the logs. In order to view
+these events the logger must be configured to track “uamqp”. Default is False.</p></li>
+<li><p><strong>http_proxy</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – HTTP proxy configuration. This should be a dictionary with
+the following keys present: ‘proxy_hostname’ and ‘proxy_port’. Additional optional
+keys are ‘username’ and ‘password’.</p></li>
+<li><p><strong>keep_alive_interval</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The time in seconds between asynchronously pinging a receiver
+connection to keep it alive during inactivity. Default is None - i.e. no connection pinging.</p></li>
+<li><p><strong>auto_reconnect_on_error</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to automatically attempt to reconnect a receiver
+connection if it is detach from the service with a retryable error. Default is True.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventprocessorhost.eph.EventProcessorHost">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.eph.</code><code class="sig-name descname">EventProcessorHost</code><span class="sig-paren">(</span><em class="sig-param">event_processor</em>, <em class="sig-param">eh_config</em>, <em class="sig-param">storage_manager</em>, <em class="sig-param">ep_params=None</em>, <em class="sig-param">eph_options=None</em>, <em class="sig-param">loop=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eph.html#EventProcessorHost"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eph.EventProcessorHost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Represents a host for processing Event Hubs event data at scale.
+Takes in an event hub, a event processor class definition, a config object,
+as well as a storage manager and optional event processor params (ep_params).</p>
+<p>Initialize EventProcessorHost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event_processor</strong> (<a class="reference internal" href="#azure.eventprocessorhost.abstract_event_processor.AbstractEventProcessor" title="azure.eventprocessorhost.abstract_event_processor.AbstractEventProcessor"><em>AbstractEventProcessor</em></a>) – The event processing handler.</p></li>
+<li><p><strong>eh_config</strong> (<a class="reference internal" href="#azure.eventprocessorhost.eh_config.EventHubConfig" title="azure.eventprocessorhost.eh_config.EventHubConfig"><em>EventHubConfig</em></a>) – The EPH connection configuration.</p></li>
+<li><p><strong>storage_manager</strong> (<a class="reference internal" href="#azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager" title="azure.eventprocessorhost.azure_storage_checkpoint_manager.AzureStorageCheckpointLeaseManager"><em>AzureStorageCheckpointLeaseManager</em></a>) – The Azure storage manager for persisting lease and
+checkpoint information.</p></li>
+<li><p><strong>ep_params</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a>) – Optional arbitrary parameters to be passed into the event_processor
+on initialization.</p></li>
+<li><p><strong>eph_options</strong> (<a class="reference internal" href="#azure.eventprocessorhost.eph.EPHOptions" title="azure.eventprocessorhost.eph.EPHOptions"><em>EPHOptions</em></a>) – EPH configuration options.</p></li>
+<li><p><strong>loop</strong> – An eventloop. If not provided the default asyncio event loop will be used.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.eventprocessorhost.eph.EventProcessorHost.close_async">
+<em class="property">async </em><code class="sig-name descname">close_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eph.html#EventProcessorHost.close_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eph.EventProcessorHost.close_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the host.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.eph.EventProcessorHost.open_async">
+<em class="property">async </em><code class="sig-name descname">open_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/eph.html#EventProcessorHost.open_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.eph.EventProcessorHost.open_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the host.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.lease">
+<span id="azure-eventprocessorhost-lease-module"></span><h2>azure.eventprocessorhost.lease module<a class="headerlink" href="#module-azure.eventprocessorhost.lease" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventprocessorhost.lease.Lease">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.lease.</code><code class="sig-name descname">Lease</code><a class="reference internal" href="../_modules/azure/eventprocessorhost/lease.html#Lease"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.lease.Lease" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Lease contains partition processing state metadata used to manage partition state.</p>
+<dl class="method">
+<dt id="azure.eventprocessorhost.lease.Lease.increment_epoch">
+<code class="sig-name descname">increment_epoch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/lease.html#Lease.increment_epoch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.lease.Lease.increment_epoch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increment lease epoch.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.lease.Lease.is_expired">
+<em class="property">async </em><code class="sig-name descname">is_expired</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/lease.html#Lease.is_expired"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.lease.Lease.is_expired" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether the lease is expired. By default lease never expires.
+Deriving class implements the lease expiry logic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.lease.Lease.with_partition_id">
+<code class="sig-name descname">with_partition_id</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/lease.html#Lease.with_partition_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.lease.Lease.with_partition_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init with partition Id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ID of a given partition.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.lease.Lease.with_source">
+<code class="sig-name descname">with_source</code><span class="sig-paren">(</span><em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/lease.html#Lease.with_source"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.lease.Lease.with_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init with existing lease.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – An existing Lease.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.partition_context">
+<span id="azure-eventprocessorhost-partition-context-module"></span><h2>azure.eventprocessorhost.partition_context module<a class="headerlink" href="#module-azure.eventprocessorhost.partition_context" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventprocessorhost.partition_context.PartitionContext">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.partition_context.</code><code class="sig-name descname">PartitionContext</code><span class="sig-paren">(</span><em class="sig-param">host</em>, <em class="sig-param">partition_id</em>, <em class="sig-param">eh_path</em>, <em class="sig-param">consumer_group_name</em>, <em class="sig-param">pump_loop=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_context.html#PartitionContext"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_context.PartitionContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Encapsulates information related to an Event Hubs partition used by AbstractEventProcessor.</p>
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_context.PartitionContext.checkpoint_async">
+<em class="property">async </em><code class="sig-name descname">checkpoint_async</code><span class="sig-paren">(</span><em class="sig-param">event_processor_context=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_context.html#PartitionContext.checkpoint_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_context.PartitionContext.checkpoint_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a checkpoint for the partition using the curren offset and sequenceNumber for
+and persists to the checkpoint manager.</p>
+<dl class="simple">
+<dt>:param event_processor_context An optional custom state value for the Event Processor.</dt><dd><p>This data must be in a JSON serializable format.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_context.PartitionContext.checkpoint_async_event_data">
+<em class="property">async </em><code class="sig-name descname">checkpoint_async_event_data</code><span class="sig-paren">(</span><em class="sig-param">event_data</em>, <em class="sig-param">event_processor_context=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_context.html#PartitionContext.checkpoint_async_event_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_context.PartitionContext.checkpoint_async_event_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the offset and sequenceNumber from the provided received EventData instance,
+then writes those values to the checkpoint store via the checkpoint manager.
+Optionally stores the state of the Event Processor along the checkpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event_data</strong> (<a class="reference internal" href="azure.eventhub.html#azure.eventhub.common.EventData" title="azure.eventhub.common.EventData"><em>EventData</em></a>) – A received EventData with valid offset and sequenceNumber.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>:param event_processor_context An optional custom state value for the Event Processor.</dt><dd><p>This data must be in a JSON serializable format.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>ValueError if suplied event_data is None.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>ValueError if the sequenceNumber is less than the last checkpointed value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_context.PartitionContext.get_initial_offset_async">
+<em class="property">async </em><code class="sig-name descname">get_initial_offset_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_context.html#PartitionContext.get_initial_offset_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_context.PartitionContext.get_initial_offset_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the initial offset for processing the partition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_context.PartitionContext.persist_checkpoint_async">
+<em class="property">async </em><code class="sig-name descname">persist_checkpoint_async</code><span class="sig-paren">(</span><em class="sig-param">checkpoint</em>, <em class="sig-param">event_processor_context=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_context.html#PartitionContext.persist_checkpoint_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_context.PartitionContext.persist_checkpoint_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Persists the checkpoint, and - optionally - the state of the Event Processor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>checkpoint</strong> (<a class="reference internal" href="#azure.eventprocessorhost.checkpoint.Checkpoint" title="azure.eventprocessorhost.checkpoint.Checkpoint"><em>Checkpoint</em></a>) – The checkpoint to persist.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>:param event_processor_context An optional custom state value for the Event Processor.</dt><dd><p>This data must be in a JSON serializable format.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_context.PartitionContext.set_offset_and_sequence_number">
+<code class="sig-name descname">set_offset_and_sequence_number</code><span class="sig-paren">(</span><em class="sig-param">event_data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_context.html#PartitionContext.set_offset_and_sequence_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_context.PartitionContext.set_offset_and_sequence_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates offset based on event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event_data</strong> (<a class="reference internal" href="azure.eventhub.html#azure.eventhub.common.EventData" title="azure.eventhub.common.EventData"><em>EventData</em></a>) – A received EventData with valid offset and sequenceNumber.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_context.PartitionContext.to_string">
+<code class="sig-name descname">to_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_context.html#PartitionContext.to_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_context.PartitionContext.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the parition context in the following format:
+“PartitionContext({EventHubPath}{ConsumerGroupName}{PartitionId}{SequenceNumber})”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.partition_manager">
+<span id="azure-eventprocessorhost-partition-manager-module"></span><h2>azure.eventprocessorhost.partition_manager module<a class="headerlink" href="#module-azure.eventprocessorhost.partition_manager" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.partition_manager.</code><code class="sig-name descname">PartitionManager</code><span class="sig-paren">(</span><em class="sig-param">host</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Manages the partition event pump execution.</p>
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.attempt_renew_lease">
+<code class="sig-name descname">attempt_renew_lease</code><span class="sig-paren">(</span><em class="sig-param">lease_task</em>, <em class="sig-param">owned_by_others_q</em>, <em class="sig-param">lease_manager</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.attempt_renew_lease"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.attempt_renew_lease" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make attempt_renew_lease async call sync.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.attempt_renew_lease_async">
+<em class="property">async </em><code class="sig-name descname">attempt_renew_lease_async</code><span class="sig-paren">(</span><em class="sig-param">lease_task</em>, <em class="sig-param">owned_by_others_q</em>, <em class="sig-param">lease_manager</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.attempt_renew_lease_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.attempt_renew_lease_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attempts to renew a potential lease if possible and
+marks in the queue as none adds to adds to the queue.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.check_and_add_pump_async">
+<em class="property">async </em><code class="sig-name descname">check_and_add_pump_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em>, <em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.check_and_add_pump_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.check_and_add_pump_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the lease on an exisiting pump.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition ID.</p></li>
+<li><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The lease to be used.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.count_leases_by_owner">
+<code class="sig-name descname">count_leases_by_owner</code><span class="sig-paren">(</span><em class="sig-param">leases</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.count_leases_by_owner"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.count_leases_by_owner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dictionary of leases by current owner.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.create_new_pump_async">
+<em class="property">async </em><code class="sig-name descname">create_new_pump_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em>, <em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.create_new_pump_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.create_new_pump_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new pump thread with a given lease.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition ID.</p></li>
+<li><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The lease to be used.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.get_partition_ids_async">
+<em class="property">async </em><code class="sig-name descname">get_partition_ids_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.get_partition_ids_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.get_partition_ids_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all the event hub partition IDs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a>[<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.initialize_stores_async">
+<em class="property">async </em><code class="sig-name descname">initialize_stores_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.initialize_stores_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.initialize_stores_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Intializes the partition checkpoint and lease store ensures that a checkpoint
+exists for all partitions. Note in this case checkpoint and lease stores are
+the same storage manager construct.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns the number of partitions.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.remove_all_pumps_async">
+<em class="property">async </em><code class="sig-name descname">remove_all_pumps_async</code><span class="sig-paren">(</span><em class="sig-param">reason</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.remove_all_pumps_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.remove_all_pumps_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops all partition pumps
+(Note this might be wrong and need to await all tasks before returning done).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A reason for closing.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.remove_pump_async">
+<em class="property">async </em><code class="sig-name descname">remove_pump_async</code><span class="sig-paren">(</span><em class="sig-param">partition_id</em>, <em class="sig-param">reason</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.remove_pump_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.remove_pump_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops a single partiton pump.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition ID.</p></li>
+<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A reason for closing.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.retry">
+<code class="sig-name descname">retry</code><span class="sig-paren">(</span><em class="sig-param">func</em>, <em class="sig-param">partition_id</em>, <em class="sig-param">retry_message</em>, <em class="sig-param">final_failure_message</em>, <em class="sig-param">max_retries</em>, <em class="sig-param">host_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.retry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.retry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make attempt_renew_lease async call sync.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.retry_async">
+<em class="property">async </em><code class="sig-name descname">retry_async</code><span class="sig-paren">(</span><em class="sig-param">func</em>, <em class="sig-param">partition_id</em>, <em class="sig-param">retry_message</em>, <em class="sig-param">final_failure_message</em>, <em class="sig-param">max_retries</em>, <em class="sig-param">host_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.retry_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.retry_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Throws if it runs out of retries. If it returns, action succeeded.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.run_async">
+<em class="property">async </em><code class="sig-name descname">run_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.run_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.run_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the run loop and manages exceptions and cleanup.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.run_loop_async">
+<em class="property">async </em><code class="sig-name descname">run_loop_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.run_loop_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.run_loop_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the main execution loop for allocating and manging pumps.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.start_async">
+<em class="property">async </em><code class="sig-name descname">start_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.start_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.start_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Intializes the partition checkpoint and lease store and then calls run async.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.stop_async">
+<em class="property">async </em><code class="sig-name descname">stop_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.stop_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.stop_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Terminiates the partition manger.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_manager.PartitionManager.which_lease_to_steal">
+<code class="sig-name descname">which_lease_to_steal</code><span class="sig-paren">(</span><em class="sig-param">stealable_leases</em>, <em class="sig-param">have_lease_count</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_manager.html#PartitionManager.which_lease_to_steal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_manager.PartitionManager.which_lease_to_steal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines and return which lease to steal
+If the number of leases is a multiple of the number of hosts, then the desired
+configuration is that all hosts own the name number of leases, and the
+difference between the “biggest” owner and any other is 0.</p>
+<p>If the number of leases is not a multiple of the number of hosts, then the most
+even configurationpossible is for some hosts to have (self, leases/hosts) leases
+and others to have (self, (self, leases/hosts) + 1). For example, for 16 partitions
+distributed over five hosts, the distribution would be 4, 3, 3, 3, 3, or any of the
+possible reorderings.</p>
+<p>In either case, if the difference between this host and the biggest owner is 2 or more,
+then thesystem is not in the most evenly-distributed configuration, so steal one lease
+from the biggest. If there is a tie for biggest, we pick whichever appears first in the
+list because it doesn’t really matter which “biggest” is trimmed down.</p>
+<p>Stealing one at a time prevents flapping because it reduces the difference between the
+biggest and this host by two at a time. If the starting difference is two or greater,
+then the difference cannot end up below 0. This host may become tied for biggest, but it
+cannot become larger than the host that it is stealing from.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stealable_leases</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a><em>]</em>) – List of leases to determine which can be stolen.</p></li>
+<li><p><strong>have_lease_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Lease count.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease">Lease</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost.partition_pump">
+<span id="azure-eventprocessorhost-partition-pump-module"></span><h2>azure.eventprocessorhost.partition_pump module<a class="headerlink" href="#module-azure.eventprocessorhost.partition_pump" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.eventprocessorhost.partition_pump.PartitionPump">
+<em class="property">class </em><code class="sig-prename descclassname">azure.eventprocessorhost.partition_pump.</code><code class="sig-name descname">PartitionPump</code><span class="sig-paren">(</span><em class="sig-param">host</em>, <em class="sig-param">lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_pump.html#PartitionPump"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_pump.PartitionPump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Manages individual connection to a given partition.</p>
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_pump.PartitionPump.close_async">
+<em class="property">async </em><code class="sig-name descname">close_async</code><span class="sig-paren">(</span><em class="sig-param">reason</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_pump.html#PartitionPump.close_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_pump.PartitionPump.close_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Safely closes the pump.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The reason for the shutdown.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_pump.PartitionPump.is_closing">
+<code class="sig-name descname">is_closing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_pump.html#PartitionPump.is_closing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_pump.PartitionPump.is_closing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether pump is closing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_pump.PartitionPump.on_closing_async">
+<em class="property">abstract async </em><code class="sig-name descname">on_closing_async</code><span class="sig-paren">(</span><em class="sig-param">reason</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_pump.html#PartitionPump.on_closing_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_pump.PartitionPump.on_closing_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event handler for on closing event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The reason for the shutdown.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_pump.PartitionPump.on_open_async">
+<em class="property">abstract async </em><code class="sig-name descname">on_open_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_pump.html#PartitionPump.on_open_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_pump.PartitionPump.on_open_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Event handler for on open event.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_pump.PartitionPump.open_async">
+<em class="property">async </em><code class="sig-name descname">open_async</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_pump.html#PartitionPump.open_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_pump.PartitionPump.open_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens partition pump.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_pump.PartitionPump.process_error_async">
+<em class="property">async </em><code class="sig-name descname">process_error_async</code><span class="sig-paren">(</span><em class="sig-param">error</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_pump.html#PartitionPump.process_error_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_pump.PartitionPump.process_error_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Passes error to the event processor for processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>error</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#Exception" title="(in Python v3.5)"><em>Exception</em></a>) – An error the occurred.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_pump.PartitionPump.process_events_async">
+<em class="property">async </em><code class="sig-name descname">process_events_async</code><span class="sig-paren">(</span><em class="sig-param">events</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_pump.html#PartitionPump.process_events_async"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_pump.PartitionPump.process_events_async" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process pump events.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>events</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="azure.eventhub.html#azure.eventhub.common.EventData" title="azure.eventhub.common.EventData"><em>EventData</em></a><em>]</em>) – List of events to be processed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_pump.PartitionPump.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_pump.html#PartitionPump.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_pump.PartitionPump.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes pump sync so that it can be run in a thread.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_pump.PartitionPump.set_lease">
+<code class="sig-name descname">set_lease</code><span class="sig-paren">(</span><em class="sig-param">new_lease</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_pump.html#PartitionPump.set_lease"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_pump.PartitionPump.set_lease" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a new partition lease to be processed by the pump.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lease</strong> (<a class="reference internal" href="#azure.eventprocessorhost.lease.Lease" title="azure.eventprocessorhost.lease.Lease"><em>Lease</em></a>) – The lease to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.eventprocessorhost.partition_pump.PartitionPump.set_pump_status">
+<code class="sig-name descname">set_pump_status</code><span class="sig-paren">(</span><em class="sig-param">status</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventprocessorhost/partition_pump.html#PartitionPump.set_pump_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventprocessorhost.partition_pump.PartitionPump.set_pump_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates pump status and logs update to console.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-azure.eventprocessorhost">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.eventprocessorhost" title="Permalink to this headline">¶</a></h2>
+<p>The module provides a means to process Azure Event Hubs events at scale.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

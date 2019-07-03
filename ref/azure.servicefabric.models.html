@@ -117,9 +117,14 @@
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
@@ -204,6 +209,7 @@
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="azure.servicefabric.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">azure.servicefabric.models module</a></li>
@@ -213,7 +219,9 @@
 <li class="toctree-l2"><a class="reference internal" href="azure.servicefabric.html#module-azure.servicefabric">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
 </ul>
 
@@ -1210,7 +1218,7 @@ debugging session on the local development environment.</p></li>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>service_names</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Names of the services in the application.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the application. Possible values include:
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the application. Possible values include:
 ‘Unknown’, ‘Ready’, ‘Upgrading’, ‘Creating’, ‘Deleting’, ‘Failed’</p></li>
 <li><p><strong>status_details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gives additional information about the current
 status of the application.</p></li>
@@ -5864,7 +5872,7 @@ using.</p></li>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the resource. Possible values include: ‘Unknown’,
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the resource. Possible values include: ‘Unknown’,
 ‘Ready’, ‘Upgrading’, ‘Creating’, ‘Deleting’, ‘Failed’</p></li>
 <li><p><strong>status_details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gives additional information about the current
 status of the gateway.</p></li>
@@ -6459,7 +6467,7 @@ value of this property cannot be changed.</p></li>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the resource. Possible values include: ‘Unknown’,
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the resource. Possible values include: ‘Unknown’,
 ‘Ready’, ‘Upgrading’, ‘Creating’, ‘Deleting’, ‘Failed’</p></li>
 <li><p><strong>status_details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gives additional information about the current
 status of the secret.</p></li>
@@ -6693,7 +6701,7 @@ network.</p></li>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the network. Possible values include: ‘Unknown’,
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the network. Possible values include: ‘Unknown’,
 ‘Ready’, ‘Upgrading’, ‘Creating’, ‘Deleting’, ‘Failed’</p></li>
 <li><p><strong>status_details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gives additional information about the current
 status of the network.</p></li>
@@ -6882,7 +6890,7 @@ sending a request.</p>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the network. Possible values include: ‘Unknown’,
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the network. Possible values include: ‘Unknown’,
 ‘Ready’, ‘Upgrading’, ‘Creating’, ‘Deleting’, ‘Failed’</p></li>
 <li><p><strong>status_details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gives additional information about the current
 status of the network.</p></li>
@@ -10515,7 +10523,7 @@ value of this property cannot be changed.</p></li>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the resource. Possible values include: ‘Unknown’,
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the resource. Possible values include: ‘Unknown’,
 ‘Ready’, ‘Upgrading’, ‘Creating’, ‘Deleting’, ‘Failed’</p></li>
 <li><p><strong>status_details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gives additional information about the current
 status of the secret.</p></li>
@@ -11392,7 +11400,7 @@ Defaults to 1 if not specified.</p></li>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the service. Possible values include: ‘Unknown’,
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the service. Possible values include: ‘Unknown’,
 ‘Ready’, ‘Upgrading’, ‘Creating’, ‘Deleting’, ‘Failed’</p></li>
 <li><p><strong>status_details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gives additional information about the current
 status of the service.</p></li>
@@ -11483,7 +11491,7 @@ Defaults to 1 if not specified.</p></li>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the service. Possible values include: ‘Unknown’,
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the service. Possible values include: ‘Unknown’,
 ‘Ready’, ‘Upgrading’, ‘Creating’, ‘Deleting’, ‘Failed’</p></li>
 <li><p><strong>status_details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gives additional information about the current
 status of the service.</p></li>
@@ -13212,7 +13220,7 @@ Azure Files file share.</p></li>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the volume. Possible values include: ‘Unknown’,
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.servicefabric.models.ResourceStatus" title="azure.servicefabric.models.ResourceStatus"><em>ResourceStatus</em></a>) – Status of the volume. Possible values include: ‘Unknown’,
 ‘Ready’, ‘Upgrading’, ‘Creating’, ‘Deleting’, ‘Failed’</p></li>
 <li><p><strong>status_details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gives additional information about the current
 status of the volume.</p></li>

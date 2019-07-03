@@ -1,0 +1,695 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.eventprocessorhost.partition_manager &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.eventprocessorhost.partition_manager</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.eventprocessorhost.partition_manager</h1><div class="highlight"><pre>
+<span></span><span class="c1"># --------------------------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for license information.</span>
+<span class="c1"># -----------------------------------------------------------------------------------</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">queue</span> <span class="k">import</span> <span class="n">Queue</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+
+<span class="kn">from</span> <span class="nn">azure.eventhub.aio</span> <span class="k">import</span> <span class="n">EventHubClient</span>
+<span class="kn">from</span> <span class="nn">azure.eventhub</span> <span class="k">import</span> <span class="n">EventHubSharedKeyCredential</span>
+
+<span class="kn">from</span> <span class="nn">azure.eventprocessorhost.eh_partition_pump</span> <span class="k">import</span> <span class="n">EventHubPartitionPump</span>
+<span class="kn">from</span> <span class="nn">azure.eventprocessorhost.cancellation_token</span> <span class="k">import</span> <span class="n">CancellationToken</span>
+
+
+<span class="n">_logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="PartitionManager"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager">[docs]</a><span class="k">class</span> <span class="nc">PartitionManager</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Manages the partition event pump execution.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">host</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partition_pumps</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partition_ids</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">run_task</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cancellation_token</span> <span class="o">=</span> <span class="n">CancellationToken</span><span class="p">()</span>
+
+<div class="viewcode-block" id="PartitionManager.get_partition_ids_async"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.get_partition_ids_async">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_partition_ids_async</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a list of all the event hub partition IDs.</span>
+
+<span class="sd">        :rtype: list[str]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">partition_ids</span><span class="p">:</span>
+            <span class="n">hostname</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">.</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">eh_config</span><span class="o">.</span><span class="n">sb_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">eh_config</span><span class="o">.</span><span class="n">namespace_suffix</span><span class="p">)</span>
+            <span class="n">event_hub_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">eh_config</span><span class="o">.</span><span class="n">eh_name</span>
+            <span class="n">shared_key_cred</span> <span class="o">=</span> <span class="n">EventHubSharedKeyCredential</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">eh_config</span><span class="o">.</span><span class="n">policy</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">eh_config</span><span class="o">.</span><span class="n">sas_key</span><span class="p">)</span>
+
+            <span class="n">eh_client</span> <span class="o">=</span> <span class="n">EventHubClient</span><span class="p">(</span>
+                <span class="n">hostname</span><span class="p">,</span> <span class="n">event_hub_path</span><span class="p">,</span> <span class="n">shared_key_cred</span><span class="p">,</span>
+                <span class="n">network_tracing</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">eph_options</span><span class="o">.</span><span class="n">debug_trace</span><span class="p">,</span>
+                <span class="c1"># http_proxy=self.host.eph_options.http_proxy,</span>
+            <span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">eh_info</span> <span class="o">=</span> <span class="k">await</span> <span class="n">eh_client</span><span class="o">.</span><span class="n">get_properties</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">partition_ids</span> <span class="o">=</span> <span class="n">eh_info</span><span class="p">[</span><span class="s1">&#39;partition_ids&#39;</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>  <span class="c1"># pylint: disable=broad-except</span>
+                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Failed to get partition ids&quot;</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">partition_ids</span></div>
+
+<div class="viewcode-block" id="PartitionManager.start_async"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.start_async">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">start_async</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Intializes the partition checkpoint and lease store and then calls run async.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_task</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;A PartitionManager cannot be started multiple times.&quot;</span><span class="p">)</span>
+
+        <span class="n">partition_count</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialize_stores_async</span><span class="p">()</span>
+        <span class="n">_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%r</span><span class="s2"> PartitionCount: </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span> <span class="n">partition_count</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">run_task</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">ensure_future</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">run_async</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="PartitionManager.stop_async"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.stop_async">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">stop_async</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Terminiates the partition manger.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cancellation_token</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_task</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_task</span><span class="o">.</span><span class="n">done</span><span class="p">():</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_task</span></div>
+
+<div class="viewcode-block" id="PartitionManager.run_async"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.run_async">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">run_async</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Starts the run loop and manages exceptions and cleanup.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_loop_async</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>  <span class="c1"># pylint: disable=broad-except</span>
+            <span class="n">_logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Run loop failed </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Shutting down all pumps </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">guid</span><span class="p">)</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove_all_pumps_async</span><span class="p">(</span><span class="s2">&quot;Shutdown&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>  <span class="c1"># pylint: disable=broad-except</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Failed to remove all pumps </span><span class="si">{!r}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">err</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="PartitionManager.initialize_stores_async"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.initialize_stores_async">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">initialize_stores_async</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Intializes the partition checkpoint and lease store ensures that a checkpoint</span>
+<span class="sd">        exists for all partitions. Note in this case checkpoint and lease stores are</span>
+<span class="sd">        the same storage manager construct.</span>
+
+<span class="sd">        :return: Returns the number of partitions.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">storage_manager</span><span class="o">.</span><span class="n">create_checkpoint_store_if_not_exists_async</span><span class="p">()</span>
+        <span class="n">partition_ids</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_partition_ids_async</span><span class="p">()</span>
+        <span class="n">retry_tasks</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">partition_id</span> <span class="ow">in</span> <span class="n">partition_ids</span><span class="p">:</span>
+            <span class="n">retry_tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">retry_async</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">storage_manager</span><span class="o">.</span><span class="n">create_checkpoint_if_not_exists_async</span><span class="p">,</span>
+                    <span class="n">partition_id</span><span class="o">=</span><span class="n">partition_id</span><span class="p">,</span>
+                    <span class="n">retry_message</span><span class="o">=</span><span class="s2">&quot;Failure creating checkpoint for partition, retrying&quot;</span><span class="p">,</span>
+                    <span class="n">final_failure_message</span><span class="o">=</span><span class="s2">&quot;Out of retries creating checkpoint blob for partition&quot;</span><span class="p">,</span>
+                    <span class="n">max_retries</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                    <span class="n">host_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">host_name</span><span class="p">))</span>
+
+        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">retry_tasks</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">partition_ids</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PartitionManager.retry"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.retry">[docs]</a>    <span class="k">def</span> <span class="nf">retry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">,</span> <span class="n">retry_message</span><span class="p">,</span> <span class="n">final_failure_message</span><span class="p">,</span> <span class="n">max_retries</span><span class="p">,</span> <span class="n">host_id</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make attempt_renew_lease async call sync.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">new_event_loop</span><span class="p">()</span>
+        <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">retry_async</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">,</span> <span class="n">retry_message</span><span class="p">,</span>
+                                                 <span class="n">final_failure_message</span><span class="p">,</span> <span class="n">max_retries</span><span class="p">,</span> <span class="n">host_id</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="PartitionManager.retry_async"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.retry_async">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">retry_async</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">,</span> <span class="n">retry_message</span><span class="p">,</span>
+                          <span class="n">final_failure_message</span><span class="p">,</span> <span class="n">max_retries</span><span class="p">,</span> <span class="n">host_id</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Throws if it runs out of retries. If it returns, action succeeded.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">created_okay</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">retry_count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">created_okay</span> <span class="ow">and</span> <span class="n">retry_count</span> <span class="o">&lt;=</span> <span class="n">max_retries</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">func</span><span class="p">(</span><span class="n">partition_id</span><span class="p">)</span>
+                <span class="n">created_okay</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>  <span class="c1"># pylint: disable=broad-except</span>
+                <span class="n">_logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">retry_message</span><span class="p">,</span> <span class="n">host_id</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+                <span class="n">retry_count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">created_okay</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">host_id</span><span class="p">,</span> <span class="n">final_failure_message</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PartitionManager.run_loop_async"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.run_loop_async">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">run_loop_async</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This is the main execution loop for allocating and manging pumps.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cancellation_token</span><span class="o">.</span><span class="n">is_cancelled</span><span class="p">:</span>
+            <span class="n">lease_manager</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">storage_manager</span>
+            <span class="c1"># Inspect all leases.</span>
+            <span class="c1"># Acquire any expired leases.</span>
+            <span class="c1"># Renew any leases that currently belong to us.</span>
+            <span class="n">getting_all_leases</span> <span class="o">=</span> <span class="k">await</span> <span class="n">lease_manager</span><span class="o">.</span><span class="n">get_all_leases</span><span class="p">()</span>
+            <span class="n">leases_owned_by_others_q</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
+            <span class="n">renew_tasks</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">attempt_renew_lease_async</span><span class="p">(</span>
+                    <span class="n">get_lease_task</span><span class="p">,</span>
+                    <span class="n">owned_by_others_q</span><span class="o">=</span><span class="n">leases_owned_by_others_q</span><span class="p">,</span>
+                    <span class="n">lease_manager</span><span class="o">=</span><span class="n">lease_manager</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">get_lease_task</span> <span class="ow">in</span> <span class="n">getting_all_leases</span><span class="p">]</span>
+            <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">renew_tasks</span><span class="p">)</span>
+
+            <span class="c1"># Extract all leasees leases_owned_by_others and our_lease_count from the</span>
+            <span class="n">all_leases</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">leases_owned_by_others</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">our_lease_count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">while</span> <span class="ow">not</span> <span class="n">leases_owned_by_others_q</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+                <span class="n">lease_owned_by_other</span> <span class="o">=</span> <span class="n">leases_owned_by_others_q</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+                <span class="c1"># Check if lease is owned by other and append</span>
+                <span class="k">if</span> <span class="n">lease_owned_by_other</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                    <span class="n">leases_owned_by_others</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lease_owned_by_other</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">our_lease_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">all_leases</span><span class="p">[</span><span class="n">lease_owned_by_other</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">partition_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">lease_owned_by_other</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+            <span class="c1"># Grab more leases if available and needed for load balancing</span>
+            <span class="n">leases_owned_by_others_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">leases_owned_by_others</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">leases_owned_by_others_count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">steal_this_lease</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">which_lease_to_steal</span><span class="p">(</span>
+                    <span class="n">leases_owned_by_others</span><span class="p">,</span> <span class="n">our_lease_count</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">steal_this_lease</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Lease to steal </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">steal_this_lease</span><span class="o">.</span><span class="n">serializable</span><span class="p">())</span>
+                        <span class="k">if</span> <span class="k">await</span> <span class="n">lease_manager</span><span class="o">.</span><span class="n">acquire_lease_async</span><span class="p">(</span><span class="n">steal_this_lease</span><span class="p">):</span>
+                            <span class="n">_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Stole lease sucessfully </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span>
+                                         <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span> <span class="n">steal_this_lease</span><span class="o">.</span><span class="n">partition_id</span><span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Failed to steal lease for partition </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span>
+                                         <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span> <span class="n">steal_this_lease</span><span class="o">.</span><span class="n">partition_id</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>  <span class="c1"># pylint: disable=broad-except</span>
+                        <span class="n">_logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Failed to steal lease </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">partition_id</span> <span class="ow">in</span> <span class="n">all_leases</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">updated_lease</span> <span class="o">=</span> <span class="n">all_leases</span><span class="p">[</span><span class="n">partition_id</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">updated_lease</span><span class="o">.</span><span class="n">owner</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">host_name</span><span class="p">:</span>
+                        <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Attempting to renew lease </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span>
+                                      <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">)</span>
+                        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_and_add_pump_async</span><span class="p">(</span><span class="n">partition_id</span><span class="p">,</span> <span class="n">updated_lease</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Removing pump due to lost lease.&quot;</span><span class="p">)</span>
+                        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove_pump_async</span><span class="p">(</span><span class="n">partition_id</span><span class="p">,</span> <span class="s2">&quot;LeaseLost&quot;</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>  <span class="c1"># pylint: disable=broad-except</span>
+                    <span class="n">_logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Failed to update lease </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+            <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">lease_manager</span><span class="o">.</span><span class="n">lease_renew_interval</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PartitionManager.check_and_add_pump_async"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.check_and_add_pump_async">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">check_and_add_pump_async</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">,</span> <span class="n">lease</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Updates the lease on an exisiting pump.</span>
+
+<span class="sd">        :param partition_id: The partition ID.</span>
+<span class="sd">        :type partition_id: str</span>
+<span class="sd">        :param lease: The lease to be used.</span>
+<span class="sd">        :type lease: ~azure.eventprocessorhost.lease.Lease</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">partition_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">partition_pumps</span><span class="p">:</span>
+            <span class="c1"># There already is a pump. Make sure the pump is working and replace the lease.</span>
+            <span class="n">captured_pump</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">partition_pumps</span><span class="p">[</span><span class="n">partition_id</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">captured_pump</span><span class="o">.</span><span class="n">pump_status</span> <span class="o">==</span> <span class="s2">&quot;Errored&quot;</span> <span class="ow">or</span> <span class="n">captured_pump</span><span class="o">.</span><span class="n">is_closing</span><span class="p">():</span>
+                <span class="c1"># The existing pump is bad. Remove it.</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove_pump_async</span><span class="p">(</span><span class="n">partition_id</span><span class="p">,</span> <span class="s2">&quot;Shutdown&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Pump is working, should just replace the lease.</span>
+                <span class="c1"># This is causing a race condition since if the checkpoint is being updated</span>
+                <span class="c1"># when the lease changes then the pump will error and shut down</span>
+                <span class="n">captured_pump</span><span class="o">.</span><span class="n">set_lease</span><span class="p">(</span><span class="n">lease</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Starting pump </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">)</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_new_pump_async</span><span class="p">(</span><span class="n">partition_id</span><span class="p">,</span> <span class="n">lease</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PartitionManager.create_new_pump_async"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.create_new_pump_async">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">create_new_pump_async</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">,</span> <span class="n">lease</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a new pump thread with a given lease.</span>
+
+<span class="sd">        :param partition_id: The partition ID.</span>
+<span class="sd">        :type partition_id: str</span>
+<span class="sd">        :param lease: The lease to be used.</span>
+<span class="sd">        :type lease: ~azure.eventprocessorhost.lease.Lease</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
+        <span class="n">partition_pump</span> <span class="o">=</span> <span class="n">EventHubPartitionPump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="n">lease</span><span class="p">)</span>
+        <span class="c1"># Do the put after start, if the start fails then put doesn&#39;t happen</span>
+        <span class="n">loop</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">partition_pump</span><span class="o">.</span><span class="n">open_async</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partition_pumps</span><span class="p">[</span><span class="n">partition_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">partition_pump</span>
+        <span class="n">_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Created new partition pump </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PartitionManager.remove_pump_async"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.remove_pump_async">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">remove_pump_async</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">,</span> <span class="n">reason</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Stops a single partiton pump.</span>
+
+<span class="sd">        :param partition_id: The partition ID.</span>
+<span class="sd">        :type partition_id: str</span>
+<span class="sd">        :param reason: A reason for closing.</span>
+<span class="sd">        :type reason: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">partition_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">partition_pumps</span><span class="p">:</span>
+            <span class="n">captured_pump</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">partition_pumps</span><span class="p">[</span><span class="n">partition_id</span><span class="p">]</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">captured_pump</span><span class="o">.</span><span class="n">is_closing</span><span class="p">():</span>
+                <span class="k">await</span> <span class="n">captured_pump</span><span class="o">.</span><span class="n">close_async</span><span class="p">(</span><span class="n">reason</span><span class="p">)</span>
+            <span class="c1"># else, pump is already closing/closed, don&#39;t need to try to shut it down again</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">partition_pumps</span><span class="p">[</span><span class="n">partition_id</span><span class="p">]</span>  <span class="c1"># remove pump</span>
+            <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Removed pump </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">)</span>
+            <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%r</span><span class="s2"> pumps still running&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">partition_pumps</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># PartitionManager main loop tries to remove pump for every partition that the</span>
+            <span class="c1"># host does not own, just to be sure. Not finding a pump for a partition is normal</span>
+            <span class="c1"># and expected most of the time.</span>
+            <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;No pump found to remove for this partition </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PartitionManager.remove_all_pumps_async"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.remove_all_pumps_async">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">remove_all_pumps_async</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reason</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Stops all partition pumps</span>
+<span class="sd">        (Note this might be wrong and need to await all tasks before returning done).</span>
+
+<span class="sd">        :param reason: A reason for closing.</span>
+<span class="sd">        :type reason: str</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">pump_tasks</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">remove_pump_async</span><span class="p">(</span><span class="n">p_id</span><span class="p">,</span> <span class="n">reason</span><span class="p">)</span> <span class="k">for</span> <span class="n">p_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">partition_pumps</span><span class="p">]</span>
+        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">pump_tasks</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="PartitionManager.which_lease_to_steal"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.which_lease_to_steal">[docs]</a>    <span class="k">def</span> <span class="nf">which_lease_to_steal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stealable_leases</span><span class="p">,</span> <span class="n">have_lease_count</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines and return which lease to steal</span>
+<span class="sd">        If the number of leases is a multiple of the number of hosts, then the desired</span>
+<span class="sd">        configuration is that all hosts own the name number of leases, and the</span>
+<span class="sd">        difference between the &quot;biggest&quot; owner and any other is 0.</span>
+
+<span class="sd">        If the number of leases is not a multiple of the number of hosts, then the most</span>
+<span class="sd">        even configurationpossible is for some hosts to have (self, leases/hosts) leases</span>
+<span class="sd">        and others to have (self, (self, leases/hosts) + 1). For example, for 16 partitions</span>
+<span class="sd">        distributed over five hosts, the distribution would be 4, 3, 3, 3, 3, or any of the</span>
+<span class="sd">        possible reorderings.</span>
+
+<span class="sd">        In either case, if the difference between this host and the biggest owner is 2 or more,</span>
+<span class="sd">        then thesystem is not in the most evenly-distributed configuration, so steal one lease</span>
+<span class="sd">        from the biggest. If there is a tie for biggest, we pick whichever appears first in the</span>
+<span class="sd">        list because it doesn&#39;t really matter which &quot;biggest&quot; is trimmed down.</span>
+
+<span class="sd">        Stealing one at a time prevents flapping because it reduces the difference between the</span>
+<span class="sd">        biggest and this host by two at a time. If the starting difference is two or greater,</span>
+<span class="sd">        then the difference cannot end up below 0. This host may become tied for biggest, but it</span>
+<span class="sd">        cannot become larger than the host that it is stealing from.</span>
+
+<span class="sd">        :param stealable_leases: List of leases to determine which can be stolen.</span>
+<span class="sd">        :type stealable_leases: list[~azure.eventprocessorhost.lease.Lease]</span>
+<span class="sd">        :param have_lease_count: Lease count.</span>
+<span class="sd">        :type have_lease_count: int</span>
+<span class="sd">        :rtype: ~azure.eventprocessorhost.lease.Lease</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">counts_by_owner</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">count_leases_by_owner</span><span class="p">(</span><span class="n">stealable_leases</span><span class="p">)</span>
+        <span class="n">biggest_owner</span> <span class="o">=</span> <span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">counts_by_owner</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">kv</span><span class="p">:</span> <span class="n">kv</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="n">steal_this_lease</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">biggest_owner</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">have_lease_count</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">steal_this_lease</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">stealable_leases</span> <span class="k">if</span> <span class="n">l</span><span class="o">.</span><span class="n">owner</span> <span class="o">==</span> <span class="n">biggest_owner</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">steal_this_lease</span></div>
+
+<div class="viewcode-block" id="PartitionManager.count_leases_by_owner"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.count_leases_by_owner">[docs]</a>    <span class="k">def</span> <span class="nf">count_leases_by_owner</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">leases</span><span class="p">):</span>  <span class="c1"># pylint: disable=no-self-use</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a dictionary of leases by current owner.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">owners</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">owner</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">leases</span><span class="p">]</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">owners</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="PartitionManager.attempt_renew_lease"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.attempt_renew_lease">[docs]</a>    <span class="k">def</span> <span class="nf">attempt_renew_lease</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lease_task</span><span class="p">,</span> <span class="n">owned_by_others_q</span><span class="p">,</span> <span class="n">lease_manager</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Make attempt_renew_lease async call sync.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">new_event_loop</span><span class="p">()</span>
+        <span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attempt_renew_lease_async</span><span class="p">(</span><span class="n">lease_task</span><span class="p">,</span> <span class="n">owned_by_others_q</span><span class="p">,</span> <span class="n">lease_manager</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="PartitionManager.attempt_renew_lease_async"><a class="viewcode-back" href="../../../ref/azure.eventprocessorhost.html#azure.eventprocessorhost.partition_manager.PartitionManager.attempt_renew_lease_async">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">attempt_renew_lease_async</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lease_task</span><span class="p">,</span> <span class="n">owned_by_others_q</span><span class="p">,</span> <span class="n">lease_manager</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Attempts to renew a potential lease if possible and</span>
+<span class="sd">        marks in the queue as none adds to adds to the queue.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">possible_lease</span> <span class="o">=</span> <span class="k">await</span> <span class="n">lease_task</span>
+            <span class="k">if</span> <span class="k">await</span> <span class="n">possible_lease</span><span class="o">.</span><span class="n">is_expired</span><span class="p">():</span>
+                <span class="n">_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Trying to aquire lease </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span> <span class="n">possible_lease</span><span class="o">.</span><span class="n">partition_id</span><span class="p">)</span>
+                <span class="k">if</span> <span class="k">await</span> <span class="n">lease_manager</span><span class="o">.</span><span class="n">acquire_lease_async</span><span class="p">(</span><span class="n">possible_lease</span><span class="p">):</span>
+                    <span class="n">owned_by_others_q</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="kc">False</span><span class="p">,</span> <span class="n">possible_lease</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">owned_by_others_q</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="kc">True</span><span class="p">,</span> <span class="n">possible_lease</span><span class="p">))</span>
+
+            <span class="k">elif</span> <span class="n">possible_lease</span><span class="o">.</span><span class="n">owner</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">host_name</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">_logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Trying to renew lease </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span>
+                                  <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span> <span class="n">possible_lease</span><span class="o">.</span><span class="n">partition_id</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="k">await</span> <span class="n">lease_manager</span><span class="o">.</span><span class="n">renew_lease_async</span><span class="p">(</span><span class="n">possible_lease</span><span class="p">):</span>
+                        <span class="n">owned_by_others_q</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="kc">False</span><span class="p">,</span> <span class="n">possible_lease</span><span class="p">))</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">owned_by_others_q</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="kc">True</span><span class="p">,</span> <span class="n">possible_lease</span><span class="p">))</span>
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>  <span class="c1"># pylint: disable=broad-except</span>
+                    <span class="c1"># Update to &#39;Lease Lost&#39; exception.</span>
+                    <span class="n">_logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Lease lost exception </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2"> </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span>
+                                  <span class="n">err</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="o">.</span><span class="n">guid</span><span class="p">,</span> <span class="n">possible_lease</span><span class="o">.</span><span class="n">partition_id</span><span class="p">)</span>
+                    <span class="n">owned_by_others_q</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="kc">True</span><span class="p">,</span> <span class="n">possible_lease</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">owned_by_others_q</span><span class="o">.</span><span class="n">put</span><span class="p">((</span><span class="kc">True</span><span class="p">,</span> <span class="n">possible_lease</span><span class="p">))</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>  <span class="c1"># pylint: disable=broad-except</span>
+            <span class="n">_logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+                <span class="s2">&quot;Failure during getting/acquiring/renewing lease, skipping </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

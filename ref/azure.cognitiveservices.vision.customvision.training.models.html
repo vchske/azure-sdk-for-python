@@ -125,9 +125,14 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
@@ -212,8 +217,11 @@
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
 </ul>
 
@@ -505,7 +513,7 @@ sending a request.</p>
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>source_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Source URL of the image.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
 </em><a class="reference internal" href="#azure.cognitiveservices.vision.customvision.training.models.ImageCreateStatus" title="azure.cognitiveservices.vision.customvision.training.models.ImageCreateStatus"><em>ImageCreateStatus</em></a>) – Status of the image creation. Possible values include: ‘OK’,
 ‘OKDuplicate’, ‘ErrorSource’, ‘ErrorImageFormat’, ‘ErrorImageSize’,
 ‘ErrorStorage’, ‘ErrorLimitExceed’, ‘ErrorTagLimitExceed’,
@@ -830,7 +838,7 @@ sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://docs.python.org/3.5/library/token.html#module-token" title="(in Python v3.5)"><strong>token</strong></a> (<a class="reference internal" href="#azure.cognitiveservices.vision.customvision.training.models.PredictionQueryToken" title="azure.cognitiveservices.vision.customvision.training.models.PredictionQueryToken"><em>PredictionQueryToken</em></a>) – </p></li>
+<li><p><a class="reference internal" href="azure.core.html#azure.core.credentials.AccessToken.token" title="azure.core.credentials.AccessToken.token"><strong>token</strong></a> (<a class="reference internal" href="#azure.cognitiveservices.vision.customvision.training.models.PredictionQueryToken" title="azure.cognitiveservices.vision.customvision.training.models.PredictionQueryToken"><em>PredictionQueryToken</em></a>) – </p></li>
 <li><p><strong>results</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.vision.customvision.training.models.StoredImagePrediction" title="azure.cognitiveservices.vision.customvision.training.models.StoredImagePrediction"><em>StoredImagePrediction</em></a><em>]</em>) – </p></li>
 </ul>
 </dd>
@@ -967,7 +975,7 @@ sending a request.</p>
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the id of the iteration.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the current iteration status.</p></li>
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the current iteration status.</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.ModuleProvisioningState.created" title="azure.mgmt.automation.models.ModuleProvisioningState.created"><strong>created</strong></a> (<em>datetime</em>) – Gets the time this iteration was completed.</p></li>
 <li><p><strong>last_modified</strong> (<em>datetime</em>) – Gets the time this iteration was last modified.</p></li>
 <li><p><strong>trained_at</strong> (<em>datetime</em>) – Gets the time this iteration was last modified.</p></li>
@@ -1009,7 +1017,7 @@ sending a request.</p>
 <li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.MonitorService.platform" title="azure.mgmt.alertsmanagement.models.MonitorService.platform"><strong>platform</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
 </em><a class="reference internal" href="#azure.cognitiveservices.vision.customvision.training.models.ExportPlatform" title="azure.cognitiveservices.vision.customvision.training.models.ExportPlatform"><em>ExportPlatform</em></a>) – Platform of the export. Possible values include: ‘CoreML’,
 ‘TensorFlow’, ‘DockerFile’, ‘ONNX’, ‘VAIDK’</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
 </em><a class="reference internal" href="#azure.cognitiveservices.vision.customvision.training.models.ExportStatus" title="azure.cognitiveservices.vision.customvision.training.models.ExportStatus"><em>ExportStatus</em></a>) – Status of the export. Possible values include: ‘Exporting’,
 ‘Failed’, ‘Done’</p></li>
 <li><p><strong>download_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – URI used to download the model.</p></li>

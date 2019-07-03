@@ -115,9 +115,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
@@ -202,8 +207,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
 </ul>
 
@@ -288,7 +296,7 @@
     <span class="n">SessionLockExpired</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="Message"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.Message">[docs]</a><span class="k">class</span> <span class="nc">Message</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>  <span class="c1"># pylint: disable=too-many-public-methods,too-many-instance-attributes</span>
+<div class="viewcode-block" id="Message"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message">[docs]</a><span class="k">class</span> <span class="nc">Message</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>  <span class="c1"># pylint: disable=too-many-public-methods,too-many-instance-attributes</span>
     <span class="sd">&quot;&quot;&quot;A Service Bus Message.</span>
 
 <span class="sd">    :param body: The data to send in a single message. The maximum size per message is 256 kB.</span>
@@ -541,7 +549,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
 
-<div class="viewcode-block" id="Message.schedule"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.Message.schedule">[docs]</a>    <span class="k">def</span> <span class="nf">schedule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schedule_time</span><span class="p">):</span>
+<div class="viewcode-block" id="Message.schedule"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message.schedule">[docs]</a>    <span class="k">def</span> <span class="nf">schedule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schedule_time</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Add a specific enqueue time to the message.</span>
 
 <span class="sd">        :param schedule_time: The scheduled time to enqueue the message.</span>
@@ -553,7 +561,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="n">types</span><span class="o">.</span><span class="n">AMQPSymbol</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_x_OPT_SCHEDULED_ENQUEUE_TIME</span><span class="p">)]</span> <span class="o">=</span> <span class="n">schedule_time</span></div>
 
-<div class="viewcode-block" id="Message.renew_lock"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.Message.renew_lock">[docs]</a>    <span class="k">def</span> <span class="nf">renew_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Message.renew_lock"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message.renew_lock">[docs]</a>    <span class="k">def</span> <span class="nf">renew_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Renew the message lock.</span>
 
 <span class="sd">        This will maintain the lock on the message to ensure</span>
@@ -573,7 +581,7 @@
         <span class="n">expiry</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="o">.</span><span class="n">_renew_locks</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lock_token</span><span class="p">)</span>  <span class="c1"># pylint: disable=protected-access</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_expiry</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">expiry</span><span class="p">[</span><span class="sa">b</span><span class="s1">&#39;expirations&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="mf">1000.0</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Message.complete"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.Message.complete">[docs]</a>    <span class="k">def</span> <span class="nf">complete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Message.complete"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message.complete">[docs]</a>    <span class="k">def</span> <span class="nf">complete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Complete the message.</span>
 
 <span class="sd">        This removes the message from the queue.</span>
@@ -589,7 +597,7 @@
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">MessageSettleFailed</span><span class="p">(</span><span class="s2">&quot;complete&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Message.dead_letter"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.Message.dead_letter">[docs]</a>    <span class="k">def</span> <span class="nf">dead_letter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Message.dead_letter"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message.dead_letter">[docs]</a>    <span class="k">def</span> <span class="nf">dead_letter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Move the message to the Dead Letter queue.</span>
 
 <span class="sd">        The Dead Letter queue is a sub-queue that can be</span>
@@ -611,7 +619,7 @@
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">MessageSettleFailed</span><span class="p">(</span><span class="s2">&quot;reject&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Message.abandon"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.Message.abandon">[docs]</a>    <span class="k">def</span> <span class="nf">abandon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Message.abandon"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message.abandon">[docs]</a>    <span class="k">def</span> <span class="nf">abandon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Abandon the message.</span>
 
 <span class="sd">        This message will be returned to the queue to be reprocessed.</span>
@@ -627,7 +635,7 @@
         <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">MessageSettleFailed</span><span class="p">(</span><span class="s2">&quot;abandon&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Message.defer"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.Message.defer">[docs]</a>    <span class="k">def</span> <span class="nf">defer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Message.defer"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.Message.defer">[docs]</a>    <span class="k">def</span> <span class="nf">defer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Defer the message.</span>
 
 <span class="sd">        This message will remain in the queue but must be received</span>
@@ -645,7 +653,7 @@
             <span class="k">raise</span> <span class="n">MessageSettleFailed</span><span class="p">(</span><span class="s2">&quot;defer&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="BatchMessage"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.BatchMessage">[docs]</a><span class="k">class</span> <span class="nc">BatchMessage</span><span class="p">(</span><span class="n">Message</span><span class="p">):</span>
+<div class="viewcode-block" id="BatchMessage"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.BatchMessage">[docs]</a><span class="k">class</span> <span class="nc">BatchMessage</span><span class="p">(</span><span class="n">Message</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A batch of messages combined into a single message body.</span>
 
 <span class="sd">    The body of the messages in the batch should be supplied by an iterable,</span>
@@ -677,7 +685,7 @@
                 <span class="n">data</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">multi_messages</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="PeekMessage"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.PeekMessage">[docs]</a><span class="k">class</span> <span class="nc">PeekMessage</span><span class="p">(</span><span class="n">Message</span><span class="p">):</span>
+<div class="viewcode-block" id="PeekMessage"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.PeekMessage">[docs]</a><span class="k">class</span> <span class="nc">PeekMessage</span><span class="p">(</span><span class="n">Message</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A preview message.</span>
 
 <span class="sd">    This message is still on the queue, and unlocked.</span>
@@ -697,28 +705,28 @@
     <span class="k">def</span> <span class="nf">lock_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message is not locked.&quot;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="PeekMessage.renew_lock"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.PeekMessage.renew_lock">[docs]</a>    <span class="k">def</span> <span class="nf">renew_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="PeekMessage.renew_lock"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.PeekMessage.renew_lock">[docs]</a>    <span class="k">def</span> <span class="nf">renew_lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;A PeekMessage cannot be renewed. Raises `TypeError`.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message is not locked.&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PeekMessage.complete"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.PeekMessage.complete">[docs]</a>    <span class="k">def</span> <span class="nf">complete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="PeekMessage.complete"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.PeekMessage.complete">[docs]</a>    <span class="k">def</span> <span class="nf">complete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;A PeekMessage cannot be completed Raises `TypeError`.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message cannot be completed.&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PeekMessage.dead_letter"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.PeekMessage.dead_letter">[docs]</a>    <span class="k">def</span> <span class="nf">dead_letter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="PeekMessage.dead_letter"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.PeekMessage.dead_letter">[docs]</a>    <span class="k">def</span> <span class="nf">dead_letter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;A PeekMessage cannot be dead-lettered. Raises `TypeError`.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message cannot be dead-lettered.&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PeekMessage.abandon"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.PeekMessage.abandon">[docs]</a>    <span class="k">def</span> <span class="nf">abandon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="PeekMessage.abandon"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.PeekMessage.abandon">[docs]</a>    <span class="k">def</span> <span class="nf">abandon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;A PeekMessage cannot be abandoned. Raises `TypeError`.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message cannot be abandoned.&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PeekMessage.defer"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.PeekMessage.defer">[docs]</a>    <span class="k">def</span> <span class="nf">defer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="PeekMessage.defer"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.PeekMessage.defer">[docs]</a>    <span class="k">def</span> <span class="nf">defer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;A PeekMessage cannot be deferred. Raises `TypeError`.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Peeked message cannot be deferred.&quot;</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="DeferredMessage"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.DeferredMessage">[docs]</a><span class="k">class</span> <span class="nc">DeferredMessage</span><span class="p">(</span><span class="n">Message</span><span class="p">):</span>
+<div class="viewcode-block" id="DeferredMessage"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.DeferredMessage">[docs]</a><span class="k">class</span> <span class="nc">DeferredMessage</span><span class="p">(</span><span class="n">Message</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A message that has been deferred.</span>
 
 <span class="sd">    A deferred message can be completed,</span>
@@ -748,7 +756,7 @@
     <span class="k">def</span> <span class="nf">settled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_settled</span>
 
-<div class="viewcode-block" id="DeferredMessage.complete"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.DeferredMessage.complete">[docs]</a>    <span class="k">def</span> <span class="nf">complete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DeferredMessage.complete"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.DeferredMessage.complete">[docs]</a>    <span class="k">def</span> <span class="nf">complete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Complete the message.</span>
 
 <span class="sd">        This removes the message from the queue.</span>
@@ -762,7 +770,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="o">.</span><span class="n">_settle_deferred</span><span class="p">(</span><span class="s1">&#39;completed&#39;</span><span class="p">,</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">lock_token</span><span class="p">])</span>  <span class="c1"># pylint: disable=protected-access</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_settled</span> <span class="o">=</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="DeferredMessage.dead_letter"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.DeferredMessage.dead_letter">[docs]</a>    <span class="k">def</span> <span class="nf">dead_letter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="DeferredMessage.dead_letter"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.DeferredMessage.dead_letter">[docs]</a>    <span class="k">def</span> <span class="nf">dead_letter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Move the message to the Dead Letter queue.</span>
 
 <span class="sd">        The Dead Letter queue is a sub-queue that can be</span>
@@ -786,7 +794,7 @@
             <span class="s1">&#39;suspended&#39;</span><span class="p">,</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">lock_token</span><span class="p">],</span> <span class="n">dead_letter_details</span><span class="o">=</span><span class="n">details</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_settled</span> <span class="o">=</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="DeferredMessage.abandon"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.DeferredMessage.abandon">[docs]</a>    <span class="k">def</span> <span class="nf">abandon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DeferredMessage.abandon"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.DeferredMessage.abandon">[docs]</a>    <span class="k">def</span> <span class="nf">abandon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Abandon the message.</span>
 
 <span class="sd">        This message will be returned to the queue to be reprocessed.</span>
@@ -800,7 +808,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_receiver</span><span class="o">.</span><span class="n">_settle_deferred</span><span class="p">(</span><span class="s1">&#39;abandoned&#39;</span><span class="p">,</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">lock_token</span><span class="p">])</span>  <span class="c1"># pylint: disable=protected-access</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_settled</span> <span class="o">=</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="DeferredMessage.defer"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.DeferredMessage.defer">[docs]</a>    <span class="k">def</span> <span class="nf">defer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DeferredMessage.defer"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.DeferredMessage.defer">[docs]</a>    <span class="k">def</span> <span class="nf">defer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;A DeferredMessage cannot be deferred. Raises `ValueError`.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Message is already deferred.&quot;</span><span class="p">)</span></div></div>
 </pre></div>

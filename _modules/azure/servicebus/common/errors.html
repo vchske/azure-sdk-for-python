@@ -115,9 +115,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
@@ -202,8 +207,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
 </ul>
 
@@ -352,7 +360,7 @@
         <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">_ServiceBusErrorPolicy</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">on_connection_error</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="ServiceBusError"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.ServiceBusError">[docs]</a><span class="k">class</span> <span class="nc">ServiceBusError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<div class="viewcode-block" id="ServiceBusError"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.ServiceBusError">[docs]</a><span class="k">class</span> <span class="nc">ServiceBusError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;An error occured.</span>
 
 <span class="sd">    This is the parent of all Service Bus errors and can</span>
@@ -365,27 +373,27 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ServiceBusResourceNotFound"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.ServiceBusResourceNotFound">[docs]</a><span class="k">class</span> <span class="nc">ServiceBusResourceNotFound</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
+<div class="viewcode-block" id="ServiceBusResourceNotFound"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.ServiceBusResourceNotFound">[docs]</a><span class="k">class</span> <span class="nc">ServiceBusResourceNotFound</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The Service Bus entity could not be reached.&quot;&quot;&quot;</span></div>
 
 
-<div class="viewcode-block" id="ServiceBusConnectionError"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.ServiceBusConnectionError">[docs]</a><span class="k">class</span> <span class="nc">ServiceBusConnectionError</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
+<div class="viewcode-block" id="ServiceBusConnectionError"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.ServiceBusConnectionError">[docs]</a><span class="k">class</span> <span class="nc">ServiceBusConnectionError</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;An error occured in the connection.&quot;&quot;&quot;</span></div>
 
 
-<div class="viewcode-block" id="ServiceBusAuthorizationError"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.ServiceBusAuthorizationError">[docs]</a><span class="k">class</span> <span class="nc">ServiceBusAuthorizationError</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
+<div class="viewcode-block" id="ServiceBusAuthorizationError"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.ServiceBusAuthorizationError">[docs]</a><span class="k">class</span> <span class="nc">ServiceBusAuthorizationError</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;An error occured when authorizing the connection.&quot;&quot;&quot;</span></div>
 
 
-<div class="viewcode-block" id="InvalidHandlerState"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.InvalidHandlerState">[docs]</a><span class="k">class</span> <span class="nc">InvalidHandlerState</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
+<div class="viewcode-block" id="InvalidHandlerState"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.InvalidHandlerState">[docs]</a><span class="k">class</span> <span class="nc">InvalidHandlerState</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;An attempt to run a handler operation that the handler is not in the right state to perform.&quot;&quot;&quot;</span></div>
 
 
-<div class="viewcode-block" id="NoActiveSession"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.NoActiveSession">[docs]</a><span class="k">class</span> <span class="nc">NoActiveSession</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
+<div class="viewcode-block" id="NoActiveSession"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.NoActiveSession">[docs]</a><span class="k">class</span> <span class="nc">NoActiveSession</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;No active Sessions are available to receive from.&quot;&quot;&quot;</span></div>
 
 
-<div class="viewcode-block" id="MessageAlreadySettled"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.MessageAlreadySettled">[docs]</a><span class="k">class</span> <span class="nc">MessageAlreadySettled</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
+<div class="viewcode-block" id="MessageAlreadySettled"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.MessageAlreadySettled">[docs]</a><span class="k">class</span> <span class="nc">MessageAlreadySettled</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Failed to settle the message.</span>
 
 <span class="sd">    An attempt was made to complete an operation on a message that has already</span>
@@ -400,7 +408,7 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">MessageAlreadySettled</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="MessageSettleFailed"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.MessageSettleFailed">[docs]</a><span class="k">class</span> <span class="nc">MessageSettleFailed</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
+<div class="viewcode-block" id="MessageSettleFailed"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.MessageSettleFailed">[docs]</a><span class="k">class</span> <span class="nc">MessageSettleFailed</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Attempt to settle a message failed.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">inner_exception</span><span class="p">):</span>
@@ -409,7 +417,7 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">MessageSettleFailed</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">inner_exception</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="MessageSendFailed"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.MessageSendFailed">[docs]</a><span class="k">class</span> <span class="nc">MessageSendFailed</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
+<div class="viewcode-block" id="MessageSendFailed"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.MessageSendFailed">[docs]</a><span class="k">class</span> <span class="nc">MessageSendFailed</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A message failed to send to the Service Bus entity.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inner_exception</span><span class="p">):</span>
@@ -423,7 +431,7 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">MessageSendFailed</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">inner_exception</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="MessageLockExpired"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.MessageLockExpired">[docs]</a><span class="k">class</span> <span class="nc">MessageLockExpired</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
+<div class="viewcode-block" id="MessageLockExpired"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.MessageLockExpired">[docs]</a><span class="k">class</span> <span class="nc">MessageLockExpired</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The lock on the message has expired and it has been released back to the queue.</span>
 
 <span class="sd">    It will need to be received again in order to settle it.</span>
@@ -435,7 +443,7 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">MessageLockExpired</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">inner_exception</span><span class="o">=</span><span class="n">inner_exception</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="SessionLockExpired"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.SessionLockExpired">[docs]</a><span class="k">class</span> <span class="nc">SessionLockExpired</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
+<div class="viewcode-block" id="SessionLockExpired"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.SessionLockExpired">[docs]</a><span class="k">class</span> <span class="nc">SessionLockExpired</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The lock on the session has expired.</span>
 
 <span class="sd">    All unsettled messages that have been received can no longer be settled.</span>
@@ -447,11 +455,11 @@
         <span class="nb">super</span><span class="p">(</span><span class="n">SessionLockExpired</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">inner_exception</span><span class="o">=</span><span class="n">inner_exception</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="AutoLockRenewFailed"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.AutoLockRenewFailed">[docs]</a><span class="k">class</span> <span class="nc">AutoLockRenewFailed</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
+<div class="viewcode-block" id="AutoLockRenewFailed"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.AutoLockRenewFailed">[docs]</a><span class="k">class</span> <span class="nc">AutoLockRenewFailed</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;An attempt to renew a lock on a message or session in the background has failed.&quot;&quot;&quot;</span></div>
 
 
-<div class="viewcode-block" id="AutoLockRenewTimeout"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.AutoLockRenewTimeout">[docs]</a><span class="k">class</span> <span class="nc">AutoLockRenewTimeout</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
+<div class="viewcode-block" id="AutoLockRenewTimeout"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.AutoLockRenewTimeout">[docs]</a><span class="k">class</span> <span class="nc">AutoLockRenewTimeout</span><span class="p">(</span><span class="n">ServiceBusError</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;The time allocated to renew the message or session lock has elapsed.&quot;&quot;&quot;</span></div>
 </pre></div>
 

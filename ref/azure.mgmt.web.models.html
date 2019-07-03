@@ -117,9 +117,14 @@
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cosmos.html">azure.cosmos package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventhub.html">azure.eventhub package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
@@ -212,8 +217,11 @@
 <li class="toctree-l2"><a class="reference internal" href="azure.mgmt.web.html#module-azure.mgmt.web">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.storage.queue.html">azure.storage.queue package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
 </ul>
 
@@ -355,14 +363,14 @@ sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Certificate Version.</p></li>
+<li><p><a class="reference internal" href="azure.core.html#module-azure.core.version" title="azure.core.version"><strong>version</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Certificate Version.</p></li>
 <li><p><strong>serial_number</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate Serial Number.</p></li>
 <li><p><strong>thumbprint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate Thumbprint.</p></li>
 <li><p><strong>subject</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate Subject.</p></li>
 <li><p><strong>not_before</strong> (<em>datetime</em>) – Date Certificate is valid from.</p></li>
 <li><p><strong>not_after</strong> (<em>datetime</em>) – Date Certificate is valid to.</p></li>
 <li><p><strong>signature_algorithm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate Signature algorithm.</p></li>
-<li><p><strong>issuer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate Issuer.</p></li>
+<li><p><a class="reference internal" href="azure.servicebus.control_client.html#azure.servicebus.control_client.servicebusservice.ServiceBusService.issuer" title="azure.servicebus.control_client.servicebusservice.ServiceBusService.issuer"><strong>issuer</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate Issuer.</p></li>
 <li><p><strong>raw_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Raw certificate data.</p></li>
 </ul>
 </dd>
@@ -387,7 +395,7 @@ sending a request.</p>
 <li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
 </em><a class="reference internal" href="#azure.mgmt.web.models.ProvisioningState" title="azure.mgmt.web.models.ProvisioningState"><em>ProvisioningState</em></a>) – Status of certificate order. Possible values
 include: ‘Succeeded’, ‘Failed’, ‘Canceled’, ‘InProgress’, ‘Deleting’</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.CertificateOrderStatus" title="azure.mgmt.web.models.CertificateOrderStatus"><em>CertificateOrderStatus</em></a>) – Current order status. Possible values include:
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.CertificateOrderStatus" title="azure.mgmt.web.models.CertificateOrderStatus"><em>CertificateOrderStatus</em></a>) – Current order status. Possible values include:
 ‘Pendingissuance’, ‘Issued’, ‘Revoked’, ‘Canceled’, ‘Denied’,
 ‘Pendingrevocation’, ‘PendingRekey’, ‘Unused’, ‘Expired’, ‘NotSubmitted’</p></li>
 <li><p><strong>signed_certificate</strong> (<a class="reference internal" href="#azure.mgmt.web.models.CertificateDetails" title="azure.mgmt.web.models.CertificateDetails"><em>CertificateDetails</em></a>) – Signed certificate.</p></li>
@@ -445,7 +453,7 @@ sending a request.</p>
 <li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
 </em><a class="reference internal" href="#azure.mgmt.web.models.ProvisioningState" title="azure.mgmt.web.models.ProvisioningState"><em>ProvisioningState</em></a>) – Status of certificate order. Possible values
 include: ‘Succeeded’, ‘Failed’, ‘Canceled’, ‘InProgress’, ‘Deleting’</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.CertificateOrderStatus" title="azure.mgmt.web.models.CertificateOrderStatus"><em>CertificateOrderStatus</em></a>) – Current order status. Possible values include:
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.CertificateOrderStatus" title="azure.mgmt.web.models.CertificateOrderStatus"><em>CertificateOrderStatus</em></a>) – Current order status. Possible values include:
 ‘Pendingissuance’, ‘Issued’, ‘Revoked’, ‘Canceled’, ‘Denied’,
 ‘Pendingrevocation’, ‘PendingRekey’, ‘Unused’, ‘Expired’, ‘NotSubmitted’</p></li>
 <li><p><strong>signed_certificate</strong> (<a class="reference internal" href="#azure.mgmt.web.models.CertificateDetails" title="azure.mgmt.web.models.CertificateDetails"><em>CertificateDetails</em></a>) – Signed certificate.</p></li>
@@ -1827,7 +1835,7 @@ sending a request.</p>
 <li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Name.</p></li>
 <li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.StatusOptions" title="azure.mgmt.web.models.StatusOptions"><em>StatusOptions</em></a>) – App Service plan status. Possible values include: ‘Ready’,
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.StatusOptions" title="azure.mgmt.web.models.StatusOptions"><em>StatusOptions</em></a>) – App Service plan status. Possible values include: ‘Ready’,
 ‘Pending’, ‘Creating’</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.subscription.html#module-azure.mgmt.subscription" title="azure.mgmt.subscription"><strong>subscription</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – App Service plan subscription.</p></li>
 <li><p><strong>maximum_number_of_workers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum number of instances that can be
@@ -2493,7 +2501,7 @@ sending a request.</p>
 <li><p><strong>subject_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subject name of the certificate.</p></li>
 <li><p><strong>site_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – App name.</p></li>
 <li><p><strong>self_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Self link.</p></li>
-<li><p><strong>issuer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate issuer.</p></li>
+<li><p><a class="reference internal" href="azure.servicebus.control_client.html#azure.servicebus.control_client.servicebusservice.ServiceBusService.issuer" title="azure.servicebus.control_client.servicebusservice.ServiceBusService.issuer"><strong>issuer</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate issuer.</p></li>
 <li><p><strong>issue_date</strong> (<em>datetime</em>) – Certificate issue Date.</p></li>
 <li><p><strong>expiration_date</strong> (<em>datetime</em>) – Certificate expiration date.</p></li>
 <li><p><strong>thumbprint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate thumbprint.</p></li>
@@ -2547,7 +2555,7 @@ sending a request.</p>
 <li><p><strong>subject_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subject name of the certificate.</p></li>
 <li><p><strong>site_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – App name.</p></li>
 <li><p><strong>self_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Self link.</p></li>
-<li><p><strong>issuer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate issuer.</p></li>
+<li><p><a class="reference internal" href="azure.servicebus.control_client.html#azure.servicebus.control_client.servicebusservice.ServiceBusService.issuer" title="azure.servicebus.control_client.servicebusservice.ServiceBusService.issuer"><strong>issuer</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate issuer.</p></li>
 <li><p><strong>issue_date</strong> (<em>datetime</em>) – Certificate issue Date.</p></li>
 <li><p><strong>expiration_date</strong> (<em>datetime</em>) – Certificate expiration date.</p></li>
 <li><p><strong>thumbprint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate thumbprint.</p></li>
@@ -2757,7 +2765,7 @@ Service Environment default SSL certificate</p></li>
 </em><a class="reference internal" href="#azure.mgmt.web.models.ProvisioningState" title="azure.mgmt.web.models.ProvisioningState"><em>ProvisioningState</em></a>) – Provisioning state of the App Service
 Environment. Possible values include: ‘Succeeded’, ‘Failed’, ‘Canceled’,
 ‘InProgress’, ‘Deleting’</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.HostingEnvironmentStatus" title="azure.mgmt.web.models.HostingEnvironmentStatus"><em>HostingEnvironmentStatus</em></a>) – Current status of the App Service Environment. Possible
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.HostingEnvironmentStatus" title="azure.mgmt.web.models.HostingEnvironmentStatus"><em>HostingEnvironmentStatus</em></a>) – Current status of the App Service Environment. Possible
 values include: ‘Preparing’, ‘Ready’, ‘Scaling’, ‘Deleting’</p></li>
 <li><p><strong>database_edition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Edition of the metadata database for the App
 Service Environment, e.g. “Standard”.</p></li>
@@ -4080,7 +4088,7 @@ sending a request.</p>
 contains this backup.</p></li>
 <li><p><strong>blob_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the blob which contains data for this backup.</p></li>
 <li><p><strong>backup_item_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of this backup.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.BackupItemStatus" title="azure.mgmt.web.models.BackupItemStatus"><em>BackupItemStatus</em></a>) – Backup status. Possible values include: ‘InProgress’,
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.BackupItemStatus" title="azure.mgmt.web.models.BackupItemStatus"><em>BackupItemStatus</em></a>) – Backup status. Possible values include: ‘InProgress’,
 ‘Failed’, ‘Succeeded’, ‘TimedOut’, ‘Created’, ‘Skipped’,
 ‘PartiallySucceeded’, ‘DeleteInProgress’, ‘DeleteFailed’, ‘Deleted’</p></li>
 <li><p><strong>size_in_bytes</strong> (<em>long</em>) – Size of the backup in bytes.</p></li>
@@ -6095,7 +6103,7 @@ sending a request.</p>
 </em><a class="reference internal" href="#azure.mgmt.web.models.ProvisioningState" title="azure.mgmt.web.models.ProvisioningState"><em>ProvisioningState</em></a>) – Provisioning state of the App Service
 Environment. Possible values include: ‘Succeeded’, ‘Failed’, ‘Canceled’,
 ‘InProgress’, ‘Deleting’</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.HostingEnvironmentStatus" title="azure.mgmt.web.models.HostingEnvironmentStatus"><em>HostingEnvironmentStatus</em></a>) – Current status of the App Service Environment. Possible
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.HostingEnvironmentStatus" title="azure.mgmt.web.models.HostingEnvironmentStatus"><em>HostingEnvironmentStatus</em></a>) – Current status of the App Service Environment. Possible
 values include: ‘Preparing’, ‘Ready’, ‘Scaling’, ‘Deleting’</p></li>
 <li><p><strong>database_edition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Edition of the metadata database for the App
 Service Environment, e.g. “Standard”.</p></li>
@@ -6196,7 +6204,7 @@ sending a request.</p>
 </em><a class="reference internal" href="#azure.mgmt.web.models.ProvisioningState" title="azure.mgmt.web.models.ProvisioningState"><em>ProvisioningState</em></a>) – Provisioning state of the App Service
 Environment. Possible values include: ‘Succeeded’, ‘Failed’, ‘Canceled’,
 ‘InProgress’, ‘Deleting’</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.HostingEnvironmentStatus" title="azure.mgmt.web.models.HostingEnvironmentStatus"><em>HostingEnvironmentStatus</em></a>) – Current status of the App Service Environment. Possible
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.HostingEnvironmentStatus" title="azure.mgmt.web.models.HostingEnvironmentStatus"><em>HostingEnvironmentStatus</em></a>) – Current status of the App Service Environment. Possible
 values include: ‘Preparing’, ‘Ready’, ‘Scaling’, ‘Deleting’</p></li>
 <li><p><strong>database_edition</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Edition of the metadata database for the App
 Service Environment, e.g. “Standard”.</p></li>
@@ -6500,7 +6508,7 @@ sending a request.</p>
 <li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Name.</p></li>
 <li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.StatusOptions" title="azure.mgmt.web.models.StatusOptions"><em>StatusOptions</em></a>) – App Service plan status. Possible values include: ‘Ready’,
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.status" title="azure.core.polling.async_poller.AsyncPollingMethod.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.web.models.StatusOptions" title="azure.mgmt.web.models.StatusOptions"><em>StatusOptions</em></a>) – App Service plan status. Possible values include: ‘Ready’,
 ‘Pending’, ‘Creating’</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.subscription.html#module-azure.mgmt.subscription" title="azure.mgmt.subscription"><strong>subscription</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – App Service plan subscription.</p></li>
 <li><p><strong>maximum_number_of_workers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum number of instances that can be

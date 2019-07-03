@@ -1,0 +1,771 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.eventprocessorhost.vendor.storage.common.storageclient &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../" src="../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.anomalydetector.html">azure.cognitiveservices.anomalydetector package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.luis.authoring.html">azure.cognitiveservices.language.luis.authoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.luis.runtime.html">azure.cognitiveservices.language.luis.runtime package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.autosuggest.html">azure.cognitiveservices.search.autosuggest package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.customimagesearch.html">azure.cognitiveservices.search.customimagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.apimanagement.html">azure.mgmt.apimanagement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.applicationinsights.html">azure.mgmt.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.automation.html">azure.mgmt.automation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.databricks.html">azure.mgmt.databricks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.datamigration.html">azure.mgmt.datamigration package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.devspaces.html">azure.mgmt.devspaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.imagebuilder.html">azure.mgmt.imagebuilder package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.iotcentral.html">azure.mgmt.iotcentral package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.kusto.html">azure.mgmt.kusto package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.labservices.html">azure.mgmt.labservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.managementpartner.html">azure.mgmt.managementpartner package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.maps.html">azure.mgmt.maps package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.marketplaceordering.html">azure.mgmt.marketplaceordering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.mixedreality.html">azure.mgmt.mixedreality package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.netapp.html">azure.mgmt.netapp package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.rdbms.mariadb.html">azure.mgmt.rdbms.mariadb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.resourcegraph.html">azure.mgmt.resourcegraph package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.security.html">azure.mgmt.security package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.signalr.html">azure.mgmt.signalr package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.sqlvirtualmachine.html">azure.mgmt.sqlvirtualmachine package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.eventprocessorhost.vendor.storage.common.storageclient</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.eventprocessorhost.vendor.storage.common.storageclient</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="k">import</span> <span class="n">ABCMeta</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">sleep</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">azure.common</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">AzureException</span><span class="p">,</span>
+    <span class="n">AzureHttpError</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">._constants</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">DEFAULT_SOCKET_TIMEOUT</span><span class="p">,</span>
+    <span class="n">DEFAULT_X_MS_VERSION</span><span class="p">,</span>
+    <span class="n">DEFAULT_USER_AGENT_STRING</span><span class="p">,</span>
+    <span class="n">USER_AGENT_STRING_PREFIX</span><span class="p">,</span>
+    <span class="n">USER_AGENT_STRING_SUFFIX</span><span class="p">,</span>
+    <span class="n">_AUTHORIZATION_HEADER_NAME</span><span class="p">,</span>
+    <span class="n">_REDACTED_VALUE</span><span class="p">,</span>
+    <span class="n">_COPY_SOURCE_HEADER_NAME</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">._error</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">_ERROR_DECRYPTION_FAILURE</span><span class="p">,</span>
+    <span class="n">_http_error_handler</span><span class="p">,</span>
+    <span class="n">_wrap_exception</span><span class="p">,</span>
+    <span class="n">AzureSigningError</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">._http</span> <span class="k">import</span> <span class="n">HTTPError</span>
+<span class="kn">from</span> <span class="nn">._http.httpclient</span> <span class="k">import</span> <span class="n">_HTTPClient</span>
+<span class="kn">from</span> <span class="nn">._serialization</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">_update_request</span><span class="p">,</span>
+    <span class="n">_add_date_header</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">RetryContext</span><span class="p">,</span>
+    <span class="n">LocationMode</span><span class="p">,</span>
+    <span class="n">_OperationContext</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.retry</span> <span class="k">import</span> <span class="n">ExponentialRetry</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="k">import</span> <span class="n">UnsupportedOperation</span>
+<span class="kn">from</span> <span class="nn">.sharedaccesssignature</span> <span class="k">import</span> <span class="n">_QueryStringConstants</span>
+
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,):</span>
+    <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="k">import</span> <span class="p">(</span>
+        <span class="n">urlparse</span><span class="p">,</span>
+        <span class="n">parse_qsl</span><span class="p">,</span>
+        <span class="n">urlunparse</span><span class="p">,</span>
+        <span class="n">urlencode</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">urlparse</span> <span class="k">import</span> <span class="p">(</span>
+        <span class="n">urlparse</span><span class="p">,</span>
+        <span class="n">parse_qsl</span><span class="p">,</span>
+        <span class="n">urlunparse</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="kn">from</span> <span class="nn">urllib</span> <span class="k">import</span> <span class="n">urlencode</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="StorageClient"><a class="viewcode-back" href="../../../../../../ref/azure.eventprocessorhost.vendor.storage.common.html#azure.eventprocessorhost.vendor.storage.common.storageclient.StorageClient">[docs]</a><span class="k">class</span> <span class="nc">StorageClient</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This is the base class for service objects. Service objects are used to do </span>
+<span class="sd">    all requests to Storage. This class cannot be instantiated directly.</span>
+
+<span class="sd">    :ivar str account_name:</span>
+<span class="sd">        The storage account name. This is used to authenticate requests </span>
+<span class="sd">        signed with an account key and to construct the storage endpoint. It </span>
+<span class="sd">        is required unless a connection string is given, or if a custom </span>
+<span class="sd">        domain is used with anonymous authentication.</span>
+<span class="sd">    :ivar str account_key:</span>
+<span class="sd">        The storage account key. This is used for shared key authentication. </span>
+<span class="sd">        If neither account key or sas token is specified, anonymous access </span>
+<span class="sd">        will be used.</span>
+<span class="sd">    :ivar str sas_token:</span>
+<span class="sd">        A shared access signature token to use to authenticate requests </span>
+<span class="sd">        instead of the account key. If account key and sas token are both </span>
+<span class="sd">        specified, account key will be used to sign. If neither are </span>
+<span class="sd">        specified, anonymous access will be used.</span>
+<span class="sd">    :ivar str primary_endpoint:</span>
+<span class="sd">        The endpoint to send storage requests to.</span>
+<span class="sd">    :ivar str secondary_endpoint:</span>
+<span class="sd">        The secondary endpoint to read storage data from. This will only be a </span>
+<span class="sd">        valid endpoint if the storage account used is RA-GRS and thus allows </span>
+<span class="sd">        reading from secondary.</span>
+<span class="sd">    :ivar function(context) retry:</span>
+<span class="sd">        A function which determines whether to retry. Takes as a parameter a </span>
+<span class="sd">        :class:`~azure.storage.common.models.RetryContext` object. Returns the number</span>
+<span class="sd">        of seconds to wait before retrying the request, or None to indicate not </span>
+<span class="sd">        to retry.</span>
+<span class="sd">    :ivar ~azure.storage.common.models.LocationMode location_mode:</span>
+<span class="sd">        The host location to use to make requests. Defaults to LocationMode.PRIMARY.</span>
+<span class="sd">        Note that this setting only applies to RA-GRS accounts as other account </span>
+<span class="sd">        types do not allow reading from secondary. If the location_mode is set to </span>
+<span class="sd">        LocationMode.SECONDARY, read requests will be sent to the secondary endpoint. </span>
+<span class="sd">        Write requests will continue to be sent to primary.</span>
+<span class="sd">    :ivar str protocol:</span>
+<span class="sd">        The protocol to use for requests. Defaults to https.</span>
+<span class="sd">    :ivar requests.Session request_session:</span>
+<span class="sd">        The session object to use for http requests.</span>
+<span class="sd">    :ivar function(request) request_callback:</span>
+<span class="sd">        A function called immediately before each request is sent. This function </span>
+<span class="sd">        takes as a parameter the request object and returns nothing. It may be </span>
+<span class="sd">        used to added custom headers or log request data.</span>
+<span class="sd">    :ivar function() response_callback:</span>
+<span class="sd">        A function called immediately after each response is received. This </span>
+<span class="sd">        function takes as a parameter the response object and returns nothing. </span>
+<span class="sd">        It may be used to log response data.</span>
+<span class="sd">    :ivar function() retry_callback:</span>
+<span class="sd">        A function called immediately after retry evaluation is performed. This </span>
+<span class="sd">        function takes as a parameter the retry context object and returns nothing. </span>
+<span class="sd">        It may be used to detect retries and log context information.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">__metaclass__</span> <span class="o">=</span> <span class="n">ABCMeta</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">connection_params</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        :param obj connection_params: The parameters to use to construct the client.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">account_name</span> <span class="o">=</span> <span class="n">connection_params</span><span class="o">.</span><span class="n">account_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">account_key</span> <span class="o">=</span> <span class="n">connection_params</span><span class="o">.</span><span class="n">account_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sas_token</span> <span class="o">=</span> <span class="n">connection_params</span><span class="o">.</span><span class="n">sas_token</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">token_credential</span> <span class="o">=</span> <span class="n">connection_params</span><span class="o">.</span><span class="n">token_credential</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_emulated</span> <span class="o">=</span> <span class="n">connection_params</span><span class="o">.</span><span class="n">is_emulated</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">primary_endpoint</span> <span class="o">=</span> <span class="n">connection_params</span><span class="o">.</span><span class="n">primary_endpoint</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">secondary_endpoint</span> <span class="o">=</span> <span class="n">connection_params</span><span class="o">.</span><span class="n">secondary_endpoint</span>
+
+        <span class="n">protocol</span> <span class="o">=</span> <span class="n">connection_params</span><span class="o">.</span><span class="n">protocol</span>
+        <span class="n">request_session</span> <span class="o">=</span> <span class="n">connection_params</span><span class="o">.</span><span class="n">request_session</span> <span class="ow">or</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+        <span class="n">socket_timeout</span> <span class="o">=</span> <span class="n">connection_params</span><span class="o">.</span><span class="n">socket_timeout</span> <span class="ow">or</span> <span class="n">DEFAULT_SOCKET_TIMEOUT</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_httpclient</span> <span class="o">=</span> <span class="n">_HTTPClient</span><span class="p">(</span>
+            <span class="n">protocol</span><span class="o">=</span><span class="n">protocol</span><span class="p">,</span>
+            <span class="n">session</span><span class="o">=</span><span class="n">request_session</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="n">socket_timeout</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">retry</span> <span class="o">=</span> <span class="n">ExponentialRetry</span><span class="p">()</span><span class="o">.</span><span class="n">retry</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span> <span class="o">=</span> <span class="n">LocationMode</span><span class="o">.</span><span class="n">PRIMARY</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">request_callback</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response_callback</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">retry_callback</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_X_MS_VERSION</span> <span class="o">=</span> <span class="n">DEFAULT_X_MS_VERSION</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_USER_AGENT_STRING</span> <span class="o">=</span> <span class="n">DEFAULT_USER_AGENT_STRING</span>
+
+    <span class="k">def</span> <span class="nf">_update_user_agent_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">service_package_version</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_USER_AGENT_STRING</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}{}</span><span class="s1"> </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">USER_AGENT_STRING_PREFIX</span><span class="p">,</span>
+                                                   <span class="n">service_package_version</span><span class="p">,</span>
+                                                   <span class="n">USER_AGENT_STRING_SUFFIX</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">socket_timeout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_httpclient</span><span class="o">.</span><span class="n">timeout</span>
+
+    <span class="nd">@socket_timeout</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">socket_timeout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_httpclient</span><span class="o">.</span><span class="n">timeout</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">protocol</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_httpclient</span><span class="o">.</span><span class="n">protocol</span>
+
+    <span class="nd">@protocol</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">protocol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_httpclient</span><span class="o">.</span><span class="n">protocol</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">request_session</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_httpclient</span><span class="o">.</span><span class="n">session</span>
+
+    <span class="nd">@request_session</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">request_session</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_httpclient</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="StorageClient.set_proxy"><a class="viewcode-back" href="../../../../../../ref/azure.eventprocessorhost.vendor.storage.common.html#azure.eventprocessorhost.vendor.storage.common.storageclient.StorageClient.set_proxy">[docs]</a>    <span class="k">def</span> <span class="nf">set_proxy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Sets the proxy server host and port for the HTTP CONNECT Tunnelling.</span>
+
+<span class="sd">        :param str host: Address of the proxy. Ex: &#39;192.168.0.100&#39;</span>
+<span class="sd">        :param int port: Port of the proxy. Ex: 6000</span>
+<span class="sd">        :param str user: User for proxy authorization.</span>
+<span class="sd">        :param str password: Password for proxy authorization.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_httpclient</span><span class="o">.</span><span class="n">set_proxy</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_get_host_locations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">primary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">secondary</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="n">locations</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">primary</span><span class="p">:</span>
+            <span class="n">locations</span><span class="p">[</span><span class="n">LocationMode</span><span class="o">.</span><span class="n">PRIMARY</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">primary_endpoint</span>
+        <span class="k">if</span> <span class="n">secondary</span><span class="p">:</span>
+            <span class="n">locations</span><span class="p">[</span><span class="n">LocationMode</span><span class="o">.</span><span class="n">SECONDARY</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">secondary_endpoint</span>
+        <span class="k">return</span> <span class="n">locations</span>
+
+    <span class="k">def</span> <span class="nf">_apply_host</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">operation_context</span><span class="p">,</span> <span class="n">retry_context</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">operation_context</span><span class="o">.</span><span class="n">location_lock</span> <span class="ow">and</span> <span class="n">operation_context</span><span class="o">.</span><span class="n">host_location</span><span class="p">:</span>
+            <span class="c1"># If this is a location locked operation and the location is set, </span>
+            <span class="c1"># override the request location and host_location.</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">host_locations</span> <span class="o">=</span> <span class="n">operation_context</span><span class="o">.</span><span class="n">host_location</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">operation_context</span><span class="o">.</span><span class="n">host_location</span><span class="o">.</span><span class="n">values</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">retry_context</span><span class="o">.</span><span class="n">location_mode</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">operation_context</span><span class="o">.</span><span class="n">host_location</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">host_locations</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># If only one location is allowed, use that location.</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">host_locations</span><span class="o">.</span><span class="n">values</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">retry_context</span><span class="o">.</span><span class="n">location_mode</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">host_locations</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># If multiple locations are possible, choose based on the location mode.</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">host_locations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span><span class="p">)</span>
+            <span class="n">retry_context</span><span class="o">.</span><span class="n">location_mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">location_mode</span>
+
+<div class="viewcode-block" id="StorageClient.extract_date_and_request_id"><a class="viewcode-back" href="../../../../../../ref/azure.eventprocessorhost.vendor.storage.common.html#azure.eventprocessorhost.vendor.storage.common.storageclient.StorageClient.extract_date_and_request_id">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">extract_date_and_request_id</span><span class="p">(</span><span class="n">retry_context</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">retry_context</span><span class="p">,</span> <span class="s1">&#39;response&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="n">retry_context</span><span class="o">.</span><span class="n">response</span>
+
+        <span class="k">if</span> <span class="s1">&#39;date&#39;</span> <span class="ow">in</span> <span class="n">resp</span><span class="o">.</span><span class="n">headers</span> <span class="ow">and</span> <span class="s1">&#39;x-ms-request-id&#39;</span> <span class="ow">in</span> <span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Server-Timestamp=</span><span class="si">{0}</span><span class="s2">, Server-Request-ID=</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="p">,</span>
+                              <span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;x-ms-request-id&#39;</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="s1">&#39;date&#39;</span> <span class="ow">in</span> <span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Server-Timestamp=</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="s1">&#39;x-ms-request-id&#39;</span> <span class="ow">in</span> <span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Server-Request-ID=</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;x-ms-request-id&#39;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;&quot;</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_scrub_headers</span><span class="p">(</span><span class="n">headers</span><span class="p">):</span>
+        <span class="c1"># make a copy to avoid contaminating the request</span>
+        <span class="n">clean_headers</span> <span class="o">=</span> <span class="n">headers</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">_AUTHORIZATION_HEADER_NAME</span> <span class="ow">in</span> <span class="n">clean_headers</span><span class="p">:</span>
+            <span class="n">clean_headers</span><span class="p">[</span><span class="n">_AUTHORIZATION_HEADER_NAME</span><span class="p">]</span> <span class="o">=</span> <span class="n">_REDACTED_VALUE</span>
+
+        <span class="c1"># in case of copy operations, there could be a SAS signature present in the header value</span>
+        <span class="k">if</span> <span class="n">_COPY_SOURCE_HEADER_NAME</span> <span class="ow">in</span> <span class="n">clean_headers</span> \
+                <span class="ow">and</span> <span class="n">_QueryStringConstants</span><span class="o">.</span><span class="n">SIGNED_SIGNATURE</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="ow">in</span> <span class="n">clean_headers</span><span class="p">[</span><span class="n">_COPY_SOURCE_HEADER_NAME</span><span class="p">]:</span>
+            <span class="c1"># take the url apart and scrub away the signed signature</span>
+            <span class="n">scheme</span><span class="p">,</span> <span class="n">netloc</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">fragment</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">clean_headers</span><span class="p">[</span><span class="n">_COPY_SOURCE_HEADER_NAME</span><span class="p">])</span>
+            <span class="n">parsed_qs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">parse_qsl</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
+            <span class="n">parsed_qs</span><span class="p">[</span><span class="n">_QueryStringConstants</span><span class="o">.</span><span class="n">SIGNED_SIGNATURE</span><span class="p">]</span> <span class="o">=</span> <span class="n">_REDACTED_VALUE</span>
+
+            <span class="c1"># the SAS needs to be put back together</span>
+            <span class="n">clean_headers</span><span class="p">[</span><span class="n">_COPY_SOURCE_HEADER_NAME</span><span class="p">]</span> <span class="o">=</span> <span class="n">urlunparse</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">scheme</span><span class="p">,</span> <span class="n">netloc</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">urlencode</span><span class="p">(</span><span class="n">parsed_qs</span><span class="p">),</span> <span class="n">fragment</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">clean_headers</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_scrub_query_parameters</span><span class="p">(</span><span class="n">query</span><span class="p">):</span>
+        <span class="c1"># make a copy to avoid contaminating the request</span>
+        <span class="n">clean_queries</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">_QueryStringConstants</span><span class="o">.</span><span class="n">SIGNED_SIGNATURE</span> <span class="ow">in</span> <span class="n">clean_queries</span><span class="p">:</span>
+            <span class="n">clean_queries</span><span class="p">[</span><span class="n">_QueryStringConstants</span><span class="o">.</span><span class="n">SIGNED_SIGNATURE</span><span class="p">]</span> <span class="o">=</span> <span class="n">_REDACTED_VALUE</span>
+        <span class="k">return</span> <span class="n">clean_queries</span>
+
+    <span class="k">def</span> <span class="nf">_perform_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parser</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parser_args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">operation_context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">expected_errors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Sends the request and return response. Catches HTTPError and hands it</span>
+<span class="sd">        to error handler</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">operation_context</span> <span class="o">=</span> <span class="n">operation_context</span> <span class="ow">or</span> <span class="n">_OperationContext</span><span class="p">()</span>
+        <span class="n">retry_context</span> <span class="o">=</span> <span class="n">RetryContext</span><span class="p">()</span>
+        <span class="n">retry_context</span><span class="o">.</span><span class="n">is_emulated</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_emulated</span>
+
+        <span class="c1"># if request body is a stream, we need to remember its current position in case retries happen</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span> <span class="s1">&#39;read&#39;</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">retry_context</span><span class="o">.</span><span class="n">body_position</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="n">UnsupportedOperation</span><span class="p">):</span>
+                <span class="c1"># if body position cannot be obtained, then retries will not work</span>
+                <span class="k">pass</span>
+
+        <span class="c1"># Apply the appropriate host based on the location mode</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_apply_host</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">operation_context</span><span class="p">,</span> <span class="n">retry_context</span><span class="p">)</span>
+
+        <span class="c1"># Apply common settings to the request</span>
+        <span class="n">_update_request</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_X_MS_VERSION</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_USER_AGENT_STRING</span><span class="p">)</span>
+        <span class="n">client_request_id_prefix</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Client-Request-ID=</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">])</span>
+
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="c1"># Execute the request callback </span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">request_callback</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">request_callback</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+                    <span class="c1"># Add date and auth after the callback so date doesn&#39;t get too old and </span>
+                    <span class="c1"># authentication is still correct if signed headers are added in the request </span>
+                    <span class="c1"># callback. This also ensures retry policies with long back offs </span>
+                    <span class="c1"># will work as it resets the time sensitive headers.</span>
+                    <span class="n">_add_date_header</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="c1"># request can be signed individually</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">authentication</span><span class="o">.</span><span class="n">sign_request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                        <span class="c1"># session can also be signed</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">request_session</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">authentication</span><span class="o">.</span><span class="n">signed_session</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">request_session</span><span class="p">)</span>
+
+                    <span class="c1"># Set the request context</span>
+                    <span class="n">retry_context</span><span class="o">.</span><span class="n">request</span> <span class="o">=</span> <span class="n">request</span>
+
+                    <span class="c1"># Log the request before it goes out</span>
+                    <span class="c1"># Avoid unnecessary scrubbing if the logger is not on</span>
+                    <span class="k">if</span> <span class="n">logger</span><span class="o">.</span><span class="n">isEnabledFor</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">):</span>
+                        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> Outgoing request: Method=</span><span class="si">%s</span><span class="s2">, Path=</span><span class="si">%s</span><span class="s2">, Query=</span><span class="si">%s</span><span class="s2">, Headers=</span><span class="si">%s</span><span class="s2">.&quot;</span><span class="p">,</span>
+                                    <span class="n">client_request_id_prefix</span><span class="p">,</span>
+                                    <span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+                                    <span class="n">request</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">_scrub_query_parameters</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="p">),</span>
+                                    <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_scrub_headers</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">))</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+
+                    <span class="c1"># Perform the request</span>
+                    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_httpclient</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+                    <span class="c1"># Execute the response callback</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">response_callback</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">response_callback</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+
+                    <span class="c1"># Set the response context</span>
+                    <span class="n">retry_context</span><span class="o">.</span><span class="n">response</span> <span class="o">=</span> <span class="n">response</span>
+
+                    <span class="c1"># Log the response when it comes back</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> Receiving Response: &quot;</span>
+                                <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">, HTTP Status Code=</span><span class="si">%s</span><span class="s2">, Message=</span><span class="si">%s</span><span class="s2">, Headers=</span><span class="si">%s</span><span class="s2">.&quot;</span><span class="p">,</span>
+                                <span class="n">client_request_id_prefix</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">extract_date_and_request_id</span><span class="p">(</span><span class="n">retry_context</span><span class="p">),</span>
+                                <span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">,</span>
+                                <span class="n">response</span><span class="o">.</span><span class="n">message</span><span class="p">,</span>
+                                <span class="nb">str</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+
+                    <span class="c1"># Parse and wrap HTTP errors in AzureHttpError which inherits from AzureException</span>
+                    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">&gt;=</span> <span class="mi">300</span><span class="p">:</span>
+                        <span class="c1"># This exception will be caught by the general error handler</span>
+                        <span class="c1"># and raised as an azure http exception</span>
+                        <span class="n">_http_error_handler</span><span class="p">(</span>
+                            <span class="n">HTTPError</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">message</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">body</span><span class="p">))</span>
+
+                    <span class="c1"># Parse the response</span>
+                    <span class="k">if</span> <span class="n">parser</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">parser_args</span><span class="p">:</span>
+                            <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="n">response</span><span class="p">]</span>
+                            <span class="n">args</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">parser_args</span><span class="p">)</span>
+                            <span class="k">return</span> <span class="n">parser</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="k">return</span> <span class="n">parser</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">return</span>
+                <span class="k">except</span> <span class="n">AzureException</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+                    <span class="n">retry_context</span><span class="o">.</span><span class="n">exception</span> <span class="o">=</span> <span class="n">ex</span>
+                    <span class="k">raise</span> <span class="n">ex</span>
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+                    <span class="n">retry_context</span><span class="o">.</span><span class="n">exception</span> <span class="o">=</span> <span class="n">ex</span>
+                    <span class="k">raise</span> <span class="n">_wrap_exception</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="n">AzureException</span><span class="p">)</span>
+
+            <span class="k">except</span> <span class="n">AzureException</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+                <span class="c1"># only parse the strings used for logging if logging is at least enabled for CRITICAL</span>
+                <span class="n">exception_str_in_one_line</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+                <span class="n">status_code</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+                <span class="n">timestamp_and_request_id</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+                <span class="k">if</span> <span class="n">logger</span><span class="o">.</span><span class="n">isEnabledFor</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">CRITICAL</span><span class="p">):</span>
+                    <span class="n">exception_str_in_one_line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+                    <span class="n">status_code</span> <span class="o">=</span> <span class="n">retry_context</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="k">if</span> <span class="n">retry_context</span><span class="o">.</span><span class="n">response</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="s1">&#39;Unknown&#39;</span>
+                    <span class="n">timestamp_and_request_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">extract_date_and_request_id</span><span class="p">(</span><span class="n">retry_context</span><span class="p">)</span>
+
+                <span class="c1"># if the http error was expected, we should short-circuit</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="n">AzureHttpError</span><span class="p">)</span> <span class="ow">and</span> <span class="n">expected_errors</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">ex</span><span class="o">.</span><span class="n">error_code</span> <span class="ow">in</span> <span class="n">expected_errors</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> Received expected http error: &quot;</span>
+                                <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">, HTTP status code=</span><span class="si">%s</span><span class="s2">, Exception=</span><span class="si">%s</span><span class="s2">.&quot;</span><span class="p">,</span>
+                                <span class="n">client_request_id_prefix</span><span class="p">,</span>
+                                <span class="n">timestamp_and_request_id</span><span class="p">,</span>
+                                <span class="n">status_code</span><span class="p">,</span>
+                                <span class="n">exception_str_in_one_line</span><span class="p">)</span>
+                    <span class="k">raise</span> <span class="n">ex</span>
+                <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="n">AzureSigningError</span><span class="p">):</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> Unable to sign the request: Exception=</span><span class="si">%s</span><span class="s2">.&quot;</span><span class="p">,</span>
+                                <span class="n">client_request_id_prefix</span><span class="p">,</span>
+                                <span class="n">exception_str_in_one_line</span><span class="p">)</span>
+                    <span class="k">raise</span> <span class="n">ex</span>
+
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> Operation failed: checking if the operation should be retried. &quot;</span>
+                            <span class="s2">&quot;Current retry count=</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, HTTP status code=</span><span class="si">%s</span><span class="s2">, Exception=</span><span class="si">%s</span><span class="s2">.&quot;</span><span class="p">,</span>
+                            <span class="n">client_request_id_prefix</span><span class="p">,</span>
+                            <span class="n">retry_context</span><span class="o">.</span><span class="n">count</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">retry_context</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span>
+                            <span class="n">timestamp_and_request_id</span><span class="p">,</span>
+                            <span class="n">status_code</span><span class="p">,</span>
+                            <span class="n">exception_str_in_one_line</span><span class="p">)</span>
+
+                <span class="c1"># Decryption failures (invalid objects, invalid algorithms, data unencrypted in strict mode, etc)</span>
+                <span class="c1"># will not be resolved with retries.</span>
+                <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">ex</span><span class="p">)</span> <span class="o">==</span> <span class="n">_ERROR_DECRYPTION_FAILURE</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> Encountered decryption failure: this cannot be retried. &quot;</span>
+                                 <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">, HTTP status code=</span><span class="si">%s</span><span class="s2">, Exception=</span><span class="si">%s</span><span class="s2">.&quot;</span><span class="p">,</span>
+                                 <span class="n">client_request_id_prefix</span><span class="p">,</span>
+                                 <span class="n">timestamp_and_request_id</span><span class="p">,</span>
+                                 <span class="n">status_code</span><span class="p">,</span>
+                                 <span class="n">exception_str_in_one_line</span><span class="p">)</span>
+                    <span class="k">raise</span> <span class="n">ex</span>
+
+                <span class="c1"># Determine whether a retry should be performed and if so, how </span>
+                <span class="c1"># long to wait before performing retry.</span>
+                <span class="n">retry_interval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">retry</span><span class="p">(</span><span class="n">retry_context</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">retry_interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="c1"># Execute the callback</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">retry_callback</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">retry_callback</span><span class="p">(</span><span class="n">retry_context</span><span class="p">)</span>
+
+                    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                        <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> Retry policy is allowing a retry: Retry count=</span><span class="si">%s</span><span class="s2">, Interval=</span><span class="si">%s</span><span class="s2">.&quot;</span><span class="p">,</span>
+                        <span class="n">client_request_id_prefix</span><span class="p">,</span>
+                        <span class="n">retry_context</span><span class="o">.</span><span class="n">count</span><span class="p">,</span>
+                        <span class="n">retry_interval</span><span class="p">)</span>
+
+                    <span class="c1"># Sleep for the desired retry interval</span>
+                    <span class="n">sleep</span><span class="p">(</span><span class="n">retry_interval</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> Retry policy did not allow for a retry: &quot;</span>
+                                 <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">, HTTP status code=</span><span class="si">%s</span><span class="s2">, Exception=</span><span class="si">%s</span><span class="s2">.&quot;</span><span class="p">,</span>
+                                 <span class="n">client_request_id_prefix</span><span class="p">,</span>
+                                 <span class="n">timestamp_and_request_id</span><span class="p">,</span>
+                                 <span class="n">status_code</span><span class="p">,</span>
+                                 <span class="n">exception_str_in_one_line</span><span class="p">)</span>
+                    <span class="k">raise</span> <span class="n">ex</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="c1"># If this is a location locked operation and the location is not set, </span>
+                <span class="c1"># this is the first request of that operation. Set the location to </span>
+                <span class="c1"># be used for subsequent requests in the operation.</span>
+                <span class="k">if</span> <span class="n">operation_context</span><span class="o">.</span><span class="n">location_lock</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">operation_context</span><span class="o">.</span><span class="n">host_location</span><span class="p">:</span>
+                    <span class="c1"># note: to cover the emulator scenario, the host_location is grabbed</span>
+                    <span class="c1"># from request.host_locations(which includes the dev account name)</span>
+                    <span class="c1"># instead of request.host(which at this point no longer includes the dev account name)</span>
+                    <span class="n">operation_context</span><span class="o">.</span><span class="n">host_location</span> <span class="o">=</span> <span class="p">{</span>
+                        <span class="n">retry_context</span><span class="o">.</span><span class="n">location_mode</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">host_locations</span><span class="p">[</span><span class="n">retry_context</span><span class="o">.</span><span class="n">location_mode</span><span class="p">]}</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

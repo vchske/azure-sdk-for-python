@@ -115,9 +115,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref/azure.cosmos.html">azure.cosmos package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref/azure.eventhub.html">azure.eventhub package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ref/azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
@@ -202,8 +207,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
 </ul>
 
@@ -878,7 +886,51 @@
 <li><a href="azure/common.html">azure.common</a></li>
 <ul><li><a href="azure/common/client_factory.html">azure.common.client_factory</a></li>
 <li><a href="azure/common/credentials.html">azure.common.credentials</a></li>
-</ul><li><a href="azure/eventgrid/event_grid_client.html">azure.eventgrid.event_grid_client</a></li>
+</ul><li><a href="azure/core/async_paging.html">azure.core.async_paging</a></li>
+<li><a href="azure/core/configuration.html">azure.core.configuration</a></li>
+<li><a href="azure/core/credentials.html">azure.core.credentials</a></li>
+<li><a href="azure/core/exceptions.html">azure.core.exceptions</a></li>
+<li><a href="azure/core/paging.html">azure.core.paging</a></li>
+<li><a href="azure/core/pipeline.html">azure.core.pipeline</a></li>
+<ul><li><a href="azure/core/pipeline/base.html">azure.core.pipeline.base</a></li>
+<li><a href="azure/core/pipeline/base_async.html">azure.core.pipeline.base_async</a></li>
+<li><a href="azure/core/pipeline/policies/authentication.html">azure.core.pipeline.policies.authentication</a></li>
+<li><a href="azure/core/pipeline/policies/authentication_async.html">azure.core.pipeline.policies.authentication_async</a></li>
+<li><a href="azure/core/pipeline/policies/base.html">azure.core.pipeline.policies.base</a></li>
+<li><a href="azure/core/pipeline/policies/base_async.html">azure.core.pipeline.policies.base_async</a></li>
+<li><a href="azure/core/pipeline/policies/custom_hook.html">azure.core.pipeline.policies.custom_hook</a></li>
+<li><a href="azure/core/pipeline/policies/redirect.html">azure.core.pipeline.policies.redirect</a></li>
+<li><a href="azure/core/pipeline/policies/redirect_async.html">azure.core.pipeline.policies.redirect_async</a></li>
+<li><a href="azure/core/pipeline/policies/retry.html">azure.core.pipeline.policies.retry</a></li>
+<li><a href="azure/core/pipeline/policies/retry_async.html">azure.core.pipeline.policies.retry_async</a></li>
+<li><a href="azure/core/pipeline/policies/universal.html">azure.core.pipeline.policies.universal</a></li>
+<li><a href="azure/core/pipeline/transport/aiohttp.html">azure.core.pipeline.transport.aiohttp</a></li>
+<li><a href="azure/core/pipeline/transport/base.html">azure.core.pipeline.transport.base</a></li>
+<li><a href="azure/core/pipeline/transport/base_async.html">azure.core.pipeline.transport.base_async</a></li>
+<li><a href="azure/core/pipeline/transport/requests_asyncio.html">azure.core.pipeline.transport.requests_asyncio</a></li>
+<li><a href="azure/core/pipeline/transport/requests_basic.html">azure.core.pipeline.transport.requests_basic</a></li>
+<li><a href="azure/core/pipeline/transport/requests_trio.html">azure.core.pipeline.transport.requests_trio</a></li>
+</ul><li><a href="azure/core/pipeline_client.html">azure.core.pipeline_client</a></li>
+<li><a href="azure/core/pipeline_client_async.html">azure.core.pipeline_client_async</a></li>
+<li><a href="azure/core/polling/async_poller.html">azure.core.polling.async_poller</a></li>
+<li><a href="azure/core/polling/poller.html">azure.core.polling.poller</a></li>
+<li><a href="azure/cosmos/auth.html">azure.cosmos.auth</a></li>
+<li><a href="azure/cosmos/base.html">azure.cosmos.base</a></li>
+<li><a href="azure/cosmos/cosmos_client.html">azure.cosmos.cosmos_client</a></li>
+<li><a href="azure/cosmos/documents.html">azure.cosmos.documents</a></li>
+<li><a href="azure/cosmos/errors.html">azure.cosmos.errors</a></li>
+<li><a href="azure/cosmos/hash_partition_resolver.html">azure.cosmos.hash_partition_resolver</a></li>
+<li><a href="azure/cosmos/http_constants.html">azure.cosmos.http_constants</a></li>
+<li><a href="azure/cosmos/location_cache.html">azure.cosmos.location_cache</a></li>
+<li><a href="azure/cosmos/query_iterable.html">azure.cosmos.query_iterable</a></li>
+<li><a href="azure/cosmos/range.html">azure.cosmos.range</a></li>
+<li><a href="azure/cosmos/range_partition_resolver.html">azure.cosmos.range_partition_resolver</a></li>
+<li><a href="azure/cosmos/retry_options.html">azure.cosmos.retry_options</a></li>
+<li><a href="azure/cosmos/runtime_constants.html">azure.cosmos.runtime_constants</a></li>
+<li><a href="azure/cosmos/session.html">azure.cosmos.session</a></li>
+<li><a href="azure/cosmos/synchronized_request.html">azure.cosmos.synchronized_request</a></li>
+<li><a href="azure/cosmos/vector_session_token.html">azure.cosmos.vector_session_token</a></li>
+<li><a href="azure/eventgrid/event_grid_client.html">azure.eventgrid.event_grid_client</a></li>
 <li><a href="azure/eventgrid/models/app_configuration_key_value_deleted_event_data_py3.html">azure.eventgrid.models.app_configuration_key_value_deleted_event_data_py3</a></li>
 <li><a href="azure/eventgrid/models/app_configuration_key_value_modified_event_data_py3.html">azure.eventgrid.models.app_configuration_key_value_modified_event_data_py3</a></li>
 <li><a href="azure/eventgrid/models/container_registry_artifact_event_data_py3.html">azure.eventgrid.models.container_registry_artifact_event_data_py3</a></li>
@@ -960,6 +1012,41 @@
 <li><a href="azure/eventgrid/models/subscription_deleted_event_data_py3.html">azure.eventgrid.models.subscription_deleted_event_data_py3</a></li>
 <li><a href="azure/eventgrid/models/subscription_validation_event_data_py3.html">azure.eventgrid.models.subscription_validation_event_data_py3</a></li>
 <li><a href="azure/eventgrid/models/subscription_validation_response_py3.html">azure.eventgrid.models.subscription_validation_response_py3</a></li>
+<li><a href="azure/eventhub/aio/client_async.html">azure.eventhub.aio.client_async</a></li>
+<li><a href="azure/eventhub/aio/consumer_async.html">azure.eventhub.aio.consumer_async</a></li>
+<li><a href="azure/eventhub/aio/producer_async.html">azure.eventhub.aio.producer_async</a></li>
+<li><a href="azure/eventhub/client.html">azure.eventhub.client</a></li>
+<li><a href="azure/eventhub/client_abstract.html">azure.eventhub.client_abstract</a></li>
+<li><a href="azure/eventhub/common.html">azure.eventhub.common</a></li>
+<li><a href="azure/eventhub/consumer.html">azure.eventhub.consumer</a></li>
+<li><a href="azure/eventhub/error.html">azure.eventhub.error</a></li>
+<li><a href="azure/eventhub/producer.html">azure.eventhub.producer</a></li>
+<li><a href="azure/eventprocessorhost/abstract_checkpoint_manager.html">azure.eventprocessorhost.abstract_checkpoint_manager</a></li>
+<li><a href="azure/eventprocessorhost/abstract_event_processor.html">azure.eventprocessorhost.abstract_event_processor</a></li>
+<li><a href="azure/eventprocessorhost/abstract_lease_manager.html">azure.eventprocessorhost.abstract_lease_manager</a></li>
+<li><a href="azure/eventprocessorhost/azure_blob_lease.html">azure.eventprocessorhost.azure_blob_lease</a></li>
+<li><a href="azure/eventprocessorhost/azure_storage_checkpoint_manager.html">azure.eventprocessorhost.azure_storage_checkpoint_manager</a></li>
+<li><a href="azure/eventprocessorhost/cancellation_token.html">azure.eventprocessorhost.cancellation_token</a></li>
+<li><a href="azure/eventprocessorhost/checkpoint.html">azure.eventprocessorhost.checkpoint</a></li>
+<li><a href="azure/eventprocessorhost/eh_config.html">azure.eventprocessorhost.eh_config</a></li>
+<li><a href="azure/eventprocessorhost/eh_partition_pump.html">azure.eventprocessorhost.eh_partition_pump</a></li>
+<li><a href="azure/eventprocessorhost/eph.html">azure.eventprocessorhost.eph</a></li>
+<li><a href="azure/eventprocessorhost/lease.html">azure.eventprocessorhost.lease</a></li>
+<li><a href="azure/eventprocessorhost/partition_context.html">azure.eventprocessorhost.partition_context</a></li>
+<li><a href="azure/eventprocessorhost/partition_manager.html">azure.eventprocessorhost.partition_manager</a></li>
+<li><a href="azure/eventprocessorhost/partition_pump.html">azure.eventprocessorhost.partition_pump</a></li>
+<li><a href="azure/eventprocessorhost/vendor/storage/blob/appendblobservice.html">azure.eventprocessorhost.vendor.storage.blob.appendblobservice</a></li>
+<li><a href="azure/eventprocessorhost/vendor/storage/blob/baseblobservice.html">azure.eventprocessorhost.vendor.storage.blob.baseblobservice</a></li>
+<li><a href="azure/eventprocessorhost/vendor/storage/blob/blockblobservice.html">azure.eventprocessorhost.vendor.storage.blob.blockblobservice</a></li>
+<li><a href="azure/eventprocessorhost/vendor/storage/blob/models.html">azure.eventprocessorhost.vendor.storage.blob.models</a></li>
+<li><a href="azure/eventprocessorhost/vendor/storage/blob/pageblobservice.html">azure.eventprocessorhost.vendor.storage.blob.pageblobservice</a></li>
+<li><a href="azure/eventprocessorhost/vendor/storage/blob/sharedaccesssignature.html">azure.eventprocessorhost.vendor.storage.blob.sharedaccesssignature</a></li>
+<li><a href="azure/eventprocessorhost/vendor/storage/common/cloudstorageaccount.html">azure.eventprocessorhost.vendor.storage.common.cloudstorageaccount</a></li>
+<li><a href="azure/eventprocessorhost/vendor/storage/common/models.html">azure.eventprocessorhost.vendor.storage.common.models</a></li>
+<li><a href="azure/eventprocessorhost/vendor/storage/common/retry.html">azure.eventprocessorhost.vendor.storage.common.retry</a></li>
+<li><a href="azure/eventprocessorhost/vendor/storage/common/sharedaccesssignature.html">azure.eventprocessorhost.vendor.storage.common.sharedaccesssignature</a></li>
+<li><a href="azure/eventprocessorhost/vendor/storage/common/storageclient.html">azure.eventprocessorhost.vendor.storage.common.storageclient</a></li>
+<li><a href="azure/eventprocessorhost/vendor/storage/common/tokencredential.html">azure.eventprocessorhost.vendor.storage.common.tokencredential</a></li>
 <li><a href="azure/graphrbac/graph_rbac_management_client.html">azure.graphrbac.graph_rbac_management_client</a></li>
 <li><a href="azure/graphrbac/models/ad_group_paged.html">azure.graphrbac.models.ad_group_paged</a></li>
 <li><a href="azure/graphrbac/models/ad_group_py3.html">azure.graphrbac.models.ad_group_py3</a></li>
@@ -1023,6 +1110,15 @@
 <li><a href="azure/graphrbac/operations/service_principals_operations.html">azure.graphrbac.operations.service_principals_operations</a></li>
 <li><a href="azure/graphrbac/operations/signed_in_user_operations.html">azure.graphrbac.operations.signed_in_user_operations</a></li>
 <li><a href="azure/graphrbac/operations/users_operations.html">azure.graphrbac.operations.users_operations</a></li>
+<li><a href="azure/identity.html">azure.identity</a></li>
+<ul><li><a href="azure/identity/aio.html">azure.identity.aio</a></li>
+<ul><li><a href="azure/identity/aio/credentials.html">azure.identity.aio.credentials</a></li>
+</ul><li><a href="azure/identity/constants.html">azure.identity.constants</a></li>
+<li><a href="azure/identity/credentials.html">azure.identity.credentials</a></li>
+</ul><li><a href="azure/keyvault/keys/_client.html">azure.keyvault.keys._client</a></li>
+<li><a href="azure/keyvault/keys/aio/_client.html">azure.keyvault.keys.aio._client</a></li>
+<li><a href="azure/keyvault/secrets/_client.html">azure.keyvault.secrets._client</a></li>
+<li><a href="azure/keyvault/secrets/aio/_client.html">azure.keyvault.secrets.aio._client</a></li>
 <li><a href="azure/loganalytics/log_analytics_data_client.html">azure.loganalytics.log_analytics_data_client</a></li>
 <li><a href="azure/loganalytics/models/column_py3.html">azure.loganalytics.models.column_py3</a></li>
 <li><a href="azure/loganalytics/models/error_detail_py3.html">azure.loganalytics.models.error_detail_py3</a></li>
@@ -8381,10 +8477,23 @@
 <li><a href="azure/mgmt/web/operations/web_apps_operations.html">azure.mgmt.web.operations.web_apps_operations</a></li>
 <li><a href="azure/mgmt/web/web_site_management_client.html">azure.mgmt.web.web_site_management_client</a></li>
 <li><a href="azure/profiles.html">azure.profiles</a></li>
+<li><a href="azure/servicebus/aio/async_base_handler.html">azure.servicebus.aio.async_base_handler</a></li>
+<li><a href="azure/servicebus/aio/async_client.html">azure.servicebus.aio.async_client</a></li>
+<li><a href="azure/servicebus/aio/async_message.html">azure.servicebus.aio.async_message</a></li>
+<li><a href="azure/servicebus/aio/async_receive_handler.html">azure.servicebus.aio.async_receive_handler</a></li>
+<li><a href="azure/servicebus/aio/async_send_handler.html">azure.servicebus.aio.async_send_handler</a></li>
+<li><a href="azure/servicebus/aio/async_utils.html">azure.servicebus.aio.async_utils</a></li>
+<li><a href="azure/servicebus/base_handler.html">azure.servicebus.base_handler</a></li>
 <li><a href="azure/servicebus/common/constants.html">azure.servicebus.common.constants</a></li>
 <li><a href="azure/servicebus/common/errors.html">azure.servicebus.common.errors</a></li>
 <li><a href="azure/servicebus/common/message.html">azure.servicebus.common.message</a></li>
+<li><a href="azure/servicebus/common/mgmt_handlers.html">azure.servicebus.common.mgmt_handlers</a></li>
+<li><a href="azure/servicebus/common/mixins.html">azure.servicebus.common.mixins</a></li>
 <li><a href="azure/servicebus/common/utils.html">azure.servicebus.common.utils</a></li>
+<li><a href="azure/servicebus/control_client/models.html">azure.servicebus.control_client.models</a></li>
+<li><a href="azure/servicebus/control_client/servicebusservice.html">azure.servicebus.control_client.servicebusservice</a></li>
+<li><a href="azure/servicebus/receive_handler.html">azure.servicebus.receive_handler</a></li>
+<li><a href="azure/servicebus/send_handler.html">azure.servicebus.send_handler</a></li>
 <li><a href="azure/servicebus/servicebus_client.html">azure.servicebus.servicebus_client</a></li>
 <li><a href="azure/servicefabric/_configuration.html">azure.servicefabric._configuration</a></li>
 <li><a href="azure/servicefabric/_service_fabric_client_ap_is.html">azure.servicefabric._service_fabric_client_ap_is</a></li>
@@ -8408,6 +8517,30 @@
 <li><a href="azure/servicemanagement/servicemanagementservice.html">azure.servicemanagement.servicemanagementservice</a></li>
 <li><a href="azure/servicemanagement/sqldatabasemanagementservice.html">azure.servicemanagement.sqldatabasemanagementservice</a></li>
 <li><a href="azure/servicemanagement/websitemanagementservice.html">azure.servicemanagement.websitemanagementservice</a></li>
+<li><a href="azure/storage/blob/_blob_utils.html">azure.storage.blob._blob_utils</a></li>
+<li><a href="azure/storage/blob/_shared/models.html">azure.storage.blob._shared.models</a></li>
+<li><a href="azure/storage/blob/_shared/policies.html">azure.storage.blob._shared.policies</a></li>
+<li><a href="azure/storage/blob/blob_client.html">azure.storage.blob.blob_client</a></li>
+<li><a href="azure/storage/blob/blob_service_client.html">azure.storage.blob.blob_service_client</a></li>
+<li><a href="azure/storage/blob/container_client.html">azure.storage.blob.container_client</a></li>
+<li><a href="azure/storage/blob/lease.html">azure.storage.blob.lease</a></li>
+<li><a href="azure/storage/blob/models.html">azure.storage.blob.models</a></li>
+<li><a href="azure/storage/blob/polling.html">azure.storage.blob.polling</a></li>
+<li><a href="azure/storage/file/_shared/models.html">azure.storage.file._shared.models</a></li>
+<li><a href="azure/storage/file/_shared/policies.html">azure.storage.file._shared.policies</a></li>
+<li><a href="azure/storage/file/directory_client.html">azure.storage.file.directory_client</a></li>
+<li><a href="azure/storage/file/file_client.html">azure.storage.file.file_client</a></li>
+<li><a href="azure/storage/file/file_service_client.html">azure.storage.file.file_service_client</a></li>
+<li><a href="azure/storage/file/models.html">azure.storage.file.models</a></li>
+<li><a href="azure/storage/file/polling.html">azure.storage.file.polling</a></li>
+<li><a href="azure/storage/file/share_client.html">azure.storage.file.share_client</a></li>
+<li><a href="azure/storage/queue/_queue_utils.html">azure.storage.queue._queue_utils</a></li>
+<li><a href="azure/storage/queue/_shared/models.html">azure.storage.queue._shared.models</a></li>
+<li><a href="azure/storage/queue/_shared/policies.html">azure.storage.queue._shared.policies</a></li>
+<li><a href="azure/storage/queue/models.html">azure.storage.queue.models</a></li>
+<li><a href="azure/storage/queue/queue_client.html">azure.storage.queue.queue_client</a></li>
+<li><a href="azure/storage/queue/queue_service_client.html">azure.storage.queue.queue_service_client</a></li>
+<li><a href="uamqp/constants.html">uamqp.constants</a></li>
 </ul>
 
            </div>

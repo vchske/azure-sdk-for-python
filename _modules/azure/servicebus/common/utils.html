@@ -115,9 +115,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.core.html">azure.core package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.cosmos.html">azure.cosmos package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.eventhub.html">azure.eventhub package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.identity.html">azure.identity package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.keys.html">azure.keyvault.keys package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.keyvault.secrets.html">azure.keyvault.secrets package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.alertsmanagement.html">azure.mgmt.alertsmanagement package</a></li>
@@ -202,8 +207,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.blob.html">azure.storage.blob package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.file.html">azure.storage.file package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.storage.queue.html">azure.storage.queue package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
 </ul>
 
@@ -291,7 +299,7 @@
 <span class="n">_log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">get_running_loop</span><span class="p">():</span>
+<div class="viewcode-block" id="get_running_loop"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.get_running_loop">[docs]</a><span class="k">def</span> <span class="nf">get_running_loop</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="kn">import</span> <span class="nn">asyncio</span>
         <span class="k">return</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_running_loop</span><span class="p">()</span>
@@ -299,10 +307,10 @@
         <span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">_get_running_loop</span><span class="p">()</span>  <span class="c1"># pylint: disable=protected-access</span>
         <span class="k">if</span> <span class="n">loop</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;No running event loop&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">loop</span>
+        <span class="k">return</span> <span class="n">loop</span></div>
 
 
-<span class="k">def</span> <span class="nf">parse_conn_str</span><span class="p">(</span><span class="n">conn_str</span><span class="p">):</span>
+<div class="viewcode-block" id="parse_conn_str"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.parse_conn_str">[docs]</a><span class="k">def</span> <span class="nf">parse_conn_str</span><span class="p">(</span><span class="n">conn_str</span><span class="p">):</span>
     <span class="n">endpoint</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">shared_access_key_name</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">shared_access_key</span> <span class="o">=</span> <span class="kc">None</span>
@@ -319,29 +327,29 @@
             <span class="n">entity_path</span> <span class="o">=</span> <span class="n">value</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">([</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">shared_access_key_name</span><span class="p">,</span> <span class="n">shared_access_key</span><span class="p">]):</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid connection string&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">shared_access_key_name</span><span class="p">,</span> <span class="n">shared_access_key</span><span class="p">,</span> <span class="n">entity_path</span>
+    <span class="k">return</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">shared_access_key_name</span><span class="p">,</span> <span class="n">shared_access_key</span><span class="p">,</span> <span class="n">entity_path</span></div>
 
 
-<span class="k">def</span> <span class="nf">build_uri</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">entity</span><span class="p">):</span>
+<div class="viewcode-block" id="build_uri"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.build_uri">[docs]</a><span class="k">def</span> <span class="nf">build_uri</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">entity</span><span class="p">):</span>
     <span class="n">parsed</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">address</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">parsed</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">address</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">entity</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No Service Bus entity specified&quot;</span><span class="p">)</span>
     <span class="n">address</span> <span class="o">+=</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">entity</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">address</span>
+    <span class="k">return</span> <span class="n">address</span></div>
 
 
-<span class="k">def</span> <span class="nf">create_properties</span><span class="p">():</span>
+<div class="viewcode-block" id="create_properties"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.create_properties">[docs]</a><span class="k">def</span> <span class="nf">create_properties</span><span class="p">():</span>
     <span class="n">properties</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;product&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;servicebus.python&quot;</span>
     <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;version&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sdk_version</span>
     <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;framework&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Python </span><span class="si">{}</span><span class="s2">.</span><span class="si">{}</span><span class="s2">.</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
     <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;platform&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span>
-    <span class="k">return</span> <span class="n">properties</span>
+    <span class="k">return</span> <span class="n">properties</span></div>
 
 
-<span class="k">def</span> <span class="nf">renewable_start_time</span><span class="p">(</span><span class="n">renewable</span><span class="p">):</span>
+<div class="viewcode-block" id="renewable_start_time"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.renewable_start_time">[docs]</a><span class="k">def</span> <span class="nf">renewable_start_time</span><span class="p">(</span><span class="n">renewable</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">renewable</span><span class="o">.</span><span class="n">received_timestamp</span>
     <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
@@ -349,10 +357,10 @@
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">renewable</span><span class="o">.</span><span class="n">session_start</span>
     <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Registered object is not renewable.&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Registered object is not renewable.&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="AutoLockRenew"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.AutoLockRenew">[docs]</a><span class="k">class</span> <span class="nc">AutoLockRenew</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="AutoLockRenew"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.AutoLockRenew">[docs]</a><span class="k">class</span> <span class="nc">AutoLockRenew</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Auto renew locks for messages and sessions using a background thread pool.</span>
 
 <span class="sd">    :param executor: A user-specified thread pool. This cannot be combined with</span>
@@ -421,7 +429,7 @@
                 <span class="n">inner_exception</span><span class="o">=</span><span class="n">e</span><span class="p">)</span>
             <span class="n">renewable</span><span class="o">.</span><span class="n">auto_renew_error</span> <span class="o">=</span> <span class="n">error</span>
 
-<div class="viewcode-block" id="AutoLockRenew.register"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.AutoLockRenew.register">[docs]</a>    <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renewable</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
+<div class="viewcode-block" id="AutoLockRenew.register"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.AutoLockRenew.register">[docs]</a>    <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renewable</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Register a renewable entity for automatic lock renewal.</span>
 
 <span class="sd">        :param renewable: A locked entity that needs to be renewed.</span>
@@ -434,7 +442,7 @@
         <span class="n">starttime</span> <span class="o">=</span> <span class="n">renewable_start_time</span><span class="p">(</span><span class="n">renewable</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_auto_lock_renew</span><span class="p">,</span> <span class="n">renewable</span><span class="p">,</span> <span class="n">starttime</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="AutoLockRenew.shutdown"><a class="viewcode-back" href="../../../../ref/azure.servicebus.html#azure.servicebus.AutoLockRenew.shutdown">[docs]</a>    <span class="k">def</span> <span class="nf">shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="AutoLockRenew.shutdown"><a class="viewcode-back" href="../../../../ref/azure.servicebus.common.html#azure.servicebus.AutoLockRenew.shutdown">[docs]</a>    <span class="k">def</span> <span class="nf">shutdown</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Shutdown the thread pool to clean up any remaining lock renewal threads.</span>
 
 <span class="sd">        :param wait: Whether to block until thread pool has shutdown. Default is `True`.</span>
