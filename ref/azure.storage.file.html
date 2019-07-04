@@ -379,8 +379,14 @@ its files, its subdirectories and their files. Default value is False.</p></li>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>(<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Creates a directory.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="o">.</span><span class="n">create_directory</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -404,8 +410,18 @@ with the subdirectory.</p>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.directory_client.DirectoryClient" title="azure.storage.file.directory_client.DirectoryClient">DirectoryClient</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Create a subdirectory.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the directory</span>
+<span class="n">parent_dir</span><span class="o">.</span><span class="n">create_directory</span><span class="p">()</span>
+
+<span class="c1"># Create a subdirectory</span>
+<span class="n">subdir</span> <span class="o">=</span> <span class="n">parent_dir</span><span class="o">.</span><span class="n">create_subdirectory</span><span class="p">(</span><span class="s2">&quot;subdir&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -422,8 +438,14 @@ later deleted during garbage collection.</p>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Deletes a directory.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="o">.</span><span class="n">delete_directory</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -443,8 +465,15 @@ deleted during garbage collection.</p>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Delete a file in a directory.</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Delete the file in the directory</span>
+<span class="nb">dir</span><span class="o">.</span><span class="n">delete_file</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s2">&quot;sample&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -463,8 +492,14 @@ deleted during garbage collection.</p>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Delete a subdirectory.</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">parent_dir</span><span class="o">.</span><span class="n">delete_subdirectory</span><span class="p">(</span><span class="s2">&quot;subdir&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -540,8 +575,20 @@ list of files.</p>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.directory_client.DirectoryClient" title="azure.storage.file.directory_client.DirectoryClient">DirectoryClient</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Gets the subdirectory client.</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get a directory client and create the directory</span>
+<span class="n">parent</span> <span class="o">=</span> <span class="n">share</span><span class="o">.</span><span class="n">get_directory_client</span><span class="p">(</span><span class="s2">&quot;dir1&quot;</span><span class="p">)</span>
+<span class="n">parent</span><span class="o">.</span><span class="n">create_directory</span><span class="p">()</span>
+
+<span class="c1"># Get a subdirectory client and create the subdirectory &quot;dir1/dir2&quot;</span>
+<span class="n">subdirectory</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">get_subdirectory_client</span><span class="p">(</span><span class="s2">&quot;dir2&quot;</span><span class="p">)</span>
+<span class="n">subdirectory</span><span class="o">.</span><span class="n">create_directory</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -567,8 +614,16 @@ this generator will begin returning results from this point.</p></li>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.models.DirectoryPropertiesPaged" title="azure.storage.file.models.DirectoryPropertiesPaged">DirectoryPropertiesPaged</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">List directories and files.</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># List the directories and files under the parent directory</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">parent_dir</span><span class="o">.</span><span class="n">list_directories_and_files</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -650,8 +705,16 @@ file.</p></li>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.file_client.FileClient" title="azure.storage.file.file_client.FileClient">FileClient</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Upload a file to a directory.</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Upload a file to the directory</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">source</span><span class="p">:</span>
+    <span class="nb">dir</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s2">&quot;sample&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -768,8 +831,14 @@ the client.</p>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.polling.CopyStatusPoller" title="azure.storage.file.polling.CopyStatusPoller">CopyStatusPoller</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Copy a file from a URL</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">destination_file</span><span class="o">.</span><span class="n">copy_file_from_url</span><span class="p">(</span><span class="n">source_url</span><span class="o">=</span><span class="n">source_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -795,8 +864,15 @@ up to 1 TB.</p></li>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>(<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">Create a file.</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create and allocate bytes for the file (no content added yet)</span>
+<span class="nb">file</span><span class="o">.</span><span class="n">create_file</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -813,8 +889,14 @@ later deleted during garbage collection.</p>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">Delete a file.</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file2</span><span class="o">.</span><span class="n">delete_file</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -844,8 +926,15 @@ entire blocks, and doing so defeats the purpose of the memory-efficient algorith
 <dd class="field-even"><p>A iterable data generator (stream)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">Download a file.</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">DEST_FILE</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">file2</span><span class="o">.</span><span class="n">download_file</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -867,8 +956,15 @@ shared access key.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">Creates the file client with connection string.</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.storage.file</span> <span class="kn">import</span> <span class="n">FileClient</span>
+<span class="nb">file</span> <span class="o">=</span> <span class="n">FileClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">connection_string</span><span class="p">,</span> <span class="n">share</span><span class="o">=</span><span class="s2">&quot;share&quot;</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="s2">&quot;myfile&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1082,8 +1178,15 @@ file.</p></li>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>(<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">Upload a file.</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">source</span><span class="p">:</span>
+    <span class="n">file2</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1164,8 +1267,15 @@ shared access key.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">Create the file service client with url and credential.</span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.storage.file</span> <span class="kn">import</span> <span class="n">FileServiceClient</span>
+<span class="n">file_service_client</span> <span class="o">=</span> <span class="n">FileServiceClient</span><span class="p">(</span><span class="n">account_url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">credential</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.storage.file.file_service_client.FileServiceClient.create_share">
@@ -1187,8 +1297,14 @@ share as metadata. Example:{‘Category’:’test’}</p></li>
 <dd class="field-even"><p><a class="reference internal" href="#azure.storage.file.share_client.ShareClient" title="azure.storage.file.share_client.ShareClient">ShareClient</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">Create a share in the file service.</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file_service</span><span class="o">.</span><span class="n">create_share</span><span class="p">(</span><span class="n">share_name</span><span class="o">=</span><span class="s2">&quot;testshare&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1210,8 +1326,14 @@ or an instance of ShareProperties.</p></li>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">Delete a share in the file service.</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file_service</span><span class="o">.</span><span class="n">delete_share</span><span class="p">(</span><span class="n">share_name</span><span class="o">=</span><span class="s2">&quot;testshare&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1229,8 +1351,15 @@ shared access key.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">Create the file service client with connection string.</span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.storage.file</span> <span class="kn">import</span> <span class="n">FileServiceClient</span>
+<span class="n">file_service</span> <span class="o">=</span> <span class="n">FileServiceClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">connection_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1275,8 +1404,18 @@ restricts the request to those IP addresses.</p></li>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">Generate a sas token.</span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sas_token</span> <span class="o">=</span> <span class="n">file_service_client</span><span class="o">.</span><span class="n">generate_shared_access_signature</span><span class="p">(</span>
+    <span class="n">resource_types</span><span class="o">=</span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="n">permission</span><span class="o">=</span><span class="s2">&quot;read&quot;</span><span class="p">,</span>
+    <span class="n">expiry</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1293,8 +1432,14 @@ Azure Storage Analytics.</p>
 <dd class="field-even"><p>StorageServiceProperties</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">Get file service properties.</span><a class="headerlink" href="#id20" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">properties</span> <span class="o">=</span> <span class="n">file_service</span><span class="o">.</span><span class="n">get_service_properties</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1318,8 +1463,18 @@ or an instance of ShareProperties.</p></li>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.share_client.ShareClient" title="azure.storage.file.share_client.ShareClient">ShareClient</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-text">Gets the share client.</span><a class="headerlink" href="#id21" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.storage.file</span> <span class="kn">import</span> <span class="n">FileServiceClient</span>
+<span class="n">file_service</span> <span class="o">=</span> <span class="n">FileServiceClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">connection_string</span><span class="p">)</span>
+
+<span class="c1"># Get a share client to interact with a specific share</span>
+<span class="n">share</span> <span class="o">=</span> <span class="n">file_service</span><span class="o">.</span><span class="n">get_share_client</span><span class="p">(</span><span class="s2">&quot;fileshare&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1349,8 +1504,19 @@ this generator will begin returning results from this point.</p></li>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.models.SharePropertiesPaged" title="azure.storage.file.models.SharePropertiesPaged">SharePropertiesPaged</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-text">List shares in the file service.</span><a class="headerlink" href="#id22" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># List the shares in the file service</span>
+<span class="n">my_shares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">file_service</span><span class="o">.</span><span class="n">list_shares</span><span class="p">())</span>
+
+<span class="c1"># Print the shares</span>
+<span class="k">for</span> <span class="n">share</span> <span class="ow">in</span> <span class="n">my_shares</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">share</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1377,8 +1543,39 @@ and CORS will be disabled for the service.</p></li>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-text">Sets file service properties.</span><a class="headerlink" href="#id23" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create service properties</span>
+<span class="kn">from</span> <span class="nn">azure.storage.file</span> <span class="kn">import</span> <span class="n">Metrics</span><span class="p">,</span> <span class="n">CorsRule</span><span class="p">,</span> <span class="n">RetentionPolicy</span>
+
+<span class="c1"># Create metrics for requests statistics</span>
+<span class="n">hour_metrics</span> <span class="o">=</span> <span class="n">Metrics</span><span class="p">(</span><span class="n">enabled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">include_apis</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">retention_policy</span><span class="o">=</span><span class="n">RetentionPolicy</span><span class="p">(</span><span class="n">enabled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">days</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">minute_metrics</span> <span class="o">=</span> <span class="n">Metrics</span><span class="p">(</span><span class="n">enabled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">include_apis</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                         <span class="n">retention_policy</span><span class="o">=</span><span class="n">RetentionPolicy</span><span class="p">(</span><span class="n">enabled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">days</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># Create CORS rules</span>
+<span class="n">cors_rule1</span> <span class="o">=</span> <span class="n">CorsRule</span><span class="p">([</span><span class="s1">&#39;www.xyz.com&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="n">allowed_origins</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;www.xyz.com&#39;</span><span class="p">,</span> <span class="s2">&quot;www.ab.com&quot;</span><span class="p">,</span> <span class="s2">&quot;www.bc.com&quot;</span><span class="p">]</span>
+<span class="n">allowed_methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;PUT&#39;</span><span class="p">]</span>
+<span class="n">max_age_in_seconds</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">exposed_headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x-ms-meta-data*&quot;</span><span class="p">,</span> <span class="s2">&quot;x-ms-meta-source*&quot;</span><span class="p">,</span> <span class="s2">&quot;x-ms-meta-abc&quot;</span><span class="p">,</span> <span class="s2">&quot;x-ms-meta-bcd&quot;</span><span class="p">]</span>
+<span class="n">allowed_headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x-ms-meta-data*&quot;</span><span class="p">,</span> <span class="s2">&quot;x-ms-meta-target*&quot;</span><span class="p">,</span> <span class="s2">&quot;x-ms-meta-xyz&quot;</span><span class="p">,</span> <span class="s2">&quot;x-ms-meta-foo&quot;</span><span class="p">]</span>
+<span class="n">cors_rule2</span> <span class="o">=</span> <span class="n">CorsRule</span><span class="p">(</span>
+    <span class="n">allowed_origins</span><span class="p">,</span>
+    <span class="n">allowed_methods</span><span class="p">,</span>
+    <span class="n">max_age_in_seconds</span><span class="o">=</span><span class="n">max_age_in_seconds</span><span class="p">,</span>
+    <span class="n">exposed_headers</span><span class="o">=</span><span class="n">exposed_headers</span><span class="p">,</span>
+    <span class="n">allowed_headers</span><span class="o">=</span><span class="n">allowed_headers</span><span class="p">)</span>
+
+<span class="n">cors</span> <span class="o">=</span> <span class="p">[</span><span class="n">cors_rule1</span><span class="p">,</span> <span class="n">cors_rule2</span><span class="p">]</span>
+
+<span class="c1"># Set the service properties</span>
+<span class="n">file_service</span><span class="o">.</span><span class="n">set_service_properties</span><span class="p">(</span><span class="n">hour_metrics</span><span class="p">,</span> <span class="n">minute_metrics</span><span class="p">,</span> <span class="n">cors</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2122,8 +2319,14 @@ same name already exists, the operation fails.</p>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>(<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-text">Creates a file share.</span><a class="headerlink" href="#id24" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">share</span><span class="o">.</span><span class="n">create_share</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2151,8 +2354,14 @@ snapshot was taken.</p>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>[<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any]</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-text">Creates a snapshot of the file share.</span><a class="headerlink" href="#id25" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">share</span><span class="o">.</span><span class="n">create_snapshot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2172,8 +2381,14 @@ later deleted during garbage collection.</p>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-text">Deletes the share and any snapshots.</span><a class="headerlink" href="#id26" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">share</span><span class="o">.</span><span class="n">delete_share</span><span class="p">(</span><span class="n">delete_snapshots</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2194,8 +2409,15 @@ shared access key.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-text">Gets the share client from connection string.</span><a class="headerlink" href="#id27" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.storage.file</span> <span class="kn">import</span> <span class="n">ShareClient</span>
+<span class="n">share</span> <span class="o">=</span> <span class="n">ShareClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">connection_string</span><span class="p">,</span> <span class="s2">&quot;fileshare&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2327,8 +2549,14 @@ list of files or directories.</p>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.models.ShareProperties" title="azure.storage.file.models.ShareProperties">ShareProperties</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-text">Gets the share properties.</span><a class="headerlink" href="#id28" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">properties</span> <span class="o">=</span> <span class="n">share</span><span class="o">.</span><span class="n">get_share_properties</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2371,8 +2599,23 @@ this generator will begin returning results from this point.</p></li>
 <dd class="field-even"><p>An auto-paging iterable of dict-like DirectoryProperties and FileProperties</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id29">
+<div class="code-block-caption"><span class="caption-text">List directories and files in the share.</span><a class="headerlink" href="#id29" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a directory in the share</span>
+<span class="n">dir_client</span> <span class="o">=</span> <span class="n">share</span><span class="o">.</span><span class="n">create_directory</span><span class="p">(</span><span class="s2">&quot;mydir&quot;</span><span class="p">)</span>
+
+<span class="c1"># Upload a file to the directory</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">source_file</span><span class="p">:</span>
+    <span class="n">dir_client</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s2">&quot;sample&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">source_file</span><span class="p">)</span>
+
+<span class="c1"># List files in the directory</span>
+<span class="n">my_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">share</span><span class="o">.</span><span class="n">list_directories_and_files</span><span class="p">(</span><span class="n">directory_name</span><span class="o">=</span><span class="s2">&quot;mydir&quot;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_files</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2421,8 +2664,15 @@ call this operation with no metadata dict.</p>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>(<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-text">Sets the share metadata.</span><a class="headerlink" href="#id30" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">}</span>
+<span class="n">share</span><span class="o">.</span><span class="n">set_share_metadata</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2445,8 +2695,15 @@ Must be greater than 0, and less than or equal to 5TB.</p></li>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>(<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-text">Sets the share quota.</span><a class="headerlink" href="#id31" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the quota for the share to 1GB</span>
+<span class="n">share</span><span class="o">.</span><span class="n">set_share_quota</span><span class="p">(</span><span class="n">quota</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2566,8 +2823,14 @@ the client.</p>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.polling.CopyStatusPoller" title="azure.storage.file.polling.CopyStatusPoller">CopyStatusPoller</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-text">Copy a file from a URL</span><a class="headerlink" href="#id32" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">destination_file</span><span class="o">.</span><span class="n">copy_file_from_url</span><span class="p">(</span><span class="n">source_url</span><span class="o">=</span><span class="n">source_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2593,8 +2856,15 @@ up to 1 TB.</p></li>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>(<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-text">Create a file.</span><a class="headerlink" href="#id33" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create and allocate bytes for the file (no content added yet)</span>
+<span class="nb">file</span><span class="o">.</span><span class="n">create_file</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2611,8 +2881,14 @@ later deleted during garbage collection.</p>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id34">
+<div class="code-block-caption"><span class="caption-text">Delete a file.</span><a class="headerlink" href="#id34" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file2</span><span class="o">.</span><span class="n">delete_file</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2642,8 +2918,15 @@ entire blocks, and doing so defeats the purpose of the memory-efficient algorith
 <dd class="field-even"><p>A iterable data generator (stream)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id35">
+<div class="code-block-caption"><span class="caption-text">Download a file.</span><a class="headerlink" href="#id35" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">DEST_FILE</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">file2</span><span class="o">.</span><span class="n">download_file</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2665,8 +2948,15 @@ shared access key.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id36">
+<div class="code-block-caption"><span class="caption-text">Creates the file client with connection string.</span><a class="headerlink" href="#id36" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.storage.file</span> <span class="kn">import</span> <span class="n">FileClient</span>
+<span class="nb">file</span> <span class="o">=</span> <span class="n">FileClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">connection_string</span><span class="p">,</span> <span class="n">share</span><span class="o">=</span><span class="s2">&quot;share&quot;</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="s2">&quot;myfile&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2880,8 +3170,15 @@ file.</p></li>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>(<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id37">
+<div class="code-block-caption"><span class="caption-text">Upload a file.</span><a class="headerlink" href="#id37" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">source</span><span class="p">:</span>
+    <span class="n">file2</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3004,8 +3301,14 @@ its files, its subdirectories and their files. Default value is False.</p></li>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>(<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id38">
+<div class="code-block-caption"><span class="caption-text">Creates a directory.</span><a class="headerlink" href="#id38" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="o">.</span><span class="n">create_directory</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3029,8 +3332,18 @@ with the subdirectory.</p>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.directory_client.DirectoryClient" title="azure.storage.file.directory_client.DirectoryClient">DirectoryClient</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id39">
+<div class="code-block-caption"><span class="caption-text">Create a subdirectory.</span><a class="headerlink" href="#id39" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the directory</span>
+<span class="n">parent_dir</span><span class="o">.</span><span class="n">create_directory</span><span class="p">()</span>
+
+<span class="c1"># Create a subdirectory</span>
+<span class="n">subdir</span> <span class="o">=</span> <span class="n">parent_dir</span><span class="o">.</span><span class="n">create_subdirectory</span><span class="p">(</span><span class="s2">&quot;subdir&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3047,8 +3360,14 @@ later deleted during garbage collection.</p>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id40">
+<div class="code-block-caption"><span class="caption-text">Deletes a directory.</span><a class="headerlink" href="#id40" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="o">.</span><span class="n">delete_directory</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3068,8 +3387,15 @@ deleted during garbage collection.</p>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id41">
+<div class="code-block-caption"><span class="caption-text">Delete a file in a directory.</span><a class="headerlink" href="#id41" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Delete the file in the directory</span>
+<span class="nb">dir</span><span class="o">.</span><span class="n">delete_file</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s2">&quot;sample&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3088,8 +3414,14 @@ deleted during garbage collection.</p>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id42">
+<div class="code-block-caption"><span class="caption-text">Delete a subdirectory.</span><a class="headerlink" href="#id42" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">parent_dir</span><span class="o">.</span><span class="n">delete_subdirectory</span><span class="p">(</span><span class="s2">&quot;subdir&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3165,8 +3497,20 @@ list of files.</p>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.directory_client.DirectoryClient" title="azure.storage.file.directory_client.DirectoryClient">DirectoryClient</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id43">
+<div class="code-block-caption"><span class="caption-text">Gets the subdirectory client.</span><a class="headerlink" href="#id43" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get a directory client and create the directory</span>
+<span class="n">parent</span> <span class="o">=</span> <span class="n">share</span><span class="o">.</span><span class="n">get_directory_client</span><span class="p">(</span><span class="s2">&quot;dir1&quot;</span><span class="p">)</span>
+<span class="n">parent</span><span class="o">.</span><span class="n">create_directory</span><span class="p">()</span>
+
+<span class="c1"># Get a subdirectory client and create the subdirectory &quot;dir1/dir2&quot;</span>
+<span class="n">subdirectory</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">get_subdirectory_client</span><span class="p">(</span><span class="s2">&quot;dir2&quot;</span><span class="p">)</span>
+<span class="n">subdirectory</span><span class="o">.</span><span class="n">create_directory</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3192,8 +3536,16 @@ this generator will begin returning results from this point.</p></li>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.models.DirectoryPropertiesPaged" title="azure.storage.file.models.DirectoryPropertiesPaged">DirectoryPropertiesPaged</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id44">
+<div class="code-block-caption"><span class="caption-text">List directories and files.</span><a class="headerlink" href="#id44" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># List the directories and files under the parent directory</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">parent_dir</span><span class="o">.</span><span class="n">list_directories_and_files</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3275,8 +3627,16 @@ file.</p></li>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.file_client.FileClient" title="azure.storage.file.file_client.FileClient">FileClient</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id45">
+<div class="code-block-caption"><span class="caption-text">Upload a file to a directory.</span><a class="headerlink" href="#id45" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Upload a file to the directory</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">source</span><span class="p">:</span>
+    <span class="nb">dir</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s2">&quot;sample&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3360,8 +3720,14 @@ same name already exists, the operation fails.</p>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>(<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id46">
+<div class="code-block-caption"><span class="caption-text">Creates a file share.</span><a class="headerlink" href="#id46" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">share</span><span class="o">.</span><span class="n">create_share</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3389,8 +3755,14 @@ snapshot was taken.</p>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>[<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any]</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id47">
+<div class="code-block-caption"><span class="caption-text">Creates a snapshot of the file share.</span><a class="headerlink" href="#id47" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">share</span><span class="o">.</span><span class="n">create_snapshot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3410,8 +3782,14 @@ later deleted during garbage collection.</p>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id48">
+<div class="code-block-caption"><span class="caption-text">Deletes the share and any snapshots.</span><a class="headerlink" href="#id48" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">share</span><span class="o">.</span><span class="n">delete_share</span><span class="p">(</span><span class="n">delete_snapshots</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3432,8 +3810,15 @@ shared access key.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id49">
+<div class="code-block-caption"><span class="caption-text">Gets the share client from connection string.</span><a class="headerlink" href="#id49" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.storage.file</span> <span class="kn">import</span> <span class="n">ShareClient</span>
+<span class="n">share</span> <span class="o">=</span> <span class="n">ShareClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">connection_string</span><span class="p">,</span> <span class="s2">&quot;fileshare&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3565,8 +3950,14 @@ list of files or directories.</p>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.models.ShareProperties" title="azure.storage.file.models.ShareProperties">ShareProperties</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id50">
+<div class="code-block-caption"><span class="caption-text">Gets the share properties.</span><a class="headerlink" href="#id50" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">properties</span> <span class="o">=</span> <span class="n">share</span><span class="o">.</span><span class="n">get_share_properties</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3609,8 +4000,23 @@ this generator will begin returning results from this point.</p></li>
 <dd class="field-even"><p>An auto-paging iterable of dict-like DirectoryProperties and FileProperties</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id51">
+<div class="code-block-caption"><span class="caption-text">List directories and files in the share.</span><a class="headerlink" href="#id51" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a directory in the share</span>
+<span class="n">dir_client</span> <span class="o">=</span> <span class="n">share</span><span class="o">.</span><span class="n">create_directory</span><span class="p">(</span><span class="s2">&quot;mydir&quot;</span><span class="p">)</span>
+
+<span class="c1"># Upload a file to the directory</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">source_file</span><span class="p">:</span>
+    <span class="n">dir_client</span><span class="o">.</span><span class="n">upload_file</span><span class="p">(</span><span class="n">file_name</span><span class="o">=</span><span class="s2">&quot;sample&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">source_file</span><span class="p">)</span>
+
+<span class="c1"># List files in the directory</span>
+<span class="n">my_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">share</span><span class="o">.</span><span class="n">list_directories_and_files</span><span class="p">(</span><span class="n">directory_name</span><span class="o">=</span><span class="s2">&quot;mydir&quot;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">my_files</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3659,8 +4065,15 @@ call this operation with no metadata dict.</p>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>(<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id52">
+<div class="code-block-caption"><span class="caption-text">Sets the share metadata.</span><a class="headerlink" href="#id52" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;test&#39;</span><span class="p">}</span>
+<span class="n">share</span><span class="o">.</span><span class="n">set_share_metadata</span><span class="p">(</span><span class="n">metadata</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3683,8 +4096,15 @@ Must be greater than 0, and less than or equal to 5TB.</p></li>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a>(<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a>, Any)</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id53">
+<div class="code-block-caption"><span class="caption-text">Sets the share quota.</span><a class="headerlink" href="#id53" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the quota for the share to 1GB</span>
+<span class="n">share</span><span class="o">.</span><span class="n">set_share_quota</span><span class="p">(</span><span class="n">quota</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3727,8 +4147,15 @@ shared access key.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id54">
+<div class="code-block-caption"><span class="caption-text">Create the file service client with url and credential.</span><a class="headerlink" href="#id54" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.storage.file</span> <span class="kn">import</span> <span class="n">FileServiceClient</span>
+<span class="n">file_service_client</span> <span class="o">=</span> <span class="n">FileServiceClient</span><span class="p">(</span><span class="n">account_url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">credential</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">shared_access_key</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.storage.file.FileServiceClient.create_share">
@@ -3750,8 +4177,14 @@ share as metadata. Example:{‘Category’:’test’}</p></li>
 <dd class="field-even"><p><a class="reference internal" href="#azure.storage.file.share_client.ShareClient" title="azure.storage.file.share_client.ShareClient">ShareClient</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id55">
+<div class="code-block-caption"><span class="caption-text">Create a share in the file service.</span><a class="headerlink" href="#id55" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file_service</span><span class="o">.</span><span class="n">create_share</span><span class="p">(</span><span class="n">share_name</span><span class="o">=</span><span class="s2">&quot;testshare&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3773,8 +4206,14 @@ or an instance of ShareProperties.</p></li>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id56">
+<div class="code-block-caption"><span class="caption-text">Delete a share in the file service.</span><a class="headerlink" href="#id56" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file_service</span><span class="o">.</span><span class="n">delete_share</span><span class="p">(</span><span class="n">share_name</span><span class="o">=</span><span class="s2">&quot;testshare&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3792,8 +4231,15 @@ shared access key.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id57">
+<div class="code-block-caption"><span class="caption-text">Create the file service client with connection string.</span><a class="headerlink" href="#id57" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.storage.file</span> <span class="kn">import</span> <span class="n">FileServiceClient</span>
+<span class="n">file_service</span> <span class="o">=</span> <span class="n">FileServiceClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">connection_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3838,8 +4284,18 @@ restricts the request to those IP addresses.</p></li>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id58">
+<div class="code-block-caption"><span class="caption-text">Generate a sas token.</span><a class="headerlink" href="#id58" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sas_token</span> <span class="o">=</span> <span class="n">file_service_client</span><span class="o">.</span><span class="n">generate_shared_access_signature</span><span class="p">(</span>
+    <span class="n">resource_types</span><span class="o">=</span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+    <span class="n">permission</span><span class="o">=</span><span class="s2">&quot;read&quot;</span><span class="p">,</span>
+    <span class="n">expiry</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3856,8 +4312,14 @@ Azure Storage Analytics.</p>
 <dd class="field-even"><p>StorageServiceProperties</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id59">
+<div class="code-block-caption"><span class="caption-text">Get file service properties.</span><a class="headerlink" href="#id59" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">properties</span> <span class="o">=</span> <span class="n">file_service</span><span class="o">.</span><span class="n">get_service_properties</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3881,8 +4343,18 @@ or an instance of ShareProperties.</p></li>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.share_client.ShareClient" title="azure.storage.file.share_client.ShareClient">ShareClient</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id60">
+<div class="code-block-caption"><span class="caption-text">Gets the share client.</span><a class="headerlink" href="#id60" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.storage.file</span> <span class="kn">import</span> <span class="n">FileServiceClient</span>
+<span class="n">file_service</span> <span class="o">=</span> <span class="n">FileServiceClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">connection_string</span><span class="p">)</span>
+
+<span class="c1"># Get a share client to interact with a specific share</span>
+<span class="n">share</span> <span class="o">=</span> <span class="n">file_service</span><span class="o">.</span><span class="n">get_share_client</span><span class="p">(</span><span class="s2">&quot;fileshare&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3912,8 +4384,19 @@ this generator will begin returning results from this point.</p></li>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.storage.file.models.SharePropertiesPaged" title="azure.storage.file.models.SharePropertiesPaged">SharePropertiesPaged</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id61">
+<div class="code-block-caption"><span class="caption-text">List shares in the file service.</span><a class="headerlink" href="#id61" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># List the shares in the file service</span>
+<span class="n">my_shares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">file_service</span><span class="o">.</span><span class="n">list_shares</span><span class="p">())</span>
+
+<span class="c1"># Print the shares</span>
+<span class="k">for</span> <span class="n">share</span> <span class="ow">in</span> <span class="n">my_shares</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">share</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -3940,8 +4423,39 @@ and CORS will be disabled for the service.</p></li>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id62">
+<div class="code-block-caption"><span class="caption-text">Sets file service properties.</span><a class="headerlink" href="#id62" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create service properties</span>
+<span class="kn">from</span> <span class="nn">azure.storage.file</span> <span class="kn">import</span> <span class="n">Metrics</span><span class="p">,</span> <span class="n">CorsRule</span><span class="p">,</span> <span class="n">RetentionPolicy</span>
+
+<span class="c1"># Create metrics for requests statistics</span>
+<span class="n">hour_metrics</span> <span class="o">=</span> <span class="n">Metrics</span><span class="p">(</span><span class="n">enabled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">include_apis</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">retention_policy</span><span class="o">=</span><span class="n">RetentionPolicy</span><span class="p">(</span><span class="n">enabled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">days</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">minute_metrics</span> <span class="o">=</span> <span class="n">Metrics</span><span class="p">(</span><span class="n">enabled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">include_apis</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                         <span class="n">retention_policy</span><span class="o">=</span><span class="n">RetentionPolicy</span><span class="p">(</span><span class="n">enabled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">days</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># Create CORS rules</span>
+<span class="n">cors_rule1</span> <span class="o">=</span> <span class="n">CorsRule</span><span class="p">([</span><span class="s1">&#39;www.xyz.com&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="n">allowed_origins</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;www.xyz.com&#39;</span><span class="p">,</span> <span class="s2">&quot;www.ab.com&quot;</span><span class="p">,</span> <span class="s2">&quot;www.bc.com&quot;</span><span class="p">]</span>
+<span class="n">allowed_methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;PUT&#39;</span><span class="p">]</span>
+<span class="n">max_age_in_seconds</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">exposed_headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x-ms-meta-data*&quot;</span><span class="p">,</span> <span class="s2">&quot;x-ms-meta-source*&quot;</span><span class="p">,</span> <span class="s2">&quot;x-ms-meta-abc&quot;</span><span class="p">,</span> <span class="s2">&quot;x-ms-meta-bcd&quot;</span><span class="p">]</span>
+<span class="n">allowed_headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;x-ms-meta-data*&quot;</span><span class="p">,</span> <span class="s2">&quot;x-ms-meta-target*&quot;</span><span class="p">,</span> <span class="s2">&quot;x-ms-meta-xyz&quot;</span><span class="p">,</span> <span class="s2">&quot;x-ms-meta-foo&quot;</span><span class="p">]</span>
+<span class="n">cors_rule2</span> <span class="o">=</span> <span class="n">CorsRule</span><span class="p">(</span>
+    <span class="n">allowed_origins</span><span class="p">,</span>
+    <span class="n">allowed_methods</span><span class="p">,</span>
+    <span class="n">max_age_in_seconds</span><span class="o">=</span><span class="n">max_age_in_seconds</span><span class="p">,</span>
+    <span class="n">exposed_headers</span><span class="o">=</span><span class="n">exposed_headers</span><span class="p">,</span>
+    <span class="n">allowed_headers</span><span class="o">=</span><span class="n">allowed_headers</span><span class="p">)</span>
+
+<span class="n">cors</span> <span class="o">=</span> <span class="p">[</span><span class="n">cors_rule1</span><span class="p">,</span> <span class="n">cors_rule2</span><span class="p">]</span>
+
+<span class="c1"># Set the service properties</span>
+<span class="n">file_service</span><span class="o">.</span><span class="n">set_service_properties</span><span class="p">(</span><span class="n">hour_metrics</span><span class="p">,</span> <span class="n">minute_metrics</span><span class="p">,</span> <span class="n">cors</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
