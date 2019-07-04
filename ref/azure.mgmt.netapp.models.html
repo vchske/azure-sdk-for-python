@@ -414,10 +414,10 @@ different name.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource name to verify.</p></li>
 <li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.netapp.models.CheckNameResourceTypes" title="azure.mgmt.netapp.models.CheckNameResourceTypes"><em>CheckNameResourceTypes</em></a>) – Required. Resource type used for verification. Possible
-values include: ‘Microsoft.NetApp/netAppAccount’,
-‘Microsoft.NetApp/netAppAccount/capacityPools’,
-‘Microsoft.NetApp/netAppAccount/capacityPools/volumes’,
-‘Microsoft.NetApp/netAppAccount/capacityPools/volumes/snapshots’</p></li>
+values include: ‘Microsoft.NetApp/netAppAccounts’,
+‘Microsoft.NetApp/netAppAccounts/capacityPools’,
+‘Microsoft.NetApp/netAppAccounts/capacityPools/volumes’,
+‘Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots’</p></li>
 <li><p><strong>resource_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource group name.</p></li>
 </ul>
 </dd>
@@ -504,7 +504,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.netapp.models.CapacityPool">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.netapp.models.</code><code class="sig-name descname">CapacityPool</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">size: int = 4398046511104</em>, <em class="sig-param">service_level='Premium'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/capacity_pool_py3.html#CapacityPool"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.CapacityPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.netapp.models.</code><code class="sig-name descname">CapacityPool</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">size: int</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">service_level='Premium'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/capacity_pool_py3.html#CapacityPool"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.CapacityPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Capacity pool resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -515,12 +515,12 @@ sending a request.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
 <li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Resource tags</p></li>
-<li><p><strong>size</strong> (<em>long</em>) – size. Provisioned size of the pool (in bytes). Allowed values
-are in 4TiB chunks (value must be multiply of 4398046511104). Default
-value: 4398046511104 .</p></li>
-<li><p><strong>service_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.netapp.models.ServiceLevel" title="azure.mgmt.netapp.models.ServiceLevel"><em>ServiceLevel</em></a>) – serviceLevel. The service level of the file system.
-Possible values include: ‘Standard’, ‘Premium’, ‘Ultra’. Default value:
-“Premium” .</p></li>
+<li><p><strong>size</strong> (<em>long</em>) – Required. size. Provisioned size of the pool (in bytes).
+Allowed values are in 4TiB chunks (value must be multiply of
+4398046511104).</p></li>
+<li><p><strong>service_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.netapp.models.ServiceLevel" title="azure.mgmt.netapp.models.ServiceLevel"><em>ServiceLevel</em></a>) – Required. serviceLevel. The service level of the
+file system. Possible values include: ‘Standard’, ‘Premium’, ‘Ultra’.
+Default value: “Premium” .</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
@@ -601,7 +601,7 @@ string with IPv4 CIDRs, IPv4 host addresses and host names</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.netapp.models.Volume">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.netapp.models.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">creation_token: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">service_level='Premium'</em>, <em class="sig-param">usage_threshold: int = 107374182400</em>, <em class="sig-param">export_policy=None</em>, <em class="sig-param">snapshot_id: str = None</em>, <em class="sig-param">subnet_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/volume_py3.html#Volume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.Volume" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.netapp.models.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">creation_token: str</em>, <em class="sig-param">subnet_id: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">service_level='Premium'</em>, <em class="sig-param">usage_threshold: int = 107374182400</em>, <em class="sig-param">export_policy=None</em>, <em class="sig-param">protocol_types=None</em>, <em class="sig-param">snapshot_id: str = None</em>, <em class="sig-param">mount_targets=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/volume_py3.html#Volume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Volume resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -614,17 +614,20 @@ sending a request.</p>
 <li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Resource tags</p></li>
 <li><p><strong>creation_token</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Creation Token or File Path. A unique
 file path for the volume. Used when creating mount targets</p></li>
-<li><p><strong>service_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.netapp.models.ServiceLevel" title="azure.mgmt.netapp.models.ServiceLevel"><em>ServiceLevel</em></a>) – Required. serviceLevel. The service level of the
-file system. Possible values include: ‘Standard’, ‘Premium’, ‘Ultra’.
-Default value: “Premium” .</p></li>
-<li><p><strong>usage_threshold</strong> (<em>long</em>) – usageThreshold. Maximum storage quota allowed for
-a file system in bytes. This is a soft quota used for alerting only.
-Minimum size is 100 GiB. Upper limit is 100TiB. Default value:
-107374182400 .</p></li>
+<li><p><strong>service_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.netapp.models.ServiceLevel" title="azure.mgmt.netapp.models.ServiceLevel"><em>ServiceLevel</em></a>) – serviceLevel. The service level of the file system.
+Possible values include: ‘Standard’, ‘Premium’, ‘Ultra’. Default value:
+“Premium” .</p></li>
+<li><p><strong>usage_threshold</strong> (<em>long</em>) – Required. usageThreshold. Maximum storage quota
+allowed for a file system in bytes. This is a soft quota used for alerting
+only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+Default value: 107374182400 .</p></li>
 <li><p><strong>export_policy</strong> (<a class="reference internal" href="#azure.mgmt.netapp.models.VolumePropertiesExportPolicy" title="azure.mgmt.netapp.models.VolumePropertiesExportPolicy"><em>VolumePropertiesExportPolicy</em></a>) – exportPolicy. Set of export policy rules</p></li>
-<li><p><strong>snapshot_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Snapshot ID. UUID v4 used to identify the Snapshot</p></li>
-<li><p><strong>subnet_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Azure Resource URI for a delegated subnet. Must have
-the delegation Microsoft.NetApp/volumes</p></li>
+<li><p><strong>protocol_types</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – protocolTypes. Set of protocol types</p></li>
+<li><p><strong>snapshot_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Snapshot ID. UUID v4 or resource identifier used to
+identify the Snapshot.</p></li>
+<li><p><strong>subnet_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The Azure Resource URI for a delegated subnet.
+Must have the delegation Microsoft.NetApp/volumes</p></li>
+<li><p><strong>mount_targets</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – mountTargets. List of mount targets</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
@@ -671,8 +674,8 @@ Possible values include: ‘Standard’, ‘Premium’, ‘Ultra’. Default val
 “Premium” .</p></li>
 <li><p><strong>usage_threshold</strong> (<em>long</em>) – usageThreshold. Maximum storage quota allowed for
 a file system in bytes. This is a soft quota used for alerting only.
-Minimum size is 100 GiB. Upper limit is 100TiB. Default value:
-107374182400 .</p></li>
+Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
+Default value: 107374182400 .</p></li>
 <li><p><strong>export_policy</strong> (<a class="reference internal" href="#azure.mgmt.netapp.models.VolumePatchPropertiesExportPolicy" title="azure.mgmt.netapp.models.VolumePatchPropertiesExportPolicy"><em>VolumePatchPropertiesExportPolicy</em></a>) – exportPolicy. Set of export policy rules</p></li>
 </ul>
 </dd>
@@ -834,23 +837,23 @@ FileSystem</p></li>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
-<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_account">
-<code class="sig-name descname">microsoft_net_appnet_app_account</code><em class="property"> = 'Microsoft.NetApp/netAppAccount'</em><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_account" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accounts">
+<code class="sig-name descname">microsoft_net_appnet_app_accounts</code><em class="property"> = 'Microsoft.NetApp/netAppAccounts'</em><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accounts" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountcapacity_pools">
-<code class="sig-name descname">microsoft_net_appnet_app_accountcapacity_pools</code><em class="property"> = 'Microsoft.NetApp/netAppAccount/capacityPools'</em><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountcapacity_pools" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountscapacity_pools">
+<code class="sig-name descname">microsoft_net_appnet_app_accountscapacity_pools</code><em class="property"> = 'Microsoft.NetApp/netAppAccounts/capacityPools'</em><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountscapacity_pools" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountcapacity_poolsvolumes">
-<code class="sig-name descname">microsoft_net_appnet_app_accountcapacity_poolsvolumes</code><em class="property"> = 'Microsoft.NetApp/netAppAccount/capacityPools/volumes'</em><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountcapacity_poolsvolumes" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountscapacity_poolsvolumes">
+<code class="sig-name descname">microsoft_net_appnet_app_accountscapacity_poolsvolumes</code><em class="property"> = 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes'</em><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountscapacity_poolsvolumes" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountcapacity_poolsvolumessnapshots">
-<code class="sig-name descname">microsoft_net_appnet_app_accountcapacity_poolsvolumessnapshots</code><em class="property"> = 'Microsoft.NetApp/netAppAccount/capacityPools/volumes/snapshots'</em><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountcapacity_poolsvolumessnapshots" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountscapacity_poolsvolumessnapshots">
+<code class="sig-name descname">microsoft_net_appnet_app_accountscapacity_poolsvolumessnapshots</code><em class="property"> = 'Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots'</em><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountscapacity_poolsvolumessnapshots" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

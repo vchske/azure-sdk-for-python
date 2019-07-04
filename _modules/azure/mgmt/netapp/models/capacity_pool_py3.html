@@ -310,13 +310,13 @@
 <span class="sd">    :type tags: object</span>
 <span class="sd">    :ivar pool_id: poolId. UUID v4 used to identify the Pool</span>
 <span class="sd">    :vartype pool_id: str</span>
-<span class="sd">    :param size: size. Provisioned size of the pool (in bytes). Allowed values</span>
-<span class="sd">     are in 4TiB chunks (value must be multiply of 4398046511104). Default</span>
-<span class="sd">     value: 4398046511104 .</span>
+<span class="sd">    :param size: Required. size. Provisioned size of the pool (in bytes).</span>
+<span class="sd">     Allowed values are in 4TiB chunks (value must be multiply of</span>
+<span class="sd">     4398046511104).</span>
 <span class="sd">    :type size: long</span>
-<span class="sd">    :param service_level: serviceLevel. The service level of the file system.</span>
-<span class="sd">     Possible values include: &#39;Standard&#39;, &#39;Premium&#39;, &#39;Ultra&#39;. Default value:</span>
-<span class="sd">     &quot;Premium&quot; .</span>
+<span class="sd">    :param service_level: Required. serviceLevel. The service level of the</span>
+<span class="sd">     file system. Possible values include: &#39;Standard&#39;, &#39;Premium&#39;, &#39;Ultra&#39;.</span>
+<span class="sd">     Default value: &quot;Premium&quot; .</span>
 <span class="sd">    :type service_level: str or ~azure.mgmt.netapp.models.ServiceLevel</span>
 <span class="sd">    :ivar provisioning_state: Azure lifecycle management</span>
 <span class="sd">    :vartype provisioning_state: str</span>
@@ -328,7 +328,8 @@
         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;pool_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;max_length&#39;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span> <span class="s1">&#39;min_length&#39;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span> <span class="s1">&#39;pattern&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;^[a-fA-F0-9]</span><span class="si">{8}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{12}</span><span class="s1">$&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;maximum&#39;</span><span class="p">:</span> <span class="mi">549755813888000</span><span class="p">,</span> <span class="s1">&#39;minimum&#39;</span><span class="p">:</span> <span class="mi">4398046511104</span><span class="p">},</span>
+        <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;maximum&#39;</span><span class="p">:</span> <span class="mi">549755813888000</span><span class="p">,</span> <span class="s1">&#39;minimum&#39;</span><span class="p">:</span> <span class="mi">4398046511104</span><span class="p">},</span>
+        <span class="s1">&#39;service_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
     <span class="p">}</span>
 
@@ -344,7 +345,7 @@
         <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.provisioningState&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">4398046511104</span><span class="p">,</span> <span class="n">service_level</span><span class="o">=</span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">service_level</span><span class="o">=</span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">CapacityPool</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">location</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="kc">None</span>

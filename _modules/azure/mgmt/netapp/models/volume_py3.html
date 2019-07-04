@@ -313,28 +313,33 @@
 <span class="sd">    :param creation_token: Required. Creation Token or File Path. A unique</span>
 <span class="sd">     file path for the volume. Used when creating mount targets</span>
 <span class="sd">    :type creation_token: str</span>
-<span class="sd">    :param service_level: Required. serviceLevel. The service level of the</span>
-<span class="sd">     file system. Possible values include: &#39;Standard&#39;, &#39;Premium&#39;, &#39;Ultra&#39;.</span>
-<span class="sd">     Default value: &quot;Premium&quot; .</span>
+<span class="sd">    :param service_level: serviceLevel. The service level of the file system.</span>
+<span class="sd">     Possible values include: &#39;Standard&#39;, &#39;Premium&#39;, &#39;Ultra&#39;. Default value:</span>
+<span class="sd">     &quot;Premium&quot; .</span>
 <span class="sd">    :type service_level: str or ~azure.mgmt.netapp.models.ServiceLevel</span>
-<span class="sd">    :param usage_threshold: usageThreshold. Maximum storage quota allowed for</span>
-<span class="sd">     a file system in bytes. This is a soft quota used for alerting only.</span>
-<span class="sd">     Minimum size is 100 GiB. Upper limit is 100TiB. Default value:</span>
-<span class="sd">     107374182400 .</span>
+<span class="sd">    :param usage_threshold: Required. usageThreshold. Maximum storage quota</span>
+<span class="sd">     allowed for a file system in bytes. This is a soft quota used for alerting</span>
+<span class="sd">     only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.</span>
+<span class="sd">     Default value: 107374182400 .</span>
 <span class="sd">    :type usage_threshold: long</span>
 <span class="sd">    :param export_policy: exportPolicy. Set of export policy rules</span>
 <span class="sd">    :type export_policy:</span>
 <span class="sd">     ~azure.mgmt.netapp.models.VolumePropertiesExportPolicy</span>
+<span class="sd">    :param protocol_types: protocolTypes. Set of protocol types</span>
+<span class="sd">    :type protocol_types: list[str]</span>
 <span class="sd">    :ivar provisioning_state: Azure lifecycle management</span>
 <span class="sd">    :vartype provisioning_state: str</span>
-<span class="sd">    :param snapshot_id: Snapshot ID. UUID v4 used to identify the Snapshot</span>
+<span class="sd">    :param snapshot_id: Snapshot ID. UUID v4 or resource identifier used to</span>
+<span class="sd">     identify the Snapshot.</span>
 <span class="sd">    :type snapshot_id: str</span>
 <span class="sd">    :ivar baremetal_tenant_id: Baremetal Tenant ID. Unique Baremetal Tenant</span>
 <span class="sd">     Identifier.</span>
 <span class="sd">    :vartype baremetal_tenant_id: str</span>
-<span class="sd">    :param subnet_id: The Azure Resource URI for a delegated subnet. Must have</span>
-<span class="sd">     the delegation Microsoft.NetApp/volumes</span>
+<span class="sd">    :param subnet_id: Required. The Azure Resource URI for a delegated subnet.</span>
+<span class="sd">     Must have the delegation Microsoft.NetApp/volumes</span>
 <span class="sd">    :type subnet_id: str</span>
+<span class="sd">    :param mount_targets: mountTargets. List of mount targets</span>
+<span class="sd">    :type mount_targets: object</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
@@ -344,11 +349,11 @@
         <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;file_system_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;max_length&#39;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span> <span class="s1">&#39;min_length&#39;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span> <span class="s1">&#39;pattern&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;^[a-fA-F0-9]</span><span class="si">{8}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{12}</span><span class="s1">$&#39;</span><span class="p">},</span>
         <span class="s1">&#39;creation_token&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-        <span class="s1">&#39;service_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-        <span class="s1">&#39;usage_threshold&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;maximum&#39;</span><span class="p">:</span> <span class="mi">109951162777600</span><span class="p">,</span> <span class="s1">&#39;minimum&#39;</span><span class="p">:</span> <span class="mi">107374182400</span><span class="p">},</span>
+        <span class="s1">&#39;usage_threshold&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;maximum&#39;</span><span class="p">:</span> <span class="mi">109951162777600</span><span class="p">,</span> <span class="s1">&#39;minimum&#39;</span><span class="p">:</span> <span class="mi">107374182400</span><span class="p">},</span>
         <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-        <span class="s1">&#39;snapshot_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;max_length&#39;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span> <span class="s1">&#39;min_length&#39;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span> <span class="s1">&#39;pattern&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;^[a-fA-F0-9]</span><span class="si">{8}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{12}</span><span class="s1">$&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;snapshot_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;max_length&#39;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span> <span class="s1">&#39;min_length&#39;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span> <span class="s1">&#39;pattern&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;^[a-fA-F0-9]</span><span class="si">{8}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{12}</span><span class="s1">|(</span><span class="se">\\</span><span class="s1">?([^\/]*[\/])*)([^\/]+)$&#39;</span><span class="p">},</span>
         <span class="s1">&#39;baremetal_tenant_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;max_length&#39;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span> <span class="s1">&#39;min_length&#39;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span> <span class="s1">&#39;pattern&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;^[a-fA-F0-9]</span><span class="si">{8}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{4}</span><span class="s1">-[a-fA-F0-9]</span><span class="si">{12}</span><span class="s1">$&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;subnet_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
     <span class="p">}</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
@@ -362,13 +367,15 @@
         <span class="s1">&#39;service_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.serviceLevel&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;usage_threshold&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.usageThreshold&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;long&#39;</span><span class="p">},</span>
         <span class="s1">&#39;export_policy&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.exportPolicy&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;VolumePropertiesExportPolicy&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;protocol_types&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.protocolTypes&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[str]&#39;</span><span class="p">},</span>
         <span class="s1">&#39;provisioning_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.provisioningState&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;snapshot_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.snapshotId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;baremetal_tenant_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.baremetalTenantId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;subnet_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.subnetId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;mount_targets&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.mountTargets&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">creation_token</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">service_level</span><span class="o">=</span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span> <span class="n">usage_threshold</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">107374182400</span><span class="p">,</span> <span class="n">export_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">snapshot_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">subnet_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">creation_token</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">subnet_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">service_level</span><span class="o">=</span><span class="s2">&quot;Premium&quot;</span><span class="p">,</span> <span class="n">usage_threshold</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">107374182400</span><span class="p">,</span> <span class="n">export_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">protocol_types</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">snapshot_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mount_targets</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Volume</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">location</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="kc">None</span>
@@ -380,10 +387,12 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">service_level</span> <span class="o">=</span> <span class="n">service_level</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">usage_threshold</span> <span class="o">=</span> <span class="n">usage_threshold</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">export_policy</span> <span class="o">=</span> <span class="n">export_policy</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">protocol_types</span> <span class="o">=</span> <span class="n">protocol_types</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">provisioning_state</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">snapshot_id</span> <span class="o">=</span> <span class="n">snapshot_id</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">baremetal_tenant_id</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">subnet_id</span> <span class="o">=</span> <span class="n">subnet_id</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subnet_id</span> <span class="o">=</span> <span class="n">subnet_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mount_targets</span> <span class="o">=</span> <span class="n">mount_targets</span></div>
 </pre></div>
 
            </div>

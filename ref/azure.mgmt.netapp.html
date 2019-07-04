@@ -330,13 +330,20 @@ for every service call.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.netapp.AzureNetAppFilesManagementClient.check_file_path_availability">
-<code class="sig-name descname">check_file_path_availability</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/azure_net_app_files_management_client.html#AzureNetAppFilesManagementClient.check_file_path_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.AzureNetAppFilesManagementClient.check_file_path_availability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_file_path_availability</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">name</em>, <em class="sig-param">type</em>, <em class="sig-param">resource_group</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/azure_net_app_files_management_client.html#AzureNetAppFilesManagementClient.check_file_path_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.AzureNetAppFilesManagementClient.check_file_path_availability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check file path availability.</p>
 <p>Check if a file path is available.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name to verify.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="azure.mgmt.netapp.models.html#azure.mgmt.netapp.models.CheckNameResourceTypes" title="azure.mgmt.netapp.models.CheckNameResourceTypes"><em>CheckNameResourceTypes</em></a>) – Resource type used for verification. Possible values
+include: ‘Microsoft.NetApp/netAppAccounts’,
+‘Microsoft.NetApp/netAppAccounts/capacityPools’,
+‘Microsoft.NetApp/netAppAccounts/capacityPools/volumes’,
+‘Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots’</p></li>
+<li><p><strong>resource_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource group name.</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
 <li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
 deserialized response</p></li>
@@ -359,13 +366,20 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.netapp.AzureNetAppFilesManagementClient.check_name_availability">
-<code class="sig-name descname">check_name_availability</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/azure_net_app_files_management_client.html#AzureNetAppFilesManagementClient.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.AzureNetAppFilesManagementClient.check_name_availability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_name_availability</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">name</em>, <em class="sig-param">type</em>, <em class="sig-param">resource_group</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/azure_net_app_files_management_client.html#AzureNetAppFilesManagementClient.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.AzureNetAppFilesManagementClient.check_name_availability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check resource name availability.</p>
 <p>Check if a resource name is available.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name to verify.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="azure.mgmt.netapp.models.html#azure.mgmt.netapp.models.CheckNameResourceTypes" title="azure.mgmt.netapp.models.CheckNameResourceTypes"><em>CheckNameResourceTypes</em></a>) – Resource type used for verification. Possible values
+include: ‘Microsoft.NetApp/netAppAccounts’,
+‘Microsoft.NetApp/netAppAccounts/capacityPools’,
+‘Microsoft.NetApp/netAppAccounts/capacityPools/volumes’,
+‘Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots’</p></li>
+<li><p><strong>resource_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource group name.</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
 <li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
 deserialized response</p></li>
