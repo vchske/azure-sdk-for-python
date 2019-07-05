@@ -3185,6 +3185,382 @@ server side (write, replace, delete etc)</p>
 <div class="section" id="module-azure.cosmos">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.cosmos" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
+<dt id="azure.cosmos.Container">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">Container</code><span class="sig-paren">(</span><em class="sig-param">client_connection</em>, <em class="sig-param">database_link</em>, <em class="sig-param">id</em>, <em class="sig-param">properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>An Azure Cosmos DB container.</p>
+<p>A container in an Azure Cosmos DB SQL API database is a collection of documents, each of which represented as an Item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ID (name) of the container</p></li>
+<li><p><strong>session_token</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The session token for the container.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To create a new container in an existing database, use <a class="reference internal" href="#azure.cosmos.Database.create_container" title="azure.cosmos.Database.create_container"><code class="xref py py-func docutils literal notranslate"><span class="pre">Database.create_container()</span></code></a>.</p>
+</div>
+<dl class="method">
+<dt id="azure.cosmos.Container.create_item">
+<code class="sig-name descname">create_item</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">access_condition=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">pre_trigger_include=None</em>, <em class="sig-param">post_trigger_include=None</em>, <em class="sig-param">indexing_directive=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.create_item"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.create_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an item in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> – A dict-like object representing the item to create.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>access_condition</strong> – Conditions Associated with the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>pre_trigger_include</strong> – trigger id to be used as pre operation trigger.</p></li>
+<li><p><strong>post_trigger_include</strong> – trigger id to be used as post operation trigger.</p></li>
+<li><p><strong>indexing_directive</strong> – Indicate whether the document should be omitted from indexing.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the new item.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If item with the given ID already exists.</p>
+</dd>
+</dl>
+<p>To update or replace an existing item, use the <a class="reference internal" href="#azure.cosmos.Container.upsert_item" title="azure.cosmos.Container.upsert_item"><code class="xref py py-func docutils literal notranslate"><span class="pre">Container.upsert_item()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.delete_conflict">
+<code class="sig-name descname">delete_conflict</code><span class="sig-paren">(</span><em class="sig-param">conflict</em>, <em class="sig-param">partition_key</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.delete_conflict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.delete_conflict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified conflict from the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>conflict</strong> – The ID (name) or dict representing the conflict to be deleted.</p></li>
+<li><p><strong>partition_key</strong> – Partition key for the conflict to delete.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – The conflict wasn’t deleted successfully. If the conflict does not exist in the container, a <cite>404</cite> error is returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.delete_item">
+<code class="sig-name descname">delete_item</code><span class="sig-paren">(</span><em class="sig-param">item</em>, <em class="sig-param">partition_key</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">access_condition=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">pre_trigger_include=None</em>, <em class="sig-param">post_trigger_include=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.delete_item"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.delete_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified item from the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> – The ID (name) or dict representing item to be deleted.</p></li>
+<li><p><strong>partition_key</strong> – Specifies the partition key value for the item.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>access_condition</strong> – Conditions Associated with the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>pre_trigger_include</strong> – trigger id to be used as pre operation trigger.</p></li>
+<li><p><strong>post_trigger_include</strong> – trigger id to be used as post operation trigger.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – The item wasn’t deleted successfully. If the item does not exist in the container, a <cite>404</cite> error is returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.get_conflict">
+<code class="sig-name descname">get_conflict</code><span class="sig-paren">(</span><em class="sig-param">conflict</em>, <em class="sig-param">partition_key</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.get_conflict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.get_conflict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the conflict identified by <cite>id</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>conflict</strong> – The ID (name) or dict representing the conflict to retrieve.</p></li>
+<li><p><strong>partition_key</strong> – Partition key for the conflict to retrieve.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the retrieved conflict.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given conflict couldn’t be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.is_system_key">
+<em class="property">property </em><code class="sig-name descname">is_system_key</code><a class="headerlink" href="#azure.cosmos.Container.is_system_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.query_conflicts">
+<code class="sig-name descname">query_conflicts</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">enable_cross_partition_query=None</em>, <em class="sig-param">partition_key=None</em>, <em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.query_conflicts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.query_conflicts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all conflicts matching the given <cite>query</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> – The Azure Cosmos DB SQL query to execute.</p></li>
+<li><p><strong>parameters</strong> – Optional array of parameters to the query. Ignored if no query is provided.</p></li>
+<li><p><strong>partition_key</strong> – Specifies the partition key value for the item.</p></li>
+<li><p><strong>enable_cross_partition_query</strong> – Allows sending of more than one request to execute the query in the Azure Cosmos DB service.</p></li>
+</ul>
+</dd>
+</dl>
+<p>More than one request is necessary if the query is not scoped to single partition key value.
+:param max_item_count: Max number of items to be returned in the enumeration operation.
+:param feed_options: Dictionary of additional properties to be used for the request.
+:param response_hook: a callable invoked with the response metadata
+:returns: A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of conflicts (dicts).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.query_items">
+<code class="sig-name descname">query_items</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">partition_key=None</em>, <em class="sig-param">enable_cross_partition_query=None</em>, <em class="sig-param">max_item_count=None</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">enable_scan_in_query=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.query_items"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.query_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all results matching the given <cite>query</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> – The Azure Cosmos DB SQL query to execute.</p></li>
+<li><p><strong>parameters</strong> – Optional array of parameters to the query. Ignored if no query is provided.</p></li>
+<li><p><strong>partition_key</strong> – Specifies the partition key value for the item.</p></li>
+<li><p><strong>enable_cross_partition_query</strong> – Allows sending of more than one request to execute the query in the Azure Cosmos DB service.</p></li>
+</ul>
+</dd>
+</dl>
+<p>More than one request is necessary if the query is not scoped to single partition key value.
+:param max_item_count: Max number of items to be returned in the enumeration operation.
+:param session_token: Token for use with Session consistency.
+:param initial_headers: Initial headers to be sent as part of the request.
+:param enable_scan_in_query: Allow scan on the queries which couldn’t be served as indexing was opted out on the requested paths.
+:param populate_query_metrics: Enable returning query metrics in response headers.
+:param feed_options: Dictionary of additional properties to be used for the request.
+:param response_hook: a callable invoked with the response metadata
+:returns: A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of items (dicts).</p>
+<p>You can use any value for the container name in the FROM clause, but typically the container name is used.
+In the examples below, the container name is “products,” and is aliased as “p” for easier referencing
+in the WHERE clause.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.query_items_change_feed">
+<code class="sig-name descname">query_items_change_feed</code><span class="sig-paren">(</span><em class="sig-param">partition_key_range_id=None</em>, <em class="sig-param">is_start_from_beginning=False</em>, <em class="sig-param">continuation=None</em>, <em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.query_items_change_feed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.query_items_change_feed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a sorted list of items that were changed, in the order in which they were modified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>partition_key_range_id</strong> – ChangeFeed requests can be executed against specific partition key ranges.</p>
+</dd>
+</dl>
+<p>This is used to process the change feed in parallel across multiple consumers.
+:param is_start_from_beginning: Get whether change feed should start from beginning (true) or from current (false).
+By default it’s start from current (false).
+:param continuation: e_tag value to be used as continuation for reading change feed.
+:param max_item_count: Max number of items to be returned in the enumeration operation.
+:param feed_options: Dictionary of additional properties to be used for the request.
+:param response_hook: a callable invoked with the response metadata
+:returns: A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of items (dicts).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.read">
+<code class="sig-name descname">read</code><span class="sig-paren">(</span><em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">populate_partition_key_range_statistics=None</em>, <em class="sig-param">populate_quota_info=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the container properties</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>populate_partition_key_range_statistics</strong> – Enable returning partition key range statistics in response headers.</p></li>
+<li><p><strong>populate_quota_info</strong> – Enable returning collection storage quota information in response headers.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – Raised if the container couldn’t be retrieved. This includes if the container does not exist.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.Container" title="azure.cosmos.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">Container</span></code></a> instance representing the retrieved container.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.read_all_conflicts">
+<code class="sig-name descname">read_all_conflicts</code><span class="sig-paren">(</span><em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.read_all_conflicts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.read_all_conflicts" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all conflicts in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of conflicts (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.read_all_items">
+<code class="sig-name descname">read_all_items</code><span class="sig-paren">(</span><em class="sig-param">max_item_count=None</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.read_all_items"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.read_all_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all items in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of items (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.read_item">
+<code class="sig-name descname">read_item</code><span class="sig-paren">(</span><em class="sig-param">item</em>, <em class="sig-param">partition_key</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">post_trigger_include=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.read_item"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.read_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the item identified by <cite>id</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> – The ID (name) or dict representing item to retrieve.</p></li>
+<li><p><strong>partition_key</strong> – Partition key for the item to retrieve.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>post_trigger_include</strong> – trigger id to be used as post operation trigger.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dict representing the item to be retrieved.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given item couldn’t be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.read_offer">
+<code class="sig-name descname">read_offer</code><span class="sig-paren">(</span><em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.read_offer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.read_offer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the Offer object for this container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>response_hook</strong> – a callable invoked with the response metadata</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Offer for the container.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If no offer exists for the container or if the offer could not be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.replace_item">
+<code class="sig-name descname">replace_item</code><span class="sig-paren">(</span><em class="sig-param">item</em>, <em class="sig-param">body</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">access_condition=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">pre_trigger_include=None</em>, <em class="sig-param">post_trigger_include=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.replace_item"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.replace_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces the specified item if it exists in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> – The ID (name) or dict representing item to be replaced.</p></li>
+<li><p><strong>body</strong> – A dict-like object representing the item to replace.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>access_condition</strong> – Conditions Associated with the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>pre_trigger_include</strong> – trigger id to be used as pre operation trigger.</p></li>
+<li><p><strong>post_trigger_include</strong> – trigger id to be used as post operation trigger.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the item after replace went through.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the replace failed or the item with given id does not exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.replace_throughput">
+<code class="sig-name descname">replace_throughput</code><span class="sig-paren">(</span><em class="sig-param">throughput</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.replace_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.replace_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace the container’s throughput</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>throughput</strong> – The throughput to be set (an integer).</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Offer for the container, updated with new throughput.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If no offer exists for the container or if the offer could not be updated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.scripts">
+<em class="property">property </em><code class="sig-name descname">scripts</code><a class="headerlink" href="#azure.cosmos.Container.scripts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Container.upsert_item">
+<code class="sig-name descname">upsert_item</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">access_condition=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">pre_trigger_include=None</em>, <em class="sig-param">post_trigger_include=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/container.html#Container.upsert_item"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Container.upsert_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert or update the specified item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> – A dict-like object representing the item to update or insert.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>access_condition</strong> – Conditions Associated with the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>pre_trigger_include</strong> – trigger id to be used as pre operation trigger.</p></li>
+<li><p><strong>post_trigger_include</strong> – trigger id to be used as post operation trigger.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the upserted item.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given item could not be upserted.</p>
+</dd>
+</dl>
+<p>If the item already exists in the container, it is replaced. If it does not, it is inserted.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.cosmos.CosmosClient">
 <em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">CosmosClient</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">auth</em>, <em class="sig-param">consistency_level='Session'</em>, <em class="sig-param">connection_policy=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.CosmosClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
@@ -3222,7 +3598,7 @@ authorization key.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code> instance representing the new database.</p>
+<dd class="field-even"><p>A <a class="reference internal" href="#azure.cosmos.Database" title="azure.cosmos.Database"><code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code></a> instance representing the new database.</p>
 </dd>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If database with the given ID already exists.</p>
@@ -3237,7 +3613,7 @@ authorization key.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>database</strong> – The ID (name), dict representing the properties or <code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code> instance of the database to delete.</p></li>
+<li><p><strong>database</strong> – The ID (name), dict representing the properties or <a class="reference internal" href="#azure.cosmos.Database" title="azure.cosmos.Database"><code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code></a> instance of the database to delete.</p></li>
 <li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
 <li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
 <li><p><strong>access_condition</strong> – Conditions Associated with the request.</p></li>
@@ -3272,10 +3648,10 @@ authorization key.</p></li>
 <dd><p>Retrieve an existing database with the ID (name) <cite>id</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>database</strong> – The ID (name), dict representing the properties or <code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code> instance of the database to read.</p>
+<dd class="field-odd"><p><strong>database</strong> – The ID (name), dict representing the properties or <a class="reference internal" href="#azure.cosmos.Database" title="azure.cosmos.Database"><code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code></a> instance of the database to read.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code> instance representing the retrieved database.</p>
+<dd class="field-even"><p>A <a class="reference internal" href="#azure.cosmos.Database" title="azure.cosmos.Database"><code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code></a> instance representing the retrieved database.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -3324,6 +3700,1267 @@ authorization key.</p></li>
 </dd>
 </dl>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.Database">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param">client_connection</em>, <em class="sig-param">id</em>, <em class="sig-param">properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Represents an Azure Cosmos DB SQL API database.</p>
+<p>A database contains one or more containers, each of which can contain items,
+stored procedures, triggers, and user-defined functions.</p>
+<p>A database can also have associated users, each of which configured with
+a set of permissions for accessing certain containers, stored procedures,
+triggers, user defined functions, or items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> – The ID (name) of the database.</p>
+</dd>
+</dl>
+<p>An Azure Cosmos DB SQL API database has the following system-generated properties; these properties are read-only:</p>
+<ul class="simple">
+<li><p><cite>_rid</cite>:   The resource ID.</p></li>
+<li><p><cite>_ts</cite>:    When the resource was last updated. The value is a timestamp.</p></li>
+<li><p><cite>_self</cite>:  The unique addressable URI for the resource.</p></li>
+<li><p><cite>_etag</cite>:  The resource etag required for optimistic concurrency control.</p></li>
+<li><p><cite>_colls</cite>: The addressable path of the collections resource.</p></li>
+<li><p><cite>_users</cite>: The addressable path of the users resource.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client_connection</strong> (<em>ClientSession</em>) – Client from which this database was retrieved.</p></li>
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ID (name) of the database.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.cosmos.Database.create_container">
+<code class="sig-name descname">create_container</code><span class="sig-paren">(</span><em class="sig-param">id</em>, <em class="sig-param">partition_key</em>, <em class="sig-param">indexing_policy=None</em>, <em class="sig-param">default_ttl=None</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">access_condition=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">offer_throughput=None</em>, <em class="sig-param">unique_key_policy=None</em>, <em class="sig-param">conflict_resolution_policy=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.create_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.create_container" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new container with the given ID (name).</p>
+<p>If a container with the given ID already exists, an HTTPFailure with status_code 409 is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – ID (name) of container to create.</p></li>
+<li><p><strong>partition_key</strong> – The partition key to use for the container.</p></li>
+<li><p><strong>indexing_policy</strong> – The indexing policy to apply to the container.</p></li>
+<li><p><strong>default_ttl</strong> – Default time to live (TTL) for items in the container. If unspecified, items do not expire.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>access_condition</strong> – Conditions Associated with the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>offer_throughput</strong> – The provisioned throughput for this offer.</p></li>
+<li><p><strong>unique_key_policy</strong> – The unique key policy to apply to the container.</p></li>
+<li><p><strong>conflict_resolution_policy</strong> – The conflict resolution policy to apply to the container.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <a class="reference internal" href="#azure.cosmos.Container" title="azure.cosmos.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">Container</span></code></a> instance representing the new container.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – The container creation failed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.create_user">
+<code class="sig-name descname">create_user</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.create_user"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.create_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a user in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>body</strong> – A dict-like object with an <cite>id</cite> key and value representing the user to be created.</p>
+</dd>
+</dl>
+<p>The user ID must be unique within the database, and consist of no more than 255 characters.
+:param request_options: Dictionary of additional properties to be used for the request.
+:param response_hook: a callable invoked with the response metadata
+:returns: A <a class="reference internal" href="#azure.cosmos.User" title="azure.cosmos.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> instance representing the new user.
+:raise <cite>HTTPFailure</cite>: If the given user couldn’t be created.</p>
+<p>To update or replace an existing user, use the <code class="xref py py-func docutils literal notranslate"><span class="pre">Container.upsert_user()</span></code> method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.delete_container">
+<code class="sig-name descname">delete_container</code><span class="sig-paren">(</span><em class="sig-param">container</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">access_condition=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.delete_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.delete_container" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the container</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>container</strong> – The ID (name) of the container to delete. You can either pass in the ID of the container to delete, a <a class="reference internal" href="#azure.cosmos.Container" title="azure.cosmos.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">Container</span></code></a> instance or a dict representing the properties of the container.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>access_condition</strong> – Conditions Associated with the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the container couldn’t be deleted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.delete_user">
+<code class="sig-name descname">delete_user</code><span class="sig-paren">(</span><em class="sig-param">user</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.delete_user"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.delete_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified user from the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user</strong> – The ID (name), dict representing the properties or <a class="reference internal" href="#azure.cosmos.User" title="azure.cosmos.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> instance of the user to be deleted.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – The user wasn’t deleted successfully. If the user does not exist in the container, a <cite>404</cite> error is returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.get_container_client">
+<code class="sig-name descname">get_container_client</code><span class="sig-paren">(</span><em class="sig-param">container</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.get_container_client"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.get_container_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the specified <cite>Container</cite>, or a container with specified ID (name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>container</strong> – The ID (name) of the container, a <a class="reference internal" href="#azure.cosmos.Container" title="azure.cosmos.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">Container</span></code></a> instance, or a dict representing the properties of the container to be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.get_user_client">
+<code class="sig-name descname">get_user_client</code><span class="sig-paren">(</span><em class="sig-param">user</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.get_user_client"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.get_user_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the user identified by <cite>id</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user</strong> – The ID (name), dict representing the properties or <a class="reference internal" href="#azure.cosmos.User" title="azure.cosmos.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> instance of the user to be retrieved.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <a class="reference internal" href="#azure.cosmos.User" title="azure.cosmos.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> instance representing the retrieved user.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given user couldn’t be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.query_containers">
+<code class="sig-name descname">query_containers</code><span class="sig-paren">(</span><em class="sig-param">query=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">max_item_count=None</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.query_containers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.query_containers" title="Permalink to this definition">¶</a></dt>
+<dd><p>List properties for containers in the current database</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> – The Azure Cosmos DB SQL query to execute.</p></li>
+<li><p><strong>parameters</strong> – Optional array of parameters to the query. Ignored if no query is provided.</p></li>
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of container properties (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.query_users">
+<code class="sig-name descname">query_users</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.query_users"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.query_users" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all users matching the given <cite>query</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> – The Azure Cosmos DB SQL query to execute.</p></li>
+<li><p><strong>parameters</strong> – Optional array of parameters to the query. Ignored if no query is provided.</p></li>
+<li><p><strong>max_item_count</strong> – Max number of users to be returned in the enumeration operation.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of user properties (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.read">
+<code class="sig-name descname">read</code><span class="sig-paren">(</span><em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the database properties</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>database</strong> – The ID (name), dict representing the properties or <a class="reference internal" href="#azure.cosmos.Database" title="azure.cosmos.Database"><code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code></a> instance of the database to read.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dict[Str, Any]</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given database couldn’t be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.read_all_containers">
+<code class="sig-name descname">read_all_containers</code><span class="sig-paren">(</span><em class="sig-param">max_item_count=None</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.read_all_containers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.read_all_containers" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the containers in the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of container properties (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.read_all_users">
+<code class="sig-name descname">read_all_users</code><span class="sig-paren">(</span><em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.read_all_users"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.read_all_users" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all users in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_item_count</strong> – Max number of users to be returned in the enumeration operation.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of user properties (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.read_offer">
+<code class="sig-name descname">read_offer</code><span class="sig-paren">(</span><em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.read_offer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.read_offer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the Offer object for this database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>response_hook</strong> – a callable invoked with the response metadata</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Offer for the database.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If no offer exists for the database or if the offer could not be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.replace_container">
+<code class="sig-name descname">replace_container</code><span class="sig-paren">(</span><em class="sig-param">container</em>, <em class="sig-param">partition_key</em>, <em class="sig-param">indexing_policy=None</em>, <em class="sig-param">default_ttl=None</em>, <em class="sig-param">conflict_resolution_policy=None</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">access_condition=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.replace_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.replace_container" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the properties of the container. Property changes are persisted immediately.</p>
+<p>Any properties not specified will be reset to their default values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>container</strong> – The ID (name), dict representing the properties or <a class="reference internal" href="#azure.cosmos.Container" title="azure.cosmos.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">Container</span></code></a> instance of the container to be replaced.</p></li>
+<li><p><strong>partition_key</strong> – The partition key to use for the container.</p></li>
+<li><p><strong>indexing_policy</strong> – The indexing policy to apply to the container.</p></li>
+<li><p><strong>default_ttl</strong> – Default time to live (TTL) for items in the container. If unspecified, items do not expire.</p></li>
+<li><p><strong>conflict_resolution_policy</strong> – The conflict resolution policy to apply to the container.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>access_condition</strong> – Conditions Associated with the request.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – Raised if the container couldn’t be replaced. This includes if the container with given id does not exist.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.Container" title="azure.cosmos.Container"><code class="xref py py-class docutils literal notranslate"><span class="pre">Container</span></code></a> instance representing the container after replace completed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.replace_throughput">
+<code class="sig-name descname">replace_throughput</code><span class="sig-paren">(</span><em class="sig-param">throughput</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.replace_throughput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.replace_throughput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace the database level throughput.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>throughput</strong> – The throughput to be set (an integer).</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Offer for the database, updated with new throughput.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If no offer exists for the database or if the offer could not be updated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.replace_user">
+<code class="sig-name descname">replace_user</code><span class="sig-paren">(</span><em class="sig-param">user</em>, <em class="sig-param">body</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.replace_user"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.replace_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces the specified user if it exists in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user</strong> – The ID (name), dict representing the properties or <a class="reference internal" href="#azure.cosmos.User" title="azure.cosmos.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> instance of the user to be replaced.</p></li>
+<li><p><strong>body</strong> – A dict-like object representing the user to replace.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <a class="reference internal" href="#azure.cosmos.User" title="azure.cosmos.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> instance representing the user after replace went through.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the replace failed or the user with given id does not exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Database.upsert_user">
+<code class="sig-name descname">upsert_user</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/database.html#Database.upsert_user"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Database.upsert_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert or update the specified user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> – A dict-like object representing the user to update or insert.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <a class="reference internal" href="#azure.cosmos.User" title="azure.cosmos.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> instance representing the upserted user.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given user could not be upserted.</p>
+</dd>
+</dl>
+<p>If the user already exists in the container, it is replaced. If it does not, it is inserted.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.PartitionKey">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">PartitionKey</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">kind='Hash'</em>, <em class="sig-param">version=2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/partition_key.html#PartitionKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.PartitionKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<p>Key used to partition a container into logical partitions.</p>
+<p>See <a class="reference external" href="https://docs.microsoft.com/azure/cosmos-db/partitioning-overview#choose-partitionkey">https://docs.microsoft.com/azure/cosmos-db/partitioning-overview#choose-partitionkey</a> for more information
+on how to choose partition keys.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#azure.cosmos.PartitionKey.path" title="azure.cosmos.PartitionKey.path"><strong>path</strong></a> – The path of the partition key</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.PartitionKey.kind" title="azure.cosmos.PartitionKey.kind"><strong>kind</strong></a> – What kind of partition key is being defined</p></li>
+<li><p><a class="reference internal" href="azure.core.html#module-azure.core.version" title="azure.core.version"><strong>version</strong></a> – The version of the partition key</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.cosmos.PartitionKey.kind">
+<em class="property">property </em><code class="sig-name descname">kind</code><a class="headerlink" href="#azure.cosmos.PartitionKey.kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.PartitionKey.path">
+<em class="property">property </em><code class="sig-name descname">path</code><a class="headerlink" href="#azure.cosmos.PartitionKey.path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.PartitionKey.version">
+<em class="property">property </em><code class="sig-name descname">version</code><a class="headerlink" href="#azure.cosmos.PartitionKey.version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.Permission">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">Permission</code><span class="sig-paren">(</span><em class="sig-param">id</em>, <em class="sig-param">user_link</em>, <em class="sig-param">permission_mode</em>, <em class="sig-param">resource_link</em>, <em class="sig-param">properties</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/permission.html#Permission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Permission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.Scripts">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">Scripts</code><span class="sig-paren">(</span><em class="sig-param">client_connection</em>, <em class="sig-param">container_link</em>, <em class="sig-param">is_system_key</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="azure.cosmos.Scripts.create_stored_procedure">
+<code class="sig-name descname">create_stored_procedure</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.create_stored_procedure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.create_stored_procedure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a stored procedure in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> – A dict-like object representing the sproc to create.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the new stored procedure.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given stored procedure couldn’t be created.</p>
+</dd>
+</dl>
+<p>To replace an existing sproc, use the <code class="xref py py-func docutils literal notranslate"><span class="pre">Container.scripts.replace_stored_procedure()</span></code> method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.create_trigger">
+<code class="sig-name descname">create_trigger</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.create_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.create_trigger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a trigger in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> – A dict-like object representing the trigger to create.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the new trigger.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given trigger couldn’t be created.</p>
+</dd>
+</dl>
+<p>To replace an existing trigger, use the <code class="xref py py-func docutils literal notranslate"><span class="pre">Container.scripts.replace_trigger()</span></code> method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.create_user_defined_function">
+<code class="sig-name descname">create_user_defined_function</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.create_user_defined_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.create_user_defined_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a user defined function in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> – A dict-like object representing the udf to create.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the new user defined function.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given user defined function couldn’t be created.</p>
+</dd>
+</dl>
+<p>To replace an existing udf, use the <code class="xref py py-func docutils literal notranslate"><span class="pre">Container.scripts.replace_user_defined_function()</span></code> method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.delete_stored_procedure">
+<code class="sig-name descname">delete_stored_procedure</code><span class="sig-paren">(</span><em class="sig-param">sproc</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.delete_stored_procedure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.delete_stored_procedure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified stored procedure from the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sproc</strong> – The ID (name) or dict representing stored procedure to be deleted.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – The sproc wasn’t deleted successfully. If the sproc does not exist in the container, a <cite>404</cite> error is returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.delete_trigger">
+<code class="sig-name descname">delete_trigger</code><span class="sig-paren">(</span><em class="sig-param">trigger</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.delete_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.delete_trigger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified trigger from the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trigger</strong> – The ID (name) or dict representing trigger to be deleted.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – The trigger wasn’t deleted successfully. If the trigger does not exist in the container, a <cite>404</cite> error is returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.delete_user_defined_function">
+<code class="sig-name descname">delete_user_defined_function</code><span class="sig-paren">(</span><em class="sig-param">udf</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.delete_user_defined_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.delete_user_defined_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified user defined function from the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>udf</strong> – The ID (name) or dict representing udf to be deleted.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – The udf wasn’t deleted successfully. If the udf does not exist in the container, a <cite>404</cite> error is returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.execute_stored_procedure">
+<code class="sig-name descname">execute_stored_procedure</code><span class="sig-paren">(</span><em class="sig-param">sproc</em>, <em class="sig-param">partition_key=None</em>, <em class="sig-param">params=None</em>, <em class="sig-param">enable_script_logging=None</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.execute_stored_procedure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.execute_stored_procedure" title="Permalink to this definition">¶</a></dt>
+<dd><p>execute the specified stored procedure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sproc</strong> – The ID (name) or dict representing stored procedure to be executed.</p></li>
+<li><p><strong>params</strong> – List of parameters to be passed to the stored procedure to be executed.</p></li>
+<li><p><strong>enable_script_logging</strong> – Enables or disables script logging for the current request.</p></li>
+<li><p><strong>partition_key</strong> – Specifies the partition key to indicate which partition the sproc should execute on.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result of the executed stored procedure for the given parameters.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the stored procedure execution failed or if the stored procedure with given id does not exists in the container.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.get_stored_procedure">
+<code class="sig-name descname">get_stored_procedure</code><span class="sig-paren">(</span><em class="sig-param">sproc</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.get_stored_procedure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.get_stored_procedure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the stored procedure identified by <cite>id</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sproc</strong> – The ID (name) or dict representing stored procedure to retrieve.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the retrieved stored procedure.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given stored procedure couldn’t be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.get_trigger">
+<code class="sig-name descname">get_trigger</code><span class="sig-paren">(</span><em class="sig-param">trigger</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.get_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.get_trigger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the trigger identified by <cite>id</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trigger</strong> – The ID (name) or dict representing trigger to retrieve.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the retrieved trigger.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given trigger couldn’t be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.get_user_defined_function">
+<code class="sig-name descname">get_user_defined_function</code><span class="sig-paren">(</span><em class="sig-param">udf</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.get_user_defined_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.get_user_defined_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the stored procedure identified by <cite>id</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>udf</strong> – The ID (name) or dict representing udf to retrieve.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the retrieved user defined function.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given user defined function couldn’t be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.list_stored_procedures">
+<code class="sig-name descname">list_stored_procedures</code><span class="sig-paren">(</span><em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.list_stored_procedures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.list_stored_procedures" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all stored procedures in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of stored procedures (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.list_triggers">
+<code class="sig-name descname">list_triggers</code><span class="sig-paren">(</span><em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.list_triggers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.list_triggers" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all triggers in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of triggers (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.list_user_defined_functions">
+<code class="sig-name descname">list_user_defined_functions</code><span class="sig-paren">(</span><em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.list_user_defined_functions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.list_user_defined_functions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all user defined functions in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of user defined functions (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.query_stored_procedures">
+<code class="sig-name descname">query_stored_procedures</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.query_stored_procedures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.query_stored_procedures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all stored procedures matching the given <cite>query</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> – The Azure Cosmos DB SQL query to execute.</p></li>
+<li><p><strong>parameters</strong> – Optional array of parameters to the query. Ignored if no query is provided.</p></li>
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of stored procedures (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.query_triggers">
+<code class="sig-name descname">query_triggers</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.query_triggers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.query_triggers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all triggers matching the given <cite>query</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> – The Azure Cosmos DB SQL query to execute.</p></li>
+<li><p><strong>parameters</strong> – Optional array of parameters to the query. Ignored if no query is provided.</p></li>
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of triggers (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.query_user_defined_functions">
+<code class="sig-name descname">query_user_defined_functions</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.query_user_defined_functions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.query_user_defined_functions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all user defined functions matching the given <cite>query</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> – The Azure Cosmos DB SQL query to execute.</p></li>
+<li><p><strong>parameters</strong> – Optional array of parameters to the query. Ignored if no query is provided.</p></li>
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of user defined functions (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.replace_stored_procedure">
+<code class="sig-name descname">replace_stored_procedure</code><span class="sig-paren">(</span><em class="sig-param">sproc</em>, <em class="sig-param">body</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.replace_stored_procedure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.replace_stored_procedure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces the specified stored procedure if it exists in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sproc</strong> – The ID (name) or dict representing stored procedure to be replaced.</p></li>
+<li><p><strong>body</strong> – A dict-like object representing the sproc to replace.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the stored procedure after replace went through.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the replace failed or the stored procedure with given id does not exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.replace_trigger">
+<code class="sig-name descname">replace_trigger</code><span class="sig-paren">(</span><em class="sig-param">trigger</em>, <em class="sig-param">body</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.replace_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.replace_trigger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces the specified tigger if it exists in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trigger</strong> – The ID (name) or dict representing trigger to be replaced.</p></li>
+<li><p><strong>body</strong> – A dict-like object representing the trigger to replace.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the trigger after replace went through.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the replace failed or the trigger with given id does not exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.Scripts.replace_user_defined_function">
+<code class="sig-name descname">replace_user_defined_function</code><span class="sig-paren">(</span><em class="sig-param">udf</em>, <em class="sig-param">body</em>, <em class="sig-param">request_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/scripts.html#Scripts.replace_user_defined_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.Scripts.replace_user_defined_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces the specified user defined function if it exists in the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>udf</strong> – The ID (name) or dict representing udf to be replaced.</p></li>
+<li><p><strong>body</strong> – A dict-like object representing the udf to replace.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the user defined function after replace went through.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the replace failed or the user defined function with given id does not exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.User">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">client_connection</em>, <em class="sig-param">id</em>, <em class="sig-param">database_link</em>, <em class="sig-param">properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/user.html#User"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.User" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="azure.cosmos.User.create_permission">
+<code class="sig-name descname">create_permission</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/user.html#User.create_permission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.User.create_permission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a permission for the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> – A dict-like object representing the permission to create.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the new permission.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given permission couldn’t be created.</p>
+</dd>
+</dl>
+<p>To update or replace an existing permision, use the <a class="reference internal" href="#azure.cosmos.User.upsert_permission" title="azure.cosmos.User.upsert_permission"><code class="xref py py-func docutils literal notranslate"><span class="pre">User.upsert_permission()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.User.delete_permission">
+<code class="sig-name descname">delete_permission</code><span class="sig-paren">(</span><em class="sig-param">permission</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/user.html#User.delete_permission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.User.delete_permission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified permission from the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>permission</strong> – The ID (name), dict representing the properties or <a class="reference internal" href="#azure.cosmos.Permission" title="azure.cosmos.Permission"><code class="xref py py-class docutils literal notranslate"><span class="pre">Permission</span></code></a> instance of the permission to be replaced.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – The permission wasn’t deleted successfully. If the permission does not exist for the user, a <cite>404</cite> error is returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.User.get_permission">
+<code class="sig-name descname">get_permission</code><span class="sig-paren">(</span><em class="sig-param">permission</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/user.html#User.get_permission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.User.get_permission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the permission identified by <cite>id</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>permission</strong> – The ID (name), dict representing the properties or <a class="reference internal" href="#azure.cosmos.Permission" title="azure.cosmos.Permission"><code class="xref py py-class docutils literal notranslate"><span class="pre">Permission</span></code></a> instance of the permission to be retrieved.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the retrieved permission.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given permission couldn’t be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.User.query_permissions">
+<code class="sig-name descname">query_permissions</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/user.html#User.query_permissions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.User.query_permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all permissions matching the given <cite>query</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> – The Azure Cosmos DB SQL query to execute.</p></li>
+<li><p><strong>parameters</strong> – Optional array of parameters to the query. Ignored if no query is provided.</p></li>
+<li><p><strong>max_item_count</strong> – Max number of permissions to be returned in the enumeration operation.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of permissions (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.User.read">
+<code class="sig-name descname">read</code><span class="sig-paren">(</span><em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/user.html#User.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.User.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read user propertes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <a class="reference internal" href="#azure.cosmos.User" title="azure.cosmos.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> instance representing the retrieved user.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given user couldn’t be retrieved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.User.read_all_permissions">
+<code class="sig-name descname">read_all_permissions</code><span class="sig-paren">(</span><em class="sig-param">max_item_count=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/user.html#User.read_all_permissions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.User.read_all_permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all permission for the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_item_count</strong> – Max number of permissions to be returned in the enumeration operation.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of permissions (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.User.replace_permission">
+<code class="sig-name descname">replace_permission</code><span class="sig-paren">(</span><em class="sig-param">permission</em>, <em class="sig-param">body</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/user.html#User.replace_permission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.User.replace_permission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces the specified permission if it exists for the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>permission</strong> – The ID (name), dict representing the properties or <a class="reference internal" href="#azure.cosmos.Permission" title="azure.cosmos.Permission"><code class="xref py py-class docutils literal notranslate"><span class="pre">Permission</span></code></a> instance of the permission to be replaced.</p></li>
+<li><p><strong>body</strong> – A dict-like object representing the permission to replace.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the permission after replace went through.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the replace failed or the permission with given id does not exist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.User.upsert_permission">
+<code class="sig-name descname">upsert_permission</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/user.html#User.upsert_permission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.User.upsert_permission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert or update the specified permission.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> – A dict-like object representing the permission to update or insert.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict representing the upserted permission.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the given permission could not be upserted.</p>
+</dd>
+</dl>
+<p>If the permission already exists in the container, it is replaced. If it does not, it is inserted.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.ConsistencyLevel">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">ConsistencyLevel</code><a class="reference internal" href="../_modules/azure/cosmos/documents.html#ConsistencyLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.ConsistencyLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Represents the consistency levels supported for Azure Cosmos client
+operations.</p>
+<p>The requested ConsistencyLevel must match or be weaker than that provisioned
+for the database account. Consistency levels.</p>
+<p>Consistency levels by order of strength are Strong, BoundedStaleness,
+Session, ConsistentPrefix and Eventual.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#azure.cosmos.documents.ConsistencyLevel.Strong" title="azure.cosmos.documents.ConsistencyLevel.Strong"><strong>ConsistencyLevel.Strong</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Strong Consistency guarantees that read operations always
+return the value that was last written.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.ConsistencyLevel.BoundedStaleness" title="azure.cosmos.documents.ConsistencyLevel.BoundedStaleness"><strong>ConsistencyLevel.BoundedStaleness</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Bounded Staleness guarantees that reads are not
+too out-of-date. This can be configured based on number of operations
+(MaxStalenessPrefix) or time (MaxStalenessIntervalInSeconds).</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.ConsistencyLevel.Session" title="azure.cosmos.documents.ConsistencyLevel.Session"><strong>ConsistencyLevel.Session</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Session Consistency guarantees monotonic reads (you never
+read old data, then new, then old again), monotonic writes (writes
+are ordered) and read your writes (your writes are immediately
+visible to your reads) within any single session.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.ConsistencyLevel.Eventual" title="azure.cosmos.documents.ConsistencyLevel.Eventual"><strong>ConsistencyLevel.Eventual</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Eventual Consistency guarantees that reads will return
+a subset of writes. All writes will be eventually be available for
+reads.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.ConsistencyLevel.ConsistentPrefix" title="azure.cosmos.documents.ConsistencyLevel.ConsistentPrefix"><strong>ConsistencyLevel.ConsistentPrefix</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ConsistentPrefix Consistency guarantees that
+reads will return some prefix of all writes with no gaps. All writes
+will be eventually be available for reads.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="azure.cosmos.ConsistencyLevel.BoundedStaleness">
+<code class="sig-name descname">BoundedStaleness</code><em class="property"> = 'BoundedStaleness'</em><a class="headerlink" href="#azure.cosmos.ConsistencyLevel.BoundedStaleness" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.ConsistencyLevel.ConsistentPrefix">
+<code class="sig-name descname">ConsistentPrefix</code><em class="property"> = 'ConsistentPrefix'</em><a class="headerlink" href="#azure.cosmos.ConsistencyLevel.ConsistentPrefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.ConsistencyLevel.Eventual">
+<code class="sig-name descname">Eventual</code><em class="property"> = 'Eventual'</em><a class="headerlink" href="#azure.cosmos.ConsistencyLevel.Eventual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.ConsistencyLevel.Session">
+<code class="sig-name descname">Session</code><em class="property"> = 'Session'</em><a class="headerlink" href="#azure.cosmos.ConsistencyLevel.Session" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.ConsistencyLevel.Strong">
+<code class="sig-name descname">Strong</code><em class="property"> = 'Strong'</em><a class="headerlink" href="#azure.cosmos.ConsistencyLevel.Strong" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.DataType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">DataType</code><a class="reference internal" href="../_modules/azure/cosmos/documents.html#DataType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.DataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Specifies the data type of index specs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#azure.cosmos.documents.DataType.Number" title="azure.cosmos.documents.DataType.Number"><strong>Number</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Represents a numeric data type.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.DataType.String" title="azure.cosmos.documents.DataType.String"><strong>String</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Represents a string data type.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.anomalydetector.models.html#azure.cognitiveservices.anomalydetector.models.Point" title="azure.cognitiveservices.anomalydetector.models.Point"><strong>Point</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Represents a point data type.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.DataType.LineString" title="azure.cosmos.documents.DataType.LineString"><strong>LineString</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Represents a line string data type.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.DataType.Polygon" title="azure.cosmos.documents.DataType.Polygon"><strong>Polygon</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Represents a polygon data type.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.DataType.MultiPolygon" title="azure.cosmos.documents.DataType.MultiPolygon"><strong>MultiPolygon</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Represents a multi-polygon data type.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="azure.cosmos.DataType.LineString">
+<code class="sig-name descname">LineString</code><em class="property"> = 'LineString'</em><a class="headerlink" href="#azure.cosmos.DataType.LineString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.DataType.MultiPolygon">
+<code class="sig-name descname">MultiPolygon</code><em class="property"> = 'MultiPolygon'</em><a class="headerlink" href="#azure.cosmos.DataType.MultiPolygon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.DataType.Number">
+<code class="sig-name descname">Number</code><em class="property"> = 'Number'</em><a class="headerlink" href="#azure.cosmos.DataType.Number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.DataType.Point">
+<code class="sig-name descname">Point</code><em class="property"> = 'Point'</em><a class="headerlink" href="#azure.cosmos.DataType.Point" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.DataType.Polygon">
+<code class="sig-name descname">Polygon</code><em class="property"> = 'Polygon'</em><a class="headerlink" href="#azure.cosmos.DataType.Polygon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.DataType.String">
+<code class="sig-name descname">String</code><em class="property"> = 'String'</em><a class="headerlink" href="#azure.cosmos.DataType.String" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.IndexKind">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">IndexKind</code><a class="reference internal" href="../_modules/azure/cosmos/documents.html#IndexKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.IndexKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Specifies the index kind of index specs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#azure.cosmos.documents.IndexKind.Hash" title="azure.cosmos.documents.IndexKind.Hash"><strong>IndexKind.Hash</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The index entries are hashed to serve point look up queries.
+Can be used to serve queries like: SELECT * FROM docs d WHERE d.prop = 5</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.IndexKind.Range" title="azure.cosmos.documents.IndexKind.Range"><strong>IndexKind.Range</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The index entries are ordered. Range indexes are optimized for
+inequality predicate queries with efficient range scans.
+Can be used to serve queries like: SELECT * FROM docs d WHERE d.prop &gt; 5</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="azure.cosmos.IndexKind.Hash">
+<code class="sig-name descname">Hash</code><em class="property"> = 'Hash'</em><a class="headerlink" href="#azure.cosmos.IndexKind.Hash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.IndexKind.Range">
+<code class="sig-name descname">Range</code><em class="property"> = 'Range'</em><a class="headerlink" href="#azure.cosmos.IndexKind.Range" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.IndexingMode">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">IndexingMode</code><a class="reference internal" href="../_modules/azure/cosmos/documents.html#IndexingMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.IndexingMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Specifies the supported indexing modes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#azure.cosmos.documents.IndexingMode.Consistent" title="azure.cosmos.documents.IndexingMode.Consistent"><strong>Consistent</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – <p>Index is updated synchronously with a create or
+update operation. With consistent indexing, query behavior is the
+same as the default consistency level for the collection.</p>
+<p>The index is
+always kept up to date with the data.</p>
+</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.IndexingMode.Lazy" title="azure.cosmos.documents.IndexingMode.Lazy"><strong>Lazy</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – <p>Index is updated asynchronously with respect to a create
+or update operation.</p>
+<p>With lazy indexing, queries are eventually consistent. The index is
+updated when the collection is idle.</p>
+</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.IndexingMode.NoIndex" title="azure.cosmos.documents.IndexingMode.NoIndex"><strong>NoIndex</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – <p>No index is provided.</p>
+<p>Setting IndexingMode to “None” drops the index. Use this if you don’t
+want to maintain the index for a document collection, to save the
+storage cost or improve the write throughput. Your queries will
+degenerate to scans of the entire collection.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="azure.cosmos.IndexingMode.Consistent">
+<code class="sig-name descname">Consistent</code><em class="property"> = 'consistent'</em><a class="headerlink" href="#azure.cosmos.IndexingMode.Consistent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.IndexingMode.Lazy">
+<code class="sig-name descname">Lazy</code><em class="property"> = 'lazy'</em><a class="headerlink" href="#azure.cosmos.IndexingMode.Lazy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.IndexingMode.NoIndex">
+<code class="sig-name descname">NoIndex</code><em class="property"> = 'none'</em><a class="headerlink" href="#azure.cosmos.IndexingMode.NoIndex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.PermissionMode">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">PermissionMode</code><a class="reference internal" href="../_modules/azure/cosmos/documents.html#PermissionMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.PermissionMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Enumeration specifying applicability of permission.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#azure.cosmos.documents.PermissionMode.NoneMode" title="azure.cosmos.documents.PermissionMode.NoneMode"><strong>PermissionMode.NoneMode</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – None.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.PermissionMode.Read" title="azure.cosmos.documents.PermissionMode.Read"><strong>PermissionMode.Read</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Permission applicable for read operations only.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.PermissionMode.All" title="azure.cosmos.documents.PermissionMode.All"><strong>PermissionMode.All</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Permission applicable for all operations.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="azure.cosmos.PermissionMode.All">
+<code class="sig-name descname">All</code><em class="property"> = 'all'</em><a class="headerlink" href="#azure.cosmos.PermissionMode.All" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.PermissionMode.NoneMode">
+<code class="sig-name descname">NoneMode</code><em class="property"> = 'none'</em><a class="headerlink" href="#azure.cosmos.PermissionMode.NoneMode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.PermissionMode.Read">
+<code class="sig-name descname">Read</code><em class="property"> = 'read'</em><a class="headerlink" href="#azure.cosmos.PermissionMode.Read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.ProxyConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">ProxyConfiguration</code><a class="reference internal" href="../_modules/azure/cosmos/documents.html#ProxyConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.ProxyConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Configurations for proxy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#azure.cosmos.http_constants.HttpHeaders.Host" title="azure.cosmos.http_constants.HttpHeaders.Host"><strong>Host</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The host address of the proxy.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.containerinstance.models.html#azure.mgmt.containerinstance.models.Port" title="azure.mgmt.containerinstance.models.Port"><strong>Port</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The port number of the proxy.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.SSLConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">SSLConfiguration</code><a class="reference internal" href="../_modules/azure/cosmos/documents.html#SSLConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.SSLConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Configurations for SSL connections.</p>
+<p>Please refer to <a class="reference external" href="http://docs.python-requests.org/en/master/user/advanced/#ssl-cert-verification">http://docs.python-requests.org/en/master/user/advanced/#ssl-cert-verification</a> for more detail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SSLKeyFIle</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The path of the key file for ssl connection.</p></li>
+<li><p><strong>SSLCertFile</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The path of the cert file for ssl connection.</p></li>
+<li><p><strong>SSLCaCerts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The path of the CA_BUNDLE file with certificates of trusted CAs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.TriggerOperation">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">TriggerOperation</code><a class="reference internal" href="../_modules/azure/cosmos/documents.html#TriggerOperation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.TriggerOperation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Specifies the operations on which a trigger should be executed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#azure.cosmos.documents.TriggerOperation.All" title="azure.cosmos.documents.TriggerOperation.All"><strong>TriggerOperation.All</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – All operations.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.TriggerOperation.Create" title="azure.cosmos.documents.TriggerOperation.Create"><strong>TriggerOperation.Create</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Create operations only.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.TriggerOperation.Update" title="azure.cosmos.documents.TriggerOperation.Update"><strong>TriggerOperation.Update</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Update operations only.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.TriggerOperation.Delete" title="azure.cosmos.documents.TriggerOperation.Delete"><strong>TriggerOperation.Delete</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Delete operations only.</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.TriggerOperation.Replace" title="azure.cosmos.documents.TriggerOperation.Replace"><strong>TriggerOperation.Replace</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Replace operations only.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="azure.cosmos.TriggerOperation.All">
+<code class="sig-name descname">All</code><em class="property"> = 'all'</em><a class="headerlink" href="#azure.cosmos.TriggerOperation.All" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.TriggerOperation.Create">
+<code class="sig-name descname">Create</code><em class="property"> = 'create'</em><a class="headerlink" href="#azure.cosmos.TriggerOperation.Create" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.TriggerOperation.Delete">
+<code class="sig-name descname">Delete</code><em class="property"> = 'delete'</em><a class="headerlink" href="#azure.cosmos.TriggerOperation.Delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.TriggerOperation.Replace">
+<code class="sig-name descname">Replace</code><em class="property"> = 'replace'</em><a class="headerlink" href="#azure.cosmos.TriggerOperation.Replace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.TriggerOperation.Update">
+<code class="sig-name descname">Update</code><em class="property"> = 'update'</em><a class="headerlink" href="#azure.cosmos.TriggerOperation.Update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cosmos.TriggerType">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">TriggerType</code><a class="reference internal" href="../_modules/azure/cosmos/documents.html#TriggerType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.TriggerType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Specifies the type of the trigger.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#azure.cosmos.documents.TriggerType.Pre" title="azure.cosmos.documents.TriggerType.Pre"><strong>TriggerType.Pre</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Trigger should be executed before the associated operation(s).</p></li>
+<li><p><a class="reference internal" href="#azure.cosmos.documents.TriggerType.Post" title="azure.cosmos.documents.TriggerType.Post"><strong>TriggerType.Post</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Trigger should be executed after the associated operation(s).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="azure.cosmos.TriggerType.Post">
+<code class="sig-name descname">Post</code><em class="property"> = 'post'</em><a class="headerlink" href="#azure.cosmos.TriggerType.Post" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cosmos.TriggerType.Pre">
+<code class="sig-name descname">Pre</code><em class="property"> = 'pre'</em><a class="headerlink" href="#azure.cosmos.TriggerType.Pre" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
