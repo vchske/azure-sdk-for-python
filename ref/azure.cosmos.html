@@ -353,12 +353,12 @@
 <p>Authorization helper functions in the Azure Cosmos database service.</p>
 <dl class="function">
 <dt id="azure.cosmos.auth.GetAuthorizationHeader">
-<code class="sig-prename descclassname">azure.cosmos.auth.</code><code class="sig-name descname">GetAuthorizationHeader</code><span class="sig-paren">(</span><em class="sig-param">cosmos_client</em>, <em class="sig-param">verb</em>, <em class="sig-param">path</em>, <em class="sig-param">resource_id_or_fullname</em>, <em class="sig-param">is_name_based</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">headers</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/auth.html#GetAuthorizationHeader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.auth.GetAuthorizationHeader" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">azure.cosmos.auth.</code><code class="sig-name descname">GetAuthorizationHeader</code><span class="sig-paren">(</span><em class="sig-param">cosmos_client_connection</em>, <em class="sig-param">verb</em>, <em class="sig-param">path</em>, <em class="sig-param">resource_id_or_fullname</em>, <em class="sig-param">is_name_based</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">headers</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/auth.html#GetAuthorizationHeader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.auth.GetAuthorizationHeader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the authorization header.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cosmos_client</strong> (<a class="reference internal" href="#azure.cosmos.cosmos_client.CosmosClient" title="azure.cosmos.cosmos_client.CosmosClient"><em>cosmos_client.CosmosClient</em></a>) – </p></li>
+<li><p><strong>cosmos_client</strong> (<em>cosmos_client_connection.CosmosClient</em>) – </p></li>
 <li><p><strong>verb</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
 <li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
 <li><p><strong>resource_id_or_fullname</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
@@ -414,12 +414,12 @@ is the same as GUID when represented as a string.</p>
 
 <dl class="function">
 <dt id="azure.cosmos.base.GetHeaders">
-<code class="sig-prename descclassname">azure.cosmos.base.</code><code class="sig-name descname">GetHeaders</code><span class="sig-paren">(</span><em class="sig-param">cosmos_client</em>, <em class="sig-param">default_headers</em>, <em class="sig-param">verb</em>, <em class="sig-param">path</em>, <em class="sig-param">resource_id</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">options</em>, <em class="sig-param">partition_key_range_id=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/base.html#GetHeaders"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.base.GetHeaders" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">azure.cosmos.base.</code><code class="sig-name descname">GetHeaders</code><span class="sig-paren">(</span><em class="sig-param">cosmos_client_connection</em>, <em class="sig-param">default_headers</em>, <em class="sig-param">verb</em>, <em class="sig-param">path</em>, <em class="sig-param">resource_id</em>, <em class="sig-param">resource_type</em>, <em class="sig-param">options</em>, <em class="sig-param">partition_key_range_id=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/base.html#GetHeaders"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.base.GetHeaders" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets HTTP request headers.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cosmos_client</strong> (<a class="reference internal" href="#azure.cosmos.cosmos_client.CosmosClient" title="azure.cosmos.cosmos_client.CosmosClient"><em>cosmos_client.CosmosClient</em></a>) – </p></li>
+<li><p><strong>cosmos_client</strong> (<em>cosmos_client_connection.CosmosClient</em>) – </p></li>
 <li><p><strong>default_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
 <li><p><strong>verb</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
 <li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
@@ -651,1751 +651,146 @@ So we also rely on</p>
 </div>
 <div class="section" id="module-azure.cosmos.cosmos_client">
 <span id="azure-cosmos-cosmos-client-module"></span><h2>azure.cosmos.cosmos_client module<a class="headerlink" href="#module-azure.cosmos.cosmos_client" title="Permalink to this headline">¶</a></h2>
-<p>Document client class for the Azure Cosmos database service.</p>
+<p>Create, read, and delete databases in the Azure Cosmos DB SQL API service.</p>
 <dl class="class">
 <dt id="azure.cosmos.cosmos_client.CosmosClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.cosmos_client.</code><code class="sig-name descname">CosmosClient</code><span class="sig-paren">(</span><em class="sig-param">url_connection</em>, <em class="sig-param">auth</em>, <em class="sig-param">connection_policy=None</em>, <em class="sig-param">consistency_level='Session'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.cosmos_client.</code><code class="sig-name descname">CosmosClient</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">auth</em>, <em class="sig-param">consistency_level='Session'</em>, <em class="sig-param">connection_policy=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Represents a document client.</p>
-<p>Provides a client-side logical representation of the Azure Cosmos
-service. This client is used to configure and execute requests against the
-service.</p>
-<p>The service client encapsulates the endpoint and credentials used to access
-the Azure Cosmos service.</p>
+<p>Provides a client-side logical representation of an Azure Cosmos DB account.
+Use this client to configure and execute requests to the Azure Cosmos DB service.</p>
+<p>Instantiate a new CosmosClient.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>url_connection</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL for connecting to the DB server.</p></li>
-<li><p><strong>auth</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – Contains ‘masterKey’ or ‘resourceTokens’, where
+<li><p><strong>url</strong> – The URL of the Cosmos DB account.</p></li>
+<li><p><strong>auth</strong> – Contains ‘masterKey’ or ‘resourceTokens’, where
 auth[‘masterKey’] is the default authorization key to use to
 create the client, and auth[‘resourceTokens’] is the alternative
 authorization key.</p></li>
-<li><p><strong>connection_policy</strong> (<a class="reference internal" href="#azure.cosmos.documents.ConnectionPolicy" title="azure.cosmos.documents.ConnectionPolicy"><em>documents.ConnectionPolicy</em></a>) – The connection policy for the client.</p></li>
-<li><p><strong>consistency_level</strong> (<a class="reference internal" href="#azure.cosmos.documents.ConsistencyLevel" title="azure.cosmos.documents.ConsistencyLevel"><em>documents.ConsistencyLevel</em></a>) – The default consistency policy for client operations.</p></li>
+<li><p><strong>consistency_level</strong> – Consistency level to use for the session.</p></li>
+<li><p><strong>connection_policy</strong> – Connection policy to use for the session.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>if url_connection and auth are not provided,</dt><dd><p>COSMOS_ENDPOINT and COSMOS_KEY environment variables will be used.</p>
-</dd>
-</dl>
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.Create">
-<code class="sig-name descname">Create</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">path</em>, <em class="sig-param">type</em>, <em class="sig-param">id</em>, <em class="sig-param">initial_headers</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.Create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.Create" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Azure Cosmos resource and returns it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>body</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>initial_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The created Azure Cosmos resource.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.CreateAttachment">
-<code class="sig-name descname">CreateAttachment</code><span class="sig-paren">(</span><em class="sig-param">document_link</em>, <em class="sig-param">attachment</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.CreateAttachment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.CreateAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates an attachment in a document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>document_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document.</p></li>
-<li><p><strong>attachment</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The Azure Cosmos attachment to create.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The created Attachment.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.CreateAttachmentAndUploadMedia">
-<code class="sig-name descname">CreateAttachmentAndUploadMedia</code><span class="sig-paren">(</span><em class="sig-param">document_link</em>, <em class="sig-param">readable_stream</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.CreateAttachmentAndUploadMedia"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.CreateAttachmentAndUploadMedia" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates an attachment and upload media.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>document_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document.</p></li>
-<li><p><strong>stream object</strong><strong>) </strong><strong>readable_stream</strong> (<em>(</em><em>file-like</em>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The created Attachment.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.CreateContainer">
-<code class="sig-name descname">CreateContainer</code><span class="sig-paren">(</span><em class="sig-param">database_link</em>, <em class="sig-param">collection</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.CreateContainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.CreateContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a collection in a database.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>database_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the database.</p></li>
-<li><p><strong>collection</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The Azure Cosmos collection to create.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The Collection that was created.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.CreateDatabase">
-<code class="sig-name descname">CreateDatabase</code><span class="sig-paren">(</span><em class="sig-param">database</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.CreateDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.CreateDatabase" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a database.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>database</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The Azure Cosmos database to create.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The Database that was created.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.CreateItem">
-<code class="sig-name descname">CreateItem</code><span class="sig-paren">(</span><em class="sig-param">database_or_Container_link</em>, <em class="sig-param">document</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.CreateItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.CreateItem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a document in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>database_or_Container_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the database when using partitioning, otherwise link to the document collection.</p></li>
-<li><p><strong>document</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The Azure Cosmos document to create.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-<li><p><strong>options</strong><strong>[</strong><strong>'disableAutomaticIdGeneration'</strong><strong>]</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Disables the automatic id generation. If id is missing in the body and this
-option is true, an error will be returned.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The created Document.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.CreatePermission">
-<code class="sig-name descname">CreatePermission</code><span class="sig-paren">(</span><em class="sig-param">user_link</em>, <em class="sig-param">permission</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.CreatePermission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.CreatePermission" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a permission for a user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>user_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the user entity.</p></li>
-<li><p><strong>permission</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The Azure Cosmos user permission to create.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The created Permission.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.CreateStoredProcedure">
-<code class="sig-name descname">CreateStoredProcedure</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">sproc</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.CreateStoredProcedure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.CreateStoredProcedure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a stored procedure in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>sproc</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The created Stored Procedure.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.CreateTrigger">
-<code class="sig-name descname">CreateTrigger</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">trigger</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.CreateTrigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.CreateTrigger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a trigger in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>trigger</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The created Trigger.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.CreateUser">
-<code class="sig-name descname">CreateUser</code><span class="sig-paren">(</span><em class="sig-param">database_link</em>, <em class="sig-param">user</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.CreateUser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.CreateUser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>database_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the database.</p></li>
-<li><p><strong>user</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The Azure Cosmos user to create.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The created User.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.CreateUserDefinedFunction">
-<code class="sig-name descname">CreateUserDefinedFunction</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">udf</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.CreateUserDefinedFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.CreateUserDefinedFunction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a user defined function in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the collection.</p></li>
-<li><p><strong>udf</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The created UDF.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.DeleteAttachment">
-<code class="sig-name descname">DeleteAttachment</code><span class="sig-paren">(</span><em class="sig-param">attachment_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.DeleteAttachment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.DeleteAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes an attachment.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>attachment_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the attachment.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The deleted Attachment.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.DeleteConflict">
-<code class="sig-name descname">DeleteConflict</code><span class="sig-paren">(</span><em class="sig-param">conflict_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.DeleteConflict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.DeleteConflict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes a conflict.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>conflict_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the conflict.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The deleted Conflict.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.DeleteContainer">
-<code class="sig-name descname">DeleteContainer</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.DeleteContainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.DeleteContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The deleted Collection.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.DeleteDatabase">
-<code class="sig-name descname">DeleteDatabase</code><span class="sig-paren">(</span><em class="sig-param">database_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.DeleteDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.DeleteDatabase" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes a database.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>database_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the database.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The deleted Database.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.DeleteItem">
-<code class="sig-name descname">DeleteItem</code><span class="sig-paren">(</span><em class="sig-param">document_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.DeleteItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.DeleteItem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes a document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>document_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The deleted Document.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.DeletePermission">
-<code class="sig-name descname">DeletePermission</code><span class="sig-paren">(</span><em class="sig-param">permission_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.DeletePermission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.DeletePermission" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes a permission.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>permission_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the permission.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The deleted Permission.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.DeleteResource">
-<code class="sig-name descname">DeleteResource</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">type</em>, <em class="sig-param">id</em>, <em class="sig-param">initial_headers</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.DeleteResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.DeleteResource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes a Azure Cosmos resource and returns it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>initial_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The deleted Azure Cosmos resource.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.DeleteStoredProcedure">
-<code class="sig-name descname">DeleteStoredProcedure</code><span class="sig-paren">(</span><em class="sig-param">sproc_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.DeleteStoredProcedure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.DeleteStoredProcedure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes a stored procedure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sproc_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the stored procedure.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The deleted Stored Procedure.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.DeleteTrigger">
-<code class="sig-name descname">DeleteTrigger</code><span class="sig-paren">(</span><em class="sig-param">trigger_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.DeleteTrigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.DeleteTrigger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes a trigger.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>trigger_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the trigger.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The deleted Trigger.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.DeleteUser">
-<code class="sig-name descname">DeleteUser</code><span class="sig-paren">(</span><em class="sig-param">user_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.DeleteUser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.DeleteUser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes a user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>user_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the user entity.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The deleted user.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.DeleteUserDefinedFunction">
-<code class="sig-name descname">DeleteUserDefinedFunction</code><span class="sig-paren">(</span><em class="sig-param">udf_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.DeleteUserDefinedFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.DeleteUserDefinedFunction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deletes a user defined function.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>udf_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the user defined function.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The deleted UDF.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ExecuteStoredProcedure">
-<code class="sig-name descname">ExecuteStoredProcedure</code><span class="sig-paren">(</span><em class="sig-param">sproc_link</em>, <em class="sig-param">params</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ExecuteStoredProcedure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ExecuteStoredProcedure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Executes a store procedure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sproc_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the stored procedure.</p></li>
-<li><p><strong>params</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – List or None</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The Stored Procedure response.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.GetDatabaseAccount">
-<code class="sig-name descname">GetDatabaseAccount</code><span class="sig-paren">(</span><em class="sig-param">url_connection=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.GetDatabaseAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.GetDatabaseAccount" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets database account info.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The Database Account.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.documents.DatabaseAccount" title="azure.cosmos.documents.DatabaseAccount">documents.DatabaseAccount</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.GetPartitionResolver">
-<code class="sig-name descname">GetPartitionResolver</code><span class="sig-paren">(</span><em class="sig-param">database_link</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.GetPartitionResolver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.GetPartitionResolver" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the partition resolver associated with the database link</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>database_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Database self link or ID based link.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An instance of PartitionResolver.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)">object</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.PartitionResolverErrorMessage">
-<code class="sig-name descname">PartitionResolverErrorMessage</code><em class="property"> = &quot;Couldn't find any partition resolvers for the database link provided. Ensure that the link you used when registering the partition resolvers matches the link provided or you need to register both types of database link(self link as well as ID based link).&quot;</em><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.PartitionResolverErrorMessage" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryAttachments">
-<code class="sig-name descname">QueryAttachments</code><span class="sig-paren">(</span><em class="sig-param">document_link</em>, <em class="sig-param">query</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryAttachments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryAttachments" title="Permalink to this definition">¶</a></dt>
-<dd><p>Queries attachments in a document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>document_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document.</p></li>
-<li><p><strong>or dict</strong><strong>) </strong><strong>query</strong> (<em>(</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Attachments.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryConflicts">
-<code class="sig-name descname">QueryConflicts</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">query</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryConflicts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryConflicts" title="Permalink to this definition">¶</a></dt>
-<dd><p>Queries conflicts in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>or dict</strong><strong>) </strong><strong>query</strong> (<em>(</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Conflicts.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryContainers">
-<code class="sig-name descname">QueryContainers</code><span class="sig-paren">(</span><em class="sig-param">database_link</em>, <em class="sig-param">query</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryContainers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryContainers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Queries collections in a database.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>database_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the database.</p></li>
-<li><p><strong>or dict</strong><strong>) </strong><strong>query</strong> (<em>(</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Collections.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryDatabases">
-<code class="sig-name descname">QueryDatabases</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryDatabases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryDatabases" title="Permalink to this definition">¶</a></dt>
-<dd><p>Queries databases.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>or dict</strong><strong>) </strong><strong>query</strong> (<em>(</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Databases.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryFeed">
-<code class="sig-name descname">QueryFeed</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">collection_id</em>, <em class="sig-param">query</em>, <em class="sig-param">options</em>, <em class="sig-param">partition_key_range_id=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryFeed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryFeed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Query Feed for Document Collection resource.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Path to the document collection.</p></li>
-<li><p><strong>collection_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id of the document collection.</p></li>
-<li><p><strong>or dict</strong><strong>) </strong><strong>query</strong> (<em>(</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-<li><p><strong>partition_key_range_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Partition key range id.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#tuple" title="(in Python v3.5)">tuple</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryItems">
-<code class="sig-name descname">QueryItems</code><span class="sig-paren">(</span><em class="sig-param">database_or_Container_link</em>, <em class="sig-param">query</em>, <em class="sig-param">options=None</em>, <em class="sig-param">partition_key=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryItems"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryItems" title="Permalink to this definition">¶</a></dt>
-<dd><p>Queries documents in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>database_or_Container_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the database when using partitioning, otherwise link to the document collection.</p></li>
-<li><p><strong>or dict</strong><strong>) </strong><strong>query</strong> (<em>(</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-<li><p><strong>partition_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Partition key for the query(default value None)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Documents.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryItemsChangeFeed">
-<code class="sig-name descname">QueryItemsChangeFeed</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryItemsChangeFeed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryItemsChangeFeed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Queries documents change feed in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.
-options may also specify partition key range id.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Documents.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryOffers">
-<code class="sig-name descname">QueryOffers</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryOffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryOffers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Query for all offers.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>or dict</strong><strong>) </strong><strong>query</strong> (<em>(</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Offers.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryPermissions">
-<code class="sig-name descname">QueryPermissions</code><span class="sig-paren">(</span><em class="sig-param">user_link</em>, <em class="sig-param">query</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryPermissions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryPermissions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Queries permissions for a user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>user_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the user entity.</p></li>
-<li><p><strong>or dict</strong><strong>) </strong><strong>query</strong> (<em>(</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Permissions.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryStoredProcedures">
-<code class="sig-name descname">QueryStoredProcedures</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">query</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryStoredProcedures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryStoredProcedures" title="Permalink to this definition">¶</a></dt>
-<dd><p>Queries stored procedures in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>or dict</strong><strong>) </strong><strong>query</strong> (<em>(</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Stored Procedures.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryTriggers">
-<code class="sig-name descname">QueryTriggers</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">query</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryTriggers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryTriggers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Queries triggers in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>or dict</strong><strong>) </strong><strong>query</strong> (<em>(</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Triggers.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryUserDefinedFunctions">
-<code class="sig-name descname">QueryUserDefinedFunctions</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">query</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryUserDefinedFunctions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryUserDefinedFunctions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Queries user defined functions in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the collection.</p></li>
-<li><p><strong>or dict</strong><strong>) </strong><strong>query</strong> (<em>(</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of UDFs.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.QueryUsers">
-<code class="sig-name descname">QueryUsers</code><span class="sig-paren">(</span><em class="sig-param">database_link</em>, <em class="sig-param">query</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.QueryUsers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.QueryUsers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Queries users in a database.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>database_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the database.</p></li>
-<li><p><strong>or dict</strong><strong>) </strong><strong>query</strong> (<em>(</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Users.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.Read">
-<code class="sig-name descname">Read</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">type</em>, <em class="sig-param">id</em>, <em class="sig-param">initial_headers</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.Read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.Read" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads a Azure Cosmos resource and returns it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>initial_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The upserted Azure Cosmos resource.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadAttachment">
-<code class="sig-name descname">ReadAttachment</code><span class="sig-paren">(</span><em class="sig-param">attachment_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadAttachment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads an attachment.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>attachment_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the attachment.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The read Attachment.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadAttachments">
-<code class="sig-name descname">ReadAttachments</code><span class="sig-paren">(</span><em class="sig-param">document_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadAttachments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadAttachments" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads all attachments in a document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>document_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Attachments.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadConflict">
-<code class="sig-name descname">ReadConflict</code><span class="sig-paren">(</span><em class="sig-param">conflict_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadConflict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadConflict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads a conflict.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>conflict_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the conflict.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The read Conflict.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadConflicts">
-<code class="sig-name descname">ReadConflicts</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">feed_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadConflicts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadConflicts" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads conflicts.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>feed_options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Conflicts.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadContainer">
-<code class="sig-name descname">ReadContainer</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadContainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The read Collection.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadContainers">
-<code class="sig-name descname">ReadContainers</code><span class="sig-paren">(</span><em class="sig-param">database_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadContainers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadContainers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads all collections in a database.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>database_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the database.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Collections.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadDatabase">
-<code class="sig-name descname">ReadDatabase</code><span class="sig-paren">(</span><em class="sig-param">database_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadDatabase" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads a database.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>database_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the database.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The Database that was read.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadDatabases">
-<code class="sig-name descname">ReadDatabases</code><span class="sig-paren">(</span><em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadDatabases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadDatabases" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads all databases.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Databases.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadEndpoint">
-<em class="property">property </em><code class="sig-name descname">ReadEndpoint</code><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadEndpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the curent read endpoint for a geo-replicated database account.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadItem">
-<code class="sig-name descname">ReadItem</code><span class="sig-paren">(</span><em class="sig-param">document_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadItem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads a document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>document_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The read Document.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadItems">
-<code class="sig-name descname">ReadItems</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">feed_options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadItems"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadItems" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads all documents in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>feed_options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Documents.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadMedia">
-<code class="sig-name descname">ReadMedia</code><span class="sig-paren">(</span><em class="sig-param">media_link</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadMedia"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadMedia" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads a media.</p>
-<p>When self.connection_policy.MediaReadMode ==
-documents.MediaReadMode.Streamed, returns a file-like stream object;
-otherwise, returns a str.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>media_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the media.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The read Media.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a> or file-like stream object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadOffer">
-<code class="sig-name descname">ReadOffer</code><span class="sig-paren">(</span><em class="sig-param">offer_link</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadOffer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadOffer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads an offer.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>offer_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the offer.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The read Offer.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadOffers">
-<code class="sig-name descname">ReadOffers</code><span class="sig-paren">(</span><em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadOffers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadOffers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads all offers.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Offers.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadPermission">
-<code class="sig-name descname">ReadPermission</code><span class="sig-paren">(</span><em class="sig-param">permission_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadPermission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadPermission" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads a permission.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>permission_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the permission.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The read permission.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadPermissions">
-<code class="sig-name descname">ReadPermissions</code><span class="sig-paren">(</span><em class="sig-param">user_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadPermissions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadPermissions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads all permissions for a user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>user_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the user entity.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Permissions.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadStoredProcedure">
-<code class="sig-name descname">ReadStoredProcedure</code><span class="sig-paren">(</span><em class="sig-param">sproc_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadStoredProcedure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadStoredProcedure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads a stored procedure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sproc_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the stored procedure.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The read Stored Procedure.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadStoredProcedures">
-<code class="sig-name descname">ReadStoredProcedures</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadStoredProcedures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadStoredProcedures" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads all store procedures in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Stored Procedures.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadTrigger">
-<code class="sig-name descname">ReadTrigger</code><span class="sig-paren">(</span><em class="sig-param">trigger_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadTrigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadTrigger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads a trigger.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>trigger_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the trigger.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The read Trigger.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadTriggers">
-<code class="sig-name descname">ReadTriggers</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadTriggers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadTriggers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads all triggers in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of Triggers.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadUser">
-<code class="sig-name descname">ReadUser</code><span class="sig-paren">(</span><em class="sig-param">user_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadUser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadUser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads a user.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>user_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the user entity.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The read User.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadUserDefinedFunction">
-<code class="sig-name descname">ReadUserDefinedFunction</code><span class="sig-paren">(</span><em class="sig-param">udf_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadUserDefinedFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadUserDefinedFunction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads a user defined function.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>udf_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the user defined function.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The read UDF.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadUserDefinedFunctions">
-<code class="sig-name descname">ReadUserDefinedFunctions</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadUserDefinedFunctions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadUserDefinedFunctions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads all user defined functions in a collection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Query Iterable of UDFs.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReadUsers">
-<code class="sig-name descname">ReadUsers</code><span class="sig-paren">(</span><em class="sig-param">database_link</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReadUsers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReadUsers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads all users in a database.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Params str database_link</dt>
-<dd class="field-odd"><p>The link to the database.</p>
-</dd>
-<dt class="field-even">Params dict options</dt>
-<dd class="field-even"><p>The request options for the request.</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Query iterable of Users.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.query_iterable.QueryIterable" title="azure.cosmos.query_iterable.QueryIterable">query_iterable.QueryIterable</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.RegisterPartitionResolver">
-<code class="sig-name descname">RegisterPartitionResolver</code><span class="sig-paren">(</span><em class="sig-param">database_link</em>, <em class="sig-param">partition_resolver</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.RegisterPartitionResolver"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.RegisterPartitionResolver" title="Permalink to this definition">¶</a></dt>
-<dd><p>Registers the partition resolver associated with the database link</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>database_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Database Self Link or ID based link.</p></li>
-<li><p><strong>partition_resolver</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – An instance of PartitionResolver.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.Replace">
-<code class="sig-name descname">Replace</code><span class="sig-paren">(</span><em class="sig-param">resource</em>, <em class="sig-param">path</em>, <em class="sig-param">type</em>, <em class="sig-param">id</em>, <em class="sig-param">initial_headers</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.Replace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.Replace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replaces a Azure Cosmos resource and returns it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>initial_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The new Azure Cosmos resource.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReplaceAttachment">
-<code class="sig-name descname">ReplaceAttachment</code><span class="sig-paren">(</span><em class="sig-param">attachment_link</em>, <em class="sig-param">attachment</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReplaceAttachment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReplaceAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replaces an attachment and returns it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>attachment_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the attachment.</p></li>
-<li><p><strong>attachment</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The replaced Attachment</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReplaceContainer">
-<code class="sig-name descname">ReplaceContainer</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">collection</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReplaceContainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReplaceContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replaces a collection and return it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the collection entity.</p></li>
-<li><p><strong>collection</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The collection to be used.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The new Collection.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReplaceItem">
-<code class="sig-name descname">ReplaceItem</code><span class="sig-paren">(</span><em class="sig-param">document_link</em>, <em class="sig-param">new_document</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReplaceItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReplaceItem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replaces a document and returns it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>document_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document.</p></li>
-<li><p><strong>new_document</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The new Document.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReplaceOffer">
-<code class="sig-name descname">ReplaceOffer</code><span class="sig-paren">(</span><em class="sig-param">offer_link</em>, <em class="sig-param">offer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReplaceOffer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReplaceOffer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replaces an offer and returns it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>offer_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the offer.</p></li>
-<li><p><strong>offer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The replaced Offer.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReplacePermission">
-<code class="sig-name descname">ReplacePermission</code><span class="sig-paren">(</span><em class="sig-param">permission_link</em>, <em class="sig-param">permission</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReplacePermission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReplacePermission" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replaces a permission and return it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>permission_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the permission.</p></li>
-<li><p><strong>permission</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The new Permission.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReplaceStoredProcedure">
-<code class="sig-name descname">ReplaceStoredProcedure</code><span class="sig-paren">(</span><em class="sig-param">sproc_link</em>, <em class="sig-param">sproc</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReplaceStoredProcedure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReplaceStoredProcedure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replaces a stored procedure and returns it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sproc_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the stored procedure.</p></li>
-<li><p><strong>sproc</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The replaced Stored Procedure.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReplaceTrigger">
-<code class="sig-name descname">ReplaceTrigger</code><span class="sig-paren">(</span><em class="sig-param">trigger_link</em>, <em class="sig-param">trigger</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReplaceTrigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReplaceTrigger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replaces a trigger and returns it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>trigger_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the trigger.</p></li>
-<li><p><strong>trigger</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The replaced Trigger.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReplaceUser">
-<code class="sig-name descname">ReplaceUser</code><span class="sig-paren">(</span><em class="sig-param">user_link</em>, <em class="sig-param">user</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReplaceUser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReplaceUser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replaces a user and return it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>user_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the user entity.</p></li>
-<li><p><strong>user</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The new User.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.ReplaceUserDefinedFunction">
-<code class="sig-name descname">ReplaceUserDefinedFunction</code><span class="sig-paren">(</span><em class="sig-param">udf_link</em>, <em class="sig-param">udf</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.ReplaceUserDefinedFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.ReplaceUserDefinedFunction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Replaces a user defined function and returns it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>udf_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the user defined function.</p></li>
-<li><p><strong>udf</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The new UDF.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.Session">
-<em class="property">property </em><code class="sig-name descname">Session</code><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.Session" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the session object from the client</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.UpdateMedia">
-<code class="sig-name descname">UpdateMedia</code><span class="sig-paren">(</span><em class="sig-param">media_link</em>, <em class="sig-param">readable_stream</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.UpdateMedia"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.UpdateMedia" title="Permalink to this definition">¶</a></dt>
-<dd><p>Updates a media and returns it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>media_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the media.</p></li>
-<li><p><strong>stream object</strong><strong>) </strong><strong>readable_stream</strong> (<em>(</em><em>file-like</em>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The updated Media.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)">str</a> or file-like stream object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.Upsert">
-<code class="sig-name descname">Upsert</code><span class="sig-paren">(</span><em class="sig-param">body</em>, <em class="sig-param">path</em>, <em class="sig-param">type</em>, <em class="sig-param">id</em>, <em class="sig-param">initial_headers</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.Upsert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.Upsert" title="Permalink to this definition">¶</a></dt>
-<dd><p>Upserts a Azure Cosmos resource and returns it.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>body</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>initial_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The upserted Azure Cosmos resource.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.UpsertAttachment">
-<code class="sig-name descname">UpsertAttachment</code><span class="sig-paren">(</span><em class="sig-param">document_link</em>, <em class="sig-param">attachment</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.UpsertAttachment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.UpsertAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Upserts an attachment in a document.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>document_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document.</p></li>
-<li><p><strong>attachment</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The Azure Cosmos attachment to upsert.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The upserted Attachment.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.UpsertAttachmentAndUploadMedia">
-<code class="sig-name descname">UpsertAttachmentAndUploadMedia</code><span class="sig-paren">(</span><em class="sig-param">document_link</em>, <em class="sig-param">readable_stream</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.UpsertAttachmentAndUploadMedia"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.UpsertAttachmentAndUploadMedia" title="Permalink to this definition">¶</a></dt>
-<dd><p>Upserts an attachment and upload media.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>document_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document.</p></li>
-<li><p><strong>stream object</strong><strong>) </strong><strong>readable_stream</strong> (<em>(</em><em>file-like</em>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The upserted Attachment.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.UpsertItem">
-<code class="sig-name descname">UpsertItem</code><span class="sig-paren">(</span><em class="sig-param">database_or_Container_link</em>, <em class="sig-param">document</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.UpsertItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.UpsertItem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Upserts a document in a collection.</p>
+<dt id="azure.cosmos.cosmos_client.CosmosClient.create_database">
+<code class="sig-name descname">create_database</code><span class="sig-paren">(</span><em class="sig-param">id</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">access_condition=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">offer_throughput=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.create_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.create_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new database with the given ID (name).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>database_or_Container_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the database when using partitioning, otherwise link to the document collection.</p></li>
-<li><p><strong>document</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The Azure Cosmos document to upsert.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-<li><p><strong>options</strong><strong>[</strong><strong>'disableAutomaticIdGeneration'</strong><strong>]</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Disables the automatic id generation. If id is missing in the body and this
-option is true, an error will be returned.</p></li>
+<li><p><strong>id</strong> – ID (name) of the database to create.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>access_condition</strong> – Conditions Associated with the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>offer_throughput</strong> – The provisioned throughput for this offer.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The upserted Document.</p>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code> instance representing the new database.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If database with the given ID already exists.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.UpsertPermission">
-<code class="sig-name descname">UpsertPermission</code><span class="sig-paren">(</span><em class="sig-param">user_link</em>, <em class="sig-param">permission</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.UpsertPermission"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.UpsertPermission" title="Permalink to this definition">¶</a></dt>
-<dd><p>Upserts a permission for a user.</p>
+<dt id="azure.cosmos.cosmos_client.CosmosClient.delete_database">
+<code class="sig-name descname">delete_database</code><span class="sig-paren">(</span><em class="sig-param">database</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">access_condition=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.delete_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.delete_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the database with the given ID (name).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>user_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the user entity.</p></li>
-<li><p><strong>permission</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The Azure Cosmos user permission to upsert.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
+<li><p><strong>database</strong> – The ID (name), dict representing the properties or <code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code> instance of the database to delete.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>access_condition</strong> – Conditions Associated with the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The upserted permission.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the database couldn’t be deleted.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.UpsertStoredProcedure">
-<code class="sig-name descname">UpsertStoredProcedure</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">sproc</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.UpsertStoredProcedure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.UpsertStoredProcedure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Upserts a stored procedure in a collection.</p>
+<dt id="azure.cosmos.cosmos_client.CosmosClient.get_database_account">
+<code class="sig-name descname">get_database_account</code><span class="sig-paren">(</span><em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.get_database_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.get_database_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the database account information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>sproc</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>response_hook</strong> – a callable invoked with the response metadata</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The upserted Stored Procedure.</p>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">DatabaseAccount</span></code> instance representing the Cosmos DB Database Account.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.UpsertTrigger">
-<code class="sig-name descname">UpsertTrigger</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">trigger</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.UpsertTrigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.UpsertTrigger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Upserts a trigger in a collection.</p>
+<dt id="azure.cosmos.cosmos_client.CosmosClient.get_database_client">
+<code class="sig-name descname">get_database_client</code><span class="sig-paren">(</span><em class="sig-param">database</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.get_database_client"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.get_database_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve an existing database with the ID (name) <cite>id</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the document collection.</p></li>
-<li><p><strong>trigger</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>database</strong> – The ID (name), dict representing the properties or <code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code> instance of the database to read.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The upserted Trigger.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code> instance representing the retrieved database.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.UpsertUser">
-<code class="sig-name descname">UpsertUser</code><span class="sig-paren">(</span><em class="sig-param">database_link</em>, <em class="sig-param">user</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.UpsertUser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.UpsertUser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Upserts a user.</p>
+<dt id="azure.cosmos.cosmos_client.CosmosClient.query_databases">
+<code class="sig-name descname">query_databases</code><span class="sig-paren">(</span><em class="sig-param">query=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">enable_cross_partition_query=None</em>, <em class="sig-param">max_item_count=None</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.query_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.query_databases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query the databases in a Cosmos DB SQL database account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>database_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the database.</p></li>
-<li><p><strong>user</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The Azure Cosmos user to upsert.</p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
+<li><p><strong>query</strong> – The Azure Cosmos DB SQL query to execute.</p></li>
+<li><p><strong>parameters</strong> – Optional array of parameters to the query. Ignored if no query is provided.</p></li>
+<li><p><strong>enable_cross_partition_query</strong> – Allow scan on the queries which couldn’t be served as indexing was opted out on the requested paths.</p></li>
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The upserted User.</p>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of database properties (dicts).</p>
 </dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
-</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.UpsertUserDefinedFunction">
-<code class="sig-name descname">UpsertUserDefinedFunction</code><span class="sig-paren">(</span><em class="sig-param">collection_link</em>, <em class="sig-param">udf</em>, <em class="sig-param">options=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.UpsertUserDefinedFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.UpsertUserDefinedFunction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Upserts a user defined function in a collection.</p>
+<dt id="azure.cosmos.cosmos_client.CosmosClient.read_all_databases">
+<code class="sig-name descname">read_all_databases</code><span class="sig-paren">(</span><em class="sig-param">max_item_count=None</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.read_all_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.read_all_databases" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the databases in a Cosmos DB SQL database account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>collection_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the collection.</p></li>
-<li><p><strong>udf</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – The request options for the request.</p></li>
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The upserted UDF.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of database properties (dicts).</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.cosmos.cosmos_client.CosmosClient.WriteEndpoint">
-<em class="property">property </em><code class="sig-name descname">WriteEndpoint</code><a class="headerlink" href="#azure.cosmos.cosmos_client.CosmosClient.WriteEndpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the curent write endpoint for a geo-replicated database account.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2430,7 +825,7 @@ gateway proxies requests to the right data partition.</p>
 <dt id="azure.cosmos.documents.ConnectionPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.documents.</code><code class="sig-name descname">ConnectionPolicy</code><a class="reference internal" href="../_modules/azure/cosmos/documents.html#ConnectionPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.documents.ConnectionPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Represents the Connection policy assocated with a CosmosClient.</p>
+<p>Represents the Connection policy assocated with a CosmosClientConnection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2891,13 +1286,6 @@ writing media files.</p>
 <code class="sig-name descname">Pre</code><em class="property"> = 'pre'</em><a class="headerlink" href="#azure.cosmos.documents.TriggerType.Pre" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.cosmos.documents.Undefined">
-<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.documents.</code><code class="sig-name descname">Undefined</code><a class="reference internal" href="../_modules/azure/cosmos/documents.html#Undefined"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.documents.Undefined" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Represents undefined value for partitionKey when it’s mising.</p>
 </dd></dl>
 
 </div>
@@ -4169,7 +2557,7 @@ distribute requests and data across a number of partitions.</p>
 <p>Constants of versions.</p>
 <dl class="attribute">
 <dt id="azure.cosmos.http_constants.Versions.CurrentVersion">
-<code class="sig-name descname">CurrentVersion</code><em class="property"> = '2018-09-17'</em><a class="headerlink" href="#azure.cosmos.http_constants.Versions.CurrentVersion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CurrentVersion</code><em class="property"> = '2018-12-31'</em><a class="headerlink" href="#azure.cosmos.http_constants.Versions.CurrentVersion" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -4179,7 +2567,7 @@ distribute requests and data across a number of partitions.</p>
 
 <dl class="attribute">
 <dt id="azure.cosmos.http_constants.Versions.SDKVersion">
-<code class="sig-name descname">SDKVersion</code><em class="property"> = '3.1.0'</em><a class="headerlink" href="#azure.cosmos.http_constants.Versions.SDKVersion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">SDKVersion</code><em class="property"> = '4.0.0a1'</em><a class="headerlink" href="#azure.cosmos.http_constants.Versions.SDKVersion" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -4796,6 +3184,149 @@ server side (write, replace, delete etc)</p>
 </div>
 <div class="section" id="module-azure.cosmos">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.cosmos" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.cosmos.CosmosClient">
+<em class="property">class </em><code class="sig-prename descclassname">azure.cosmos.</code><code class="sig-name descname">CosmosClient</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">auth</em>, <em class="sig-param">consistency_level='Session'</em>, <em class="sig-param">connection_policy=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.CosmosClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Provides a client-side logical representation of an Azure Cosmos DB account.
+Use this client to configure and execute requests to the Azure Cosmos DB service.</p>
+<p>Instantiate a new CosmosClient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> – The URL of the Cosmos DB account.</p></li>
+<li><p><strong>auth</strong> – Contains ‘masterKey’ or ‘resourceTokens’, where
+auth[‘masterKey’] is the default authorization key to use to
+create the client, and auth[‘resourceTokens’] is the alternative
+authorization key.</p></li>
+<li><p><strong>consistency_level</strong> – Consistency level to use for the session.</p></li>
+<li><p><strong>connection_policy</strong> – Connection policy to use for the session.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.cosmos.CosmosClient.create_database">
+<code class="sig-name descname">create_database</code><span class="sig-paren">(</span><em class="sig-param">id</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">access_condition=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">offer_throughput=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.create_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.CosmosClient.create_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new database with the given ID (name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – ID (name) of the database to create.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>access_condition</strong> – Conditions Associated with the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>offer_throughput</strong> – The provisioned throughput for this offer.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code> instance representing the new database.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If database with the given ID already exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.CosmosClient.delete_database">
+<code class="sig-name descname">delete_database</code><span class="sig-paren">(</span><em class="sig-param">database</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">access_condition=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">request_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.delete_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.CosmosClient.delete_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the database with the given ID (name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>database</strong> – The ID (name), dict representing the properties or <code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code> instance of the database to delete.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>access_condition</strong> – Conditions Associated with the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>request_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#azure.cosmos.errors.HTTPFailure" title="azure.cosmos.errors.HTTPFailure"><strong>HTTPFailure</strong></a> – If the database couldn’t be deleted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.CosmosClient.get_database_account">
+<code class="sig-name descname">get_database_account</code><span class="sig-paren">(</span><em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.get_database_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.CosmosClient.get_database_account" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the database account information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>response_hook</strong> – a callable invoked with the response metadata</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">DatabaseAccount</span></code> instance representing the Cosmos DB Database Account.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.CosmosClient.get_database_client">
+<code class="sig-name descname">get_database_client</code><span class="sig-paren">(</span><em class="sig-param">database</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.get_database_client"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.CosmosClient.get_database_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve an existing database with the ID (name) <cite>id</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>database</strong> – The ID (name), dict representing the properties or <code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code> instance of the database to read.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Database</span></code> instance representing the retrieved database.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.CosmosClient.query_databases">
+<code class="sig-name descname">query_databases</code><span class="sig-paren">(</span><em class="sig-param">query=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">enable_cross_partition_query=None</em>, <em class="sig-param">max_item_count=None</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.query_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.CosmosClient.query_databases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query the databases in a Cosmos DB SQL database account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> – The Azure Cosmos DB SQL query to execute.</p></li>
+<li><p><strong>parameters</strong> – Optional array of parameters to the query. Ignored if no query is provided.</p></li>
+<li><p><strong>enable_cross_partition_query</strong> – Allow scan on the queries which couldn’t be served as indexing was opted out on the requested paths.</p></li>
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of database properties (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cosmos.CosmosClient.read_all_databases">
+<code class="sig-name descname">read_all_databases</code><span class="sig-paren">(</span><em class="sig-param">max_item_count=None</em>, <em class="sig-param">session_token=None</em>, <em class="sig-param">initial_headers=None</em>, <em class="sig-param">populate_query_metrics=None</em>, <em class="sig-param">feed_options=None</em>, <em class="sig-param">response_hook=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cosmos/cosmos_client.html#CosmosClient.read_all_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cosmos.CosmosClient.read_all_databases" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the databases in a Cosmos DB SQL database account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_item_count</strong> – Max number of items to be returned in the enumeration operation.</p></li>
+<li><p><strong>session_token</strong> – Token for use with Session consistency.</p></li>
+<li><p><strong>initial_headers</strong> – Initial headers to be sent as part of the request.</p></li>
+<li><p><strong>populate_query_metrics</strong> – Enable returning query metrics in response headers.</p></li>
+<li><p><strong>feed_options</strong> – Dictionary of additional properties to be used for the request.</p></li>
+<li><p><strong>response_hook</strong> – a callable invoked with the response metadata</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">QueryIterable</span></code> instance representing an iterable of database properties (dicts).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 

@@ -300,7 +300,7 @@
 <span class="sd">&quot;&quot;&quot;AzureDocument classes and enums for the Azure Cosmos database service.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">azure.cosmos.retry_options</span> <span class="k">as</span> <span class="nn">retry_options</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">retry_options</span>
 
 <div class="viewcode-block" id="DatabaseAccount"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.documents.DatabaseAccount">[docs]</a><span class="k">class</span> <span class="nc">DatabaseAccount</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Database account. A DatabaseAccount is the container for databases.</span>
@@ -594,7 +594,7 @@
 
 
 <div class="viewcode-block" id="ConnectionPolicy"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.documents.ConnectionPolicy">[docs]</a><span class="k">class</span> <span class="nc">ConnectionPolicy</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Represents the Connection policy assocated with a CosmosClient.</span>
+    <span class="sd">&quot;&quot;&quot;Represents the Connection policy assocated with a CosmosClientConnection.</span>
 
 <span class="sd">    :ivar int RequestTimeout:</span>
 <span class="sd">        Gets or sets the request timeout (time to wait</span>
@@ -649,10 +649,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">RetryOptions</span> <span class="o">=</span> <span class="n">retry_options</span><span class="o">.</span><span class="n">RetryOptions</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">DisableSSLVerification</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">UseMultipleWriteLocations</span> <span class="o">=</span> <span class="kc">False</span></div>
-
-<div class="viewcode-block" id="Undefined"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.documents.Undefined">[docs]</a><span class="k">class</span> <span class="nc">Undefined</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Represents undefined value for partitionKey when it&#39;s mising.</span>
-<span class="sd">    &quot;&quot;&quot;</span></div>
 
 <span class="k">class</span> <span class="nc">_OperationType</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Represents the type of the operation</span>

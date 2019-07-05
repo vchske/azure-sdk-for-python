@@ -307,17 +307,18 @@
 <span class="kn">import</span> <span class="nn">urllib</span>
 <span class="kn">import</span> <span class="nn">binascii</span>
 
-<span class="kn">import</span> <span class="nn">azure.cosmos.auth</span> <span class="k">as</span> <span class="nn">auth</span>
-<span class="kn">import</span> <span class="nn">azure.cosmos.documents</span> <span class="k">as</span> <span class="nn">documents</span>
-<span class="kn">import</span> <span class="nn">azure.cosmos.http_constants</span> <span class="k">as</span> <span class="nn">http_constants</span>
-<span class="kn">import</span> <span class="nn">azure.cosmos.constants</span> <span class="k">as</span> <span class="nn">constants</span>
-<span class="kn">import</span> <span class="nn">azure.cosmos.runtime_constants</span> <span class="k">as</span> <span class="nn">runtime_constants</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">auth</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">documents</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">partition_key</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">http_constants</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">runtime_constants</span>
 
 <span class="kn">import</span> <span class="nn">six</span>
 <span class="kn">from</span> <span class="nn">six.moves.urllib.parse</span> <span class="k">import</span> <span class="n">quote</span> <span class="k">as</span> <span class="n">urllib_quote</span>
 <span class="kn">from</span> <span class="nn">six.moves</span> <span class="k">import</span> <span class="n">xrange</span>
 
-<div class="viewcode-block" id="GetHeaders"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.base.GetHeaders">[docs]</a><span class="k">def</span> <span class="nf">GetHeaders</span><span class="p">(</span><span class="n">cosmos_client</span><span class="p">,</span>
+<div class="viewcode-block" id="GetHeaders"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.base.GetHeaders">[docs]</a><span class="k">def</span> <span class="nf">GetHeaders</span><span class="p">(</span><span class="n">cosmos_client_connection</span><span class="p">,</span>
                <span class="n">default_headers</span><span class="p">,</span>
                <span class="n">verb</span><span class="p">,</span>
                <span class="n">path</span><span class="p">,</span>
@@ -327,7 +328,7 @@
                <span class="n">partition_key_range_id</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Gets HTTP request headers.</span>
 
-<span class="sd">    :param cosmos_client.CosmosClient cosmos_client:</span>
+<span class="sd">    :param cosmos_client_connection.CosmosClient cosmos_client:</span>
 <span class="sd">    :param dict default_headers:</span>
 <span class="sd">    :param str verb:</span>
 <span class="sd">    :param str path:</span>
@@ -343,7 +344,7 @@
     <span class="n">headers</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">default_headers</span><span class="p">)</span>
     <span class="n">options</span> <span class="o">=</span> <span class="n">options</span> <span class="ow">or</span> <span class="p">{}</span>
 
-    <span class="k">if</span> <span class="n">cosmos_client</span><span class="o">.</span><span class="n">_useMultipleWriteLocations</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">cosmos_client_connection</span><span class="o">.</span><span class="n">_useMultipleWriteLocations</span><span class="p">:</span>
         <span class="n">headers</span><span class="p">[</span><span class="n">http_constants</span><span class="o">.</span><span class="n">HttpHeaders</span><span class="o">.</span><span class="n">AllowTentativeWrites</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;true&quot;</span>
 
     <span class="n">pre_trigger_include</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;preTriggerInclude&#39;</span><span class="p">)</span>
@@ -402,7 +403,7 @@
             <span class="k">if</span> <span class="n">default_client_consistency_level</span> <span class="o">==</span> <span class="n">documents</span><span class="o">.</span><span class="n">ConsistencyLevel</span><span class="o">.</span><span class="n">Session</span><span class="p">:</span>
                 <span class="c1"># populate session token from the client&#39;s session container</span>
                 <span class="n">headers</span><span class="p">[</span><span class="n">http_constants</span><span class="o">.</span><span class="n">HttpHeaders</span><span class="o">.</span><span class="n">SessionToken</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
-                    <span class="n">cosmos_client</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get_session_token</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+                    <span class="n">cosmos_client_connection</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get_session_token</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
            
     <span class="k">if</span> <span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;enableScanInQuery&#39;</span><span class="p">):</span>
         <span class="n">headers</span><span class="p">[</span><span class="n">http_constants</span><span class="o">.</span><span class="n">HttpHeaders</span><span class="o">.</span><span class="n">EnableScanInQuery</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
@@ -419,9 +420,12 @@
         <span class="n">headers</span><span class="p">[</span><span class="n">http_constants</span><span class="o">.</span><span class="n">HttpHeaders</span><span class="o">.</span><span class="n">OfferThroughput</span><span class="p">]</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="s1">&#39;offerThroughput&#39;</span><span class="p">]</span>
 
     <span class="k">if</span> <span class="s1">&#39;partitionKey&#39;</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span>
-        <span class="c1"># if partitionKey value is Undefined, serialize it as {} to be consistent with other SDKs</span>
-        <span class="k">if</span> <span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;partitionKey&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="n">documents</span><span class="o">.</span><span class="n">Undefined</span><span class="p">:</span>
+        <span class="c1"># if partitionKey value is Undefined, serialize it as [{}] to be consistent with other SDKs.</span>
+        <span class="k">if</span> <span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;partitionKey&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="n">partition_key</span><span class="o">.</span><span class="n">_Undefined</span><span class="p">:</span>
             <span class="n">headers</span><span class="p">[</span><span class="n">http_constants</span><span class="o">.</span><span class="n">HttpHeaders</span><span class="o">.</span><span class="n">PartitionKey</span><span class="p">]</span> <span class="o">=</span> <span class="p">[{}]</span>
+        <span class="c1"># If partitionKey value is Empty, serialize it as [], which is the equivalent to be sent for migrated collections</span>
+        <span class="k">elif</span> <span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;partitionKey&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="n">partition_key</span><span class="o">.</span><span class="n">_Empty</span><span class="p">:</span>
+            <span class="n">headers</span><span class="p">[</span><span class="n">http_constants</span><span class="o">.</span><span class="n">HttpHeaders</span><span class="o">.</span><span class="n">PartitionKey</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="c1"># else serialize using json dumps method which apart from regular values will serialize None into null</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">headers</span><span class="p">[</span><span class="n">http_constants</span><span class="o">.</span><span class="n">HttpHeaders</span><span class="o">.</span><span class="n">PartitionKey</span><span class="p">]</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">([</span><span class="n">options</span><span class="p">[</span><span class="s1">&#39;partitionKey&#39;</span><span class="p">]])</span>
@@ -432,12 +436,12 @@
     <span class="k">if</span> <span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;populateQueryMetrics&#39;</span><span class="p">):</span>
         <span class="n">headers</span><span class="p">[</span><span class="n">http_constants</span><span class="o">.</span><span class="n">HttpHeaders</span><span class="o">.</span><span class="n">PopulateQueryMetrics</span><span class="p">]</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="s1">&#39;populateQueryMetrics&#39;</span><span class="p">]</span>
 
-    <span class="k">if</span> <span class="n">cosmos_client</span><span class="o">.</span><span class="n">master_key</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">cosmos_client_connection</span><span class="o">.</span><span class="n">master_key</span><span class="p">:</span>
         <span class="n">headers</span><span class="p">[</span><span class="n">http_constants</span><span class="o">.</span><span class="n">HttpHeaders</span><span class="o">.</span><span class="n">XDate</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
             <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%a</span><span class="s1">, </span><span class="si">%d</span><span class="s1"> %b %Y %H:%M:%S GMT&#39;</span><span class="p">))</span>
 
-    <span class="k">if</span> <span class="n">cosmos_client</span><span class="o">.</span><span class="n">master_key</span> <span class="ow">or</span> <span class="n">cosmos_client</span><span class="o">.</span><span class="n">resource_tokens</span><span class="p">:</span>
-        <span class="n">authorization</span> <span class="o">=</span> <span class="n">auth</span><span class="o">.</span><span class="n">GetAuthorizationHeader</span><span class="p">(</span><span class="n">cosmos_client</span><span class="p">,</span>
+    <span class="k">if</span> <span class="n">cosmos_client_connection</span><span class="o">.</span><span class="n">master_key</span> <span class="ow">or</span> <span class="n">cosmos_client_connection</span><span class="o">.</span><span class="n">resource_tokens</span><span class="p">:</span>
+        <span class="n">authorization</span> <span class="o">=</span> <span class="n">auth</span><span class="o">.</span><span class="n">GetAuthorizationHeader</span><span class="p">(</span><span class="n">cosmos_client_connection</span><span class="p">,</span>
                                         <span class="n">verb</span><span class="p">,</span>
                                         <span class="n">path</span><span class="p">,</span>
                                         <span class="n">resource_id</span><span class="p">,</span>
