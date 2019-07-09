@@ -302,76 +302,32 @@
   <div class="section" id="module-azure.mgmt.containerservice.v2018_08_01_preview.models">
 <span id="azure-mgmt-containerservice-v2018-08-01-preview-models-module"></span><h1>azure.mgmt.containerservice.v2018_08_01_preview.models module<a class="headerlink" href="#module-azure.mgmt.containerservice.v2018_08_01_preview.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.OperationValue">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">OperationValue</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/operation_value_py3.html#OperationValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.OperationValue" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceDiagnosticsProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceDiagnosticsProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">vm_diagnostics</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ContainerServiceDiagnosticsProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceDiagnosticsProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Describes the properties of a Compute Operation value.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The origin of the compute operation.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the compute operation.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.apimanagement.models.html#azure.mgmt.apimanagement.models.PolicyScopeContract.operation" title="azure.mgmt.apimanagement.models.PolicyScopeContract.operation"><strong>operation</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The display name of the compute operation.</p></li>
-<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.resource" title="azure.core.polling.async_poller.AsyncPollingMethod.resource"><strong>resource</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The display name of the resource the operation applies to.</p></li>
-<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The description of the operation.</p></li>
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource provider for the operation.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.Resource">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.Resource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The Resource model definition.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
+<p>Profile for diagnostics on the container service cluster.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.TagsObject">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">TagsObject</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/tags_object_py3.html#TagsObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.TagsObject" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Tags object for patch operations.</p>
-<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p>
+<dd class="field-odd"><p><strong>vm_diagnostics</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceVMDiagnostics" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceVMDiagnostics"><em>ContainerServiceVMDiagnostics</em></a>) – Required. Profile for diagnostics on the container
+service VMs.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterServicePrincipalProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterServicePrincipalProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">client_id: str</em>, <em class="sig-param">secret: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/managed_cluster_service_principal_profile_py3.html#ManagedClusterServicePrincipalProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterServicePrincipalProfile" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceLinuxProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceLinuxProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">admin_username: str</em>, <em class="sig-param">ssh</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ContainerServiceLinuxProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceLinuxProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Information about a service principal identity for the cluster to use for
-manipulating Azure APIs.</p>
+<p>Profile for Linux VMs in the container service cluster.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>client_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The ID for the service principal.</p></li>
-<li><p><strong>secret</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The secret password associated with the service principal
-in plain text.</p></li>
+<li><p><strong>admin_username</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The administrator username to use for
+Linux VMs.</p></li>
+<li><p><strong>ssh</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshConfiguration" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshConfiguration"><em>ContainerServiceSshConfiguration</em></a>) – Required. SSH configuration for Linux-based VMs running on
+Azure.</p></li>
 </ul>
 </dd>
 </dl>
@@ -379,7 +335,7 @@ in plain text.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceMasterProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceMasterProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">dns_prefix: str</em>, <em class="sig-param">vm_size</em>, <em class="sig-param">count: int = 1</em>, <em class="sig-param">os_disk_size_gb: int = None</em>, <em class="sig-param">vnet_subnet_id: str = None</em>, <em class="sig-param">first_consecutive_static_ip: str = '10.240.255.5'</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_master_profile_py3.html#ContainerServiceMasterProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceMasterProfile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceMasterProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">dns_prefix: str</em>, <em class="sig-param">vm_size</em>, <em class="sig-param">count: int = 1</em>, <em class="sig-param">os_disk_size_gb: int = None</em>, <em class="sig-param">vnet_subnet_id: str = None</em>, <em class="sig-param">first_consecutive_static_ip: str = '10.240.255.5'</em>, <em class="sig-param">storage_profile=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ContainerServiceMasterProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceMasterProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Profile for the container service master.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -465,8 +421,242 @@ choose for you based on the orchestrator choice. Possible values include:
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceNetworkProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceNetworkProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">network_plugin='kubenet'</em>, <em class="sig-param">network_policy=None</em>, <em class="sig-param">pod_cidr: str = '10.244.0.0/16'</em>, <em class="sig-param">service_cidr: str = '10.0.0.0/16'</em>, <em class="sig-param">dns_service_ip: str = '10.0.0.10'</em>, <em class="sig-param">docker_bridge_cidr: str = '172.17.0.1/16'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ContainerServiceNetworkProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceNetworkProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Profile of network configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>network_plugin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPlugin" title="azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPlugin"><em>NetworkPlugin</em></a>) – Network plugin used for building Kubernetes
+network. Possible values include: ‘azure’, ‘kubenet’. Default value:
+“kubenet” .</p></li>
+<li><p><strong>network_policy</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPolicy" title="azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPolicy"><em>NetworkPolicy</em></a>) – Network policy used for building Kubernetes
+network. Possible values include: ‘calico’</p></li>
+<li><p><strong>pod_cidr</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A CIDR notation IP range from which to assign pod IPs
+when kubenet is used. Default value: “10.244.0.0/16” .</p></li>
+<li><p><strong>service_cidr</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A CIDR notation IP range from which to assign service
+cluster IPs. It must not overlap with any Subnet IP ranges. Default value:
+“10.0.0.0/16” .</p></li>
+<li><p><strong>dns_service_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An IP address assigned to the Kubernetes DNS
+service. It must be within the Kubernetes service address range specified
+in serviceCidr. Default value: “10.0.0.10” .</p></li>
+<li><p><strong>docker_bridge_cidr</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A CIDR notation IP range assigned to the Docker
+bridge network. It must not overlap with any Subnet IP ranges or the
+Kubernetes service address range. Default value: “172.17.0.1/16” .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceSshConfiguration</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">public_keys</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ContainerServiceSshConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>SSH configuration for Linux-based VMs running on Azure.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>public_keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshPublicKey" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshPublicKey"><em>ContainerServiceSshPublicKey</em></a><em>]</em>) – Required. The list of SSH public keys used to
+authenticate with Linux-based VMs. Only expect one key specified.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshPublicKey">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceSshPublicKey</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key_data: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ContainerServiceSshPublicKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshPublicKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Contains information about SSH certificate public key data.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Certificate public key used to authenticate
+with VMs through SSH. The certificate must be in PEM format with or
+without headers.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceVMDiagnostics">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceVMDiagnostics</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">enabled: bool</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ContainerServiceVMDiagnostics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceVMDiagnostics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Profile for diagnostics on the container service VMs.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Required. Whether the VM diagnostic agent is provisioned
+on the VM.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>storage_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URI of the storage account where diagnostics are
+stored.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceWindowsProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceWindowsProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">admin_username: str</em>, <em class="sig-param">admin_password: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ContainerServiceWindowsProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceWindowsProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Profile for Windows VMs in the container service cluster.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>admin_username</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The administrator username to use for
+Windows VMs.</p></li>
+<li><p><strong>admin_password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The administrator password to use for
+Windows VMs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.CredentialResult">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">CredentialResult</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#CredentialResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.CredentialResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The credential result response.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the credential.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value" title="azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value"><strong>value</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytearray" title="(in Python v3.5)"><em>bytearray</em></a>) – Base64-encoded Kubernetes configuration file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.CredentialResults">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">CredentialResults</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#CredentialResults"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.CredentialResults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The list of credential result response.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>kubeconfigs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.CredentialResult" title="azure.mgmt.containerservice.v2018_08_01_preview.models.CredentialResult"><em>CredentialResult</em></a><em>]</em>) – Base64-encoded Kubernetes configuration file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedCluster">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedCluster</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">kubernetes_version: str = None</em>, <em class="sig-param">dns_prefix: str = None</em>, <em class="sig-param">agent_pool_profiles=None</em>, <em class="sig-param">linux_profile=None</em>, <em class="sig-param">service_principal_profile=None</em>, <em class="sig-param">addon_profiles=None</em>, <em class="sig-param">enable_rbac: bool = None</em>, <em class="sig-param">network_profile=None</em>, <em class="sig-param">aad_profile=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ManagedCluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedCluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.containerservice.v2018_08_01_preview.models._models_py3.Resource</span></code></p>
+<p>Managed cluster.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The current deployment or provisioning state,
+which only appears in the response.</p></li>
+<li><p><strong>fqdn</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – FQDN for the master pool.</p></li>
+<li><p><strong>node_resource_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group containing agent
+pool nodes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>kubernetes_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Version of Kubernetes specified when creating
+the managed cluster.</p></li>
+<li><p><strong>dns_prefix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – DNS prefix specified when creating the managed cluster.</p></li>
+<li><p><strong>agent_pool_profiles</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAgentPoolProfile" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAgentPoolProfile"><em>ManagedClusterAgentPoolProfile</em></a><em>]</em>) – Properties of the agent pool.</p></li>
+<li><p><strong>linux_profile</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceLinuxProfile" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceLinuxProfile"><em>ContainerServiceLinuxProfile</em></a>) – Profile for Linux VMs in the container service
+cluster.</p></li>
+<li><p><strong>service_principal_profile</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterServicePrincipalProfile" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterServicePrincipalProfile"><em>ManagedClusterServicePrincipalProfile</em></a>) – Information about a service principal
+identity for the cluster to use for manipulating Azure APIs.</p></li>
+<li><p><strong>addon_profiles</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>,
+</em><a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAddonProfile" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAddonProfile"><em>ManagedClusterAddonProfile</em></a><em>]</em>) – Profile of managed cluster add-on.</p></li>
+<li><p><strong>enable_rbac</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to enable Kubernetes Role-Based Access
+Control.</p></li>
+<li><p><strong>network_profile</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceNetworkProfile" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceNetworkProfile"><em>ContainerServiceNetworkProfile</em></a>) – Profile of network configuration.</p></li>
+<li><p><strong>aad_profile</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAADProfile" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAADProfile"><em>ManagedClusterAADProfile</em></a>) – Profile of Azure Active Directory configuration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAADProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterAADProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">client_app_id: str</em>, <em class="sig-param">server_app_id: str</em>, <em class="sig-param">server_app_secret: str = None</em>, <em class="sig-param">tenant_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ManagedClusterAADProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAADProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>AADProfile specifies attributes for Azure Active Directory integration.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client_app_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The client AAD application ID.</p></li>
+<li><p><strong>server_app_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The server AAD application ID.</p></li>
+<li><p><strong>server_app_secret</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The server AAD application secret.</p></li>
+<li><p><strong>tenant_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The AAD tenant ID to use for authentication. If not
+specified, will use the tenant of the deployment subscription.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAccessProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterAccessProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">kube_config: bytearray = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ManagedClusterAccessProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAccessProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.containerservice.v2018_08_01_preview.models._models_py3.Resource</span></code></p>
+<p>Managed cluster Access Profile.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>kube_config</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytearray" title="(in Python v3.5)"><em>bytearray</em></a>) – Base64-encoded Kubernetes configuration file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAddonProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterAddonProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">enabled: bool</em>, <em class="sig-param">config=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ManagedClusterAddonProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAddonProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A Kubernetes add-on profile for a managed cluster.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Required. Whether the add-on is enabled or not.</p></li>
+<li><p><strong>config</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key-value pairs for configuring an add-on.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAgentPoolProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterAgentPoolProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">vm_size</em>, <em class="sig-param">count: int = 1</em>, <em class="sig-param">os_disk_size_gb: int = None</em>, <em class="sig-param">vnet_subnet_id: str = None</em>, <em class="sig-param">max_pods: int = None</em>, <em class="sig-param">os_type='Linux'</em>, <em class="sig-param">max_count: int = None</em>, <em class="sig-param">min_count: int = None</em>, <em class="sig-param">enable_auto_scaling: bool = None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/managed_cluster_agent_pool_profile_py3.html#ManagedClusterAgentPoolProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAgentPoolProfile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterAgentPoolProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">vm_size</em>, <em class="sig-param">count: int = 1</em>, <em class="sig-param">os_disk_size_gb: int = None</em>, <em class="sig-param">vnet_subnet_id: str = None</em>, <em class="sig-param">max_pods: int = None</em>, <em class="sig-param">os_type='Linux'</em>, <em class="sig-param">max_count: int = None</em>, <em class="sig-param">min_count: int = None</em>, <em class="sig-param">enable_auto_scaling: bool = None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ManagedClusterAgentPoolProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAgentPoolProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Profile for the container service agent pool.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -552,260 +742,8 @@ values include: ‘VirtualMachineScaleSets’, ‘AvailabilitySet’</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceWindowsProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceWindowsProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">admin_username: str</em>, <em class="sig-param">admin_password: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_windows_profile_py3.html#ContainerServiceWindowsProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceWindowsProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Profile for Windows VMs in the container service cluster.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>admin_username</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The administrator username to use for
-Windows VMs.</p></li>
-<li><p><strong>admin_password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The administrator password to use for
-Windows VMs.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshPublicKey">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceSshPublicKey</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">key_data: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_ssh_public_key_py3.html#ContainerServiceSshPublicKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshPublicKey" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Contains information about SSH certificate public key data.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Certificate public key used to authenticate
-with VMs through SSH. The certificate must be in PEM format with or
-without headers.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshConfiguration">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceSshConfiguration</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">public_keys</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_ssh_configuration_py3.html#ContainerServiceSshConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshConfiguration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>SSH configuration for Linux-based VMs running on Azure.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>public_keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshPublicKey" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshPublicKey"><em>ContainerServiceSshPublicKey</em></a><em>]</em>) – Required. The list of SSH public keys used to
-authenticate with Linux-based VMs. Only expect one key specified.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceLinuxProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceLinuxProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">admin_username: str</em>, <em class="sig-param">ssh</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_linux_profile_py3.html#ContainerServiceLinuxProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceLinuxProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Profile for Linux VMs in the container service cluster.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>admin_username</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The administrator username to use for
-Linux VMs.</p></li>
-<li><p><strong>ssh</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshConfiguration" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceSshConfiguration"><em>ContainerServiceSshConfiguration</em></a>) – Required. SSH configuration for Linux-based VMs running on
-Azure.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceNetworkProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceNetworkProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">network_plugin='kubenet'</em>, <em class="sig-param">network_policy=None</em>, <em class="sig-param">pod_cidr: str = '10.244.0.0/16'</em>, <em class="sig-param">service_cidr: str = '10.0.0.0/16'</em>, <em class="sig-param">dns_service_ip: str = '10.0.0.10'</em>, <em class="sig-param">docker_bridge_cidr: str = '172.17.0.1/16'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_network_profile_py3.html#ContainerServiceNetworkProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceNetworkProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Profile of network configuration.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>network_plugin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPlugin" title="azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPlugin"><em>NetworkPlugin</em></a>) – Network plugin used for building Kubernetes
-network. Possible values include: ‘azure’, ‘kubenet’. Default value:
-“kubenet” .</p></li>
-<li><p><strong>network_policy</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPolicy" title="azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPolicy"><em>NetworkPolicy</em></a>) – Network policy used for building Kubernetes
-network. Possible values include: ‘calico’</p></li>
-<li><p><strong>pod_cidr</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A CIDR notation IP range from which to assign pod IPs
-when kubenet is used. Default value: “10.244.0.0/16” .</p></li>
-<li><p><strong>service_cidr</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A CIDR notation IP range from which to assign service
-cluster IPs. It must not overlap with any Subnet IP ranges. Default value:
-“10.0.0.0/16” .</p></li>
-<li><p><strong>dns_service_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An IP address assigned to the Kubernetes DNS
-service. It must be within the Kubernetes service address range specified
-in serviceCidr. Default value: “10.0.0.10” .</p></li>
-<li><p><strong>docker_bridge_cidr</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A CIDR notation IP range assigned to the Docker
-bridge network. It must not overlap with any Subnet IP ranges or the
-Kubernetes service address range. Default value: “172.17.0.1/16” .</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceVMDiagnostics">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceVMDiagnostics</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">enabled: bool</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_vm_diagnostics_py3.html#ContainerServiceVMDiagnostics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceVMDiagnostics" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Profile for diagnostics on the container service VMs.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Required. Whether the VM diagnostic agent is provisioned
-on the VM.</p>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>storage_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URI of the storage account where diagnostics are
-stored.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceDiagnosticsProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceDiagnosticsProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">vm_diagnostics</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_diagnostics_profile_py3.html#ContainerServiceDiagnosticsProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceDiagnosticsProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Profile for diagnostics on the container service cluster.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>vm_diagnostics</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceVMDiagnostics" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceVMDiagnostics"><em>ContainerServiceVMDiagnostics</em></a>) – Required. Profile for diagnostics on the container
-service VMs.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAddonProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterAddonProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">enabled: bool</em>, <em class="sig-param">config=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/managed_cluster_addon_profile_py3.html#ManagedClusterAddonProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAddonProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A Kubernetes add-on profile for a managed cluster.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Required. Whether the add-on is enabled or not.</p></li>
-<li><p><strong>config</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key-value pairs for configuring an add-on.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAADProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterAADProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">client_app_id: str</em>, <em class="sig-param">server_app_id: str</em>, <em class="sig-param">server_app_secret: str = None</em>, <em class="sig-param">tenant_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/managed_cluster_aad_profile_py3.html#ManagedClusterAADProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAADProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>AADProfile specifies attributes for Azure Active Directory integration.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>client_app_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The client AAD application ID.</p></li>
-<li><p><strong>server_app_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The server AAD application ID.</p></li>
-<li><p><strong>server_app_secret</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The server AAD application secret.</p></li>
-<li><p><strong>tenant_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The AAD tenant ID to use for authentication. If not
-specified, will use the tenant of the deployment subscription.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedCluster">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedCluster</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">kubernetes_version: str = None</em>, <em class="sig-param">dns_prefix: str = None</em>, <em class="sig-param">agent_pool_profiles=None</em>, <em class="sig-param">linux_profile=None</em>, <em class="sig-param">service_principal_profile=None</em>, <em class="sig-param">addon_profiles=None</em>, <em class="sig-param">enable_rbac: bool = None</em>, <em class="sig-param">network_profile=None</em>, <em class="sig-param">aad_profile=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/managed_cluster_py3.html#ManagedCluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedCluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.containerservice.v2018_08_01_preview.models.resource_py3.Resource</span></code></p>
-<p>Managed cluster.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
-<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The current deployment or provisioning state,
-which only appears in the response.</p></li>
-<li><p><strong>fqdn</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – FQDN for the master pool.</p></li>
-<li><p><strong>node_resource_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group containing agent
-pool nodes.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
-<li><p><strong>kubernetes_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Version of Kubernetes specified when creating
-the managed cluster.</p></li>
-<li><p><strong>dns_prefix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – DNS prefix specified when creating the managed cluster.</p></li>
-<li><p><strong>agent_pool_profiles</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAgentPoolProfile" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAgentPoolProfile"><em>ManagedClusterAgentPoolProfile</em></a><em>]</em>) – Properties of the agent pool.</p></li>
-<li><p><strong>linux_profile</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceLinuxProfile" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceLinuxProfile"><em>ContainerServiceLinuxProfile</em></a>) – Profile for Linux VMs in the container service
-cluster.</p></li>
-<li><p><strong>service_principal_profile</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterServicePrincipalProfile" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterServicePrincipalProfile"><em>ManagedClusterServicePrincipalProfile</em></a>) – Information about a service principal
-identity for the cluster to use for manipulating Azure APIs.</p></li>
-<li><p><strong>addon_profiles</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>,
-</em><a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAddonProfile" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAddonProfile"><em>ManagedClusterAddonProfile</em></a><em>]</em>) – Profile of managed cluster add-on.</p></li>
-<li><p><strong>enable_rbac</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to enable Kubernetes Role-Based Access
-Control.</p></li>
-<li><p><strong>network_profile</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceNetworkProfile" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceNetworkProfile"><em>ContainerServiceNetworkProfile</em></a>) – Profile of network configuration.</p></li>
-<li><p><strong>aad_profile</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAADProfile" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAADProfile"><em>ManagedClusterAADProfile</em></a>) – Profile of Azure Active Directory configuration.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.OrchestratorProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">OrchestratorProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">orchestrator_type: str</em>, <em class="sig-param">orchestrator_version: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/orchestrator_profile_py3.html#OrchestratorProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.OrchestratorProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Contains information about orchestrator.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>orchestrator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Orchestrator type.</p></li>
-<li><p><strong>orchestrator_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Orchestrator version (major, minor,
-patch).</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAccessProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterAccessProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">kube_config: bytearray = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/managed_cluster_access_profile_py3.html#ManagedClusterAccessProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterAccessProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.containerservice.v2018_08_01_preview.models.resource_py3.Resource</span></code></p>
-<p>Managed cluster Access Profile.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
-<li><p><strong>kube_config</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytearray" title="(in Python v3.5)"><em>bytearray</em></a>) – Base64-encoded Kubernetes configuration file.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterPoolUpgradeProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterPoolUpgradeProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">kubernetes_version: str</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">os_type='Linux'</em>, <em class="sig-param">upgrades=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/managed_cluster_pool_upgrade_profile_py3.html#ManagedClusterPoolUpgradeProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterPoolUpgradeProfile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterPoolUpgradeProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">kubernetes_version: str</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">os_type='Linux'</em>, <em class="sig-param">upgrades=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ManagedClusterPoolUpgradeProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterPoolUpgradeProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The list of available upgrade versions.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -827,8 +765,26 @@ upgrade.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterServicePrincipalProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterServicePrincipalProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">client_id: str</em>, <em class="sig-param">secret: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ManagedClusterServicePrincipalProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterServicePrincipalProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Information about a service principal identity for the cluster to use for
+manipulating Azure APIs.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The ID for the service principal.</p></li>
+<li><p><strong>secret</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The secret password associated with the service principal
+in plain text.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterUpgradeProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterUpgradeProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">control_plane_profile</em>, <em class="sig-param">agent_pool_profiles</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/managed_cluster_upgrade_profile_py3.html#ManagedClusterUpgradeProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterUpgradeProfile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterUpgradeProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">control_plane_profile</em>, <em class="sig-param">agent_pool_profiles</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#ManagedClusterUpgradeProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterUpgradeProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The list of available upgrades for compute pools.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -854,53 +810,97 @@ versions for agent pools.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.CredentialResult">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">CredentialResult</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/credential_result_py3.html#CredentialResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.CredentialResult" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.OperationValue">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">OperationValue</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#OperationValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.OperationValue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The credential result response.</p>
+<p>Describes the properties of a Compute Operation value.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the credential.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value" title="azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value"><strong>value</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytearray" title="(in Python v3.5)"><em>bytearray</em></a>) – Base64-encoded Kubernetes configuration file.</p></li>
+<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The origin of the compute operation.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the compute operation.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.apimanagement.models.html#azure.mgmt.apimanagement.models.PolicyScopeContract.operation" title="azure.mgmt.apimanagement.models.PolicyScopeContract.operation"><strong>operation</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The display name of the compute operation.</p></li>
+<li><p><a class="reference internal" href="azure.core.polling.html#azure.core.polling.async_poller.AsyncPollingMethod.resource" title="azure.core.polling.async_poller.AsyncPollingMethod.resource"><strong>resource</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The display name of the resource the operation applies to.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The description of the operation.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource provider for the operation.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.CredentialResults">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">CredentialResults</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/credential_results_py3.html#CredentialResults"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.CredentialResults" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.OrchestratorProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">OrchestratorProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">orchestrator_type: str</em>, <em class="sig-param">orchestrator_version: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#OrchestratorProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.OrchestratorProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The list of credential result response.</p>
+<p>Contains information about orchestrator.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>orchestrator_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Orchestrator type.</p></li>
+<li><p><strong>orchestrator_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Orchestrator version (major, minor,
+patch).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Resource model definition.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><strong>kubeconfigs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.CredentialResult" title="azure.mgmt.containerservice.v2018_08_01_preview.models.CredentialResult"><em>CredentialResult</em></a><em>]</em>) – Base64-encoded Kubernetes configuration file.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.TagsObject">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">TagsObject</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_models_py3.html#TagsObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.TagsObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Tags object for patch operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.OperationValuePaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">OperationValuePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/operation_value_paged.html#OperationValuePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.OperationValuePaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">OperationValuePaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_paged_models.html#OperationValuePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.OperationValuePaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.OperationValue" title="azure.mgmt.containerservice.v2018_08_01_preview.models.OperationValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationValue</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/managed_cluster_paged.html#ManagedClusterPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ManagedClusterPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_paged_models.html#ManagedClusterPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedClusterPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedCluster" title="azure.mgmt.containerservice.v2018_08_01_preview.models.ManagedCluster"><code class="xref py py-class docutils literal notranslate"><span class="pre">ManagedCluster</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceStorageProfileTypes">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceStorageProfileTypes</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_client_enums.html#ContainerServiceStorageProfileTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceStorageProfileTypes" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceStorageProfileTypes</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_container_service_client_enums.html#ContainerServiceStorageProfileTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceStorageProfileTypes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -917,7 +917,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceVMSizeTypes">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceVMSizeTypes</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_client_enums.html#ContainerServiceVMSizeTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceVMSizeTypes" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">ContainerServiceVMSizeTypes</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_container_service_client_enums.html#ContainerServiceVMSizeTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.ContainerServiceVMSizeTypes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1794,7 +1794,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.OSType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">OSType</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_client_enums.html#OSType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.OSType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">OSType</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_container_service_client_enums.html#OSType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.OSType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1811,7 +1811,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.AgentPoolType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">AgentPoolType</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_client_enums.html#AgentPoolType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.AgentPoolType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">AgentPoolType</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_container_service_client_enums.html#AgentPoolType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.AgentPoolType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1828,7 +1828,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPlugin">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">NetworkPlugin</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_client_enums.html#NetworkPlugin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPlugin" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">NetworkPlugin</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_container_service_client_enums.html#NetworkPlugin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPlugin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -1845,7 +1845,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPolicy">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">NetworkPolicy</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/container_service_client_enums.html#NetworkPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2018_08_01_preview.models.</code><code class="sig-name descname">NetworkPolicy</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2018_08_01_preview/models/_container_service_client_enums.html#NetworkPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2018_08_01_preview.models.NetworkPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">

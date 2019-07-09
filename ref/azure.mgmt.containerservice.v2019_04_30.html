@@ -312,18 +312,39 @@
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.containerservice.v2019_04_30" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2019_04_30.ContainerServiceClient">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.</code><code class="sig-name descname">ContainerServiceClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/container_service_client.html#ContainerServiceClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.ContainerServiceClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.</code><code class="sig-name descname">ContainerServiceClient</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/_container_service_client.html#ContainerServiceClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.ContainerServiceClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
 <p>The Container Service Client.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>ContainerServiceClientConfiguration</em>) – Configuration for client.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<a class="reference internal" href="azure.mgmt.containerservice.html#azure.mgmt.containerservice.ContainerServiceClientConfiguration" title="azure.mgmt.containerservice.ContainerServiceClientConfiguration"><em>ContainerServiceClientConfiguration</em></a>) – Configuration for client.</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.containerservice.html#azure.mgmt.containerservice.ContainerServiceClient.open_shift_managed_clusters" title="azure.mgmt.containerservice.ContainerServiceClient.open_shift_managed_clusters"><strong>open_shift_managed_clusters</strong></a> (<a class="reference internal" href="azure.mgmt.containerservice.v2019_04_30.operations.html#azure.mgmt.containerservice.v2019_04_30.operations.OpenShiftManagedClustersOperations" title="azure.mgmt.containerservice.v2019_04_30.operations.OpenShiftManagedClustersOperations"><em>azure.mgmt.containerservice.v2019_04_30.operations.OpenShiftManagedClustersOperations</em></a>) – OpenShiftManagedClusters operations</p></li>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subscription credentials which uniquely identify
+Microsoft Azure subscription. The subscription ID forms part of the URI
+for every service call.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2019_04_30.ContainerServiceClientConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.</code><code class="sig-name descname">ContainerServiceClientConfiguration</code><span class="sig-paren">(</span><em class="sig-param">credentials</em>, <em class="sig-param">subscription_id</em>, <em class="sig-param">base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/_configuration.html#ContainerServiceClientConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.ContainerServiceClientConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrestazure.azure_configuration.AzureConfiguration</span></code></p>
+<p>Configuration for ContainerServiceClient
+Note that all parameters used to create this instance are saved as instance
+attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
 <span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
 <li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subscription credentials which uniquely identify

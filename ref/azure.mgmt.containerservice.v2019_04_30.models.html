@@ -302,72 +302,8 @@
   <div class="section" id="module-azure.mgmt.containerservice.v2019_04_30.models">
 <span id="azure-mgmt-containerservice-v2019-04-30-models-module"></span><h1>azure.mgmt.containerservice.v2019_04_30.models module<a class="headerlink" href="#module-azure.mgmt.containerservice.v2019_04_30.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="azure.mgmt.containerservice.v2019_04_30.models.Resource">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.Resource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The Resource model definition.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2019_04_30.models.PurchasePlan">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">PurchasePlan</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">product: str = None</em>, <em class="sig-param">promotion_code: str = None</em>, <em class="sig-param">publisher: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/purchase_plan_py3.html#PurchasePlan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.PurchasePlan" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Used for establishing the purchase context of any 3rd Party artifact
-through MarketPlace.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The plan ID.</p></li>
-<li><p><strong>product</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the product of the image from the marketplace.
-This is the same value as Offer under the imageReference element.</p></li>
-<li><p><strong>promotion_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The promotion code.</p></li>
-<li><p><strong>publisher</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The plan ID.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftRouterProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftRouterProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/open_shift_router_profile_py3.html#OpenShiftRouterProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftRouterProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Represents an OpenShift router.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the router profile.</p>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>public_subdomain</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – DNS subdomain for OpenShift router.</p></li>
-<li><p><strong>fqdn</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Auto-allocated FQDN for the OpenShift router.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.containerservice.v2019_04_30.models.NetworkProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">NetworkProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">vnet_cidr: str = '10.0.0.0/8'</em>, <em class="sig-param">peer_vnet_id: str = None</em>, <em class="sig-param">vnet_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/network_profile_py3.html#NetworkProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.NetworkProfile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">NetworkProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">vnet_cidr: str = '10.0.0.0/8'</em>, <em class="sig-param">peer_vnet_id: str = None</em>, <em class="sig-param">vnet_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_models_py3.html#NetworkProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.NetworkProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Represents the OpenShift networking configuration.</p>
 <dl class="field-list simple">
@@ -383,126 +319,9 @@ sending a request.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterMasterPoolProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterMasterPoolProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">count: int</em>, <em class="sig-param">vm_size</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">subnet_cidr: str = None</em>, <em class="sig-param">os_type='Linux'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/open_shift_managed_cluster_master_pool_profile_py3.html#OpenShiftManagedClusterMasterPoolProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterMasterPoolProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>OpenShiftManagedClusterMaterPoolProfile contains configuration for
-OpenShift master VMs.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Unique name of the master pool profile in the context of the
-subscription and resource group.</p></li>
-<li><p><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. Number of masters (VMs) to host docker containers.
-The default value is 3.</p></li>
-<li><p><strong>vm_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftContainerServiceVMSize" title="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftContainerServiceVMSize"><em>OpenShiftContainerServiceVMSize</em></a>) – Required. Size of agent VMs. Possible values include:
-‘Standard_D2s_v3’, ‘Standard_D4s_v3’, ‘Standard_D8s_v3’,
-‘Standard_D16s_v3’, ‘Standard_D32s_v3’, ‘Standard_D64s_v3’,
-‘Standard_DS4_v2’, ‘Standard_DS5_v2’, ‘Standard_F8s_v2’,
-‘Standard_F16s_v2’, ‘Standard_F32s_v2’, ‘Standard_F64s_v2’,
-‘Standard_F72s_v2’, ‘Standard_F8s’, ‘Standard_F16s’, ‘Standard_E4s_v3’,
-‘Standard_E8s_v3’, ‘Standard_E16s_v3’, ‘Standard_E20s_v3’,
-‘Standard_E32s_v3’, ‘Standard_E64s_v3’, ‘Standard_GS2’, ‘Standard_GS3’,
-‘Standard_GS4’, ‘Standard_GS5’, ‘Standard_DS12_v2’, ‘Standard_DS13_v2’,
-‘Standard_DS14_v2’, ‘Standard_DS15_v2’, ‘Standard_L4s’, ‘Standard_L8s’,
-‘Standard_L16s’, ‘Standard_L32s’</p></li>
-<li><p><strong>subnet_cidr</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subnet CIDR for the peering.</p></li>
-<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OSType" title="azure.mgmt.containerservice.v2019_04_30.models.OSType"><em>OSType</em></a>) – OsType to be used to specify os type. Choose from Linux
-and Windows. Default to Linux. Possible values include: ‘Linux’,
-‘Windows’. Default value: “Linux” .</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterAgentPoolProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterAgentPoolProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">count: int</em>, <em class="sig-param">vm_size</em>, <em class="sig-param">subnet_cidr: str = '10.0.0.0/24'</em>, <em class="sig-param">os_type='Linux'</em>, <em class="sig-param">role=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/open_shift_managed_cluster_agent_pool_profile_py3.html#OpenShiftManagedClusterAgentPoolProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterAgentPoolProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Defines the configuration of the OpenShift cluster VMs.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Unique name of the pool profile in the context of
-the subscription and resource group.</p></li>
-<li><p><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. Number of agents (VMs) to host docker containers.</p></li>
-<li><p><strong>vm_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftContainerServiceVMSize" title="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftContainerServiceVMSize"><em>OpenShiftContainerServiceVMSize</em></a>) – Required. Size of agent VMs. Possible values include:
-‘Standard_D2s_v3’, ‘Standard_D4s_v3’, ‘Standard_D8s_v3’,
-‘Standard_D16s_v3’, ‘Standard_D32s_v3’, ‘Standard_D64s_v3’,
-‘Standard_DS4_v2’, ‘Standard_DS5_v2’, ‘Standard_F8s_v2’,
-‘Standard_F16s_v2’, ‘Standard_F32s_v2’, ‘Standard_F64s_v2’,
-‘Standard_F72s_v2’, ‘Standard_F8s’, ‘Standard_F16s’, ‘Standard_E4s_v3’,
-‘Standard_E8s_v3’, ‘Standard_E16s_v3’, ‘Standard_E20s_v3’,
-‘Standard_E32s_v3’, ‘Standard_E64s_v3’, ‘Standard_GS2’, ‘Standard_GS3’,
-‘Standard_GS4’, ‘Standard_GS5’, ‘Standard_DS12_v2’, ‘Standard_DS13_v2’,
-‘Standard_DS14_v2’, ‘Standard_DS15_v2’, ‘Standard_L4s’, ‘Standard_L8s’,
-‘Standard_L16s’, ‘Standard_L32s’</p></li>
-<li><p><strong>subnet_cidr</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subnet CIDR for the peering. Default value:
-“10.0.0.0/24” .</p></li>
-<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OSType" title="azure.mgmt.containerservice.v2019_04_30.models.OSType"><em>OSType</em></a>) – OsType to be used to specify os type. Choose from Linux
-and Windows. Default to Linux. Possible values include: ‘Linux’,
-‘Windows’. Default value: “Linux” .</p></li>
-<li><p><strong>role</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftAgentPoolProfileRole" title="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftAgentPoolProfileRole"><em>OpenShiftAgentPoolProfileRole</em></a>) – Define the role of the AgentPoolProfile. Possible values
-include: ‘compute’, ‘infra’</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterBaseIdentityProvider">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterBaseIdentityProvider</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/open_shift_managed_cluster_base_identity_provider_py3.html#OpenShiftManagedClusterBaseIdentityProvider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterBaseIdentityProvider" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Structure for any Identity provider.</p>
-<p>You probably want to use the sub-classes and not this class directly. Known
-sub-classes are: OpenShiftManagedClusterAADIdentityProvider</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterIdentityProvider">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterIdentityProvider</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">provider=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/open_shift_managed_cluster_identity_provider_py3.html#OpenShiftManagedClusterIdentityProvider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterIdentityProvider" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Defines the configuration of the identity providers to be used in the
-OpenShift cluster.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the provider.</p></li>
-<li><p><strong>provider</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterBaseIdentityProvider" title="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterBaseIdentityProvider"><em>OpenShiftManagedClusterBaseIdentityProvider</em></a>) – Configuration of the provider.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterAuthProfile">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterAuthProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">identity_providers=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/open_shift_managed_cluster_auth_profile_py3.html#OpenShiftManagedClusterAuthProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterAuthProfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Defines all possible authentication profiles for the OpenShift cluster.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>identity_providers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterIdentityProvider" title="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterIdentityProvider"><em>OpenShiftManagedClusterIdentityProvider</em></a><em>]</em>) – Type of authentication profile to use.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedCluster">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedCluster</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">open_shift_version: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">network_profile=None</em>, <em class="sig-param">router_profiles=None</em>, <em class="sig-param">master_pool_profile=None</em>, <em class="sig-param">agent_pool_profiles=None</em>, <em class="sig-param">auth_profile=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/open_shift_managed_cluster_py3.html#OpenShiftManagedCluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedCluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.containerservice.v2019_04_30.models.resource_py3.Resource</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedCluster</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">open_shift_version: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">network_profile=None</em>, <em class="sig-param">router_profiles=None</em>, <em class="sig-param">master_pool_profile=None</em>, <em class="sig-param">agent_pool_profiles=None</em>, <em class="sig-param">auth_profile=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_models_py3.html#OpenShiftManagedCluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedCluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.containerservice.v2019_04_30.models._models_py3.Resource</span></code></p>
 <p>OpenShift Managed cluster.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -542,8 +361,8 @@ creating the cluster.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterAADIdentityProvider">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterAADIdentityProvider</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">client_id: str = None</em>, <em class="sig-param">secret: str = None</em>, <em class="sig-param">tenant_id: str = None</em>, <em class="sig-param">customer_admin_group_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/open_shift_managed_cluster_aad_identity_provider_py3.html#OpenShiftManagedClusterAADIdentityProvider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterAADIdentityProvider" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.containerservice.v2019_04_30.models.open_shift_managed_cluster_base_identity_provider_py3.OpenShiftManagedClusterBaseIdentityProvider</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterAADIdentityProvider</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">client_id: str = None</em>, <em class="sig-param">secret: str = None</em>, <em class="sig-param">tenant_id: str = None</em>, <em class="sig-param">customer_admin_group_id: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_models_py3.html#OpenShiftManagedClusterAADIdentityProvider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterAADIdentityProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.containerservice.v2019_04_30.models._models_py3.OpenShiftManagedClusterBaseIdentityProvider</span></code></p>
 <p>Defines the Identity provider for MS AAD.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
@@ -561,8 +380,189 @@ role.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterAgentPoolProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterAgentPoolProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str</em>, <em class="sig-param">count: int</em>, <em class="sig-param">vm_size</em>, <em class="sig-param">subnet_cidr: str = '10.0.0.0/24'</em>, <em class="sig-param">os_type='Linux'</em>, <em class="sig-param">role=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_models_py3.html#OpenShiftManagedClusterAgentPoolProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterAgentPoolProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Defines the configuration of the OpenShift cluster VMs.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Unique name of the pool profile in the context of
+the subscription and resource group.</p></li>
+<li><p><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. Number of agents (VMs) to host docker containers.</p></li>
+<li><p><strong>vm_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftContainerServiceVMSize" title="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftContainerServiceVMSize"><em>OpenShiftContainerServiceVMSize</em></a>) – Required. Size of agent VMs. Possible values include:
+‘Standard_D2s_v3’, ‘Standard_D4s_v3’, ‘Standard_D8s_v3’,
+‘Standard_D16s_v3’, ‘Standard_D32s_v3’, ‘Standard_D64s_v3’,
+‘Standard_DS4_v2’, ‘Standard_DS5_v2’, ‘Standard_F8s_v2’,
+‘Standard_F16s_v2’, ‘Standard_F32s_v2’, ‘Standard_F64s_v2’,
+‘Standard_F72s_v2’, ‘Standard_F8s’, ‘Standard_F16s’, ‘Standard_E4s_v3’,
+‘Standard_E8s_v3’, ‘Standard_E16s_v3’, ‘Standard_E20s_v3’,
+‘Standard_E32s_v3’, ‘Standard_E64s_v3’, ‘Standard_GS2’, ‘Standard_GS3’,
+‘Standard_GS4’, ‘Standard_GS5’, ‘Standard_DS12_v2’, ‘Standard_DS13_v2’,
+‘Standard_DS14_v2’, ‘Standard_DS15_v2’, ‘Standard_L4s’, ‘Standard_L8s’,
+‘Standard_L16s’, ‘Standard_L32s’</p></li>
+<li><p><strong>subnet_cidr</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subnet CIDR for the peering. Default value:
+“10.0.0.0/24” .</p></li>
+<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OSType" title="azure.mgmt.containerservice.v2019_04_30.models.OSType"><em>OSType</em></a>) – OsType to be used to specify os type. Choose from Linux
+and Windows. Default to Linux. Possible values include: ‘Linux’,
+‘Windows’. Default value: “Linux” .</p></li>
+<li><p><strong>role</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftAgentPoolProfileRole" title="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftAgentPoolProfileRole"><em>OpenShiftAgentPoolProfileRole</em></a>) – Define the role of the AgentPoolProfile. Possible values
+include: ‘compute’, ‘infra’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterAuthProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterAuthProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">identity_providers=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_models_py3.html#OpenShiftManagedClusterAuthProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterAuthProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Defines all possible authentication profiles for the OpenShift cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identity_providers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterIdentityProvider" title="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterIdentityProvider"><em>OpenShiftManagedClusterIdentityProvider</em></a><em>]</em>) – Type of authentication profile to use.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterBaseIdentityProvider">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterBaseIdentityProvider</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_models_py3.html#OpenShiftManagedClusterBaseIdentityProvider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterBaseIdentityProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Structure for any Identity provider.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: OpenShiftManagedClusterAADIdentityProvider</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterIdentityProvider">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterIdentityProvider</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">provider=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_models_py3.html#OpenShiftManagedClusterIdentityProvider"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterIdentityProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Defines the configuration of the identity providers to be used in the
+OpenShift cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the provider.</p></li>
+<li><p><strong>provider</strong> (<a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterBaseIdentityProvider" title="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterBaseIdentityProvider"><em>OpenShiftManagedClusterBaseIdentityProvider</em></a>) – Configuration of the provider.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterMasterPoolProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterMasterPoolProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">count: int</em>, <em class="sig-param">vm_size</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">subnet_cidr: str = None</em>, <em class="sig-param">os_type='Linux'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_models_py3.html#OpenShiftManagedClusterMasterPoolProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterMasterPoolProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>OpenShiftManagedClusterMaterPoolProfile contains configuration for
+OpenShift master VMs.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Unique name of the master pool profile in the context of the
+subscription and resource group.</p></li>
+<li><p><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. Number of masters (VMs) to host docker containers.
+The default value is 3.</p></li>
+<li><p><strong>vm_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftContainerServiceVMSize" title="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftContainerServiceVMSize"><em>OpenShiftContainerServiceVMSize</em></a>) – Required. Size of agent VMs. Possible values include:
+‘Standard_D2s_v3’, ‘Standard_D4s_v3’, ‘Standard_D8s_v3’,
+‘Standard_D16s_v3’, ‘Standard_D32s_v3’, ‘Standard_D64s_v3’,
+‘Standard_DS4_v2’, ‘Standard_DS5_v2’, ‘Standard_F8s_v2’,
+‘Standard_F16s_v2’, ‘Standard_F32s_v2’, ‘Standard_F64s_v2’,
+‘Standard_F72s_v2’, ‘Standard_F8s’, ‘Standard_F16s’, ‘Standard_E4s_v3’,
+‘Standard_E8s_v3’, ‘Standard_E16s_v3’, ‘Standard_E20s_v3’,
+‘Standard_E32s_v3’, ‘Standard_E64s_v3’, ‘Standard_GS2’, ‘Standard_GS3’,
+‘Standard_GS4’, ‘Standard_GS5’, ‘Standard_DS12_v2’, ‘Standard_DS13_v2’,
+‘Standard_DS14_v2’, ‘Standard_DS15_v2’, ‘Standard_L4s’, ‘Standard_L8s’,
+‘Standard_L16s’, ‘Standard_L32s’</p></li>
+<li><p><strong>subnet_cidr</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subnet CIDR for the peering.</p></li>
+<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OSType" title="azure.mgmt.containerservice.v2019_04_30.models.OSType"><em>OSType</em></a>) – OsType to be used to specify os type. Choose from Linux
+and Windows. Default to Linux. Possible values include: ‘Linux’,
+‘Windows’. Default value: “Linux” .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftRouterProfile">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftRouterProfile</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_models_py3.html#OpenShiftRouterProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftRouterProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents an OpenShift router.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the router profile.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>public_subdomain</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – DNS subdomain for OpenShift router.</p></li>
+<li><p><strong>fqdn</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Auto-allocated FQDN for the OpenShift router.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2019_04_30.models.PurchasePlan">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">PurchasePlan</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">name: str = None</em>, <em class="sig-param">product: str = None</em>, <em class="sig-param">promotion_code: str = None</em>, <em class="sig-param">publisher: str = None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_models_py3.html#PurchasePlan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.PurchasePlan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Used for establishing the purchase context of any 3rd Party artifact
+through MarketPlace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The plan ID.</p></li>
+<li><p><strong>product</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the product of the image from the marketplace.
+This is the same value as Offer under the imageReference element.</p></li>
+<li><p><strong>promotion_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The promotion code.</p></li>
+<li><p><strong>publisher</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The plan ID.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.containerservice.v2019_04_30.models.Resource">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">Resource</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">location: str</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_models_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Resource model definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#id" title="(in Python v3.5)"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.containerservice.v2019_04_30.models.TagsObject">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">TagsObject</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/tags_object_py3.html#TagsObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.TagsObject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">TagsObject</code><span class="sig-paren">(</span><em class="sig-param">*</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_models_py3.html#TagsObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.TagsObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Tags object for patch operations.</p>
 <dl class="field-list simple">
@@ -574,14 +574,14 @@ role.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterPaged">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/open_shift_managed_cluster_paged.html#OpenShiftManagedClusterPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterPaged" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftManagedClusterPaged</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_paged_models.html#OpenShiftManagedClusterPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedClusterPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedCluster" title="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftManagedCluster"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenShiftManagedCluster</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2019_04_30.models.OSType">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OSType</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/container_service_client_enums.html#OSType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OSType" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OSType</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_container_service_client_enums.html#OSType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OSType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -598,7 +598,7 @@ role.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftContainerServiceVMSize">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftContainerServiceVMSize</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/container_service_client_enums.html#OpenShiftContainerServiceVMSize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftContainerServiceVMSize" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftContainerServiceVMSize</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_container_service_client_enums.html#OpenShiftContainerServiceVMSize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftContainerServiceVMSize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
@@ -770,7 +770,7 @@ role.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.containerservice.v2019_04_30.models.OpenShiftAgentPoolProfileRole">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftAgentPoolProfileRole</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/container_service_client_enums.html#OpenShiftAgentPoolProfileRole"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftAgentPoolProfileRole" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.containerservice.v2019_04_30.models.</code><code class="sig-name descname">OpenShiftAgentPoolProfileRole</code><a class="reference internal" href="../_modules/azure/mgmt/containerservice/v2019_04_30/models/_container_service_client_enums.html#OpenShiftAgentPoolProfileRole"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.containerservice.v2019_04_30.models.OpenShiftAgentPoolProfileRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
