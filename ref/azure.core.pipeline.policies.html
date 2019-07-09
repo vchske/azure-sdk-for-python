@@ -464,8 +464,18 @@ if the exception has been handled and should not be forwarded to the caller.</p>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">policy</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">policy</span><span class="o">.</span><span class="n">on_exception</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+        <span class="k">raise</span>
+
+<span class="c1"># or use</span>
+<span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">exc_traceback</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -589,8 +599,31 @@ with the response.</p>
 <p><strong>Keyword arguments:</strong></p>
 <p><em>permit_redirects (bool)</em> - Whether the client allows redirects. Defaults to True.</p>
 <p><em>redirect_max (int)</em> - The maximum allowed redirects. Defaults to 30.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Configuring a redirect policy.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">RedirectPolicy</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">RedirectPolicy</span><span class="p">()</span>
+
+<span class="c1"># Client allows redirects. Defaults to True.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span><span class="o">.</span><span class="n">allow</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="c1"># The maximum allowed redirects. The default value is 30</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span><span class="o">.</span><span class="n">max_redirects</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># Alternatively you can disable redirects entirely</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">RedirectPolicy</span><span class="o">.</span><span class="n">no_redirects</span><span class="p">()</span>
+
+<span class="c1"># It can also be overridden per operation.</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">PipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">pipeline_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">permit_redirects</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">redirect_max</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="attribute">
 <dt id="azure.core.pipeline.policies.redirect.RedirectPolicy.REDIRECT_HEADERS_BLACKLIST">
@@ -698,8 +731,31 @@ Uses redirect settings to send request to redirect endpoint if necessary.</p>
 <p><strong>Keyword arguments:</strong></p>
 <p><em>permit_redirects (bool)</em> - Whether the client allows redirects. Defaults to True.</p>
 <p><em>redirect_max (int)</em> - The maximum allowed redirects. Defaults to 30.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Configuring an async redirect policy.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">AsyncRedirectPolicy</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">AsyncRedirectPolicy</span><span class="p">()</span>
+
+<span class="c1"># Client allows redirects. Defaults to True.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span><span class="o">.</span><span class="n">allow</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="c1"># The maximum allowed redirects. The default value is 30</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span><span class="o">.</span><span class="n">max_redirects</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># Alternatively you can disable redirects entirely</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">AsyncRedirectPolicy</span><span class="o">.</span><span class="n">no_redirects</span><span class="p">()</span>
+
+<span class="c1"># It can also be overridden per operation.</span>
+<span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">permit_redirects</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">redirect_max</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.policies.redirect_async.AsyncRedirectPolicy.send">
@@ -750,8 +806,62 @@ Retry policy will sleep for: <cite>{backoff factor} * (2 ** ({number of total re
 seconds. If the backoff_factor is 0.1, then the retry will sleep
 for [0.0s, 0.2s, 0.4s, …] between retries. The default value is 0.8.</p>
 <p><em>retry_backoff_max (int)</em> - The maximum back off time. Default value is 120 seconds (2 minutes).</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Configuring a retry policy.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">RetryPolicy</span>
+
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span> <span class="o">=</span> <span class="n">RetryPolicy</span><span class="p">()</span>
+
+<span class="c1"># Total number of retries to allow. Takes precedence over other counts.</span>
+<span class="c1"># Default value is 10.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">total_retries</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># How many connection-related errors to retry on.</span>
+<span class="c1"># These are errors raised before the request is sent to the remote server,</span>
+<span class="c1"># which we assume has not triggered the server to process the request. Default value is 3</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">connect_retries</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># How many times to retry on read errors.</span>
+<span class="c1"># These errors are raised after the request was sent to the server, so the</span>
+<span class="c1"># request may have side-effects. Default value is 3.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">read_retries</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># How many times to retry on bad status codes. Default value is 3.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">status_retries</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># A backoff factor to apply between attempts after the second try</span>
+<span class="c1"># (most errors are resolved immediately by a second try without a delay).</span>
+<span class="c1"># Retry policy will sleep for:</span>
+<span class="c1">#    {backoff factor} * (2 ** ({number of total retries} - 1))</span>
+<span class="c1"># seconds. If the backoff_factor is 0.1, then the retry will sleep</span>
+<span class="c1"># for [0.0s, 0.2s, 0.4s, ...] between retries.</span>
+<span class="c1"># The default value is 0.8.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">backoff_factor</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="c1"># The maximum back off time. Default value is 120 seconds (2 minutes).</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">backoff_max</span> <span class="o">=</span> <span class="mi">120</span>
+
+<span class="c1"># Alternatively you can disable redirects entirely</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span> <span class="o">=</span> <span class="n">RetryPolicy</span><span class="o">.</span><span class="n">no_retries</span><span class="p">()</span>
+
+<span class="c1"># All of these settings can also be configured per operation.</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">PipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">pipeline_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">,</span>
+    <span class="n">retry_total</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">retry_connect</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">retry_read</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">retry_status</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">retry_backoff_factor</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">retry_backoff_max</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span>
+    <span class="n">retry_on_methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="attribute">
 <dt id="azure.core.pipeline.policies.retry.RetryPolicy.BACKOFF_MAX">
@@ -979,8 +1089,61 @@ Retry policy will sleep for: <cite>{backoff factor} * (2 ** ({number of total re
 seconds. If the backoff_factor is 0.1, then the retry will sleep
 for [0.0s, 0.2s, 0.4s, …] between retries. The default value is 0.8.</p>
 <p><em>retry_backoff_max (int)</em> - The maximum back off time. Default value is 120 seconds (2 minutes).</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Configuring an async retry policy.</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">AsyncRetryPolicy</span>
+
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span> <span class="o">=</span> <span class="n">AsyncRetryPolicy</span><span class="p">()</span>
+
+<span class="c1"># Total number of retries to allow. Takes precedence over other counts.</span>
+<span class="c1"># Default value is 10.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">total_retries</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># How many connection-related errors to retry on.</span>
+<span class="c1"># These are errors raised before the request is sent to the remote server,</span>
+<span class="c1"># which we assume has not triggered the server to process the request. Default value is 3</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">connect_retries</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># How many times to retry on read errors.</span>
+<span class="c1"># These errors are raised after the request was sent to the server, so the</span>
+<span class="c1"># request may have side-effects. Default value is 3.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">read_retries</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># How many times to retry on bad status codes. Default value is 3.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">status_retries</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># A backoff factor to apply between attempts after the second try</span>
+<span class="c1"># (most errors are resolved immediately by a second try without a delay).</span>
+<span class="c1"># Retry policy will sleep for:</span>
+<span class="c1">#    {backoff factor} * (2 ** ({number of total retries} - 1))</span>
+<span class="c1"># seconds. If the backoff_factor is 0.1, then the retry will sleep</span>
+<span class="c1"># for [0.0s, 0.2s, 0.4s, ...] between retries.</span>
+<span class="c1"># The default value is 0.8.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">backoff_factor</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="c1"># The maximum back off time. Default value is 120 seconds (2 minutes).</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">backoff_max</span> <span class="o">=</span> <span class="mi">120</span>
+
+<span class="c1"># Alternatively you can disable redirects entirely</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span> <span class="o">=</span> <span class="n">AsyncRetryPolicy</span><span class="o">.</span><span class="n">no_retries</span><span class="p">()</span>
+
+<span class="c1"># All of these settings can also be configured per operation.</span>
+<span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+        <span class="n">request</span><span class="p">,</span>
+        <span class="n">retry_total</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="n">retry_connect</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">retry_read</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">retry_status</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+        <span class="n">retry_backoff_factor</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">retry_backoff_max</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+        <span class="n">retry_on_methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.policies.retry_async.AsyncRetryPolicy.send">
@@ -1116,8 +1279,24 @@ operations, and additional headers can also be added dynamically per operation.<
 <dd class="field-odd"><p><strong>base_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – Headers to send with the request.</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Configuring a headers policy.</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">HeadersPolicy</span>
+
+<span class="n">config</span><span class="o">.</span><span class="n">headers_policy</span> <span class="o">=</span> <span class="n">HeadersPolicy</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">headers_policy</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s1">&#39;CustomValue&#39;</span><span class="p">,</span> <span class="s1">&#39;Foo&#39;</span><span class="p">)</span>
+
+<span class="c1"># Or headers can be added per operation. These headers will supplement existing headers</span>
+<span class="c1"># or those defined in the config headers policy. They will also overwrite existing</span>
+<span class="c1"># identical headers.</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">PipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">pipeline_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;CustomValue&#39;</span><span class="p">:</span> <span class="s1">&#39;Bar&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.policies.universal.HeadersPolicy.add_header">
@@ -1163,8 +1342,39 @@ operations, and additional headers can also be added dynamically per operation.<
 <dd class="field-odd"><p><strong>logging_enable</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Use to enable per operation. Defaults to False.</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Configuring a network trace logging policy.</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">NetworkTraceLoggingPolicy</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="c1"># Create a logger for the &#39;azure&#39; SDK</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;azure&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+<span class="c1"># Configure a console output</span>
+<span class="n">handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+
+<span class="c1"># Configure a file output</span>
+<span class="n">file_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">file_handler</span><span class="p">)</span>
+
+<span class="c1"># Enable network trace logging. This will be logged at DEBUG level.</span>
+<span class="c1"># By default, logging is disabled.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">logging_policy</span> <span class="o">=</span> <span class="n">NetworkTraceLoggingPolicy</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">logging_policy</span><span class="o">.</span><span class="n">enable_http_logger</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="c1"># The logger can also be enabled per operation.</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">PipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">pipeline_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">logging_enable</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.policies.universal.NetworkTraceLoggingPolicy.on_request">
@@ -1208,8 +1418,26 @@ of the proxy.</p>
 </dl>
 <p><strong>Keyword argument:</strong></p>
 <p><em>proxies_use_env_settings (bool)</em> - Uses proxy settings from environment. Defaults to True.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Configuring a proxy policy.</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">ProxyPolicy</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">proxy_policy</span> <span class="o">=</span> <span class="n">ProxyPolicy</span><span class="p">()</span>
+
+<span class="c1"># Example</span>
+<span class="n">config</span><span class="o">.</span><span class="n">proxy_policy</span><span class="o">.</span><span class="n">proxies</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;http&#39;</span><span class="p">:</span> <span class="s1">&#39;http://10.10.1.10:3148&#39;</span><span class="p">}</span>
+
+<span class="c1"># Use basic auth</span>
+<span class="n">config</span><span class="o">.</span><span class="n">proxy_policy</span><span class="o">.</span><span class="n">proxies</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;https&#39;</span><span class="p">:</span> <span class="s1">&#39;http://user:password@10.10.1.10:1180/&#39;</span><span class="p">}</span>
+
+<span class="c1"># You can also configure proxies by setting the environment variables</span>
+<span class="c1"># HTTP_PROXY and HTTPS_PROXY.</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1226,8 +1454,25 @@ of the proxy.</p>
 <p><strong>Keyword arguments:</strong></p>
 <p><em>user_agent_overwrite (bool)</em> - Overwrites User-Agent when True. Defaults to False.</p>
 <p><em>user_agent_use_env (bool)</em> - Gets user-agent from environment. Defaults to True.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Configuring a user agent policy.</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">UserAgentPolicy</span>
+
+<span class="n">config</span><span class="o">.</span><span class="n">user_agent_policy</span> <span class="o">=</span> <span class="n">UserAgentPolicy</span><span class="p">()</span>
+
+<span class="c1"># The user-agent policy allows you to append a custom value to the header.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">user_agent_policy</span><span class="o">.</span><span class="n">add_user_agent</span><span class="p">(</span><span class="s2">&quot;CustomValue&quot;</span><span class="p">)</span>
+
+<span class="c1"># You can also pass in a custom value per operation to append to the end of the user-agent.</span>
+<span class="c1"># This can be used together with the policy configuration to append multiple values.</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">PipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">pipeline_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;AnotherValue&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.policies.universal.UserAgentPolicy.add_user_agent">
@@ -1318,8 +1563,18 @@ if the exception has been handled and should not be forwarded to the caller.</p>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">policy</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">policy</span><span class="o">.</span><span class="n">on_exception</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+        <span class="k">raise</span>
+
+<span class="c1"># or use</span>
+<span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">exc_traceback</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -1395,8 +1650,24 @@ operations, and additional headers can also be added dynamically per operation.<
 <dd class="field-odd"><p><strong>base_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – Headers to send with the request.</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Configuring a headers policy.</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">HeadersPolicy</span>
+
+<span class="n">config</span><span class="o">.</span><span class="n">headers_policy</span> <span class="o">=</span> <span class="n">HeadersPolicy</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">headers_policy</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s1">&#39;CustomValue&#39;</span><span class="p">,</span> <span class="s1">&#39;Foo&#39;</span><span class="p">)</span>
+
+<span class="c1"># Or headers can be added per operation. These headers will supplement existing headers</span>
+<span class="c1"># or those defined in the config headers policy. They will also overwrite existing</span>
+<span class="c1"># identical headers.</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">PipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">pipeline_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;CustomValue&#39;</span><span class="p">:</span> <span class="s1">&#39;Bar&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.policies.HeadersPolicy.add_header">
@@ -1444,8 +1715,25 @@ operations, and additional headers can also be added dynamically per operation.<
 <p><strong>Keyword arguments:</strong></p>
 <p><em>user_agent_overwrite (bool)</em> - Overwrites User-Agent when True. Defaults to False.</p>
 <p><em>user_agent_use_env (bool)</em> - Gets user-agent from environment. Defaults to True.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">Configuring a user agent policy.</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">UserAgentPolicy</span>
+
+<span class="n">config</span><span class="o">.</span><span class="n">user_agent_policy</span> <span class="o">=</span> <span class="n">UserAgentPolicy</span><span class="p">()</span>
+
+<span class="c1"># The user-agent policy allows you to append a custom value to the header.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">user_agent_policy</span><span class="o">.</span><span class="n">add_user_agent</span><span class="p">(</span><span class="s2">&quot;CustomValue&quot;</span><span class="p">)</span>
+
+<span class="c1"># You can also pass in a custom value per operation to append to the end of the user-agent.</span>
+<span class="c1"># This can be used together with the policy configuration to append multiple values.</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">PipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">pipeline_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">user_agent</span><span class="o">=</span><span class="s2">&quot;AnotherValue&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.policies.UserAgentPolicy.add_user_agent">
@@ -1484,8 +1772,39 @@ operations, and additional headers can also be added dynamically per operation.<
 <dd class="field-odd"><p><strong>logging_enable</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Use to enable per operation. Defaults to False.</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">Configuring a network trace logging policy.</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">NetworkTraceLoggingPolicy</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="c1"># Create a logger for the &#39;azure&#39; SDK</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;azure&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+<span class="c1"># Configure a console output</span>
+<span class="n">handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+
+<span class="c1"># Configure a file output</span>
+<span class="n">file_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">file_handler</span><span class="p">)</span>
+
+<span class="c1"># Enable network trace logging. This will be logged at DEBUG level.</span>
+<span class="c1"># By default, logging is disabled.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">logging_policy</span> <span class="o">=</span> <span class="n">NetworkTraceLoggingPolicy</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">logging_policy</span><span class="o">.</span><span class="n">enable_http_logger</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="c1"># The logger can also be enabled per operation.</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">PipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">pipeline_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">logging_enable</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.policies.NetworkTraceLoggingPolicy.on_request">
@@ -1609,8 +1928,62 @@ Retry policy will sleep for: <cite>{backoff factor} * (2 ** ({number of total re
 seconds. If the backoff_factor is 0.1, then the retry will sleep
 for [0.0s, 0.2s, 0.4s, …] between retries. The default value is 0.8.</p>
 <p><em>retry_backoff_max (int)</em> - The maximum back off time. Default value is 120 seconds (2 minutes).</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">Configuring a retry policy.</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">RetryPolicy</span>
+
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span> <span class="o">=</span> <span class="n">RetryPolicy</span><span class="p">()</span>
+
+<span class="c1"># Total number of retries to allow. Takes precedence over other counts.</span>
+<span class="c1"># Default value is 10.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">total_retries</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># How many connection-related errors to retry on.</span>
+<span class="c1"># These are errors raised before the request is sent to the remote server,</span>
+<span class="c1"># which we assume has not triggered the server to process the request. Default value is 3</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">connect_retries</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># How many times to retry on read errors.</span>
+<span class="c1"># These errors are raised after the request was sent to the server, so the</span>
+<span class="c1"># request may have side-effects. Default value is 3.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">read_retries</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># How many times to retry on bad status codes. Default value is 3.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">status_retries</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># A backoff factor to apply between attempts after the second try</span>
+<span class="c1"># (most errors are resolved immediately by a second try without a delay).</span>
+<span class="c1"># Retry policy will sleep for:</span>
+<span class="c1">#    {backoff factor} * (2 ** ({number of total retries} - 1))</span>
+<span class="c1"># seconds. If the backoff_factor is 0.1, then the retry will sleep</span>
+<span class="c1"># for [0.0s, 0.2s, 0.4s, ...] between retries.</span>
+<span class="c1"># The default value is 0.8.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">backoff_factor</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="c1"># The maximum back off time. Default value is 120 seconds (2 minutes).</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">backoff_max</span> <span class="o">=</span> <span class="mi">120</span>
+
+<span class="c1"># Alternatively you can disable redirects entirely</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span> <span class="o">=</span> <span class="n">RetryPolicy</span><span class="o">.</span><span class="n">no_retries</span><span class="p">()</span>
+
+<span class="c1"># All of these settings can also be configured per operation.</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">PipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">pipeline_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">,</span>
+    <span class="n">retry_total</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">retry_connect</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">retry_read</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">retry_status</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">retry_backoff_factor</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">retry_backoff_max</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span>
+    <span class="n">retry_on_methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="attribute">
 <dt id="azure.core.pipeline.policies.RetryPolicy.BACKOFF_MAX">
@@ -1821,8 +2194,31 @@ this method will return immediately.</p>
 <p><strong>Keyword arguments:</strong></p>
 <p><em>permit_redirects (bool)</em> - Whether the client allows redirects. Defaults to True.</p>
 <p><em>redirect_max (int)</em> - The maximum allowed redirects. Defaults to 30.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">Configuring a redirect policy.</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">RedirectPolicy</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">RedirectPolicy</span><span class="p">()</span>
+
+<span class="c1"># Client allows redirects. Defaults to True.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span><span class="o">.</span><span class="n">allow</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="c1"># The maximum allowed redirects. The default value is 30</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span><span class="o">.</span><span class="n">max_redirects</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># Alternatively you can disable redirects entirely</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">RedirectPolicy</span><span class="o">.</span><span class="n">no_redirects</span><span class="p">()</span>
+
+<span class="c1"># It can also be overridden per operation.</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">PipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">pipeline_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">permit_redirects</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">redirect_max</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="attribute">
 <dt id="azure.core.pipeline.policies.RedirectPolicy.REDIRECT_HEADERS_BLACKLIST">
@@ -1933,8 +2329,26 @@ of the proxy.</p>
 </dl>
 <p><strong>Keyword argument:</strong></p>
 <p><em>proxies_use_env_settings (bool)</em> - Uses proxy settings from environment. Defaults to True.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">Configuring a proxy policy.</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">ProxyPolicy</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">proxy_policy</span> <span class="o">=</span> <span class="n">ProxyPolicy</span><span class="p">()</span>
+
+<span class="c1"># Example</span>
+<span class="n">config</span><span class="o">.</span><span class="n">proxy_policy</span><span class="o">.</span><span class="n">proxies</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;http&#39;</span><span class="p">:</span> <span class="s1">&#39;http://10.10.1.10:3148&#39;</span><span class="p">}</span>
+
+<span class="c1"># Use basic auth</span>
+<span class="n">config</span><span class="o">.</span><span class="n">proxy_policy</span><span class="o">.</span><span class="n">proxies</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;https&#39;</span><span class="p">:</span> <span class="s1">&#39;http://user:password@10.10.1.10:1180/&#39;</span><span class="p">}</span>
+
+<span class="c1"># You can also configure proxies by setting the environment variables</span>
+<span class="c1"># HTTP_PROXY and HTTPS_PROXY.</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -2046,8 +2460,31 @@ is instantiated and all policies chained.</p>
 <p><strong>Keyword arguments:</strong></p>
 <p><em>permit_redirects (bool)</em> - Whether the client allows redirects. Defaults to True.</p>
 <p><em>redirect_max (int)</em> - The maximum allowed redirects. Defaults to 30.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">Configuring an async redirect policy.</span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">AsyncRedirectPolicy</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">AsyncRedirectPolicy</span><span class="p">()</span>
+
+<span class="c1"># Client allows redirects. Defaults to True.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span><span class="o">.</span><span class="n">allow</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="c1"># The maximum allowed redirects. The default value is 30</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span><span class="o">.</span><span class="n">max_redirects</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># Alternatively you can disable redirects entirely</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">AsyncRedirectPolicy</span><span class="o">.</span><span class="n">no_redirects</span><span class="p">()</span>
+
+<span class="c1"># It can also be overridden per operation.</span>
+<span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">permit_redirects</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">redirect_max</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.policies.AsyncRedirectPolicy.send">
@@ -2094,8 +2531,61 @@ Retry policy will sleep for: <cite>{backoff factor} * (2 ** ({number of total re
 seconds. If the backoff_factor is 0.1, then the retry will sleep
 for [0.0s, 0.2s, 0.4s, …] between retries. The default value is 0.8.</p>
 <p><em>retry_backoff_max (int)</em> - The maximum back off time. Default value is 120 seconds (2 minutes).</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">Configuring an async retry policy.</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">AsyncRetryPolicy</span>
+
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span> <span class="o">=</span> <span class="n">AsyncRetryPolicy</span><span class="p">()</span>
+
+<span class="c1"># Total number of retries to allow. Takes precedence over other counts.</span>
+<span class="c1"># Default value is 10.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">total_retries</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># How many connection-related errors to retry on.</span>
+<span class="c1"># These are errors raised before the request is sent to the remote server,</span>
+<span class="c1"># which we assume has not triggered the server to process the request. Default value is 3</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">connect_retries</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># How many times to retry on read errors.</span>
+<span class="c1"># These errors are raised after the request was sent to the server, so the</span>
+<span class="c1"># request may have side-effects. Default value is 3.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">read_retries</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># How many times to retry on bad status codes. Default value is 3.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">status_retries</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># A backoff factor to apply between attempts after the second try</span>
+<span class="c1"># (most errors are resolved immediately by a second try without a delay).</span>
+<span class="c1"># Retry policy will sleep for:</span>
+<span class="c1">#    {backoff factor} * (2 ** ({number of total retries} - 1))</span>
+<span class="c1"># seconds. If the backoff_factor is 0.1, then the retry will sleep</span>
+<span class="c1"># for [0.0s, 0.2s, 0.4s, ...] between retries.</span>
+<span class="c1"># The default value is 0.8.</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">backoff_factor</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="c1"># The maximum back off time. Default value is 120 seconds (2 minutes).</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="o">.</span><span class="n">backoff_max</span> <span class="o">=</span> <span class="mi">120</span>
+
+<span class="c1"># Alternatively you can disable redirects entirely</span>
+<span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span> <span class="o">=</span> <span class="n">AsyncRetryPolicy</span><span class="o">.</span><span class="n">no_retries</span><span class="p">()</span>
+
+<span class="c1"># All of these settings can also be configured per operation.</span>
+<span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+        <span class="n">request</span><span class="p">,</span>
+        <span class="n">retry_total</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="n">retry_connect</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">retry_read</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">retry_status</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+        <span class="n">retry_backoff_factor</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">retry_backoff_max</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+        <span class="n">retry_on_methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.policies.AsyncRetryPolicy.send">

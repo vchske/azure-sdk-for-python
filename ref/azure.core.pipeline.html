@@ -362,8 +362,27 @@ of the HTTP sender. The transport is the last node in the pipeline.</p>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Builds the pipeline for synchronous transport.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">RedirectPolicy</span><span class="p">,</span> <span class="n">UserAgentPolicy</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">RequestsTransport</span><span class="p">,</span> <span class="n">HttpRequest</span>
+
+<span class="c1"># example: create request and policies</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://bing.com&quot;</span><span class="p">)</span>
+<span class="n">policies</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">UserAgentPolicy</span><span class="p">(</span><span class="s2">&quot;myuseragent&quot;</span><span class="p">),</span>
+    <span class="n">RedirectPolicy</span><span class="p">()</span>
+<span class="p">]</span>
+
+<span class="c1"># run the pipeline</span>
+<span class="k">with</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">transport</span><span class="o">=</span><span class="n">RequestsTransport</span><span class="p">(),</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span> <span class="k">as</span> <span class="n">pipeline</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.base.Pipeline.run">
@@ -408,8 +427,27 @@ of the HTTP sender.</p>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Builds the async pipeline for asynchronous transport.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline</span> <span class="kn">import</span> <span class="n">AsyncPipeline</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">AsyncRedirectPolicy</span><span class="p">,</span> <span class="n">UserAgentPolicy</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">AioHttpTransport</span><span class="p">,</span> <span class="n">HttpRequest</span>
+
+<span class="c1"># example: create request and policies</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://bing.com&quot;</span><span class="p">)</span>
+<span class="n">policies</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">UserAgentPolicy</span><span class="p">(</span><span class="s2">&quot;myuseragent&quot;</span><span class="p">),</span>
+    <span class="n">AsyncRedirectPolicy</span><span class="p">()</span>
+<span class="p">]</span>
+
+<span class="c1"># run the pipeline</span>
+<span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipeline</span><span class="p">(</span><span class="n">transport</span><span class="o">=</span><span class="n">AioHttpTransport</span><span class="p">(),</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span> <span class="k">as</span> <span class="n">pipeline</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.base_async.AsyncPipeline.run">
@@ -448,8 +486,27 @@ of the HTTP sender. The transport is the last node in the pipeline.</p>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Builds the pipeline for synchronous transport.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">RedirectPolicy</span><span class="p">,</span> <span class="n">UserAgentPolicy</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">RequestsTransport</span><span class="p">,</span> <span class="n">HttpRequest</span>
+
+<span class="c1"># example: create request and policies</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://bing.com&quot;</span><span class="p">)</span>
+<span class="n">policies</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">UserAgentPolicy</span><span class="p">(</span><span class="s2">&quot;myuseragent&quot;</span><span class="p">),</span>
+    <span class="n">RedirectPolicy</span><span class="p">()</span>
+<span class="p">]</span>
+
+<span class="c1"># run the pipeline</span>
+<span class="k">with</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">transport</span><span class="o">=</span><span class="n">RequestsTransport</span><span class="p">(),</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span> <span class="k">as</span> <span class="n">pipeline</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.Pipeline.run">
@@ -570,8 +627,27 @@ of the HTTP sender.</p>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Builds the async pipeline for asynchronous transport.</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline</span> <span class="kn">import</span> <span class="n">AsyncPipeline</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">AsyncRedirectPolicy</span><span class="p">,</span> <span class="n">UserAgentPolicy</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">AioHttpTransport</span><span class="p">,</span> <span class="n">HttpRequest</span>
+
+<span class="c1"># example: create request and policies</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://bing.com&quot;</span><span class="p">)</span>
+<span class="n">policies</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">UserAgentPolicy</span><span class="p">(</span><span class="s2">&quot;myuseragent&quot;</span><span class="p">),</span>
+    <span class="n">AsyncRedirectPolicy</span><span class="p">()</span>
+<span class="p">]</span>
+
+<span class="c1"># run the pipeline</span>
+<span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipeline</span><span class="p">(</span><span class="n">transport</span><span class="o">=</span><span class="n">AioHttpTransport</span><span class="p">(),</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span> <span class="k">as</span> <span class="n">pipeline</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.AsyncPipeline.run">

@@ -349,8 +349,17 @@
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Asynchronous transport with aiohttp.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">AioHttpTransport</span>
+
+<span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipeline</span><span class="p">(</span><span class="n">AioHttpTransport</span><span class="p">(</span><span class="n">config</span><span class="p">),</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span> <span class="k">as</span> <span class="n">pipeline</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.transport.aiohttp.AioHttpTransport.close">
@@ -822,8 +831,17 @@ is supported. Will return an asynchronous generator.</p>
 <dd><p>Bases: <a class="reference internal" href="#azure.core.pipeline.transport.requests_basic.RequestsTransport" title="azure.core.pipeline.transport.requests_basic.RequestsTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.pipeline.transport.requests_basic.RequestsTransport</span></code></a>, <a class="reference internal" href="#azure.core.pipeline.transport.base_async.AsyncHttpTransport" title="azure.core.pipeline.transport.base_async.AsyncHttpTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.pipeline.transport.base_async.AsyncHttpTransport</span></code></a></p>
 <p>Identical implementation as the synchronous RequestsTransport wrapped in a class with
 asynchronous methods. Uses the built-in asyncio event loop.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Asynchronous transport with asyncio.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">AsyncioRequestsTransport</span>
+
+<span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipeline</span><span class="p">(</span><span class="n">AsyncioRequestsTransport</span><span class="p">(</span><span class="n">config</span><span class="p">),</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span> <span class="k">as</span> <span class="n">pipeline</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.transport.requests_asyncio.AsyncioRequestsTransport.send">
@@ -902,8 +920,17 @@ per instance.</p>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Synchronous transport with Requests.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">RequestsTransport</span>
+
+<span class="k">with</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">transport</span><span class="o">=</span><span class="n">RequestsTransport</span><span class="p">(</span><span class="n">config</span><span class="p">),</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span> <span class="k">as</span> <span class="n">pipeline</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.transport.requests_basic.RequestsTransport.close">
@@ -985,8 +1012,17 @@ Anything else is sent straight to requests.</p>
 <dd><p>Bases: <a class="reference internal" href="#azure.core.pipeline.transport.requests_basic.RequestsTransport" title="azure.core.pipeline.transport.requests_basic.RequestsTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.pipeline.transport.requests_basic.RequestsTransport</span></code></a>, <a class="reference internal" href="#azure.core.pipeline.transport.base_async.AsyncHttpTransport" title="azure.core.pipeline.transport.base_async.AsyncHttpTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.pipeline.transport.base_async.AsyncHttpTransport</span></code></a></p>
 <p>Identical implementation as the synchronous RequestsTransport wrapped in a class with
 asynchronous methods. Uses the third party trio event loop.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Asynchronous transport with trio.</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">TrioRequestsTransport</span>
+
+    <span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipeline</span><span class="p">(</span><span class="n">TrioRequestsTransport</span><span class="p">(</span><span class="n">config</span><span class="p">),</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span> <span class="k">as</span> <span class="n">pipeline</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">await</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.transport.requests_trio.TrioRequestsTransport.send">
@@ -1213,8 +1249,17 @@ per instance.</p>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Synchronous transport with Requests.</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">RequestsTransport</span>
+
+<span class="k">with</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">transport</span><span class="o">=</span><span class="n">RequestsTransport</span><span class="p">(</span><span class="n">config</span><span class="p">),</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span> <span class="k">as</span> <span class="n">pipeline</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.transport.RequestsTransport.close">
@@ -1320,8 +1365,17 @@ is supported. Will return an asynchronous generator.</p>
 <dd><p>Bases: <a class="reference internal" href="#azure.core.pipeline.transport.requests_basic.RequestsTransport" title="azure.core.pipeline.transport.requests_basic.RequestsTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.pipeline.transport.requests_basic.RequestsTransport</span></code></a>, <a class="reference internal" href="#azure.core.pipeline.transport.base_async.AsyncHttpTransport" title="azure.core.pipeline.transport.base_async.AsyncHttpTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.pipeline.transport.base_async.AsyncHttpTransport</span></code></a></p>
 <p>Identical implementation as the synchronous RequestsTransport wrapped in a class with
 asynchronous methods. Uses the built-in asyncio event loop.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Asynchronous transport with asyncio.</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">AsyncioRequestsTransport</span>
+
+<span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipeline</span><span class="p">(</span><span class="n">AsyncioRequestsTransport</span><span class="p">(</span><span class="n">config</span><span class="p">),</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span> <span class="k">as</span> <span class="n">pipeline</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.transport.AsyncioRequestsTransport.send">
@@ -1364,8 +1418,17 @@ asynchronous methods. Uses the built-in asyncio event loop.</p>
 <dd><p>Bases: <a class="reference internal" href="#azure.core.pipeline.transport.requests_basic.RequestsTransport" title="azure.core.pipeline.transport.requests_basic.RequestsTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.pipeline.transport.requests_basic.RequestsTransport</span></code></a>, <a class="reference internal" href="#azure.core.pipeline.transport.base_async.AsyncHttpTransport" title="azure.core.pipeline.transport.base_async.AsyncHttpTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">azure.core.pipeline.transport.base_async.AsyncHttpTransport</span></code></a></p>
 <p>Identical implementation as the synchronous RequestsTransport wrapped in a class with
 asynchronous methods. Uses the third party trio event loop.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Asynchronous transport with trio.</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">TrioRequestsTransport</span>
+
+    <span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipeline</span><span class="p">(</span><span class="n">TrioRequestsTransport</span><span class="p">(</span><span class="n">config</span><span class="p">),</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span> <span class="k">as</span> <span class="n">pipeline</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">await</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.transport.TrioRequestsTransport.send">
@@ -1423,8 +1486,17 @@ asynchronous methods. Uses the third party trio event loop.</p>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Asynchronous transport with aiohttp.</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">AioHttpTransport</span>
+
+<span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipeline</span><span class="p">(</span><span class="n">AioHttpTransport</span><span class="p">(</span><span class="n">config</span><span class="p">),</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span> <span class="k">as</span> <span class="n">pipeline</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline.transport.AioHttpTransport.close">

@@ -399,8 +399,57 @@ TrioRequestsTransport, AioHttpTransport.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Creates the service configuration and adds policies.</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core</span> <span class="kn">import</span> <span class="n">Configuration</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">RequestsTransport</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">HeadersPolicy</span><span class="p">,</span>
+    <span class="n">BearerTokenCredentialPolicy</span><span class="p">,</span>
+    <span class="n">UserAgentPolicy</span><span class="p">,</span>
+    <span class="n">RetryPolicy</span><span class="p">,</span>
+    <span class="n">RedirectPolicy</span><span class="p">,</span>
+    <span class="n">NetworkTraceLoggingPolicy</span><span class="p">,</span>
+    <span class="n">ProxyPolicy</span><span class="p">,</span>
+    <span class="n">ContentDecodePolicy</span>
+<span class="p">)</span>
+
+<span class="c1"># Example class to create configuration for a service client</span>
+<span class="k">class</span> <span class="nc">FooServiceClient</span><span class="p">():</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">create_config</span><span class="p">(</span><span class="n">credential</span><span class="p">,</span> <span class="n">scopes</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># Here the SDK developer would define the default</span>
+        <span class="c1"># config to interact with the service</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">headers_policy</span> <span class="o">=</span> <span class="n">HeadersPolicy</span><span class="p">({</span><span class="s2">&quot;CustomHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;Value&quot;</span><span class="p">},</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">authentication_policy</span> <span class="o">=</span> <span class="n">BearerTokenCredentialPolicy</span><span class="p">(</span><span class="n">credential</span><span class="p">,</span> <span class="n">scopes</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">user_agent_policy</span> <span class="o">=</span> <span class="n">UserAgentPolicy</span><span class="p">(</span><span class="s2">&quot;ServiceUserAgentValue&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span> <span class="o">=</span> <span class="n">RetryPolicy</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">RedirectPolicy</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">logging_policy</span> <span class="o">=</span> <span class="n">NetworkTraceLoggingPolicy</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">proxy_policy</span> <span class="o">=</span> <span class="n">ProxyPolicy</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">transport</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;transport&#39;</span><span class="p">,</span> <span class="n">RequestsTransport</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="n">configuration</span> <span class="ow">or</span> <span class="n">FooServiceClient</span><span class="o">.</span><span class="n">create_config</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">transport</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get_transport</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">policies</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">user_agent_policy</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">headers_policy</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">authentication_policy</span><span class="p">,</span>
+            <span class="n">ContentDecodePolicy</span><span class="p">(),</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">logging_policy</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">transport</span><span class="p">,</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -423,8 +472,27 @@ certificate, as a single file (containing the private key and the certificate) o
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Configuring transport connection settings.</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core</span> <span class="kn">import</span> <span class="n">Configuration</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">(</span>
+    <span class="n">connection_timeout</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">connection_verify</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">connection_cert</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">connection_data_block_size</span><span class="o">=</span><span class="mi">4096</span>
+<span class="p">)</span>
+
+<span class="c1"># Or parameters can be tweaked later:</span>
+<span class="n">config</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">timeout</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">config</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">verify</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">config</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">cert</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">config</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">data_block_size</span> <span class="o">=</span> <span class="mi">4096</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -617,8 +685,25 @@ This MUST be called inside a “except” clause.</p>
 <p><strong>Keyword arguments:</strong></p>
 <p><em>pipeline</em> - A Pipeline object. If omitted, a Pipeline object is created and returned.</p>
 <p><em>transport</em> - The HTTP Transport type. If omitted, RequestsTransport is used for synchronous transport.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Builds the pipeline client.</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core</span> <span class="kn">import</span> <span class="n">Configuration</span><span class="p">,</span> <span class="n">PipelineClient</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">RedirectPolicy</span><span class="p">,</span> <span class="n">UserAgentPolicy</span>
+
+<span class="c1"># example configuration with some policies</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">user_agent_policy</span> <span class="o">=</span> <span class="n">UserAgentPolicy</span><span class="p">(</span><span class="s2">&quot;myuseragent&quot;</span><span class="p">)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">RedirectPolicy</span><span class="p">()</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">PipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://bing.com&quot;</span><span class="p">)</span>
+
+<span class="n">pipeline_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline_client.PipelineClient.close">
@@ -654,8 +739,25 @@ This MUST be called inside a “except” clause.</p>
 <p><strong>Keyword arguments:</strong></p>
 <p><em>pipeline</em> - A Pipeline object. If omitted, an AsyncPipeline is created and returned.</p>
 <p><em>transport</em> - The HTTP Transport type. If omitted, AioHttpTransport is use for asynchronous transport.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Builds the async pipeline client.</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core</span> <span class="kn">import</span> <span class="n">Configuration</span><span class="p">,</span> <span class="n">AsyncPipelineClient</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">AsyncRedirectPolicy</span><span class="p">,</span> <span class="n">UserAgentPolicy</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">HttpRequest</span>
+
+<span class="c1"># example configuration with some policies</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">user_agent_policy</span> <span class="o">=</span> <span class="n">UserAgentPolicy</span><span class="p">(</span><span class="s2">&quot;myuseragent&quot;</span><span class="p">)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">AsyncRedirectPolicy</span><span class="p">()</span>
+
+<span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.pipeline_client_async.AsyncPipelineClient.close">
@@ -703,8 +805,57 @@ TrioRequestsTransport, AioHttpTransport.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Creates the service configuration and adds policies.</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core</span> <span class="kn">import</span> <span class="n">Configuration</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">RequestsTransport</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">HeadersPolicy</span><span class="p">,</span>
+    <span class="n">BearerTokenCredentialPolicy</span><span class="p">,</span>
+    <span class="n">UserAgentPolicy</span><span class="p">,</span>
+    <span class="n">RetryPolicy</span><span class="p">,</span>
+    <span class="n">RedirectPolicy</span><span class="p">,</span>
+    <span class="n">NetworkTraceLoggingPolicy</span><span class="p">,</span>
+    <span class="n">ProxyPolicy</span><span class="p">,</span>
+    <span class="n">ContentDecodePolicy</span>
+<span class="p">)</span>
+
+<span class="c1"># Example class to create configuration for a service client</span>
+<span class="k">class</span> <span class="nc">FooServiceClient</span><span class="p">():</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">create_config</span><span class="p">(</span><span class="n">credential</span><span class="p">,</span> <span class="n">scopes</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># Here the SDK developer would define the default</span>
+        <span class="c1"># config to interact with the service</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">headers_policy</span> <span class="o">=</span> <span class="n">HeadersPolicy</span><span class="p">({</span><span class="s2">&quot;CustomHeader&quot;</span><span class="p">:</span> <span class="s2">&quot;Value&quot;</span><span class="p">},</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">authentication_policy</span> <span class="o">=</span> <span class="n">BearerTokenCredentialPolicy</span><span class="p">(</span><span class="n">credential</span><span class="p">,</span> <span class="n">scopes</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">user_agent_policy</span> <span class="o">=</span> <span class="n">UserAgentPolicy</span><span class="p">(</span><span class="s2">&quot;ServiceUserAgentValue&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span> <span class="o">=</span> <span class="n">RetryPolicy</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">RedirectPolicy</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">logging_policy</span> <span class="o">=</span> <span class="n">NetworkTraceLoggingPolicy</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">proxy_policy</span> <span class="o">=</span> <span class="n">ProxyPolicy</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">transport</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;transport&#39;</span><span class="p">,</span> <span class="n">RequestsTransport</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="n">configuration</span> <span class="ow">or</span> <span class="n">FooServiceClient</span><span class="o">.</span><span class="n">create_config</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">transport</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get_transport</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">policies</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">user_agent_policy</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">headers_policy</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">authentication_policy</span><span class="p">,</span>
+            <span class="n">ContentDecodePolicy</span><span class="p">(),</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">retry_policy</span><span class="p">,</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">logging_policy</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">transport</span><span class="p">,</span> <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -732,8 +883,25 @@ TrioRequestsTransport, AioHttpTransport.</p></li>
 <p><strong>Keyword arguments:</strong></p>
 <p><em>pipeline</em> - A Pipeline object. If omitted, a Pipeline object is created and returned.</p>
 <p><em>transport</em> - The HTTP Transport type. If omitted, RequestsTransport is used for synchronous transport.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Builds the pipeline client.</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core</span> <span class="kn">import</span> <span class="n">Configuration</span><span class="p">,</span> <span class="n">PipelineClient</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">RedirectPolicy</span><span class="p">,</span> <span class="n">UserAgentPolicy</span>
+
+<span class="c1"># example configuration with some policies</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">user_agent_policy</span> <span class="o">=</span> <span class="n">UserAgentPolicy</span><span class="p">(</span><span class="s2">&quot;myuseragent&quot;</span><span class="p">)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">RedirectPolicy</span><span class="p">()</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">PipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://bing.com&quot;</span><span class="p">)</span>
+
+<span class="n">pipeline_response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.PipelineClient.close">
@@ -880,8 +1048,25 @@ valid URL strings.</p>
 <p><strong>Keyword arguments:</strong></p>
 <p><em>pipeline</em> - A Pipeline object. If omitted, an AsyncPipeline is created and returned.</p>
 <p><em>transport</em> - The HTTP Transport type. If omitted, AioHttpTransport is use for asynchronous transport.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Builds the async pipeline client.</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.core</span> <span class="kn">import</span> <span class="n">Configuration</span><span class="p">,</span> <span class="n">AsyncPipelineClient</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.policies</span> <span class="kn">import</span> <span class="n">AsyncRedirectPolicy</span><span class="p">,</span> <span class="n">UserAgentPolicy</span>
+<span class="kn">from</span> <span class="nn">azure.core.pipeline.transport</span> <span class="kn">import</span> <span class="n">HttpRequest</span>
+
+<span class="c1"># example configuration with some policies</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">user_agent_policy</span> <span class="o">=</span> <span class="n">UserAgentPolicy</span><span class="p">(</span><span class="s2">&quot;myuseragent&quot;</span><span class="p">)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">redirect_policy</span> <span class="o">=</span> <span class="n">AsyncRedirectPolicy</span><span class="p">()</span>
+
+<span class="n">async</span> <span class="k">with</span> <span class="n">AsyncPipelineClient</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">client</span><span class="o">.</span><span class="n">_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.core.AsyncPipelineClient.close">

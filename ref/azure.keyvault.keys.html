@@ -314,8 +314,21 @@
 <em class="property">class </em><code class="sig-prename descclassname">azure.keyvault.keys.</code><code class="sig-name descname">KeyClient</code><span class="sig-paren">(</span><em class="sig-param">vault_url</em>, <em class="sig-param">credential</em>, <em class="sig-param">config=None</em>, <em class="sig-param">transport=None</em>, <em class="sig-param">api_version=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/keyvault/keys/_client.html#KeyClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.keyvault.keys.KeyClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.keyvault.keys._internal._KeyVaultClientBase</span></code></p>
 <p>KeyClient is a high-level interface for managing a vault’s keys.</p>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Creates a new instance of the Key client</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">from</span> <span class="nn">azure.identity</span> <span class="kn">import</span> <span class="n">DefaultAzureCredential</span>
+<span class="kn">from</span> <span class="nn">azure.keyvault.keys</span> <span class="kn">import</span> <span class="n">KeyClient</span>
+
+<span class="c1"># Create a KeyClient using default Azure credentials</span>
+<span class="n">credential</span> <span class="o">=</span> <span class="n">DefaultAzureCredential</span><span class="p">()</span>
+<span class="n">key_client</span> <span class="o">=</span> <span class="n">KeyClient</span><span class="p">(</span><span class="n">vault_url</span><span class="p">,</span> <span class="n">credential</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 <dl class="method">
 <dt id="azure.keyvault.keys.KeyClient.backup_key">
@@ -350,8 +363,20 @@ operation requires the key/backup permission.</p>
 <dd class="field-even"><p>~azure.core.exceptions.ResourceNotFoundError if the client failed to retrieve the key</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Backs up the specified key to the key vault</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># backup key</span>
+<span class="n">key_backup</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">backup_key</span><span class="p">(</span><span class="n">key_name</span><span class="p">)</span>
+
+<span class="c1"># returns the raw bytes of the backed up key</span>
+<span class="k">print</span><span class="p">(</span><span class="n">key_backup</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -388,8 +413,24 @@ pairs.</p></li>
 <dd class="field-odd"><p>Key</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Creates an EC key in the key vault</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">key_curve</span> <span class="o">=</span> <span class="s2">&quot;P-256&quot;</span>
+
+<span class="c1"># create an EC (Elliptic curve) key with curve specification</span>
+<span class="c1"># EC key can be created with default curve of &#39;P-256&#39;</span>
+<span class="n">ec_key</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">create_ec_key</span><span class="p">(</span><span class="s2">&quot;key-name&quot;</span><span class="p">,</span> <span class="n">hsm</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">curve</span><span class="o">=</span><span class="n">key_curve</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">ec_key</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ec_key</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ec_key</span><span class="o">.</span><span class="n">key_material</span><span class="o">.</span><span class="n">kty</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ec_key</span><span class="o">.</span><span class="n">key_material</span><span class="o">.</span><span class="n">crv</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -429,8 +470,25 @@ JsonWebKeyCurveName. Possible values include: ‘P-256’, ‘P-384’,
 <dd class="field-odd"><p>Key</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Creates a key in the key vault</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dateutil</span> <span class="kn">import</span> <span class="n">parser</span> <span class="k">as</span> <span class="n">date_parse</span>
+
+<span class="n">expires</span> <span class="o">=</span> <span class="n">date_parse</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;2050-02-02T08:00:00.000Z&quot;</span><span class="p">)</span>
+
+<span class="c1"># create a key with optional arguments</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">create_key</span><span class="p">(</span><span class="s2">&quot;key-name&quot;</span><span class="p">,</span> <span class="s2">&quot;RSA-HSM&quot;</span><span class="p">,</span> <span class="n">expires</span><span class="o">=</span><span class="n">expires</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">key_material</span><span class="o">.</span><span class="n">kty</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">expires</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -465,8 +523,26 @@ pairs.</p></li>
 <dd class="field-odd"><p>Key</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Creates a RSA key in the key vault</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">key_size</span> <span class="o">=</span> <span class="mi">2048</span>
+<span class="n">key_ops</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;encrypt&quot;</span><span class="p">,</span> <span class="s2">&quot;decrypt&quot;</span><span class="p">,</span> <span class="s2">&quot;sign&quot;</span><span class="p">,</span> <span class="s2">&quot;verify&quot;</span><span class="p">,</span> <span class="s2">&quot;wrapKey&quot;</span><span class="p">,</span> <span class="s2">&quot;unwrapKey&quot;</span><span class="p">]</span>
+
+<span class="c1"># create an rsa key with size specification</span>
+<span class="c1"># RSA key can be created with default size of &#39;2048&#39;</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">create_rsa_key</span><span class="p">(</span><span class="s2">&quot;key-name&quot;</span><span class="p">,</span> <span class="n">hsm</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">key_size</span><span class="p">,</span> <span class="n">key_operations</span><span class="o">=</span><span class="n">key_ops</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">key_material</span><span class="o">.</span><span class="n">kty</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">key_material</span><span class="o">.</span><span class="n">key_ops</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -493,8 +569,25 @@ keys/delete permission.</p>
 <dd class="field-even"><p>~azure.core.exceptions.ResourceNotFoundError if the client failed to retrieve the key</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Deletes a key in the key vault</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># delete a key</span>
+<span class="n">deleted_key</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">delete_key</span><span class="p">(</span><span class="s2">&quot;key-name&quot;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">deleted_key</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># if the vault has soft-delete enabled, the key&#39;s deleted_date,</span>
+<span class="c1"># scheduled purge date and recovery id are set</span>
+<span class="k">print</span><span class="p">(</span><span class="n">deleted_key</span><span class="o">.</span><span class="n">deleted_date</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">deleted_key</span><span class="o">.</span><span class="n">scheduled_purge_date</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">deleted_key</span><span class="o">.</span><span class="n">recovery_id</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -517,8 +610,24 @@ requires the keys/get permission.</p>
 <dd class="field-odd"><p>DeletedKey</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Retrieves a deleted key from the key vault</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># get a deleted key (requires soft-delete enabled for the vault)</span>
+<span class="n">deleted_key</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">get_deleted_key</span><span class="p">(</span><span class="s2">&quot;key-name&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">deleted_key</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># if the vault has soft-delete enabled, the key&#39;s deleted_date</span>
+<span class="c1"># scheduled purge date and recovery id are set</span>
+<span class="k">print</span><span class="p">(</span><span class="n">deleted_key</span><span class="o">.</span><span class="n">deleted_date</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">deleted_key</span><span class="o">.</span><span class="n">scheduled_purge_date</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">deleted_key</span><span class="o">.</span><span class="n">recovery_id</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -547,8 +656,27 @@ the latest version of the key is returned</p></li>
 <dd class="field-even"><p>~azure.core.exceptions.ResourceNotFoundError if the client failed to retrieve the key</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Retrieves a key from the key vault</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># get the latest version of a key</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">get_key</span><span class="p">(</span><span class="s2">&quot;key-name&quot;</span><span class="p">)</span>
+
+<span class="c1"># alternatively, specify a version</span>
+<span class="n">key_version</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">version</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">get_key</span><span class="p">(</span><span class="s2">&quot;key-name&quot;</span><span class="p">,</span> <span class="n">key_version</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">key_material</span><span class="o">.</span><span class="n">kty</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">vault_url</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -601,8 +729,24 @@ keys/list permission.</p>
 <dd class="field-even"><p>Generator[DeletedKey]</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">List all the deleted keys in the vault</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># get an iterator of deleted keys (requires soft-delete enabled for the vault)</span>
+<span class="n">deleted_keys</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">list_deleted_keys</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">deleted_keys</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">scheduled_purge_date</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">recovery_id</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">deleted_date</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -623,8 +767,21 @@ response. This operation requires the keys/list permission.</p>
 <dd class="field-odd"><p>Generator[KeyBase]</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">List all versions of the specified key</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># get an iterator of a key&#39;s versions</span>
+<span class="n">key_versions</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">list_key_versions</span><span class="p">(</span><span class="s2">&quot;key-name&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">key_versions</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -646,8 +803,21 @@ operation requires the keys/list permission.</p>
 <dd class="field-even"><p>Generator[KeyBase]</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">List all keys in the vault</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># get an iterator of keys</span>
+<span class="n">keys</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">list_keys</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -701,8 +871,19 @@ permission.</p>
 <dd class="field-odd"><p>Key</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">Recovers the specified soft-deleted key</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># recover a deleted key to its latest version (requires soft-delete enabled for the vault)</span>
+<span class="n">recovered_key</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">recover_deleted_key</span><span class="p">(</span><span class="s2">&quot;key-name&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">recovered_key</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">recovered_key</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -738,8 +919,19 @@ keys/restore permission.</p>
 <dd class="field-even"><p>~azure.core.exceptions.ResourceExistsError if the client failed to retrieve the key</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">Restores a backed up key to the vault</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># restore a key backup</span>
+<span class="n">restored_key</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">restore_key</span><span class="p">(</span><span class="n">key_backup</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">restored_key</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">restored_key</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 
@@ -807,8 +999,25 @@ pairs.</p></li>
 <dd class="field-even"><p>~azure.core.exceptions.ResourceNotFoundError if the client failed to retrieve the key</p>
 </dd>
 </dl>
-<dl class="simple">
-<dt>Example:</dt><dd></dd>
+<dl>
+<dt>Example:</dt><dd><div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">Updates a key in the key vault</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># update attributes of an existing key</span>
+<span class="n">expires</span> <span class="o">=</span> <span class="n">date_parse</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;2050-01-02T08:00:00.000Z&quot;</span><span class="p">)</span>
+<span class="n">tags</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;foo&quot;</span><span class="p">:</span> <span class="s2">&quot;updated tag&quot;</span><span class="p">}</span>
+<span class="n">updated_key</span> <span class="o">=</span> <span class="n">key_client</span><span class="o">.</span><span class="n">update_key</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">expires</span><span class="o">=</span><span class="n">expires</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">updated_key</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">updated_key</span><span class="o">.</span><span class="n">updated</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">updated_key</span><span class="o">.</span><span class="n">expires</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">updated_key</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">key_material</span><span class="o">.</span><span class="n">kty</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+</dd>
 </dl>
 </dd></dl>
 

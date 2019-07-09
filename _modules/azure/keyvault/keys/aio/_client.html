@@ -293,7 +293,7 @@
     <span class="sd">&quot;&quot;&quot;The KeyClient class defines a high level interface for managing keys in the specified vault.</span>
 
 <span class="sd">    Example:</span>
-<span class="sd">        .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">        .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">            :start-after: [START create_key_client]</span>
 <span class="sd">            :end-before: [END create_key_client]</span>
 <span class="sd">            :language: python</span>
@@ -320,7 +320,7 @@
 <span class="sd">        :raises: ~azure.core.exceptions.ResourceNotFoundError if the client failed to retrieve the key</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START get_key]</span>
 <span class="sd">                :end-before: [END get_key]</span>
 <span class="sd">                :language: python</span>
@@ -384,7 +384,7 @@
 <span class="sd">        :rtype: ~azure.keyvault.keys._models.Key</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START create_key]</span>
 <span class="sd">                :end-before: [END create_key]</span>
 <span class="sd">                :language: python</span>
@@ -451,7 +451,7 @@
 <span class="sd">        :rtype: ~azure.keyvault.keys._models.Key</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START create_rsa_key]</span>
 <span class="sd">                :end-before: [END create_rsa_key]</span>
 <span class="sd">                :language: python</span>
@@ -516,7 +516,7 @@
 <span class="sd">        :rtype: ~azure.keyvault.keys._models.Key</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START create_ec_key]</span>
 <span class="sd">                :end-before: [END create_ec_key]</span>
 <span class="sd">                :language: python</span>
@@ -578,7 +578,7 @@
 <span class="sd">        :raises: ~azure.core.exceptions.ResourceNotFoundError if the client failed to retrieve the key</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START update_key]</span>
 <span class="sd">                :end-before: [END update_key]</span>
 <span class="sd">                :language: python</span>
@@ -617,7 +617,7 @@
 <span class="sd">         typing.AsyncIterable[~azure.keyvault.keys._models.KeyBase]</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START list_keys]</span>
 <span class="sd">                :end-before: [END list_keys]</span>
 <span class="sd">                :language: python</span>
@@ -642,7 +642,7 @@
 <span class="sd">         typing.AsyncIterable[~azure.keyvault.keys._models.KeyBase]</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START list_key_versions]</span>
 <span class="sd">                :end-before: [END list_key_versions]</span>
 <span class="sd">                :language: python</span>
@@ -679,7 +679,7 @@
 <span class="sd">        :raises: ~azure.core.exceptions.ResourceNotFoundError if the client failed to retrieve the key</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START backup_key]</span>
 <span class="sd">                :end-before: [END backup_key]</span>
 <span class="sd">                :language: python</span>
@@ -716,7 +716,7 @@
 <span class="sd">        :raises: ~azure.core.exceptions.ResourceExistsError if the client failed to retrieve the key</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START restore_key]</span>
 <span class="sd">                :end-before: [END restore_key]</span>
 <span class="sd">                :language: python</span>
@@ -742,7 +742,7 @@
 <span class="sd">        :raises: ~azure.core.exceptions.ResourceNotFoundError if the client failed to delete the key</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START delete_key]</span>
 <span class="sd">                :end-before: [END delete_key]</span>
 <span class="sd">                :language: python</span>
@@ -767,7 +767,7 @@
 <span class="sd">        :raises: ~azure.core.exceptions.ResourceNotFoundError if the client failed to retrieve the key</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START get_deleted_key]</span>
 <span class="sd">                :end-before: [END get_deleted_key]</span>
 <span class="sd">                :language: python</span>
@@ -795,7 +795,7 @@
 <span class="sd">         typing.AsyncIterable[~azure.keyvault.keys._models.DeletedKey]</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START list_deleted_keys]</span>
 <span class="sd">                :end-before: [END list_deleted_keys]</span>
 <span class="sd">                :language: python</span>
@@ -846,7 +846,7 @@
 <span class="sd">        :rtype: ~azure.keyvault.keys._models.Key</span>
 
 <span class="sd">        Example:</span>
-<span class="sd">            .. literalinclude:: ../tests/test_examples_keys_async.py</span>
+<span class="sd">            .. literalinclude:: ../tests/test_samples_keys_async.py</span>
 <span class="sd">                :start-after: [START recover_deleted_key]</span>
 <span class="sd">                :end-before: [END recover_deleted_key]</span>
 <span class="sd">                :language: python</span>
