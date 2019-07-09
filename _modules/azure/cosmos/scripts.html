@@ -312,13 +312,13 @@
 <span class="p">)</span>
 
 
-<span class="k">class</span> <span class="nc">ScriptType</span><span class="p">:</span>
+<div class="viewcode-block" id="ScriptType"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.ScriptType">[docs]</a><span class="k">class</span> <span class="nc">ScriptType</span><span class="p">:</span>
     <span class="n">StoredProcedure</span> <span class="o">=</span> <span class="s2">&quot;sprocs&quot;</span>
     <span class="n">Trigger</span> <span class="o">=</span> <span class="s2">&quot;triggers&quot;</span>
-    <span class="n">UserDefinedFunction</span> <span class="o">=</span> <span class="s2">&quot;udfs&quot;</span>
+    <span class="n">UserDefinedFunction</span> <span class="o">=</span> <span class="s2">&quot;udfs&quot;</span></div>
 
 
-<div class="viewcode-block" id="Scripts"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts">[docs]</a><span class="k">class</span> <span class="nc">Scripts</span><span class="p">:</span>
+<div class="viewcode-block" id="Scripts"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts">[docs]</a><span class="k">class</span> <span class="nc">Scripts</span><span class="p">:</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client_connection</span><span class="p">,</span> <span class="n">container_link</span><span class="p">,</span> <span class="n">is_system_key</span><span class="p">):</span>
         <span class="c1"># type: (CosmosClientConnection, str, bool) -&gt; None</span>
@@ -332,7 +332,7 @@
             <span class="k">return</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">container_link</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">script_or_id</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">script_or_id</span><span class="p">[</span><span class="s2">&quot;_self&quot;</span><span class="p">]</span>
 
-<div class="viewcode-block" id="Scripts.list_stored_procedures"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.list_stored_procedures">[docs]</a>    <span class="k">def</span> <span class="nf">list_stored_procedures</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.list_stored_procedures"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.list_stored_procedures">[docs]</a>    <span class="k">def</span> <span class="nf">list_stored_procedures</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">max_item_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
             <span class="n">feed_options</span><span class="o">=</span><span class="kc">None</span>
@@ -355,7 +355,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">feed_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.query_stored_procedures"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.query_stored_procedures">[docs]</a>    <span class="k">def</span> <span class="nf">query_stored_procedures</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.query_stored_procedures"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.query_stored_procedures">[docs]</a>    <span class="k">def</span> <span class="nf">query_stored_procedures</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">query</span><span class="p">,</span>
             <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -385,7 +385,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">feed_options</span><span class="p">,</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.get_stored_procedure"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.get_stored_procedure">[docs]</a>    <span class="k">def</span> <span class="nf">get_stored_procedure</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.get_stored_procedure"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.get_stored_procedure">[docs]</a>    <span class="k">def</span> <span class="nf">get_stored_procedure</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">sproc</span><span class="p">,</span>
             <span class="n">request_options</span><span class="o">=</span><span class="kc">None</span>
@@ -408,7 +408,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">request_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.create_stored_procedure"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.create_stored_procedure">[docs]</a>    <span class="k">def</span> <span class="nf">create_stored_procedure</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.create_stored_procedure"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.create_stored_procedure">[docs]</a>    <span class="k">def</span> <span class="nf">create_stored_procedure</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">body</span><span class="p">,</span>
             <span class="n">request_options</span><span class="o">=</span><span class="kc">None</span>
@@ -433,7 +433,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">request_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.replace_stored_procedure"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.replace_stored_procedure">[docs]</a>    <span class="k">def</span> <span class="nf">replace_stored_procedure</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.replace_stored_procedure"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.replace_stored_procedure">[docs]</a>    <span class="k">def</span> <span class="nf">replace_stored_procedure</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">sproc</span><span class="p">,</span>
             <span class="n">body</span><span class="p">,</span>
@@ -458,7 +458,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">request_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.delete_stored_procedure"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.delete_stored_procedure">[docs]</a>    <span class="k">def</span> <span class="nf">delete_stored_procedure</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.delete_stored_procedure"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.delete_stored_procedure">[docs]</a>    <span class="k">def</span> <span class="nf">delete_stored_procedure</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">sproc</span><span class="p">,</span>
             <span class="n">request_options</span><span class="o">=</span><span class="kc">None</span>
@@ -479,7 +479,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">request_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.execute_stored_procedure"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.execute_stored_procedure">[docs]</a>    <span class="k">def</span> <span class="nf">execute_stored_procedure</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.execute_stored_procedure"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.execute_stored_procedure">[docs]</a>    <span class="k">def</span> <span class="nf">execute_stored_procedure</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">sproc</span><span class="p">,</span>
             <span class="n">partition_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -514,7 +514,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">request_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.list_triggers"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.list_triggers">[docs]</a>    <span class="k">def</span> <span class="nf">list_triggers</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.list_triggers"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.list_triggers">[docs]</a>    <span class="k">def</span> <span class="nf">list_triggers</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">max_item_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
             <span class="n">feed_options</span><span class="o">=</span><span class="kc">None</span>
@@ -537,7 +537,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">feed_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.query_triggers"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.query_triggers">[docs]</a>    <span class="k">def</span> <span class="nf">query_triggers</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.query_triggers"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.query_triggers">[docs]</a>    <span class="k">def</span> <span class="nf">query_triggers</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">query</span><span class="p">,</span>
             <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -567,7 +567,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">feed_options</span><span class="p">,</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.get_trigger"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.get_trigger">[docs]</a>    <span class="k">def</span> <span class="nf">get_trigger</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.get_trigger"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.get_trigger">[docs]</a>    <span class="k">def</span> <span class="nf">get_trigger</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">trigger</span><span class="p">,</span>
             <span class="n">request_options</span><span class="o">=</span><span class="kc">None</span>
@@ -590,7 +590,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">request_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.create_trigger"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.create_trigger">[docs]</a>    <span class="k">def</span> <span class="nf">create_trigger</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.create_trigger"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.create_trigger">[docs]</a>    <span class="k">def</span> <span class="nf">create_trigger</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">body</span><span class="p">,</span>
             <span class="n">request_options</span><span class="o">=</span><span class="kc">None</span>
@@ -615,7 +615,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">request_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.replace_trigger"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.replace_trigger">[docs]</a>    <span class="k">def</span> <span class="nf">replace_trigger</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.replace_trigger"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.replace_trigger">[docs]</a>    <span class="k">def</span> <span class="nf">replace_trigger</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">trigger</span><span class="p">,</span>
             <span class="n">body</span><span class="p">,</span>
@@ -640,7 +640,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">request_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.delete_trigger"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.delete_trigger">[docs]</a>    <span class="k">def</span> <span class="nf">delete_trigger</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.delete_trigger"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.delete_trigger">[docs]</a>    <span class="k">def</span> <span class="nf">delete_trigger</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">trigger</span><span class="p">,</span>
             <span class="n">request_options</span><span class="o">=</span><span class="kc">None</span>
@@ -662,7 +662,7 @@
         <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Scripts.list_user_defined_functions"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.list_user_defined_functions">[docs]</a>    <span class="k">def</span> <span class="nf">list_user_defined_functions</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.list_user_defined_functions"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.list_user_defined_functions">[docs]</a>    <span class="k">def</span> <span class="nf">list_user_defined_functions</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">max_item_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
             <span class="n">feed_options</span><span class="o">=</span><span class="kc">None</span>
@@ -685,7 +685,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">feed_options</span><span class="p">,</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.query_user_defined_functions"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.query_user_defined_functions">[docs]</a>    <span class="k">def</span> <span class="nf">query_user_defined_functions</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.query_user_defined_functions"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.query_user_defined_functions">[docs]</a>    <span class="k">def</span> <span class="nf">query_user_defined_functions</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">query</span><span class="p">,</span>
             <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -715,7 +715,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">feed_options</span><span class="p">,</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.get_user_defined_function"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.get_user_defined_function">[docs]</a>    <span class="k">def</span> <span class="nf">get_user_defined_function</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.get_user_defined_function"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.get_user_defined_function">[docs]</a>    <span class="k">def</span> <span class="nf">get_user_defined_function</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">udf</span><span class="p">,</span>
             <span class="n">request_options</span><span class="o">=</span><span class="kc">None</span>
@@ -738,7 +738,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">request_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.create_user_defined_function"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.create_user_defined_function">[docs]</a>    <span class="k">def</span> <span class="nf">create_user_defined_function</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.create_user_defined_function"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.create_user_defined_function">[docs]</a>    <span class="k">def</span> <span class="nf">create_user_defined_function</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">body</span><span class="p">,</span>
             <span class="n">request_options</span><span class="o">=</span><span class="kc">None</span>
@@ -763,7 +763,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">request_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.replace_user_defined_function"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.replace_user_defined_function">[docs]</a>    <span class="k">def</span> <span class="nf">replace_user_defined_function</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.replace_user_defined_function"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.replace_user_defined_function">[docs]</a>    <span class="k">def</span> <span class="nf">replace_user_defined_function</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">udf</span><span class="p">,</span>
             <span class="n">body</span><span class="p">,</span>
@@ -788,7 +788,7 @@
             <span class="n">options</span><span class="o">=</span><span class="n">request_options</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Scripts.delete_user_defined_function"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Scripts.delete_user_defined_function">[docs]</a>    <span class="k">def</span> <span class="nf">delete_user_defined_function</span><span class="p">(</span>
+<div class="viewcode-block" id="Scripts.delete_user_defined_function"><a class="viewcode-back" href="../../../ref/azure.cosmos.scripts.html#azure.cosmos.Scripts.delete_user_defined_function">[docs]</a>    <span class="k">def</span> <span class="nf">delete_user_defined_function</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">udf</span><span class="p">,</span>
             <span class="n">request_options</span><span class="o">=</span><span class="kc">None</span>

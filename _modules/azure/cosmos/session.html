@@ -308,14 +308,14 @@
 <span class="kn">from</span> <span class="nn">.vector_session_token</span> <span class="k">import</span> <span class="n">VectorSessionToken</span>
 <span class="kn">from</span> <span class="nn">.errors</span> <span class="k">import</span> <span class="n">HTTPFailure</span>
 
-<div class="viewcode-block" id="SessionContainer"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.session.SessionContainer">[docs]</a><span class="k">class</span> <span class="nc">SessionContainer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="SessionContainer"><a class="viewcode-back" href="../../../ref/azure.cosmos.session.html#azure.cosmos.session.SessionContainer">[docs]</a><span class="k">class</span> <span class="nc">SessionContainer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">collection_name_to_rid</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rid_to_session_token</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">session_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">RLock</span><span class="p">()</span>
 
-<div class="viewcode-block" id="SessionContainer.get_session_token"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.session.SessionContainer.get_session_token">[docs]</a>    <span class="k">def</span> <span class="nf">get_session_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource_path</span><span class="p">):</span>
+<div class="viewcode-block" id="SessionContainer.get_session_token"><a class="viewcode-back" href="../../../ref/azure.cosmos.session.html#azure.cosmos.session.SessionContainer.get_session_token">[docs]</a>    <span class="k">def</span> <span class="nf">get_session_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource_path</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get Session Token for collection_link</span>
 <span class="sd">        </span>
@@ -354,7 +354,7 @@
             <span class="k">except</span><span class="p">:</span> 
                 <span class="k">return</span> <span class="s1">&#39;&#39;</span></div>
 
-<div class="viewcode-block" id="SessionContainer.set_session_token"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.session.SessionContainer.set_session_token">[docs]</a>    <span class="k">def</span> <span class="nf">set_session_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_result</span><span class="p">,</span> <span class="n">response_headers</span><span class="p">):</span>
+<div class="viewcode-block" id="SessionContainer.set_session_token"><a class="viewcode-back" href="../../../ref/azure.cosmos.session.html#azure.cosmos.session.SessionContainer.set_session_token">[docs]</a>    <span class="k">def</span> <span class="nf">set_session_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_result</span><span class="p">,</span> <span class="n">response_headers</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">        Session token must only be updated from response of requests that successfully mutate resource on the </span>
 <span class="sd">        server side (write, replace, delete etc) </span>
@@ -431,7 +431,7 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">rid_to_session_token</span><span class="p">[</span><span class="n">collection_rid</span><span class="p">]</span> <span class="o">=</span> <span class="n">parsed_tokens</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">collection_name_to_rid</span><span class="p">[</span><span class="n">collection_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">collection_rid</span></div>
 
-<div class="viewcode-block" id="SessionContainer.clear_session_token"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.session.SessionContainer.clear_session_token">[docs]</a>    <span class="k">def</span> <span class="nf">clear_session_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_headers</span><span class="p">):</span>
+<div class="viewcode-block" id="SessionContainer.clear_session_token"><a class="viewcode-back" href="../../../ref/azure.cosmos.session.html#azure.cosmos.session.SessionContainer.clear_session_token">[docs]</a>    <span class="k">def</span> <span class="nf">clear_session_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_headers</span><span class="p">):</span>
         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_lock</span><span class="p">:</span>
             <span class="n">collection_rid</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
             <span class="n">alt_content_path</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -443,7 +443,7 @@
                         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">collection_name_to_rid</span><span class="p">[</span><span class="n">alt_content_path</span><span class="p">]</span>
                         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">rid_to_session_token</span><span class="p">[</span><span class="n">collection_rid</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="SessionContainer.parse_session_token"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.session.SessionContainer.parse_session_token">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="SessionContainer.parse_session_token"><a class="viewcode-back" href="../../../ref/azure.cosmos.session.html#azure.cosmos.session.SessionContainer.parse_session_token">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">parse_session_token</span><span class="p">(</span><span class="n">response_headers</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Extracts session token from response headers and parses</span>
 
@@ -475,7 +475,7 @@
                     <span class="n">id_to_sessionlsn</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">sessionToken</span>
         <span class="k">return</span> <span class="n">id_to_sessionlsn</span></div></div>
 
-<div class="viewcode-block" id="Session"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.session.Session">[docs]</a><span class="k">class</span> <span class="nc">Session</span><span class="p">:</span>
+<div class="viewcode-block" id="Session"><a class="viewcode-back" href="../../../ref/azure.cosmos.session.html#azure.cosmos.session.Session">[docs]</a><span class="k">class</span> <span class="nc">Session</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">    State of a Azure Cosmos session. This session object</span>
 <span class="sd">    can be shared across clients within the same process</span>
@@ -486,13 +486,13 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">session_container</span> <span class="o">=</span> <span class="n">SessionContainer</span><span class="p">()</span>
         <span class="c1">#include creation time, and some other stats</span>
 
-<div class="viewcode-block" id="Session.clear_session_token"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.session.Session.clear_session_token">[docs]</a>    <span class="k">def</span> <span class="nf">clear_session_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_headers</span><span class="p">):</span>
+<div class="viewcode-block" id="Session.clear_session_token"><a class="viewcode-back" href="../../../ref/azure.cosmos.session.html#azure.cosmos.session.Session.clear_session_token">[docs]</a>    <span class="k">def</span> <span class="nf">clear_session_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_headers</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">session_container</span><span class="o">.</span><span class="n">clear_session_token</span><span class="p">(</span><span class="n">response_headers</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Session.update_session"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.session.Session.update_session">[docs]</a>    <span class="k">def</span> <span class="nf">update_session</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_result</span><span class="p">,</span> <span class="n">response_headers</span><span class="p">):</span>
+<div class="viewcode-block" id="Session.update_session"><a class="viewcode-back" href="../../../ref/azure.cosmos.session.html#azure.cosmos.session.Session.update_session">[docs]</a>    <span class="k">def</span> <span class="nf">update_session</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_result</span><span class="p">,</span> <span class="n">response_headers</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">session_container</span><span class="o">.</span><span class="n">set_session_token</span><span class="p">(</span><span class="n">response_result</span><span class="p">,</span> <span class="n">response_headers</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Session.get_session_token"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.session.Session.get_session_token">[docs]</a>    <span class="k">def</span> <span class="nf">get_session_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource_path</span><span class="p">):</span>
+<div class="viewcode-block" id="Session.get_session_token"><a class="viewcode-back" href="../../../ref/azure.cosmos.session.html#azure.cosmos.session.Session.get_session_token">[docs]</a>    <span class="k">def</span> <span class="nf">get_session_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resource_path</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_container</span><span class="o">.</span><span class="n">get_session_token</span><span class="p">(</span><span class="n">resource_path</span><span class="p">)</span></div></div>
 </pre></div>
 

@@ -323,7 +323,7 @@
     <span class="s1">&#39;Database&#39;</span><span class="p">,</span>
 <span class="p">)</span>
 
-<div class="viewcode-block" id="Database"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database">[docs]</a><span class="k">class</span> <span class="nc">Database</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Database"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database">[docs]</a><span class="k">class</span> <span class="nc">Database</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Represents an Azure Cosmos DB SQL API database.</span>
 
 <span class="sd">    A database contains one or more containers, each of which can contain items,</span>
@@ -387,7 +387,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span>
 
-<div class="viewcode-block" id="Database.read"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.read">[docs]</a>    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.read"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.read">[docs]</a>    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">session_token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">initial_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -430,7 +430,7 @@
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_properties</span></div>
 
-<div class="viewcode-block" id="Database.create_container"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.create_container">[docs]</a>    <span class="k">def</span> <span class="nf">create_container</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.create_container"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.create_container">[docs]</a>    <span class="k">def</span> <span class="nf">create_container</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="nb">id</span><span class="p">,</span>
         <span class="n">partition_key</span><span class="p">,</span>
@@ -522,7 +522,7 @@
 
         <span class="k">return</span> <span class="n">Container</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="n">properties</span><span class="o">=</span><span class="n">data</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Database.delete_container"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.delete_container">[docs]</a>    <span class="k">def</span> <span class="nf">delete_container</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.delete_container"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.delete_container">[docs]</a>    <span class="k">def</span> <span class="nf">delete_container</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">container</span><span class="p">,</span>
         <span class="n">session_token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -561,7 +561,7 @@
         <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
             <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Database.get_container_client"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.get_container_client">[docs]</a>    <span class="k">def</span> <span class="nf">get_container_client</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.get_container_client"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.get_container_client">[docs]</a>    <span class="k">def</span> <span class="nf">get_container_client</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">container</span><span class="p">,</span>
     <span class="p">):</span>
@@ -592,7 +592,7 @@
             <span class="n">id_value</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Database.read_all_containers"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.read_all_containers">[docs]</a>    <span class="k">def</span> <span class="nf">read_all_containers</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.read_all_containers"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.read_all_containers">[docs]</a>    <span class="k">def</span> <span class="nf">read_all_containers</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">max_item_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">session_token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -641,7 +641,7 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="Database.query_containers"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.query_containers">[docs]</a>    <span class="k">def</span> <span class="nf">query_containers</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.query_containers"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.query_containers">[docs]</a>    <span class="k">def</span> <span class="nf">query_containers</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -688,7 +688,7 @@
             <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">result</span></div>
 
-<div class="viewcode-block" id="Database.replace_container"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.replace_container">[docs]</a>    <span class="k">def</span> <span class="nf">replace_container</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.replace_container"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.replace_container">[docs]</a>    <span class="k">def</span> <span class="nf">replace_container</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">container</span><span class="p">,</span>
         <span class="n">partition_key</span><span class="p">,</span>
@@ -769,7 +769,7 @@
             <span class="n">properties</span><span class="o">=</span><span class="n">container_properties</span><span class="p">,</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Database.read_all_users"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.read_all_users">[docs]</a>    <span class="k">def</span> <span class="nf">read_all_users</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.read_all_users"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.read_all_users">[docs]</a>    <span class="k">def</span> <span class="nf">read_all_users</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">max_item_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
             <span class="n">feed_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
@@ -798,7 +798,7 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="Database.query_users"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.query_users">[docs]</a>    <span class="k">def</span> <span class="nf">query_users</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.query_users"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.query_users">[docs]</a>    <span class="k">def</span> <span class="nf">query_users</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">query</span><span class="p">,</span>
             <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -834,7 +834,7 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="Database.get_user_client"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.get_user_client">[docs]</a>    <span class="k">def</span> <span class="nf">get_user_client</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.get_user_client"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.get_user_client">[docs]</a>    <span class="k">def</span> <span class="nf">get_user_client</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">user</span><span class="p">,</span>
     <span class="p">):</span>
@@ -860,7 +860,7 @@
             <span class="n">database_link</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">database_link</span><span class="p">,</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Database.create_user"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.create_user">[docs]</a>    <span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.create_user"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.create_user">[docs]</a>    <span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">body</span><span class="p">,</span>
             <span class="n">request_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
@@ -906,7 +906,7 @@
             <span class="n">properties</span><span class="o">=</span><span class="n">user</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Database.upsert_user"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.upsert_user">[docs]</a>    <span class="k">def</span> <span class="nf">upsert_user</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.upsert_user"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.upsert_user">[docs]</a>    <span class="k">def</span> <span class="nf">upsert_user</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">body</span><span class="p">,</span>
             <span class="n">request_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
@@ -943,7 +943,7 @@
             <span class="n">properties</span><span class="o">=</span><span class="n">user</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Database.replace_user"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.replace_user">[docs]</a>    <span class="k">def</span> <span class="nf">replace_user</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.replace_user"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.replace_user">[docs]</a>    <span class="k">def</span> <span class="nf">replace_user</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">user</span><span class="p">,</span>
             <span class="n">body</span><span class="p">,</span>
@@ -980,7 +980,7 @@
             <span class="n">properties</span><span class="o">=</span><span class="n">user</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Database.delete_user"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.delete_user">[docs]</a>    <span class="k">def</span> <span class="nf">delete_user</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.delete_user"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.delete_user">[docs]</a>    <span class="k">def</span> <span class="nf">delete_user</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">user</span><span class="p">,</span>
             <span class="n">request_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
@@ -1004,7 +1004,7 @@
         <span class="k">if</span> <span class="n">response_hook</span><span class="p">:</span>
             <span class="n">response_hook</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_connection</span><span class="o">.</span><span class="n">last_response_headers</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Database.read_offer"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.read_offer">[docs]</a>    <span class="k">def</span> <span class="nf">read_offer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_hook</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="Database.read_offer"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.read_offer">[docs]</a>    <span class="k">def</span> <span class="nf">read_offer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_hook</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="c1"># type: (Optional[Callable]) -&gt; Offer</span>
         <span class="sd">&quot;&quot;&quot; Read the Offer object for this database.</span>
 
@@ -1032,7 +1032,7 @@
             <span class="n">offer_throughput</span><span class="o">=</span><span class="n">offers</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">][</span><span class="s1">&#39;offerThroughput&#39;</span><span class="p">],</span>
             <span class="n">properties</span><span class="o">=</span><span class="n">offers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span></div>
 
-<div class="viewcode-block" id="Database.replace_throughput"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.Database.replace_throughput">[docs]</a>    <span class="k">def</span> <span class="nf">replace_throughput</span><span class="p">(</span>
+<div class="viewcode-block" id="Database.replace_throughput"><a class="viewcode-back" href="../../../ref/azure.cosmos.database.html#azure.cosmos.Database.replace_throughput">[docs]</a>    <span class="k">def</span> <span class="nf">replace_throughput</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">throughput</span><span class="p">,</span> 
             <span class="n">response_hook</span><span class="o">=</span><span class="kc">None</span>

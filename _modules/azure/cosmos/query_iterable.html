@@ -302,7 +302,7 @@
 <span class="kn">from</span> <span class="nn">azure.cosmos.execution_context</span> <span class="k">import</span> <span class="n">execution_dispatcher</span>
 <span class="kn">from</span> <span class="nn">azure.cosmos.execution_context</span> <span class="k">import</span> <span class="n">base_execution_context</span>
 
-<div class="viewcode-block" id="QueryIterable"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.query_iterable.QueryIterable">[docs]</a><span class="k">class</span> <span class="nc">QueryIterable</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="QueryIterable"><a class="viewcode-back" href="../../../ref/azure.cosmos.query_iterable.html#azure.cosmos.query_iterable.QueryIterable">[docs]</a><span class="k">class</span> <span class="nc">QueryIterable</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Represents an iterable object of the query results.</span>
 <span class="sd">    QueryIterable is a wrapper for query execution context.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -335,7 +335,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_collection_link</span> <span class="o">=</span> <span class="n">collection_link</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ex_context</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="QueryIterable.PartitioningQueryIterable"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.query_iterable.QueryIterable.PartitioningQueryIterable">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="QueryIterable.PartitioningQueryIterable"><a class="viewcode-back" href="../../../ref/azure.cosmos.query_iterable.html#azure.cosmos.query_iterable.QueryIterable.PartitioningQueryIterable">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">PartitioningQueryIterable</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">database_link</span><span class="p">,</span> <span class="n">partition_key</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Represents a client side partitioning query iterable.</span>
@@ -377,7 +377,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Iterator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-<div class="viewcode-block" id="QueryIterable.Iterator"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.query_iterable.QueryIterable.Iterator">[docs]</a>    <span class="k">class</span> <span class="nc">Iterator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="QueryIterable.Iterator"><a class="viewcode-back" href="../../../ref/azure.cosmos.query_iterable.html#azure.cosmos.query_iterable.QueryIterable.Iterator">[docs]</a>    <span class="k">class</span> <span class="nc">Iterator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
         <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iterable</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_iterable</span> <span class="o">=</span> <span class="n">iterable</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_finished</span> <span class="o">=</span> <span class="kc">False</span>
@@ -391,10 +391,10 @@
             <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ex_context</span><span class="p">)</span>
 
         <span class="c1"># Also support Python 3.x iteration</span>
-<div class="viewcode-block" id="QueryIterable.Iterator.next"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.query_iterable.QueryIterable.Iterator.next">[docs]</a>        <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="QueryIterable.Iterator.next"><a class="viewcode-back" href="../../../ref/azure.cosmos.query_iterable.html#azure.cosmos.query_iterable.QueryIterable.Iterator.next">[docs]</a>        <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__next__</span><span class="p">()</span></div></div>
 
-<div class="viewcode-block" id="QueryIterable.fetch_next_block"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.query_iterable.QueryIterable.fetch_next_block">[docs]</a>    <span class="k">def</span> <span class="nf">fetch_next_block</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="QueryIterable.fetch_next_block"><a class="viewcode-back" href="../../../ref/azure.cosmos.query_iterable.html#azure.cosmos.query_iterable.QueryIterable.fetch_next_block">[docs]</a>    <span class="k">def</span> <span class="nf">fetch_next_block</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns a block of results with respecting retry policy.</span>
 <span class="sd">        </span>
 <span class="sd">        This method only exists for backward compatibility reasons. (Because QueryIterable</span>

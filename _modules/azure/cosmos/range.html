@@ -301,7 +301,7 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="Range"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.range.Range">[docs]</a><span class="k">class</span> <span class="nc">Range</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Range"><a class="viewcode-back" href="../../../ref/azure.cosmos.range.html#azure.cosmos.range.Range">[docs]</a><span class="k">class</span> <span class="nc">Range</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Represents the Range class used to map the partition key of the document to their associated collection.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
@@ -332,7 +332,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">False</span>
 
-<div class="viewcode-block" id="Range.Contains"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.range.Range.Contains">[docs]</a>    <span class="k">def</span> <span class="nf">Contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="Range.Contains"><a class="viewcode-back" href="../../../ref/azure.cosmos.range.html#azure.cosmos.range.Range.Contains">[docs]</a>    <span class="k">def</span> <span class="nf">Contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Checks if the passed parameter is in the range of this object.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">other</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -345,7 +345,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">Range</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">other</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Range.Intersect"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.range.Range.Intersect">[docs]</a>    <span class="k">def</span> <span class="nf">Intersect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="Range.Intersect"><a class="viewcode-back" href="../../../ref/azure.cosmos.range.html#azure.cosmos.range.Range.Intersect">[docs]</a>    <span class="k">def</span> <span class="nf">Intersect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Checks if the passed parameter intersects the range of this object.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Range</span><span class="p">):</span>

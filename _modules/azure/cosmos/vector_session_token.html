@@ -304,7 +304,7 @@
 <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">base</span>
 <span class="kn">from</span> <span class="nn">.http_constants</span> <span class="k">import</span> <span class="n">StatusCodes</span>
 
-<div class="viewcode-block" id="VectorSessionToken"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.vector_session_token.VectorSessionToken">[docs]</a><span class="k">class</span> <span class="nc">VectorSessionToken</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="VectorSessionToken"><a class="viewcode-back" href="../../../ref/azure.cosmos.vector_session_token.html#azure.cosmos.vector_session_token.VectorSessionToken">[docs]</a><span class="k">class</span> <span class="nc">VectorSessionToken</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">segment_separator</span> <span class="o">=</span> <span class="s1">&#39;#&#39;</span>
     <span class="n">region_progress_separator</span> <span class="o">=</span> <span class="s2">&quot;=&quot;</span>
 
@@ -327,7 +327,7 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">session_token</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s%s%s%s%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">segment_separator</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_lsn</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">segment_separator</span><span class="p">,</span> <span class="n">region_progress</span><span class="p">)</span>
 
-<div class="viewcode-block" id="VectorSessionToken.create"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.vector_session_token.VectorSessionToken.create">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="VectorSessionToken.create"><a class="viewcode-back" href="../../../ref/azure.cosmos.vector_session_token.html#azure.cosmos.vector_session_token.VectorSessionToken.create">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">session_token</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Parses session token and creates the vector session token</span>
 
@@ -376,13 +376,13 @@
 
         <span class="k">return</span> <span class="n">VectorSessionToken</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">global_lsn</span><span class="p">,</span> <span class="n">local_lsn_by_region</span><span class="p">,</span> <span class="n">session_token</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="VectorSessionToken.equals"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.vector_session_token.VectorSessionToken.equals">[docs]</a>    <span class="k">def</span> <span class="nf">equals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="VectorSessionToken.equals"><a class="viewcode-back" href="../../../ref/azure.cosmos.vector_session_token.html#azure.cosmos.vector_session_token.VectorSessionToken.equals">[docs]</a>    <span class="k">def</span> <span class="nf">equals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">other</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">False</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">version</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">version</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_lsn</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">global_lsn</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">are_region_progress_equal</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">local_lsn_by_region</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="VectorSessionToken.merge"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.vector_session_token.VectorSessionToken.merge">[docs]</a>    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="VectorSessionToken.merge"><a class="viewcode-back" href="../../../ref/azure.cosmos.vector_session_token.html#azure.cosmos.vector_session_token.VectorSessionToken.merge">[docs]</a>    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">other</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid Session Token (should not be None)&quot;</span><span class="p">)</span>
 
@@ -414,10 +414,10 @@
 
         <span class="k">return</span> <span class="n">VectorSessionToken</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">version</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">global_lsn</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">global_lsn</span><span class="p">),</span> <span class="n">highest_local_lsn_by_region</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="VectorSessionToken.convert_to_string"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.vector_session_token.VectorSessionToken.convert_to_string">[docs]</a>    <span class="k">def</span> <span class="nf">convert_to_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="VectorSessionToken.convert_to_string"><a class="viewcode-back" href="../../../ref/azure.cosmos.vector_session_token.html#azure.cosmos.vector_session_token.VectorSessionToken.convert_to_string">[docs]</a>    <span class="k">def</span> <span class="nf">convert_to_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">session_token</span></div>
 
-<div class="viewcode-block" id="VectorSessionToken.are_region_progress_equal"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.vector_session_token.VectorSessionToken.are_region_progress_equal">[docs]</a>    <span class="k">def</span> <span class="nf">are_region_progress_equal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<div class="viewcode-block" id="VectorSessionToken.are_region_progress_equal"><a class="viewcode-back" href="../../../ref/azure.cosmos.vector_session_token.html#azure.cosmos.vector_session_token.VectorSessionToken.are_region_progress_equal">[docs]</a>    <span class="k">def</span> <span class="nf">are_region_progress_equal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">local_lsn_by_region</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">other</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 

@@ -303,7 +303,7 @@
 <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">murmur_hash</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">consistent_hash_ring</span>
 
-<div class="viewcode-block" id="HashPartitionResolver"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.hash_partition_resolver.HashPartitionResolver">[docs]</a><span class="k">class</span> <span class="nc">HashPartitionResolver</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="HashPartitionResolver"><a class="viewcode-back" href="../../../ref/azure.cosmos.hash_partition_resolver.html#azure.cosmos.hash_partition_resolver.HashPartitionResolver">[docs]</a><span class="k">class</span> <span class="nc">HashPartitionResolver</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;HashPartitionResolver implements partitioning based on the value of a hash function, allowing you to evenly</span>
 <span class="sd">    distribute requests and data across a number of partitions.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -333,7 +333,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">consistent_hash_ring</span> <span class="o">=</span> <span class="n">consistent_hash_ring</span><span class="o">.</span><span class="n">_ConsistentHashRing</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">collection_links</span><span class="p">,</span> <span class="n">default_number_of_virtual_nodes_per_collection</span><span class="p">,</span> <span class="n">hash_generator</span><span class="p">)</span>
 
-<div class="viewcode-block" id="HashPartitionResolver.ResolveForCreate"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.hash_partition_resolver.HashPartitionResolver.ResolveForCreate">[docs]</a>    <span class="k">def</span> <span class="nf">ResolveForCreate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">):</span>
+<div class="viewcode-block" id="HashPartitionResolver.ResolveForCreate"><a class="viewcode-back" href="../../../ref/azure.cosmos.hash_partition_resolver.html#azure.cosmos.hash_partition_resolver.HashPartitionResolver.ResolveForCreate">[docs]</a>    <span class="k">def</span> <span class="nf">ResolveForCreate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Resolves the collection for creating the document based on the partition key.</span>
 <span class="sd">        </span>
 <span class="sd">        :param dict document:</span>
@@ -350,7 +350,7 @@
         <span class="n">partition_key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">partition_key_extractor</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">consistent_hash_ring</span><span class="o">.</span><span class="n">GetCollectionNode</span><span class="p">(</span><span class="n">partition_key</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="HashPartitionResolver.ResolveForRead"><a class="viewcode-back" href="../../../ref/azure.cosmos.html#azure.cosmos.hash_partition_resolver.HashPartitionResolver.ResolveForRead">[docs]</a>    <span class="k">def</span> <span class="nf">ResolveForRead</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partition_key</span><span class="p">):</span>
+<div class="viewcode-block" id="HashPartitionResolver.ResolveForRead"><a class="viewcode-back" href="../../../ref/azure.cosmos.hash_partition_resolver.html#azure.cosmos.hash_partition_resolver.HashPartitionResolver.ResolveForRead">[docs]</a>    <span class="k">def</span> <span class="nf">ResolveForRead</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partition_key</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Resolves the collection for reading/querying the documents based on the partition key.</span>
 
 <span class="sd">        :param dict document:</span>
