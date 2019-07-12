@@ -293,9 +293,10 @@
 <span id="azure-mgmt-datamigration-operations-module"></span><h1>azure.mgmt.datamigration.operations module<a class="headerlink" href="#module-azure.mgmt.datamigration.operations" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.datamigration.operations.ResourceSkusOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">ResourceSkusOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/resource_skus_operations.html#ResourceSkusOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ResourceSkusOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">ResourceSkusOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_resource_skus_operations.html#ResourceSkusOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ResourceSkusOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ResourceSkusOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -311,7 +312,7 @@
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ResourceSkusOperations.list_skus">
-<code class="sig-name descname">list_skus</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/resource_skus_operations.html#ResourceSkusOperations.list_skus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ResourceSkusOperations.list_skus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_skus</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_resource_skus_operations.html#ResourceSkusOperations.list_skus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ResourceSkusOperations.list_skus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get supported SKUs.</p>
 <p>The skus action returns the list of SKUs that DMS supports.</p>
 <dl class="field-list simple">
@@ -345,9 +346,10 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">ServicesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">ServicesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ServicesOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -363,7 +365,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations.check_children_name_availability">
-<code class="sig-name descname">check_children_name_availability</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations.check_children_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.check_children_name_availability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_children_name_availability</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations.check_children_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.check_children_name_availability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check nested resource name validity and availability.</p>
 <p>This method checks whether a proposed nested resource name is valid and
 available.</p>
@@ -396,7 +398,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations.check_name_availability">
-<code class="sig-name descname">check_name_availability</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.check_name_availability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_name_availability</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.check_name_availability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check name validity and availability.</p>
 <p>This method checks whether a proposed top-level resource name is valid
 and available.</p>
@@ -428,7 +430,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations.check_status">
-<code class="sig-name descname">check_status</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations.check_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.check_status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_status</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations.check_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.check_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check service health status.</p>
 <p>The services resource is the top-level resource that represents the
 Database Migration Service. This action performs a health check and
@@ -461,7 +463,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations.create_or_update">
-<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">parameters</em>, <em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">parameters</em>, <em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update DMS Instance.</p>
 <p>The services resource is the top-level resource that represents the
 Database Migration Service. The PUT method creates a new service or
@@ -504,7 +506,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">delete_running_tasks=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">delete_running_tasks=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete DMS Service Instance.</p>
 <p>The services resource is the top-level resource that represents the
 Database Migration Service. The DELETE method deletes a service. Any
@@ -539,7 +541,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get DMS Service Instance.</p>
 <p>The services resource is the top-level resource that represents the
 Database Migration Service. The GET method retrieves information about
@@ -571,7 +573,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get services in subscription.</p>
 <p>The services resource is the top-level resource that represents the
 Database Migration Service. This method returns a list of service
@@ -600,7 +602,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations.list_by_resource_group">
-<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_resource_group</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get services in resource group.</p>
 <p>The Services resource is the top-level resource that represents the
 Database Migration Service. This method returns a list of service
@@ -630,7 +632,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations.list_skus">
-<code class="sig-name descname">list_skus</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations.list_skus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.list_skus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_skus</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations.list_skus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.list_skus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get compatible SKUs.</p>
 <p>The services resource is the top-level resource that represents the
 Database Migration Service. The skus action returns the list of SKUs
@@ -666,7 +668,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations.start">
-<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.start" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start service.</p>
 <p>The services resource is the top-level resource that represents the
 Database Migration Service. This action starts the service and the
@@ -699,7 +701,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations.stop">
-<code class="sig-name descname">stop</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.stop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stop</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop service.</p>
 <p>The services resource is the top-level resource that represents the
 Database Migration Service. This action stops the service and the
@@ -733,7 +735,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ServicesOperations.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">parameters</em>, <em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/services_operations.html#ServicesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">parameters</em>, <em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">polling=True</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_services_operations.html#ServicesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServicesOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update DMS Service Instance.</p>
 <p>The services resource is the top-level resource that represents the
 Database Migration Service. The PATCH method updates an existing
@@ -772,9 +774,10 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.operations.TasksOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">TasksOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/tasks_operations.html#TasksOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">TasksOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_tasks_operations.html#TasksOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>TasksOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -790,7 +793,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.TasksOperations.cancel">
-<code class="sig-name descname">cancel</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/tasks_operations.html#TasksOperations.cancel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.cancel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cancel</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_tasks_operations.html#TasksOperations.cancel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.cancel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cancel a task.</p>
 <p>The tasks resource is a nested, proxy-only resource representing work
 performed by a DMS instance. This method cancels a task if it’s
@@ -824,7 +827,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.TasksOperations.command">
-<code class="sig-name descname">command</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/tasks_operations.html#TasksOperations.command"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.command" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">command</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">parameters</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_tasks_operations.html#TasksOperations.command"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.command" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execute a command on a task.</p>
 <p>The tasks resource is a nested, proxy-only resource representing work
 performed by a DMS instance. This method executes a command on a
@@ -859,7 +862,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.TasksOperations.create_or_update">
-<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/tasks_operations.html#TasksOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_tasks_operations.html#TasksOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update task.</p>
 <p>The tasks resource is a nested, proxy-only resource representing work
 performed by a DMS instance. The PUT method creates a new task or
@@ -897,7 +900,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.TasksOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">delete_running_tasks=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/tasks_operations.html#TasksOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">delete_running_tasks=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_tasks_operations.html#TasksOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete task.</p>
 <p>The tasks resource is a nested, proxy-only resource representing work
 performed by a DMS instance. The DELETE method deletes a task,
@@ -932,7 +935,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.TasksOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">expand=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/tasks_operations.html#TasksOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">expand=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_tasks_operations.html#TasksOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get task information.</p>
 <p>The tasks resource is a nested, proxy-only resource representing work
 performed by a DMS instance. The GET method retrieves information about
@@ -967,7 +970,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.TasksOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/tasks_operations.html#TasksOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_tasks_operations.html#TasksOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get tasks in a service.</p>
 <p>The services resource is the top-level resource that represents the
 Database Migration Service. This method returns a list of tasks owned
@@ -1007,7 +1010,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.TasksOperations.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/tasks_operations.html#TasksOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_tasks_operations.html#TasksOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.TasksOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update task.</p>
 <p>The tasks resource is a nested, proxy-only resource representing work
 performed by a DMS instance. The PATCH method updates an existing task,
@@ -1046,10 +1049,247 @@ ClientRawResponse</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.datamigration.operations.ServiceTasksOperations">
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">ServiceTasksOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_service_tasks_operations.html#ServiceTasksOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServiceTasksOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ServiceTasksOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Version of the API. Constant value: “2018-07-15-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.datamigration.operations.ServiceTasksOperations.cancel">
+<code class="sig-name descname">cancel</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_service_tasks_operations.html#ServiceTasksOperations.cancel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServiceTasksOperations.cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancel a service task.</p>
+<p>The service tasks resource is a nested, proxy-only resource
+representing work performed by a DMS instance. This method cancels a
+service task if it’s currently queued or running.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group</p></li>
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the service</p></li>
+<li><p><strong>task_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Task</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ProjectTask or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ProjectTask" title="azure.mgmt.datamigration.models.ProjectTask">ProjectTask</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ApiErrorException" title="azure.mgmt.datamigration.models.ApiErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.datamigration.operations.ServiceTasksOperations.create_or_update">
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_service_tasks_operations.html#ServiceTasksOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServiceTasksOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update service task.</p>
+<p>The service tasks resource is a nested, proxy-only resource
+representing work performed by a DMS instance. The PUT method creates a
+new service task or updates an existing one, although since service
+tasks have no mutable custom properties, there is little reason to
+update an existing one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group</p></li>
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the service</p></li>
+<li><p><strong>task_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Task</p></li>
+<li><p><strong>etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – HTTP strong entity tag value. This is ignored if
+submitted.</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ProjectTaskProperties" title="azure.mgmt.datamigration.models.ProjectTaskProperties"><em>ProjectTaskProperties</em></a>) – Custom task properties</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ProjectTask or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ProjectTask" title="azure.mgmt.datamigration.models.ProjectTask">ProjectTask</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ApiErrorException" title="azure.mgmt.datamigration.models.ApiErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.datamigration.operations.ServiceTasksOperations.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">delete_running_tasks=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_service_tasks_operations.html#ServiceTasksOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServiceTasksOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete service task.</p>
+<p>The service tasks resource is a nested, proxy-only resource
+representing work performed by a DMS instance. The DELETE method
+deletes a service task, canceling it first if it’s running.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group</p></li>
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the service</p></li>
+<li><p><strong>task_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Task</p></li>
+<li><p><strong>delete_running_tasks</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Delete the resource even if it contains
+running tasks</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ApiErrorException" title="azure.mgmt.datamigration.models.ApiErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.datamigration.operations.ServiceTasksOperations.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">expand=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_service_tasks_operations.html#ServiceTasksOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServiceTasksOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get service task information.</p>
+<p>The service tasks resource is a nested, proxy-only resource
+representing work performed by a DMS instance. The GET method retrieves
+information about a service task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group</p></li>
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the service</p></li>
+<li><p><strong>task_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Task</p></li>
+<li><p><strong>expand</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Expand the response</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ProjectTask or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ProjectTask" title="azure.mgmt.datamigration.models.ProjectTask">ProjectTask</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ApiErrorException" title="azure.mgmt.datamigration.models.ApiErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.datamigration.operations.ServiceTasksOperations.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">task_type=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_service_tasks_operations.html#ServiceTasksOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServiceTasksOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get service level tasks for a service.</p>
+<p>The services resource is the top-level resource that represents the
+Database Migration Service. This method returns a list of service level
+tasks owned by a service resource. Some tasks may have a status of
+Unknown, which indicates that an error occurred while querying the
+status of that task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group</p></li>
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the service</p></li>
+<li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Filter tasks by task type</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of ProjectTask</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ProjectTaskPaged" title="azure.mgmt.datamigration.models.ProjectTaskPaged">ProjectTaskPaged</a>[<a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ProjectTask" title="azure.mgmt.datamigration.models.ProjectTask">ProjectTask</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ApiErrorException" title="azure.mgmt.datamigration.models.ApiErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.operations.ServiceTasksOperations.models">
+<code class="sig-name descname">models</code><em class="property"> = &lt;module 'azure.mgmt.datamigration.models' from 'd:\\a\\1\\s\\sdk\\datamigration\\azure-mgmt-datamigration\\azure\\mgmt\\datamigration\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServiceTasksOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.datamigration.operations.ServiceTasksOperations.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">task_name</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_service_tasks_operations.html#ServiceTasksOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ServiceTasksOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update service task.</p>
+<p>The service tasks resource is a nested, proxy-only resource
+representing work performed by a DMS instance. The PATCH method updates
+an existing service task, but since service tasks have no mutable
+custom properties, there is little reason to do so.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group</p></li>
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the service</p></li>
+<li><p><strong>task_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Task</p></li>
+<li><p><strong>etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – HTTP strong entity tag value. This is ignored if
+submitted.</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ProjectTaskProperties" title="azure.mgmt.datamigration.models.ProjectTaskProperties"><em>ProjectTaskProperties</em></a>) – Custom task properties</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ProjectTask or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ProjectTask" title="azure.mgmt.datamigration.models.ProjectTask">ProjectTask</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.ApiErrorException" title="azure.mgmt.datamigration.models.ApiErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApiErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.datamigration.operations.ProjectsOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">ProjectsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/projects_operations.html#ProjectsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ProjectsOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">ProjectsOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_projects_operations.html#ProjectsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ProjectsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>ProjectsOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1065,7 +1305,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ProjectsOperations.create_or_update">
-<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">parameters</em>, <em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/projects_operations.html#ProjectsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ProjectsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">parameters</em>, <em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_projects_operations.html#ProjectsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ProjectsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create or update project.</p>
 <p>The project resource is a nested resource representing a stored
 migration project. The PUT method creates a new project or updates an
@@ -1099,7 +1339,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ProjectsOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">delete_running_tasks=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/projects_operations.html#ProjectsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ProjectsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">delete_running_tasks=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_projects_operations.html#ProjectsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ProjectsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete project.</p>
 <p>The project resource is a nested resource representing a stored
 migration project. The DELETE method deletes a project.</p>
@@ -1132,7 +1372,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ProjectsOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/projects_operations.html#ProjectsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ProjectsOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_projects_operations.html#ProjectsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ProjectsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get project information.</p>
 <p>The project resource is a nested resource representing a stored
 migration project. The GET method retrieves information about a
@@ -1165,7 +1405,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ProjectsOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/projects_operations.html#ProjectsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ProjectsOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_projects_operations.html#ProjectsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ProjectsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get projects in a service.</p>
 <p>The project resource is a nested resource representing a stored
 migration project. This method returns a list of projects owned by a
@@ -1201,7 +1441,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.ProjectsOperations.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">parameters</em>, <em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/projects_operations.html#ProjectsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ProjectsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">parameters</em>, <em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_projects_operations.html#ProjectsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.ProjectsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update project.</p>
 <p>The project resource is a nested resource representing a stored
 migration project. The PATCH method updates an existing project.</p>
@@ -1236,9 +1476,10 @@ ClientRawResponse</p>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.operations.UsagesOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">UsagesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/usages_operations.html#UsagesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.UsagesOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">UsagesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_usages_operations.html#UsagesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.UsagesOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>UsagesOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1254,7 +1495,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.UsagesOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/usages_operations.html#UsagesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.UsagesOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">location</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_usages_operations.html#UsagesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.UsagesOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get resource quotas and usage information.</p>
 <p>This method returns region-specific quotas and resource usage
 information for the Database Migration Service.</p>
@@ -1290,9 +1531,10 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.operations.Operations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">Operations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.Operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Operations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1308,7 +1550,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.Operations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get available resource provider actions (operations).</p>
 <p>Lists all available actions exposed by the Database Migration Service
 resource provider.</p>
@@ -1343,9 +1585,10 @@ overrides</span>.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.operations.FilesOperations">
-<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">FilesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/files_operations.html#FilesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">azure.mgmt.datamigration.operations.</code><code class="sig-name descname">FilesOperations</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">config</em>, <em class="sig-param">serializer</em>, <em class="sig-param">deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_files_operations.html#FilesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>FilesOperations operations.</p>
+<p>You should not instantiate directly this class, but create a Client instance that will create it for you and attach it as attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1361,7 +1604,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.FilesOperations.create_or_update">
-<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">file_name</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/files_operations.html#FilesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_or_update</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">file_name</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_files_operations.html#FilesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a file resource.</p>
 <p>The PUT method creates a new file or updates an existing one.</p>
 <dl class="field-list simple">
@@ -1396,7 +1639,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.FilesOperations.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">file_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/files_operations.html#FilesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">file_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_files_operations.html#FilesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete file.</p>
 <p>This method deletes a file.</p>
 <dl class="field-list simple">
@@ -1427,7 +1670,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.FilesOperations.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">file_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/files_operations.html#FilesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">file_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_files_operations.html#FilesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get file information.</p>
 <p>The files resource is a nested, proxy-only resource representing a file
 stored under the project resource. This method retrieves information
@@ -1461,7 +1704,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.FilesOperations.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/files_operations.html#FilesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_files_operations.html#FilesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get files in a project.</p>
 <p>The project resource is a nested resource representing a stored
 migration project. This method returns a list of files owned by a
@@ -1498,7 +1741,7 @@ overrides</span>.</p></li>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.FilesOperations.read">
-<code class="sig-name descname">read</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">file_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/files_operations.html#FilesOperations.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.read" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">read</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">file_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_files_operations.html#FilesOperations.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.read" title="Permalink to this definition">¶</a></dt>
 <dd><p>Request storage information for downloading the file content.</p>
 <p>This method is used for requesting storage information using which
 contents of the file can be downloaded.</p>
@@ -1531,7 +1774,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.FilesOperations.read_write">
-<code class="sig-name descname">read_write</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">file_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/files_operations.html#FilesOperations.read_write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.read_write" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">read_write</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">file_name</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_files_operations.html#FilesOperations.read_write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.read_write" title="Permalink to this definition">¶</a></dt>
 <dd><p>Request information for reading and writing file content.</p>
 <p>This method is used for requesting information for reading and writing
 the file content.</p>
@@ -1564,7 +1807,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.datamigration.operations.FilesOperations.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">file_name</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/files_operations.html#FilesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">group_name</em>, <em class="sig-param">service_name</em>, <em class="sig-param">project_name</em>, <em class="sig-param">file_name</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">raw=False</em>, <em class="sig-param">**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/operations/_files_operations.html#FilesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.operations.FilesOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update a file.</p>
 <p>This method updates an existing file.</p>
 <dl class="field-list simple">
